@@ -43,6 +43,42 @@ open index.html
 8. Устная практика
 9. Кнопка «Завершить урок» (прогресс сохраняется в браузере)
 
+## Публикация на GitHub Pages
+
+Репозиторий уже подготовлен локально. Осталось создать репозиторий на GitHub и отправить код.
+
+### 1. Создай репозиторий на GitHub
+
+1. Открой [github.com/new](https://github.com/new)
+2. Имя репозитория: **`english-study`**
+3. Тип: **Public**
+4. Не добавляй README, .gitignore и license (всё уже есть локально)
+5. Нажми **Create repository**
+
+### 2. Отправь код
+
+В терминале:
+
+```bash
+cd /Users/evgeny/Documents/English/english-study
+git push -u origin main
+```
+
+При запросе авторизации войди в GitHub (или используй Personal Access Token вместо пароля).
+
+### 3. Включи GitHub Pages
+
+1. Репозиторий → **Settings** → **Pages**
+2. **Source**: Deploy from a branch
+3. **Branch**: `main` → папка **`/ (root)`**
+4. **Save**
+
+Через 1–2 минуты сайт будет доступен:
+
+**https://poles5.github.io/english-study/**
+
+Как у [salary](https://poles5.github.io/salary/) — тот же формат: `username.github.io/имя-репозитория/`.
+
 ## Обновление контента
 
 ```bash
