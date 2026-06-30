@@ -1,10 +1,20 @@
 #!/usr/bin/env python3
-"""Add theory, vocabQuiz and polish validation fields in curriculum.js."""
+"""Add theory, validation specs, extra blocks to curriculum.js."""
 import json
 import os
-import re
+import sys
 
 DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, DIR)
+
+from answer_validator import (
+    build_context_drill,
+    build_culture_spec,
+    build_speaking_spec,
+    build_theory_check,
+    build_warmup_spec,
+)
+
 CUR_PATH = os.path.join(DIR, "curriculum.js")
 
 CEFR = {
@@ -18,7 +28,24 @@ PEDAGOGY = {
     "A1": "Методика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.",
     "A2": "Подход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.",
     "B1": "Принцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.",
-    "B2": "Academic English (Swales): учите не только правило, но и регистр — где фраза уместна в речи и письме.",
+    "B2": "Academic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.",
+}
+
+COURSE_META = {
+    "modules": 64,
+    "hoursMin": 150,
+    "hoursMax": 200,
+    "hoursTarget": 192,
+    "interactiveHours": 43,
+    "homeworkHours": 149,
+    "weeksAt5h": 38,
+    "cefrNote": "По CEFR (Cambridge/Oxford) путь A1→B2 — примерно 500–600 академических часов в вузе; интенсивный курс с самостоятельной работой — 150–200 ч.",
+    "levels": {
+        "A1": {"modules": 16, "hours": 48, "cefr": "90–100 ч в академической программе"},
+        "A2": {"modules": 16, "hours": 48, "cefr": "+90–100 ч"},
+        "B1": {"modules": 16, "hours": 48, "cefr": "+100–120 ч"},
+        "B2": {"modules": 16, "hours": 48, "cefr": "+100–120 ч"},
+    },
 }
 
 
@@ -26,8 +53,7 @@ def load_curriculum():
     raw = open(CUR_PATH, encoding="utf-8").read()
     if raw.startswith("const COURSE_META"):
         raw = raw.split("\n\n", 1)[1]
-    data = json.loads(raw.split("=", 1)[1].rstrip(";\n"))
-    return data
+    return json.loads(raw.split("=", 1)[1].rstrip(";\n"))
 
 
 def save_curriculum(data, meta=None):
@@ -39,47 +65,6 @@ def save_curriculum(data, meta=None):
         f.write("const CURRICULUM = ")
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write(";\n")
-
-
-def base_keywords(lesson):
-    kws = set()
-    for v in lesson.get("vocab", []):
-        for part in re.split(r"[\s/]+", v["en"].lower()):
-            if len(part) > 1:
-                kws.add(part)
-    g = lesson.get("grammar", {})
-    for block in g.get("blocks", []):
-        for word in re.findall(r"[a-zA-Z']+", block.get("example", "").lower()):
-            if len(word) > 2:
-                kws.add(word)
-    for w in ("i", "my", "we", "the", "and", "is", "are", "was", "have", "has"):
-        kws.add(w)
-    return sorted(kws)[:14]
-
-
-def as_prompt(item, keywords):
-    if isinstance(item, str):
-        return {"prompt": item, "keywords": keywords, "minWords": 3, "sample": ""}
-    item = dict(item)
-    item.setdefault("keywords", keywords)
-    item.setdefault("minWords", 3)
-    return item
-
-
-def as_speaking(item, keywords):
-    if isinstance(item, str):
-        return {
-            "task": item,
-            "keywords": keywords,
-            "minWords": 7,
-            "sample": "",
-            "useSpeech": True,
-        }
-    item = dict(item)
-    item.setdefault("keywords", keywords)
-    item.setdefault("minWords", 7)
-    item.setdefault("useSpeech", True)
-    return item
 
 
 def build_theory(lesson):
@@ -152,14 +137,14 @@ def build_homework(lesson):
 
 def build_study_time():
     return {
-        "interactiveMin": 40,
+        "interactiveMin": 50,
         "homeworkMin": 140,
-        "totalMin": 180,
+        "totalMin": 190,
         "sessions": [
             {
                 "title": "Сессия 1 — на платформе",
-                "minutes": 40,
-                "desc": "Теория, лексика, грамматика, тесты, произношение, говорение с проверкой.",
+                "minutes": 50,
+                "desc": "Теория, проверка понимания, лексика, грамматика, контекст, тесты, произношение, говорение.",
             },
             {
                 "title": "Сессия 2 — самостоятельно",
@@ -173,24 +158,6 @@ def build_study_time():
             },
         ],
     }
-
-
-COURSE_META = {
-    "modules": 64,
-    "hoursMin": 150,
-    "hoursMax": 200,
-    "hoursTarget": 192,
-    "interactiveHours": 43,
-    "homeworkHours": 149,
-    "weeksAt5h": 38,
-    "cefrNote": "По CEFR (Cambridge/Oxford) путь A1→B2 — примерно 500–600 академических часов в вузе; интенсивный курс с самостоятельной работой — 150–200 ч.",
-    "levels": {
-        "A1": {"modules": 16, "hours": 48, "cefr": "90–100 ч в академической программе"},
-        "A2": {"modules": 16, "hours": 48, "cefr": "+90–100 ч"},
-        "B1": {"modules": 16, "hours": 48, "cefr": "+100–120 ч"},
-        "B2": {"modules": 16, "hours": 48, "cefr": "+100–120 ч"},
-    },
-}
 
 
 def build_vocab_quiz(vocab):
@@ -225,18 +192,41 @@ def build_vocab_quiz(vocab):
     return quiz
 
 
+def _raw_prompts(items):
+    out = []
+    for item in items:
+        if isinstance(item, str):
+            out.append(item)
+        elif isinstance(item, dict):
+            out.append(item.get("prompt") or item.get("task") or "")
+        else:
+            out.append(str(item))
+    return [p for p in out if p]
+
+
 def enrich_lesson(lesson):
-    keywords = base_keywords(lesson)
-    lesson["warmup"] = [as_prompt(w, keywords) for w in lesson.get("warmup", [])]
-    lesson["cultureCheck"] = [as_prompt(c, keywords) for c in lesson.get("cultureCheck", [])]
-    lesson["speaking"] = [as_speaking(s, keywords) for s in lesson.get("speaking", [])]
+    lesson = dict(lesson)
+
+    raw_warmup = _raw_prompts(lesson.get("warmup", []))
+    lesson["warmup"] = [build_warmup_spec(p, lesson) for p in raw_warmup]
+
+    raw_culture = _raw_prompts(lesson.get("cultureCheck", []))
+    lesson["cultureCheck"] = [build_culture_spec(p, lesson) for p in raw_culture]
+
+    raw_speaking = lesson.get("speaking", [])
+    speaking_tasks = []
+    for s in raw_speaking:
+        task = s if isinstance(s, str) else s.get("task", "")
+        if task:
+            speaking_tasks.append(build_speaking_spec(task, lesson))
+    lesson["speaking"] = speaking_tasks
 
     for p in lesson.get("pronunciation", []):
         p.setdefault("expected", p.get("phrase", ""))
 
-    if not lesson.get("grammarCheck"):
-        lesson["grammarCheck"] = lesson.get("quiz", [])[:2]
-
+    lesson["grammarCheck"] = lesson.get("quiz", [])[:4]
+    lesson["theoryCheck"] = build_theory_check(lesson)
+    lesson["contextDrill"] = build_context_drill(lesson)
     lesson["theory"] = build_theory(lesson)
     lesson["vocabQuiz"] = build_vocab_quiz(lesson.get("vocab", []))
     lesson["homework"] = build_homework(lesson)
@@ -247,10 +237,14 @@ def enrich_lesson(lesson):
 
 def main():
     data = load_curriculum()
-    data = [enrich_lesson(dict(l)) for l in data]
+    data = [enrich_lesson(l) for l in data]
     save_curriculum(data, meta=COURSE_META)
+    w1 = data[0]["warmup"]
     print(f"Enriched {len(data)} modules → {CUR_PATH}")
-    print(f"  Target study time: {COURSE_META['hoursTarget']} h ({COURSE_META['interactiveHours']}h platform + {COURSE_META['homeworkHours']}h homework)")
+    print(f"  Lesson 1 warmup samples:")
+    for w in w1:
+        print(f"    Q: {w['prompt'][:40]}…")
+        print(f"    A: {w['acceptableAnswers'][0]}")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 /* English Course A1→B2 — lesson logic with full block validation */
 
-const BUILD_VERSION = '5';
+const BUILD_VERSION = '6';
 const STORAGE_PREFIX = 'english-course-';
 
 /* ── Storage ── */
@@ -78,17 +78,115 @@ function phraseSimilarity(spoken, expected) {
   return overlap / Math.max(a.length, b.length);
 }
 
+function matchesPattern(text, pattern) {
+  if (!pattern) return true;
+  try {
+    return new RegExp(pattern, 'i').test(text);
+  } catch {
+    return true;
+  }
+}
+
+function includesAnyGroup(text, groups) {
+  if (!groups?.length) return true;
+  const n = normalizeText(text);
+  return groups.every(group =>
+    group.some(term => n.includes(normalizeText(term)))
+  );
+}
+
+function matchesAcceptable(text, answers) {
+  if (!answers?.length) return false;
+  return answers.some(a => phraseSimilarity(text, a) >= 0.42);
+}
+
 function validateOpenAnswer(text, spec) {
+  const raw = (text || '').trim();
+  if (!raw) {
+    return { ok: false, msg: 'Введите ответ на английском.' };
+  }
+
+  const n = normalizeText(raw);
+  const words = wordCount(raw);
   const min = spec.minWords || 3;
-  const words = wordCount(text);
+
+  if (spec.mustNotInclude?.some(p => n.includes(normalizeText(p)))) {
+    return {
+      ok: false,
+      msg: spec.hintWrong || 'Этот ответ не подходит к вопросу. Прочитай вопрос ещё раз.',
+      sample: spec.acceptableAnswers?.[0],
+      explain: spec.explain,
+    };
+  }
+
   if (words < min) {
-    return { ok: false, msg: `Нужно минимум ${min} слов (сейчас ${words}).` };
+    return {
+      ok: false,
+      msg: `Нужно минимум ${min} слов (сейчас ${words}).`,
+      sample: spec.acceptableAnswers?.[0],
+      explain: spec.explain,
+    };
   }
-  const ks = keywordScore(text, spec.keywords);
-  if (ks < 1) {
-    return { ok: false, msg: 'Добавь слова и конструкции из урока (лексика / грамматика).' };
+
+  if (!matchesPattern(raw, spec.mustIncludePattern)) {
+    return {
+      ok: false,
+      msg: spec.hintWrong || 'В ответе не хватает нужной формы (число, время, буквы и т.д.).',
+      sample: spec.acceptableAnswers?.[0],
+      explain: spec.explain,
+    };
   }
-  return { ok: true, msg: 'Отлично! Ответ принят.' };
+
+  const groupsOk = includesAnyGroup(raw, spec.mustIncludeAny);
+  const hasGroups = Boolean(spec.mustIncludeAny?.length);
+  const topicHits = (spec.topicKeywords || spec.keywords || [])
+    .filter(kw => n.includes(normalizeText(kw))).length;
+  const topicNeed = spec.topicKeywords?.length
+    ? Math.max(1, Math.ceil(spec.topicKeywords.length * 0.2))
+    : 0;
+  const topicOk = !topicNeed || topicHits >= topicNeed;
+  const sampleOk = matchesAcceptable(raw, spec.acceptableAnswers);
+
+  if (sampleOk) {
+    return {
+      ok: true,
+      msg: spec.explain ? `Верно! ${spec.explain}` : 'Отлично! Ответ принят.',
+      sample: spec.acceptableAnswers?.[0],
+    };
+  }
+
+  if (hasGroups && !groupsOk) {
+    return {
+      ok: false,
+      msg: spec.hintWrong || 'Ответ не соответствует вопросу. Используй нужную конструкцию.',
+      sample: spec.acceptableAnswers?.[0],
+      explain: spec.explain,
+    };
+  }
+
+  if (!hasGroups && spec.topicKeywords?.length && !topicOk) {
+    return {
+      ok: false,
+      msg: spec.hintWrong || 'Ответь по теме урока — используй лексику модуля.',
+      sample: spec.acceptableAnswers?.[0],
+      explain: spec.explain,
+    };
+  }
+
+  if (spec.keywords?.length && keywordScore(raw, spec.keywords) < 1) {
+    return {
+      ok: false,
+      msg: spec.hintWrong || 'Добавь слова и конструкции из урока (лексика / грамматика).',
+      sample: spec.sample || spec.acceptableAnswers?.[0],
+      explain: spec.explain,
+    };
+  }
+
+  return {
+    ok: true,
+    msg: spec.explain ? `Верно! ${spec.explain}` : 'Отлично! Ответ принят.',
+    sample: spec.acceptableAnswers?.[0],
+  };
 }
 
 function validateSpeech(text, spec) {
@@ -108,9 +206,11 @@ function validateSpeech(text, spec) {
 /* ── Lesson progress gate ── */
 const blockState = {
   theory: false,
+  theoryCheck: false,
   warmup: [],
   vocab: false,
   grammar: false,
+  contextDrill: [],
   quiz: false,
   pronunciation: [],
   flashcards: false,
@@ -121,9 +221,11 @@ const blockState = {
 
 function allBlocksDone(lesson) {
   if (!blockState.theory) return false;
+  if (lesson.theoryCheck?.length && !blockState.theoryCheck) return false;
   if (!blockState.warmup.every(Boolean)) return false;
   if (!blockState.vocab) return false;
   if (!blockState.grammar) return false;
+  if (lesson.contextDrill?.length && !blockState.contextDrill.every(Boolean)) return false;
   if (!blockState.quiz) return false;
   if (!blockState.pronunciation.every(Boolean)) return false;
   if (!blockState.flashcards) return false;
@@ -137,13 +239,17 @@ function updateProgressUI(lesson) {
   const bar = document.getElementById('sectionProgress');
   if (!bar) return;
   const hw = lesson.homework || [];
-  const total = 1 + lesson.warmup.length + 1 + 1 + 1
+  const theoryN = lesson.theoryCheck?.length ? 1 : 0;
+  const drillN = lesson.contextDrill?.length || 0;
+  const total = 1 + theoryN + lesson.warmup.length + 1 + 1 + drillN + 1
     + lesson.pronunciation.length + 1 + lesson.cultureCheck.length + lesson.speaking.length + hw.length;
   let done = 0;
   if (blockState.theory) done++;
+  if (blockState.theoryCheck) done++;
   done += blockState.warmup.filter(Boolean).length;
   if (blockState.vocab) done++;
   if (blockState.grammar) done++;
+  done += blockState.contextDrill.filter(Boolean).length;
   if (blockState.quiz) done++;
   done += blockState.pronunciation.filter(Boolean).length;
   if (blockState.flashcards) done++;
@@ -199,8 +305,12 @@ function attachCheckButton(container, onCheck) {
 function setCheckResult(feedback, result, sample) {
   feedback.className = 'check-feedback ' + (result.ok ? 'ok' : 'fail');
   feedback.textContent = result.msg;
-  if (!result.ok && sample) {
-    feedback.innerHTML += `<div class="sample-answer">Образец: ${escapeHtml(sample)}</div>`;
+  const show = sample || result.sample;
+  if (show) {
+    feedback.innerHTML += `<div class="sample-answer">Образец: ${escapeHtml(show)}</div>`;
+  }
+  if (!result.ok && result.explain) {
+    feedback.innerHTML += `<div class="sample-answer" style="opacity:0.85">${escapeHtml(result.explain)}</div>`;
   }
   return result.ok;
 }
@@ -251,8 +361,13 @@ function renderLesson(lesson) {
   if (!root) return;
 
   Object.assign(blockState, {
-    theory: false, warmup: lesson.warmup.map(() => false), vocab: false,
-    grammar: false, quiz: false,
+    theory: false,
+    theoryCheck: false,
+    warmup: lesson.warmup.map(() => false),
+    vocab: false,
+    grammar: false,
+    contextDrill: (lesson.contextDrill || []).map(() => false),
+    quiz: false,
     pronunciation: lesson.pronunciation.map(() => false),
     flashcards: false,
     culture: lesson.cultureCheck.map(() => false),
@@ -309,6 +424,15 @@ function renderLesson(lesson) {
       </div>
     </section>
 
+    <section id="theoryCheck" class="reveal">
+      <div class="section-header">
+        <span class="section-tag">Проверка</span>
+        <h2>Понимание теории</h2>
+        <p>Короткий тест: убедись, что усвоил грамматику модуля.</p>
+      </div>
+      <div id="theoryCheckContainer"></div>
+    </section>
+
     <section id="warmup" class="reveal">
       <div class="section-header"><span class="section-tag">Разогрев</span><h2>Разминка</h2><p>Ответь по-английски и нажми «Проверить».</p></div>
       <div class="card-grid" id="warmupGrid"></div>
@@ -342,6 +466,15 @@ function renderLesson(lesson) {
       </div>
       <div class="section-header" style="margin-top:28px"><h3>Проверка грамматики</h3></div>
       <div id="grammarCheckContainer"></div>
+    </section>
+
+    <section id="contextDrill" class="reveal">
+      <div class="section-header">
+        <span class="section-tag">Контекст</span>
+        <h2>Вставь слово в предложение</h2>
+        <p>Напиши пропущенное слово — проверка по точному ответу.</p>
+      </div>
+      <div id="contextDrillContainer"></div>
     </section>
 
     <section id="quiz" class="reveal">
@@ -411,9 +544,11 @@ function renderLesson(lesson) {
   `;
 
   initTheory(lesson);
+  initTheoryCheck(lesson);
   initWarmup(lesson);
   initVocab(lesson);
   initGrammarCheck(lesson);
+  initContextDrill(lesson);
   initQuiz(lesson.quiz, lesson);
   initPronunciation(lesson);
   initFlashcards(lesson);
@@ -456,7 +591,7 @@ function initWarmup(lesson) {
     btn.textContent = 'Проверить';
     btn.addEventListener('click', () => {
       const r = validateOpenAnswer(ta.value, spec);
-      setCheckResult(fb, r, spec.sample);
+      setCheckResult(fb, r);
       if (r.ok) markBlock('warmup', i, lesson);
     });
     actions.appendChild(btn);
@@ -535,6 +670,89 @@ function initVocab(lesson) {
       });
     }
     box.appendChild(item);
+  });
+}
+
+function initTheoryCheck(lesson) {
+  const container = document.getElementById('theoryCheckContainer');
+  const section = document.getElementById('theoryCheck');
+  const items = lesson.theoryCheck || [];
+  if (!items.length) {
+    if (section) section.style.display = 'none';
+    blockState.theoryCheck = true;
+    return;
+  }
+  let done = 0;
+  let ok = 0;
+  items.forEach((q, i) => {
+    const item = document.createElement('div');
+    item.className = 'quiz-item';
+    item.innerHTML = `<div class="quiz-sentence">${i + 1}. ${escapeHtml(q.question)}</div><div class="quiz-options"></div>`;
+    const opts = item.querySelector('.quiz-options');
+    q.options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'quiz-btn';
+      btn.textContent = opt;
+      btn.addEventListener('click', () => {
+        if (item.dataset.answered) return;
+        item.dataset.answered = '1';
+        const correct = opt === q.answer;
+        btn.classList.add(correct ? 'selected-correct' : 'selected-wrong');
+        if (!correct) {
+          opts.querySelectorAll('.quiz-btn').forEach(b => {
+            if (b.textContent === q.answer) b.classList.add('selected-correct');
+          });
+        }
+        item.classList.add(correct ? 'correct' : 'wrong');
+        opts.querySelectorAll('.quiz-btn').forEach(b => b.disabled = true);
+        done++;
+        if (correct) ok++;
+        if (done === items.length && ok >= Math.ceil(items.length * 0.6)) {
+          markBlock('theoryCheck', undefined, lesson);
+        }
+      });
+      opts.appendChild(btn);
+    });
+    container.appendChild(item);
+  });
+}
+
+function initContextDrill(lesson) {
+  const container = document.getElementById('contextDrillContainer');
+  const section = document.getElementById('contextDrill');
+  const drills = lesson.contextDrill || [];
+  if (!drills.length) {
+    if (section) section.style.display = 'none';
+    return;
+  }
+  drills.forEach((d, i) => {
+    const item = document.createElement('div');
+    item.className = 'quiz-item';
+    item.innerHTML = `<div class="quiz-sentence">${d.id || i + 1}. ${escapeHtml(d.prompt)}</div>
+      <input class="answer-input gap-input" placeholder="Type the missing word…" />
+      <div class="answer-actions"></div>`;
+    const inp = item.querySelector('input');
+    const fb = document.createElement('div');
+    fb.className = 'check-feedback';
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'btn btn-secondary check-btn';
+    btn.textContent = 'Проверить';
+    btn.addEventListener('click', () => {
+      if (item.dataset.done) return;
+      const val = normalizeText(inp.value);
+      const alts = [d.answer, ...(d.altAnswers || [])].map(a => normalizeText(a));
+      const hit = alts.includes(val);
+      fb.className = 'check-feedback ' + (hit ? 'ok' : 'fail');
+      fb.textContent = hit ? 'Верно!' : `Неверно. Ответ: ${d.answer}`;
+      if (!hit && d.hint) {
+        fb.innerHTML += `<div class="sample-answer">${escapeHtml(d.hint)}</div>`;
+      }
+      item.dataset.done = '1';
+      if (hit) markBlock('contextDrill', i, lesson);
+    });
+    item.querySelector('.answer-actions').append(btn, fb);
+    container.appendChild(item);
   });
 }
 
@@ -712,7 +930,7 @@ function initCulture(lesson) {
     btn.textContent = 'Проверить';
     btn.addEventListener('click', () => {
       const r = validateOpenAnswer(ta.value, spec);
-      setCheckResult(fb, r, spec.sample);
+      setCheckResult(fb, r);
       if (r.ok) markBlock('culture', i, lesson);
     });
     const actions = card.querySelector('.answer-actions');
@@ -747,7 +965,7 @@ function initSpeaking(lesson) {
     btn.textContent = 'Проверить ответ';
     btn.addEventListener('click', () => {
       const r = spec.useSpeech ? validateSpeech(ta.value, spec) : validateOpenAnswer(ta.value, spec);
-      setCheckResult(fb, r, spec.sample);
+      setCheckResult(fb, r);
       if (r.ok) markBlock('speaking', i, lesson);
     });
     actions.appendChild(btn);
