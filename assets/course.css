@@ -65,6 +65,14 @@ body {
   color: var(--text);
   text-decoration: none;
   letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .logo span { color: var(--accent); }
