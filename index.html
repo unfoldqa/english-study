@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Course A1 → B2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+  <div class="bg-accent"><div class="shape s1"></div><div class="shape s2"></div></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">English <span>Course</span></a>
+      <span style="font-size:0.85rem;color:var(--text-muted)">A1 → B2 · 32 урока</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="section-tag">Полный курс</span>
+      <h1>Английский язык<br>от A1 до B2</h1>
+      <p class="lead">32 структурированных урока: лексика, грамматика, тесты, карточки, произношение и устная практика. Занимайся по 20 минут в день и отслеживай прогресс.</p>
+
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-value" id="statDone">0</div><div class="stat-label">пройдено</div></div>
+        <div class="stat"><div class="stat-value" id="statTotal">32</div><div class="stat-label">уроков</div></div>
+        <div class="stat"><div class="stat-value" id="progressPct">0%</div><div class="stat-label">прогресс</div></div>
+      </div>
+
+      <div style="margin-top:32px;background:var(--bg-subtle);border-radius:12px;height:10px;overflow:hidden;border:1px solid var(--border)">
+        <div id="progressFill" style="height:100%;background:var(--accent);width:0%;transition:width 0.5s;border-radius:12px"></div>
+      </div>
+
+      <div style="margin-top:32px">
+        <a href="lesson.html?id=1" class="btn btn-primary" style="font-size:1rem;padding:14px 32px">Начать с урока 1 →</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header" style="margin-bottom:32px">
+        <h2>Программа курса</h2>
+        <p class="lead" style="margin-top:8px">8 уроков на каждый уровень. Нажми на урок, чтобы открыть.</p>
+      </div>
+      <div id="courseLevels"></div>
+    </section>
+
+    <section style="margin-top:64px">
+      <div class="card" style="padding:32px">
+        <h2 style="margin-bottom:16px">Как заниматься</h2>
+        <div class="card-grid">
+          <div><strong>1. Разогрев</strong><p style="color:var(--text-secondary);font-size:0.92rem;margin-top:6px">Ответь на вопросы по-английски</p></div>
+          <div><strong>2. Лексика и грамматика</strong><p style="color:var(--text-secondary);font-size:0.92rem;margin-top:6px">Изучи слова и правила</p></div>
+          <div><strong>3. Практика</strong><p style="color:var(--text-secondary);font-size:0.92rem;margin-top:6px">Пройди тест и карточки</p></div>
+          <div><strong>4. Завершение</strong><p style="color:var(--text-secondary);font-size:0.92rem;margin-top:6px">Нажми «Завершить урок» для сохранения прогресса</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">English Course A1 → B2 · 32 урока</footer>
+
+  <script src="assets/curriculum.js"></script>
+  <script src="assets/course.js"></script>
+  <script>renderIndex();</script>
+</body>
+</html>

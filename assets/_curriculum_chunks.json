@@ -1,0 +1,1451 @@
+[
+  {
+    "id": 6,
+    "level": "B1",
+    "title": "Modal Verbs: ability, permission, obligation",
+    "titleRu": "Модальные глаголы: способность, разрешение, обязанность",
+    "topic": "Can, could, may, must, have to",
+    "description": "Модальные глаголы выражают способность, разрешение и обязанность без изменения формы по лицам.",
+    "duration": "20 мин",
+    "warmup": [
+      "What can you do well?",
+      "What do you have to do every day?",
+      "May I ask you a question?"
+    ],
+    "vocab": [
+      {
+        "en": "ability",
+        "ru": "способность"
+      },
+      {
+        "en": "permission",
+        "ru": "разрешение"
+      },
+      {
+        "en": "obligation",
+        "ru": "обязанность"
+      },
+      {
+        "en": "allowed",
+        "ru": "разрешено"
+      },
+      {
+        "en": "required",
+        "ru": "требуется"
+      },
+      {
+        "en": "forbidden",
+        "ru": "запрещено"
+      },
+      {
+        "en": "necessary",
+        "ru": "необходимо"
+      },
+      {
+        "en": "rule",
+        "ru": "правило"
+      },
+      {
+        "en": "duty",
+        "ru": "долг"
+      },
+      {
+        "en": "capable",
+        "ru": "способный"
+      }
+    ],
+    "grammar": {
+      "title": "Modals: can, could, may, must, have to",
+      "blocks": [
+        {
+          "title": "Ability & Permission",
+          "desc": "Can/could — способность (could — прошлое). May/can — разрешение (may — формальнее).",
+          "example": "She can speak three languages. / May I open the window?"
+        },
+        {
+          "title": "Obligation",
+          "desc": "Must — сильная обязанность или личное мнение. Have to — внешнее правило. Mustn't — запрет.",
+          "example": "You must wear a seatbelt. / Students have to submit essays."
+        }
+      ],
+      "formulas": [
+        "Ability: can/could + V1",
+        "Permission: Can/May I + V1?",
+        "Obligation: must/have to + V1; Prohibition: mustn't + V1"
+      ],
+      "extraExamples": [
+        {
+          "label": "Ability",
+          "items": [
+            "I can swim but I can't dive.",
+            "He could read when he was four."
+          ]
+        },
+        {
+          "label": "Obligation",
+          "items": [
+            "You don't have to come if you're busy.",
+            "You mustn't smoke here."
+          ]
+        }
+      ],
+      "mistake": {
+        "wrong": "She musts study harder.",
+        "right": "She must study harder."
+      }
+    },
+    "quiz": [
+      {
+        "sentence": "You ___ park here. It's forbidden.",
+        "options": [
+          "mustn't",
+          "don't have to"
+        ],
+        "answer": "mustn't"
+      },
+      {
+        "sentence": "___ you help me with this box?",
+        "options": [
+          "Can",
+          "Must"
+        ],
+        "answer": "Can"
+      },
+      {
+        "sentence": "When I was young, I ___ climb trees easily.",
+        "options": [
+          "could",
+          "can"
+        ],
+        "answer": "could"
+      },
+      {
+        "sentence": "Employees ___ wear ID badges at all times.",
+        "options": [
+          "have to",
+          "may"
+        ],
+        "answer": "have to"
+      },
+      {
+        "sentence": "___ I borrow your pen, please?",
+        "options": [
+          "May",
+          "Must"
+        ],
+        "answer": "May"
+      }
+    ],
+    "pronunciation": [
+      {
+        "phrase": "Can you help me?",
+        "ipa": "/kən juː help miː/",
+        "tip": "Can в вопросе часто слабый /kən/, не /kæn/"
+      },
+      {
+        "phrase": "You must be tired.",
+        "ipa": "/juː mʌst biː ˈtaɪəd/",
+        "tip": "Must — короткий /ʌ/, не растягивай"
+      },
+      {
+        "phrase": "I have to leave now.",
+        "ipa": "/aɪ hæf tə liːv/",
+        "tip": "Have to → /hæftə/ в быстрой речи"
+      },
+      {
+        "phrase": "May I sit here?",
+        "ipa": "/meɪ aɪ sɪt/",
+        "tip": "May — длинный /eɪ/, формальное произношение"
+      },
+      {
+        "phrase": "She could speak French.",
+        "ipa": "/ʃiː kʊd spiːk/",
+        "tip": "Could — /kʊd/, не путай с can /kæn/"
+      }
+    ],
+    "flashcards": [
+      {
+        "word": "ability",
+        "trans": "способность",
+        "example": "She has the ability to lead."
+      },
+      {
+        "word": "permission",
+        "trans": "разрешение",
+        "example": "You need permission to enter."
+      },
+      {
+        "word": "obligation",
+        "trans": "обязанность",
+        "example": "It's an obligation, not a choice."
+      },
+      {
+        "word": "allowed",
+        "trans": "разрешено",
+        "example": "Smoking is not allowed."
+      },
+      {
+        "word": "required",
+        "trans": "требуется",
+        "example": "A passport is required."
+      },
+      {
+        "word": "forbidden",
+        "trans": "запрещено",
+        "example": "Entry is forbidden."
+      },
+      {
+        "word": "necessary",
+        "trans": "необходимо",
+        "example": "Sleep is necessary for health."
+      },
+      {
+        "word": "rule",
+        "trans": "правило",
+        "example": "Follow the school rules."
+      },
+      {
+        "word": "duty",
+        "trans": "долг",
+        "example": "It's my duty to help."
+      },
+      {
+        "word": "capable",
+        "trans": "способный",
+        "example": "He is capable of great things."
+      },
+      {
+        "word": "can",
+        "trans": "мочь, уметь",
+        "example": "I can drive a car."
+      },
+      {
+        "word": "could",
+        "trans": "мог(ла) (прошлое)",
+        "example": "I could run faster when I was young."
+      },
+      {
+        "word": "may",
+        "trans": "мочь (разрешение)",
+        "example": "May I use your phone?"
+      },
+      {
+        "word": "must",
+        "trans": "должен (обязан)",
+        "example": "You must finish this today."
+      },
+      {
+        "word": "have to",
+        "trans": "приходится, нужно",
+        "example": "I have to work on Saturdays."
+      },
+      {
+        "word": "mustn't",
+        "trans": "нельзя (запрет)",
+        "example": "You mustn't tell anyone."
+      },
+      {
+        "word": "don't have to",
+        "trans": "не обязан",
+        "example": "You don't have to pay."
+      },
+      {
+        "word": "be able to",
+        "trans": "быть в состоянии",
+        "example": "Will you be able to come?"
+      },
+      {
+        "word": "allow",
+        "trans": "разрешать",
+        "example": "They allow pets in the hotel."
+      },
+      {
+        "word": "require",
+        "trans": "требовать",
+        "example": "The job requires experience."
+      }
+    ],
+    "culture": {
+      "watch": [
+        "The Devil Wears Prada — правила на работе"
+      ],
+      "listen": [
+        "Survivor — Eye of the Tiger"
+      ],
+      "read": [
+        "George Orwell — Animal Farm"
+      ]
+    },
+    "cultureCheck": [
+      "What must employees do in this company?",
+      "What can the main character do that others can't?",
+      "May visitors take photos?",
+      "What did he have to do as a child?",
+      "What are you not allowed to do there?"
+    ],
+    "speaking": [
+      "Расскажи, что ты умеешь делать и что не умеешь — 4 предложения с can/can't.",
+      "Опиши правила в школе или на работе, используя must, have to, mustn't.",
+      "Попроси разрешения 3 разными способами (Can/May/Could I...?)."
+    ]
+  },
+  {
+    "id": 7,
+    "level": "B1",
+    "title": "Modal Verbs: advice, deduction, criticism",
+    "titleRu": "Модальные глаголы: совет, предположение, критика",
+    "topic": "Should, ought to, must, might, could",
+    "description": "Модальные глаголы для советов, логических предположений о настоящем и мягкой критики прошлых действий.",
+    "duration": "20 мин",
+    "warmup": [
+      "What should people do to stay healthy?",
+      "Where might he be right now?",
+      "What should you have done differently last year?"
+    ],
+    "vocab": [
+      {
+        "en": "advice",
+        "ru": "совет"
+      },
+      {
+        "en": "deduction",
+        "ru": "логический вывод"
+      },
+      {
+        "en": "criticism",
+        "ru": "критика"
+      },
+      {
+        "en": "probably",
+        "ru": "вероятно"
+      },
+      {
+        "en": "perhaps",
+        "ru": "возможно"
+      },
+      {
+        "en": "regret",
+        "ru": "сожаление"
+      },
+      {
+        "en": "logical",
+        "ru": "логичный"
+      },
+      {
+        "en": "recommend",
+        "ru": "рекомендовать"
+      },
+      {
+        "en": "certain",
+        "ru": "уверенный"
+      },
+      {
+        "en": "possibility",
+        "ru": "возможность"
+      }
+    ],
+    "grammar": {
+      "title": "Modals: should, ought to, must, might, could",
+      "blocks": [
+        {
+          "title": "Advice",
+          "desc": "Should/ought to — совет. Shouldn't — отрицательный совет. Ought to = should (чуть формальнее).",
+          "example": "You should get more sleep. / You ought to see a doctor."
+        },
+        {
+          "title": "Deduction & Past criticism",
+          "desc": "Must — уверенный вывод (must be). Might/could — возможность. Should have + V3 — критика прошлого.",
+          "example": "He must be at home. / You should have told me earlier."
+        }
+      ],
+      "formulas": [
+        "Advice: should/ought to + V1",
+        "Deduction: must/might/could + V1",
+        "Past criticism: should have + V3"
+      ],
+      "extraExamples": [
+        {
+          "label": "Deduction",
+          "items": [
+            "She might be stuck in traffic.",
+            "They can't be serious!"
+          ]
+        },
+        {
+          "label": "Past criticism",
+          "items": [
+            "I shouldn't have eaten so much.",
+            "He ought to have apologized."
+          ]
+        }
+      ],
+      "mistake": {
+        "wrong": "He must to be tired.",
+        "right": "He must be tired."
+      }
+    },
+    "quiz": [
+      {
+        "sentence": "You look pale. You ___ go home.",
+        "options": [
+          "should",
+          "must be"
+        ],
+        "answer": "should"
+      },
+      {
+        "sentence": "The lights are on. She ___ be at home.",
+        "options": [
+          "must",
+          "should"
+        ],
+        "answer": "must"
+      },
+      {
+        "sentence": "It's late. He ___ still be at the office.",
+        "options": [
+          "might",
+          "should have"
+        ],
+        "answer": "might"
+      },
+      {
+        "sentence": "I ___ have studied harder for the exam.",
+        "options": [
+          "should",
+          "must"
+        ],
+        "answer": "should"
+      },
+      {
+        "sentence": "You ___ to respect your elders.",
+        "options": [
+          "ought",
+          "must"
+        ],
+        "answer": "ought"
+      }
+    ],
+    "pronunciation": [
+      {
+        "phrase": "You should rest more.",
+        "ipa": "/juː ʃʊd rest/",
+        "tip": "Should — /ʃʊd/, не /ʃud/ с долгим u"
+      },
+      {
+        "phrase": "He must be joking.",
+        "ipa": "/hiː mʌst biː/",
+        "tip": "Must be — связывай в одну фразу"
+      },
+      {
+        "phrase": "She might know the answer.",
+        "ipa": "/ʃiː maɪt nəʊ/",
+        "tip": "Might — /aɪ/ как в night"
+      },
+      {
+        "phrase": "You should have called.",
+        "ipa": "/juː ʃʊd hæv kɔːld/",
+        "tip": "Should have → should've /ʃʊdəv/"
+      },
+      {
+        "phrase": "They ought to help.",
+        "ipa": "/ðeɪ ɔːt tə help/",
+        "tip": "Ought — silent gh, звучит как /ɔːt/"
+      }
+    ],
+    "flashcards": [
+      {
+        "word": "advice",
+        "trans": "совет",
+        "example": "Let me give you some advice."
+      },
+      {
+        "word": "deduction",
+        "trans": "вывод",
+        "example": "That's a logical deduction."
+      },
+      {
+        "word": "criticism",
+        "trans": "критика",
+        "example": "He accepted the criticism."
+      },
+      {
+        "word": "probably",
+        "trans": "вероятно",
+        "example": "She is probably at home."
+      },
+      {
+        "word": "perhaps",
+        "trans": "возможно",
+        "example": "Perhaps we should wait."
+      },
+      {
+        "word": "regret",
+        "trans": "сожаление",
+        "example": "I regret not studying more."
+      },
+      {
+        "word": "logical",
+        "trans": "логичный",
+        "example": "It's a logical conclusion."
+      },
+      {
+        "word": "recommend",
+        "trans": "рекомендовать",
+        "example": "I recommend this book."
+      },
+      {
+        "word": "certain",
+        "trans": "уверенный",
+        "example": "I'm certain he will come."
+      },
+      {
+        "word": "possibility",
+        "trans": "возможность",
+        "example": "There's a possibility of rain."
+      },
+      {
+        "word": "should",
+        "trans": "следует",
+        "example": "You should drink more water."
+      },
+      {
+        "word": "ought to",
+        "trans": "следует (форм.)",
+        "example": "You ought to be polite."
+      },
+      {
+        "word": "must be",
+        "trans": "должно быть",
+        "example": "He must be tired."
+      },
+      {
+        "word": "might",
+        "trans": "может (возможно)",
+        "example": "It might rain later."
+      },
+      {
+        "word": "could",
+        "trans": "может (возможно)",
+        "example": "That could be true."
+      },
+      {
+        "word": "should have",
+        "trans": "следовало бы",
+        "example": "I should have listened."
+      },
+      {
+        "word": "shouldn't have",
+        "trans": "не следовало",
+        "example": "You shouldn't have said that."
+      },
+      {
+        "word": "can't be",
+        "trans": "не может быть",
+        "example": "That can't be right."
+      },
+      {
+        "word": "maybe",
+        "trans": "может быть",
+        "example": "Maybe she forgot."
+      },
+      {
+        "word": "surely",
+        "trans": "наверняка",
+        "example": "Surely you remember?"
+      }
+    ],
+    "culture": {
+      "watch": [
+        "The Social Network — советы и решения"
+      ],
+      "listen": [
+        "Bob Dylan — Like a Rolling Stone"
+      ],
+      "read": [
+        "Jane Austen — Pride and Prejudice"
+      ]
+    },
+    "cultureCheck": [
+      "What should the character have done differently?",
+      "Where might he be now?",
+      "What advice would you give the protagonist?",
+      "What must have happened before this scene?",
+      "What ought people to do in this situation?"
+    ],
+    "speaking": [
+      "Дай 3 совета другу, используя should/ought to.",
+      "Сделай 3 предположения о ситуации (must/might/could).",
+      "Расскажи о чём-то, что ты должен был сделать иначе (should have)."
+    ]
+  },
+  {
+    "id": 8,
+    "level": "B1",
+    "title": "First & Second Conditionals",
+    "titleRu": "Условные предложения 1 и 2 типа",
+    "topic": "Реальные и нереальные условия",
+    "description": "First Conditional — реальные условия в будущем. Second Conditional — гипотетические, маловероятные ситуации.",
+    "duration": "20 мин",
+    "warmup": [
+      "What will you do if it rains tomorrow?",
+      "What would you do if you won the lottery?",
+      "If you could live anywhere, where would you go?"
+    ],
+    "vocab": [
+      {
+        "en": "condition",
+        "ru": "условие"
+      },
+      {
+        "en": "hypothetical",
+        "ru": "гипотетический"
+      },
+      {
+        "en": "unlikely",
+        "ru": "маловероятный"
+      },
+      {
+        "en": "consequence",
+        "ru": "следствие"
+      },
+      {
+        "en": "unless",
+        "ru": "если не"
+      },
+      {
+        "en": "provided",
+        "ru": "при условии что"
+      },
+      {
+        "en": "imagine",
+        "ru": "представь"
+      },
+      {
+        "en": "scenario",
+        "ru": "сценарий"
+      },
+      {
+        "en": "realistic",
+        "ru": "реалистичный"
+      },
+      {
+        "en": "dream",
+        "ru": "мечта"
+      }
+    ],
+    "grammar": {
+      "title": "First & Second Conditional",
+      "blocks": [
+        {
+          "title": "First Conditional",
+          "desc": "Реальное или вероятное условие в будущем. If + Present Simple, will + V1.",
+          "example": "If it rains, I will stay at home."
+        },
+        {
+          "title": "Second Conditional",
+          "desc": "Нереальное или маловероятное условие в настоящем/будущем. If + Past Simple, would + V1.",
+          "example": "If I had more time, I would learn Japanese."
+        }
+      ],
+      "formulas": [
+        "First: If + Present Simple, will + V1",
+        "Second: If + Past Simple, would + V1",
+        "Unless = if not"
+      ],
+      "extraExamples": [
+        {
+          "label": "First",
+          "items": [
+            "If you study hard, you will pass.",
+            "She won't come unless you invite her."
+          ]
+        },
+        {
+          "label": "Second",
+          "items": [
+            "If I were rich, I would travel the world.",
+            "What would you do if you lost your phone?"
+          ]
+        }
+      ],
+      "mistake": {
+        "wrong": "If I will see him, I will tell him.",
+        "right": "If I see him, I will tell him."
+      }
+    },
+    "quiz": [
+      {
+        "sentence": "If it ___ tomorrow, we will cancel the picnic.",
+        "options": [
+          "rains",
+          "will rain"
+        ],
+        "answer": "rains"
+      },
+      {
+        "sentence": "If I ___ a million pounds, I would buy a house.",
+        "options": [
+          "won",
+          "win"
+        ],
+        "answer": "won"
+      },
+      {
+        "sentence": "She ___ angry if you are late.",
+        "options": [
+          "will be",
+          "would be"
+        ],
+        "answer": "will be"
+      },
+      {
+        "sentence": "If I ___ you, I would accept the offer.",
+        "options": [
+          "were",
+          "am"
+        ],
+        "answer": "were"
+      },
+      {
+        "sentence": "We won't go out unless it ___ raining.",
+        "options": [
+          "stops",
+          "will stop"
+        ],
+        "answer": "stops"
+      }
+    ],
+    "pronunciation": [
+      {
+        "phrase": "If it rains, I'll stay home.",
+        "ipa": "/ɪf ɪt reɪnz aɪl steɪ/",
+        "tip": "If it — связывай, I'll — одно слово"
+      },
+      {
+        "phrase": "If I were you...",
+        "ipa": "/ɪf aɪ wə juː/",
+        "tip": "Were — /wə/ в быстрой речи, формально /wɜː/"
+      },
+      {
+        "phrase": "What would you do?",
+        "ipa": "/wɒt wʊd juː duː/",
+        "tip": "Would — /wʊd/, не /wud/"
+      },
+      {
+        "phrase": "Unless you hurry...",
+        "ipa": "/ənˈles juː ˈhʌri/",
+        "tip": "Unless — ударение на второй слог"
+      },
+      {
+        "phrase": "I would travel more.",
+        "ipa": "/aɪ wʊd ˈtrævl/",
+        "tip": "Would — слабая форма в быстрой речи /əd/"
+      }
+    ],
+    "flashcards": [
+      {
+        "word": "condition",
+        "trans": "условие",
+        "example": "What's the condition?"
+      },
+      {
+        "word": "hypothetical",
+        "trans": "гипотетический",
+        "example": "It's a hypothetical question."
+      },
+      {
+        "word": "unlikely",
+        "trans": "маловероятный",
+        "example": "Rain is unlikely today."
+      },
+      {
+        "word": "consequence",
+        "trans": "следствие",
+        "example": "Consider the consequences."
+      },
+      {
+        "word": "unless",
+        "trans": "если не",
+        "example": "I won't go unless you come."
+      },
+      {
+        "word": "provided",
+        "trans": "при условии",
+        "example": "You can go provided you finish."
+      },
+      {
+        "word": "imagine",
+        "trans": "представь",
+        "example": "Imagine you were famous."
+      },
+      {
+        "word": "scenario",
+        "trans": "сценарий",
+        "example": "That's a worst-case scenario."
+      },
+      {
+        "word": "realistic",
+        "trans": "реалистичный",
+        "example": "Is that a realistic plan?"
+      },
+      {
+        "word": "dream",
+        "trans": "мечта",
+        "example": "It's my dream to visit Iceland."
+      },
+      {
+        "word": "if",
+        "trans": "если",
+        "example": "If you need help, call me."
+      },
+      {
+        "word": "will",
+        "trans": "will (результат)",
+        "example": "If you try, you will succeed."
+      },
+      {
+        "word": "would",
+        "trans": "would (гипотеза)",
+        "example": "I would help if I could."
+      },
+      {
+        "word": "won",
+        "trans": "выиграл (Past)",
+        "example": "If I won, I would celebrate."
+      },
+      {
+        "word": "were",
+        "trans": "were (субjunctive)",
+        "example": "If I were taller..."
+      },
+      {
+        "word": "pass",
+        "trans": "сдать (экзамен)",
+        "example": "If you study, you will pass."
+      },
+      {
+        "word": "cancel",
+        "trans": "отменить",
+        "example": "They will cancel if it snows."
+      },
+      {
+        "word": "lottery",
+        "trans": "лотерея",
+        "example": "If I won the lottery..."
+      },
+      {
+        "word": "offer",
+        "trans": "предложение",
+        "example": "I would accept the offer."
+      },
+      {
+        "word": "hurry",
+        "trans": "торопиться",
+        "example": "Unless you hurry, you'll be late."
+      }
+    ],
+    "culture": {
+      "watch": [
+        "Sliding Doors — разные сценарии жизни"
+      ],
+      "listen": [
+        "Beyoncé — If I Were a Boy"
+      ],
+      "read": [
+        "Ray Bradbury — Fahrenheit 451"
+      ]
+    },
+    "cultureCheck": [
+      "What will happen if the character fails?",
+      "What would you do in his situation?",
+      "Is the situation realistic or hypothetical?",
+      "What would change if the story had a different ending?",
+      "What conditions must be met for success?"
+    ],
+    "speaking": [
+      "Составь 3 предложения First Conditional о своих планах.",
+      "Ответь на «What would you do if...?» — 3 гипотетических ситуации.",
+      "Обсуди с воображаемым другом: If I were you, I would..."
+    ]
+  },
+  {
+    "id": 9,
+    "level": "B1",
+    "title": "Third & Mixed Conditionals",
+    "titleRu": "Условные предложения 3 типа и смешанные",
+    "topic": "Прошлое и сожаление",
+    "description": "Third Conditional — нереальное прошлое. Mixed Conditionals — смешение времен для сложных гипотез.",
+    "duration": "20 мин",
+    "warmup": [
+      "What would have happened if you had studied more?",
+      "If you had been born in another country, how would your life be different?",
+      "What mistake do you wish you hadn't made?"
+    ],
+    "vocab": [
+      {
+        "en": "regret",
+        "ru": "сожаление"
+      },
+      {
+        "en": "past event",
+        "ru": "прошлое событие"
+      },
+      {
+        "en": "alternative",
+        "ru": "альтернатива"
+      },
+      {
+        "en": "consequence",
+        "ru": "последствие"
+      },
+      {
+        "en": "hypothesis",
+        "ru": "гипотеза"
+      },
+      {
+        "en": "unreal",
+        "ru": "нереальный"
+      },
+      {
+        "en": "wish",
+        "ru": "желание"
+      },
+      {
+        "en": "outcome",
+        "ru": "исход"
+      },
+      {
+        "en": "circumstance",
+        "ru": "обстоятельство"
+      },
+      {
+        "en": "reflect",
+        "ru": "размышлять"
+      }
+    ],
+    "grammar": {
+      "title": "Third & Mixed Conditionals",
+      "blocks": [
+        {
+          "title": "Third Conditional",
+          "desc": "Нереальное условие в прошлом. If + Past Perfect, would have + V3. Выражает сожаление.",
+          "example": "If I had studied harder, I would have passed the exam."
+        },
+        {
+          "title": "Mixed Conditionals",
+          "desc": "Смешение: прошлое условие → настоящий результат, или настоящее условие → прошлый результат.",
+          "example": "If I had taken that job, I would be living abroad now."
+        }
+      ],
+      "formulas": [
+        "Third: If + had + V3, would have + V3",
+        "Mixed: If + Past Perfect, would + V1 (now)"
+      ],
+      "extraExamples": [
+        {
+          "label": "Third",
+          "items": [
+            "If she hadn't missed the train, she would have arrived on time.",
+            "We wouldn't have got lost if we had had a map."
+          ]
+        },
+        {
+          "label": "Mixed",
+          "items": [
+            "If I were better at maths, I would have become an engineer.",
+            "If he had saved money, he wouldn't be in debt now."
+          ]
+        }
+      ],
+      "mistake": {
+        "wrong": "If I would have known, I would have come.",
+        "right": "If I had known, I would have come."
+      }
+    },
+    "quiz": [
+      {
+        "sentence": "If she ___ earlier, she would have caught the train.",
+        "options": [
+          "had left",
+          "left"
+        ],
+        "answer": "had left"
+      },
+      {
+        "sentence": "I would have helped if you ___ me.",
+        "options": [
+          "had asked",
+          "asked"
+        ],
+        "answer": "had asked"
+      },
+      {
+        "sentence": "If I had studied medicine, I ___ a doctor now.",
+        "options": [
+          "would be",
+          "would have been"
+        ],
+        "answer": "would be"
+      },
+      {
+        "sentence": "We ___ lost if we had had GPS.",
+        "options": [
+          "wouldn't have got",
+          "wouldn't get"
+        ],
+        "answer": "wouldn't have got"
+      },
+      {
+        "sentence": "If he ___ more careful, the accident wouldn't have happened.",
+        "options": [
+          "had been",
+          "was"
+        ],
+        "answer": "had been"
+      }
+    ],
+    "pronunciation": [
+      {
+        "phrase": "If I had known...",
+        "ipa": "/ɪf aɪ hæd nəʊn/",
+        "tip": "Had known — связывай, known — silent k"
+      },
+      {
+        "phrase": "I would have helped.",
+        "ipa": "/aɪ wʊd hæv helpd/",
+        "tip": "Would have → would've /wʊdəv/"
+      },
+      {
+        "phrase": "She would have passed.",
+        "ipa": "/ʃiː wʊd hæv pɑːst/",
+        "tip": "Would have — три слова сливаются"
+      },
+      {
+        "phrase": "If I were richer now...",
+        "ipa": "/ɪf aɪ wə ˈrɪtʃə/",
+        "tip": "Mixed conditional — чёткое разделение частей"
+      },
+      {
+        "phrase": "We wouldn't have got lost.",
+        "ipa": "/wiː ˈwʊdnt hæv ɡɒt/",
+        "tip": "Wouldn't have — не пропускай have"
+      }
+    ],
+    "flashcards": [
+      {
+        "word": "regret",
+        "trans": "сожаление",
+        "example": "I regret not travelling more."
+      },
+      {
+        "word": "past event",
+        "trans": "прошлое событие",
+        "example": "That past event changed everything."
+      },
+      {
+        "word": "alternative",
+        "trans": "альтернатива",
+        "example": "Think of an alternative outcome."
+      },
+      {
+        "word": "consequence",
+        "trans": "последствие",
+        "example": "Every action has consequences."
+      },
+      {
+        "word": "hypothesis",
+        "trans": "гипотеза",
+        "example": "It's just a hypothesis."
+      },
+      {
+        "word": "unreal",
+        "trans": "нереальный",
+        "example": "The situation is unreal."
+      },
+      {
+        "word": "wish",
+        "trans": "желание",
+        "example": "I wish I had tried harder."
+      },
+      {
+        "word": "outcome",
+        "trans": "исход",
+        "example": "The outcome was unexpected."
+      },
+      {
+        "word": "circumstance",
+        "trans": "обстоятельство",
+        "example": "Under different circumstances..."
+      },
+      {
+        "word": "reflect",
+        "trans": "размышлять",
+        "example": "I reflect on my choices."
+      },
+      {
+        "word": "had known",
+        "trans": "знал бы (Past Perfect)",
+        "example": "If I had known, I would have come."
+      },
+      {
+        "word": "would have",
+        "trans": "would have",
+        "example": "She would have succeeded."
+      },
+      {
+        "word": "had studied",
+        "trans": "учился бы (PP)",
+        "example": "If I had studied more..."
+      },
+      {
+        "word": "missed",
+        "trans": "опоздал/пропустил",
+        "example": "If I hadn't missed the bus..."
+      },
+      {
+        "word": "caught",
+        "trans": "успел (на поезд)",
+        "example": "She would have caught it."
+      },
+      {
+        "word": "accident",
+        "trans": "авария",
+        "example": "The accident wouldn't have happened."
+      },
+      {
+        "word": "debt",
+        "trans": "долг",
+        "example": "He wouldn't be in debt now."
+      },
+      {
+        "word": "saved",
+        "trans": "накопил",
+        "example": "If he had saved money..."
+      },
+      {
+        "word": "different",
+        "trans": "другой",
+        "example": "Life would be different."
+      },
+      {
+        "word": "mistake",
+        "trans": "ошибка",
+        "example": "If I hadn't made that mistake..."
+      }
+    ],
+    "culture": {
+      "watch": [
+        "It's a Wonderful Life — альтернативная жизнь"
+      ],
+      "listen": [
+        "Frank Sinatra — My Way"
+      ],
+      "read": [
+        "Kazuo Ishiguro — The Remains of the Day"
+      ]
+    },
+    "cultureCheck": [
+      "What would have happened if the character had made a different choice?",
+      "How would the protagonist's life be different now?",
+      "What does the character regret?",
+      "What mixed conditional fits this situation?",
+      "What past event caused the present problem?"
+    ],
+    "speaking": [
+      "Расскажи о событии в прошлом, которое изменило бы настоящее (Third Conditional).",
+      "Составь 2 Mixed Conditional предложения о своей жизни.",
+      "Обсуди: If I had..., I would... now — 3 примера."
+    ]
+  },
+  {
+    "id": 10,
+    "level": "B1",
+    "title": "Passive Voice",
+    "titleRu": "Страдательный залог",
+    "topic": "Passive in different tenses",
+    "description": "Passive Voice смещает фокус с исполнителя на действие или объект. Нужен для формального и академического стиля.",
+    "duration": "20 мин",
+    "warmup": [
+      "Who invented the telephone?",
+      "Was your homework checked?",
+      "What is made in your country?"
+    ],
+    "vocab": [
+      {
+        "en": "passive",
+        "ru": "страдательный залог"
+      },
+      {
+        "en": "agent",
+        "ru": "исполнитель действия"
+      },
+      {
+        "en": "object",
+        "ru": "объект"
+      },
+      {
+        "en": "focus",
+        "ru": "фокус, акцент"
+      },
+      {
+        "en": "manufacture",
+        "ru": "производить"
+      },
+      {
+        "en": "discover",
+        "ru": "открывать"
+      },
+      {
+        "en": "publish",
+        "ru": "публиковать"
+      },
+      {
+        "en": "construct",
+        "ru": "строить"
+      },
+      {
+        "en": "by",
+        "ru": "кем/чем (агент)"
+      },
+      {
+        "en": "formal",
+        "ru": "формальный"
+      }
+    ],
+    "grammar": {
+      "title": "Passive Voice",
+      "blocks": [
+        {
+          "title": "Structure",
+          "desc": "Be + V3. Исполнитель указывается через by, если важен. Фокус на действии, а не на том, кто его совершил.",
+          "example": "The book was written by Tolkien."
+        },
+        {
+          "title": "Tenses in Passive",
+          "desc": "Passive возможен во всех основных временах: is made, was built, has been done, will be sent.",
+          "example": "The letter has been sent. / The bridge is being repaired."
+        }
+      ],
+      "formulas": [
+        "Present Simple Passive: am/is/are + V3",
+        "Past Simple Passive: was/were + V3",
+        "Present Perfect Passive: have/has been + V3"
+      ],
+      "extraExamples": [
+        {
+          "label": "Examples",
+          "items": [
+            "English is spoken all over the world.",
+            "The window was broken last night."
+          ]
+        },
+        {
+          "label": "With agent",
+          "items": [
+            "The film was directed by Spielberg.",
+            "The cake was made by my grandmother."
+          ]
+        }
+      ],
+      "mistake": {
+        "wrong": "The house was build in 1990.",
+        "right": "The house was built in 1990."
+      }
+    },
+    "quiz": [
+      {
+        "sentence": "English ___ all over the world.",
+        "options": [
+          "is spoken",
+          "speaks"
+        ],
+        "answer": "is spoken"
+      },
+      {
+        "sentence": "The bridge ___ last year.",
+        "options": [
+          "was built",
+          "built"
+        ],
+        "answer": "was built"
+      },
+      {
+        "sentence": "The report ___ yet.",
+        "options": [
+          "hasn't been finished",
+          "hasn't finished"
+        ],
+        "answer": "hasn't been finished"
+      },
+      {
+        "sentence": "The room ___ right now.",
+        "options": [
+          "is being cleaned",
+          "is cleaning"
+        ],
+        "answer": "is being cleaned"
+      },
+      {
+        "sentence": "The email ___ tomorrow.",
+        "options": [
+          "will be sent",
+          "will send"
+        ],
+        "answer": "will be sent"
+      }
+    ],
+    "pronunciation": [
+      {
+        "phrase": "It was built in 1990.",
+        "ipa": "/ɪt wɒz bɪlt/",
+        "tip": "Built — одно слово, silent l"
+      },
+      {
+        "phrase": "English is spoken here.",
+        "ipa": "/ˈɪŋɡlɪʃ ɪz ˈspəʊkən/",
+        "tip": "Spoken — ударение на первый слог"
+      },
+      {
+        "phrase": "Has it been done?",
+        "ipa": "/hæz ɪt biːn dʌn/",
+        "tip": "Been done — связывай без паузы"
+      },
+      {
+        "phrase": "The letter was sent.",
+        "ipa": "/ðə ˈletə wɒz sent/",
+        "tip": "Was sent — was слабое /wəz/"
+      },
+      {
+        "phrase": "It is being repaired.",
+        "ipa": "/ɪt ɪz ˈbiːɪŋ rɪˈpeəd/",
+        "tip": "Being — не пропускай, /ˈbiːɪŋ/"
+      }
+    ],
+    "flashcards": [
+      {
+        "word": "passive",
+        "trans": "страдательный залог",
+        "example": "Use the passive in formal writing."
+      },
+      {
+        "word": "agent",
+        "trans": "исполнитель",
+        "example": "The agent is unknown."
+      },
+      {
+        "word": "object",
+        "trans": "объект",
+        "example": "The object receives the action."
+      },
+      {
+        "word": "focus",
+        "trans": "фокус",
+        "example": "Passive shifts the focus."
+      },
+      {
+        "word": "manufacture",
+        "trans": "производить",
+        "example": "Cars are manufactured here."
+      },
+      {
+        "word": "discover",
+        "trans": "открывать",
+        "example": "Penicillin was discovered in 1928."
+      },
+      {
+        "word": "publish",
+        "trans": "публиковать",
+        "example": "The article was published yesterday."
+      },
+      {
+        "word": "construct",
+        "trans": "строить",
+        "example": "The tower was constructed in 1889."
+      },
+      {
+        "word": "by",
+        "trans": "кем/чем",
+        "example": "It was written by her."
+      },
+      {
+        "word": "formal",
+        "trans": "формальный",
+        "example": "Passive is common in formal texts."
+      },
+      {
+        "word": "is made",
+        "trans": "делается",
+        "example": "This is made in Italy."
+      },
+      {
+        "word": "was built",
+        "trans": "был построен",
+        "example": "The house was built in 2000."
+      },
+      {
+        "word": "has been done",
+        "trans": "было сделано",
+        "example": "The work has been done."
+      },
+      {
+        "word": "will be sent",
+        "trans": "будет отправлено",
+        "example": "It will be sent soon."
+      },
+      {
+        "word": "is being repaired",
+        "trans": "ремонтируется",
+        "example": "The road is being repaired."
+      },
+      {
+        "word": "spoken",
+        "trans": "говорится (PP)",
+        "example": "French is spoken in Quebec."
+      },
+      {
+        "word": "written",
+        "trans": "написано (PP)",
+        "example": "The rules are written clearly."
+      },
+      {
+        "word": "invented",
+        "trans": "изобретено (PP)",
+        "example": "The phone was invented by Bell."
+      },
+      {
+        "word": "damaged",
+        "trans": "повреждено (PP)",
+        "example": "The car was damaged."
+      },
+      {
+        "word": "created",
+        "trans": "создано (PP)",
+        "example": "The app was created in 2020."
+      }
+    ],
+    "culture": {
+      "watch": [
+        "How It's Made — производство и процессы"
+      ],
+      "listen": [
+        "Daft Punk — Harder, Better, Faster, Stronger"
+      ],
+      "read": [
+        "Stephen Hawking — A Brief History of Time"
+      ]
+    },
+    "cultureCheck": [
+      "Who was the book written by?",
+      "When was the building constructed?",
+      "What is produced in this region?",
+      "Has the problem been solved yet?",
+      "What will be discussed at the meeting?"
+    ],
+    "speaking": [
+      "Опиши, как делается что-то в твоей стране (is made/produced).",
+      "Перефразируй 3 активных предложения в passive.",
+      "Расскажи о здании или памятнике: when it was built, by whom."
+    ]
+  }
+]
