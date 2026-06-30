@@ -1,6 +1,6 @@
 /* English Course A1→B2 — lesson logic with full block validation */
 
-const BUILD_VERSION = '3';
+const BUILD_VERSION = '4';
 const STORAGE_PREFIX = 'english-course-';
 
 /* ── Storage ── */
@@ -116,6 +116,7 @@ const blockState = {
   flashcards: false,
   culture: [],
   speaking: [],
+  homework: [],
 };
 
 function allBlocksDone(lesson) {
@@ -128,14 +129,16 @@ function allBlocksDone(lesson) {
   if (!blockState.flashcards) return false;
   if (!blockState.culture.every(Boolean)) return false;
   if (!blockState.speaking.every(Boolean)) return false;
+  if (!blockState.homework.every(Boolean)) return false;
   return true;
 }
 
 function updateProgressUI(lesson) {
   const bar = document.getElementById('sectionProgress');
   if (!bar) return;
+  const hw = lesson.homework || [];
   const total = 1 + lesson.warmup.length + 1 + 1 + 1
-    + lesson.pronunciation.length + 1 + lesson.cultureCheck.length + lesson.speaking.length;
+    + lesson.pronunciation.length + 1 + lesson.cultureCheck.length + lesson.speaking.length + hw.length;
   let done = 0;
   if (blockState.theory) done++;
   done += blockState.warmup.filter(Boolean).length;
@@ -146,6 +149,7 @@ function updateProgressUI(lesson) {
   if (blockState.flashcards) done++;
   done += blockState.culture.filter(Boolean).length;
   done += blockState.speaking.filter(Boolean).length;
+  done += blockState.homework.filter(Boolean).length;
   const pct = Math.round(done / total * 100);
   bar.querySelector('.section-progress-fill').style.width = pct + '%';
   bar.querySelector('.section-progress-label').textContent = `Блоки: ${done}/${total} (${pct}%)`;
@@ -160,7 +164,7 @@ function updateProgressUI(lesson) {
   } else {
     btn.disabled = true;
     btn.classList.add('btn-disabled');
-    hint.textContent = 'Пройди и проверь все блоки (теория, разогрев, лексика, грамматика, тест, произношение, карточки, культура, говорение).';
+    hint.textContent = 'Пройди платформу и отметь все домашние задания (~2.5 ч на модуль).';
     hint.style.color = 'var(--text-muted)';
   }
 }
@@ -253,11 +257,13 @@ function renderLesson(lesson) {
     flashcards: false,
     culture: lesson.cultureCheck.map(() => false),
     speaking: lesson.speaking.map(() => false),
+    homework: (lesson.homework || []).map(() => false),
   });
   quizCorrect = 0; quizAnswered = 0;
 
   const g = lesson.grammar;
   const th = lesson.theory || {};
+  const st = lesson.studyTime || { interactiveMin: 40, homeworkMin: 140, totalMin: 180, sessions: [] };
 
   root.innerHTML = `
     <div class="section-progress" id="sectionProgress">
@@ -271,6 +277,15 @@ function renderLesson(lesson) {
       <h1 style="margin:12px 0 8px">${escapeHtml(lesson.titleRu)}</h1>
       <p class="lead">${escapeHtml(lesson.description)}</p>
       <p style="color:var(--text-muted);font-size:0.9rem;margin-top:8px">${lesson.duration} · ${escapeHtml(lesson.topic)}</p>
+      <div class="study-plan-box card" style="margin-top:20px;padding:20px;text-align:left">
+        <strong>Время на модуль: ~${Math.round(st.totalMin / 60 * 10) / 10} ч</strong>
+        <p style="font-size:0.88rem;color:var(--text-secondary);margin:8px 0 12px">
+          ${st.interactiveMin} мин на платформе + ${st.homeworkMin} мин самостоятельно (чтение, письмо, устная практика).
+        </p>
+        <ul class="session-list">
+          ${st.sessions.map(s => `<li><span class="session-time">${s.minutes} мин</span> <strong>${escapeHtml(s.title)}</strong> — ${escapeHtml(s.desc)}</li>`).join('')}
+        </ul>
+      </div>
     </div>
 
     <div class="timeline reveal visible">
@@ -369,8 +384,18 @@ function renderLesson(lesson) {
     </section>
 
     <section id="speaking" class="reveal">
-      <div class="section-header"><span class="section-tag">Говорение</span><h2>Устная практика</h2><p>Напиши или скажи ответ — система проверит содержание.</p></div>
+      <div class="section-header"><span class="section-tag">Говорение</span><h2>Устная практика (сессия 1)</h2><p>Напиши или скажи ответ — система проверит содержание.</p></div>
       <div id="speakingTasks"></div>
+    </section>
+
+    <section id="homework" class="reveal">
+      <div class="section-header">
+        <span class="section-tag">Домашка</span>
+        <h2>Самостоятельная работа (сессии 2–3)</h2>
+        <p>~${st.homeworkMin} минут вне платформы. Отметь каждое задание после выполнения.</p>
+      </div>
+      <div id="homeworkList"></div>
+      <div class="check-feedback" id="homeworkFeedback"></div>
     </section>
 
     <section class="finish-section reveal" id="finish">
@@ -394,6 +419,7 @@ function renderLesson(lesson) {
   initFlashcards(lesson);
   initCulture(lesson);
   initSpeaking(lesson);
+  initHomework(lesson);
   initFinish(lesson);
   initReveal();
   initProgressBar();
@@ -733,6 +759,36 @@ function initSpeaking(lesson) {
   });
 }
 
+function initHomework(lesson) {
+  const list = document.getElementById('homeworkList');
+  const fb = document.getElementById('homeworkFeedback');
+  const tasks = lesson.homework || [];
+  if (!list || !tasks.length) return;
+
+  tasks.forEach((hw, i) => {
+    const row = document.createElement('label');
+    row.className = 'homework-item card';
+    row.innerHTML = `
+      <input type="checkbox" class="hw-check" />
+      <div>
+        <div class="hw-meta"><span class="hw-type">${escapeHtml(hw.type)}</span> · ${hw.minutes} мин</div>
+        <div class="hw-task">${escapeHtml(hw.task)}</div>
+      </div>`;
+    row.querySelector('.hw-check').addEventListener('change', e => {
+      blockState.homework[i] = e.target.checked;
+      row.classList.toggle('hw-done', e.target.checked);
+      const all = blockState.homework.every(Boolean);
+      if (fb) {
+        fb.className = 'check-feedback ' + (all ? 'ok' : '');
+        fb.style.display = all ? 'block' : 'none';
+        fb.textContent = all ? 'Домашняя работа отмечена. Модуль можно завершать после всех блоков на платформе.' : '';
+      }
+      updateProgressUI(lesson);
+    });
+    list.appendChild(row);
+  });
+}
+
 function initFinish(lesson) {
   const btn = document.getElementById('finishBtn');
   const hint = document.getElementById('finishHint');
@@ -803,8 +859,14 @@ function renderIndex() {
   if (doneEl) doneEl.textContent = done;
   if (totalEl) totalEl.textContent = total;
 
+  const meta = typeof COURSE_META !== 'undefined' ? COURSE_META : null;
+  const hoursEl = document.getElementById('statHours');
+  if (hoursEl && meta) hoursEl.textContent = meta.hoursTarget;
+
   const sub = document.getElementById('courseSubtitle');
-  if (sub) sub.textContent = `A1 → B2 · ${total} уроков`;
+  if (sub) sub.textContent = meta
+    ? `A1 → B2 · ${total} модулей · ~${meta.hoursTarget} ч`
+    : `A1 → B2 · ${total} модулей`;
   const foot = document.getElementById('footerSubtitle');
   if (foot) foot.textContent = `English Course A1 → B2 · ${total} уроков · v${BUILD_VERSION}`;
 
@@ -821,7 +883,7 @@ function renderIndex() {
 
   const perLevel = total / 4;
   document.getElementById('levelHint').textContent =
-    `${perLevel} уроков на каждый уровень (всего ${total}). Нажми на урок, чтобы открыть.`;
+    `${perLevel} модулей на уровень · ~${meta ? meta.levels.A1.hours : 48} ч на уровень · ${meta ? meta.hoursTarget : 192} ч на весь путь A1→B2`;
 
   container.innerHTML = levels.map(lvl => {
     const lessons = CURRICULUM.filter(l => l.level === lvl);

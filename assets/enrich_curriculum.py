@@ -24,12 +24,18 @@ PEDAGOGY = {
 
 def load_curriculum():
     raw = open(CUR_PATH, encoding="utf-8").read()
+    if raw.startswith("const COURSE_META"):
+        raw = raw.split("\n\n", 1)[1]
     data = json.loads(raw.split("=", 1)[1].rstrip(";\n"))
     return data
 
 
-def save_curriculum(data):
+def save_curriculum(data, meta=None):
     with open(CUR_PATH, "w", encoding="utf-8") as f:
+        if meta:
+            f.write("const COURSE_META = ")
+            json.dump(meta, f, ensure_ascii=False, indent=2)
+            f.write(";\n\n")
         f.write("const CURRICULUM = ")
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write(";\n")
@@ -109,6 +115,84 @@ def build_theory(lesson):
     }
 
 
+def build_homework(lesson):
+    culture = lesson.get("culture", {})
+    watch = culture.get("watch", ["English podcast for learners"])[0]
+    read = culture.get("read", ["graded reader at your level"])[0]
+    listen = culture.get("listen", ["English song with lyrics"])[0]
+    topic = lesson.get("topic", "the lesson topic")
+    return [
+        {
+            "task": f"Прочитайте материал: {read}. Выпишите 10 новых слов и 3 полезные фразы.",
+            "minutes": 35,
+            "type": "reading",
+        },
+        {
+            "task": f"Посмотрите или послушайте: {watch} / {listen}. Запишите 5 услышанных конструкций по теме «{topic}».",
+            "minutes": 30,
+            "type": "listening",
+        },
+        {
+            "task": "Напишите 8–10 предложений по теме модуля (в тетради или файле). Используйте грамматику и лексику урока.",
+            "minutes": 25,
+            "type": "writing",
+        },
+        {
+            "task": "Повторите карточки модуля вслух 2 раза. Добавьте сложные слова в Anki/Quizlet.",
+            "minutes": 20,
+            "type": "srs",
+        },
+        {
+            "task": "15 минут говорите только по-английски: опишите свой день, тему модуля или ответьте на speaking-задания вслух без подсказок.",
+            "minutes": 30,
+            "type": "speaking",
+        },
+    ]
+
+
+def build_study_time():
+    return {
+        "interactiveMin": 40,
+        "homeworkMin": 140,
+        "totalMin": 180,
+        "sessions": [
+            {
+                "title": "Сессия 1 — на платформе",
+                "minutes": 40,
+                "desc": "Теория, лексика, грамматика, тесты, произношение, говорение с проверкой.",
+            },
+            {
+                "title": "Сессия 2 — самостоятельно",
+                "minutes": 60,
+                "desc": "Чтение и аудирование из блока «Культура» + конспект новых слов.",
+            },
+            {
+                "title": "Сессия 3 — закрепление",
+                "minutes": 80,
+                "desc": "Письмо, карточки (SRS), 15 минут устной практики без экрана.",
+            },
+        ],
+    }
+
+
+COURSE_META = {
+    "modules": 64,
+    "hoursMin": 150,
+    "hoursMax": 200,
+    "hoursTarget": 192,
+    "interactiveHours": 43,
+    "homeworkHours": 149,
+    "weeksAt5h": 38,
+    "cefrNote": "По CEFR (Cambridge/Oxford) путь A1→B2 — примерно 500–600 академических часов в вузе; интенсивный курс с самостоятельной работой — 150–200 ч.",
+    "levels": {
+        "A1": {"modules": 16, "hours": 48, "cefr": "90–100 ч в академической программе"},
+        "A2": {"modules": 16, "hours": 48, "cefr": "+90–100 ч"},
+        "B1": {"modules": 16, "hours": 48, "cefr": "+100–120 ч"},
+        "B2": {"modules": 16, "hours": 48, "cefr": "+100–120 ч"},
+    },
+}
+
+
 def build_vocab_quiz(vocab):
     import random
 
@@ -155,15 +239,18 @@ def enrich_lesson(lesson):
 
     lesson["theory"] = build_theory(lesson)
     lesson["vocabQuiz"] = build_vocab_quiz(lesson.get("vocab", []))
-    lesson["duration"] = lesson.get("duration", "25 мин").replace("20 мин", "25 мин")
+    lesson["homework"] = build_homework(lesson)
+    lesson["studyTime"] = build_study_time()
+    lesson["duration"] = "~3 ч · модуль"
     return lesson
 
 
 def main():
     data = load_curriculum()
     data = [enrich_lesson(dict(l)) for l in data]
-    save_curriculum(data)
-    print(f"Enriched {len(data)} lessons → {CUR_PATH}")
+    save_curriculum(data, meta=COURSE_META)
+    print(f"Enriched {len(data)} modules → {CUR_PATH}")
+    print(f"  Target study time: {COURSE_META['hoursTarget']} h ({COURSE_META['interactiveHours']}h platform + {COURSE_META['homeworkHours']}h homework)")
 
 
 if __name__ == "__main__":

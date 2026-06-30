@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/course.css?v=3">
+  <link rel="stylesheet" href="assets/course.css?v=4">
 </head>
 <body>
   <div class="bg-accent"><div class="shape s1"></div><div class="shape s2"></div></div>
@@ -21,13 +21,14 @@
 
   <main class="container">
     <section class="hero">
-      <span class="section-tag">Полный курс</span>
+      <span class="section-tag">Полный курс · CEFR</span>
       <h1>Английский язык<br>от A1 до B2</h1>
-      <p class="lead">64 структурированных урока по программе Oxford/Cambridge: теория, лексика, грамматика, проверяемые задания, произношение с распознаванием речи и устная практика. Занимайся по 25 минут в день.</p>
+      <p class="lead">64 модуля по ~3 часа каждый — <strong>около 192 часа</strong> обучения (150–200 ч, как в интенсивных программах). На платформе ~40 минут интерактива; остальное — чтение, аудирование, письмо и устная практика дома.</p>
 
       <div class="hero-stats">
         <div class="stat"><div class="stat-value" id="statDone">0</div><div class="stat-label">пройдено</div></div>
-        <div class="stat"><div class="stat-value" id="statTotal">64</div><div class="stat-label">уроков</div></div>
+        <div class="stat"><div class="stat-value" id="statTotal">64</div><div class="stat-label">модулей</div></div>
+        <div class="stat"><div class="stat-value" id="statHours">192</div><div class="stat-label">часов</div></div>
         <div class="stat"><div class="stat-value" id="progressPct">0%</div><div class="stat-label">прогресс</div></div>
       </div>
 
@@ -36,26 +37,40 @@
       </div>
 
       <div style="margin-top:32px">
-        <a href="lesson.html?id=1" class="btn btn-primary" style="font-size:1rem;padding:14px 32px">Начать с урока 1 →</a>
+        <a href="lesson.html?id=1" class="btn btn-primary" style="font-size:1rem;padding:14px 32px">Начать модуль 1 →</a>
+      </div>
+    </section>
+
+    <section style="margin-bottom:48px">
+      <div class="card" style="padding:28px">
+        <h2 style="margin-bottom:12px">Реалистичный объём обучения</h2>
+        <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:20px">По стандартам CEFR (Cambridge, Oxford) путь A1→B2 в академической программе — 500–600 часов. Интенсив с самостоятельной работой укладывается в <strong>150–200 часов</strong>. Наш курс рассчитан именно на этот диапазон.</p>
+        <div class="hours-grid">
+          <div class="hours-cell"><div class="hours-val">~43 ч</div><div class="hours-lbl">интерактив на сайте</div></div>
+          <div class="hours-cell"><div class="hours-val">~149 ч</div><div class="hours-lbl">домашка (чтение, аудио, письмо, речь)</div></div>
+          <div class="hours-cell"><div class="hours-val">~192 ч</div><div class="hours-lbl">итого A1→B2</div></div>
+          <div class="hours-cell"><div class="hours-val">~38 нед</div><div class="hours-lbl">при 5 ч в неделю</div></div>
+        </div>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:16px">Один «урок» = модуль на 3 часа: сессия 1 на платформе, сессии 2–3 — самостоятельно.</p>
       </div>
     </section>
 
     <section>
       <div class="section-header" style="margin-bottom:32px">
         <h2>Программа курса</h2>
-        <p class="lead" id="levelHint" style="margin-top:8px">16 уроков на каждый уровень. Нажми на урок, чтобы открыть.</p>
+        <p class="lead" id="levelHint" style="margin-top:8px">16 модулей на каждый уровень.</p>
       </div>
-      <div id="courseLevels"><p id="courseLoading" style="color:var(--text-muted);padding:24px">Загрузка 64 уроков…</p></div>
+      <div id="courseLevels"><p id="courseLoading" style="color:var(--text-muted);padding:24px">Загрузка 64 модулей…</p></div>
     </section>
 
     <section style="margin-top:64px">
       <div class="card" style="padding:32px">
         <h2 style="margin-bottom:16px">Как заниматься</h2>
         <div class="card-grid">
-          <div><strong>1. Теория</strong><p style="color:var(--text-secondary);font-size:0.92rem;margin-top:6px">Изучи теоретический блок (CEFR, Oxford/Cambridge)</p></div>
-          <div><strong>2. Практика с проверкой</strong><p style="color:var(--text-secondary);font-size:0.92rem;margin-top:6px">Разогрев, лексика, грамматика — каждый блок проверяется</p></div>
-          <div><strong>3. Произношение и говорение</strong><p style="color:var(--text-secondary);font-size:0.92rem;margin-top:6px">Запиши голосом или напиши — система оценит ответ</p></div>
-          <div><strong>4. Завершение</strong><p style="color:var(--text-secondary);font-size:0.92rem;margin-top:6px">Все блоки должны быть пройдены</p></div>
+          <div><strong>1. Сессия на платформе (~40 мин)</strong><p style="color:var(--text-secondary);font-size:0.92rem;margin-top:6px">Теория, лексика, грамматика, тесты, произношение, говорение с проверкой</p></div>
+          <div><strong>2. Домашка (~2.5 ч)</strong><p style="color:var(--text-secondary);font-size:0.92rem;margin-top:6px">Чтение, аудио/видео из блока «Культура», письмо, карточки, 15 мин речи вслух</p></div>
+          <div><strong>3. Темп</strong><p style="color:var(--text-secondary);font-size:0.92rem;margin-top:6px">1–2 модуля в неделю при 5 ч/нед → B2 за ~8–9 месяцев</p></div>
+          <div><strong>4. Завершение модуля</strong><p style="color:var(--text-secondary);font-size:0.92rem;margin-top:6px">Все блоки на сайте + отмеченная домашка</p></div>
         </div>
       </div>
     </section>
@@ -63,8 +78,8 @@
 
   <footer class="site-footer" id="footerSubtitle">English Course A1 → B2</footer>
 
-  <script src="assets/curriculum.js?v=3"></script>
-  <script src="assets/course.js?v=3"></script>
+  <script src="assets/curriculum.js?v=4"></script>
+  <script src="assets/course.js?v=4"></script>
   <script>renderIndex();</script>
 </body>
 </html>

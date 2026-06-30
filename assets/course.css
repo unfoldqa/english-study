@@ -878,6 +878,84 @@ section {
 .fc-grade.know:hover { background: var(--success) !important; border-color: var(--success) !important; color: #fff !important; }
 .fc-grade.unknown:hover { background: var(--warning) !important; border-color: var(--warning) !important; color: #fff !important; }
 
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+@media (max-width: 700px) {
+  .hours-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.hours-cell {
+  text-align: center;
+  padding: 16px;
+  background: var(--bg-subtle);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.hours-val {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.hours-lbl {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.session-list {
+  list-style: none;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+.session-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.session-list li:last-child { border-bottom: none; }
+.session-time {
+  display: inline-block;
+  min-width: 52px;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+
+.homework-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px 20px !important;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.homework-item.hw-done {
+  border-color: var(--success);
+  background: var(--success-bg);
+}
+.homework-item input {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.hw-meta {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.hw-task {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
 /* ── Finish ── */
 .finish-section {
   text-align: center;
