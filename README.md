@@ -6,7 +6,7 @@
 
 После публикации на GitHub Pages курс доступен по адресу:
 
-**https://poles5.github.io/english-study/**
+**https://unfoldqa.github.io/english-study/**
 
 ## Локально
 
@@ -75,9 +75,9 @@ git push -u origin main
 
 Через 1–2 минуты сайт будет доступен:
 
-**https://poles5.github.io/english-study/**
+**https://unfoldqa.github.io/english-study/**
 
-Как у [salary](https://poles5.github.io/salary/) — тот же формат: `username.github.io/имя-репозитория/`.
+Формат URL: `username.github.io/имя-репозитория/`.
 
 ## Обновление контента
 
