@@ -1,12 +1,28 @@
 /* English Course A1→B2 — lesson logic with full block validation */
 
-const BUILD_VERSION = '8';
+const BUILD_VERSION = '9';
 const STORAGE_PREFIX = 'english-course-';
+const DEFAULT_HINTS = 5;
+const HINT_PACK_SIZE = 3;
+const HINT_PACK_COST = 10;
+const COINS_PER_LESSON = 10;
 
 /* ── Storage ── */
+function readJson(key, fallback) {
+  try {
+    const raw = localStorage.getItem(STORAGE_PREFIX + key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function writeJson(key, value) {
+  localStorage.setItem(STORAGE_PREFIX + key, JSON.stringify(value));
+}
+
 function getCompletedLessons() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'completed') || '[]'); }
-  catch { return []; }
+  return readJson('completed', []);
 }
 
 function markLessonComplete(id, stats) {
@@ -15,8 +31,196 @@ function markLessonComplete(id, stats) {
   const idx = completed.findIndex(c => c.id === id);
   if (idx >= 0) completed[idx] = entry;
   else completed.push(entry);
-  localStorage.setItem(STORAGE_PREFIX + 'completed', JSON.stringify(completed));
+  writeJson('completed', completed);
+  addCoins(COINS_PER_LESSON);
   return completed.length;
+}
+
+function getHintBalance() {
+  const v = localStorage.getItem(STORAGE_PREFIX + 'hints');
+  if (v === null) return DEFAULT_HINTS;
+  return Math.max(0, parseInt(v, 10) || 0);
+}
+
+function setHintBalance(n) {
+  localStorage.setItem(STORAGE_PREFIX + 'hints', String(Math.max(0, n)));
+}
+
+function getCoins() {
+  return Math.max(0, parseInt(localStorage.getItem(STORAGE_PREFIX + 'coins') || '0', 10) || 0);
+}
+
+function addCoins(n) {
+  setCoins(getCoins() + n);
+}
+
+function setCoins(n) {
+  localStorage.setItem(STORAGE_PREFIX + 'coins', String(Math.max(0, n)));
+}
+
+function useHint() {
+  const bal = getHintBalance();
+  if (bal <= 0) return false;
+  setHintBalance(bal - 1);
+  updateWalletUI();
+  return true;
+}
+
+function buyHintPack() {
+  const coins = getCoins();
+  if (coins < HINT_PACK_COST) return false;
+  setCoins(coins - HINT_PACK_COST);
+  setHintBalance(getHintBalance() + HINT_PACK_SIZE);
+  updateWalletUI();
+  return true;
+}
+
+function updateWalletUI() {
+  const hintEl = document.getElementById('hintBalance');
+  const coinEl = document.getElementById('coinBalance');
+  const buyBtn = document.getElementById('buyHintsBtn');
+  if (hintEl) hintEl.textContent = String(getHintBalance());
+  if (coinEl) coinEl.textContent = String(getCoins());
+  if (buyBtn) {
+    buyBtn.disabled = getCoins() < HINT_PACK_COST;
+    buyBtn.title = getCoins() < HINT_PACK_COST
+      ? `Нужно ${HINT_PACK_COST} монет (завершай модули)`
+      : `Купить ${HINT_PACK_SIZE} подсказки за ${HINT_PACK_COST} монет`;
+  }
+}
+
+function initWalletUI() {
+  if (!document.getElementById('hintBalance')) return;
+  updateWalletUI();
+  let fb = document.getElementById('walletFeedback');
+  const buyBtn = document.getElementById('buyHintsBtn');
+  if (!fb && buyBtn?.parentElement) {
+    fb = document.createElement('div');
+    fb.id = 'walletFeedback';
+    fb.className = 'wallet-feedback';
+    buyBtn.parentElement.appendChild(fb);
+  }
+  if (buyBtn && !buyBtn.dataset.bound) {
+    buyBtn.dataset.bound = '1';
+    buyBtn.addEventListener('click', () => {
+      if (buyHintPack()) {
+        const fb = document.getElementById('walletFeedback');
+        if (fb) {
+          fb.className = 'wallet-feedback ok';
+          fb.textContent = `+${HINT_PACK_SIZE} подсказки куплены! Баланс: ${getHintBalance()}`;
+        }
+      } else {
+        const fb = document.getElementById('walletFeedback');
+        if (fb) {
+          fb.className = 'wallet-feedback fail';
+          fb.textContent = `Недостаточно монет. Нужно ${HINT_PACK_COST} 🪙 — завершай модули.`;
+        }
+      }
+    });
+  }
+}
+
+function getLessonProgress(lessonId) {
+  const store = readJson('progress', {});
+  return store[String(lessonId)] || null;
+}
+
+function saveLessonProgress(lessonId, snapshot) {
+  const store = readJson('progress', {});
+  store[String(lessonId)] = { ...snapshot, savedAt: Date.now(), v: BUILD_VERSION };
+  writeJson('progress', store);
+}
+
+let currentLessonId = null;
+let progressSaveTimer = null;
+
+function scheduleProgressSave(lesson) {
+  if (!lesson) return;
+  clearTimeout(progressSaveTimer);
+  progressSaveTimer = setTimeout(() => saveLessonProgress(lesson.id, snapshotLessonProgress()), 300);
+}
+
+function snapshotLessonProgress() {
+  return {
+    blocks: JSON.parse(JSON.stringify(blockState)),
+    quizCorrect,
+    quizAnswered,
+    fields: collectInputValues(),
+    quizItems: collectQuizItemStates(),
+    theoryDone: blockState.theory,
+  };
+}
+
+function collectInputValues() {
+  const fields = { warmup: [], culture: [], speaking: [], contextDrill: [], vocabGap: [], pronunciation: [] };
+  document.querySelectorAll('#warmupGrid textarea').forEach(ta => fields.warmup.push(ta.value));
+  document.querySelectorAll('#cultureGrid textarea').forEach(ta => fields.culture.push(ta.value));
+  document.querySelectorAll('#speakingTasks textarea').forEach(ta => fields.speaking.push(ta.value));
+  document.querySelectorAll('#contextDrillContainer input.gap-input').forEach(inp => fields.contextDrill.push(inp.value));
+  document.querySelectorAll('#vocabQuizBox input.gap-input').forEach(inp => fields.vocabGap.push(inp.value));
+  document.querySelectorAll('#pronGrid textarea').forEach(ta => fields.pronunciation.push(ta.value));
+  return fields;
+}
+
+function collectQuizItemStates() {
+  const items = [];
+  document.querySelectorAll('#quizContainer .quiz-item, #grammarCheckContainer .quiz-item, #theoryCheckContainer .quiz-item, #vocabQuizBox .quiz-item').forEach(item => {
+    if (!item.dataset.answered) return;
+    items.push({
+      id: item.dataset.quizKey || '',
+      answered: true,
+      selected: item.dataset.selected || '',
+      correct: item.dataset.correct === '1',
+    });
+  });
+  return items;
+}
+
+function restoreLessonProgress(lesson, saved) {
+  if (!saved?.blocks) return;
+  const b = saved.blocks;
+  blockState.theory = Boolean(b.theory);
+  blockState.theoryCheck = Boolean(b.theoryCheck);
+  blockState.warmup = (b.warmup || []).map(Boolean);
+  blockState.vocab = Boolean(b.vocab);
+  blockState.grammar = Boolean(b.grammar);
+  blockState.contextDrill = (b.contextDrill || []).map(Boolean);
+  blockState.quiz = Boolean(b.quiz);
+  blockState.pronunciation = (b.pronunciation || []).map(Boolean);
+  blockState.flashcards = Boolean(b.flashcards);
+  blockState.culture = (b.culture || []).map(Boolean);
+  blockState.speaking = (b.speaking || []).map(Boolean);
+  blockState.homework = (b.homework || []).map(Boolean);
+  quizCorrect = saved.quizCorrect || 0;
+  quizAnswered = saved.quizAnswered || 0;
+
+  const theoryBtn = document.getElementById('theoryDoneBtn');
+  if (theoryBtn && blockState.theory) {
+    theoryBtn.disabled = true;
+    const fb = document.getElementById('theoryFeedback');
+    if (fb) { fb.className = 'check-feedback ok'; fb.textContent = 'Теория засчитана. Переходи к практике!'; }
+  }
+
+  const f = saved.fields || {};
+  document.querySelectorAll('#warmupGrid textarea').forEach((ta, i) => { if (f.warmup?.[i]) ta.value = f.warmup[i]; });
+  document.querySelectorAll('#cultureGrid textarea').forEach((ta, i) => { if (f.culture?.[i]) ta.value = f.culture[i]; });
+  document.querySelectorAll('#speakingTasks textarea').forEach((ta, i) => { if (f.speaking?.[i]) ta.value = f.speaking[i]; });
+  document.querySelectorAll('#contextDrillContainer input.gap-input').forEach((inp, i) => { if (f.contextDrill?.[i]) inp.value = f.contextDrill[i]; });
+  document.querySelectorAll('#vocabQuizBox input.gap-input').forEach((inp, i) => { if (f.vocabGap?.[i]) inp.value = f.vocabGap[i]; });
+  document.querySelectorAll('#pronGrid textarea').forEach((ta, i) => { if (f.pronunciation?.[i]) ta.value = f.pronunciation[i]; });
+
+  document.querySelectorAll('#homeworkList .hw-check').forEach((cb, i) => {
+    cb.checked = Boolean(blockState.homework[i]);
+    cb.closest('.homework-item')?.classList.toggle('hw-done', cb.checked);
+  });
+
+  const scoreNum = document.getElementById('scoreNum');
+  if (scoreNum && quizAnswered) scoreNum.textContent = `${quizCorrect}/${quizAnswered}`;
+  if (quizAnswered >= lesson.quiz.length) {
+    document.getElementById('quizScore')?.classList.add('visible');
+  }
+
+  updateProgressUI(lesson);
 }
 
 function getLessonParam() {
@@ -48,12 +252,79 @@ function simpleMd(text) {
 }
 
 /* ── Answer validation ── */
+const CONTRACTION_ALIASES = {
+  "i'm": ['i am', 'im'],
+  "i am": ["i'm", 'im'],
+  im: ["i'm", 'i am'],
+  "you're": ['you are', 'youre'],
+  "you are": ["you're", 'youre'],
+  youre: ["you're", 'you are'],
+  "we're": ['we are', 'were'],
+  "we are": ["we're"],
+  "they're": ['they are', 'theyre'],
+  "they are": ["they're", 'theyre'],
+  "he's": ['he is', 'hes'],
+  "she's": ['she is', 'shes'],
+  "it's": ['it is', 'its'],
+  "don't": ['do not', 'dont'],
+  "doesn't": ['does not', 'doesnt'],
+  "didn't": ['did not', 'didnt'],
+  "can't": ['cannot', 'can not', 'cant'],
+  "won't": ['will not', 'wont'],
+  "isn't": ['is not', 'isnt'],
+  "aren't": ['are not', 'arent'],
+  "wasn't": ['was not', 'wasnt'],
+  "weren't": ['were not', 'werent'],
+  "haven't": ['have not', 'havent'],
+  "hasn't": ['has not', 'hasnt'],
+  "i've": ['i have', 'ive'],
+  "i'll": ['i will', 'ill'],
+  "name's": ['name is', 'names'],
+};
+
 function normalizeText(s) {
   return (s || '').toLowerCase()
-    .replace(/['']/g, "'")
+    .replace(/[''`´]/g, "'")
     .replace(/[^\w\s']/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function canonicalGapAnswer(s) {
+  const n = normalizeText(s);
+  return CONTRACTION_ALIASES[n] || n;
+}
+
+function expandAnswerVariants(answer) {
+  const base = normalizeText(answer);
+  const variants = new Set([base, canonicalGapAnswer(answer)]);
+  (CONTRACTION_ALIASES[base] || []).forEach(v => variants.add(normalizeText(v)));
+  return [...variants];
+}
+
+function answersEquivalent(user, answer, altAnswers = []) {
+  const userVariants = expandAnswerVariants(user);
+  const allExpected = new Set();
+  [answer, ...(altAnswers || [])].forEach(a => {
+    expandAnswerVariants(a).forEach(v => allExpected.add(v));
+  });
+  return userVariants.some(v => allExpected.has(v));
+}
+
+function optionsEquivalent(selected, expected) {
+  return answersEquivalent(selected, expected, []);
+}
+
+function termMatchesText(text, term) {
+  const n = normalizeText(text);
+  const variants = expandAnswerVariants(term);
+  return variants.some(v => n.includes(v));
+}
+
+function mustNotIncludeText(text, patterns) {
+  if (!patterns?.length) return false;
+  const n = normalizeText(text);
+  return patterns.some(p => termMatchesText(n, p) || n.includes(normalizeText(p)));
 }
 
 function wordCount(s) {
@@ -89,15 +360,17 @@ function matchesPattern(text, pattern) {
 
 function includesAnyGroup(text, groups) {
   if (!groups?.length) return true;
-  const n = normalizeText(text);
   return groups.every(group =>
-    group.some(term => n.includes(normalizeText(term)))
+    group.some(term => termMatchesText(text, term))
   );
 }
 
 function matchesAcceptable(text, answers) {
   if (!answers?.length) return false;
-  return answers.some(a => phraseSimilarity(text, a) >= 0.42);
+  return answers.some(a => {
+    if (answersEquivalent(text, a, [])) return true;
+    return phraseSimilarity(text, a) >= 0.42;
+  });
 }
 
 function validateOpenAnswer(text, spec) {
@@ -110,7 +383,7 @@ function validateOpenAnswer(text, spec) {
   const words = wordCount(raw);
   const min = spec.minWords || 3;
 
-  if (spec.mustNotInclude?.some(p => n.includes(normalizeText(p)))) {
+  if (spec.mustNotInclude?.some(p => mustNotIncludeText(raw, [p]))) {
     return {
       ok: false,
       msg: spec.hintWrong || 'Этот ответ не подходит к вопросу. Прочитай вопрос ещё раз.',
@@ -279,6 +552,7 @@ function markBlock(key, idx, lesson) {
   if (idx === undefined) blockState[key] = true;
   else blockState[key][idx] = true;
   updateProgressUI(lesson);
+  scheduleProgressSave(lesson);
 }
 
 /* ── Check button helper ── */
@@ -305,6 +579,7 @@ function attachCheckButton(container, onCheck) {
 function setCheckResult(feedback, result, sample) {
   feedback.className = 'check-feedback ' + (result.ok ? 'ok' : 'fail');
   feedback.textContent = result.msg;
+  feedback.innerHTML = escapeHtml(result.msg);
   const show = sample || result.sample;
   if (show) {
     feedback.innerHTML += `<div class="sample-answer">Образец: ${escapeHtml(show)}</div>`;
@@ -313,6 +588,37 @@ function setCheckResult(feedback, result, sample) {
     feedback.innerHTML += `<div class="sample-answer" style="opacity:0.85">${escapeHtml(result.explain)}</div>`;
   }
   return result.ok;
+}
+
+function getHintText(spec) {
+  if (spec.hintWrong) return `Подсказка: ${spec.hintWrong}`;
+  if (spec.acceptableAnswers?.[0]) return `Подсказка: например «${spec.acceptableAnswers[0]}»`;
+  if (spec.hint) return `Подсказка: ${spec.hint}`;
+  if (spec.explain) return `Подсказка: ${spec.explain}`;
+  return 'Подсказка: ответь полным предложением по теме урока.';
+}
+
+function createHintButton(spec, feedback) {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'btn-hint';
+  btn.textContent = '💡 Подсказка';
+  btn.addEventListener('click', () => {
+    if (!useHint()) {
+      feedback.className = 'check-feedback fail';
+      feedback.innerHTML = `Нет подсказок. Завершай модули (+${COINS_PER_LESSON} 🪙) и купи пакет за ${HINT_PACK_COST} 🪙.`;
+      return;
+    }
+    feedback.className = 'check-feedback ok';
+    feedback.innerHTML = escapeHtml(getHintText(spec));
+  });
+  return btn;
+}
+
+function lockExerciseItem(item, input, checkBtn) {
+  item.dataset.done = '1';
+  if (input) input.disabled = true;
+  if (checkBtn) checkBtn.disabled = true;
 }
 
 /* ── Speech recognition ── */
@@ -359,6 +665,8 @@ function renderLesson(lesson) {
   document.title = `Урок ${lesson.id} — ${lesson.titleRu}`;
   const root = document.getElementById('lessonRoot');
   if (!root) return;
+
+  currentLessonId = lesson.id;
 
   Object.assign(blockState, {
     theory: false,
@@ -558,7 +866,15 @@ function renderLesson(lesson) {
   initFinish(lesson);
   initReveal();
   initProgressBar();
-  updateProgressUI(lesson);
+  initWalletUI();
+
+  const saved = getLessonProgress(lesson.id);
+  if (saved) restoreLessonProgress(lesson, saved);
+  else updateProgressUI(lesson);
+
+  root.addEventListener('input', e => {
+    if (e.target.matches('textarea, input.gap-input')) scheduleProgressSave(lesson);
+  }, true);
 }
 
 function initTheory(lesson) {
@@ -568,6 +884,7 @@ function initTheory(lesson) {
     fb.className = 'check-feedback ok';
     fb.textContent = 'Теория засчитана. Переходи к практике!';
     document.getElementById('theoryDoneBtn').disabled = true;
+    scheduleProgressSave(lesson);
   });
 }
 
@@ -592,9 +909,13 @@ function initWarmup(lesson) {
     btn.addEventListener('click', () => {
       const r = validateOpenAnswer(ta.value, spec);
       setCheckResult(fb, r);
-      if (r.ok) markBlock('warmup', i, lesson);
+      if (r.ok) {
+        markBlock('warmup', i, lesson);
+      }
+      scheduleProgressSave(lesson);
     });
     actions.appendChild(btn);
+    actions.appendChild(createHintButton(spec, fb));
     if (spec.useSpeech !== false) actions.appendChild(attachMicButton(ta));
     actions.appendChild(fb);
     grid.appendChild(card);
@@ -633,18 +954,22 @@ function initVocab(lesson) {
       btn.textContent = 'Проверить';
       btn.addEventListener('click', () => {
         if (item.dataset.done) return;
-        const ok = normalizeText(inp.value) === normalizeText(q.answer);
+        const ok = answersEquivalent(inp.value, q.answer, q.altAnswers);
         fb.className = 'check-feedback ' + (ok ? 'ok' : 'fail');
         fb.textContent = ok ? 'Верно!' : `Неверно. Ответ: ${q.answer}`;
-        if (ok) vCorrect++;
+        if (ok) {
+          vCorrect++;
+          lockExerciseItem(item, inp, btn);
+        }
         vDone++;
-        item.dataset.done = '1';
+        scheduleProgressSave(lesson);
         if (vDone === quiz.length) {
           if (vCorrect >= Math.ceil(quiz.length * 0.6)) markBlock('vocab', undefined, lesson);
           box.insertAdjacentHTML('beforeend', `<div class="check-feedback ${vCorrect >= Math.ceil(quiz.length*0.6) ? 'ok' : 'fail'}">Лексика: ${vCorrect}/${quiz.length}</div>`);
         }
       });
-      item.querySelector('.answer-actions').append(btn, fb);
+      const hintSpec = { hintWrong: q.hint || `Слово начинается на «${q.answer[0]}…»`, acceptableAnswers: [q.answer] };
+      item.querySelector('.answer-actions').append(btn, createHintButton(hintSpec, fb), fb);
     } else {
       item.innerHTML = `<div class="quiz-sentence">${i+1}. ${escapeHtml(q.question)}</div><div class="quiz-options"></div>`;
       const opts = item.querySelector('.quiz-options');
@@ -655,9 +980,11 @@ function initVocab(lesson) {
         b.addEventListener('click', () => {
           if (item.dataset.done) return;
           item.dataset.done = '1';
-          const ok = opt === q.answer;
+          const ok = optionsEquivalent(opt, q.answer);
           b.classList.add(ok ? 'selected-correct' : 'selected-wrong');
-          if (!ok) opts.querySelectorAll('.quiz-btn').forEach(x => { if (x.textContent === q.answer) x.classList.add('selected-correct'); });
+          if (!ok) opts.querySelectorAll('.quiz-btn').forEach(x => {
+            if (optionsEquivalent(x.textContent, q.answer)) x.classList.add('selected-correct');
+          });
           item.classList.add(ok ? 'correct' : 'wrong');
           opts.querySelectorAll('.quiz-btn').forEach(x => x.disabled = true);
           if (ok) vCorrect++;
@@ -696,11 +1023,11 @@ function initTheoryCheck(lesson) {
       btn.addEventListener('click', () => {
         if (item.dataset.answered) return;
         item.dataset.answered = '1';
-        const correct = opt === q.answer;
+        const correct = optionsEquivalent(opt, q.answer);
         btn.classList.add(correct ? 'selected-correct' : 'selected-wrong');
         if (!correct) {
           opts.querySelectorAll('.quiz-btn').forEach(b => {
-            if (b.textContent === q.answer) b.classList.add('selected-correct');
+            if (optionsEquivalent(b.textContent, q.answer)) b.classList.add('selected-correct');
           });
         }
         item.classList.add(correct ? 'correct' : 'wrong');
@@ -710,6 +1037,7 @@ function initTheoryCheck(lesson) {
         if (done === items.length && ok >= Math.ceil(items.length * 0.6)) {
           markBlock('theoryCheck', undefined, lesson);
         }
+        scheduleProgressSave(lesson);
       });
       opts.appendChild(btn);
     });
@@ -740,18 +1068,20 @@ function initContextDrill(lesson) {
     btn.textContent = 'Проверить';
     btn.addEventListener('click', () => {
       if (item.dataset.done) return;
-      const val = normalizeText(inp.value);
-      const alts = [d.answer, ...(d.altAnswers || [])].map(a => normalizeText(a));
-      const hit = alts.includes(val);
+      const hit = answersEquivalent(inp.value, d.answer, d.altAnswers);
       fb.className = 'check-feedback ' + (hit ? 'ok' : 'fail');
       fb.textContent = hit ? 'Верно!' : `Неверно. Ответ: ${d.answer}`;
       if (!hit && d.hint) {
-        fb.innerHTML += `<div class="sample-answer">${escapeHtml(d.hint)}</div>`;
+        fb.innerHTML = escapeHtml(fb.textContent) + `<div class="sample-answer">${escapeHtml(d.hint)}</div>`;
       }
-      item.dataset.done = '1';
-      if (hit) markBlock('contextDrill', i, lesson);
+      if (hit) {
+        lockExerciseItem(item, inp, btn);
+        markBlock('contextDrill', i, lesson);
+      }
+      scheduleProgressSave(lesson);
     });
-    item.querySelector('.answer-actions').append(btn, fb);
+    const hintSpec = { hint: d.hint, acceptableAnswers: [d.answer], hintWrong: `Вставь: ${d.answer}` };
+    item.querySelector('.answer-actions').append(btn, createHintButton(hintSpec, fb), fb);
     container.appendChild(item);
   });
 }
@@ -773,13 +1103,16 @@ function initGrammarCheck(lesson) {
       btn.addEventListener('click', () => {
         if (item.dataset.answered) return;
         item.dataset.answered = '1';
-        const ok = opt === q.answer;
+        const ok = optionsEquivalent(opt, q.answer);
         btn.classList.add(ok ? 'selected-correct' : 'selected-wrong');
-        if (!ok) opts.querySelectorAll('.quiz-btn').forEach(b => { if (b.textContent === q.answer) b.classList.add('selected-correct'); });
+        if (!ok) opts.querySelectorAll('.quiz-btn').forEach(b => {
+          if (optionsEquivalent(b.textContent, q.answer)) b.classList.add('selected-correct');
+        });
         item.classList.add(ok ? 'correct' : 'wrong');
         opts.querySelectorAll('.quiz-btn').forEach(b => b.disabled = true);
         gDone++;
         if (ok) gOk++;
+        scheduleProgressSave(lesson);
         if (gDone === items.length && gOk >= Math.ceil(items.length * 0.5)) markBlock('grammar', undefined, lesson);
       });
       opts.appendChild(btn);
@@ -804,13 +1137,16 @@ function initQuiz(quizData, lesson) {
       btn.addEventListener('click', () => {
         if (item.dataset.answered) return;
         item.dataset.answered = '1';
-        const ok = opt === q.answer;
+        const ok = optionsEquivalent(opt, q.answer);
         btn.classList.add(ok ? 'selected-correct' : 'selected-wrong');
-        if (!ok) opts.querySelectorAll('.quiz-btn').forEach(b => { if (b.textContent === q.answer) b.classList.add('selected-correct'); });
+        if (!ok) opts.querySelectorAll('.quiz-btn').forEach(b => {
+          if (optionsEquivalent(b.textContent, q.answer)) b.classList.add('selected-correct');
+        });
         item.classList.add(ok ? 'correct' : 'wrong');
         opts.querySelectorAll('.quiz-btn').forEach(b => b.disabled = true);
         quizAnswered++;
         if (ok) quizCorrect++;
+        scheduleProgressSave(lesson);
         if (quizAnswered === quizData.length) {
           document.getElementById('scoreNum').textContent = `${quizCorrect}/${quizData.length}`;
           document.getElementById('quizScore').classList.add('visible');
@@ -855,7 +1191,7 @@ function initPronunciation(lesson) {
     checkBtn.addEventListener('click', () => {
       const expected = p.expected || p.phrase;
       const sim = phraseSimilarity(ta.value, expected);
-      const ok = sim >= 0.45 || normalizeText(ta.value) === normalizeText(expected);
+      const ok = sim >= 0.45 || answersEquivalent(ta.value, expected, [p.phrase]);
       fb.className = 'check-feedback pron-feedback ' + (ok ? 'ok' : 'fail');
       fb.textContent = ok ? 'Фраза принята! Отличное произношение.' : `Попробуй ещё. Близость: ${Math.round(sim*100)}%. Образец: ${expected}`;
       if (ok) markBlock('pronunciation', i, lesson);
@@ -932,9 +1268,11 @@ function initCulture(lesson) {
       const r = validateOpenAnswer(ta.value, spec);
       setCheckResult(fb, r);
       if (r.ok) markBlock('culture', i, lesson);
+      scheduleProgressSave(lesson);
     });
     const actions = card.querySelector('.answer-actions');
     actions.appendChild(btn);
+    actions.appendChild(createHintButton(spec, fb));
     actions.appendChild(attachMicButton(ta));
     actions.appendChild(fb);
     grid.appendChild(card);
@@ -967,9 +1305,11 @@ function initSpeaking(lesson) {
       const r = spec.useSpeech ? validateSpeech(ta.value, spec) : validateOpenAnswer(ta.value, spec);
       setCheckResult(fb, r);
       if (r.ok) markBlock('speaking', i, lesson);
+      scheduleProgressSave(lesson);
     });
     actions.appendChild(btn);
     if (spec.useSpeech) actions.appendChild(attachMicButton(ta));
+    actions.appendChild(createHintButton(spec, fb));
     actions.appendChild(fb);
     box.appendChild(ta);
     box.appendChild(actions);
@@ -1002,6 +1342,7 @@ function initHomework(lesson) {
         fb.textContent = all ? 'Домашняя работа отмечена. Модуль можно завершать после всех блоков на платформе.' : '';
       }
       updateProgressUI(lesson);
+      scheduleProgressSave(lesson);
     });
     list.appendChild(row);
   });
@@ -1115,4 +1456,6 @@ function renderIndex() {
         </a>`).join('')}
       </div></div>`;
   }).join('');
+
+  initWalletUI();
 }

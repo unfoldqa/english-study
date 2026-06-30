@@ -608,7 +608,8 @@ const CURRICULUM = [
         "answer": "How",
         "altAnswers": [
           "How",
-          "how"
+          "how",
+          "HOW"
         ],
         "hint": "Подсказка: тема «Первые фразы»."
       },
@@ -617,8 +618,9 @@ const CURRICULUM = [
         "prompt": "______ are you from",
         "answer": "Where",
         "altAnswers": [
-          "Where",
-          "where"
+          "WHERE",
+          "where",
+          "Where"
         ],
         "hint": "Подсказка: тема «Первые фразы»."
       },
@@ -627,8 +629,12 @@ const CURRICULUM = [
         "prompt": "______ fine, thank you",
         "answer": "I'm",
         "altAnswers": [
+          "I am",
+          "i'm",
+          "I'M",
           "I'm",
-          "i'm"
+          "IM",
+          "im"
         ],
         "hint": "Подсказка: тема «Первые фразы»."
       }
@@ -649,9 +655,9 @@ const CURRICULUM = [
       {
         "question": "What is «hello»?",
         "options": [
-          "страна",
+          "спасибо",
           "привет",
-          "пожалуйста",
+          "друг",
           "приятно (в знакомстве)"
         ],
         "answer": "привет"
@@ -659,30 +665,30 @@ const CURRICULUM = [
       {
         "question": "What is «goodbye»?",
         "options": [
-          "имя",
-          "до свидания",
           "пожалуйста",
-          "друг"
+          "привет",
+          "до свидания",
+          "страна"
         ],
         "answer": "до свидания"
       },
       {
         "question": "What is «please»?",
         "options": [
+          "друг",
           "пожалуйста",
-          "добро пожаловать",
-          "страна",
-          "имя"
+          "приятно (в знакомстве)",
+          "страна"
         ],
         "answer": "пожалуйста"
       },
       {
         "question": "What is «thank you»?",
         "options": [
-          "приятно (в знакомстве)",
-          "друг",
+          "страна",
+          "встречать(ся)",
           "спасибо",
-          "привет"
+          "пожалуйста"
         ],
         "answer": "спасибо"
       },
@@ -690,8 +696,8 @@ const CURRICULUM = [
         "question": "What is «name»?",
         "options": [
           "страна",
+          "спасибо",
           "до свидания",
-          "привет",
           "имя"
         ],
         "answer": "имя"
@@ -1046,7 +1052,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The story takes place in a small town."
+          "The action happens at home and at school."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «am / is / are»."
@@ -1112,7 +1118,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss am / is / are in simple English."
+          "The listening clip explains ideas from am / is / are."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «am / is / are»."
@@ -1365,8 +1371,9 @@ const CURRICULUM = [
         "prompt": "She is ______",
         "answer": "happy",
         "altAnswers": [
+          "happy",
           "Happy",
-          "happy"
+          "HAPPY"
         ],
         "hint": "Подсказка: тема «am / is / are»."
       },
@@ -1375,6 +1382,7 @@ const CURRICULUM = [
         "prompt": "We are ______",
         "answer": "here",
         "altAnswers": [
+          "HERE",
           "here",
           "Here"
         ],
@@ -1385,8 +1393,9 @@ const CURRICULUM = [
         "prompt": "It is ______",
         "answer": "cold",
         "altAnswers": [
-          "cold",
-          "Cold"
+          "COLD",
+          "Cold",
+          "cold"
         ],
         "hint": "Подсказка: тема «am / is / are»."
       },
@@ -1395,6 +1404,7 @@ const CURRICULUM = [
         "prompt": "She is my ______",
         "answer": "friend",
         "altAnswers": [
+          "FRIEND",
           "Friend",
           "friend"
         ],
@@ -1417,50 +1427,50 @@ const CURRICULUM = [
       {
         "question": "What is «am»?",
         "options": [
-          "счастливый",
+          "готовый",
           "там",
-          "есть (мы/вы/они)",
-          "есть (я)"
+          "есть (я)",
+          "счастливый"
         ],
         "answer": "есть (я)"
       },
       {
         "question": "What is «is»?",
         "options": [
-          "готовый",
-          "счастливый",
+          "есть (он/она/оно)",
           "учитель",
-          "есть (он/она/оно)"
+          "есть (мы/вы/они)",
+          "студент"
         ],
         "answer": "есть (он/она/оно)"
       },
       {
         "question": "What is «are»?",
         "options": [
-          "готовый",
-          "есть (я)",
           "есть (мы/вы/они)",
-          "здесь"
+          "студент",
+          "учитель",
+          "там"
         ],
         "answer": "есть (мы/вы/они)"
       },
       {
         "question": "What is «student»?",
         "options": [
-          "счастливый",
-          "там",
-          "студент",
-          "готовый"
+          "есть (мы/вы/они)",
+          "уставший",
+          "здесь",
+          "студент"
         ],
         "answer": "студент"
       },
       {
         "question": "What is «teacher»?",
         "options": [
-          "есть (он/она/оно)",
+          "есть (мы/вы/они)",
           "учитель",
-          "счастливый",
-          "есть (я)"
+          "уставший",
+          "там"
         ],
         "answer": "учитель"
       },
@@ -1800,7 +1810,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The action happens at home and at school."
+          "The story takes place in a small town."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «What / Where / How»."
@@ -1836,7 +1846,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The woman in the scene is the mother."
+          "The oldest child is sixteen years old."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «What / Where / How»."
@@ -1862,7 +1872,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from what / where / how."
+          "Characters discuss what / where / how in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «What / Where / How»."
@@ -2099,8 +2109,9 @@ const CURRICULUM = [
         "prompt": "How do you ______ that",
         "answer": "spell",
         "altAnswers": [
-          "spell",
-          "Spell"
+          "Spell",
+          "SPELL",
+          "spell"
         ],
         "hint": "Подсказка: тема «What / Where / How»."
       },
@@ -2109,6 +2120,7 @@ const CURRICULUM = [
         "prompt": "What is your ______",
         "answer": "job",
         "altAnswers": [
+          "JOB",
           "Job",
           "job"
         ],
@@ -2131,9 +2143,9 @@ const CURRICULUM = [
       {
         "question": "What is «what»?",
         "options": [
-          "работать",
+          "жить",
           "что",
-          "электронная почта",
+          "где",
           "кто"
         ],
         "answer": "что"
@@ -2141,40 +2153,40 @@ const CURRICULUM = [
       {
         "question": "What is «where»?",
         "options": [
-          "работать",
+          "кто",
+          "что",
           "где",
-          "адрес",
-          "кто"
+          "телефон"
         ],
         "answer": "где"
       },
       {
         "question": "What is «how»?",
         "options": [
-          "телефон",
-          "электронная почта",
-          "писать / называть по буквам",
-          "как"
+          "как",
+          "что",
+          "кто",
+          "писать / называть по буквам"
         ],
         "answer": "как"
       },
       {
         "question": "What is «who»?",
         "options": [
-          "работать",
+          "как",
+          "что",
           "кто",
-          "жить",
-          "где"
+          "телефон"
         ],
         "answer": "кто"
       },
       {
         "question": "What is «live»?",
         "options": [
+          "где",
+          "работать",
           "жить",
-          "кто",
-          "писать / называть по буквам",
-          "где"
+          "кто"
         ],
         "answer": "жить"
       },
@@ -2514,7 +2526,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on a / an / the / -s."
+          "The passage uses vocabulary about book."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «a / an / the / -s»."
@@ -2560,7 +2572,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about book."
+          "Characters discuss a / an / the / -s in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «a / an / the / -s»."
@@ -2843,6 +2855,7 @@ const CURRICULUM = [
         "prompt": "an ______",
         "answer": "apple",
         "altAnswers": [
+          "APPLE",
           "apple",
           "Apple"
         ],
@@ -2853,8 +2866,9 @@ const CURRICULUM = [
         "prompt": "the ______",
         "answer": "book",
         "altAnswers": [
-          "book",
-          "Book"
+          "BOOK",
+          "Book",
+          "book"
         ],
         "hint": "Подсказка: тема «a / an / the / -s»."
       },
@@ -2864,6 +2878,7 @@ const CURRICULUM = [
         "answer": "people",
         "altAnswers": [
           "People",
+          "PEOPLE",
           "people"
         ],
         "hint": "Подсказка: тема «a / an / the / -s»."
@@ -2873,8 +2888,9 @@ const CURRICULUM = [
         "prompt": "______ people live here",
         "answer": "Many",
         "altAnswers": [
+          "many",
           "Many",
-          "many"
+          "MANY"
         ],
         "hint": "Подсказка: тема «a / an / the / -s»."
       }
@@ -2895,50 +2911,50 @@ const CURRICULUM = [
       {
         "question": "What is «a»?",
         "options": [
-          "единственное число",
           "неопределённый артикль",
-          "дети",
-          "ребёнок"
+          "единственное число",
+          "артикль перед гласной",
+          "яблоко"
         ],
         "answer": "неопределённый артикль"
       },
       {
         "question": "What is «an»?",
         "options": [
-          "неопределённый артикль",
-          "книга",
-          "ребёнок",
-          "артикль перед гласной"
+          "единственное число",
+          "артикль перед гласной",
+          "яблоко",
+          "люди"
         ],
         "answer": "артикль перед гласной"
       },
       {
         "question": "What is «the»?",
         "options": [
+          "книга",
           "определённый артикль",
-          "ребёнок",
-          "яблоко",
-          "человек"
+          "артикль перед гласной",
+          "ребёнок"
         ],
         "answer": "определённый артикль"
       },
       {
         "question": "What is «book»?",
         "options": [
-          "люди",
-          "книга",
+          "ребёнок",
           "артикль перед гласной",
-          "определённый артикль"
+          "яблоко",
+          "книга"
         ],
         "answer": "книга"
       },
       {
         "question": "What is «apple»?",
         "options": [
-          "неопределённый артикль",
+          "книга",
           "яблоко",
-          "дети",
-          "люди"
+          "единственное число",
+          "человек"
         ],
         "answer": "яблоко"
       },
@@ -3366,7 +3382,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The parents talk about their jobs."
+          "He works with every day every day."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «I work / He works»."
@@ -3620,6 +3636,7 @@ const CURRICULUM = [
         "answer": "works",
         "altAnswers": [
           "Works",
+          "WORKS",
           "works"
         ],
         "hint": "Подсказка: тема «I work / He works»."
@@ -3629,6 +3646,7 @@ const CURRICULUM = [
         "prompt": "Do you ______ it",
         "answer": "like",
         "altAnswers": [
+          "LIKE",
           "Like",
           "like"
         ],
@@ -3640,7 +3658,8 @@ const CURRICULUM = [
         "answer": "know",
         "altAnswers": [
           "know",
-          "Know"
+          "Know",
+          "KNOW"
         ],
         "hint": "Подсказка: тема «I work / He works»."
       },
@@ -3649,8 +3668,9 @@ const CURRICULUM = [
         "prompt": "I ______ up early",
         "answer": "wake",
         "altAnswers": [
+          "Wake",
           "wake",
-          "Wake"
+          "WAKE"
         ],
         "hint": "Подсказка: тема «I work / He works»."
       }
@@ -3671,9 +3691,9 @@ const CURRICULUM = [
       {
         "question": "What is «every day»?",
         "options": [
+          "просыпаться",
           "нуждаться",
           "каждый день",
-          "просыпаться",
           "завтрак"
         ],
         "answer": "каждый день"
@@ -3681,40 +3701,40 @@ const CURRICULUM = [
       {
         "question": "What is «sometimes»?",
         "options": [
-          "хотеть",
-          "иногда",
           "знать",
-          "нравиться"
+          "иногда",
+          "каждый день",
+          "завтрак"
         ],
         "answer": "иногда"
       },
       {
         "question": "What is «never»?",
         "options": [
+          "каждый день",
+          "идти",
           "никогда",
-          "завтрак",
-          "хотеть",
-          "знать"
+          "завтрак"
         ],
         "answer": "никогда"
       },
       {
         "question": "What is «wake up»?",
         "options": [
-          "каждый день",
-          "идти",
           "просыпаться",
-          "иногда"
+          "нуждаться",
+          "каждый день",
+          "знать"
         ],
         "answer": "просыпаться"
       },
       {
         "question": "What is «breakfast»?",
         "options": [
-          "знать",
-          "никогда",
           "завтрак",
-          "каждый день"
+          "каждый день",
+          "идти",
+          "хотеть"
         ],
         "answer": "завтрак"
       },
@@ -4046,7 +4066,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about on."
+          "Characters discuss местоположение in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Местоположение»."
@@ -4082,7 +4102,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Most events occur in an English-speaking country."
+          "The scene is set in London."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Местоположение»."
@@ -4134,7 +4154,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from местоположение."
+          "The passage uses vocabulary about on."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Местоположение»."
@@ -4387,8 +4407,9 @@ const CURRICULUM = [
         "prompt": "______ is a book",
         "answer": "There",
         "altAnswers": [
-          "there",
-          "There"
+          "There",
+          "THERE",
+          "there"
         ],
         "hint": "Подсказка: тема «Местоположение»."
       },
@@ -4397,8 +4418,9 @@ const CURRICULUM = [
         "prompt": "There are ______ cats",
         "answer": "two",
         "altAnswers": [
+          "Two",
           "two",
-          "Two"
+          "TWO"
         ],
         "hint": "Подсказка: тема «Местоположение»."
       },
@@ -4408,7 +4430,8 @@ const CURRICULUM = [
         "answer": "table",
         "altAnswers": [
           "table",
-          "Table"
+          "Table",
+          "TABLE"
         ],
         "hint": "Подсказка: тема «Местоположение»."
       },
@@ -4417,6 +4440,7 @@ const CURRICULUM = [
         "prompt": "______ to me",
         "answer": "next",
         "altAnswers": [
+          "NEXT",
           "next",
           "Next"
         ],
@@ -4439,50 +4463,50 @@ const CURRICULUM = [
       {
         "question": "What is «there is»?",
         "options": [
-          "какой-либо (в вопросах)",
-          "есть (мн.ч.)",
-          "за",
-          "есть (ед.ч.)"
+          "рядом с",
+          "есть (ед.ч.)",
+          "комната",
+          "есть (мн.ч.)"
         ],
         "answer": "есть (ед.ч.)"
       },
       {
         "question": "What is «there are»?",
         "options": [
-          "есть (мн.ч.)",
-          "кухня",
-          "рядом с",
-          "на"
+          "в",
+          "под",
+          "комната",
+          "есть (мн.ч.)"
         ],
         "answer": "есть (мн.ч.)"
       },
       {
         "question": "What is «in»?",
         "options": [
-          "под",
-          "на",
-          "рядом с",
-          "в"
+          "за",
+          "в",
+          "кухня",
+          "рядом с"
         ],
         "answer": "в"
       },
       {
         "question": "What is «on»?",
         "options": [
-          "под",
-          "на",
           "кухня",
-          "рядом с"
+          "какой-либо (в вопросах)",
+          "за",
+          "на"
         ],
         "answer": "на"
       },
       {
         "question": "What is «under»?",
         "options": [
-          "под",
-          "какой-либо (в вопросах)",
-          "на",
-          "за"
+          "есть (мн.ч.)",
+          "рядом с",
+          "за",
+          "под"
         ],
         "answer": "под"
       },
@@ -4859,7 +4883,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss могу / не могу in simple English."
+          "The listening clip explains ideas from могу / не могу."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Могу / не могу»."
@@ -5152,8 +5176,9 @@ const CURRICULUM = [
         "prompt": "I can ______",
         "answer": "swim",
         "altAnswers": [
-          "swim",
-          "Swim"
+          "Swim",
+          "SWIM",
+          "swim"
         ],
         "hint": "Подсказка: тема «Могу / не могу»."
       },
@@ -5163,7 +5188,8 @@ const CURRICULUM = [
         "answer": "drive",
         "altAnswers": [
           "drive",
-          "Drive"
+          "Drive",
+          "DRIVE"
         ],
         "hint": "Подсказка: тема «Могу / не могу»."
       },
@@ -5173,6 +5199,7 @@ const CURRICULUM = [
         "answer": "understand",
         "altAnswers": [
           "understand",
+          "UNDERSTAND",
           "Understand"
         ],
         "hint": "Подсказка: тема «Могу / не могу»."
@@ -5183,6 +5210,7 @@ const CURRICULUM = [
         "answer": "use",
         "altAnswers": [
           "use",
+          "USE",
           "Use"
         ],
         "hint": "Подсказка: тема «Могу / не могу»."
@@ -5204,20 +5232,20 @@ const CURRICULUM = [
       {
         "question": "What is «can»?",
         "options": [
-          "помогать",
-          "петь",
           "плавать",
-          "мочь, уметь"
+          "мочь, уметь",
+          "говорить",
+          "водить"
         ],
         "answer": "мочь, уметь"
       },
       {
         "question": "What is «can't»?",
         "options": [
-          "водить",
-          "не мочь",
+          "мочь, уметь",
           "танцевать",
-          "понимать"
+          "не мочь",
+          "говорить"
         ],
         "answer": "не мочь"
       },
@@ -5225,28 +5253,28 @@ const CURRICULUM = [
         "question": "What is «swim»?",
         "options": [
           "плавать",
-          "не мочь",
           "водить",
-          "помогать"
+          "не мочь",
+          "петь"
         ],
         "answer": "плавать"
       },
       {
         "question": "What is «drive»?",
         "options": [
-          "водить",
-          "говорить",
+          "помогать",
           "готовить",
-          "помогать"
+          "не мочь",
+          "водить"
         ],
         "answer": "водить"
       },
       {
         "question": "What is «cook»?",
         "options": [
-          "готовить",
           "не мочь",
-          "плавать",
+          "помогать",
+          "готовить",
           "мочь, уметь"
         ],
         "answer": "готовить"
@@ -5585,7 +5613,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene is set in London."
+          "The action happens at home and at school."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Was/Were, numbers, time»."
@@ -5611,7 +5639,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from was/were, numbers, time."
+          "The scene relates to were and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Was/Were, numbers, time»."
@@ -5910,8 +5938,9 @@ const CURRICULUM = [
         "prompt": "I was at ______",
         "answer": "home",
         "altAnswers": [
+          "Home",
           "home",
-          "Home"
+          "HOME"
         ],
         "hint": "Подсказка: тема «Was/Were, numbers, time»."
       },
@@ -5921,7 +5950,8 @@ const CURRICULUM = [
         "answer": "Half",
         "altAnswers": [
           "Half",
-          "half"
+          "half",
+          "HALF"
         ],
         "hint": "Подсказка: тема «Was/Were, numbers, time»."
       },
@@ -5931,7 +5961,8 @@ const CURRICULUM = [
         "answer": "How",
         "altAnswers": [
           "How",
-          "how"
+          "how",
+          "HOW"
         ],
         "hint": "Подсказка: тема «Was/Were, numbers, time»."
       },
@@ -5941,6 +5972,7 @@ const CURRICULUM = [
         "answer": "Quarter",
         "altAnswers": [
           "Quarter",
+          "QUARTER",
           "quarter"
         ],
         "hint": "Подсказка: тема «Was/Were, numbers, time»."
@@ -5962,40 +5994,40 @@ const CURRICULUM = [
       {
         "question": "What is «was»?",
         "options": [
-          "были",
+          "цена",
           "сколько стоит",
-          "число",
-          "был(а)"
+          "был(а)",
+          "четверть (часа)"
         ],
         "answer": "был(а)"
       },
       {
         "question": "What is «were»?",
         "options": [
-          "цена",
+          "ровно (время)",
+          "половина (часа)",
           "были",
-          "число",
-          "сколько стоит"
+          "сколько (штук)"
         ],
         "answer": "были"
       },
       {
         "question": "What is «yesterday»?",
         "options": [
-          "были",
-          "вчера",
           "ровно (время)",
-          "число"
+          "сколько (штук)",
+          "цена",
+          "вчера"
         ],
         "answer": "вчера"
       },
       {
         "question": "What is «o'clock»?",
         "options": [
-          "четверть (часа)",
-          "вчера",
+          "были",
+          "был(а)",
           "ровно (время)",
-          "половина (часа)"
+          "четверть (часа)"
         ],
         "answer": "ровно (время)"
       },
@@ -6003,9 +6035,9 @@ const CURRICULUM = [
         "question": "What is «half past»?",
         "options": [
           "половина (часа)",
+          "ровно (время)",
           "вчера",
-          "сколько стоит",
-          "цена"
+          "были"
         ],
         "answer": "половина (часа)"
       },
@@ -6329,7 +6361,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Her brother works as a teacher."
+          "The woman in the scene is the mother."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Family members»."
@@ -6355,7 +6387,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The action happens at home and at school."
+          "Most events occur in an English-speaking country."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Family members»."
@@ -6381,7 +6413,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The brother studies at university."
+          "He works with mother every day."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Family members»."
@@ -6407,7 +6439,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage describes a busy morning routine."
+          "The author describes the room and the weather."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Family members»."
@@ -6653,8 +6685,9 @@ const CURRICULUM = [
         "prompt": "We are a ______ family",
         "answer": "big",
         "altAnswers": [
-          "big",
-          "Big"
+          "BIG",
+          "Big",
+          "big"
         ],
         "hint": "Подсказка: тема «Family members»."
       },
@@ -6663,8 +6696,9 @@ const CURRICULUM = [
         "prompt": "My ______ and I",
         "answer": "husband",
         "altAnswers": [
-          "Husband",
-          "husband"
+          "HUSBAND",
+          "husband",
+          "Husband"
         ],
         "hint": "Подсказка: тема «Family members»."
       },
@@ -6673,8 +6707,9 @@ const CURRICULUM = [
         "prompt": "His ______ works abroad",
         "answer": "wife",
         "altAnswers": [
-          "Wife",
-          "wife"
+          "wife",
+          "WIFE",
+          "Wife"
         ],
         "hint": "Подсказка: тема «Family members»."
       }
@@ -6695,29 +6730,29 @@ const CURRICULUM = [
       {
         "question": "What is «mother»?",
         "options": [
-          "мать",
           "родители",
-          "муж",
-          "сын"
+          "мать",
+          "дочь",
+          "брат"
         ],
         "answer": "мать"
       },
       {
         "question": "What is «father»?",
         "options": [
-          "жена",
           "отец",
-          "сестра",
-          "семья"
+          "семья",
+          "родители",
+          "дочь"
         ],
         "answer": "отец"
       },
       {
         "question": "What is «sister»?",
         "options": [
+          "отец",
+          "сын",
           "сестра",
-          "жена",
-          "родители",
           "брат"
         ],
         "answer": "сестра"
@@ -6725,9 +6760,9 @@ const CURRICULUM = [
       {
         "question": "What is «brother»?",
         "options": [
+          "сестра",
           "брат",
-          "отец",
-          "мать",
+          "родители",
           "семья"
         ],
         "answer": "брат"
@@ -6735,10 +6770,10 @@ const CURRICULUM = [
       {
         "question": "What is «son»?",
         "options": [
+          "сын",
+          "мать",
           "муж",
-          "родители",
-          "семья",
-          "сын"
+          "сестра"
         ],
         "answer": "сын"
       },
@@ -7062,7 +7097,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They describe their daily routine clearly."
+          "She helps her family after school."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Food and drinks»."
@@ -7114,7 +7149,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss food and drinks in simple English."
+          "The listening clip explains ideas from food and drinks."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Food and drinks»."
@@ -7411,8 +7446,9 @@ const CURRICULUM = [
         "prompt": "The ______ please",
         "answer": "bill",
         "altAnswers": [
-          "bill",
-          "Bill"
+          "BILL",
+          "Bill",
+          "bill"
         ],
         "hint": "Подсказка: тема «Food and drinks»."
       },
@@ -7421,8 +7457,9 @@ const CURRICULUM = [
         "prompt": "______ do you have for breakfast",
         "answer": "What",
         "altAnswers": [
-          "what",
-          "What"
+          "WHAT",
+          "What",
+          "what"
         ],
         "hint": "Подсказка: тема «Food and drinks»."
       },
@@ -7431,6 +7468,7 @@ const CURRICULUM = [
         "prompt": "I ______ some water",
         "answer": "want",
         "altAnswers": [
+          "WANT",
           "Want",
           "want"
         ],
@@ -7453,10 +7491,10 @@ const CURRICULUM = [
       {
         "question": "What is «breakfast»?",
         "options": [
-          "вода",
-          "обед",
-          "завтрак",
-          "голодный"
+          "курица",
+          "кофе",
+          "салат",
+          "завтрак"
         ],
         "answer": "завтрак"
       },
@@ -7465,38 +7503,38 @@ const CURRICULUM = [
         "options": [
           "обед",
           "кофе",
-          "голодный",
-          "вода"
+          "вода",
+          "голодный"
         ],
         "answer": "обед"
       },
       {
         "question": "What is «dinner»?",
         "options": [
-          "обед",
+          "курица",
           "чай",
-          "ужин",
-          "хлеб"
+          "вода",
+          "ужин"
         ],
         "answer": "ужин"
       },
       {
         "question": "What is «water»?",
         "options": [
+          "кофе",
           "завтрак",
-          "курица",
           "вода",
-          "салат"
+          "курица"
         ],
         "answer": "вода"
       },
       {
         "question": "What is «coffee»?",
         "options": [
-          "ужин",
-          "курица",
+          "голодный",
           "кофе",
-          "вода"
+          "салат",
+          "ужин"
         ],
         "answer": "кофе"
       },
@@ -7813,7 +7851,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about white."
+          "Characters discuss colours and clothes in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Colours and clothes»."
@@ -7839,7 +7877,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss colours and clothes in simple English."
+          "The material focuses on colours and clothes."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Colours and clothes»."
@@ -7891,7 +7929,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from colours and clothes."
+          "The passage uses vocabulary about white."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Colours and clothes»."
@@ -7917,7 +7955,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from colours and clothes."
+          "Characters discuss colours and clothes in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Colours and clothes»."
@@ -8160,6 +8198,7 @@ const CURRICULUM = [
         "answer": "need",
         "altAnswers": [
           "need",
+          "NEED",
           "Need"
         ],
         "hint": "Подсказка: тема «Colours and clothes»."
@@ -8169,8 +8208,9 @@ const CURRICULUM = [
         "prompt": "______ jeans are new",
         "answer": "These",
         "altAnswers": [
-          "these",
-          "These"
+          "These",
+          "THESE",
+          "these"
         ],
         "hint": "Подсказка: тема «Colours and clothes»."
       },
@@ -8179,6 +8219,7 @@ const CURRICULUM = [
         "prompt": "I am wearing a ______",
         "answer": "hat",
         "altAnswers": [
+          "HAT",
           "hat",
           "Hat"
         ],
@@ -8201,50 +8242,50 @@ const CURRICULUM = [
       {
         "question": "What is «red»?",
         "options": [
-          "носить (одежду)",
-          "синий",
+          "рубашка",
           "красный",
-          "платье"
+          "носить (одежду)",
+          "чёрный"
         ],
         "answer": "красный"
       },
       {
         "question": "What is «blue»?",
         "options": [
-          "чёрный",
-          "обувь",
+          "носить (одежду)",
           "синий",
-          "куртка"
+          "джинсы",
+          "платье"
         ],
         "answer": "синий"
       },
       {
         "question": "What is «black»?",
         "options": [
-          "рубашка",
-          "белый",
+          "синий",
+          "платье",
           "чёрный",
-          "джинсы"
+          "красный"
         ],
         "answer": "чёрный"
       },
       {
         "question": "What is «white»?",
         "options": [
-          "рубашка",
+          "джинсы",
+          "красный",
           "белый",
-          "обувь",
-          "синий"
+          "рубашка"
         ],
         "answer": "белый"
       },
       {
         "question": "What is «shirt»?",
         "options": [
-          "куртка",
+          "обувь",
+          "носить (одежду)",
           "рубашка",
-          "белый",
-          "носить (одежду)"
+          "куртка"
         ],
         "answer": "рубашка"
       },
@@ -8557,7 +8598,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about rain and cold wind."
+          "It is sunny and warm in the scene."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Weather and seasons»."
@@ -8609,7 +8650,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on weather and seasons."
+          "The listening clip explains ideas from weather and seasons."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Weather and seasons»."
@@ -8635,7 +8676,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about rain and cold wind."
+          "She takes an umbrella because it is raining."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Weather and seasons»."
@@ -8661,7 +8702,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on weather and seasons."
+          "The passage uses vocabulary about hot."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Weather and seasons»."
@@ -8915,8 +8956,9 @@ const CURRICULUM = [
         "prompt": "It ______ snows here",
         "answer": "often",
         "altAnswers": [
-          "Often",
-          "often"
+          "often",
+          "OFTEN",
+          "Often"
         ],
         "hint": "Подсказка: тема «Weather and seasons»."
       },
@@ -8926,6 +8968,7 @@ const CURRICULUM = [
         "answer": "love",
         "altAnswers": [
           "Love",
+          "LOVE",
           "love"
         ],
         "hint": "Подсказка: тема «Weather and seasons»."
@@ -8935,8 +8978,9 @@ const CURRICULUM = [
         "prompt": "It is ______ today",
         "answer": "sunny",
         "altAnswers": [
-          "sunny",
-          "Sunny"
+          "Sunny",
+          "SUNNY",
+          "sunny"
         ],
         "hint": "Подсказка: тема «Weather and seasons»."
       }
@@ -8958,29 +9002,29 @@ const CURRICULUM = [
         "question": "What is «sunny»?",
         "options": [
           "холодно",
-          "снег",
           "солнечно",
-          "жарко"
+          "весна",
+          "лето"
         ],
         "answer": "солнечно"
       },
       {
         "question": "What is «rainy»?",
         "options": [
-          "осень",
-          "лето",
           "зима",
-          "дождливо"
+          "дождливо",
+          "лето",
+          "весна"
         ],
         "answer": "дождливо"
       },
       {
         "question": "What is «cold»?",
         "options": [
+          "ветрено",
+          "осень",
           "дождливо",
-          "холодно",
-          "весна",
-          "ветрено"
+          "холодно"
         ],
         "answer": "холодно"
       },
@@ -8988,19 +9032,19 @@ const CURRICULUM = [
         "question": "What is «hot»?",
         "options": [
           "жарко",
-          "лето",
-          "ветрено",
-          "весна"
+          "снег",
+          "холодно",
+          "дождливо"
         ],
         "answer": "жарко"
       },
       {
         "question": "What is «windy»?",
         "options": [
-          "холодно",
-          "ветрено",
-          "дождливо",
-          "жарко"
+          "солнечно",
+          "снег",
+          "осень",
+          "ветрено"
         ],
         "answer": "ветрено"
       },
@@ -9329,7 +9373,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss shopping in simple English."
+          "The listening clip explains ideas from shopping."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Shopping»."
@@ -9381,7 +9425,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about cash."
+          "The listening clip explains ideas from shopping."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Shopping»."
@@ -9407,7 +9451,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about cash."
+          "The listening clip explains ideas from shopping."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Shopping»."
@@ -9661,8 +9705,9 @@ const CURRICULUM = [
         "prompt": "______ too expensive",
         "answer": "That's",
         "altAnswers": [
-          "that's",
-          "That's"
+          "THAT'S",
+          "That's",
+          "that's"
         ],
         "hint": "Подсказка: тема «Shopping»."
       },
@@ -9672,7 +9717,8 @@ const CURRICULUM = [
         "answer": "receipt",
         "altAnswers": [
           "Receipt",
-          "receipt"
+          "receipt",
+          "RECEIPT"
         ],
         "hint": "Подсказка: тема «Shopping»."
       },
@@ -9682,7 +9728,8 @@ const CURRICULUM = [
         "answer": "How",
         "altAnswers": [
           "How",
-          "how"
+          "how",
+          "HOW"
         ],
         "hint": "Подсказка: тема «Shopping»."
       }
@@ -9703,29 +9750,29 @@ const CURRICULUM = [
       {
         "question": "What is «price»?",
         "options": [
-          "скидка",
-          "цена",
           "сдача",
-          "наличные"
+          "цена",
+          "дешёвый",
+          "размер"
         ],
         "answer": "цена"
       },
       {
         "question": "What is «cheap»?",
         "options": [
-          "дешёвый",
-          "дорогой",
+          "скидка",
+          "цена",
           "размер",
-          "чек"
+          "дешёвый"
         ],
         "answer": "дешёвый"
       },
       {
         "question": "What is «expensive»?",
         "options": [
-          "карта",
-          "чек",
-          "наличные",
+          "скидка",
+          "сдача",
+          "размер",
           "дорогой"
         ],
         "answer": "дорогой"
@@ -9733,20 +9780,20 @@ const CURRICULUM = [
       {
         "question": "What is «cash»?",
         "options": [
-          "наличные",
-          "примерять",
           "дешёвый",
-          "скидка"
+          "наличные",
+          "сдача",
+          "примерять"
         ],
         "answer": "наличные"
       },
       {
         "question": "What is «card»?",
         "options": [
-          "наличные",
-          "цена",
-          "карта",
-          "сдача"
+          "примерять",
+          "чек",
+          "сдача",
+          "карта"
         ],
         "answer": "карта"
       },
@@ -10065,7 +10112,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The action happens at home and at school."
+          "Most events occur in an English-speaking country."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Directions»."
@@ -10143,7 +10190,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about near."
+          "The scene relates to right and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Directions»."
@@ -10427,8 +10474,9 @@ const CURRICULUM = [
         "prompt": "Is ______ a pharmacy near here",
         "answer": "there",
         "altAnswers": [
-          "there",
-          "There"
+          "There",
+          "THERE",
+          "there"
         ],
         "hint": "Подсказка: тема «Directions»."
       },
@@ -10438,7 +10486,8 @@ const CURRICULUM = [
         "answer": "How",
         "altAnswers": [
           "How",
-          "how"
+          "how",
+          "HOW"
         ],
         "hint": "Подсказка: тема «Directions»."
       },
@@ -10448,6 +10497,7 @@ const CURRICULUM = [
         "answer": "Turn",
         "altAnswers": [
           "Turn",
+          "TURN",
           "turn"
         ],
         "hint": "Подсказка: тема «Directions»."
@@ -10469,10 +10519,10 @@ const CURRICULUM = [
       {
         "question": "What is «left»?",
         "options": [
-          "рядом с",
-          "карта",
           "налево",
-          "напротив"
+          "квартал",
+          "прямо",
+          "поворачивать"
         ],
         "answer": "налево"
       },
@@ -10480,39 +10530,39 @@ const CURRICULUM = [
         "question": "What is «right»?",
         "options": [
           "направо",
-          "рядом",
-          "напротив",
-          "рядом с"
+          "квартал",
+          "рядом с",
+          "напротив"
         ],
         "answer": "направо"
       },
       {
         "question": "What is «straight»?",
         "options": [
-          "рядом с",
-          "налево",
           "прямо",
-          "поворачивать"
+          "рядом",
+          "рядом с",
+          "налево"
         ],
         "answer": "прямо"
       },
       {
         "question": "What is «near»?",
         "options": [
-          "рядом с",
-          "рядом",
+          "налево",
+          "напротив",
           "поворачивать",
-          "угол"
+          "рядом"
         ],
         "answer": "рядом"
       },
       {
         "question": "What is «next to»?",
         "options": [
-          "рядом с",
-          "прямо",
-          "рядом",
-          "поворачивать"
+          "направо",
+          "налево",
+          "напротив",
+          "рядом с"
         ],
         "answer": "рядом с"
       },
@@ -10825,7 +10875,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss hobbies and free time in simple English."
+          "The listening clip explains ideas from hobbies and free time."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Hobbies and free time»."
@@ -10851,7 +10901,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss hobbies and free time in simple English."
+          "The passage uses vocabulary about read."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Hobbies and free time»."
@@ -10877,7 +10927,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about read."
+          "Characters discuss hobbies and free time in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Hobbies and free time»."
@@ -10903,7 +10953,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "She helps her family after school."
+          "They describe their daily routine clearly."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Hobbies and free time»."
@@ -10929,7 +10979,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to music and daily life."
+          "The listening clip explains ideas from hobbies and free time."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Hobbies and free time»."
@@ -11183,8 +11233,9 @@ const CURRICULUM = [
         "prompt": "She ______ drawing",
         "answer": "loves",
         "altAnswers": [
-          "Loves",
-          "loves"
+          "loves",
+          "LOVES",
+          "Loves"
         ],
         "hint": "Подсказка: тема «Hobbies and free time»."
       },
@@ -11193,8 +11244,9 @@ const CURRICULUM = [
         "prompt": "They ______ travel on weekends",
         "answer": "often",
         "altAnswers": [
-          "Often",
-          "often"
+          "often",
+          "OFTEN",
+          "Often"
         ],
         "hint": "Подсказка: тема «Hobbies and free time»."
       },
@@ -11204,7 +11256,8 @@ const CURRICULUM = [
         "answer": "enjoy",
         "altAnswers": [
           "Enjoy",
-          "enjoy"
+          "enjoy",
+          "ENJOY"
         ],
         "hint": "Подсказка: тема «Hobbies and free time»."
       }
@@ -11225,50 +11278,50 @@ const CURRICULUM = [
       {
         "question": "What is «hobby»?",
         "options": [
-          "хобби",
-          "спорт",
           "готовить",
-          "читать"
+          "спорт",
+          "хобби",
+          "музыка"
         ],
         "answer": "хобби"
       },
       {
         "question": "What is «music»?",
         "options": [
-          "наслаждаться",
+          "рисовать",
           "музыка",
-          "спорт",
-          "читать"
+          "отдыхать",
+          "свободное время"
         ],
         "answer": "музыка"
       },
       {
         "question": "What is «sport»?",
         "options": [
-          "путешествовать",
-          "читать",
+          "хобби",
           "спорт",
-          "готовить"
+          "наслаждаться",
+          "путешествовать"
         ],
         "answer": "спорт"
       },
       {
         "question": "What is «read»?",
         "options": [
-          "готовить",
-          "отдыхать",
-          "читать",
-          "рисовать"
+          "путешествовать",
+          "музыка",
+          "хобби",
+          "читать"
         ],
         "answer": "читать"
       },
       {
         "question": "What is «draw»?",
         "options": [
-          "читать",
-          "рисовать",
+          "свободное время",
+          "спорт",
           "отдыхать",
-          "готовить"
+          "рисовать"
         ],
         "answer": "рисовать"
       },
@@ -11591,7 +11644,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "She seems relieved after the conversation."
+          "He feels tired but happy."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Health and the doctor»."
@@ -11669,7 +11722,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to fever and daily life."
+          "The passage uses vocabulary about ill."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Health and the doctor»."
@@ -11695,7 +11748,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Everyone looks worried in that scene."
+          "The character feels nervous at first."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Health and the doctor»."
@@ -11934,6 +11987,7 @@ const CURRICULUM = [
         "answer": "need",
         "altAnswers": [
           "need",
+          "NEED",
           "Need"
         ],
         "hint": "Подсказка: тема «Health and the doctor»."
@@ -11943,8 +11997,9 @@ const CURRICULUM = [
         "prompt": "I ______ you feel better",
         "answer": "hope",
         "altAnswers": [
-          "hope",
-          "Hope"
+          "Hope",
+          "HOPE",
+          "hope"
         ],
         "hint": "Подсказка: тема «Health and the doctor»."
       },
@@ -11953,6 +12008,7 @@ const CURRICULUM = [
         "prompt": "______ this medicine twice a day",
         "answer": "Take",
         "altAnswers": [
+          "TAKE",
           "take",
           "Take"
         ],
@@ -11975,49 +12031,49 @@ const CURRICULUM = [
       {
         "question": "What is «headache»?",
         "options": [
-          "приём у врача",
-          "головная боль",
-          "врач",
-          "кашель"
+          "температура",
+          "кашель",
+          "уставший",
+          "головная боль"
         ],
         "answer": "головная боль"
       },
       {
         "question": "What is «fever»?",
         "options": [
-          "болеть",
-          "лекарство",
           "температура",
-          "больной"
+          "болеть",
+          "уставший",
+          "головная боль"
         ],
         "answer": "температура"
       },
       {
         "question": "What is «cough»?",
         "options": [
+          "больной",
           "кашель",
-          "лекарство",
-          "головная боль",
-          "болеть"
+          "болеть",
+          "уставший"
         ],
         "answer": "кашель"
       },
       {
         "question": "What is «ill»?",
         "options": [
+          "больной",
+          "болеть",
           "лучше",
-          "температура",
-          "уставший",
-          "больной"
+          "врач"
         ],
         "answer": "больной"
       },
       {
         "question": "What is «tired»?",
         "options": [
-          "уставший",
-          "болеть",
+          "головная боль",
           "врач",
+          "уставший",
           "лучше"
         ],
         "answer": "уставший"
@@ -12451,7 +12507,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "He works with routine every day."
+          "The parents talk about their jobs."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Рутина и действие сейчас»."
@@ -12477,7 +12533,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The character spends too much time online."
+          "Technology helps them stay in touch abroad."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Рутина и действие сейчас»."
@@ -12529,7 +12585,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about habit."
+          "The material focuses on рутина и действие сейчас."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Рутина и действие сейчас»."
@@ -12702,8 +12758,9 @@ const CURRICULUM = [
         "prompt": "I ______ walk to work",
         "answer": "usually",
         "altAnswers": [
-          "usually",
-          "Usually"
+          "Usually",
+          "USUALLY",
+          "usually"
         ],
         "hint": "Подсказка: тема «Рутина и действие сейчас»."
       },
@@ -12712,8 +12769,9 @@ const CURRICULUM = [
         "prompt": "She is ______ now",
         "answer": "reading",
         "altAnswers": [
+          "reading",
           "Reading",
-          "reading"
+          "READING"
         ],
         "hint": "Подсказка: тема «Рутина и действие сейчас»."
       },
@@ -12722,8 +12780,9 @@ const CURRICULUM = [
         "prompt": "Do you ______ travel",
         "answer": "often",
         "altAnswers": [
-          "Often",
-          "often"
+          "often",
+          "OFTEN",
+          "Often"
         ],
         "hint": "Подсказка: тема «Рутина и действие сейчас»."
       },
@@ -12732,8 +12791,9 @@ const CURRICULUM = [
         "prompt": "We are ______ today",
         "answer": "working",
         "altAnswers": [
-          "Working",
-          "working"
+          "working",
+          "WORKING",
+          "Working"
         ],
         "hint": "Подсказка: тема «Рутина и действие сейчас»."
       }
@@ -12754,10 +12814,10 @@ const CURRICULUM = [
       {
         "question": "What is «routine»?",
         "options": [
-          "момент",
-          "обычно",
+          "распорядок дня",
+          "ежедневный",
           "всегда",
-          "распорядок дня"
+          "привычка"
         ],
         "answer": "распорядок дня"
       },
@@ -12765,28 +12825,28 @@ const CURRICULUM = [
         "question": "What is «usually»?",
         "options": [
           "часто",
-          "всегда",
-          "момент",
-          "обычно"
+          "расписание",
+          "обычно",
+          "редко"
         ],
         "answer": "обычно"
       },
       {
         "question": "What is «currently»?",
         "options": [
-          "обычно",
-          "в настоящее время",
-          "момент",
-          "привычка"
+          "расписание",
+          "всегда",
+          "редко",
+          "в настоящее время"
         ],
         "answer": "в настоящее время"
       },
       {
         "question": "What is «habit»?",
         "options": [
+          "часто",
+          "момент",
           "привычка",
-          "обычно",
-          "ежедневный",
           "всегда"
         ],
         "answer": "привычка"
@@ -12794,10 +12854,10 @@ const CURRICULUM = [
       {
         "question": "What is «schedule»?",
         "options": [
+          "распорядок дня",
+          "в настоящее время",
           "расписание",
-          "ежедневный",
-          "часто",
-          "в настоящее время"
+          "привычка"
         ],
         "answer": "расписание"
       },
@@ -13252,7 +13312,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Social media affects how friends communicate."
+          "Technology helps them stay in touch abroad."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Прошлые события и фон»."
@@ -13278,7 +13338,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Most events occur in an English-speaking country."
+          "The scene is set in London."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Прошлые события и фон»."
@@ -13324,7 +13384,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They discuss useful apps for learning English."
+          "The character spends too much time online."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Прошлые события и фон»."
@@ -13471,8 +13531,9 @@ const CURRICULUM = [
         "prompt": "I ______ London last year",
         "answer": "visited",
         "altAnswers": [
+          "visited",
           "Visited",
-          "visited"
+          "VISITED"
         ],
         "hint": "Подсказка: тема «Прошлые события и фон»."
       },
@@ -13481,8 +13542,9 @@ const CURRICULUM = [
         "prompt": "She was ______ a book",
         "answer": "reading",
         "altAnswers": [
+          "reading",
           "Reading",
-          "reading"
+          "READING"
         ],
         "hint": "Подсказка: тема «Прошлые события и фон»."
       },
@@ -13491,8 +13553,9 @@ const CURRICULUM = [
         "prompt": "______ happened yesterday",
         "answer": "What",
         "altAnswers": [
-          "what",
-          "What"
+          "WHAT",
+          "What",
+          "what"
         ],
         "hint": "Подсказка: тема «Прошлые события и фон»."
       },
@@ -13501,8 +13564,9 @@ const CURRICULUM = [
         "prompt": "They were ______ outside",
         "answer": "waiting",
         "altAnswers": [
-          "Waiting",
-          "waiting"
+          "waiting",
+          "WAITING",
+          "Waiting"
         ],
         "hint": "Подсказка: тема «Прошлые события и фон»."
       }
@@ -13523,50 +13587,50 @@ const CURRICULUM = [
       {
         "question": "What is «yesterday»?",
         "options": [
-          "фон, задний план",
+          "закончил(а)",
+          "произошло",
           "вчера",
-          "в то время как",
-          "прервал(а)"
+          "начал(а)"
         ],
         "answer": "вчера"
       },
       {
         "question": "What is «ago»?",
         "options": [
+          "внезапно",
           "прибыл(а)",
           "назад",
-          "вчера",
-          "внезапно"
+          "произошло"
         ],
         "answer": "назад"
       },
       {
         "question": "What is «while»?",
         "options": [
-          "фон, задний план",
-          "в то время как",
+          "начал(а)",
           "внезапно",
-          "начал(а)"
+          "произошло",
+          "в то время как"
         ],
         "answer": "в то время как"
       },
       {
         "question": "What is «suddenly»?",
         "options": [
-          "закончил(а)",
-          "прервал(а)",
+          "фон, задний план",
           "внезапно",
-          "фон, задний план"
+          "прервал(а)",
+          "назад"
         ],
         "answer": "внезапно"
       },
       {
         "question": "What is «finished»?",
         "options": [
-          "начал(а)",
-          "фон, задний план",
-          "внезапно",
-          "закончил(а)"
+          "прервал(а)",
+          "закончил(а)",
+          "вчера",
+          "фон, задний план"
         ],
         "answer": "закончил(а)"
       },
@@ -14019,7 +14083,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene is set in London."
+          "The action happens at home and at school."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Опыт и результат»."
@@ -14045,7 +14109,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about yet."
+          "The listening clip explains ideas from опыт и результат."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Опыт и результат»."
@@ -14071,7 +14135,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to never and daily life."
+          "Characters discuss опыт и результат in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Опыт и результат»."
@@ -14097,7 +14161,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The main character faces a difficult choice."
+          "They solve the problem together at the end."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Опыт и результат»."
@@ -14244,8 +14308,9 @@ const CURRICULUM = [
         "prompt": "I have ______ my work",
         "answer": "finished",
         "altAnswers": [
+          "finished",
           "Finished",
-          "finished"
+          "FINISHED"
         ],
         "hint": "Подсказка: тема «Опыт и результат»."
       },
@@ -14254,8 +14319,9 @@ const CURRICULUM = [
         "prompt": "Have you ______ been there",
         "answer": "ever",
         "altAnswers": [
-          "Ever",
-          "ever"
+          "ever",
+          "EVER",
+          "Ever"
         ],
         "hint": "Подсказка: тема «Опыт и результат»."
       },
@@ -14264,8 +14330,9 @@ const CURRICULUM = [
         "prompt": "She has ______ arrived",
         "answer": "just",
         "altAnswers": [
+          "just",
           "Just",
-          "just"
+          "JUST"
         ],
         "hint": "Подсказка: тема «Опыт и результат»."
       },
@@ -14274,8 +14341,9 @@ const CURRICULUM = [
         "prompt": "I ______ seen him yet",
         "answer": "haven't",
         "altAnswers": [
-          "Haven't",
-          "haven't"
+          "haven't",
+          "HAVEN'T",
+          "Haven't"
         ],
         "hint": "Подсказка: тема «Опыт и результат»."
       }
@@ -14296,50 +14364,50 @@ const CURRICULUM = [
       {
         "question": "What is «ever»?",
         "options": [
+          "только что",
           "когда-либо",
-          "недавно",
-          "опыт",
-          "в течение"
+          "ещё (не)",
+          "результат"
         ],
         "answer": "когда-либо"
       },
       {
         "question": "What is «never»?",
         "options": [
-          "в течение",
-          "никогда",
-          "недавно",
-          "опыт"
+          "результат",
+          "опыт",
+          "уже",
+          "никогда"
         ],
         "answer": "никогда"
       },
       {
         "question": "What is «already»?",
         "options": [
-          "с (какого-то момента)",
-          "опыт",
+          "ещё (не)",
           "уже",
-          "результат"
+          "опыт",
+          "недавно"
         ],
         "answer": "уже"
       },
       {
         "question": "What is «yet»?",
         "options": [
-          "опыт",
-          "только что",
           "ещё (не)",
-          "когда-либо"
+          "когда-либо",
+          "результат",
+          "в течение"
         ],
         "answer": "ещё (не)"
       },
       {
         "question": "What is «just»?",
         "options": [
-          "когда-либо",
-          "уже",
-          "результат",
-          "только что"
+          "в течение",
+          "ещё (не)",
+          "только что",
+          "результат"
         ],
         "answer": "только что"
       },
@@ -14763,7 +14831,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about unfinished."
+          "The scene relates to this week and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Когда какое время»."
@@ -14789,7 +14857,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to this week and daily life."
+          "The passage uses vocabulary about unfinished."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Когда какое время»."
@@ -14815,7 +14883,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The event changes how the characters feel."
+          "The main character faces a difficult choice."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Когда какое время»."
@@ -14841,7 +14909,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about unfinished."
+          "The scene relates to this week and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Когда какое время»."
@@ -15018,8 +15086,9 @@ const CURRICULUM = [
         "prompt": "I have ______ him recently",
         "answer": "seen",
         "altAnswers": [
+          "seen",
           "Seen",
-          "seen"
+          "SEEN"
         ],
         "hint": "Подсказка: тема «Когда какое время»."
       },
@@ -15028,8 +15097,9 @@ const CURRICULUM = [
         "prompt": "Did you go ______ week",
         "answer": "last",
         "altAnswers": [
+          "Last",
           "last",
-          "Last"
+          "LAST"
         ],
         "hint": "Подсказка: тема «Когда какое время»."
       },
@@ -15038,8 +15108,9 @@ const CURRICULUM = [
         "prompt": "Have you ______ there before",
         "answer": "been",
         "altAnswers": [
+          "Been",
           "been",
-          "Been"
+          "BEEN"
         ],
         "hint": "Подсказка: тема «Когда какое время»."
       },
@@ -15049,6 +15120,7 @@ const CURRICULUM = [
         "answer": "lost",
         "altAnswers": [
           "lost",
+          "LOST",
           "Lost"
         ],
         "hint": "Подсказка: тема «Когда какое время»."
@@ -15070,8 +15142,8 @@ const CURRICULUM = [
       {
         "question": "What is «last»?",
         "options": [
-          "незавершённый",
-          "конкретный",
+          "контекст",
+          "неопределённый",
           "на этой неделе",
           "прошлый"
         ],
@@ -15080,9 +15152,9 @@ const CURRICULUM = [
       {
         "question": "What is «this week»?",
         "options": [
-          "контекст",
+          "недавний",
+          "связь",
           "на этой неделе",
-          "прошлый",
           "незавершённый"
         ],
         "answer": "на этой неделе"
@@ -15090,9 +15162,9 @@ const CURRICULUM = [
       {
         "question": "What is «specific»?",
         "options": [
-          "на этой неделе",
-          "недавний",
-          "определённый",
+          "контекст",
+          "связь",
+          "прошлый",
           "конкретный"
         ],
         "answer": "конкретный"
@@ -15100,20 +15172,20 @@ const CURRICULUM = [
       {
         "question": "What is «unfinished»?",
         "options": [
-          "контекст",
-          "незавершённый",
+          "конкретный",
           "недавний",
-          "неопределённый"
+          "определённый",
+          "незавершённый"
         ],
         "answer": "незавершённый"
       },
       {
         "question": "What is «connection»?",
         "options": [
-          "связь",
+          "маркер времени",
           "контекст",
-          "на этой неделе",
-          "неопределённый"
+          "связь",
+          "прошлый"
         ],
         "answer": "связь"
       },
@@ -15580,7 +15652,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "She will likely call her friend tomorrow."
+          "I think the problem will be solved soon."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Will, going to, Present Continuous»."
@@ -15606,7 +15678,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "She will likely call her friend tomorrow."
+          "They might travel abroad in the next chapter."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Will, going to, Present Continuous»."
@@ -15632,7 +15704,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The narrator introduces his parents first."
+          "The main character is a young student."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Will, going to, Present Continuous»."
@@ -15658,7 +15730,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from will, going to, present continuous."
+          "The scene relates to prediction and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Will, going to, Present Continuous»."
@@ -15814,7 +15886,8 @@ const CURRICULUM = [
         "answer": "will",
         "altAnswers": [
           "will",
-          "Will"
+          "Will",
+          "WILL"
         ],
         "hint": "Подсказка: тема «Will, going to, Present Continuous»."
       },
@@ -15823,8 +15896,9 @@ const CURRICULUM = [
         "prompt": "______ going to rain",
         "answer": "It's",
         "altAnswers": [
-          "it's",
-          "It's"
+          "IT'S",
+          "It's",
+          "it's"
         ],
         "hint": "Подсказка: тема «Will, going to, Present Continuous»."
       },
@@ -15833,8 +15907,12 @@ const CURRICULUM = [
         "prompt": "______ meeting her at six",
         "answer": "I'm",
         "altAnswers": [
+          "I am",
+          "i'm",
+          "I'M",
           "I'm",
-          "i'm"
+          "IM",
+          "im"
         ],
         "hint": "Подсказка: тема «Will, going to, Present Continuous»."
       },
@@ -15843,8 +15921,9 @@ const CURRICULUM = [
         "prompt": "I ______ it will work",
         "answer": "think",
         "altAnswers": [
-          "think",
-          "Think"
+          "THINK",
+          "Think",
+          "think"
         ],
         "hint": "Подсказка: тема «Will, going to, Present Continuous»."
       }
@@ -15865,20 +15944,20 @@ const CURRICULUM = [
       {
         "question": "What is «plan»?",
         "options": [
-          "встреча, назначение",
           "договорённость",
-          "расписание",
-          "план"
+          "план",
+          "спонтанный",
+          "прогноз"
         ],
         "answer": "план"
       },
       {
         "question": "What is «prediction»?",
         "options": [
-          "намерение",
           "расписание",
           "предсказание",
-          "план"
+          "договорённость",
+          "встреча, назначение"
         ],
         "answer": "предсказание"
       },
@@ -15886,9 +15965,9 @@ const CURRICULUM = [
         "question": "What is «intention»?",
         "options": [
           "намерение",
-          "вероятно",
-          "встреча, назначение",
-          "прогноз"
+          "договорённость",
+          "определённо",
+          "план"
         ],
         "answer": "намерение"
       },
@@ -15896,19 +15975,19 @@ const CURRICULUM = [
         "question": "What is «appointment»?",
         "options": [
           "предсказание",
-          "спонтанный",
-          "вероятно",
-          "встреча, назначение"
+          "встреча, назначение",
+          "план",
+          "определённо"
         ],
         "answer": "встреча, назначение"
       },
       {
         "question": "What is «spontaneous»?",
         "options": [
-          "встреча, назначение",
-          "вероятно",
-          "определённо",
-          "спонтанный"
+          "прогноз",
+          "намерение",
+          "спонтанный",
+          "определённо"
         ],
         "answer": "спонтанный"
       },
@@ -16242,7 +16321,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss bigger, the best in simple English."
+          "The passage uses vocabulary about worse."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «bigger, the best»."
@@ -16268,7 +16347,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The woman in the scene is the mother."
+          "The main character is a young student."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «bigger, the best»."
@@ -16294,7 +16373,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to smaller and daily life."
+          "The material focuses on bigger, the best."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «bigger, the best»."
@@ -16346,7 +16425,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to smaller and daily life."
+          "The material focuses on bigger, the best."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «bigger, the best»."
@@ -16599,8 +16678,9 @@ const CURRICULUM = [
         "prompt": "______ than mine",
         "answer": "bigger",
         "altAnswers": [
-          "bigger",
-          "Bigger"
+          "Bigger",
+          "BIGGER",
+          "bigger"
         ],
         "hint": "Подсказка: тема «bigger, the best»."
       },
@@ -16609,6 +16689,7 @@ const CURRICULUM = [
         "prompt": "more ______",
         "answer": "interesting",
         "altAnswers": [
+          "INTERESTING",
           "interesting",
           "Interesting"
         ],
@@ -16619,8 +16700,9 @@ const CURRICULUM = [
         "prompt": "as ______ as",
         "answer": "good",
         "altAnswers": [
-          "Good",
-          "good"
+          "good",
+          "GOOD",
+          "Good"
         ],
         "hint": "Подсказка: тема «bigger, the best»."
       },
@@ -16630,6 +16712,7 @@ const CURRICULUM = [
         "answer": "most",
         "altAnswers": [
           "most",
+          "MOST",
           "Most"
         ],
         "hint": "Подсказка: тема «bigger, the best»."
@@ -16651,50 +16734,50 @@ const CURRICULUM = [
       {
         "question": "What is «bigger»?",
         "options": [
-          "больше",
+          "меньше",
           "хуже",
-          "интересный",
-          "дорогой"
+          "больше",
+          "интересный"
         ],
         "answer": "больше"
       },
       {
         "question": "What is «smaller»?",
         "options": [
-          "меньше",
-          "лучше",
-          "лучший",
-          "чем"
+          "хуже",
+          "интересный",
+          "дешёвый",
+          "меньше"
         ],
         "answer": "меньше"
       },
       {
         "question": "What is «better»?",
         "options": [
-          "больше",
-          "дорогой",
+          "дешёвый",
+          "интересный",
           "лучше",
-          "хуже"
+          "дорогой"
         ],
         "answer": "лучше"
       },
       {
         "question": "What is «worse»?",
         "options": [
+          "больше",
+          "дешёвый",
           "интересный",
-          "такой же как",
-          "хуже",
-          "чем"
+          "хуже"
         ],
         "answer": "хуже"
       },
       {
         "question": "What is «the best»?",
         "options": [
-          "больше",
+          "дешёвый",
+          "лучший",
           "лучше",
-          "хуже",
-          "лучший"
+          "хуже"
         ],
         "answer": "лучший"
       },
@@ -17036,7 +17119,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on some, any, much, many."
+          "The listening clip explains ideas from some, any, much, many."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «some, any, much, many»."
@@ -17062,7 +17145,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from some, any, much, many."
+          "Characters discuss some, any, much, many in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «some, any, much, many»."
@@ -17372,7 +17455,8 @@ const CURRICULUM = [
         "answer": "How",
         "altAnswers": [
           "How",
-          "how"
+          "how",
+          "HOW"
         ],
         "hint": "Подсказка: тема «some, any, much, many»."
       },
@@ -17382,6 +17466,7 @@ const CURRICULUM = [
         "answer": "people",
         "altAnswers": [
           "People",
+          "PEOPLE",
           "people"
         ],
         "hint": "Подсказка: тема «some, any, much, many»."
@@ -17392,7 +17477,8 @@ const CURRICULUM = [
         "answer": "lot",
         "altAnswers": [
           "lot",
-          "Lot"
+          "Lot",
+          "LOT"
         ],
         "hint": "Подсказка: тема «some, any, much, many»."
       },
@@ -17402,7 +17488,8 @@ const CURRICULUM = [
         "answer": "questions",
         "altAnswers": [
           "Questions",
-          "questions"
+          "questions",
+          "QUESTIONS"
         ],
         "hint": "Подсказка: тема «some, any, much, many»."
       }
@@ -17423,40 +17510,40 @@ const CURRICULUM = [
       {
         "question": "What is «much»?",
         "options": [
-          "много (исч.)",
+          "мало (неисч.)",
+          "много",
           "немного, несколько",
-          "много (неисч.)",
-          "много"
+          "много (неисч.)"
         ],
         "answer": "много (неисч.)"
       },
       {
         "question": "What is «many»?",
         "options": [
-          "совет",
-          "вода",
-          "любой, некоторый",
-          "много (исч.)"
+          "много",
+          "много (исч.)",
+          "мало (неисч.)",
+          "любой, некоторый"
         ],
         "answer": "много (исч.)"
       },
       {
         "question": "What is «some»?",
         "options": [
-          "немного, несколько",
+          "любой, некоторый",
           "мало (неисч.)",
-          "много (исч.)",
-          "много (неисч.)"
+          "немного, несколько",
+          "много (исч.)"
         ],
         "answer": "немного, несколько"
       },
       {
         "question": "What is «any»?",
         "options": [
+          "любой, некоторый",
           "деньги",
           "немного, несколько",
-          "любой, некоторый",
-          "много"
+          "мало (исч.)"
         ],
         "answer": "любой, некоторый"
       },
@@ -17464,9 +17551,9 @@ const CURRICULUM = [
         "question": "What is «a lot of»?",
         "options": [
           "много",
-          "вода",
-          "мало (неисч.)",
-          "немного, несколько"
+          "много (исч.)",
+          "любой, некоторый",
+          "деньги"
         ],
         "answer": "много"
       },
@@ -17798,7 +17885,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Social media affects how friends communicate."
+          "People use smartphones for work and study."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «at / in / on»."
@@ -17824,7 +17911,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to in and daily life."
+          "Characters discuss at / in / on in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «at / in / on»."
@@ -17850,7 +17937,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from at / in / on."
+          "Characters discuss at / in / on in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «at / in / on»."
@@ -17876,7 +17963,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about morning."
+          "The scene relates to in and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «at / in / on»."
@@ -17902,7 +17989,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to in and daily life."
+          "The listening clip explains ideas from at / in / on."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «at / in / on»."
@@ -18156,6 +18243,7 @@ const CURRICULUM = [
         "answer": "nine",
         "altAnswers": [
           "Nine",
+          "NINE",
           "nine"
         ],
         "hint": "Подсказка: тема «at / in / on»."
@@ -18166,6 +18254,7 @@ const CURRICULUM = [
         "answer": "Monday",
         "altAnswers": [
           "monday",
+          "MONDAY",
           "Monday"
         ],
         "hint": "Подсказка: тема «at / in / on»."
@@ -18175,8 +18264,9 @@ const CURRICULUM = [
         "prompt": "in ______",
         "answer": "January",
         "altAnswers": [
+          "january",
           "January",
-          "january"
+          "JANUARY"
         ],
         "hint": "Подсказка: тема «at / in / on»."
       },
@@ -18185,8 +18275,9 @@ const CURRICULUM = [
         "prompt": "at the ______",
         "answer": "weekend",
         "altAnswers": [
-          "Weekend",
-          "weekend"
+          "WEEKEND",
+          "weekend",
+          "Weekend"
         ],
         "hint": "Подсказка: тема «at / in / on»."
       }
@@ -18208,38 +18299,38 @@ const CURRICULUM = [
         "question": "What is «at»?",
         "options": [
           "в (день)",
-          "ночь",
-          "день рождения",
-          "в (время)"
+          "утро",
+          "в (время)",
+          "ночь"
         ],
         "answer": "в (время)"
       },
       {
         "question": "What is «in»?",
         "options": [
-          "утро",
           "в (месяц/год)",
+          "понедельник",
           "январь",
-          "выходные"
+          "день рождения"
         ],
         "answer": "в (месяц/год)"
       },
       {
         "question": "What is «on»?",
         "options": [
-          "в (день)",
-          "понедельник",
-          "в (месяц/год)",
-          "день рождения"
+          "праздник",
+          "в (время)",
+          "утро",
+          "в (день)"
         ],
         "answer": "в (день)"
       },
       {
         "question": "What is «morning»?",
         "options": [
-          "выходные",
-          "в (день)",
           "праздник",
+          "ночь",
+          "понедельник",
           "утро"
         ],
         "answer": "утро"
@@ -18247,10 +18338,10 @@ const CURRICULUM = [
       {
         "question": "What is «night»?",
         "options": [
-          "в (месяц/год)",
-          "январь",
           "ночь",
-          "выходные"
+          "понедельник",
+          "выходные",
+          "праздник"
         ],
         "answer": "ночь"
       },
@@ -18565,7 +18656,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from passive voice (present)."
+          "The material focuses on passive voice (present)."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Passive voice (present)»."
@@ -18617,7 +18708,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on passive voice (present)."
+          "The scene relates to made and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Passive voice (present)»."
@@ -18669,7 +18760,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from passive voice (present)."
+          "Characters discuss passive voice (present) in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Passive voice (present)»."
@@ -18907,8 +18998,9 @@ const CURRICULUM = [
         "prompt": "It is ______ every day",
         "answer": "used",
         "altAnswers": [
+          "used",
           "Used",
-          "used"
+          "USED"
         ],
         "hint": "Подсказка: тема «Passive voice (present)»."
       },
@@ -18918,6 +19010,7 @@ const CURRICULUM = [
         "answer": "door",
         "altAnswers": [
           "Door",
+          "DOOR",
           "door"
         ],
         "hint": "Подсказка: тема «Passive voice (present)»."
@@ -18927,8 +19020,9 @@ const CURRICULUM = [
         "prompt": "The ______ was written by her",
         "answer": "book",
         "altAnswers": [
-          "book",
-          "Book"
+          "BOOK",
+          "Book",
+          "book"
         ],
         "hint": "Подсказка: тема «Passive voice (present)»."
       }
@@ -18949,19 +19043,19 @@ const CURRICULUM = [
       {
         "question": "What is «passive»?",
         "options": [
-          "продаваемый",
-          "пассивный залог",
           "открытый",
-          "построенный"
+          "сделанный",
+          "пассивный залог",
+          "продаваемый"
         ],
         "answer": "пассивный залог"
       },
       {
         "question": "What is «made»?",
         "options": [
-          "продаваемый",
+          "выращиваемый",
           "сделанный",
-          "написанный",
+          "продаваемый",
           "используемый"
         ],
         "answer": "сделанный"
@@ -18969,30 +19063,30 @@ const CURRICULUM = [
       {
         "question": "What is «spoken»?",
         "options": [
-          "используемый",
-          "говоримый",
+          "открытый",
+          "сделанный",
           "продаваемый",
-          "написанный"
+          "говоримый"
         ],
         "answer": "говоримый"
       },
       {
         "question": "What is «built»?",
         "options": [
-          "называемый",
-          "говоримый",
+          "написанный",
           "построенный",
-          "пассивный залог"
+          "называемый",
+          "открытый"
         ],
         "answer": "построенный"
       },
       {
         "question": "What is «written»?",
         "options": [
-          "пассивный залог",
-          "говоримый",
+          "выращиваемый",
           "написанный",
-          "используемый"
+          "построенный",
+          "открытый"
         ],
         "answer": "написанный"
       },
@@ -19316,7 +19410,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "She helps her family after school."
+          "He works with enjoy every day."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Gerunds and infinitives»."
@@ -19342,7 +19436,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "She helps her family after school."
+          "The brother studies at university."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Gerunds and infinitives»."
@@ -19368,7 +19462,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to want and daily life."
+          "Characters discuss gerunds and infinitives in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Gerunds and infinitives»."
@@ -19394,7 +19488,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "She discovers something unexpected in the story."
+          "The main character faces a difficult choice."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Gerunds and infinitives»."
@@ -19420,7 +19514,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The parents talk about their jobs."
+          "She helps her family after school."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Gerunds and infinitives»."
@@ -19662,8 +19756,9 @@ const CURRICULUM = [
         "prompt": "He ______ cooking",
         "answer": "finished",
         "altAnswers": [
+          "finished",
           "Finished",
-          "finished"
+          "FINISHED"
         ],
         "hint": "Подсказка: тема «Gerunds and infinitives»."
       },
@@ -19673,6 +19768,7 @@ const CURRICULUM = [
         "answer": "need",
         "altAnswers": [
           "need",
+          "NEED",
           "Need"
         ],
         "hint": "Подсказка: тема «Gerunds and infinitives»."
@@ -19682,8 +19778,9 @@ const CURRICULUM = [
         "prompt": "They ______ eating fast food",
         "answer": "avoid",
         "altAnswers": [
-          "avoid",
-          "Avoid"
+          "Avoid",
+          "AVOID",
+          "avoid"
         ],
         "hint": "Подсказка: тема «Gerunds and infinitives»."
       }
@@ -19704,50 +19801,50 @@ const CURRICULUM = [
       {
         "question": "What is «enjoy»?",
         "options": [
-          "заканчивать",
-          "планировать",
+          "избегать",
           "наслаждаться",
-          "избегать"
+          "нуждаться",
+          "хотеть"
         ],
         "answer": "наслаждаться"
       },
       {
         "question": "What is «want»?",
         "options": [
-          "надеяться",
+          "наслаждаться",
           "хотеть",
-          "обещать",
-          "наслаждаться"
+          "заканчивать",
+          "надеяться"
         ],
         "answer": "хотеть"
       },
       {
         "question": "What is «need»?",
         "options": [
-          "надеяться",
-          "решать",
           "нуждаться",
-          "заканчивать"
+          "планировать",
+          "обещать",
+          "решать"
         ],
         "answer": "нуждаться"
       },
       {
         "question": "What is «decide»?",
         "options": [
-          "избегать",
+          "хотеть",
+          "планировать",
           "решать",
-          "заканчивать",
-          "надеяться"
+          "нуждаться"
         ],
         "answer": "решать"
       },
       {
         "question": "What is «plan»?",
         "options": [
-          "нуждаться",
+          "обещать",
           "учиться",
-          "планировать",
-          "обещать"
+          "избегать",
+          "планировать"
         ],
         "answer": "планировать"
       },
@@ -20058,7 +20155,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about agree."
+          "The listening clip explains ideas from question tags."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Question tags»."
@@ -20084,7 +20181,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from question tags."
+          "Characters discuss question tags in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Question tags»."
@@ -20110,7 +20207,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on question tags."
+          "The passage uses vocabulary about agree."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Question tags»."
@@ -20136,7 +20233,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss question tags in simple English."
+          "The passage uses vocabulary about agree."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Question tags»."
@@ -20162,7 +20259,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to positive and daily life."
+          "Characters discuss question tags in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Question tags»."
@@ -20416,8 +20513,9 @@ const CURRICULUM = [
         "prompt": "______ was great, wasn't it",
         "answer": "That",
         "altAnswers": [
+          "That",
           "that",
-          "That"
+          "THAT"
         ],
         "hint": "Подсказка: тема «Question tags»."
       },
@@ -20426,8 +20524,9 @@ const CURRICULUM = [
         "prompt": "You ______ finished, have you you",
         "answer": "haven't",
         "altAnswers": [
-          "Haven't",
-          "haven't"
+          "haven't",
+          "HAVEN'T",
+          "Haven't"
         ],
         "hint": "Подсказка: тема «Question tags»."
       },
@@ -20437,6 +20536,7 @@ const CURRICULUM = [
         "answer": "You're",
         "altAnswers": [
           "you're",
+          "YOU'RE",
           "You're"
         ],
         "hint": "Подсказка: тема «Question tags»."
@@ -20458,50 +20558,50 @@ const CURRICULUM = [
       {
         "question": "What is «tag»?",
         "options": [
-          "отрицательный",
-          "разделительный вопрос",
-          "верно",
-          "подтверждать"
+          "на самом деле",
+          "именно",
+          "положительный",
+          "разделительный вопрос"
         ],
         "answer": "разделительный вопрос"
       },
       {
         "question": "What is «positive»?",
         "options": [
-          "разделительный вопрос",
-          "именно",
           "отвечать",
-          "положительный"
+          "соглашаться",
+          "положительный",
+          "на самом деле"
         ],
         "answer": "положительный"
       },
       {
         "question": "What is «negative»?",
         "options": [
-          "верно",
+          "уверенный",
+          "отвечать",
           "отрицательный",
-          "именно",
-          "уверенный"
+          "верно"
         ],
         "answer": "отрицательный"
       },
       {
         "question": "What is «agree»?",
         "options": [
+          "соглашаться",
           "именно",
-          "уверенный",
           "на самом деле",
-          "соглашаться"
+          "положительный"
         ],
         "answer": "соглашаться"
       },
       {
         "question": "What is «confirm»?",
         "options": [
-          "разделительный вопрос",
-          "подтверждать",
           "уверенный",
-          "положительный"
+          "на самом деле",
+          "разделительный вопрос",
+          "подтверждать"
         ],
         "answer": "подтверждать"
       },
@@ -20812,7 +20912,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on too and enough."
+          "The scene relates to enough and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Too and enough»."
@@ -20838,7 +20938,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to enough and daily life."
+          "The passage uses vocabulary about small."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Too and enough»."
@@ -20864,7 +20964,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from too and enough."
+          "The scene relates to enough and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Too and enough»."
@@ -20890,7 +20990,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about small."
+          "The scene relates to enough and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Too and enough»."
@@ -20916,7 +21016,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from too and enough."
+          "The material focuses on too and enough."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Too and enough»."
@@ -21174,8 +21274,9 @@ const CURRICULUM = [
         "prompt": "Is it ______ enough",
         "answer": "warm",
         "altAnswers": [
+          "warm",
           "Warm",
-          "warm"
+          "WARM"
         ],
         "hint": "Подсказка: тема «Too and enough»."
       },
@@ -21185,6 +21286,7 @@ const CURRICULUM = [
         "answer": "bag",
         "altAnswers": [
           "Bag",
+          "BAG",
           "bag"
         ],
         "hint": "Подсказка: тема «Too and enough»."
@@ -21194,6 +21296,7 @@ const CURRICULUM = [
         "prompt": "He is ______ enough",
         "answer": "old",
         "altAnswers": [
+          "OLD",
           "old",
           "Old"
         ],
@@ -21216,19 +21319,19 @@ const CURRICULUM = [
       {
         "question": "What is «too»?",
         "options": [
-          "достаточно",
-          "слабый",
+          "молодой",
           "слишком",
-          "большой"
+          "быстрый",
+          "маленький"
         ],
         "answer": "слишком"
       },
       {
         "question": "What is «enough»?",
         "options": [
-          "слишком",
-          "сильный",
+          "большой",
           "достаточно",
+          "медленный",
           "молодой"
         ],
         "answer": "достаточно"
@@ -21236,29 +21339,29 @@ const CURRICULUM = [
       {
         "question": "What is «big»?",
         "options": [
-          "слишком",
           "быстрый",
-          "большой",
-          "сильный"
+          "слабый",
+          "достаточно",
+          "большой"
         ],
         "answer": "большой"
       },
       {
         "question": "What is «small»?",
         "options": [
+          "слишком",
+          "сильный",
           "маленький",
-          "достаточно",
-          "слабый",
-          "медленный"
+          "старый"
         ],
         "answer": "маленький"
       },
       {
         "question": "What is «fast»?",
         "options": [
-          "слишком",
+          "старый",
+          "достаточно",
           "быстрый",
-          "сильный",
           "слабый"
         ],
         "answer": "быстрый"
@@ -21570,7 +21673,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "It is sunny and warm in the scene."
+          "The weather changes from cloudy to bright."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «First conditional»."
@@ -21596,7 +21699,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from first conditional."
+          "The scene relates to will and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «First conditional»."
@@ -21622,7 +21725,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "He learns an important lesson about family."
+          "The event changes how the characters feel."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «First conditional»."
@@ -21648,7 +21751,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on first conditional."
+          "The passage uses vocabulary about probably."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «First conditional»."
@@ -21674,7 +21777,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on first conditional."
+          "Characters discuss first conditional in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «First conditional»."
@@ -21925,6 +22028,7 @@ const CURRICULUM = [
         "answer": "Unless",
         "altAnswers": [
           "unless",
+          "UNLESS",
           "Unless"
         ],
         "hint": "Подсказка: тема «First conditional»."
@@ -21934,8 +22038,9 @@ const CURRICULUM = [
         "prompt": "If he ______ he will pass",
         "answer": "studies",
         "altAnswers": [
-          "Studies",
-          "studies"
+          "STUDIES",
+          "studies",
+          "Studies"
         ],
         "hint": "Подсказка: тема «First conditional»."
       },
@@ -21944,6 +22049,7 @@ const CURRICULUM = [
         "prompt": "If it rains, I will ______ home",
         "answer": "stay",
         "altAnswers": [
+          "STAY",
           "Stay",
           "stay"
         ],
@@ -21966,30 +22072,30 @@ const CURRICULUM = [
       {
         "question": "What is «if»?",
         "options": [
-          "провалить",
           "если не",
           "происходить",
-          "если"
+          "если",
+          "вероятно"
         ],
         "answer": "если"
       },
       {
         "question": "What is «will»?",
         "options": [
-          "буду (future)",
-          "происходить",
-          "преуспеть",
-          "если"
+          "если не",
+          "провалить",
+          "возможный",
+          "буду (future)"
         ],
         "answer": "буду (future)"
       },
       {
         "question": "What is «unless»?",
         "options": [
+          "буду (future)",
           "вероятно",
           "если не",
-          "преуспеть",
-          "опоздать, пропустить"
+          "если"
         ],
         "answer": "если не"
       },
@@ -21997,19 +22103,19 @@ const CURRICULUM = [
         "question": "What is «probably»?",
         "options": [
           "опоздать, пропустить",
-          "вероятно",
           "если",
-          "прибывать"
+          "буду (future)",
+          "вероятно"
         ],
         "answer": "вероятно"
       },
       {
         "question": "What is «possible»?",
         "options": [
+          "если не",
+          "провалить",
           "возможный",
-          "вероятно",
-          "если",
-          "прибывать"
+          "опоздать, пропустить"
         ],
         "answer": "возможный"
       },
@@ -22315,7 +22421,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The main character faces a difficult choice."
+          "He learns an important lesson about family."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Used to»."
@@ -22341,7 +22447,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The action happens at home and at school."
+          "The scene is set in London."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Used to»."
@@ -22367,7 +22473,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "He learns an important lesson about family."
+          "They solve the problem together at the end."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Used to»."
@@ -22419,7 +22525,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about past."
+          "The listening clip explains ideas from used to."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Used to»."
@@ -22669,6 +22775,7 @@ const CURRICULUM = [
         "prompt": "She used to have ______ hair",
         "answer": "long",
         "altAnswers": [
+          "LONG",
           "Long",
           "long"
         ],
@@ -22679,6 +22786,7 @@ const CURRICULUM = [
         "prompt": "We used to be ______",
         "answer": "neighbours",
         "altAnswers": [
+          "NEIGHBOURS",
           "Neighbours",
           "neighbours"
         ],
@@ -22689,8 +22797,9 @@ const CURRICULUM = [
         "prompt": "He used to be ______",
         "answer": "shy",
         "altAnswers": [
-          "shy",
-          "Shy"
+          "Shy",
+          "SHY",
+          "shy"
         ],
         "hint": "Подсказка: тема «Used to»."
       }
@@ -22711,50 +22820,50 @@ const CURRICULUM = [
       {
         "question": "What is «used to»?",
         "options": [
-          "сейчас",
-          "помнить",
+          "вырастать",
           "раньше (привычка)",
-          "детство"
+          "изменение",
+          "прошлое"
         ],
         "answer": "раньше (привычка)"
       },
       {
         "question": "What is «childhood»?",
         "options": [
+          "прошлое",
           "детство",
           "раньше (привычка)",
-          "привычка",
-          "сейчас"
+          "изменение"
         ],
         "answer": "детство"
       },
       {
         "question": "What is «habit»?",
         "options": [
-          "изменение",
           "детство",
+          "вырастать",
           "привычка",
-          "сейчас"
+          "помнить"
         ],
         "answer": "привычка"
       },
       {
         "question": "What is «past»?",
         "options": [
+          "сейчас",
           "вырастать",
           "прошлое",
-          "переезжать",
-          "сейчас"
+          "забывать"
         ],
         "answer": "прошлое"
       },
       {
         "question": "What is «now»?",
         "options": [
-          "переезжать",
-          "сейчас",
-          "прошлое",
-          "детство"
+          "привычка",
+          "детство",
+          "забывать",
+          "сейчас"
         ],
         "answer": "сейчас"
       },
@@ -23065,7 +23174,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The main character is a young student."
+          "The oldest child is sixteen years old."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Reflexive pronouns»."
@@ -23091,7 +23200,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to yourself and daily life."
+          "The passage uses vocabulary about herself."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Reflexive pronouns»."
@@ -23117,7 +23226,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "He learns an important lesson about family."
+          "They solve the problem together at the end."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Reflexive pronouns»."
@@ -23143,7 +23252,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss reflexive pronouns in simple English."
+          "The passage uses vocabulary about herself."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Reflexive pronouns»."
@@ -23169,7 +23278,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to yourself and daily life."
+          "The material focuses on reflexive pronouns."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Reflexive pronouns»."
@@ -23415,8 +23524,9 @@ const CURRICULUM = [
         "prompt": "They ______ each other",
         "answer": "help",
         "altAnswers": [
-          "Help",
-          "help"
+          "help",
+          "HELP",
+          "Help"
         ],
         "hint": "Подсказка: тема «Reflexive pronouns»."
       },
@@ -23426,7 +23536,8 @@ const CURRICULUM = [
         "answer": "hurt",
         "altAnswers": [
           "Hurt",
-          "hurt"
+          "hurt",
+          "HURT"
         ],
         "hint": "Подсказка: тема «Reflexive pronouns»."
       },
@@ -23435,8 +23546,9 @@ const CURRICULUM = [
         "prompt": "She ______ at herself in the mirror",
         "answer": "looked",
         "altAnswers": [
-          "looked",
-          "Looked"
+          "Looked",
+          "LOOKED",
+          "looked"
         ],
         "hint": "Подсказка: тема «Reflexive pronouns»."
       }
@@ -23457,49 +23569,50 @@ const CURRICULUM = [
       {
         "question": "What is «myself»?",
         "options": [
-          "друг друга",
+          "сам(а)",
           "один",
-          "сам(и)",
-          "сам(а)"
+          "само",
+          "сам"
         ],
         "answer": "сам(а)"
       },
       {
         "question": "What is «yourself»?",
         "options": [
+          "сам",
           "сам(и)",
-          "сами",
-          "самостоятельно",
-          "сам"
+          "один",
+          "друг друга"
         ],
         "answer": "сам(и)"
       },
       {
         "question": "What is «himself»?",
         "options": [
+          "сам",
           "сами",
-          "сама",
-          "сам(а)",
-          "сам"
+          "друг друга",
+          "сама"
         ],
         "answer": "сам"
       },
       {
         "question": "What is «herself»?",
         "options": [
-          "сам",
-          "друг друга",
+          "самостоятельно",
           "сама",
-          "сами"
+          "друг друга",
+          "сам(и)"
         ],
         "answer": "сама"
       },
       {
         "question": "What is «itself»?",
         "options": [
-          "сам(а)",
           "само",
-          "сами"
+          "самостоятельно",
+          "сам(а)",
+          "сам(и)"
         ],
         "answer": "само"
       },
@@ -23818,7 +23931,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about check out."
+          "The listening clip explains ideas from travel and hotels."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Travel and hotels»."
@@ -23896,7 +24009,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They live in the city centre."
+          "The story takes place in a small town."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Travel and hotels»."
@@ -24160,8 +24273,9 @@ const CURRICULUM = [
         "prompt": "______ time is checkout",
         "answer": "What",
         "altAnswers": [
-          "what",
-          "What"
+          "WHAT",
+          "What",
+          "what"
         ],
         "hint": "Подсказка: тема «Travel and hotels»."
       },
@@ -24170,8 +24284,9 @@ const CURRICULUM = [
         "prompt": "______ is the reception",
         "answer": "Where",
         "altAnswers": [
-          "Where",
-          "where"
+          "WHERE",
+          "where",
+          "Where"
         ],
         "hint": "Подсказка: тема «Travel and hotels»."
       },
@@ -24180,6 +24295,7 @@ const CURRICULUM = [
         "prompt": "A ______ room, please",
         "answer": "double",
         "altAnswers": [
+          "DOUBLE",
           "Double",
           "double"
         ],
@@ -24202,48 +24318,48 @@ const CURRICULUM = [
       {
         "question": "What is «reservation»?",
         "options": [
-          "регистрироваться",
-          "бронь",
+          "выезжать",
           "бронирование",
-          "номер"
+          "ресепшен",
+          "рейс"
         ],
         "answer": "бронирование"
       },
       {
         "question": "What is «booking»?",
         "options": [
-          "ресепшен",
-          "бронирование",
-          "бронь",
-          "паспорт"
+          "одноместный",
+          "регистрироваться",
+          "багаж",
+          "бронь"
         ],
         "answer": "бронь"
       },
       {
         "question": "What is «check in»?",
         "options": [
-          "выезжать",
-          "ресепшен",
           "регистрироваться",
-          "одноместный"
+          "ресепшен",
+          "одноместный",
+          "номер"
         ],
         "answer": "регистрироваться"
       },
       {
         "question": "What is «check out»?",
         "options": [
-          "номер",
           "выезжать",
-          "багаж",
-          "паспорт"
+          "ресепшен",
+          "рейс",
+          "регистрироваться"
         ],
         "answer": "выезжать"
       },
       {
         "question": "What is «room»?",
         "options": [
+          "ресепшен",
           "багаж",
-          "бронирование",
           "выезжать",
           "номер"
         ],
@@ -24679,7 +24795,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to permission and daily life."
+          "The material focuses on can, could, may, must, have to."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Can, could, may, must, have to»."
@@ -24751,7 +24867,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The main character faces a difficult choice."
+          "They solve the problem together at the end."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Can, could, may, must, have to»."
@@ -24928,8 +25044,9 @@ const CURRICULUM = [
         "prompt": "Can you ______ me",
         "answer": "help",
         "altAnswers": [
-          "Help",
-          "help"
+          "help",
+          "HELP",
+          "Help"
         ],
         "hint": "Подсказка: тема «Can, could, may, must, have to»."
       },
@@ -24938,6 +25055,7 @@ const CURRICULUM = [
         "prompt": "You ______ be tired",
         "answer": "must",
         "altAnswers": [
+          "MUST",
           "Must",
           "must"
         ],
@@ -24948,8 +25066,9 @@ const CURRICULUM = [
         "prompt": "I have to ______ now",
         "answer": "leave",
         "altAnswers": [
+          "Leave",
           "leave",
-          "Leave"
+          "LEAVE"
         ],
         "hint": "Подсказка: тема «Can, could, may, must, have to»."
       },
@@ -24958,8 +25077,9 @@ const CURRICULUM = [
         "prompt": "______ I sit here",
         "answer": "May",
         "altAnswers": [
-          "May",
-          "may"
+          "MAY",
+          "may",
+          "May"
         ],
         "hint": "Подсказка: тема «Can, could, may, must, have to»."
       }
@@ -24981,18 +25101,18 @@ const CURRICULUM = [
         "question": "What is «ability»?",
         "options": [
           "способность",
+          "долг",
           "правило",
-          "разрешено",
-          "обязанность"
+          "необходимо"
         ],
         "answer": "способность"
       },
       {
         "question": "What is «permission»?",
         "options": [
-          "необходимо",
-          "обязанность",
           "способность",
+          "способный",
+          "обязанность",
           "разрешение"
         ],
         "answer": "разрешение"
@@ -25000,20 +25120,20 @@ const CURRICULUM = [
       {
         "question": "What is «obligation»?",
         "options": [
-          "разрешено",
+          "способный",
+          "правило",
           "обязанность",
-          "разрешение",
-          "долг"
+          "разрешение"
         ],
         "answer": "обязанность"
       },
       {
         "question": "What is «allowed»?",
         "options": [
+          "долг",
           "разрешено",
-          "способность",
-          "запрещено",
-          "правило"
+          "требуется",
+          "обязанность"
         ],
         "answer": "разрешено"
       },
@@ -25021,9 +25141,9 @@ const CURRICULUM = [
         "question": "What is «required»?",
         "options": [
           "требуется",
-          "способность",
           "долг",
-          "запрещено"
+          "способность",
+          "необходимо"
         ],
         "answer": "требуется"
       },
@@ -25448,7 +25568,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "She advises him to drink more water."
+          "You should see a specialist about that."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Should, ought to, must, might, could»."
@@ -25474,7 +25594,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The action happens at home and at school."
+          "The scene is set in London."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Should, ought to, must, might, could»."
@@ -25500,7 +25620,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The doctor says he should rest more."
+          "You should see a specialist about that."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Should, ought to, must, might, could»."
@@ -25526,7 +25646,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "People use smartphones for work and study."
+          "They discuss useful apps for learning English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Should, ought to, must, might, could»."
@@ -25552,7 +25672,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on should, ought to, must, might, could."
+          "The passage uses vocabulary about probably."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Should, ought to, must, might, could»."
@@ -25707,8 +25827,9 @@ const CURRICULUM = [
         "prompt": "You should ______ more",
         "answer": "rest",
         "altAnswers": [
-          "rest",
-          "Rest"
+          "REST",
+          "Rest",
+          "rest"
         ],
         "hint": "Подсказка: тема «Should, ought to, must, might, could»."
       },
@@ -25717,8 +25838,9 @@ const CURRICULUM = [
         "prompt": "He must be ______",
         "answer": "joking",
         "altAnswers": [
-          "Joking",
-          "joking"
+          "joking",
+          "JOKING",
+          "Joking"
         ],
         "hint": "Подсказка: тема «Should, ought to, must, might, could»."
       },
@@ -25728,7 +25850,8 @@ const CURRICULUM = [
         "answer": "know",
         "altAnswers": [
           "know",
-          "Know"
+          "Know",
+          "KNOW"
         ],
         "hint": "Подсказка: тема «Should, ought to, must, might, could»."
       },
@@ -25737,8 +25860,9 @@ const CURRICULUM = [
         "prompt": "You should have ______",
         "answer": "called",
         "altAnswers": [
-          "Called",
-          "called"
+          "called",
+          "CALLED",
+          "Called"
         ],
         "hint": "Подсказка: тема «Should, ought to, must, might, could»."
       }
@@ -25759,39 +25883,39 @@ const CURRICULUM = [
       {
         "question": "What is «advice»?",
         "options": [
-          "критика",
-          "рекомендовать",
           "совет",
-          "логичный"
+          "уверенный",
+          "логический вывод",
+          "рекомендовать"
         ],
         "answer": "совет"
       },
       {
         "question": "What is «deduction»?",
         "options": [
-          "возможно",
+          "критика",
+          "вероятно",
           "логический вывод",
-          "уверенный",
-          "логичный"
+          "совет"
         ],
         "answer": "логический вывод"
       },
       {
         "question": "What is «criticism»?",
         "options": [
-          "рекомендовать",
           "критика",
+          "логический вывод",
           "возможность",
-          "сожаление"
+          "рекомендовать"
         ],
         "answer": "критика"
       },
       {
         "question": "What is «probably»?",
         "options": [
-          "сожаление",
           "возможность",
-          "критика",
+          "возможно",
+          "логический вывод",
           "вероятно"
         ],
         "answer": "вероятно"
@@ -25799,10 +25923,10 @@ const CURRICULUM = [
       {
         "question": "What is «perhaps»?",
         "options": [
-          "возможно",
-          "возможность",
+          "логический вывод",
           "рекомендовать",
-          "сожаление"
+          "возможно",
+          "возможность"
         ],
         "answer": "возможно"
       },
@@ -26242,7 +26366,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Technology helps them stay in touch abroad."
+          "They discuss useful apps for learning English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Реальные и нереальные условия»."
@@ -26268,7 +26392,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about consequence."
+          "The listening clip explains ideas from реальные и нереальные условия."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Реальные и нереальные условия»."
@@ -26294,7 +26418,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about consequence."
+          "The scene relates to hypothetical and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Реальные и нереальные условия»."
@@ -26320,7 +26444,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They might travel abroad in the next chapter."
+          "I think the problem will be solved soon."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Реальные и нереальные условия»."
@@ -26346,7 +26470,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss реальные и нереальные условия in simple English."
+          "The material focuses on реальные и нереальные условия."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Реальные и нереальные условия»."
@@ -26497,6 +26621,7 @@ const CURRICULUM = [
         "prompt": "If it rains, ______ stay home",
         "answer": "I'll",
         "altAnswers": [
+          "I'LL",
           "i'll",
           "I'll"
         ],
@@ -26507,8 +26632,9 @@ const CURRICULUM = [
         "prompt": "______ would you do",
         "answer": "What",
         "altAnswers": [
-          "what",
-          "What"
+          "WHAT",
+          "What",
+          "what"
         ],
         "hint": "Подсказка: тема «Реальные и нереальные условия»."
       },
@@ -26518,6 +26644,7 @@ const CURRICULUM = [
         "answer": "Unless",
         "altAnswers": [
           "unless",
+          "UNLESS",
           "Unless"
         ],
         "hint": "Подсказка: тема «Реальные и нереальные условия»."
@@ -26527,8 +26654,9 @@ const CURRICULUM = [
         "prompt": "I ______ travel more",
         "answer": "would",
         "altAnswers": [
-          "Would",
-          "would"
+          "would",
+          "WOULD",
+          "Would"
         ],
         "hint": "Подсказка: тема «Реальные и нереальные условия»."
       }
@@ -26549,10 +26677,10 @@ const CURRICULUM = [
       {
         "question": "What is «condition»?",
         "options": [
+          "представь",
           "условие",
-          "сценарий",
-          "если не",
-          "гипотетический"
+          "при условии что",
+          "маловероятный"
         ],
         "answer": "условие"
       },
@@ -26560,39 +26688,39 @@ const CURRICULUM = [
         "question": "What is «hypothetical»?",
         "options": [
           "гипотетический",
-          "сценарий",
+          "следствие",
           "реалистичный",
-          "если не"
+          "маловероятный"
         ],
         "answer": "гипотетический"
       },
       {
         "question": "What is «unlikely»?",
         "options": [
-          "сценарий",
+          "мечта",
+          "если не",
           "маловероятный",
-          "условие",
-          "следствие"
+          "условие"
         ],
         "answer": "маловероятный"
       },
       {
         "question": "What is «consequence»?",
         "options": [
-          "сценарий",
-          "при условии что",
+          "если не",
           "следствие",
-          "гипотетический"
+          "маловероятный",
+          "условие"
         ],
         "answer": "следствие"
       },
       {
         "question": "What is «unless»?",
         "options": [
-          "если не",
+          "сценарий",
           "при условии что",
-          "следствие",
-          "маловероятный"
+          "условие",
+          "если не"
         ],
         "answer": "если не"
       },
@@ -27104,7 +27232,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to past event and daily life."
+          "The listening clip explains ideas from прошлое и сожаление."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Прошлое и сожаление»."
@@ -27130,7 +27258,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to past event and daily life."
+          "The passage uses vocabulary about consequence."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Прошлое и сожаление»."
@@ -27281,8 +27409,9 @@ const CURRICULUM = [
         "prompt": "If I had ______",
         "answer": "known",
         "altAnswers": [
+          "known",
           "Known",
-          "known"
+          "KNOWN"
         ],
         "hint": "Подсказка: тема «Прошлое и сожаление»."
       },
@@ -27291,8 +27420,9 @@ const CURRICULUM = [
         "prompt": "I ______ have helped",
         "answer": "would",
         "altAnswers": [
-          "Would",
-          "would"
+          "would",
+          "WOULD",
+          "Would"
         ],
         "hint": "Подсказка: тема «Прошлое и сожаление»."
       },
@@ -27301,8 +27431,9 @@ const CURRICULUM = [
         "prompt": "She would have ______",
         "answer": "passed",
         "altAnswers": [
-          "Passed",
-          "passed"
+          "PASSED",
+          "passed",
+          "Passed"
         ],
         "hint": "Подсказка: тема «Прошлое и сожаление»."
       },
@@ -27311,8 +27442,9 @@ const CURRICULUM = [
         "prompt": "If I were ______ now",
         "answer": "richer",
         "altAnswers": [
-          "richer",
-          "Richer"
+          "RICHER",
+          "Richer",
+          "richer"
         ],
         "hint": "Подсказка: тема «Прошлое и сожаление»."
       }
@@ -27334,9 +27466,9 @@ const CURRICULUM = [
         "question": "What is «regret»?",
         "options": [
           "гипотеза",
-          "последствие",
           "сожаление",
-          "размышлять"
+          "размышлять",
+          "альтернатива"
         ],
         "answer": "сожаление"
       },
@@ -27344,9 +27476,9 @@ const CURRICULUM = [
         "question": "What is «past event»?",
         "options": [
           "прошлое событие",
-          "желание",
-          "сожаление",
-          "последствие"
+          "последствие",
+          "обстоятельство",
+          "размышлять"
         ],
         "answer": "прошлое событие"
       },
@@ -27354,29 +27486,29 @@ const CURRICULUM = [
         "question": "What is «alternative»?",
         "options": [
           "нереальный",
-          "последствие",
-          "альтернатива",
-          "сожаление"
+          "прошлое событие",
+          "размышлять",
+          "альтернатива"
         ],
         "answer": "альтернатива"
       },
       {
         "question": "What is «consequence»?",
         "options": [
-          "размышлять",
-          "альтернатива",
+          "гипотеза",
           "последствие",
-          "прошлое событие"
+          "нереальный",
+          "исход"
         ],
         "answer": "последствие"
       },
       {
         "question": "What is «hypothesis»?",
         "options": [
-          "сожаление",
+          "обстоятельство",
+          "гипотеза",
           "альтернатива",
-          "исход",
-          "гипотеза"
+          "размышлять"
         ],
         "answer": "гипотеза"
       },
@@ -27839,7 +27971,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on passive in different tenses."
+          "The listening clip explains ideas from passive in different tenses."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Passive in different tenses»."
@@ -27865,7 +27997,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on passive in different tenses."
+          "Characters discuss passive in different tenses in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Passive in different tenses»."
@@ -27891,7 +28023,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on passive in different tenses."
+          "The scene relates to agent and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Passive in different tenses»."
@@ -27917,7 +28049,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from passive in different tenses."
+          "The material focuses on passive in different tenses."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Passive in different tenses»."
@@ -28068,8 +28200,9 @@ const CURRICULUM = [
         "prompt": "______ is spoken here",
         "answer": "English",
         "altAnswers": [
-          "English",
-          "english"
+          "english",
+          "ENGLISH",
+          "English"
         ],
         "hint": "Подсказка: тема «Passive in different tenses»."
       },
@@ -28078,8 +28211,9 @@ const CURRICULUM = [
         "prompt": "Has it ______ done",
         "answer": "been",
         "altAnswers": [
+          "Been",
           "been",
-          "Been"
+          "BEEN"
         ],
         "hint": "Подсказка: тема «Passive in different tenses»."
       },
@@ -28088,8 +28222,9 @@ const CURRICULUM = [
         "prompt": "The ______ was sent",
         "answer": "letter",
         "altAnswers": [
-          "letter",
-          "Letter"
+          "Letter",
+          "LETTER",
+          "letter"
         ],
         "hint": "Подсказка: тема «Passive in different tenses»."
       },
@@ -28098,8 +28233,9 @@ const CURRICULUM = [
         "prompt": "It is ______ repaired",
         "answer": "being",
         "altAnswers": [
-          "Being",
-          "being"
+          "being",
+          "BEING",
+          "Being"
         ],
         "hint": "Подсказка: тема «Passive in different tenses»."
       }
@@ -28120,50 +28256,50 @@ const CURRICULUM = [
       {
         "question": "What is «passive»?",
         "options": [
+          "публиковать",
+          "кем/чем (агент)",
           "страдательный залог",
-          "формальный",
-          "производить",
-          "публиковать"
+          "объект"
         ],
         "answer": "страдательный залог"
       },
       {
         "question": "What is «agent»?",
         "options": [
-          "страдательный залог",
           "исполнитель действия",
-          "фокус, акцент",
-          "производить"
+          "открывать",
+          "публиковать",
+          "формальный"
         ],
         "answer": "исполнитель действия"
       },
       {
         "question": "What is «object»?",
         "options": [
-          "строить",
-          "фокус, акцент",
-          "производить",
-          "объект"
+          "кем/чем (агент)",
+          "объект",
+          "публиковать",
+          "формальный"
         ],
         "answer": "объект"
       },
       {
         "question": "What is «focus»?",
         "options": [
-          "производить",
           "открывать",
           "фокус, акцент",
-          "исполнитель действия"
+          "публиковать",
+          "производить"
         ],
         "answer": "фокус, акцент"
       },
       {
         "question": "What is «manufacture»?",
         "options": [
-          "производить",
           "открывать",
           "строить",
-          "фокус, акцент"
+          "производить",
+          "публиковать"
         ],
         "answer": "производить"
       },
@@ -28490,7 +28626,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "She discovers something unexpected in the story."
+          "The main character faces a difficult choice."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «He said that...»."
@@ -28516,7 +28652,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The event changes how the characters feel."
+          "He learns an important lesson about family."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «He said that...»."
@@ -28542,7 +28678,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to told and daily life."
+          "The passage uses vocabulary about explained."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «He said that...»."
@@ -28568,7 +28704,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "People use smartphones for work and study."
+          "Technology helps them stay in touch abroad."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «He said that...»."
@@ -28594,7 +28730,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "She discovers something unexpected in the story."
+          "He learns an important lesson about family."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «He said that...»."
@@ -28851,8 +28987,9 @@ const CURRICULUM = [
         "prompt": "She ______ me to wait",
         "answer": "told",
         "altAnswers": [
-          "told",
-          "Told"
+          "TOLD",
+          "Told",
+          "told"
         ],
         "hint": "Подсказка: тема «He said that...»."
       },
@@ -28861,8 +28998,9 @@ const CURRICULUM = [
         "prompt": "They ______ if I knew",
         "answer": "asked",
         "altAnswers": [
-          "Asked",
-          "asked"
+          "ASKED",
+          "asked",
+          "Asked"
         ],
         "hint": "Подсказка: тема «He said that...»."
       },
@@ -28872,6 +29010,7 @@ const CURRICULUM = [
         "answer": "explained",
         "altAnswers": [
           "explained",
+          "EXPLAINED",
           "Explained"
         ],
         "hint": "Подсказка: тема «He said that...»."
@@ -28881,8 +29020,9 @@ const CURRICULUM = [
         "prompt": "She ______ she would come",
         "answer": "promised",
         "altAnswers": [
-          "Promised",
-          "promised"
+          "promised",
+          "PROMISED",
+          "Promised"
         ],
         "hint": "Подсказка: тема «He said that...»."
       }
@@ -28903,10 +29043,10 @@ const CURRICULUM = [
       {
         "question": "What is «said»?",
         "options": [
-          "предложил",
-          "сказал",
+          "утверждал",
           "пообещал",
-          "отказался"
+          "сказал",
+          "предупредил"
         ],
         "answer": "сказал"
       },
@@ -28914,39 +29054,39 @@ const CURRICULUM = [
         "question": "What is «told»?",
         "options": [
           "сказал (кому-то)",
-          "признал",
-          "спросил",
-          "предложил"
+          "предложил",
+          "сказал",
+          "предупредил"
         ],
         "answer": "сказал (кому-то)"
       },
       {
         "question": "What is «asked»?",
         "options": [
-          "сказал",
           "спросил",
-          "сказал (кому-то)",
-          "объяснил"
+          "объяснил",
+          "предупредил",
+          "признал"
         ],
         "answer": "спросил"
       },
       {
         "question": "What is «explained»?",
         "options": [
-          "отказался",
-          "утверждал",
+          "предложил",
+          "спросил",
           "объяснил",
-          "сказал (кому-то)"
+          "пообещал"
         ],
         "answer": "объяснил"
       },
       {
         "question": "What is «claimed»?",
         "options": [
-          "пообещал",
           "утверждал",
-          "спросил",
-          "сказал"
+          "пообещал",
+          "отказался",
+          "предложил"
         ],
         "answer": "утверждал"
       },
@@ -29279,7 +29419,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Her brother works as a teacher."
+          "The narrator introduces his parents first."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «who, which, that, where»."
@@ -29305,7 +29445,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to which and daily life."
+          "Characters discuss who, which, that, where in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «who, which, that, where»."
@@ -29331,7 +29471,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Most events occur in an English-speaking country."
+          "The scene is set in London."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «who, which, that, where»."
@@ -29357,7 +29497,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The oldest child is sixteen years old."
+          "The main character is a young student."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «who, which, that, where»."
@@ -29640,8 +29780,9 @@ const CURRICULUM = [
         "prompt": "The ______ which I read",
         "answer": "book",
         "altAnswers": [
-          "book",
-          "Book"
+          "BOOK",
+          "Book",
+          "book"
         ],
         "hint": "Подсказка: тема «who, which, that, where»."
       },
@@ -29651,6 +29792,7 @@ const CURRICULUM = [
         "answer": "town",
         "altAnswers": [
           "Town",
+          "TOWN",
           "town"
         ],
         "hint": "Подсказка: тема «who, which, that, where»."
@@ -29660,8 +29802,9 @@ const CURRICULUM = [
         "prompt": "whose ______",
         "answer": "car",
         "altAnswers": [
-          "car",
-          "Car"
+          "Car",
+          "CAR",
+          "car"
         ],
         "hint": "Подсказка: тема «who, which, that, where»."
       },
@@ -29671,6 +29814,7 @@ const CURRICULUM = [
         "answer": "sister",
         "altAnswers": [
           "sister",
+          "SISTER",
           "Sister"
         ],
         "hint": "Подсказка: тема «who, which, that, where»."
@@ -29692,19 +29836,19 @@ const CURRICULUM = [
       {
         "question": "What is «who»?",
         "options": [
-          "относительный",
-          "который (люди)",
           "опускать",
-          "придаточное"
+          "относительный",
+          "который (вещи)",
+          "который (люди)"
         ],
         "answer": "который (люди)"
       },
       {
         "question": "What is «which»?",
         "options": [
-          "опускать",
-          "относительный",
+          "придаточное",
           "который (вещи)",
+          "определяющий",
           "неопределяющий"
         ],
         "answer": "который (вещи)"
@@ -29712,9 +29856,9 @@ const CURRICULUM = [
       {
         "question": "What is «that»?",
         "options": [
-          "где",
-          "который (универс.)",
+          "относительный",
           "который (люди)",
+          "который (универс.)",
           "опускать"
         ],
         "answer": "который (универс.)"
@@ -29722,20 +29866,20 @@ const CURRICULUM = [
       {
         "question": "What is «where»?",
         "options": [
-          "неопределяющий",
           "где",
-          "опускать",
-          "который (вещи)"
+          "определяющий",
+          "неопределяющий",
+          "который (люди)"
         ],
         "answer": "где"
       },
       {
         "question": "What is «whose»?",
         "options": [
-          "который (люди)",
           "который (вещи)",
           "придаточное",
-          "чей"
+          "чей",
+          "который (универс.)"
         ],
         "answer": "чей"
       },
@@ -30071,7 +30215,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about turn off."
+          "Characters discuss get up, look for, turn on in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «get up, look for, turn on»."
@@ -30097,7 +30241,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about turn off."
+          "The scene relates to look for and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «get up, look for, turn on»."
@@ -30123,7 +30267,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They describe their daily routine clearly."
+          "The brother studies at university."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «get up, look for, turn on»."
@@ -30149,7 +30293,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on get up, look for, turn on."
+          "The listening clip explains ideas from get up, look for, turn on."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «get up, look for, turn on»."
@@ -30175,7 +30319,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss get up, look for, turn on in simple English."
+          "The material focuses on get up, look for, turn on."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «get up, look for, turn on»."
@@ -30430,7 +30574,8 @@ const CURRICULUM = [
         "answer": "get",
         "altAnswers": [
           "Get",
-          "get"
+          "get",
+          "GET"
         ],
         "hint": "Подсказка: тема «get up, look for, turn on»."
       },
@@ -30440,6 +30585,7 @@ const CURRICULUM = [
         "answer": "look",
         "altAnswers": [
           "Look",
+          "LOOK",
           "look"
         ],
         "hint": "Подсказка: тема «get up, look for, turn on»."
@@ -30450,6 +30596,7 @@ const CURRICULUM = [
         "answer": "turn",
         "altAnswers": [
           "Turn",
+          "TURN",
           "turn"
         ],
         "hint": "Подсказка: тема «get up, look for, turn on»."
@@ -30459,8 +30606,9 @@ const CURRICULUM = [
         "prompt": "______ up",
         "answer": "give",
         "altAnswers": [
+          "Give",
           "give",
-          "Give"
+          "GIVE"
         ],
         "hint": "Подсказка: тема «get up, look for, turn on»."
       }
@@ -30481,9 +30629,9 @@ const CURRICULUM = [
       {
         "question": "What is «get up»?",
         "options": [
+          "снимать",
           "вставать",
-          "включать",
-          "сдаваться",
+          "выключать",
           "надевать"
         ],
         "answer": "вставать"
@@ -30491,40 +30639,40 @@ const CURRICULUM = [
       {
         "question": "What is «look for»?",
         "options": [
-          "искать",
           "подбирать, забирать",
-          "надевать",
-          "вставать"
+          "выключать",
+          "сдаваться",
+          "искать"
         ],
         "answer": "искать"
       },
       {
         "question": "What is «turn on»?",
         "options": [
-          "вставать",
-          "надевать",
+          "просыпаться",
+          "включать",
           "выяснять",
-          "включать"
+          "снимать"
         ],
         "answer": "включать"
       },
       {
         "question": "What is «turn off»?",
         "options": [
-          "надевать",
-          "выключать",
-          "сдаваться",
-          "искать"
+          "просыпаться",
+          "снимать",
+          "искать",
+          "выключать"
         ],
         "answer": "выключать"
       },
       {
         "question": "What is «give up»?",
         "options": [
-          "искать",
           "сдаваться",
-          "выключать",
-          "снимать"
+          "вставать",
+          "надевать",
+          "выключать"
         ],
         "answer": "сдаваться"
       },
@@ -30845,7 +30993,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to could and daily life."
+          "Characters discuss second conditional in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Second conditional»."
@@ -30871,7 +31019,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss second conditional in simple English."
+          "The scene relates to could and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Second conditional»."
@@ -30897,7 +31045,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about imagine."
+          "The listening clip explains ideas from second conditional."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Second conditional»."
@@ -30923,7 +31071,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss second conditional in simple English."
+          "The listening clip explains ideas from second conditional."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Second conditional»."
@@ -30949,7 +31097,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "People use smartphones for work and study."
+          "The character spends too much time online."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Second conditional»."
@@ -31207,8 +31355,9 @@ const CURRICULUM = [
         "prompt": "If they ______ they would help",
         "answer": "knew",
         "altAnswers": [
-          "knew",
-          "Knew"
+          "Knew",
+          "KNEW",
+          "knew"
         ],
         "hint": "Подсказка: тема «Second conditional»."
       },
@@ -31217,8 +31366,9 @@ const CURRICULUM = [
         "prompt": "I ______ help if I could",
         "answer": "would",
         "altAnswers": [
-          "Would",
-          "would"
+          "would",
+          "WOULD",
+          "Would"
         ],
         "hint": "Подсказка: тема «Second conditional»."
       },
@@ -31227,8 +31377,9 @@ const CURRICULUM = [
         "prompt": "If I had ______ I would buy a car",
         "answer": "money",
         "altAnswers": [
-          "Money",
-          "money"
+          "MONEY",
+          "money",
+          "Money"
         ],
         "hint": "Подсказка: тема «Second conditional»."
       }
@@ -31249,10 +31400,10 @@ const CURRICULUM = [
       {
         "question": "What is «would»?",
         "options": [
-          "мог бы",
-          "лотерея",
-          "представлять",
-          "бы (условное)"
+          "бы (условное)",
+          "менять",
+          "за границей",
+          "лотерея"
         ],
         "answer": "бы (условное)"
       },
@@ -31260,39 +31411,39 @@ const CURRICULUM = [
         "question": "What is «could»?",
         "options": [
           "мог бы",
-          "бы (условное)",
-          "гипотетический",
-          "мечта"
+          "мечта",
+          "за границей",
+          "позволять себе"
         ],
         "answer": "мог бы"
       },
       {
         "question": "What is «unlikely»?",
         "options": [
-          "гипотетический",
-          "маловероятный",
+          "представлять",
+          "мечта",
           "мог бы",
-          "бы (условное)"
+          "маловероятный"
         ],
         "answer": "маловероятный"
       },
       {
         "question": "What is «imagine»?",
         "options": [
-          "позволять себе",
+          "гипотетический",
           "представлять",
-          "лотерея",
-          "мечта"
+          "мог бы",
+          "бы (условное)"
         ],
         "answer": "представлять"
       },
       {
         "question": "What is «lottery»?",
         "options": [
-          "менять",
-          "мечта",
+          "гипотетический",
           "лотерея",
-          "мог бы"
+          "мечта",
+          "представлять"
         ],
         "answer": "лотерея"
       },
@@ -31613,7 +31764,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about opportunity."
+          "The scene relates to otherwise and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Third conditional»."
@@ -31639,7 +31790,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on third conditional."
+          "The passage uses vocabulary about opportunity."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Third conditional»."
@@ -31665,7 +31816,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The character spends too much time online."
+          "Technology helps them stay in touch abroad."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Third conditional»."
@@ -31975,8 +32126,9 @@ const CURRICULUM = [
         "prompt": "______ would you have done",
         "answer": "What",
         "altAnswers": [
-          "what",
-          "What"
+          "WHAT",
+          "What",
+          "what"
         ],
         "hint": "Подсказка: тема «Third conditional»."
       },
@@ -31985,6 +32137,7 @@ const CURRICULUM = [
         "prompt": "He ______ have fallen if he had been careful",
         "answer": "wouldn't",
         "altAnswers": [
+          "WOULDN'T",
           "wouldn't",
           "Wouldn't"
         ],
@@ -31995,8 +32148,9 @@ const CURRICULUM = [
         "prompt": "If I had ______ I would have called",
         "answer": "known",
         "altAnswers": [
+          "known",
           "Known",
-          "known"
+          "KNOWN"
         ],
         "hint": "Подсказка: тема «Third conditional»."
       }
@@ -32017,50 +32171,50 @@ const CURRICULUM = [
       {
         "question": "What is «regret»?",
         "options": [
-          "к сожалению",
-          "результат",
+          "понять",
           "сожаление",
-          "по-другому"
+          "к счастью",
+          "к сожалению"
         ],
         "answer": "сожаление"
       },
       {
         "question": "What is «otherwise»?",
         "options": [
-          "возможность",
           "иначе",
-          "по-другому",
-          "к счастью"
+          "к счастью",
+          "результат",
+          "к сожалению"
         ],
         "answer": "иначе"
       },
       {
         "question": "What is «missed»?",
         "options": [
-          "возможность",
           "пропущенный",
-          "по-другому",
-          "понять"
+          "избежать",
+          "сожаление",
+          "к счастью"
         ],
         "answer": "пропущенный"
       },
       {
         "question": "What is «opportunity»?",
         "options": [
+          "к сожалению",
+          "возможность",
           "пропущенный",
-          "иначе",
-          "избежать",
-          "возможность"
+          "понять"
         ],
         "answer": "возможность"
       },
       {
         "question": "What is «luckily»?",
         "options": [
-          "результат",
           "к счастью",
-          "по-другому",
-          "иначе"
+          "избежать",
+          "иначе",
+          "пропущенный"
         ],
         "answer": "к счастью"
       },
@@ -32390,7 +32544,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They describe their daily routine clearly."
+          "She helps her family after school."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Wish and if only»."
@@ -32416,7 +32570,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss wish and if only in simple English."
+          "The passage uses vocabulary about present."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Wish and if only»."
@@ -32468,7 +32622,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss wish and if only in simple English."
+          "The scene relates to if only and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Wish and if only»."
@@ -32494,7 +32648,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to if only and daily life."
+          "Characters discuss wish and if only in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Wish and if only»."
@@ -32744,6 +32898,7 @@ const CURRICULUM = [
         "prompt": "I ______ it would stop",
         "answer": "wish",
         "altAnswers": [
+          "WISH",
           "wish",
           "Wish"
         ],
@@ -32754,8 +32909,9 @@ const CURRICULUM = [
         "prompt": "He ______ he hadn't made that mistake",
         "answer": "wishes",
         "altAnswers": [
-          "Wishes",
-          "wishes"
+          "WISHES",
+          "wishes",
+          "Wishes"
         ],
         "hint": "Подсказка: тема «Wish and if only»."
       },
@@ -32765,6 +32921,7 @@ const CURRICULUM = [
         "answer": "could",
         "altAnswers": [
           "Could",
+          "COULD",
           "could"
         ],
         "hint": "Подсказка: тема «Wish and if only»."
@@ -32787,18 +32944,18 @@ const CURRICULUM = [
         "question": "What is «wish»?",
         "options": [
           "реальность",
-          "раньше",
+          "удача",
           "желать",
-          "если бы только"
+          "раньше"
         ],
         "answer": "желать"
       },
       {
         "question": "What is «if only»?",
         "options": [
-          "удача",
+          "желать",
           "если бы только",
-          "реальность",
+          "прошлое",
           "раньше"
         ],
         "answer": "если бы только"
@@ -32806,30 +32963,30 @@ const CURRICULUM = [
       {
         "question": "What is «regret»?",
         "options": [
-          "желать",
+          "если бы только",
+          "удача",
           "сожалеть",
-          "жаловаться",
-          "реальность"
+          "изменить"
         ],
         "answer": "сожалеть"
       },
       {
         "question": "What is «present»?",
         "options": [
+          "реальность",
           "настоящее",
-          "желать",
-          "изменить",
-          "реальность"
+          "жаловаться",
+          "прошлое"
         ],
         "answer": "настоящее"
       },
       {
         "question": "What is «past»?",
         "options": [
-          "изменить",
-          "прошлое",
-          "удача",
-          "желать"
+          "если бы только",
+          "раньше",
+          "настоящее",
+          "прошлое"
         ],
         "answer": "прошлое"
       },
@@ -33138,7 +33295,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on causative have/get."
+          "The passage uses vocabulary about service."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Causative have/get»."
@@ -33184,7 +33341,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on causative have/get."
+          "Characters discuss causative have/get in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Causative have/get»."
@@ -33210,7 +33367,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They live in the city centre."
+          "The story takes place in a small town."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Causative have/get»."
@@ -33236,7 +33393,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from causative have/get."
+          "The scene relates to get done and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Causative have/get»."
@@ -33494,8 +33651,9 @@ const CURRICULUM = [
         "prompt": "______ having the car serviced",
         "answer": "We're",
         "altAnswers": [
+          "we're",
           "We're",
-          "we're"
+          "WE'RE"
         ],
         "hint": "Подсказка: тема «Causative have/get»."
       },
@@ -33504,8 +33662,9 @@ const CURRICULUM = [
         "prompt": "He is ______ his suit delivered",
         "answer": "having",
         "altAnswers": [
-          "having",
-          "Having"
+          "HAVING",
+          "Having",
+          "having"
         ],
         "hint": "Подсказка: тема «Causative have/get»."
       },
@@ -33515,6 +33674,7 @@ const CURRICULUM = [
         "answer": "hair",
         "altAnswers": [
           "hair",
+          "HAIR",
           "Hair"
         ],
         "hint": "Подсказка: тема «Causative have/get»."
@@ -33536,50 +33696,50 @@ const CURRICULUM = [
       {
         "question": "What is «have done»?",
         "options": [
-          "услуга",
           "сделать (через кого-то)",
-          "сделать (разг.)",
-          "доставлять"
+          "услуга",
+          "чистить",
+          "чинить"
         ],
         "answer": "сделать (через кого-то)"
       },
       {
         "question": "What is «get done»?",
         "options": [
+          "ремонтировать",
           "красить",
-          "доставлять",
           "сделать (разг.)",
-          "стрижка"
+          "доставлять"
         ],
         "answer": "сделать (разг.)"
       },
       {
         "question": "What is «repair»?",
         "options": [
-          "устанавливать",
           "чинить",
-          "ремонтировать",
-          "сделать (разг.)"
+          "красить",
+          "стрижка",
+          "ремонтировать"
         ],
         "answer": "ремонтировать"
       },
       {
         "question": "What is «service»?",
         "options": [
+          "стрижка",
+          "красить",
           "услуга",
-          "устанавливать",
-          "доставлять",
-          "сделать (разг.)"
+          "устанавливать"
         ],
         "answer": "услуга"
       },
       {
         "question": "What is «haircut»?",
         "options": [
-          "сделать (через кого-то)",
           "стрижка",
-          "чинить",
-          "чистить"
+          "ремонтировать",
+          "сделать (через кого-то)",
+          "доставлять"
         ],
         "answer": "стрижка"
       },
@@ -33885,7 +34045,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on passive across tenses."
+          "The scene relates to been and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Passive across tenses»."
@@ -33937,7 +34097,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss passive across tenses in simple English."
+          "The listening clip explains ideas from passive across tenses."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Passive across tenses»."
@@ -33963,7 +34123,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about announced."
+          "The listening clip explains ideas from passive across tenses."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Passive across tenses»."
@@ -34247,8 +34407,9 @@ const CURRICULUM = [
         "prompt": "The ______ was cancelled",
         "answer": "meeting",
         "altAnswers": [
+          "Meeting",
           "meeting",
-          "Meeting"
+          "MEETING"
         ],
         "hint": "Подсказка: тема «Passive across tenses»."
       },
@@ -34257,8 +34418,9 @@ const CURRICULUM = [
         "prompt": "______ is spoken all over the world",
         "answer": "English",
         "altAnswers": [
-          "English",
-          "english"
+          "english",
+          "ENGLISH",
+          "English"
         ],
         "hint": "Подсказка: тема «Passive across tenses»."
       },
@@ -34267,8 +34429,9 @@ const CURRICULUM = [
         "prompt": "The ______ has been sent",
         "answer": "letter",
         "altAnswers": [
-          "letter",
-          "Letter"
+          "Letter",
+          "LETTER",
+          "letter"
         ],
         "hint": "Подсказка: тема «Passive across tenses»."
       }
@@ -34289,30 +34452,30 @@ const CURRICULUM = [
       {
         "question": "What is «being»?",
         "options": [
-          "been (завершённость)",
           "being (процесс)",
-          "обсуждаемый",
-          "выпущенный"
+          "задержанный",
+          "одобренный",
+          "объявленный"
         ],
         "answer": "being (процесс)"
       },
       {
         "question": "What is «been»?",
         "options": [
+          "выпущенный",
           "been (завершённость)",
-          "опубликованный",
-          "завершённый",
-          "одобренный"
+          "объявленный",
+          "опубликованный"
         ],
         "answer": "been (завершённость)"
       },
       {
         "question": "What is «published»?",
         "options": [
-          "опубликованный",
-          "завершённый",
           "being (процесс)",
-          "been (завершённость)"
+          "опубликованный",
+          "выпущенный",
+          "отменённый"
         ],
         "answer": "опубликованный"
       },
@@ -34320,8 +34483,8 @@ const CURRICULUM = [
         "question": "What is «announced»?",
         "options": [
           "одобренный",
+          "задержанный",
           "завершённый",
-          "отменённый",
           "объявленный"
         ],
         "answer": "объявленный"
@@ -34330,9 +34493,9 @@ const CURRICULUM = [
         "question": "What is «completed»?",
         "options": [
           "завершённый",
-          "одобренный",
           "being (процесс)",
-          "опубликованный"
+          "been (завершённость)",
+          "выпущенный"
         ],
         "answer": "завершённый"
       },
@@ -34639,7 +34802,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "He learns an important lesson about family."
+          "She discovers something unexpected in the story."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Narrative tenses»."
@@ -34665,7 +34828,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The character spends too much time online."
+          "People use smartphones for work and study."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Narrative tenses»."
@@ -34717,7 +34880,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on narrative tenses."
+          "The listening clip explains ideas from narrative tenses."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Narrative tenses»."
@@ -34997,8 +35160,9 @@ const CURRICULUM = [
         "prompt": "______ it was raining",
         "answer": "Meanwhile",
         "altAnswers": [
-          "Meanwhile",
-          "meanwhile"
+          "meanwhile",
+          "MEANWHILE",
+          "Meanwhile"
         ],
         "hint": "Подсказка: тема «Narrative tenses»."
       },
@@ -35007,8 +35171,9 @@ const CURRICULUM = [
         "prompt": "______ were you doing at eight",
         "answer": "What",
         "altAnswers": [
-          "what",
-          "What"
+          "WHAT",
+          "What",
+          "what"
         ],
         "hint": "Подсказка: тема «Narrative tenses»."
       },
@@ -35018,7 +35183,8 @@ const CURRICULUM = [
         "answer": "When",
         "altAnswers": [
           "When",
-          "when"
+          "when",
+          "WHEN"
         ],
         "hint": "Подсказка: тема «Narrative tenses»."
       }
@@ -35039,39 +35205,39 @@ const CURRICULUM = [
       {
         "question": "What is «narrative»?",
         "options": [
-          "уже",
-          "тем временем",
+          "после",
           "повествование",
-          "флешбэк"
+          "внезапно",
+          "к тому времени"
         ],
         "answer": "повествование"
       },
       {
         "question": "What is «flashback»?",
         "options": [
-          "после",
+          "последовательность",
+          "раньше",
           "флешбэк",
-          "фон",
-          "повествование"
+          "уже"
         ],
         "answer": "флешбэк"
       },
       {
         "question": "What is «background»?",
         "options": [
+          "тем временем",
+          "флешбэк",
           "раньше",
-          "фон",
-          "повествование",
-          "флешбэк"
+          "фон"
         ],
         "answer": "фон"
       },
       {
         "question": "What is «sequence»?",
         "options": [
-          "флешбэк",
-          "после",
           "внезапно",
+          "к тому времени",
+          "повествование",
           "последовательность"
         ],
         "answer": "последовательность"
@@ -35079,10 +35245,10 @@ const CURRICULUM = [
       {
         "question": "What is «suddenly»?",
         "options": [
-          "последовательность",
+          "внезапно",
           "после",
-          "фон",
-          "внезапно"
+          "флешбэк",
+          "тем временем"
         ],
         "answer": "внезапно"
       },
@@ -35394,7 +35560,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "His friend recommends joining a sports club."
+          "You should see a specialist about that."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Giving advice»."
@@ -35420,7 +35586,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from giving advice."
+          "Characters discuss giving advice in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Giving advice»."
@@ -35498,7 +35664,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to ought to and daily life."
+          "Characters discuss giving advice in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Giving advice»."
@@ -35756,8 +35922,9 @@ const CURRICULUM = [
         "prompt": "You ______ worry",
         "answer": "shouldn't",
         "altAnswers": [
-          "Shouldn't",
-          "shouldn't"
+          "SHOULDN'T",
+          "shouldn't",
+          "Shouldn't"
         ],
         "hint": "Подсказка: тема «Giving advice»."
       },
@@ -35766,8 +35933,9 @@ const CURRICULUM = [
         "prompt": "He had ______ be careful",
         "answer": "better",
         "altAnswers": [
+          "Better",
           "better",
-          "Better"
+          "BETTER"
         ],
         "hint": "Подсказка: тема «Giving advice»."
       },
@@ -35776,8 +35944,9 @@ const CURRICULUM = [
         "prompt": "You should go ______",
         "answer": "home",
         "altAnswers": [
+          "Home",
           "home",
-          "Home"
+          "HOME"
         ],
         "hint": "Подсказка: тема «Giving advice»."
       }
@@ -35798,20 +35967,20 @@ const CURRICULUM = [
       {
         "question": "What is «should»?",
         "options": [
-          "следует",
           "предупреждение",
-          "следовало бы",
-          "ответственный"
+          "здоровый",
+          "следует",
+          "следовало бы"
         ],
         "answer": "следует"
       },
       {
         "question": "What is «ought to»?",
         "options": [
-          "избегать",
+          "предлагать",
           "следовало бы",
           "следует",
-          "предлагать"
+          "ответственный"
         ],
         "answer": "следовало бы"
       },
@@ -35819,19 +35988,19 @@ const CURRICULUM = [
         "question": "What is «had better»?",
         "options": [
           "лучше бы",
-          "ответственный",
-          "следовало бы",
-          "рекомендовать"
+          "совет",
+          "рекомендовать",
+          "здоровый"
         ],
         "answer": "лучше бы"
       },
       {
         "question": "What is «advice»?",
         "options": [
-          "предупреждение",
           "совет",
-          "предлагать",
-          "следует"
+          "следовало бы",
+          "лучше бы",
+          "здоровый"
         ],
         "answer": "совет"
       },
@@ -35839,9 +36008,9 @@ const CURRICULUM = [
         "question": "What is «recommend»?",
         "options": [
           "ответственный",
-          "избегать",
+          "следует",
           "рекомендовать",
-          "совет"
+          "предлагать"
         ],
         "answer": "рекомендовать"
       },
@@ -36157,7 +36326,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from technology and digital life."
+          "The scene relates to app and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Technology and digital life»."
@@ -36193,7 +36362,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Social media affects how friends communicate."
+          "The character spends too much time online."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Technology and digital life»."
@@ -36219,7 +36388,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The character spends too much time online."
+          "People use smartphones for work and study."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Technology and digital life»."
@@ -36526,8 +36695,9 @@ const CURRICULUM = [
         "prompt": "______ has changed everything",
         "answer": "Technology",
         "altAnswers": [
-          "technology",
-          "Technology"
+          "Technology",
+          "TECHNOLOGY",
+          "technology"
         ],
         "hint": "Подсказка: тема «Technology and digital life»."
       },
@@ -36536,8 +36706,11 @@ const CURRICULUM = [
         "prompt": "______ forget your password",
         "answer": "Don't",
         "altAnswers": [
-          "don't",
-          "Don't"
+          "do not",
+          "dont",
+          "DON'T",
+          "Don't",
+          "don't"
         ],
         "hint": "Подсказка: тема «Technology and digital life»."
       },
@@ -36546,6 +36719,7 @@ const CURRICULUM = [
         "prompt": "I use my ______ every day",
         "answer": "laptop",
         "altAnswers": [
+          "LAPTOP",
           "laptop",
           "Laptop"
         ],
@@ -36568,50 +36742,50 @@ const CURRICULUM = [
       {
         "question": "What is «device»?",
         "options": [
-          "обновление",
-          "батарея",
+          "пароль",
+          "онлайн",
           "устройство",
-          "приложение"
+          "конфиденциальность"
         ],
         "answer": "устройство"
       },
       {
         "question": "What is «app»?",
         "options": [
-          "онлайн",
+          "устройство",
+          "пароль",
           "приложение",
-          "батарея",
-          "устройство"
+          "батарея"
         ],
         "answer": "приложение"
       },
       {
         "question": "What is «online»?",
         "options": [
-          "скачивать",
-          "конфиденциальность",
           "онлайн",
-          "уведомление"
+          "скачивать",
+          "устройство",
+          "конфиденциальность"
         ],
         "answer": "онлайн"
       },
       {
         "question": "What is «password»?",
         "options": [
-          "уведомление",
           "пароль",
           "устройство",
-          "батарея"
+          "уведомление",
+          "скачивать"
         ],
         "answer": "пароль"
       },
       {
         "question": "What is «update»?",
         "options": [
+          "онлайн",
           "обновление",
-          "приложение",
-          "батарея",
-          "пароль"
+          "пароль",
+          "устройство"
         ],
         "answer": "обновление"
       },
@@ -36991,7 +37165,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from prefixes & suffixes."
+          "The material focuses on prefixes & suffixes."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Prefixes & suffixes»."
@@ -37017,7 +37191,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from prefixes & suffixes."
+          "Characters discuss prefixes & suffixes in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Prefixes & suffixes»."
@@ -37296,8 +37470,9 @@ const CURRICULUM = [
         "prompt": "______",
         "answer": "responsibility",
         "altAnswers": [
-          "responsibility",
-          "Responsibility"
+          "RESPONSIBILITY",
+          "Responsibility",
+          "responsibility"
         ],
         "hint": "Подсказка: тема «Prefixes & suffixes»."
       },
@@ -37306,8 +37481,9 @@ const CURRICULUM = [
         "prompt": "______",
         "answer": "development",
         "altAnswers": [
-          "development",
-          "Development"
+          "Development",
+          "DEVELOPMENT",
+          "development"
         ],
         "hint": "Подсказка: тема «Prefixes & suffixes»."
       },
@@ -37317,6 +37493,7 @@ const CURRICULUM = [
         "answer": "unpredictable",
         "altAnswers": [
           "Unpredictable",
+          "UNPREDICTABLE",
           "unpredictable"
         ],
         "hint": "Подсказка: тема «Prefixes & suffixes»."
@@ -37326,8 +37503,9 @@ const CURRICULUM = [
         "prompt": "______",
         "answer": "achievement",
         "altAnswers": [
-          "Achievement",
-          "achievement"
+          "achievement",
+          "ACHIEVEMENT",
+          "Achievement"
         ],
         "hint": "Подсказка: тема «Prefixes & suffixes»."
       }
@@ -37348,50 +37526,49 @@ const CURRICULUM = [
       {
         "question": "What is «prefix»?",
         "options": [
-          "без",
           "приставка",
           "суффикс существительного",
-          "повторно"
+          "-имый"
         ],
         "answer": "приставка"
       },
       {
         "question": "What is «suffix»?",
         "options": [
+          "без",
           "пере-, сверх-",
-          "повторно",
-          "суффикс",
-          "без"
+          "суффикс существительного",
+          "суффикс"
         ],
         "answer": "суффикс"
       },
       {
         "question": "What is «un-»?",
         "options": [
-          "без",
           "не- (отрицание)",
-          "суффикс существительного",
-          "полный"
+          "полный",
+          "пере-, сверх-",
+          "суффикс существительного"
         ],
         "answer": "не- (отрицание)"
       },
       {
         "question": "What is «-tion»?",
         "options": [
-          "приставка",
-          "без",
+          "повторно",
           "суффикс существительного",
-          "не- (отрицание)"
+          "приставка",
+          "полный"
         ],
         "answer": "суффикс существительного"
       },
       {
         "question": "What is «-ful»?",
         "options": [
-          "без",
           "пере-, сверх-",
           "полный",
-          "повторно"
+          "суффикс существительного",
+          "приставка"
         ],
         "answer": "полный"
       },
@@ -37727,7 +37904,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from make a decision, heavy rain."
+          "The material focuses on make a decision, heavy rain."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «make a decision, heavy rain»."
@@ -37753,7 +37930,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The brother studies at university."
+          "She helps her family after school."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «make a decision, heavy rain»."
@@ -37779,7 +37956,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss make a decision, heavy rain in simple English."
+          "The listening clip explains ideas from make a decision, heavy rain."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «make a decision, heavy rain»."
@@ -37805,7 +37982,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss make a decision, heavy rain in simple English."
+          "The material focuses on make a decision, heavy rain."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «make a decision, heavy rain»."
@@ -37831,7 +38008,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Social media affects how friends communicate."
+          "They discuss useful apps for learning English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «make a decision, heavy rain»."
@@ -38088,6 +38265,7 @@ const CURRICULUM = [
         "prompt": "______ a decision",
         "answer": "make",
         "altAnswers": [
+          "MAKE",
           "make",
           "Make"
         ],
@@ -38099,7 +38277,8 @@ const CURRICULUM = [
         "answer": "rain",
         "altAnswers": [
           "rain",
-          "Rain"
+          "Rain",
+          "RAIN"
         ],
         "hint": "Подсказка: тема «make a decision, heavy rain»."
       },
@@ -38108,8 +38287,9 @@ const CURRICULUM = [
         "prompt": "______ the ice",
         "answer": "break",
         "altAnswers": [
+          "Break",
           "break",
-          "Break"
+          "BREAK"
         ],
         "hint": "Подсказка: тема «make a decision, heavy rain»."
       },
@@ -38119,6 +38299,7 @@ const CURRICULUM = [
         "answer": "under",
         "altAnswers": [
           "under",
+          "UNDER",
           "Under"
         ],
         "hint": "Подсказка: тема «make a decision, heavy rain»."
@@ -38140,30 +38321,30 @@ const CURRICULUM = [
       {
         "question": "What is «collocation»?",
         "options": [
-          "проще простого",
-          "растопить лёд",
           "коллокация",
-          "принять решение"
+          "нездоровиться",
+          "проще простого",
+          "совершить преступление"
         ],
         "answer": "коллокация"
       },
       {
         "question": "What is «idiom»?",
         "options": [
-          "принять решение",
           "сильный дождь",
           "идиома",
-          "повысить осведомлённость"
+          "нездоровиться",
+          "проще простого"
         ],
         "answer": "идиома"
       },
       {
         "question": "What is «make a decision»?",
         "options": [
-          "нездоровиться",
+          "коллокация",
           "принять решение",
-          "идиома",
-          "коллокация"
+          "сильный дождь",
+          "растопить лёд"
         ],
         "answer": "принять решение"
       },
@@ -38171,18 +38352,18 @@ const CURRICULUM = [
         "question": "What is «heavy rain»?",
         "options": [
           "растопить лёд",
-          "повысить осведомлённость",
           "сильный дождь",
-          "идиома"
+          "нездоровиться",
+          "достичь цели"
         ],
         "answer": "сильный дождь"
       },
       {
         "question": "What is «break the ice»?",
         "options": [
-          "идиома",
+          "проще простого",
           "совершить преступление",
-          "повысить осведомлённость",
+          "сильный дождь",
           "растопить лёд"
         ],
         "answer": "растопить лёд"
@@ -38531,7 +38712,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from request, apology, complaint."
+          "The scene relates to informal and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Request, apology, complaint»."
@@ -38557,7 +38738,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from request, apology, complaint."
+          "The scene relates to informal and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Request, apology, complaint»."
@@ -38857,8 +39038,9 @@ const CURRICULUM = [
         "prompt": "I am ______ to inform you",
         "answer": "writing",
         "altAnswers": [
-          "writing",
-          "Writing"
+          "WRITING",
+          "Writing",
+          "writing"
         ],
         "hint": "Подсказка: тема «Request, apology, complaint»."
       },
@@ -38867,8 +39049,9 @@ const CURRICULUM = [
         "prompt": "I ______ appreciate it",
         "answer": "would",
         "altAnswers": [
-          "Would",
-          "would"
+          "would",
+          "WOULD",
+          "Would"
         ],
         "hint": "Подсказка: тема «Request, apology, complaint»."
       },
@@ -38877,6 +39060,7 @@ const CURRICULUM = [
         "prompt": "______ find attached",
         "answer": "Please",
         "altAnswers": [
+          "PLEASE",
           "Please",
           "please"
         ],
@@ -38888,6 +39072,7 @@ const CURRICULUM = [
         "answer": "Could",
         "altAnswers": [
           "Could",
+          "COULD",
           "could"
         ],
         "hint": "Подсказка: тема «Request, apology, complaint»."
@@ -38909,9 +39094,9 @@ const CURRICULUM = [
       {
         "question": "What is «formal»?",
         "options": [
+          "регистр, стиль",
           "уважаемый (в письме)",
-          "извиняться",
-          "информировать",
+          "жалоба",
           "формальный"
         ],
         "answer": "формальный"
@@ -38919,40 +39104,40 @@ const CURRICULUM = [
       {
         "question": "What is «informal»?",
         "options": [
-          "неформальный",
           "извиняться",
-          "информировать",
-          "просьба"
+          "я был бы признателен",
+          "неформальный",
+          "формальный"
         ],
         "answer": "неформальный"
       },
       {
         "question": "What is «register»?",
         "options": [
-          "уважаемый (в письме)",
-          "регистр, стиль",
           "я был бы признателен",
-          "просьба"
+          "уважаемый (в письме)",
+          "просьба",
+          "регистр, стиль"
         ],
         "answer": "регистр, стиль"
       },
       {
         "question": "What is «request»?",
         "options": [
-          "просьба",
+          "извиняться",
           "уважаемый (в письме)",
-          "жалоба",
-          "извиняться"
+          "неформальный",
+          "просьба"
         ],
         "answer": "просьба"
       },
       {
         "question": "What is «apologize»?",
         "options": [
-          "неформальный",
+          "просьба",
           "извиняться",
           "уважаемый (в письме)",
-          "информировать"
+          "я был бы признателен"
         ],
         "answer": "извиняться"
       },
@@ -39275,7 +39460,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss however, moreover, although in simple English."
+          "The listening clip explains ideas from however, moreover, although."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «However, moreover, although»."
@@ -39301,7 +39486,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss however, moreover, although in simple English."
+          "The passage uses vocabulary about therefore."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «However, moreover, although»."
@@ -39327,7 +39512,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "She recommends planning the essay introduction first."
+          "He suggests underlining key words in the question."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «However, moreover, although»."
@@ -39353,7 +39538,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to moreover and daily life."
+          "The listening clip explains ideas from however, moreover, although."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «However, moreover, although»."
@@ -39379,7 +39564,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on however, moreover, although."
+          "The passage uses vocabulary about therefore."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «However, moreover, although»."
@@ -39632,6 +39817,7 @@ const CURRICULUM = [
         "prompt": "However, it is ______",
         "answer": "true",
         "altAnswers": [
+          "TRUE",
           "True",
           "true"
         ],
@@ -39642,6 +39828,7 @@ const CURRICULUM = [
         "prompt": "Although it was ______",
         "answer": "late",
         "altAnswers": [
+          "LATE",
           "late",
           "Late"
         ],
@@ -39652,8 +39839,9 @@ const CURRICULUM = [
         "prompt": "On the ______ hand",
         "answer": "other",
         "altAnswers": [
+          "Other",
           "other",
-          "Other"
+          "OTHER"
         ],
         "hint": "Подсказка: тема «However, moreover, although»."
       },
@@ -39662,8 +39850,9 @@ const CURRICULUM = [
         "prompt": "In ______",
         "answer": "conclusion",
         "altAnswers": [
-          "Conclusion",
-          "conclusion"
+          "CONCLUSION",
+          "conclusion",
+          "Conclusion"
         ],
         "hint": "Подсказка: тема «However, moreover, although»."
       }
@@ -39684,30 +39873,30 @@ const CURRICULUM = [
       {
         "question": "What is «however»?",
         "options": [
-          "однако",
-          "заключение",
-          "в дополнение",
-          "кроме того"
+          "хотя",
+          "с другой стороны",
+          "более того",
+          "однако"
         ],
         "answer": "однако"
       },
       {
         "question": "What is «moreover»?",
         "options": [
-          "однако",
-          "поэтому",
+          "в дополнение",
           "более того",
-          "кроме того"
+          "тогда как",
+          "тем не менее"
         ],
         "answer": "более того"
       },
       {
         "question": "What is «although»?",
         "options": [
-          "в дополнение",
-          "тогда как",
-          "хотя",
-          "тем не менее"
+          "поэтому",
+          "однако",
+          "тем не менее",
+          "хотя"
         ],
         "answer": "хотя"
       },
@@ -39715,18 +39904,18 @@ const CURRICULUM = [
         "question": "What is «therefore»?",
         "options": [
           "поэтому",
-          "тогда как",
-          "однако",
-          "с другой стороны"
+          "тем не менее",
+          "с другой стороны",
+          "в дополнение"
         ],
         "answer": "поэтому"
       },
       {
         "question": "What is «furthermore»?",
         "options": [
+          "однако",
+          "в дополнение",
           "кроме того",
-          "с другой стороны",
-          "поэтому",
           "более того"
         ],
         "answer": "кроме того"
@@ -40081,7 +40270,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss i believe, in my view in simple English."
+          "The material focuses on i believe, in my view."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «I believe, in my view»."
@@ -40133,7 +40322,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss i believe, in my view in simple English."
+          "The listening clip explains ideas from i believe, in my view."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «I believe, in my view»."
@@ -40407,8 +40596,9 @@ const CURRICULUM = [
         "prompt": "In my ______",
         "answer": "opinion",
         "altAnswers": [
+          "opinion",
           "Opinion",
-          "opinion"
+          "OPINION"
         ],
         "hint": "Подсказка: тема «I believe, in my view»."
       },
@@ -40418,7 +40608,8 @@ const CURRICULUM = [
         "answer": "see",
         "altAnswers": [
           "See",
-          "see"
+          "see",
+          "SEE"
         ],
         "hint": "Подсказка: тема «I believe, in my view»."
       },
@@ -40427,8 +40618,9 @@ const CURRICULUM = [
         "prompt": "I ______ believe",
         "answer": "firmly",
         "altAnswers": [
+          "firmly",
           "Firmly",
-          "firmly"
+          "FIRMLY"
         ],
         "hint": "Подсказка: тема «I believe, in my view»."
       },
@@ -40437,8 +40629,9 @@ const CURRICULUM = [
         "prompt": "to ______ extent",
         "answer": "some",
         "altAnswers": [
-          "some",
-          "Some"
+          "Some",
+          "SOME",
+          "some"
         ],
         "hint": "Подсказка: тема «I believe, in my view»."
       }
@@ -40459,39 +40652,39 @@ const CURRICULUM = [
       {
         "question": "What is «opinion»?",
         "options": [
-          "мнение",
           "в некоторой степени",
-          "не соглашаться",
-          "точка зрения"
+          "точка зрения",
+          "мнение",
+          "не соглашаться"
         ],
         "answer": "мнение"
       },
       {
         "question": "What is «agree»?",
         "options": [
-          "я считаю",
-          "аргументировать",
+          "мнение",
           "соглашаться",
-          "мнение"
+          "по моему мнению",
+          "я считаю"
         ],
         "answer": "соглашаться"
       },
       {
         "question": "What is «disagree»?",
         "options": [
-          "я считаю",
           "не соглашаться",
-          "мнение",
-          "по моему мнению"
+          "соглашаться",
+          "точка зрения",
+          "в некоторой степени"
         ],
         "answer": "не соглашаться"
       },
       {
         "question": "What is «argue»?",
         "options": [
+          "не соглашаться",
           "убедительный",
           "мнение",
-          "по моему мнению",
           "аргументировать"
         ],
         "answer": "аргументировать"
@@ -40499,10 +40692,10 @@ const CURRICULUM = [
       {
         "question": "What is «point of view»?",
         "options": [
-          "спорный",
           "точка зрения",
-          "аргументировать",
-          "по моему мнению"
+          "мнение",
+          "по моему мнению",
+          "убедительный"
         ],
         "answer": "точка зрения"
       },
@@ -40836,7 +41029,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The character spends too much time online."
+          "People use smartphones for work and study."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Not only..., Never have I...»."
@@ -40862,7 +41055,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from not only..., never have i...."
+          "The material focuses on not only..., never have i...."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Not only..., Never have I...»."
@@ -40888,7 +41081,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from not only..., never have i...."
+          "The scene relates to emphasis and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Not only..., Never have I...»."
@@ -40940,7 +41133,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to emphasis and daily life."
+          "The material focuses on not only..., never have i...."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Not only..., Never have I...»."
@@ -41189,8 +41382,9 @@ const CURRICULUM = [
         "prompt": "______ have I seen",
         "answer": "Never",
         "altAnswers": [
-          "Never",
-          "never"
+          "NEVER",
+          "never",
+          "Never"
         ],
         "hint": "Подсказка: тема «Not only..., Never have I...»."
       },
@@ -41200,6 +41394,7 @@ const CURRICULUM = [
         "answer": "only",
         "altAnswers": [
           "only",
+          "ONLY",
           "Only"
         ],
         "hint": "Подсказка: тема «Not only..., Never have I...»."
@@ -41210,6 +41405,7 @@ const CURRICULUM = [
         "answer": "Rarely",
         "altAnswers": [
           "Rarely",
+          "RARELY",
           "rarely"
         ],
         "hint": "Подсказка: тема «Not only..., Never have I...»."
@@ -41219,8 +41415,9 @@ const CURRICULUM = [
         "prompt": "It was ______ who",
         "answer": "John",
         "altAnswers": [
-          "john",
-          "John"
+          "John",
+          "JOHN",
+          "john"
         ],
         "hint": "Подсказка: тема «Not only..., Never have I...»."
       }
@@ -41241,29 +41438,29 @@ const CURRICULUM = [
       {
         "question": "What is «inversion»?",
         "options": [
-          "как только",
-          "инверсия",
-          "изредка",
-          "эмфаза"
+          "не только",
+          "никогда",
+          "эмфаза",
+          "инверсия"
         ],
         "answer": "инверсия"
       },
       {
         "question": "What is «emphasis»?",
         "options": [
-          "едва",
+          "редко",
+          "эмфаза",
           "никогда",
-          "расщеплённое предложение",
-          "эмфаза"
+          "инверсия"
         ],
         "answer": "эмфаза"
       },
       {
         "question": "What is «not only»?",
         "options": [
-          "не только",
-          "инверсия",
+          "расщеплённое предложение",
           "едва",
+          "не только",
           "как только"
         ],
         "answer": "не только"
@@ -41271,20 +41468,20 @@ const CURRICULUM = [
       {
         "question": "What is «never»?",
         "options": [
-          "изредка",
-          "не только",
+          "никогда",
+          "едва",
           "what-конструкция",
-          "никогда"
+          "как только"
         ],
         "answer": "никогда"
       },
       {
         "question": "What is «rarely»?",
         "options": [
-          "редко",
-          "what-конструкция",
-          "инверсия",
-          "как только"
+          "едва",
+          "расщеплённое предложение",
+          "изредка",
+          "редко"
         ],
         "answer": "редко"
       },
@@ -41611,7 +41808,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The tip is to check grammar in the last five minutes."
+          "The speaker explains skim vs scan for reading."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Reading, listening, review»."
@@ -41657,7 +41854,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They review time management for the exam."
+          "The tip is to check grammar in the last five minutes."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Reading, listening, review»."
@@ -41683,7 +41880,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from reading, listening, review."
+          "The scene relates to strategy and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Reading, listening, review»."
@@ -41709,7 +41906,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss reading, listening, review in simple English."
+          "The material focuses on reading, listening, review."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Reading, listening, review»."
@@ -41958,6 +42155,7 @@ const CURRICULUM = [
         "prompt": "B2 ______",
         "answer": "proficiency",
         "altAnswers": [
+          "PROFICIENCY",
           "Proficiency",
           "proficiency"
         ],
@@ -41968,6 +42166,7 @@ const CURRICULUM = [
         "prompt": "______ task",
         "answer": "assessment",
         "altAnswers": [
+          "ASSESSMENT",
           "Assessment",
           "assessment"
         ],
@@ -41978,8 +42177,9 @@ const CURRICULUM = [
         "prompt": "in ______",
         "answer": "conclusion",
         "altAnswers": [
-          "Conclusion",
-          "conclusion"
+          "CONCLUSION",
+          "conclusion",
+          "Conclusion"
         ],
         "hint": "Подсказка: тема «Reading, listening, review»."
       },
@@ -41988,6 +42188,7 @@ const CURRICULUM = [
         "prompt": "______ word",
         "answer": "key",
         "altAnswers": [
+          "KEY",
           "key",
           "Key"
         ],
@@ -42010,28 +42211,28 @@ const CURRICULUM = [
       {
         "question": "What is «exam»?",
         "options": [
-          "повторение",
+          "сертификат",
+          "искать информацию",
           "экзамен",
-          "стратегия",
-          "сертификат"
+          "задание"
         ],
         "answer": "экзамен"
       },
       {
         "question": "What is «strategy»?",
         "options": [
-          "ключевое слово",
           "экзамен",
           "стратегия",
-          "задание"
+          "владение языком",
+          "искать информацию"
         ],
         "answer": "стратегия"
       },
       {
         "question": "What is «skim»?",
         "options": [
-          "задание",
           "бегло просматривать",
+          "задание",
           "стратегия",
           "экзамен"
         ],
@@ -42040,20 +42241,20 @@ const CURRICULUM = [
       {
         "question": "What is «scan»?",
         "options": [
-          "стратегия",
-          "владение языком",
-          "искать информацию",
-          "бегло просматривать"
+          "повторение",
+          "ключевое слово",
+          "задание",
+          "искать информацию"
         ],
         "answer": "искать информацию"
       },
       {
         "question": "What is «keyword»?",
         "options": [
+          "задание",
           "ключевое слово",
           "оценка",
-          "сертификат",
-          "владение языком"
+          "сертификат"
         ],
         "answer": "ключевое слово"
       },
@@ -42384,7 +42585,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss carry out, bring up, run out in simple English."
+          "The passage uses vocabulary about set up."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «carry out, bring up, run out»."
@@ -42436,7 +42637,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to bring up and daily life."
+          "The listening clip explains ideas from carry out, bring up, run out."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «carry out, bring up, run out»."
@@ -42462,7 +42663,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The main character faces a difficult choice."
+          "They solve the problem together at the end."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «carry out, bring up, run out»."
@@ -42488,7 +42689,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss carry out, bring up, run out in simple English."
+          "The listening clip explains ideas from carry out, bring up, run out."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «carry out, bring up, run out»."
@@ -42741,8 +42942,9 @@ const CURRICULUM = [
         "prompt": "______ out research",
         "answer": "carry",
         "altAnswers": [
-          "Carry",
-          "carry"
+          "CARRY",
+          "carry",
+          "Carry"
         ],
         "hint": "Подсказка: тема «carry out, bring up, run out»."
       },
@@ -42752,6 +42954,7 @@ const CURRICULUM = [
         "answer": "run",
         "altAnswers": [
           "run",
+          "RUN",
           "Run"
         ],
         "hint": "Подсказка: тема «carry out, bring up, run out»."
@@ -42761,8 +42964,9 @@ const CURRICULUM = [
         "prompt": "______ up a topic",
         "answer": "bring",
         "altAnswers": [
-          "Bring",
-          "bring"
+          "BRING",
+          "bring",
+          "Bring"
         ],
         "hint": "Подсказка: тема «carry out, bring up, run out»."
       },
@@ -42772,6 +42976,7 @@ const CURRICULUM = [
         "answer": "turn",
         "altAnswers": [
           "Turn",
+          "TURN",
           "turn"
         ],
         "hint": "Подсказка: тема «carry out, bring up, run out»."
@@ -42793,30 +42998,30 @@ const CURRICULUM = [
       {
         "question": "What is «carry out»?",
         "options": [
-          "выяснить, проработать",
-          "ломаться, разбирать",
-          "проводить, выполнять",
-          "наткнуться, встретить"
+          "иметь дело с",
+          "наткнуться, встретить",
+          "заканчиваться",
+          "проводить, выполнять"
         ],
         "answer": "проводить, выполнять"
       },
       {
         "question": "What is «bring up»?",
         "options": [
+          "организовать",
           "заканчиваться",
-          "проводить, выполнять",
           "воспитывать, поднимать тему",
-          "иметь дело с"
+          "наткнуться, встретить"
         ],
         "answer": "воспитывать, поднимать тему"
       },
       {
         "question": "What is «run out»?",
         "options": [
-          "заканчиваться",
-          "оказаться",
+          "воспитывать, поднимать тему",
+          "наткнуться, встретить",
           "ломаться, разбирать",
-          "организовать"
+          "заканчиваться"
         ],
         "answer": "заканчиваться"
       },
@@ -42824,19 +43029,19 @@ const CURRICULUM = [
         "question": "What is «set up»?",
         "options": [
           "организовать",
-          "проводить, выполнять",
-          "наткнуться, встретить",
-          "оказаться"
+          "выяснить, проработать",
+          "ломаться, разбирать",
+          "указывать"
         ],
         "answer": "организовать"
       },
       {
         "question": "What is «come across»?",
         "options": [
-          "организовать",
-          "выяснить, проработать",
-          "заканчиваться",
-          "наткнуться, встретить"
+          "иметь дело с",
+          "наткнуться, встретить",
+          "проводить, выполнять",
+          "указывать"
         ],
         "answer": "наткнуться, встретить"
       },
@@ -43152,7 +43357,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from mixed conditionals."
+          "The passage uses vocabulary about present result."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Mixed conditionals»."
@@ -43178,7 +43383,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about present result."
+          "The material focuses on mixed conditionals."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Mixed conditionals»."
@@ -43204,7 +43409,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss mixed conditionals in simple English."
+          "The material focuses on mixed conditionals."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Mixed conditionals»."
@@ -43230,7 +43435,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to consequence and daily life."
+          "The material focuses on mixed conditionals."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Mixed conditionals»."
@@ -43256,7 +43461,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on mixed conditionals."
+          "The scene relates to consequence and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Mixed conditionals»."
@@ -43514,6 +43719,7 @@ const CURRICULUM = [
         "prompt": "I ______ have failed if I were more disciplined",
         "answer": "wouldn't",
         "altAnswers": [
+          "WOULDN'T",
           "wouldn't",
           "Wouldn't"
         ],
@@ -43524,8 +43730,9 @@ const CURRICULUM = [
         "prompt": "If I had ______ money, I could buy a flat now",
         "answer": "saved",
         "altAnswers": [
+          "saved",
           "Saved",
-          "saved"
+          "SAVED"
         ],
         "hint": "Подсказка: тема «Mixed conditionals»."
       },
@@ -43534,8 +43741,9 @@ const CURRICULUM = [
         "prompt": "If I had ______ harder, I would have passed",
         "answer": "studied",
         "altAnswers": [
+          "studied",
           "Studied",
-          "studied"
+          "STUDIED"
         ],
         "hint": "Подсказка: тема «Mixed conditionals»."
       }
@@ -43556,9 +43764,9 @@ const CURRICULUM = [
       {
         "question": "What is «mixed»?",
         "options": [
-          "исход",
+          "иначе",
+          "следствие",
           "смешанный",
-          "результат в настоящем",
           "сейчас"
         ],
         "answer": "смешанный"
@@ -43566,30 +43774,30 @@ const CURRICULUM = [
       {
         "question": "What is «consequence»?",
         "options": [
-          "причина в прошлом",
-          "тогда",
+          "следствие",
+          "исход",
           "гипотетический",
-          "следствие"
+          "тогда"
         ],
         "answer": "следствие"
       },
       {
         "question": "What is «regret»?",
         "options": [
-          "гипотетический",
-          "иначе",
-          "сейчас",
-          "сожаление"
+          "сожаление",
+          "результат в настоящем",
+          "смешанный",
+          "сейчас"
         ],
         "answer": "сожаление"
       },
       {
         "question": "What is «present result»?",
         "options": [
-          "причина в прошлом",
+          "смешанный",
           "результат в настоящем",
-          "сожаление",
-          "следствие"
+          "иначе",
+          "сейчас"
         ],
         "answer": "результат в настоящем"
       },
@@ -43597,9 +43805,9 @@ const CURRICULUM = [
         "question": "What is «past cause»?",
         "options": [
           "следствие",
+          "сейчас",
           "причина в прошлом",
-          "исход",
-          "результат в настоящем"
+          "иначе"
         ],
         "answer": "причина в прошлом"
       },
@@ -43905,7 +44113,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about insist."
+          "The scene relates to essential and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Subjunctive and formal English»."
@@ -43957,7 +44165,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They describe their daily routine clearly."
+          "The parents talk about their jobs."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Subjunctive and formal English»."
@@ -43983,7 +44191,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about insist."
+          "The scene relates to essential and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Subjunctive and formal English»."
@@ -44009,7 +44217,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on subjunctive and formal english."
+          "The listening clip explains ideas from subjunctive and formal english."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Subjunctive and formal English»."
@@ -44263,8 +44471,9 @@ const CURRICULUM = [
         "prompt": "I ______ confirm receipt",
         "answer": "hereby",
         "altAnswers": [
-          "Hereby",
-          "hereby"
+          "HEREBY",
+          "hereby",
+          "Hereby"
         ],
         "hint": "Подсказка: тема «Subjunctive and formal English»."
       },
@@ -44273,8 +44482,9 @@ const CURRICULUM = [
         "prompt": "I ______ that the matter be discussed",
         "answer": "propose",
         "altAnswers": [
+          "Propose",
           "propose",
-          "Propose"
+          "PROPOSE"
         ],
         "hint": "Подсказка: тема «Subjunctive and formal English»."
       },
@@ -44283,8 +44493,9 @@ const CURRICULUM = [
         "prompt": "I ______ that he be on time",
         "answer": "suggest",
         "altAnswers": [
+          "Suggest",
           "suggest",
-          "Suggest"
+          "SUGGEST"
         ],
         "hint": "Подсказка: тема «Subjunctive and formal English»."
       }
@@ -44305,50 +44516,50 @@ const CURRICULUM = [
       {
         "question": "What is «subjunctive»?",
         "options": [
-          "необходимый",
+          "обязательный",
           "сослагательное наклонение",
           "присутствовать",
-          "рекомендовать"
+          "формальный"
         ],
         "answer": "сослагательное наклонение"
       },
       {
         "question": "What is «essential»?",
         "options": [
-          "настаивать",
-          "сослагательное наклонение",
           "необходимый",
-          "предлагать"
+          "рекомендовать",
+          "предлагать",
+          "настаивать"
         ],
         "answer": "необходимый"
       },
       {
         "question": "What is «recommend»?",
         "options": [
-          "необходимый",
-          "настаивать",
+          "формальный",
           "рекомендовать",
-          "формальный"
+          "настаивать",
+          "представлять"
         ],
         "answer": "рекомендовать"
       },
       {
         "question": "What is «insist»?",
         "options": [
-          "представлять",
           "настаивать",
-          "присутствовать",
-          "формальный"
+          "сослагательное наклонение",
+          "настоящим",
+          "представлять"
         ],
         "answer": "настаивать"
       },
       {
         "question": "What is «propose»?",
         "options": [
-          "предлагать",
-          "необходимый",
-          "сослагательное наклонение",
-          "присутствовать"
+          "присутствовать",
+          "формальный",
+          "представлять",
+          "предлагать"
         ],
         "answer": "предлагать"
       },
@@ -44681,7 +44892,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about evidence."
+          "The listening clip explains ideas from critical writing."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Critical writing»."
@@ -44707,7 +44918,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Technology helps them stay in touch abroad."
+          "The character spends too much time online."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Critical writing»."
@@ -44733,7 +44944,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about evidence."
+          "The material focuses on critical writing."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Critical writing»."
@@ -44759,7 +44970,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on critical writing."
+          "The scene relates to evaluate and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Critical writing»."
@@ -45009,8 +45220,9 @@ const CURRICULUM = [
         "prompt": "On ______ the review is fair",
         "answer": "balance",
         "altAnswers": [
-          "Balance",
-          "balance"
+          "balance",
+          "BALANCE",
+          "Balance"
         ],
         "hint": "Подсказка: тема «Critical writing»."
       },
@@ -45019,8 +45231,9 @@ const CURRICULUM = [
         "prompt": "In ______ the text is thought-provoking",
         "answer": "conclusion",
         "altAnswers": [
-          "Conclusion",
-          "conclusion"
+          "CONCLUSION",
+          "conclusion",
+          "Conclusion"
         ],
         "hint": "Подсказка: тема «Critical writing»."
       },
@@ -45029,6 +45242,7 @@ const CURRICULUM = [
         "prompt": "The ______ argument is unconvincing because…",
         "answer": "author's",
         "altAnswers": [
+          "AUTHOR'S",
           "Author's",
           "author's"
         ],
@@ -45051,50 +45265,50 @@ const CURRICULUM = [
       {
         "question": "What is «analyse»?",
         "options": [
-          "заключать",
-          "анализировать",
-          "оценивать",
-          "предвзятость"
+          "допущение",
+          "аргумент",
+          "доказательство",
+          "анализировать"
         ],
         "answer": "анализировать"
       },
       {
         "question": "What is «evaluate»?",
         "options": [
-          "анализировать",
+          "оценивать",
           "предвзятость",
-          "критиковать",
-          "оценивать"
+          "анализировать",
+          "аргумент"
         ],
         "answer": "оценивать"
       },
       {
         "question": "What is «argument»?",
         "options": [
-          "доказательство",
-          "оценивать",
-          "аргумент",
-          "допущение"
+          "контраргумент",
+          "предвзятость",
+          "заключать",
+          "аргумент"
         ],
         "answer": "аргумент"
       },
       {
         "question": "What is «evidence»?",
         "options": [
+          "предвзятость",
           "доказательство",
-          "анализировать",
-          "допущение",
-          "контраргумент"
+          "заключать",
+          "критиковать"
         ],
         "answer": "доказательство"
       },
       {
         "question": "What is «claim»?",
         "options": [
-          "оценивать",
-          "допущение",
           "утверждение",
-          "анализировать"
+          "аргумент",
+          "заключать",
+          "оценивать"
         ],
         "answer": "утверждение"
       },
@@ -45405,7 +45619,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on nuanced modals."
+          "The scene relates to must have and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Nuanced modals»."
@@ -45431,7 +45645,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The character will probably apologise next."
+          "She will likely call her friend tomorrow."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Nuanced modals»."
@@ -45457,7 +45671,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss nuanced modals in simple English."
+          "The scene relates to must have and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Nuanced modals»."
@@ -45483,7 +45697,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on nuanced modals."
+          "The scene relates to must have and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Nuanced modals»."
@@ -45509,7 +45723,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "People use smartphones for work and study."
+          "Social media affects how friends communicate."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Nuanced modals»."
@@ -45763,8 +45977,9 @@ const CURRICULUM = [
         "prompt": "They could have ______ a taxi",
         "answer": "taken",
         "altAnswers": [
-          "Taken",
-          "taken"
+          "TAKEN",
+          "taken",
+          "Taken"
         ],
         "hint": "Подсказка: тема «Nuanced modals»."
       },
@@ -45773,8 +45988,9 @@ const CURRICULUM = [
         "prompt": "They should have ______ by now",
         "answer": "arrived",
         "altAnswers": [
+          "arrived",
           "Arrived",
-          "arrived"
+          "ARRIVED"
         ],
         "hint": "Подсказка: тема «Nuanced modals»."
       },
@@ -45784,7 +46000,8 @@ const CURRICULUM = [
         "answer": "left",
         "altAnswers": [
           "Left",
-          "left"
+          "left",
+          "LEFT"
         ],
         "hint": "Подсказка: тема «Nuanced modals»."
       }
@@ -45805,50 +46022,50 @@ const CURRICULUM = [
       {
         "question": "What is «might have»?",
         "options": [
-          "предполагать",
-          "мог бы (прошлое)",
+          "должно быть (вывод)",
+          "возможно (прошлое)",
           "критика",
-          "возможно (прошлое)"
+          "вероятность"
         ],
         "answer": "возможно (прошлое)"
       },
       {
         "question": "What is «must have»?",
         "options": [
+          "вероятность",
           "уверенность",
-          "должно быть (вывод)",
-          "предполагать",
-          "критика"
+          "необязательно было",
+          "должно быть (вывод)"
         ],
         "answer": "должно быть (вывод)"
       },
       {
         "question": "What is «could have»?",
         "options": [
-          "возможно (прошлое)",
-          "вывод",
+          "необязательно было",
           "мог бы (прошлое)",
-          "вероятность"
+          "уверенность",
+          "вывод"
         ],
         "answer": "мог бы (прошлое)"
       },
       {
         "question": "What is «should have»?",
         "options": [
+          "вероятность",
           "следовало бы",
-          "предполагать",
-          "мог бы (прошлое)",
-          "уверенность"
+          "необязательно было",
+          "должно быть (вывод)"
         ],
         "answer": "следовало бы"
       },
       {
         "question": "What is «needn't have»?",
         "options": [
-          "предполагать",
-          "вывод",
-          "мог бы (прошлое)",
-          "необязательно было"
+          "необязательно было",
+          "уверенность",
+          "критика",
+          "предполагать"
         ],
         "answer": "необязательно было"
       },
@@ -46159,7 +46376,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The brother studies at university."
+          "He works with headline every day."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Media English»."
@@ -46185,7 +46402,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The narrator introduces his parents first."
+          "The oldest child is sixteen years old."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Media English»."
@@ -46237,7 +46454,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on media english."
+          "Characters discuss media english in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Media English»."
@@ -46263,7 +46480,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on media english."
+          "Characters discuss media english in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Media English»."
@@ -46518,7 +46735,8 @@ const CURRICULUM = [
         "answer": "Sources",
         "altAnswers": [
           "sources",
-          "Sources"
+          "Sources",
+          "SOURCES"
         ],
         "hint": "Подсказка: тема «Media English»."
       },
@@ -46527,8 +46745,9 @@ const CURRICULUM = [
         "prompt": "______ news : summit begins",
         "answer": "Breaking",
         "altAnswers": [
-          "breaking",
-          "Breaking"
+          "BREAKING",
+          "Breaking",
+          "breaking"
         ],
         "hint": "Подсказка: тема «Media English»."
       },
@@ -46537,8 +46756,9 @@ const CURRICULUM = [
         "prompt": "______ to the report, it is true",
         "answer": "According",
         "altAnswers": [
-          "according",
-          "According"
+          "ACCORDING",
+          "According",
+          "according"
         ],
         "hint": "Подсказка: тема «Media English»."
       }
@@ -46560,9 +46780,9 @@ const CURRICULUM = [
         "question": "What is «headline»?",
         "options": [
           "предполагаемый",
-          "срочный",
+          "трансляция",
           "заголовок",
-          "цитата"
+          "свидетель"
         ],
         "answer": "заголовок"
       },
@@ -46571,38 +46791,38 @@ const CURRICULUM = [
         "options": [
           "трансляция",
           "репортаж",
-          "согласно",
-          "срочный"
+          "источник",
+          "заголовок"
         ],
         "answer": "репортаж"
       },
       {
         "question": "What is «source»?",
         "options": [
-          "освещение",
-          "предполагаемый",
           "источник",
-          "репортаж"
+          "трансляция",
+          "предполагаемый",
+          "согласно"
         ],
         "answer": "источник"
       },
       {
         "question": "What is «alleged»?",
         "options": [
-          "источник",
-          "трансляция",
           "предполагаемый",
-          "свидетель"
+          "трансляция",
+          "цитата",
+          "освещение"
         ],
         "answer": "предполагаемый"
       },
       {
         "question": "What is «according to»?",
         "options": [
-          "репортаж",
-          "согласно",
           "трансляция",
-          "источник"
+          "согласно",
+          "источник",
+          "срочный"
         ],
         "answer": "согласно"
       },
@@ -46909,7 +47129,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to counter-offer and daily life."
+          "The listening clip explains ideas from negotiation english."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Negotiation English»."
@@ -46935,7 +47155,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The material focuses on negotiation english."
+          "The scene relates to counter-offer and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Negotiation English»."
@@ -46961,7 +47181,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss negotiation english in simple English."
+          "The scene relates to counter-offer and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Negotiation English»."
@@ -46987,7 +47207,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from negotiation english."
+          "The passage uses vocabulary about deadline."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Negotiation English»."
@@ -47013,7 +47233,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The scene relates to counter-offer and daily life."
+          "The listening clip explains ideas from negotiation english."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Negotiation English»."
@@ -47251,8 +47471,9 @@ const CURRICULUM = [
         "prompt": "______ we finalize today",
         "answer": "Can",
         "altAnswers": [
+          "can",
           "Can",
-          "can"
+          "CAN"
         ],
         "hint": "Подсказка: тема «Negotiation English»."
       },
@@ -47261,8 +47482,11 @@ const CURRICULUM = [
         "prompt": "We ______ accept those terms",
         "answer": "can't",
         "altAnswers": [
+          "can't",
+          "CAN'T",
           "Can't",
-          "can't"
+          "cannot",
+          "cant"
         ],
         "hint": "Подсказка: тема «Negotiation English»."
       },
@@ -47272,7 +47496,8 @@ const CURRICULUM = [
         "answer": "consider",
         "altAnswers": [
           "consider",
-          "Consider"
+          "Consider",
+          "CONSIDER"
         ],
         "hint": "Подсказка: тема «Negotiation English»."
       }
@@ -47293,20 +47518,20 @@ const CURRICULUM = [
       {
         "question": "What is «offer»?",
         "options": [
+          "компромисс",
           "завершать",
-          "предложение",
           "отклонять",
-          "сделка"
+          "предложение"
         ],
         "answer": "предложение"
       },
       {
         "question": "What is «counter-offer»?",
         "options": [
+          "сделка",
           "предложение",
-          "отклонять",
-          "встречное предложение",
-          "условия"
+          "завершать",
+          "встречное предложение"
         ],
         "answer": "встречное предложение"
       },
@@ -47314,27 +47539,27 @@ const CURRICULUM = [
         "question": "What is «terms»?",
         "options": [
           "принимать",
-          "срок",
-          "условия",
-          "отклонять"
+          "предложение",
+          "отклонять",
+          "условия"
         ],
         "answer": "условия"
       },
       {
         "question": "What is «deadline»?",
         "options": [
-          "отклонять",
-          "принимать",
+          "срок",
+          "условия",
           "предложение",
-          "срок"
+          "встречное предложение"
         ],
         "answer": "срок"
       },
       {
         "question": "What is «compromise»?",
         "options": [
-          "встречное предложение",
           "срок",
+          "условия",
           "компромисс",
           "отклонять"
         ],
@@ -47643,7 +47868,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "Characters discuss presentations in simple English."
+          "The scene relates to outline and daily life."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Presentations»."
@@ -47705,7 +47930,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The passage uses vocabulary about audience."
+          "The material focuses on presentations."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Presentations»."
@@ -47731,7 +47956,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from presentations."
+          "Characters discuss presentations in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «Presentations»."
@@ -47982,7 +48207,8 @@ const CURRICULUM = [
         "answer": "Thank",
         "altAnswers": [
           "Thank",
-          "thank"
+          "thank",
+          "THANK"
         ],
         "hint": "Подсказка: тема «Presentations»."
       },
@@ -47992,7 +48218,8 @@ const CURRICULUM = [
         "answer": "Let",
         "altAnswers": [
           "let",
-          "Let"
+          "Let",
+          "LET"
         ],
         "hint": "Подсказка: тема «Presentations»."
       },
@@ -48001,8 +48228,9 @@ const CURRICULUM = [
         "prompt": "______ I'll talk about three points",
         "answer": "Today",
         "altAnswers": [
-          "today",
-          "Today"
+          "TODAY",
+          "Today",
+          "today"
         ],
         "hint": "Подсказка: тема «Presentations»."
       }
@@ -48023,19 +48251,19 @@ const CURRICULUM = [
       {
         "question": "What is «introduce»?",
         "options": [
-          "аудитория",
-          "вовлекать",
-          "подводить итог",
-          "представлять"
+          "слайд",
+          "обратная связь",
+          "представлять",
+          "вопросы и ответы"
         ],
         "answer": "представлять"
       },
       {
         "question": "What is «outline»?",
         "options": [
-          "аудитория",
+          "обратная связь",
+          "вопросы и ответы",
           "слайд",
-          "вовлекать",
           "план"
         ],
         "answer": "план"
@@ -48043,9 +48271,9 @@ const CURRICULUM = [
       {
         "question": "What is «slide»?",
         "options": [
-          "план",
-          "раздаточный материал",
           "уточнять",
+          "обратная связь",
+          "подводить итог",
           "слайд"
         ],
         "answer": "слайд"
@@ -48053,20 +48281,20 @@ const CURRICULUM = [
       {
         "question": "What is «audience»?",
         "options": [
-          "представлять",
+          "раздаточный материал",
           "вопросы и ответы",
-          "аудитория",
-          "раздаточный материал"
+          "слайд",
+          "аудитория"
         ],
         "answer": "аудитория"
       },
       {
         "question": "What is «handout»?",
         "options": [
+          "план",
           "раздаточный материал",
-          "уточнять",
-          "подводить итог",
-          "представлять"
+          "аудитория",
+          "вовлекать"
         ],
         "answer": "раздаточный материал"
       },
@@ -48378,7 +48606,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They review time management for the exam."
+          "The speaker explains skim vs scan for reading."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «B2 mastery review»."
@@ -48450,7 +48678,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "The listening clip explains ideas from b2 mastery review."
+          "Characters discuss b2 mastery review in simple English."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «B2 mastery review»."
@@ -48476,7 +48704,7 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They review time management for the exam."
+          "The speaker explains skim vs scan for reading."
         ],
         "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
         "explain": "Опиши, что видел/слышал по теме «B2 mastery review»."
@@ -48734,8 +48962,12 @@ const CURRICULUM = [
         "prompt": "______ preparing for FCE",
         "answer": "I'm",
         "altAnswers": [
+          "I am",
+          "i'm",
+          "I'M",
           "I'm",
-          "i'm"
+          "IM",
+          "im"
         ],
         "hint": "Подсказка: тема «B2 mastery review»."
       },
@@ -48744,6 +48976,7 @@ const CURRICULUM = [
         "prompt": "______ formation is tested in B2 exams",
         "answer": "Word",
         "altAnswers": [
+          "WORD",
           "word",
           "Word"
         ],
@@ -48755,7 +48988,8 @@ const CURRICULUM = [
         "answer": "first",
         "altAnswers": [
           "First",
-          "first"
+          "first",
+          "FIRST"
         ],
         "hint": "Подсказка: тема «B2 mastery review»."
       }
@@ -48776,9 +49010,9 @@ const CURRICULUM = [
       {
         "question": "What is «review»?",
         "options": [
+          "точность",
           "стратегия",
-          "владение",
-          "бегло просматривать",
+          "тайминг",
           "повторение"
         ],
         "answer": "повторение"
@@ -48786,40 +49020,40 @@ const CURRICULUM = [
       {
         "question": "What is «strategy»?",
         "options": [
+          "чеклист",
+          "оценка",
           "стратегия",
-          "бегло просматривать",
-          "искать информацию",
-          "повторение"
+          "владение"
         ],
         "answer": "стратегия"
       },
       {
         "question": "What is «skim»?",
         "options": [
-          "повторение",
-          "сертификат",
+          "оценка",
           "бегло просматривать",
-          "точность"
+          "искать информацию",
+          "стратегия"
         ],
         "answer": "бегло просматривать"
       },
       {
         "question": "What is «scan»?",
         "options": [
-          "владение",
-          "повторение",
+          "искать информацию",
           "стратегия",
-          "искать информацию"
+          "повторение",
+          "точность"
         ],
         "answer": "искать информацию"
       },
       {
         "question": "What is «assessment»?",
         "options": [
-          "искать информацию",
-          "повторение",
-          "владение",
-          "оценка"
+          "оценка",
+          "стратегия",
+          "тайминг",
+          "точность"
         ],
         "answer": "оценка"
       },

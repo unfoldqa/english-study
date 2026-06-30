@@ -197,6 +197,23 @@ def _gap_candidates(sentence: str) -> list[tuple[str, str]]:
     return pairs
 
 
+def _gap_alt_answers(answer: str) -> list:
+    w = answer.strip()
+    alts = {w, w.lower(), w.capitalize(), w.upper()}
+    key = w.lower().replace("'", "'")
+    extra = {
+        "i'm": ["I am", "im", "IM"],
+        "i am": ["I'm", "im"],
+        "don't": ["do not", "dont"],
+        "doesn't": ["does not", "doesnt"],
+        "can't": ["cannot", "cant"],
+        "won't": ["will not", "wont"],
+    }
+    for variant in extra.get(key, []):
+        alts.add(variant)
+    return list(alts)
+
+
 def allocate_practice_sources(lesson: dict) -> list[str]:
     """Unique practice sentences excluding main quiz items."""
     quiz_sentences = {_norm(complete_quiz_sentence(q)) for q in lesson.get("quiz", [])[:4]}
@@ -258,7 +275,7 @@ def build_context_drill_from_lesson(lesson: dict, sources: Optional[list] = None
                 "id": len(drills) + 1,
                 "prompt": gapped.strip(),
                 "answer": answer,
-                "altAnswers": list({answer, answer.lower(), answer.capitalize()}),
+                "altAnswers": _gap_alt_answers(answer),
                 "hint": f"Подсказка: тема «{lesson.get('topic', '')}».",
             })
             used_answers.add(_norm(answer))
