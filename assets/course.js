@@ -1,6 +1,6 @@
 /* English Course A1→B2 — lesson logic with full block validation */
 
-const BUILD_VERSION = '6';
+const BUILD_VERSION = '7';
 const STORAGE_PREFIX = 'english-course-';
 
 /* ── Storage ── */

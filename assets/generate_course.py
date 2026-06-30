@@ -5,25 +5,37 @@ import os
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 
-def fc(words):
-    """Build flashcards from vocab list + extra pairs."""
+def fc(words, grammar=None):
+    """Build flashcards from vocab with real examples from grammar blocks."""
+    examples = []
+    if grammar:
+        for b in grammar.get("blocks", []):
+            examples.append(b.get("example", ""))
+        for group in grammar.get("extraExamples", []):
+            examples.extend(group.get("items", []))
+    examples = [e for e in examples if e]
+
     cards = []
-    for w in words:
+    for i, w in enumerate(words):
         if isinstance(w, dict) and "word" in w:
             cards.append(w)
         elif isinstance(w, dict):
             en, ru = w["en"], w["ru"]
-            cards.append({"word": en, "trans": ru, "example": f"I use '{en}' every day."})
-    while len(cards) < 20:
-        cards.append({"word": cards[len(cards) % len(words)]["word"] if "word" in cards[0] else words[len(cards) % len(words)]["en"],
-                        "trans": cards[len(cards) % len(words)]["trans"] if "word" in cards[0] else words[len(cards) % len(words)]["ru"],
-                        "example": "Practice makes progress."})
+            ex = examples[i % len(examples)] if examples else f"Example with «{en}»."
+            cards.append({"word": en, "trans": ru, "example": ex})
+    while len(cards) < 20 and words:
+        i = len(cards)
+        src = words[i % len(words)]
+        en = src["word"] if "word" in src else src["en"]
+        ru = src["trans"] if "word" in src else src["ru"]
+        ex = examples[i % len(examples)] if examples else f"Another example: {en}."
+        cards.append({"word": en, "trans": ru, "example": ex})
     return cards[:20]
 
 A1 = [
   {"id":1,"level":"A1","title":"Greetings & Introductions","titleRu":"Приветствия и знакомство","topic":"Первые фразы","description":"Базовые приветствия, прощания и вежливые фразы для знакомства.","duration":"20 мин",
    "warmup":["Hello! How are you?","What is your name?","Where are you from?"],
-   "vocab":[{"en":"hello","ru":"привет"},{"en":"goodbye","ru":"до свидания"},{"en":"please","ru":"пожалуйста"},{"en":"thank you","ru":"спасибо"},{"en":"name","ru":"имя"},{"en":"country","ru":"страна"},{"en":"nice","ru":"приятный"},{"en":"meet","ru":"знакомиться"},{"en":"friend","ru":"друг"},{"en":"welcome","ru":"добро пожаловать"}],
+   "vocab":[{"en":"hello","ru":"привет"},{"en":"goodbye","ru":"до свидания"},{"en":"please","ru":"пожалуйста"},{"en":"thank you","ru":"спасибо"},{"en":"name","ru":"имя"},{"en":"country","ru":"страна"},{"en":"nice","ru":"приятно (в знакомстве)"},{"en":"meet","ru":"встречать(ся)"},{"en":"friend","ru":"друг"},{"en":"welcome","ru":"добро пожаловать"}],
    "grammar":{"title":"Greetings","blocks":[{"title":"Приветствия","desc":"Hello / Hi — универсальное приветствие. Good morning — до полудня. Good evening — вечером.","example":"Hello! My name is Anna."},{"title":"Вежливость","desc":"Please — пожалуйста. Thank you — спасибо. You're welcome — не за что. Excuse me — извините.","example":"Thank you very much!"}],
    "formulas":["Hello / Hi + name","Nice to meet you","How are you? — I'm fine, thanks."],
    "extraExamples":[{"label":"Примеры","items":["Good morning!","Nice to meet you.","See you later!"]}],
@@ -49,7 +61,7 @@ A1 = [
 
   {"id":3,"level":"A1","title":"Personal Questions","titleRu":"Личные вопросы","topic":"What / Where / How","description":"Вопросительные слова для базового общения о себе и других.","duration":"20 мин",
    "warmup":["What's your job?","Where do you live?","How do you spell your name?"],
-   "vocab":[{"en":"what","ru":"что"},{"en":"where","ru":"где"},{"en":"how","ru":"как"},{"en":"who","ru":"кто"},{"en":"live","ru":"жить"},{"en":"work","ru":"работать"},{"en":"spell","ru":"произносить по буквам"},{"en":"address","ru":"адрес"},{"en":"phone","ru":"телефон"},{"en":"email","ru":"электронная почта"}],
+   "vocab":[{"en":"what","ru":"что"},{"en":"where","ru":"где"},{"en":"how","ru":"как"},{"en":"who","ru":"кто"},{"en":"live","ru":"жить"},{"en":"work","ru":"работать"},{"en":"spell","ru":"писать / называть по буквам"},{"en":"address","ru":"адрес"},{"en":"phone","ru":"телефон"},{"en":"email","ru":"электронная почта"}],
    "grammar":{"title":"Wh-questions","blocks":[{"title":"What / Where / How","desc":"What — что. Where — где. How — как. How old — сколько лет. How do you spell — как пишется.","example":"What is your phone number?"},{"title":"Who","desc":"Who — кто. Who is she? Who are they?","example":"Who is your teacher?"}],
    "formulas":["What + is/are + ...?","Where + do/does + subject + V1?","How old are you?"],
    "extraExamples":[{"label":"Примеры","items":["Where do you work?","What is your email?","How do you spell that?"]}],
@@ -57,7 +69,7 @@ A1 = [
    "quiz":[{"sentence":"___ is your name?","options":["What","Where"],"answer":"What"},{"sentence":"Where ___ you live?","options":["do","does"],"answer":"do"},{"sentence":"___ old are you?","options":["How","What"],"answer":"How"},{"sentence":"___ is she?","options":["Who","Where"],"answer":"Who"},{"sentence":"What ___ your job?","options":["is","are"],"answer":"is"}],
    "pronunciation":[{"phrase":"What is your name?","ipa":"/wɒt ɪz jɔː neɪm/","tip":"What is → What's в речи"},{"phrase":"Where do you live?","ipa":"/weə duː juː lɪv/","tip":"Where — звук /eə/"},{"phrase":"How old are you?","ipa":"/haʊ əʊld ɑː juː/","tip":"Old — не путай с hold"},{"phrase":"How do you spell it?","ipa":"/haʊ duː juː spel/","tip":"Spell — короткий /e/"},{"phrase":"Who is she?","ipa":"/huː ɪz ʃiː/","tip":"Who — долгий /uː/"}],
    "culture":{"watch":["Friends — pilot episode (знакомство)"],"listen":["ABBA — Money, Money, Money"],"read":["Short bios of famous people (A1 level)"]},
-   "cultureCheck":["What is the person's job?","Where do they live?","How old are they?","Who is their best friend?","What is their email address?"],
+   "cultureCheck":["What is the person's job?","Where do they live?","How old are they?","Who is their best friend?","How do they spell their name?"],
    "speaking":["Составь 5 вопросов для знакомства.","Ответь на все вопросы о себе полными предложениями.","Спроси и запиши данные вымышленного персонажа."]},
 
   {"id":4,"level":"A1","title":"Articles & Plurals","titleRu":"Артикли и множественное число","topic":"a / an / the / -s","description":"Неопределённый и определённый артикли, множественное число существительных.","duration":"20 мин",
@@ -328,7 +340,7 @@ EXTRA = [
 # Add flashcards to lessons missing them
 def ensure_flashcards(lesson):
     if 'flashcards' not in lesson or len(lesson.get('flashcards', [])) < 20:
-        lesson['flashcards'] = fc(lesson.get('flashcards', lesson['vocab']))
+        lesson['flashcards'] = fc(lesson.get('flashcards', lesson['vocab']), lesson.get('grammar'))
     return lesson
 
 for L in A1 + A2_part + B1_part + EXTRA:

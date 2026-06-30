@@ -103,6 +103,222 @@ def build_warmup_spec(prompt: str, lesson: dict) -> dict:
             "explain": "Ответ — расположение объекта, не страна.",
         }
 
+    # ── Specific patterns (before generic handlers) ──
+
+    if "how many people" in p or "people in your family" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 3,
+            "mustIncludePattern": r"\d|one|two|three|four|five|six|seven|eight|nine|ten",
+            "mustIncludeAny": [["there are", "there is", "i have", "people", "family", "in my"]],
+            "acceptableAnswers": ["There are four people in my family.", "I have three people in my family."],
+            "hintWrong": "Число + people/family: There are four people…",
+            "explain": "How many people…? → число + people in my family.",
+        }
+
+    if "what colour" in p or "what color" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 3,
+            "mustIncludeAny": [
+                ["red", "blue", "black", "white", "green", "yellow", "brown", "grey", "gray", "pink", "colour", "color"],
+            ],
+            "acceptableAnswers": ["My bag is blue.", "It's black.", "My favourite colour is red."],
+            "hintWrong": "Назови цвет: It's blue / My bag is black.",
+            "explain": "What colour is…? → It is + colour.",
+        }
+
+    if "weather like" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 3,
+            "mustIncludeAny": [["sunny", "rainy", "cold", "hot", "windy", "cloudy", "snow", "it's", "it is"]],
+            "acceptableAnswers": ["It's sunny today.", "It's cold and windy.", "It's raining."],
+            "hintWrong": "It's + погода: sunny / rainy / cold…",
+            "explain": "What's the weather like? → It's + adjective.",
+        }
+
+    if "eat for breakfast" in p or "eat for lunch" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 4,
+            "mustIncludeAny": [["i", "usually", "have", "eat", "eggs", "toast", "coffee", "cereal", "bread"]],
+            "acceptableAnswers": ["I usually have eggs and toast.", "I eat cereal for breakfast."],
+            "hintWrong": "I usually have/eat + еда.",
+            "explain": "What do you eat…? → I have/eat + food.",
+        }
+
+    if "favourite dish" in p or "favorite dish" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 3,
+            "mustIncludeAny": [["favourite", "favorite", "like", "love", "pizza", "pasta", "soup", "chicken", "rice"]],
+            "acceptableAnswers": ["My favourite dish is pasta.", "I love pizza."],
+            "hintWrong": "My favourite dish is… / I love…",
+            "explain": "Назови любимое блюдо.",
+        }
+
+    if "tea or coffee" in p or "card or cash" in p or "pay by card" in p or "cash or" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 2,
+            "mustIncludeAny": [["tea", "coffee", "card", "cash", "prefer", "usually", "both"]],
+            "acceptableAnswers": ["I prefer tea.", "I usually pay by card.", "Cash, please."],
+            "hintWrong": "Выбери: tea/coffee или card/cash.",
+            "explain": "Ответь, что предпочитаешь.",
+        }
+
+    if "where do your parents" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 4,
+            "mustIncludeAny": [["parents", "live", "in", "moscow", "city", "country", "home"]],
+            "acceptableAnswers": ["My parents live in Moscow.", "They live in the countryside."],
+            "hintWrong": "My parents live in + место.",
+            "explain": "Where do your parents live? → My parents live in…",
+        }
+
+    if "where do you usually go shopping" in p or "where do you shop" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 4,
+            "mustIncludeAny": [["i shop", "i go", "supermarket", "mall", "online", "market", "store"]],
+            "acceptableAnswers": ["I usually shop at the supermarket.", "I go to the shopping mall."],
+            "hintWrong": "I shop at… / I go to…",
+            "explain": "Where do you shop? → место покупок.",
+        }
+
+    if "free time" in p or "in your free time" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 4,
+            "mustIncludeAny": [["i", "read", "play", "watch", "listen", "sport", "music", "relax", "enjoy"]],
+            "acceptableAnswers": ["In my free time I read books.", "I play football and watch films."],
+            "hintWrong": "In my free time I + hobby.",
+            "explain": "What do you do in your free time? → хобби.",
+        }
+
+    if "feel today" in p or "when you are ill" in p or "when you feel ill" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 3,
+            "mustIncludeAny": [["fine", "well", "good", "tired", "ill", "sick", "headache", "doctor", "better", "don't feel"]],
+            "acceptableAnswers": ["I don't feel well today.", "I have a headache.", "I feel fine, thanks."],
+            "hintWrong": "I feel… / I have a headache / I don't feel well.",
+            "explain": "Опиши самочувствие.",
+        }
+
+    if "bigger than" in p or "more interesting" in p or "taller" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 4,
+            "mustIncludeAny": [["bigger", "smaller", "taller", "more", "less", "than", "yes", "no", "think"]],
+            "acceptableAnswers": ["Yes, my city is bigger than yours.", "I think this book is more interesting."],
+            "hintWrong": "Сравни: bigger than / more interesting than.",
+            "explain": "Ответь сравнением с than.",
+        }
+
+    if "what does" in p and "mean" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 4,
+            "mustIncludeAny": [["means", "mean", "start", "conversation", "ice", "idiom", "to", "it"]],
+            "acceptableAnswers": ["It means to start a conversation.", "Break the ice means to make people feel comfortable."],
+            "hintWrong": "It means… + объяснение значения.",
+            "explain": "What does X mean? → It means…",
+        }
+
+    if "make or" in p and "decision" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 3,
+            "mustIncludeAny": [["make", "take", "decision", "make a decision"]],
+            "mustNotInclude": ["yes, i do", "no, i don't"],
+            "acceptableAnswers": ["You make a decision.", "We make decisions, not do decisions."],
+            "hintWrong": "You make a decision (не do a decision).",
+            "explain": "Collocation: make a decision.",
+        }
+
+    if "b2 exam" in p or "which exam" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 3,
+            "mustIncludeAny": [["fce", "ielts", "cambridge", "toefl", "exam", "preparing", "pet", "cae"]],
+            "acceptableAnswers": ["I'm preparing for FCE.", "I'm taking IELTS.", "Cambridge B2 First."],
+            "hintWrong": "Назови экзамен: FCE / IELTS / Cambridge B2.",
+            "explain": "Which B2 exam…? → название экзамена.",
+        }
+
+    if "if it rains" in p or "if you won" in p or "if you had" in p or "would you" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 4,
+            "mustIncludeAny": [["would", "will", "if", "stay", "go", "buy", "travel", "i"]],
+            "acceptableAnswers": ["If it rains, I will stay home.", "If I won the lottery, I would travel."],
+            "hintWrong": "If + present, will… / If + past, would…",
+            "explain": "Conditional: if-clause + result clause.",
+        }
+
+    if "is spoken" in p or "is made" in p or "passive" in p.lower():
+        return {
+            "prompt": prompt,
+            "minWords": 4,
+            "mustIncludeAny": [["is", "are", "spoken", "made", "built", "used", "english", "china", "here"]],
+            "acceptableAnswers": ["English is spoken here.", "My phone is made in China."],
+            "hintWrong": "is/are + V3: is spoken / is made.",
+            "explain": "Passive: is/are + past participle.",
+        }
+
+    if "tag" in p and "?" in p and ("," in p or "isn't" in p or "don't" in p):
+        return {
+            "prompt": prompt,
+            "minWords": 2,
+            "mustIncludeAny": [["yes", "no", "is", "are", "do", "does", "can", "isn't", "aren't", "don't"]],
+            "acceptableAnswers": ["Yes, it is.", "No, I don't.", "Yes, she does."],
+            "hintWrong": "Yes/No + тот же auxiliary из вопроса.",
+            "explain": "Question tag → короткий Yes/No ответ.",
+        }
+
+    if "know anyone who" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 4,
+            "mustIncludeAny": [["yes", "no", "friend", "know", "speaks", "who", "colleague"]],
+            "acceptableAnswers": ["Yes, my friend speaks Chinese.", "No, I don't know anyone who speaks Chinese."],
+            "hintWrong": "Yes, my friend… / No, I don't know anyone who…",
+            "explain": "Ответь о человеке, которого знаешь.",
+        }
+
+    if "book" in p and "recommend" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 4,
+            "mustIncludeAny": [["the book", "that", "which", "recommended", "is", "called", "about"]],
+            "acceptableAnswers": ["The book that I recommended is about history.", "It's the novel I told you about."],
+            "hintWrong": "The book that/which I recommended…",
+            "explain": "Relative clause: the book that I recommended.",
+        }
+
+    if "not only" in p and "but" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 6,
+            "mustIncludeAny": [["not only", "but", "also", "he", "she", "they", "won"]],
+            "acceptableAnswers": ["Not only did he win, but he also broke the record."],
+            "hintWrong": "Закончи: but he also…",
+            "explain": "Not only…, but (also)… — полная конструкция.",
+        }
+
+    if "never have i" in p or "never have you" in p:
+        return {
+            "prompt": prompt,
+            "minWords": 5,
+            "mustIncludeAny": [["never", "have", "seen", "been", "such", "before"]],
+            "acceptableAnswers": ["Never have I seen such a beautiful view."],
+            "hintWrong": "Never have I + past participle…",
+            "explain": "Negative inversion: Never have I…",
+        }
+
     # Yes/No: Are you...
     if p.startswith("are you") or p.startswith("is he") or p.startswith("is she"):
         return {
@@ -134,8 +350,15 @@ def build_warmup_spec(prompt: str, lesson: dict) -> dict:
             "explain": "На Can…? — can или can't в ответе.",
         }
 
-    # Do you / Does
-    if p.startswith("do you") or p.startswith("does ") or "do they" in p or "does she" in p:
+    # Do you / Does — only simple yes/no (not wh- or or-questions)
+    if (
+        (p.startswith("do you") or p.startswith("does ") or "do they" in p or "does she" in p)
+        and "what" not in p
+        and "which" not in p
+        and " or " not in p
+        and "mean" not in p
+        and "know anyone" not in p
+    ):
         return {
             "prompt": prompt,
             "minWords": 2,
@@ -145,7 +368,7 @@ def build_warmup_spec(prompt: str, lesson: dict) -> dict:
             "explain": "На Do/Does…? — do или don't.",
         }
 
-    # What do you / What does
+    # What do you / What does — after yes/no guard
     if "what do you" in p or "what does" in p:
         return {
             "prompt": prompt,
@@ -209,12 +432,19 @@ def build_warmup_spec(prompt: str, lesson: dict) -> dict:
         }
 
     if "how many" in p:
+        people_hint = "people" in p or "family" in p
         return {
             "prompt": prompt,
             "minWords": 3,
             "mustIncludePattern": r"\d|one|two|three|four|five|six|seven|eight|nine|ten",
-            "mustIncludeAny": [["there are", "there is", "i have", "rooms", "people"]],
-            "acceptableAnswers": ["There are three rooms.", "I have two brothers."],
+            "mustIncludeAny": [
+                ["there are", "there is", "i have", "people", "rooms"] if not people_hint else
+                ["there are", "there is", "i have", "people", "family"]
+            ],
+            "acceptableAnswers": [
+                "There are four people in my family." if people_hint else "There are three rooms.",
+                "I have two brothers." if people_hint else "I have two apples.",
+            ],
             "hintWrong": "Число + существительное: There are three …",
             "explain": "How many…? → число + мн.ч.",
         }
@@ -263,17 +493,17 @@ def build_warmup_spec(prompt: str, lesson: dict) -> dict:
             "explain": "Present Perfect: have/has + V3.",
         }
 
-    # Wh- generic fallback using lesson examples
-    examples = _grammar_examples(lesson)
+    # Wh- fallback — topic keywords required, no grammar examples as answers
+    topic = lesson.get("topic", "English")
     return {
         "prompt": prompt,
         "minWords": 4,
-        "topicKeywords": vocab,
-        "acceptableAnswers": examples[:3] if examples else [
-            f"I use words from this lesson about {lesson.get('topic', 'English')}."
+        "topicKeywords": vocab[:6],
+        "acceptableAnswers": [
+            f"I can answer about {topic} using words from this lesson.",
         ],
         "hintWrong": "Полный ответ по теме урока на английском.",
-        "explain": f"Ответь по теме: {lesson.get('topic', '')}.",
+        "explain": f"Ответь по теме: {topic}.",
     }
 
 
@@ -392,7 +622,11 @@ def build_culture_spec(prompt: str, lesson: dict) -> dict:
         "prompt": prompt,
         "minWords": 4,
         "topicKeywords": vocab,
-        "acceptableAnswers": _grammar_examples(lesson)[:2] or ["Answer about the material in English."],
+        "mustIncludeAny": [vocab[:3]] if vocab else [["they", "he", "she", "the"]],
+        "acceptableAnswers": [
+            "They talk about the topic in the material.",
+            "The scene shows the main idea of the lesson.",
+        ],
         "hintWrong": "Ответ по материалу урока на английском.",
         "explain": "Опиши, что видел/слышал в материале.",
     }
@@ -504,9 +738,12 @@ def build_theory_check(lesson: dict) -> list:
 
     if blocks:
         b = blocks[0]
+        wrong_ex = "He go to work every day."
+        if mistake.get("wrong"):
+            wrong_ex = mistake["wrong"]
         checks.append({
             "question": f"Пример по теме «{b['title']}»:",
-            "options": [b["example"], "This example is wrong syntax."],
+            "options": [b["example"], wrong_ex],
             "answer": b["example"],
         })
 
