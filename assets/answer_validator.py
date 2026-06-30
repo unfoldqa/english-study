@@ -2,6 +2,8 @@
 """Build per-question answer validation specs from prompts and lesson context."""
 import re
 
+from content_utils import build_context_drill_from_lesson
+
 
 def _pick_vocab(lesson, n=6):
     return [v["en"].lower() for v in lesson.get("vocab", [])[:n]]
@@ -12,9 +14,158 @@ def _grammar_examples(lesson):
     ex = []
     for b in g.get("blocks", []):
         ex.append(b.get("example", ""))
-    for group in g.get("extraExamples", []):
+    for group in g.get("extraExamples", []) or []:
         ex.extend(group.get("items", []))
     return [e for e in ex if e]
+
+
+def _culture_fallback(prompt: str, lesson: dict, p: str) -> dict:
+    """Per-prompt culture answers — no generic cross-module duplicates."""
+    vocab = _pick_vocab(lesson, 8)
+    topic = lesson.get("topic", "the lesson")
+    lid = lesson.get("id", 0)
+    idx = abs(hash(prompt)) % 5
+
+    if "who" in p:
+        answers = [
+            "The main character is a young student.",
+            "Her brother works as a teacher.",
+            "The oldest child is sixteen years old.",
+            "The narrator introduces his parents first.",
+            "The woman in the scene is the mother.",
+        ]
+    elif "what happen" in p or "what did" in p or "what has" in p:
+        answers = [
+            "The main character faces a difficult choice.",
+            "She discovers something unexpected in the story.",
+            "They solve the problem together at the end.",
+            "He learns an important lesson about family.",
+            "The event changes how the characters feel.",
+        ]
+    elif "where" in p:
+        answers = [
+            "The story takes place in a small town.",
+            "The scene is set in London.",
+            "They live in the city centre.",
+            "The action happens at home and at school.",
+            "Most events occur in an English-speaking country.",
+        ]
+    elif "how many" in p:
+        answers = [
+            "There are four people in the family.",
+            "The family has three children.",
+            "Two siblings appear in the scene.",
+            "There are five members in total.",
+            "Only three characters speak in this part.",
+        ]
+    elif "how long" in p or "since" in p or "for" in p and "friend" in p:
+        answers = [
+            "They have been friends for ten years.",
+            "She has lived there since 2020.",
+            "He has studied English for three years.",
+            "They have known each other since school.",
+            "The friendship has lasted for many years.",
+        ]
+    elif "what does" in p or "what do" in p:
+        answers = [
+            f"He works with {vocab[0] if vocab else 'people'} every day.",
+            "She helps her family after school.",
+            "They describe their daily routine clearly.",
+            "The brother studies at university.",
+            "The parents talk about their jobs.",
+        ]
+    elif "describe" in p or "detail" in p:
+        answers = [
+            "The author describes the room and the weather.",
+            "She explains the characters' feelings in detail.",
+            "The passage describes a busy morning routine.",
+            "He describes the city streets very vividly.",
+            "The writer focuses on sounds and colours.",
+        ]
+    elif "predict" in p or "might" in p or "next" in p or "ending" in p:
+        answers = [
+            "The character will probably apologise next.",
+            "They might travel abroad in the next chapter.",
+            "I think the problem will be solved soon.",
+            "She will likely call her friend tomorrow.",
+            "The story might end with a surprise.",
+        ]
+    elif "strategy" in p or "exam" in p or "essay" in p or "skim" in p:
+        answers = [
+            "The speaker explains skim vs scan for reading.",
+            "She recommends planning the essay introduction first.",
+            "He suggests underlining key words in the question.",
+            "They review time management for the exam.",
+            "The tip is to check grammar in the last five minutes.",
+        ]
+    elif "technology" in p or "phone" in p or "online" in p or "app" in p:
+        answers = [
+            "People use smartphones for work and study.",
+            "The character spends too much time online.",
+            "They discuss useful apps for learning English.",
+            "Social media affects how friends communicate.",
+            "Technology helps them stay in touch abroad.",
+        ]
+    elif "food" in p or "meal" in p or "breakfast" in p or "dish" in p:
+        answers = [
+            "They order coffee and a sandwich.",
+            "Breakfast includes eggs and toast.",
+            "Her favourite dish is pasta with vegetables.",
+            "The family cooks dinner together on Sundays.",
+            "He prefers tea instead of coffee.",
+        ]
+    elif "weather" in p or "rain" in p or "sunny" in p:
+        answers = [
+            "It is sunny and warm in the scene.",
+            "They talk about rain and cold wind.",
+            "The forecast says it will snow tomorrow.",
+            "She takes an umbrella because it is raining.",
+            "The weather changes from cloudy to bright.",
+        ]
+    elif "travel" in p or "hotel" in p or "trip" in p:
+        answers = [
+            "They book a hotel near the station.",
+            "The trip includes a visit to the museum.",
+            "He asks for directions at the airport.",
+            "Their holiday starts next Friday.",
+            "The guide explains local customs.",
+        ]
+    elif "advice" in p or "should" in p or "doctor" in p:
+        answers = [
+            "The doctor says he should rest more.",
+            "She advises him to drink more water.",
+            "They suggest taking a short walk daily.",
+            "You should see a specialist about that.",
+            "His friend recommends joining a sports club.",
+        ]
+    elif "feel" in p or "mood" in p:
+        answers = [
+            "The character feels nervous at first.",
+            "She seems relieved after the conversation.",
+            "They are excited about the news.",
+            "He feels tired but happy.",
+            "Everyone looks worried in that scene.",
+        ]
+    else:
+        vw = vocab[idx % len(vocab)] if vocab else "the topic"
+        answers = [
+            f"The material focuses on {topic.lower()}.",
+            f"The scene relates to {vw} and daily life.",
+            f"Characters discuss {topic.lower()} in simple English.",
+            f"The passage uses vocabulary about {vw}.",
+            f"The listening clip explains ideas from {topic.lower()}.",
+        ]
+
+    acceptable = answers[idx % len(answers)]
+    return {
+        "prompt": prompt,
+        "minWords": 4,
+        "topicKeywords": vocab,
+        "mustIncludeAny": [vocab[:3]] if vocab else [["the", "they", "he", "she"]],
+        "acceptableAnswers": [acceptable],
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": f"Опиши, что видел/слышал по теме «{topic}».",
+    }
 
 
 def build_warmup_spec(prompt: str, lesson: dict) -> dict:
@@ -617,19 +768,7 @@ def build_culture_spec(prompt: str, lesson: dict) -> dict:
             "hintWrong": "Неправильная форма мн.ч.",
             "explain": "Irregular plurals.",
         }
-    vocab = _pick_vocab(lesson, 5)
-    return {
-        "prompt": prompt,
-        "minWords": 4,
-        "topicKeywords": vocab,
-        "mustIncludeAny": [vocab[:3]] if vocab else [["they", "he", "she", "the"]],
-        "acceptableAnswers": [
-            "They talk about the topic in the material.",
-            "The scene shows the main idea of the lesson.",
-        ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале.",
-    }
+    return _culture_fallback(prompt, lesson, p)
 
 
 def build_speaking_spec(task: str, lesson: dict) -> dict:
@@ -690,23 +829,9 @@ def build_speaking_spec(task: str, lesson: dict) -> dict:
     return base
 
 
-def build_context_drill(lesson: dict) -> list:
-    """Typed gap-fill drills with exact answers from quiz."""
-    drills = []
-    quiz = lesson.get("quiz", [])
-    for i, q in enumerate(quiz[:4]):
-        parts = q["sentence"].split("___")
-        before = parts[0].strip()
-        after = parts[1].strip() if len(parts) > 1 else ""
-        prompt = f"{before} ______ {after}".strip()
-        drills.append({
-            "id": i + 1,
-            "prompt": prompt,
-            "answer": q["answer"],
-            "altAnswers": _alt_forms(q["answer"]),
-            "hint": f"Подсказка: слово из урока «{lesson.get('topic', '')}».",
-        })
-    return drills
+def build_context_drill(lesson: dict, sources=None) -> list:
+    """Gap-fill drills from extra examples and pronunciation — not the main quiz."""
+    return build_context_drill_from_lesson(lesson, sources)
 
 
 def _alt_forms(word: str) -> list:
@@ -736,15 +861,14 @@ def build_theory_check(lesson: dict) -> list:
             "answer": mistake["right"],
         })
 
-    if blocks:
-        b = blocks[0]
-        wrong_ex = "He go to work every day."
-        if mistake.get("wrong"):
-            wrong_ex = mistake["wrong"]
+    if blocks and len(blocks) > 1:
+        b = blocks[1]
+        wrong_rule = blocks[0]["desc"][:100]
+        right_rule = b["desc"][:100]
         checks.append({
-            "question": f"Пример по теме «{b['title']}»:",
-            "options": [b["example"], wrong_ex],
-            "answer": b["example"],
+            "question": f"Какое правило относится к «{b['title']}»?",
+            "options": [right_rule, wrong_rule],
+            "answer": right_rule,
         })
 
     formulas = g.get("formulas", [])

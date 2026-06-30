@@ -1,5 +1,7 @@
 """Authoritative content for filler modules 9–16, 25–32, 41–48, 57–64."""
 
+from content_utils import unique_extra_examples
+
 FILLER_IDS = list(range(9, 17)) + list(range(25, 33)) + list(range(41, 49)) + list(range(57, 65))
 
 
@@ -28,8 +30,7 @@ def _L(
             "title": grammar_title,
             "blocks": blocks,
             "formulas": formulas,
-            "extraExamples": extra_examples
-            or [{"label": "Examples", "items": [b["example"] for b in blocks]}],
+            "extraExamples": unique_extra_examples(blocks, extra_examples, pronunciation),
             "mistake": mistake,
         },
         "quiz": quiz,
@@ -823,7 +824,7 @@ FILLER.update({
         [{"phrase":"I need to charge my phone.","ipa":"/aɪ niːd tə tʃɑːdʒ maɪ fəʊn/","tip":"Charge — battery vocabulary"},{"phrase":"I spend too much time online.","ipa":"/aɪ spend tuː mʌtʃ taɪm ˈɒnlaɪn/","tip":"Spend time on — digital habits"},{"phrase":"Have you updated the app?","ipa":"/hæv juː ʌpˈdeɪtɪd ði æp/","tip":"Update — tech verb"},{"phrase":"My battery is low.","ipa":"/maɪ ˈbætəri ɪz ləʊ/","tip":"Battery low — everyday phrase"},{"phrase":"Technology has changed everything.","ipa":"/tekˈnɒlədʒi hæz tʃeɪndʒd ˈevriθɪŋ/","tip":"Present perfect for change"}],
         {"watch":["Black Mirror — technology themes (selected episodes)"],"listen":["Daft Punk — Technologic"],"read":["Wired — easy tech articles"]},
         ["What device do they use?","How much time do they spend online?","What app is mentioned?","How has technology changed something?","What problem do they mention?"],
-        ["Опиши свой digital day — 5 предложений.","Сравни life before/after smartphones.","Дай 3 tech tips a friend should follow."],
+        ["Опиши свой digital day — 5 предложений.","Сравни life before/after smartphones.","Дай 3 tech tips a friend should follow.","B1 checkpoint: 3-минутный монолог — мнение, опыт (Present Perfect), план (going to/will), один условный."],
     ),
 })
 

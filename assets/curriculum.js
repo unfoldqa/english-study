@@ -7,6 +7,7 @@ const COURSE_META = {
   "homeworkHours": 149,
   "weeksAt5h": 38,
   "cefrNote": "По CEFR (Cambridge/Oxford) путь A1→B2 — примерно 500–600 академических часов в вузе; интенсивный курс с самостоятельной работой — 150–200 ч.",
+  "b1Milestone": "Модули 33–48: при прохождении с домашкой — уровень B1 (Cambridge Preliminary B1 / Oxford B1). Ключевые темы: модали, 1–3 условные, пассив, косвенная речь, relative clauses, phrasal verbs, narrative tenses.",
   "levels": {
     "A1": {
       "modules": 16,
@@ -458,86 +459,120 @@ const CURRICULUM = [
       {
         "word": "hello",
         "trans": "привет",
-        "example": "Hello! My name is Anna."
+        "example": "«hello» helped me understand this lesson."
       },
       {
         "word": "goodbye",
         "trans": "до свидания",
-        "example": "Thank you very much!"
+        "example": "I often use «goodbye» when I talk about this lesson."
       },
       {
         "word": "please",
         "trans": "пожалуйста",
-        "example": "Good morning!"
+        "example": "The teacher wrote «please» on the board."
       },
       {
         "word": "thank you",
         "trans": "спасибо",
-        "example": "Nice to meet you."
+        "example": "I'm fine, thank you."
       },
       {
         "word": "name",
         "trans": "имя",
-        "example": "See you later!"
+        "example": "«name» is a key word in this lesson on this lesson."
       },
       {
         "word": "country",
         "trans": "страна",
-        "example": "Hello! My name is Anna."
+        "example": "I need to remember «country» for homework."
       },
       {
         "word": "nice",
         "trans": "приятно (в знакомстве)",
-        "example": "Thank you very much!"
+        "example": "I used «nice» in my written answer."
       },
       {
         "word": "meet",
         "trans": "встречать(ся)",
-        "example": "Good morning!"
+        "example": "She asked me about «meet» during practice."
       },
       {
         "word": "friend",
         "trans": "друг",
-        "example": "Nice to meet you."
+        "example": "«friend» fits well in a sentence about this lesson."
       },
       {
         "word": "welcome",
         "trans": "добро пожаловать",
-        "example": "See you later!"
+        "example": "«welcome» was new for me this week."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "We discussed «practice» in class today."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "He repeated «review» three times."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "My partner corrected my use of «sentence»."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "My note says «grammar» means «грамматика»."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "In our dialogue, «vocabulary» appeared twice."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I linked «speaking» to other words I know."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I heard «listening» in the listening exercise."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I looked up «writing» in the dictionary."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "The example with «reading» was clear."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "Can you make a sentence with «homework»?"
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "___ , my name is Tom.",
+        "sentence": "___ morning",
         "options": [
-          "Hello",
-          "Goodbye"
+          "Good",
+          "Goods"
         ],
-        "answer": "Hello"
+        "answer": "Good"
       },
       {
-        "sentence": "___ you very much!",
+        "sentence": "___ you later",
         "options": [
-          "Thank",
-          "Thanks"
+          "See",
+          "Sees"
         ],
-        "answer": "Thank"
-      },
-      {
-        "sentence": "Nice to ___ you.",
-        "options": [
-          "meet",
-          "meeting"
-        ],
-        "answer": "meet"
-      },
-      {
-        "sentence": "I am ___.",
-        "options": [
-          "fine",
-          "finely"
-        ],
-        "answer": "fine"
+        "answer": "See"
       }
     ],
     "theoryCheck": [
@@ -550,12 +585,12 @@ const CURRICULUM = [
         "answer": "I'm fine, thank you."
       },
       {
-        "question": "Пример по теме «Приветствия»:",
+        "question": "Какое правило относится к «Вежливость»?",
         "options": [
-          "Hello! My name is Anna.",
-          "I am fine thank you."
+          "Please — пожалуйста. Thank you — спасибо. You're welcome — не за что. Excuse me — извините.",
+          "Hello / Hi — универсальное приветствие. Good morning — до полудня. Good evening — вечером."
         ],
-        "answer": "Hello! My name is Anna."
+        "answer": "Please — пожалуйста. Thank you — спасибо. You're welcome — не за что. Excuse me — извините."
       },
       {
         "question": "Какая формула относится к «Greetings»?",
@@ -569,48 +604,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "______ , my name is Tom.",
-        "answer": "Hello",
+        "prompt": "______ are you",
+        "answer": "How",
         "altAnswers": [
-          "hello",
-          "Hello"
+          "How",
+          "how"
         ],
-        "hint": "Подсказка: слово из урока «Первые фразы»."
+        "hint": "Подсказка: тема «Первые фразы»."
       },
       {
         "id": 2,
-        "prompt": "______ you very much!",
-        "answer": "Thank",
+        "prompt": "______ are you from",
+        "answer": "Where",
         "altAnswers": [
-          "thank",
-          "Thank"
+          "Where",
+          "where"
         ],
-        "hint": "Подсказка: слово из урока «Первые фразы»."
+        "hint": "Подсказка: тема «Первые фразы»."
       },
       {
         "id": 3,
-        "prompt": "Nice to ______ you.",
-        "answer": "meet",
+        "prompt": "______ fine, thank you",
+        "answer": "I'm",
         "altAnswers": [
-          "meet",
-          "Meet"
+          "I'm",
+          "i'm"
         ],
-        "hint": "Подсказка: слово из урока «Первые фразы»."
-      },
-      {
-        "id": 4,
-        "prompt": "I am ______ .",
-        "answer": "fine",
-        "altAnswers": [
-          "fine",
-          "Fine"
-        ],
-        "hint": "Подсказка: слово из урока «Первые фразы»."
+        "hint": "Подсказка: тема «Первые фразы»."
       }
     ],
     "theory": {
       "intro": "Базовые приветствия, прощания и вежливые фразы для знакомства.",
-      "reading": "**Приветствия и знакомство** — Базовые приветствия, прощания и вежливые фразы для знакомства.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Приветствия\nHello / Hi — универсальное приветствие. Good morning — до полудня. Good evening — вечером.\n\n*Пример:* Hello! My name is Anna.\n\n### Вежливость\nPlease — пожалуйста. Thank you — спасибо. You're welcome — не за что. Excuse me — извините.\n\n*Пример:* Thank you very much!\n\n### Формулы\n- `Hello / Hi + name`\n- `Nice to meet you`\n- `How are you? — I'm fine, thanks.`\n\n### Типичная ошибка\n❌ I am fine thank you.\n✅ I'm fine, thank you.",
+      "reading": "**Приветствия и знакомство** — Базовые приветствия, прощания и вежливые фразы для знакомства.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Приветствия\nHello / Hi — универсальное приветствие. Good morning — до полудня. Good evening — вечером.\n\n### Вежливость\nPlease — пожалуйста. Thank you — спасибо. You're welcome — не за что. Excuse me — извините.\n\n### Формулы\n- `Hello / Hi + name`\n- `Nice to meet you`\n- `How are you? — I'm fine, thanks.`\n\n### Типичная ошибка\n❌ I am fine thank you.\n✅ I'm fine, thank you.",
       "keyPoints": [
         "Приветствия: Hello / Hi — универсальное приветствие. Good morning — до полудня. Good evening ",
         "Вежливость: Please — пожалуйста. Thank you — спасибо. You're welcome — не за что. Excuse me ",
@@ -625,18 +650,18 @@ const CURRICULUM = [
         "question": "What is «hello»?",
         "options": [
           "страна",
-          "друг",
-          "имя",
-          "привет"
+          "привет",
+          "пожалуйста",
+          "приятно (в знакомстве)"
         ],
         "answer": "привет"
       },
       {
         "question": "What is «goodbye»?",
         "options": [
-          "приятно (в знакомстве)",
-          "до свидания",
           "имя",
+          "до свидания",
+          "пожалуйста",
           "друг"
         ],
         "answer": "до свидания"
@@ -644,19 +669,19 @@ const CURRICULUM = [
       {
         "question": "What is «please»?",
         "options": [
+          "пожалуйста",
+          "добро пожаловать",
           "страна",
-          "спасибо",
-          "друг",
-          "пожалуйста"
+          "имя"
         ],
         "answer": "пожалуйста"
       },
       {
         "question": "What is «thank you»?",
         "options": [
-          "имя",
+          "приятно (в знакомстве)",
+          "друг",
           "спасибо",
-          "до свидания",
           "привет"
         ],
         "answer": "спасибо"
@@ -664,9 +689,9 @@ const CURRICULUM = [
       {
         "question": "What is «name»?",
         "options": [
-          "привет",
-          "добро пожаловать",
+          "страна",
           "до свидания",
+          "привет",
           "имя"
         ],
         "answer": "имя"
@@ -1008,7 +1033,10 @@ const CURRICULUM = [
           "is",
           "are",
           "student",
-          "teacher"
+          "teacher",
+          "happy",
+          "tired",
+          "here"
         ],
         "mustIncludeAny": [
           [
@@ -1018,11 +1046,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The story takes place in a small town."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «am / is / are»."
       },
       {
         "prompt": "Are they happy or sad?",
@@ -1072,7 +1099,10 @@ const CURRICULUM = [
           "is",
           "are",
           "student",
-          "teacher"
+          "teacher",
+          "happy",
+          "tired",
+          "here"
         ],
         "mustIncludeAny": [
           [
@@ -1082,11 +1112,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss am / is / are in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «am / is / are»."
       }
     ],
     "speaking": [
@@ -1172,136 +1201,136 @@ const CURRICULUM = [
       {
         "word": "am",
         "trans": "есть (я)",
-        "example": "She is a doctor."
+        "example": "I am 25 years old."
       },
       {
         "word": "is",
         "trans": "есть (он/она/оно)",
-        "example": "Are you ready? — Yes, I am."
+        "example": "Is she your sister?"
       },
       {
         "word": "are",
         "trans": "есть (мы/вы/они)",
-        "example": "I am 25 years old."
+        "example": "They are at home."
       },
       {
         "word": "student",
         "trans": "студент",
-        "example": "They are at home."
+        "example": "The teacher wrote «student» on the board."
       },
       {
         "word": "teacher",
         "trans": "учитель",
-        "example": "Is she your sister?"
+        "example": "Let's practise «teacher» in a full sentence."
       },
       {
         "word": "happy",
         "trans": "счастливый",
-        "example": "Are we late?"
+        "example": "«happy» is a key word in this lesson on am / is / are."
       },
       {
         "word": "tired",
         "trans": "уставший",
-        "example": "She is a doctor."
+        "example": "I need to remember «tired» for homework."
       },
       {
         "word": "here",
         "trans": "здесь",
-        "example": "Are you ready? — Yes, I am."
+        "example": "I used «here» in my written answer."
       },
       {
         "word": "there",
         "trans": "там",
-        "example": "I am 25 years old."
+        "example": "She asked me about «there» during practice."
       },
       {
         "word": "ready",
         "trans": "готовый",
-        "example": "They are at home."
+        "example": "«ready» fits well in a sentence about am / is / are."
       },
       {
-        "word": "am",
-        "trans": "есть (я)",
-        "example": "Is she your sister?"
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» was new for me this week."
       },
       {
-        "word": "is",
-        "trans": "есть (он/она/оно)",
-        "example": "Are we late?"
+        "word": "review",
+        "trans": "повторение",
+        "example": "We discussed «review» in class today."
       },
       {
-        "word": "are",
-        "trans": "есть (мы/вы/они)",
-        "example": "She is a doctor."
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "He repeated «sentence» three times."
       },
       {
-        "word": "student",
-        "trans": "студент",
-        "example": "Are you ready? — Yes, I am."
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "My partner corrected my use of «grammar»."
       },
       {
-        "word": "teacher",
-        "trans": "учитель",
-        "example": "I am 25 years old."
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "My note says «vocabulary» means «лексика»."
       },
       {
-        "word": "happy",
-        "trans": "счастливый",
-        "example": "They are at home."
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "In our dialogue, «speaking» appeared twice."
       },
       {
-        "word": "tired",
-        "trans": "уставший",
-        "example": "Is she your sister?"
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I linked «listening» to other words I know."
       },
       {
-        "word": "here",
-        "trans": "здесь",
-        "example": "Are we late?"
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I heard «writing» in the listening exercise."
       },
       {
-        "word": "there",
-        "trans": "там",
-        "example": "She is a doctor."
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I looked up «reading» in the dictionary."
       },
       {
-        "word": "ready",
-        "trans": "готовый",
-        "example": "Are you ready? — Yes, I am."
+        "word": "homework",
+        "trans": "домашка",
+        "example": "The example with «homework» was clear."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "I ___ a student.",
+        "sentence": "I am 25 ___ old",
         "options": [
-          "am",
-          "is"
+          "years",
+          "year"
         ],
-        "answer": "am"
+        "answer": "years"
       },
       {
-        "sentence": "He ___ tired.",
+        "sentence": "They are at ___",
         "options": [
-          "is",
-          "are"
+          "home",
+          "homes"
         ],
-        "answer": "is"
+        "answer": "home"
       },
       {
-        "sentence": "They ___ from Spain.",
+        "sentence": "Is she your ___",
         "options": [
-          "is",
-          "are"
+          "sister",
+          "sisters"
         ],
-        "answer": "are"
+        "answer": "sister"
       },
       {
-        "sentence": "___ you ready?",
+        "sentence": "Are we ___",
         "options": [
-          "Is",
-          "Are"
+          "late",
+          "lates"
         ],
-        "answer": "Are"
+        "answer": "late"
       }
     ],
     "theoryCheck": [
@@ -1314,12 +1343,12 @@ const CURRICULUM = [
         "answer": "She is my friend."
       },
       {
-        "question": "Пример по теме «Формы»:",
+        "question": "Какое правило относится к «Отрицание и вопрос»?",
         "options": [
-          "She is a doctor.",
-          "She are my friend."
+          "Отрицание: am not, isn't, aren't. Вопрос: Am I...? Is he...? Are they...?",
+          "I am, he/she/it is, we/you/they are. Сокращения: I'm, she's, they're."
         ],
-        "answer": "She is a doctor."
+        "answer": "Отрицание: am not, isn't, aren't. Вопрос: Am I...? Is he...? Are they...?"
       },
       {
         "question": "Какая формула относится к «Verb to be»?",
@@ -1333,48 +1362,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I ______ a student.",
-        "answer": "am",
+        "prompt": "She is ______",
+        "answer": "happy",
         "altAnswers": [
-          "Am",
-          "am"
+          "Happy",
+          "happy"
         ],
-        "hint": "Подсказка: слово из урока «am / is / are»."
+        "hint": "Подсказка: тема «am / is / are»."
       },
       {
         "id": 2,
-        "prompt": "He ______ tired.",
-        "answer": "is",
+        "prompt": "We are ______",
+        "answer": "here",
         "altAnswers": [
-          "Is",
-          "is"
+          "here",
+          "Here"
         ],
-        "hint": "Подсказка: слово из урока «am / is / are»."
+        "hint": "Подсказка: тема «am / is / are»."
       },
       {
         "id": 3,
-        "prompt": "They ______ from Spain.",
-        "answer": "are",
+        "prompt": "It is ______",
+        "answer": "cold",
         "altAnswers": [
-          "are",
-          "Are"
+          "cold",
+          "Cold"
         ],
-        "hint": "Подсказка: слово из урока «am / is / are»."
+        "hint": "Подсказка: тема «am / is / are»."
       },
       {
         "id": 4,
-        "prompt": "______ you ready?",
-        "answer": "Are",
+        "prompt": "She is my ______",
+        "answer": "friend",
         "altAnswers": [
-          "are",
-          "Are"
+          "Friend",
+          "friend"
         ],
-        "hint": "Подсказка: слово из урока «am / is / are»."
+        "hint": "Подсказка: тема «am / is / are»."
       }
     ],
     "theory": {
       "intro": "Глагол to be — основа английского: описание, местоположение, возраст.",
-      "reading": "**Глагол to be** — Глагол to be — основа английского: описание, местоположение, возраст.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Формы\nI am, he/she/it is, we/you/they are. Сокращения: I'm, she's, they're.\n\n*Пример:* She is a doctor.\n\n### Отрицание и вопрос\nОтрицание: am not, isn't, aren't. Вопрос: Am I...? Is he...? Are they...?\n\n*Пример:* Are you ready? — Yes, I am.\n\n### Формулы\n- `I am + noun/adjective`\n- `He/She/It is + ...`\n- `We/You/They are + ...`\n\n### Типичная ошибка\n❌ She are my friend.\n✅ She is my friend.",
+      "reading": "**Глагол to be** — Глагол to be — основа английского: описание, местоположение, возраст.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Формы\nI am, he/she/it is, we/you/they are. Сокращения: I'm, she's, they're.\n\n### Отрицание и вопрос\nОтрицание: am not, isn't, aren't. Вопрос: Am I...? Is he...? Are they...?\n\n### Формулы\n- `I am + noun/adjective`\n- `He/She/It is + ...`\n- `We/You/They are + ...`\n\n### Типичная ошибка\n❌ She are my friend.\n✅ She is my friend.",
       "keyPoints": [
         "Формы: I am, he/she/it is, we/you/they are. Сокращения: I'm, she's, they're.",
         "Отрицание и вопрос: Отрицание: am not, isn't, aren't. Вопрос: Am I...? Is he...? Are they...?",
@@ -1388,8 +1417,8 @@ const CURRICULUM = [
       {
         "question": "What is «am»?",
         "options": [
-          "уставший",
-          "учитель",
+          "счастливый",
+          "там",
           "есть (мы/вы/они)",
           "есть (я)"
         ],
@@ -1398,40 +1427,40 @@ const CURRICULUM = [
       {
         "question": "What is «is»?",
         "options": [
-          "там",
+          "готовый",
           "счастливый",
-          "есть (он/она/оно)",
-          "студент"
+          "учитель",
+          "есть (он/она/оно)"
         ],
         "answer": "есть (он/она/оно)"
       },
       {
         "question": "What is «are»?",
         "options": [
-          "уставший",
-          "есть (я)",
           "готовый",
-          "есть (мы/вы/они)"
+          "есть (я)",
+          "есть (мы/вы/они)",
+          "здесь"
         ],
         "answer": "есть (мы/вы/они)"
       },
       {
         "question": "What is «student»?",
         "options": [
-          "здесь",
+          "счастливый",
+          "там",
           "студент",
-          "есть (он/она/оно)",
-          "есть (мы/вы/они)"
+          "готовый"
         ],
         "answer": "студент"
       },
       {
         "question": "What is «teacher»?",
         "options": [
-          "здесь",
           "есть (он/она/оно)",
-          "готовый",
-          "учитель"
+          "учитель",
+          "счастливый",
+          "есть (я)"
         ],
         "answer": "учитель"
       },
@@ -1758,7 +1787,10 @@ const CURRICULUM = [
           "where",
           "how",
           "who",
-          "live"
+          "live",
+          "work",
+          "spell",
+          "address"
         ],
         "mustIncludeAny": [
           [
@@ -1768,11 +1800,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The action happens at home and at school."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «What / Where / How»."
       },
       {
         "prompt": "How old are they?",
@@ -1792,7 +1823,10 @@ const CURRICULUM = [
           "where",
           "how",
           "who",
-          "live"
+          "live",
+          "work",
+          "spell",
+          "address"
         ],
         "mustIncludeAny": [
           [
@@ -1802,11 +1836,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The woman in the scene is the mother."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «What / Where / How»."
       },
       {
         "prompt": "How do they spell their name?",
@@ -1816,7 +1849,10 @@ const CURRICULUM = [
           "where",
           "how",
           "who",
-          "live"
+          "live",
+          "work",
+          "spell",
+          "address"
         ],
         "mustIncludeAny": [
           [
@@ -1826,11 +1862,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from what / where / how."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «What / Where / How»."
       }
     ],
     "speaking": [
@@ -1916,86 +1951,120 @@ const CURRICULUM = [
       {
         "word": "what",
         "trans": "что",
-        "example": "What is your phone number?"
+        "example": "What is your email?"
       },
       {
         "word": "where",
         "trans": "где",
-        "example": "Who is your teacher?"
+        "example": "Where do you work?"
       },
       {
         "word": "how",
         "trans": "как",
-        "example": "Where do you work?"
+        "example": "How do you spell that?"
       },
       {
         "word": "who",
         "trans": "кто",
-        "example": "What is your email?"
+        "example": "I often use «who» when I talk about what / where / how."
       },
       {
         "word": "live",
         "trans": "жить",
-        "example": "How do you spell that?"
+        "example": "The teacher wrote «live» on the board."
       },
       {
         "word": "work",
         "trans": "работать",
-        "example": "What is your phone number?"
+        "example": "Let's practise «work» in a full sentence."
       },
       {
         "word": "spell",
         "trans": "писать / называть по буквам",
-        "example": "Who is your teacher?"
+        "example": "«spell» is a key word in this lesson on what / where / how."
       },
       {
         "word": "address",
         "trans": "адрес",
-        "example": "Where do you work?"
+        "example": "I need to remember «address» for homework."
       },
       {
         "word": "phone",
         "trans": "телефон",
-        "example": "What is your email?"
+        "example": "I used «phone» in my written answer."
       },
       {
         "word": "email",
         "trans": "электронная почта",
-        "example": "How do you spell that?"
+        "example": "She asked me about «email» during practice."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» fits well in a sentence about what / where / how."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» was new for me this week."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "We discussed «sentence» in class today."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "He repeated «grammar» three times."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "My partner corrected my use of «vocabulary»."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "My note says «speaking» means «говорение»."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "In our dialogue, «listening» appeared twice."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I linked «writing» to other words I know."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I heard «reading» in the listening exercise."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I looked up «homework» in the dictionary."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "___ is your name?",
+        "sentence": "___ do you work",
         "options": [
-          "What",
-          "Where"
+          "Where",
+          "Wheres"
         ],
-        "answer": "What"
+        "answer": "Where"
       },
       {
-        "sentence": "Where ___ you live?",
+        "sentence": "What is your ___",
         "options": [
-          "do",
-          "does"
+          "email",
+          "emails"
         ],
-        "answer": "do"
-      },
-      {
-        "sentence": "___ old are you?",
-        "options": [
-          "How",
-          "What"
-        ],
-        "answer": "How"
-      },
-      {
-        "sentence": "___ is she?",
-        "options": [
-          "Who",
-          "Where"
-        ],
-        "answer": "Who"
+        "answer": "email"
       }
     ],
     "theoryCheck": [
@@ -2008,12 +2077,12 @@ const CURRICULUM = [
         "answer": "Where do you live?"
       },
       {
-        "question": "Пример по теме «What / Where / How»:",
+        "question": "Какое правило относится к «Who»?",
         "options": [
-          "What is your phone number?",
-          "Where you live?"
+          "Who — кто. Who is she? Who are they?",
+          "What — что. Where — где. How — как. How old — сколько лет. How do you spell — как пишется."
         ],
-        "answer": "What is your phone number?"
+        "answer": "Who — кто. Who is she? Who are they?"
       },
       {
         "question": "Какая формула относится к «Wh-questions»?",
@@ -2027,48 +2096,28 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "______ is your name?",
-        "answer": "What",
+        "prompt": "How do you ______ that",
+        "answer": "spell",
         "altAnswers": [
-          "What",
-          "what"
+          "spell",
+          "Spell"
         ],
-        "hint": "Подсказка: слово из урока «What / Where / How»."
+        "hint": "Подсказка: тема «What / Where / How»."
       },
       {
         "id": 2,
-        "prompt": "Where ______ you live?",
-        "answer": "do",
+        "prompt": "What is your ______",
+        "answer": "job",
         "altAnswers": [
-          "Do",
-          "do"
+          "Job",
+          "job"
         ],
-        "hint": "Подсказка: слово из урока «What / Where / How»."
-      },
-      {
-        "id": 3,
-        "prompt": "______ old are you?",
-        "answer": "How",
-        "altAnswers": [
-          "how",
-          "How"
-        ],
-        "hint": "Подсказка: слово из урока «What / Where / How»."
-      },
-      {
-        "id": 4,
-        "prompt": "______ is she?",
-        "answer": "Who",
-        "altAnswers": [
-          "who",
-          "Who"
-        ],
-        "hint": "Подсказка: слово из урока «What / Where / How»."
+        "hint": "Подсказка: тема «What / Where / How»."
       }
     ],
     "theory": {
       "intro": "Вопросительные слова для базового общения о себе и других.",
-      "reading": "**Личные вопросы** — Вопросительные слова для базового общения о себе и других.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### What / Where / How\nWhat — что. Where — где. How — как. How old — сколько лет. How do you spell — как пишется.\n\n*Пример:* What is your phone number?\n\n### Who\nWho — кто. Who is she? Who are they?\n\n*Пример:* Who is your teacher?\n\n### Формулы\n- `What + is/are + ...?`\n- `Where + do/does + subject + V1?`\n- `How old are you?`\n\n### Типичная ошибка\n❌ Where you live?\n✅ Where do you live?",
+      "reading": "**Личные вопросы** — Вопросительные слова для базового общения о себе и других.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### What / Where / How\nWhat — что. Where — где. How — как. How old — сколько лет. How do you spell — как пишется.\n\n### Who\nWho — кто. Who is she? Who are they?\n\n### Формулы\n- `What + is/are + ...?`\n- `Where + do/does + subject + V1?`\n- `How old are you?`\n\n### Типичная ошибка\n❌ Where you live?\n✅ Where do you live?",
       "keyPoints": [
         "What / Where / How: What — что. Where — где. How — как. How old — сколько лет. How do you spell — ка",
         "Who: Who — кто. Who is she? Who are they?",
@@ -2082,50 +2131,50 @@ const CURRICULUM = [
       {
         "question": "What is «what»?",
         "options": [
-          "жить",
-          "писать / называть по буквам",
           "работать",
-          "что"
+          "что",
+          "электронная почта",
+          "кто"
         ],
         "answer": "что"
       },
       {
         "question": "What is «where»?",
         "options": [
-          "писать / называть по буквам",
-          "кто",
+          "работать",
           "где",
-          "жить"
+          "адрес",
+          "кто"
         ],
         "answer": "где"
       },
       {
         "question": "What is «how»?",
         "options": [
-          "как",
-          "где",
-          "кто",
-          "адрес"
+          "телефон",
+          "электронная почта",
+          "писать / называть по буквам",
+          "как"
         ],
         "answer": "как"
       },
       {
         "question": "What is «who»?",
         "options": [
-          "что",
+          "работать",
           "кто",
-          "где",
-          "телефон"
+          "жить",
+          "где"
         ],
         "answer": "кто"
       },
       {
         "question": "What is «live»?",
         "options": [
-          "адрес",
           "жить",
-          "электронная почта",
-          "работать"
+          "кто",
+          "писать / называть по буквам",
+          "где"
         ],
         "answer": "жить"
       },
@@ -2452,7 +2501,10 @@ const CURRICULUM = [
           "an",
           "the",
           "book",
-          "apple"
+          "apple",
+          "child",
+          "children",
+          "person"
         ],
         "mustIncludeAny": [
           [
@@ -2462,11 +2514,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on a / an / the / -s."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «a / an / the / -s»."
       },
       {
         "prompt": "Which nouns are plural?",
@@ -2496,7 +2547,10 @@ const CURRICULUM = [
           "an",
           "the",
           "book",
-          "apple"
+          "apple",
+          "child",
+          "children",
+          "person"
         ],
         "mustIncludeAny": [
           [
@@ -2506,11 +2560,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about book."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «a / an / the / -s»."
       },
       {
         "prompt": "How many people/children are there?",
@@ -2626,82 +2679,32 @@ const CURRICULUM = [
       {
         "word": "a",
         "trans": "неопределённый артикль",
-        "example": "I have a dog and an old car."
+        "example": "I have a dog."
       },
       {
         "word": "an",
         "trans": "артикль перед гласной",
-        "example": "The children are in the park."
+        "example": "She is an engineer."
       },
       {
         "word": "the",
         "trans": "определённый артикль",
-        "example": "She is an engineer."
+        "example": "The sun is bright."
       },
       {
         "word": "book",
         "trans": "книга",
-        "example": "The sun is bright."
+        "example": "«book» helped me understand a / an / the / -s."
       },
       {
         "word": "apple",
         "trans": "яблоко",
-        "example": "Two children play outside."
+        "example": "I often use «apple» when I talk about a / an / the / -s."
       },
       {
         "word": "child",
         "trans": "ребёнок",
-        "example": "Many people work here."
-      },
-      {
-        "word": "children",
-        "trans": "дети",
-        "example": "I have a dog and an old car."
-      },
-      {
-        "word": "person",
-        "trans": "человек",
-        "example": "The children are in the park."
-      },
-      {
-        "word": "people",
-        "trans": "люди",
-        "example": "She is an engineer."
-      },
-      {
-        "word": "singular",
-        "trans": "единственное число",
-        "example": "The sun is bright."
-      },
-      {
-        "word": "a",
-        "trans": "неопределённый артикль",
-        "example": "Two children play outside."
-      },
-      {
-        "word": "an",
-        "trans": "артикль перед гласной",
-        "example": "Many people work here."
-      },
-      {
-        "word": "the",
-        "trans": "определённый артикль",
-        "example": "I have a dog and an old car."
-      },
-      {
-        "word": "book",
-        "trans": "книга",
-        "example": "The children are in the park."
-      },
-      {
-        "word": "apple",
-        "trans": "яблоко",
-        "example": "She is an engineer."
-      },
-      {
-        "word": "child",
-        "trans": "ребёнок",
-        "example": "The sun is bright."
+        "example": "The teacher wrote «child» on the board."
       },
       {
         "word": "children",
@@ -2711,51 +2714,101 @@ const CURRICULUM = [
       {
         "word": "person",
         "trans": "человек",
-        "example": "Many people work here."
+        "example": "«person» is a key word in this lesson on a / an / the / -s."
       },
       {
         "word": "people",
         "trans": "люди",
-        "example": "I have a dog and an old car."
+        "example": "Many people work here."
       },
       {
         "word": "singular",
         "trans": "единственное число",
-        "example": "The children are in the park."
+        "example": "I used «singular» in my written answer."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "She asked me about «practice» during practice."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» fits well in a sentence about a / an / the / -s."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "«sentence» was new for me this week."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "We discussed «grammar» in class today."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "He repeated «vocabulary» three times."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "My partner corrected my use of «speaking»."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "My note says «listening» means «аудирование»."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "In our dialogue, «writing» appeared twice."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I linked «reading» to other words I know."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I heard «homework» in the listening exercise."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "I need ___ umbrella.",
+        "sentence": "She is an ___",
         "options": [
-          "a",
-          "an"
+          "engineer",
+          "engineers"
         ],
-        "answer": "an"
+        "answer": "engineer"
       },
       {
-        "sentence": "___ moon is beautiful tonight.",
+        "sentence": "The ___ is bright",
         "options": [
-          "A",
-          "The"
+          "sun",
+          "suns"
         ],
-        "answer": "The"
+        "answer": "sun"
       },
       {
-        "sentence": "There are three ___.",
+        "sentence": "___ children play outside",
         "options": [
-          "childs",
-          "children"
+          "Two",
+          "Twos"
         ],
-        "answer": "children"
+        "answer": "Two"
       },
       {
-        "sentence": "She is ___ doctor.",
+        "sentence": "___ people work here",
         "options": [
-          "a",
-          "an"
+          "Many",
+          "Manys"
         ],
-        "answer": "a"
+        "answer": "Many"
       }
     ],
     "theoryCheck": [
@@ -2768,12 +2821,12 @@ const CURRICULUM = [
         "answer": "I have a dog."
       },
       {
-        "question": "Пример по теме «A / An»:",
+        "question": "Какое правило относится к «The & Plurals»?",
         "options": [
-          "I have a dog and an old car.",
-          "I have an dog."
+          "The — конкретный предмет. Множественное: +s (cats), -es (boxes), неправильные (children, people).",
+          "A — перед согласным звуком: a book. An — перед гласным: an apple, an hour."
         ],
-        "answer": "I have a dog and an old car."
+        "answer": "The — конкретный предмет. Множественное: +s (cats), -es (boxes), неправильные (children, people)."
       },
       {
         "question": "Какая формула относится к «Articles & Plurals»?",
@@ -2787,48 +2840,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I need ______ umbrella.",
-        "answer": "an",
+        "prompt": "an ______",
+        "answer": "apple",
         "altAnswers": [
-          "an",
-          "An"
+          "apple",
+          "Apple"
         ],
-        "hint": "Подсказка: слово из урока «a / an / the / -s»."
+        "hint": "Подсказка: тема «a / an / the / -s»."
       },
       {
         "id": 2,
-        "prompt": "______ moon is beautiful tonight.",
-        "answer": "The",
+        "prompt": "the ______",
+        "answer": "book",
         "altAnswers": [
-          "the",
-          "The"
+          "book",
+          "Book"
         ],
-        "hint": "Подсказка: слово из урока «a / an / the / -s»."
+        "hint": "Подсказка: тема «a / an / the / -s»."
       },
       {
         "id": 3,
-        "prompt": "There are three ______ .",
-        "answer": "children",
+        "prompt": "______",
+        "answer": "people",
         "altAnswers": [
-          "Children",
-          "children"
+          "People",
+          "people"
         ],
-        "hint": "Подсказка: слово из урока «a / an / the / -s»."
+        "hint": "Подсказка: тема «a / an / the / -s»."
       },
       {
         "id": 4,
-        "prompt": "She is ______ doctor.",
-        "answer": "a",
+        "prompt": "______ people live here",
+        "answer": "Many",
         "altAnswers": [
-          "a",
-          "A"
+          "Many",
+          "many"
         ],
-        "hint": "Подсказка: слово из урока «a / an / the / -s»."
+        "hint": "Подсказка: тема «a / an / the / -s»."
       }
     ],
     "theory": {
       "intro": "Неопределённый и определённый артикли, множественное число существительных.",
-      "reading": "**Артикли и множественное число** — Неопределённый и определённый артикли, множественное число существительных.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### A / An\nA — перед согласным звуком: a book. An — перед гласным: an apple, an hour.\n\n*Пример:* I have a dog and an old car.\n\n### The & Plurals\nThe — конкретный предмет. Множественное: +s (cats), -es (boxes), неправильные (children, people).\n\n*Пример:* The children are in the park.\n\n### Формулы\n- `a + consonant sound / an + vowel sound`\n- `the + specific noun`\n- `plural: noun + s/es or irregular`\n\n### Типичная ошибка\n❌ I have an dog.\n✅ I have a dog.",
+      "reading": "**Артикли и множественное число** — Неопределённый и определённый артикли, множественное число существительных.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### A / An\nA — перед согласным звуком: a book. An — перед гласным: an apple, an hour.\n\n### The & Plurals\nThe — конкретный предмет. Множественное: +s (cats), -es (boxes), неправильные (children, people).\n\n### Формулы\n- `a + consonant sound / an + vowel sound`\n- `the + specific noun`\n- `plural: noun + s/es or irregular`\n\n### Типичная ошибка\n❌ I have an dog.\n✅ I have a dog.",
       "keyPoints": [
         "A / An: A — перед согласным звуком: a book. An — перед гласным: an apple, an hour.",
         "The & Plurals: The — конкретный предмет. Множественное: +s (cats), -es (boxes), неправильные (c",
@@ -2842,20 +2895,20 @@ const CURRICULUM = [
       {
         "question": "What is «a»?",
         "options": [
-          "артикль перед гласной",
           "единственное число",
           "неопределённый артикль",
-          "дети"
+          "дети",
+          "ребёнок"
         ],
         "answer": "неопределённый артикль"
       },
       {
         "question": "What is «an»?",
         "options": [
-          "артикль перед гласной",
-          "единственное число",
-          "человек",
-          "яблоко"
+          "неопределённый артикль",
+          "книга",
+          "ребёнок",
+          "артикль перед гласной"
         ],
         "answer": "артикль перед гласной"
       },
@@ -2864,28 +2917,28 @@ const CURRICULUM = [
         "options": [
           "определённый артикль",
           "ребёнок",
-          "книга",
-          "яблоко"
+          "яблоко",
+          "человек"
         ],
         "answer": "определённый артикль"
       },
       {
         "question": "What is «book»?",
         "options": [
-          "определённый артикль",
+          "люди",
           "книга",
-          "ребёнок",
-          "яблоко"
+          "артикль перед гласной",
+          "определённый артикль"
         ],
         "answer": "книга"
       },
       {
         "question": "What is «apple»?",
         "options": [
-          "артикль перед гласной",
-          "ребёнок",
-          "человек",
-          "яблоко"
+          "неопределённый артикль",
+          "яблоко",
+          "дети",
+          "люди"
         ],
         "answer": "яблоко"
       },
@@ -3274,7 +3327,10 @@ const CURRICULUM = [
           "sometimes",
           "never",
           "wake up",
-          "breakfast"
+          "breakfast",
+          "go",
+          "like",
+          "want"
         ],
         "mustIncludeAny": [
           [
@@ -3284,11 +3340,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Breakfast includes eggs and toast."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «I work / He works»."
       },
       {
         "prompt": "What don't they do?",
@@ -3298,7 +3353,10 @@ const CURRICULUM = [
           "sometimes",
           "never",
           "wake up",
-          "breakfast"
+          "breakfast",
+          "go",
+          "like",
+          "want"
         ],
         "mustIncludeAny": [
           [
@@ -3308,11 +3366,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The parents talk about their jobs."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «I work / He works»."
       }
     ],
     "speaking": [
@@ -3398,136 +3455,136 @@ const CURRICULUM = [
       {
         "word": "every day",
         "trans": "каждый день",
-        "example": "He works in a bank."
+        "example": "I heard «every day» in the listening exercise."
       },
       {
         "word": "sometimes",
         "trans": "иногда",
-        "example": "Do you like coffee? — No, I don't."
+        "example": "I looked up «sometimes» in the dictionary."
       },
       {
         "word": "never",
         "trans": "никогда",
-        "example": "I wake up at seven."
+        "example": "The example with «never» was clear."
       },
       {
         "word": "wake up",
         "trans": "просыпаться",
-        "example": "She likes music."
+        "example": "I wake up at seven."
       },
       {
         "word": "breakfast",
         "trans": "завтрак",
-        "example": "He doesn't eat meat."
+        "example": "«breakfast» helped me understand i work / he works."
       },
       {
         "word": "go",
         "trans": "идти",
-        "example": "We don't watch TV."
+        "example": "I often use «go» when I talk about i work / he works."
       },
       {
         "word": "like",
         "trans": "нравиться",
-        "example": "He works in a bank."
+        "example": "The teacher wrote «like» on the board."
       },
       {
         "word": "want",
         "trans": "хотеть",
-        "example": "Do you like coffee? — No, I don't."
+        "example": "Let's practise «want» in a full sentence."
       },
       {
         "word": "need",
         "trans": "нуждаться",
-        "example": "I wake up at seven."
+        "example": "«need» is a key word in this lesson on i work / he works."
       },
       {
         "word": "know",
         "trans": "знать",
-        "example": "She likes music."
+        "example": "I need to remember «know» for homework."
       },
       {
-        "word": "every day",
-        "trans": "каждый день",
-        "example": "He doesn't eat meat."
+        "word": "practice",
+        "trans": "практика",
+        "example": "I used «practice» in my written answer."
       },
       {
-        "word": "sometimes",
-        "trans": "иногда",
-        "example": "We don't watch TV."
+        "word": "review",
+        "trans": "повторение",
+        "example": "She asked me about «review» during practice."
       },
       {
-        "word": "never",
-        "trans": "никогда",
-        "example": "He works in a bank."
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "«sentence» fits well in a sentence about i work / he works."
       },
       {
-        "word": "wake up",
-        "trans": "просыпаться",
-        "example": "Do you like coffee? — No, I don't."
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "«grammar» was new for me this week."
       },
       {
-        "word": "breakfast",
-        "trans": "завтрак",
-        "example": "I wake up at seven."
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "We discussed «vocabulary» in class today."
       },
       {
-        "word": "go",
-        "trans": "идти",
-        "example": "She likes music."
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "He repeated «speaking» three times."
       },
       {
-        "word": "like",
-        "trans": "нравиться",
-        "example": "He doesn't eat meat."
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "My partner corrected my use of «listening»."
       },
       {
-        "word": "want",
-        "trans": "хотеть",
-        "example": "We don't watch TV."
+        "word": "writing",
+        "trans": "письмо",
+        "example": "My note says «writing» means «письмо»."
       },
       {
-        "word": "need",
-        "trans": "нуждаться",
-        "example": "He works in a bank."
+        "word": "reading",
+        "trans": "чтение",
+        "example": "In our dialogue, «reading» appeared twice."
       },
       {
-        "word": "know",
-        "trans": "знать",
-        "example": "Do you like coffee? — No, I don't."
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I linked «homework» to other words I know."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "She ___ to work by bus.",
+        "sentence": "I ___ up at seven",
         "options": [
-          "go",
-          "goes"
+          "wake",
+          "wakes"
         ],
-        "answer": "goes"
+        "answer": "wake"
       },
       {
-        "sentence": "___ you like pizza?",
+        "sentence": "She ___ music",
         "options": [
-          "Do",
-          "Does"
+          "likes",
+          "like"
         ],
-        "answer": "Do"
+        "answer": "likes"
       },
       {
-        "sentence": "He ___ speak French.",
+        "sentence": "He doesn't ___ meat",
+        "options": [
+          "eat",
+          "eats"
+        ],
+        "answer": "eat"
+      },
+      {
+        "sentence": "We ___ watch TV",
         "options": [
           "don't",
-          "doesn't"
+          "don'ts"
         ],
-        "answer": "doesn't"
-      },
-      {
-        "sentence": "We ___ breakfast at eight.",
-        "options": [
-          "have",
-          "has"
-        ],
-        "answer": "have"
+        "answer": "don't"
       }
     ],
     "theoryCheck": [
@@ -3540,12 +3597,12 @@ const CURRICULUM = [
         "answer": "He goes to school."
       },
       {
-        "question": "Пример по теме «Утверждение»:",
+        "question": "Какое правило относится к «Вопросы и отрицание»?",
         "options": [
-          "He works in a bank.",
-          "He go to school."
+          "Do/Does + подлежащее + глагол. Don't/Doesn't + глагол.",
+          "I/you/we/they + глагол. He/she/it + глагол+s (go→goes, watch→watches)."
         ],
-        "answer": "He works in a bank."
+        "answer": "Do/Does + подлежащее + глагол. Don't/Doesn't + глагол."
       },
       {
         "question": "Какая формула относится к «Present Simple»?",
@@ -3559,49 +3616,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "She ______ to work by bus.",
-        "answer": "goes",
+        "prompt": "He ______ hard",
+        "answer": "works",
         "altAnswers": [
-          "goes",
-          "Goes"
+          "Works",
+          "works"
         ],
-        "hint": "Подсказка: слово из урока «I work / He works»."
+        "hint": "Подсказка: тема «I work / He works»."
       },
       {
         "id": 2,
-        "prompt": "______ you like pizza?",
-        "answer": "Do",
+        "prompt": "Do you ______ it",
+        "answer": "like",
         "altAnswers": [
-          "Do",
-          "do"
+          "Like",
+          "like"
         ],
-        "hint": "Подсказка: слово из урока «I work / He works»."
+        "hint": "Подсказка: тема «I work / He works»."
       },
       {
         "id": 3,
-        "prompt": "He ______ speak French.",
-        "answer": "doesn't",
+        "prompt": "She doesn't ______",
+        "answer": "know",
         "altAnswers": [
-          "Doesn't",
-          "doesn't",
-          "does not"
+          "know",
+          "Know"
         ],
-        "hint": "Подсказка: слово из урока «I work / He works»."
+        "hint": "Подсказка: тема «I work / He works»."
       },
       {
         "id": 4,
-        "prompt": "We ______ breakfast at eight.",
-        "answer": "have",
+        "prompt": "I ______ up early",
+        "answer": "wake",
         "altAnswers": [
-          "Have",
-          "have"
+          "wake",
+          "Wake"
         ],
-        "hint": "Подсказка: слово из урока «I work / He works»."
+        "hint": "Подсказка: тема «I work / He works»."
       }
     ],
     "theory": {
       "intro": "Базовое настоящее время для привычек, фактов и распорядка дня.",
-      "reading": "**Настоящее простое — основы** — Базовое настоящее время для привычек, фактов и распорядка дня.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Утверждение\nI/you/we/they + глагол. He/she/it + глагол+s (go→goes, watch→watches).\n\n*Пример:* He works in a bank.\n\n### Вопросы и отрицание\nDo/Does + подлежащее + глагол. Don't/Doesn't + глагол.\n\n*Пример:* Do you like coffee? — No, I don't.\n\n### Формулы\n- `I/you/we/they + V1`\n- `he/she/it + V1+s`\n- `Do/Does + subject + V1?`\n\n### Типичная ошибка\n❌ He go to school.\n✅ He goes to school.",
+      "reading": "**Настоящее простое — основы** — Базовое настоящее время для привычек, фактов и распорядка дня.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Утверждение\nI/you/we/they + глагол. He/she/it + глагол+s (go→goes, watch→watches).\n\n### Вопросы и отрицание\nDo/Does + подлежащее + глагол. Don't/Doesn't + глагол.\n\n### Формулы\n- `I/you/we/they + V1`\n- `he/she/it + V1+s`\n- `Do/Does + subject + V1?`\n\n### Типичная ошибка\n❌ He go to school.\n✅ He goes to school.",
       "keyPoints": [
         "Утверждение: I/you/we/they + глагол. He/she/it + глагол+s (go→goes, watch→watches).",
         "Вопросы и отрицание: Do/Does + подлежащее + глагол. Don't/Doesn't + глагол.",
@@ -3615,9 +3671,9 @@ const CURRICULUM = [
       {
         "question": "What is «every day»?",
         "options": [
-          "никогда",
-          "идти",
+          "нуждаться",
           "каждый день",
+          "просыпаться",
           "завтрак"
         ],
         "answer": "каждый день"
@@ -3625,10 +3681,10 @@ const CURRICULUM = [
       {
         "question": "What is «sometimes»?",
         "options": [
-          "нравиться",
-          "иногда",
           "хотеть",
-          "просыпаться"
+          "иногда",
+          "знать",
+          "нравиться"
         ],
         "answer": "иногда"
       },
@@ -3636,29 +3692,29 @@ const CURRICULUM = [
         "question": "What is «never»?",
         "options": [
           "никогда",
-          "идти",
           "завтрак",
-          "хотеть"
+          "хотеть",
+          "знать"
         ],
         "answer": "никогда"
       },
       {
         "question": "What is «wake up»?",
         "options": [
+          "каждый день",
           "идти",
-          "нуждаться",
           "просыпаться",
-          "никогда"
+          "иногда"
         ],
         "answer": "просыпаться"
       },
       {
         "question": "What is «breakfast»?",
         "options": [
+          "знать",
           "никогда",
           "завтрак",
-          "знать",
-          "идти"
+          "каждый день"
         ],
         "answer": "завтрак"
       },
@@ -3977,7 +4033,10 @@ const CURRICULUM = [
           "there are",
           "in",
           "on",
-          "under"
+          "under",
+          "next to",
+          "behind",
+          "room"
         ],
         "mustIncludeAny": [
           [
@@ -3987,11 +4046,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about on."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Местоположение»."
       },
       {
         "prompt": "How many people are there?",
@@ -4011,7 +4069,10 @@ const CURRICULUM = [
           "there are",
           "in",
           "on",
-          "under"
+          "under",
+          "next to",
+          "behind",
+          "room"
         ],
         "mustIncludeAny": [
           [
@@ -4021,11 +4082,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Most events occur in an English-speaking country."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Местоположение»."
       },
       {
         "prompt": "Is there a shop nearby?",
@@ -4035,7 +4095,10 @@ const CURRICULUM = [
           "there are",
           "in",
           "on",
-          "under"
+          "under",
+          "next to",
+          "behind",
+          "room"
         ],
         "mustIncludeAny": [
           [
@@ -4045,11 +4108,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss местоположение in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Местоположение»."
       },
       {
         "prompt": "What prepositions are used?",
@@ -4059,7 +4121,10 @@ const CURRICULUM = [
           "there are",
           "in",
           "on",
-          "under"
+          "under",
+          "next to",
+          "behind",
+          "room"
         ],
         "mustIncludeAny": [
           [
@@ -4069,11 +4134,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from местоположение."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Местоположение»."
       }
     ],
     "speaking": [
@@ -4159,22 +4223,22 @@ const CURRICULUM = [
       {
         "word": "there is",
         "trans": "есть (ед.ч.)",
-        "example": "There is a cat on the sofa."
+        "example": "There is a book on the table."
       },
       {
         "word": "there are",
         "trans": "есть (мн.ч.)",
-        "example": "The keys are on the table."
+        "example": "There are two windows in the room."
       },
       {
         "word": "in",
         "trans": "в",
-        "example": "There are two windows in the room."
+        "example": "I looked up «in» in the dictionary."
       },
       {
         "word": "on",
         "trans": "на",
-        "example": "Is there a supermarket nearby?"
+        "example": "The example with «on» was clear."
       },
       {
         "word": "under",
@@ -4189,106 +4253,106 @@ const CURRICULUM = [
       {
         "word": "behind",
         "trans": "за",
-        "example": "There is a cat on the sofa."
+        "example": "I often use «behind» when I talk about this lesson."
       },
       {
         "word": "room",
         "trans": "комната",
-        "example": "The keys are on the table."
+        "example": "The teacher wrote «room» on the board."
       },
       {
         "word": "kitchen",
         "trans": "кухня",
-        "example": "There are two windows in the room."
+        "example": "Let's practise «kitchen» in a full sentence."
       },
       {
         "word": "any",
         "trans": "какой-либо (в вопросах)",
-        "example": "Is there a supermarket nearby?"
+        "example": "«any» is a key word in this lesson on this lesson."
       },
       {
-        "word": "there is",
-        "trans": "есть (ед.ч.)",
-        "example": "The book is under the bed."
+        "word": "practice",
+        "trans": "практика",
+        "example": "I need to remember «practice» for homework."
       },
       {
-        "word": "there are",
-        "trans": "есть (мн.ч.)",
-        "example": "She sits next to me."
+        "word": "review",
+        "trans": "повторение",
+        "example": "I used «review» in my written answer."
       },
       {
-        "word": "in",
-        "trans": "в",
-        "example": "There is a cat on the sofa."
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "She asked me about «sentence» during practice."
       },
       {
-        "word": "on",
-        "trans": "на",
-        "example": "The keys are on the table."
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "«grammar» fits well in a sentence about this lesson."
       },
       {
-        "word": "under",
-        "trans": "под",
-        "example": "There are two windows in the room."
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "«vocabulary» was new for me this week."
       },
       {
-        "word": "next to",
-        "trans": "рядом с",
-        "example": "Is there a supermarket nearby?"
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "We discussed «speaking» in class today."
       },
       {
-        "word": "behind",
-        "trans": "за",
-        "example": "The book is under the bed."
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "He repeated «listening» three times."
       },
       {
-        "word": "room",
-        "trans": "комната",
-        "example": "She sits next to me."
+        "word": "writing",
+        "trans": "письмо",
+        "example": "My partner corrected my use of «writing»."
       },
       {
-        "word": "kitchen",
-        "trans": "кухня",
-        "example": "There is a cat on the sofa."
+        "word": "reading",
+        "trans": "чтение",
+        "example": "My note says «reading» means «чтение»."
       },
       {
-        "word": "any",
-        "trans": "какой-либо (в вопросах)",
-        "example": "The keys are on the table."
+        "word": "homework",
+        "trans": "домашка",
+        "example": "In our dialogue, «homework» appeared twice."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "There ___ a pen on the desk.",
+        "sentence": "___ are two windows in the room",
         "options": [
-          "is",
-          "are"
+          "There",
+          "Theres"
         ],
-        "answer": "is"
+        "answer": "There"
       },
       {
-        "sentence": "There ___ many students in the class.",
+        "sentence": "Is ___ a supermarket nearby",
         "options": [
-          "is",
-          "are"
+          "there",
+          "theres"
         ],
-        "answer": "are"
+        "answer": "there"
       },
       {
-        "sentence": "The picture is ___ the wall.",
+        "sentence": "The ___ is under the bed",
         "options": [
-          "in",
-          "on"
+          "book",
+          "books"
         ],
-        "answer": "on"
+        "answer": "book"
       },
       {
-        "sentence": "___ there any milk?",
+        "sentence": "She ___ next to me",
         "options": [
-          "Is",
-          "Are"
+          "sits",
+          "sit"
         ],
-        "answer": "Is"
+        "answer": "sits"
       }
     ],
     "theoryCheck": [
@@ -4301,12 +4365,12 @@ const CURRICULUM = [
         "answer": "There is a book on the table."
       },
       {
-        "question": "Пример по теме «Формы»:",
+        "question": "Какое правило относится к «Предлоги места»?",
         "options": [
-          "There is a cat on the sofa.",
-          "There are a book on the table."
+          "In — внутри. On — на поверхности. Under — под. Next to — рядом. Behind — за.",
+          "There is + ед.ч. There are + мн.ч. Вопрос: Is there...? Are there...?"
         ],
-        "answer": "There is a cat on the sofa."
+        "answer": "In — внутри. On — на поверхности. Under — под. Next to — рядом. Behind — за."
       },
       {
         "question": "Какая формула относится к «There is / There are»?",
@@ -4320,48 +4384,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "There ______ a pen on the desk.",
-        "answer": "is",
+        "prompt": "______ is a book",
+        "answer": "There",
         "altAnswers": [
-          "Is",
-          "is"
+          "there",
+          "There"
         ],
-        "hint": "Подсказка: слово из урока «Местоположение»."
+        "hint": "Подсказка: тема «Местоположение»."
       },
       {
         "id": 2,
-        "prompt": "There ______ many students in the class.",
-        "answer": "are",
+        "prompt": "There are ______ cats",
+        "answer": "two",
         "altAnswers": [
-          "are",
-          "Are"
+          "two",
+          "Two"
         ],
-        "hint": "Подсказка: слово из урока «Местоположение»."
+        "hint": "Подсказка: тема «Местоположение»."
       },
       {
         "id": 3,
-        "prompt": "The picture is ______ the wall.",
-        "answer": "on",
+        "prompt": "on the ______",
+        "answer": "table",
         "altAnswers": [
-          "on",
-          "On"
+          "table",
+          "Table"
         ],
-        "hint": "Подсказка: слово из урока «Местоположение»."
+        "hint": "Подсказка: тема «Местоположение»."
       },
       {
         "id": 4,
-        "prompt": "______ there any milk?",
-        "answer": "Is",
+        "prompt": "______ to me",
+        "answer": "next",
         "altAnswers": [
-          "Is",
-          "is"
+          "next",
+          "Next"
         ],
-        "hint": "Подсказка: слово из урока «Местоположение»."
+        "hint": "Подсказка: тема «Местоположение»."
       }
     ],
     "theory": {
       "intro": "Конструкции для описания того, что есть и где находится.",
-      "reading": "**There is / There are** — Конструкции для описания того, что есть и где находится.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Формы\nThere is + ед.ч. There are + мн.ч. Вопрос: Is there...? Are there...?\n\n*Пример:* There is a cat on the sofa.\n\n### Предлоги места\nIn — внутри. On — на поверхности. Under — под. Next to — рядом. Behind — за.\n\n*Пример:* The keys are on the table.\n\n### Формулы\n- `There is + singular noun`\n- `There are + plural noun`\n- `Preposition: in / on / under / next to`\n\n### Типичная ошибка\n❌ There are a book on the table.\n✅ There is a book on the table.",
+      "reading": "**There is / There are** — Конструкции для описания того, что есть и где находится.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Формы\nThere is + ед.ч. There are + мн.ч. Вопрос: Is there...? Are there...?\n\n### Предлоги места\nIn — внутри. On — на поверхности. Under — под. Next to — рядом. Behind — за.\n\n### Формулы\n- `There is + singular noun`\n- `There are + plural noun`\n- `Preposition: in / on / under / next to`\n\n### Типичная ошибка\n❌ There are a book on the table.\n✅ There is a book on the table.",
       "keyPoints": [
         "Формы: There is + ед.ч. There are + мн.ч. Вопрос: Is there...? Are there...?",
         "Предлоги места: In — внутри. On — на поверхности. Under — под. Next to — рядом. Behind — за.",
@@ -4375,50 +4439,50 @@ const CURRICULUM = [
       {
         "question": "What is «there is»?",
         "options": [
-          "есть (ед.ч.)",
-          "в",
-          "на",
-          "кухня"
+          "какой-либо (в вопросах)",
+          "есть (мн.ч.)",
+          "за",
+          "есть (ед.ч.)"
         ],
         "answer": "есть (ед.ч.)"
       },
       {
         "question": "What is «there are»?",
         "options": [
-          "какой-либо (в вопросах)",
-          "на",
-          "в",
-          "есть (мн.ч.)"
+          "есть (мн.ч.)",
+          "кухня",
+          "рядом с",
+          "на"
         ],
         "answer": "есть (мн.ч.)"
       },
       {
         "question": "What is «in»?",
         "options": [
-          "комната",
-          "в",
-          "какой-либо (в вопросах)",
-          "под"
+          "под",
+          "на",
+          "рядом с",
+          "в"
         ],
         "answer": "в"
       },
       {
         "question": "What is «on»?",
         "options": [
-          "в",
-          "рядом с",
-          "за",
-          "на"
+          "под",
+          "на",
+          "кухня",
+          "рядом с"
         ],
         "answer": "на"
       },
       {
         "question": "What is «under»?",
         "options": [
-          "на",
-          "есть (ед.ч.)",
           "под",
-          "кухня"
+          "какой-либо (в вопросах)",
+          "на",
+          "за"
         ],
         "answer": "под"
       },
@@ -4782,7 +4846,10 @@ const CURRICULUM = [
           "can't",
           "swim",
           "drive",
-          "cook"
+          "cook",
+          "dance",
+          "sing",
+          "help"
         ],
         "mustIncludeAny": [
           [
@@ -4792,11 +4859,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss могу / не могу in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Могу / не могу»."
       },
       {
         "prompt": "What languages can they speak?",
@@ -4922,136 +4988,136 @@ const CURRICULUM = [
       {
         "word": "can",
         "trans": "мочь, уметь",
-        "example": "I can swim but I can't drive."
+        "example": "She can speak three languages."
       },
       {
         "word": "can't",
         "trans": "не мочь",
-        "example": "Can you help me, please?"
+        "example": "They can't come today."
       },
       {
         "word": "swim",
         "trans": "плавать",
-        "example": "She can speak three languages."
+        "example": "She can swim."
       },
       {
         "word": "drive",
         "trans": "водить",
-        "example": "They can't come today."
+        "example": "I looked up «drive» in the dictionary."
       },
       {
         "word": "cook",
         "trans": "готовить",
-        "example": "Can I sit here?"
+        "example": "The example with «cook» was clear."
       },
       {
         "word": "dance",
         "trans": "танцевать",
-        "example": "Can you repeat that?"
+        "example": "Can you make a sentence with «dance»?"
       },
       {
         "word": "sing",
         "trans": "петь",
-        "example": "I can swim but I can't drive."
+        "example": "«sing» helped me understand this lesson."
       },
       {
         "word": "help",
         "trans": "помогать",
-        "example": "Can you help me, please?"
+        "example": "I often use «help» when I talk about this lesson."
       },
       {
         "word": "speak",
         "trans": "говорить",
-        "example": "She can speak three languages."
+        "example": "The teacher wrote «speak» on the board."
       },
       {
         "word": "understand",
         "trans": "понимать",
-        "example": "They can't come today."
+        "example": "Let's practise «understand» in a full sentence."
       },
       {
-        "word": "can",
-        "trans": "мочь, уметь",
-        "example": "Can I sit here?"
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» is a key word in this lesson on this lesson."
       },
       {
-        "word": "can't",
-        "trans": "не мочь",
-        "example": "Can you repeat that?"
+        "word": "review",
+        "trans": "повторение",
+        "example": "I need to remember «review» for homework."
       },
       {
-        "word": "swim",
-        "trans": "плавать",
-        "example": "I can swim but I can't drive."
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I used «sentence» in my written answer."
       },
       {
-        "word": "drive",
-        "trans": "водить",
-        "example": "Can you help me, please?"
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "She asked me about «grammar» during practice."
       },
       {
-        "word": "cook",
-        "trans": "готовить",
-        "example": "She can speak three languages."
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "«vocabulary» fits well in a sentence about this lesson."
       },
       {
-        "word": "dance",
-        "trans": "танцевать",
-        "example": "They can't come today."
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "«speaking» was new for me this week."
       },
       {
-        "word": "sing",
-        "trans": "петь",
-        "example": "Can I sit here?"
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "We discussed «listening» in class today."
       },
       {
-        "word": "help",
-        "trans": "помогать",
-        "example": "Can you repeat that?"
+        "word": "writing",
+        "trans": "письмо",
+        "example": "He repeated «writing» three times."
       },
       {
-        "word": "speak",
-        "trans": "говорить",
-        "example": "I can swim but I can't drive."
+        "word": "reading",
+        "trans": "чтение",
+        "example": "My partner corrected my use of «reading»."
       },
       {
-        "word": "understand",
-        "trans": "понимать",
-        "example": "Can you help me, please?"
+        "word": "homework",
+        "trans": "домашка",
+        "example": "My note says «homework» means «домашка»."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "I ___ play the guitar.",
+        "sentence": "She can ___ three languages",
         "options": [
-          "can",
-          "cans"
+          "speak",
+          "speaks"
         ],
-        "answer": "can"
+        "answer": "speak"
       },
       {
-        "sentence": "He ___ drive a car.",
+        "sentence": "They can't ___ today",
         "options": [
-          "can't",
-          "don't"
+          "come",
+          "comes"
         ],
-        "answer": "can't"
+        "answer": "come"
       },
       {
-        "sentence": "___ you help me?",
+        "sentence": "Can I ___ here",
         "options": [
-          "Can",
-          "Do"
+          "sit",
+          "sits"
         ],
-        "answer": "Can"
+        "answer": "sit"
       },
       {
-        "sentence": "She ___ speak Japanese.",
+        "sentence": "Can you ___ that",
         "options": [
-          "can",
-          "cans"
+          "repeat",
+          "repeats"
         ],
-        "answer": "can"
+        "answer": "repeat"
       }
     ],
     "theoryCheck": [
@@ -5064,12 +5130,12 @@ const CURRICULUM = [
         "answer": "She can swim."
       },
       {
-        "question": "Пример по теме «Способность»:",
+        "question": "Какое правило относится к «Просьба и разрешение»?",
         "options": [
-          "I can swim but I can't drive.",
-          "She can to swim."
+          "Can I...? — можно ли мне. Can you...? — не могли бы вы.",
+          "Can + глагол (без to). Can't — отрицание. Can не меняется: I/you/he can."
         ],
-        "answer": "I can swim but I can't drive."
+        "answer": "Can I...? — можно ли мне. Can you...? — не могли бы вы."
       },
       {
         "question": "Какая формула относится к «Can»?",
@@ -5083,49 +5149,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I ______ play the guitar.",
-        "answer": "can",
+        "prompt": "I can ______",
+        "answer": "swim",
         "altAnswers": [
-          "can",
-          "Can"
+          "swim",
+          "Swim"
         ],
-        "hint": "Подсказка: слово из урока «Могу / не могу»."
+        "hint": "Подсказка: тема «Могу / не могу»."
       },
       {
         "id": 2,
-        "prompt": "He ______ drive a car.",
-        "answer": "can't",
+        "prompt": "She can't ______",
+        "answer": "drive",
         "altAnswers": [
-          "cannot",
-          "Can't",
-          "can't"
+          "drive",
+          "Drive"
         ],
-        "hint": "Подсказка: слово из урока «Могу / не могу»."
+        "hint": "Подсказка: тема «Могу / не могу»."
       },
       {
         "id": 3,
-        "prompt": "______ you help me?",
-        "answer": "Can",
+        "prompt": "We can ______",
+        "answer": "understand",
         "altAnswers": [
-          "can",
-          "Can"
+          "understand",
+          "Understand"
         ],
-        "hint": "Подсказка: слово из урока «Могу / не могу»."
+        "hint": "Подсказка: тема «Могу / не могу»."
       },
       {
         "id": 4,
-        "prompt": "She ______ speak Japanese.",
-        "answer": "can",
+        "prompt": "Can I ______ your phone",
+        "answer": "use",
         "altAnswers": [
-          "can",
-          "Can"
+          "use",
+          "Use"
         ],
-        "hint": "Подсказка: слово из урока «Могу / не могу»."
+        "hint": "Подсказка: тема «Могу / не могу»."
       }
     ],
     "theory": {
       "intro": "Модальный глагол can для способностей, разрешений и просьб.",
-      "reading": "**Can — умение и возможность** — Модальный глагол can для способностей, разрешений и просьб.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Способность\nCan + глагол (без to). Can't — отрицание. Can не меняется: I/you/he can.\n\n*Пример:* I can swim but I can't drive.\n\n### Просьба и разрешение\nCan I...? — можно ли мне. Can you...? — не могли бы вы.\n\n*Пример:* Can you help me, please?\n\n### Формулы\n- `Subject + can + V1`\n- `Subject + can't + V1`\n- `Can + subject + V1?`\n\n### Типичная ошибка\n❌ She can to swim.\n✅ She can swim.",
+      "reading": "**Can — умение и возможность** — Модальный глагол can для способностей, разрешений и просьб.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Способность\nCan + глагол (без to). Can't — отрицание. Can не меняется: I/you/he can.\n\n### Просьба и разрешение\nCan I...? — можно ли мне. Can you...? — не могли бы вы.\n\n### Формулы\n- `Subject + can + V1`\n- `Subject + can't + V1`\n- `Can + subject + V1?`\n\n### Типичная ошибка\n❌ She can to swim.\n✅ She can swim.",
       "keyPoints": [
         "Способность: Can + глагол (без to). Can't — отрицание. Can не меняется: I/you/he can.",
         "Просьба и разрешение: Can I...? — можно ли мне. Can you...? — не могли бы вы.",
@@ -5140,19 +5205,19 @@ const CURRICULUM = [
         "question": "What is «can»?",
         "options": [
           "помогать",
-          "мочь, уметь",
-          "понимать",
-          "плавать"
+          "петь",
+          "плавать",
+          "мочь, уметь"
         ],
         "answer": "мочь, уметь"
       },
       {
         "question": "What is «can't»?",
         "options": [
-          "помогать",
           "водить",
-          "петь",
-          "не мочь"
+          "не мочь",
+          "танцевать",
+          "понимать"
         ],
         "answer": "не мочь"
       },
@@ -5160,8 +5225,8 @@ const CURRICULUM = [
         "question": "What is «swim»?",
         "options": [
           "плавать",
-          "понимать",
-          "мочь, уметь",
+          "не мочь",
+          "водить",
           "помогать"
         ],
         "answer": "плавать"
@@ -5171,17 +5236,17 @@ const CURRICULUM = [
         "options": [
           "водить",
           "говорить",
-          "мочь, уметь",
-          "плавать"
+          "готовить",
+          "помогать"
         ],
         "answer": "водить"
       },
       {
         "question": "What is «cook»?",
         "options": [
-          "помогать",
-          "плавать",
           "готовить",
+          "не мочь",
+          "плавать",
           "мочь, уметь"
         ],
         "answer": "готовить"
@@ -5507,7 +5572,10 @@ const CURRICULUM = [
           "were",
           "yesterday",
           "o'clock",
-          "half past"
+          "half past",
+          "quarter",
+          "number",
+          "price"
         ],
         "mustIncludeAny": [
           [
@@ -5517,11 +5585,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene is set in London."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Was/Were, numbers, time»."
       },
       {
         "prompt": "What time is it in the scene?",
@@ -5531,7 +5598,10 @@ const CURRICULUM = [
           "were",
           "yesterday",
           "o'clock",
-          "half past"
+          "half past",
+          "quarter",
+          "number",
+          "price"
         ],
         "mustIncludeAny": [
           [
@@ -5541,11 +5611,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from was/were, numbers, time."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Was/Were, numbers, time»."
       },
       {
         "prompt": "How much does it cost?",
@@ -5575,7 +5644,10 @@ const CURRICULUM = [
           "were",
           "yesterday",
           "o'clock",
-          "half past"
+          "half past",
+          "quarter",
+          "number",
+          "price"
         ],
         "mustIncludeAny": [
           [
@@ -5585,11 +5657,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "People use smartphones for work and study."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Was/Were, numbers, time»."
       }
     ],
     "speaking": [
@@ -5675,136 +5746,136 @@ const CURRICULUM = [
       {
         "word": "was",
         "trans": "был(а)",
-        "example": "I was at home yesterday."
+        "example": "Was she at school?"
       },
       {
         "word": "were",
         "trans": "были",
-        "example": "It's half past nine."
+        "example": "In our dialogue, «were» appeared twice."
       },
       {
         "word": "yesterday",
         "trans": "вчера",
-        "example": "They were happy."
+        "example": "I linked «yesterday» to other words I know."
       },
       {
         "word": "o'clock",
         "trans": "ровно (время)",
-        "example": "Was she at school?"
+        "example": "I heard «o'clock» in the listening exercise."
       },
       {
         "word": "half past",
         "trans": "половина (часа)",
-        "example": "It's quarter to five."
+        "example": "I looked up «half past» in the dictionary."
       },
       {
         "word": "quarter",
         "trans": "четверть (часа)",
-        "example": "The lesson starts at ten."
+        "example": "It's quarter to five."
       },
       {
         "word": "number",
         "trans": "число",
-        "example": "I was at home yesterday."
+        "example": "Can you make a sentence with «number»?"
       },
       {
         "word": "price",
         "trans": "цена",
-        "example": "It's half past nine."
+        "example": "«price» helped me understand was/were, numbers, time."
       },
       {
         "word": "how much",
         "trans": "сколько стоит",
-        "example": "They were happy."
+        "example": "I often use «how much» when I talk about was/were, numbers, time."
       },
       {
         "word": "how many",
         "trans": "сколько (штук)",
-        "example": "Was she at school?"
+        "example": "The teacher wrote «how many» on the board."
       },
       {
-        "word": "was",
-        "trans": "был(а)",
-        "example": "It's quarter to five."
+        "word": "practice",
+        "trans": "практика",
+        "example": "Let's practise «practice» in a full sentence."
       },
       {
-        "word": "were",
-        "trans": "были",
-        "example": "The lesson starts at ten."
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» is a key word in this lesson on was/were, numbers, time."
       },
       {
-        "word": "yesterday",
-        "trans": "вчера",
-        "example": "I was at home yesterday."
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I need to remember «sentence» for homework."
       },
       {
-        "word": "o'clock",
-        "trans": "ровно (время)",
-        "example": "It's half past nine."
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "I used «grammar» in my written answer."
       },
       {
-        "word": "half past",
-        "trans": "половина (часа)",
-        "example": "They were happy."
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "She asked me about «vocabulary» during practice."
       },
       {
-        "word": "quarter",
-        "trans": "четверть (часа)",
-        "example": "Was she at school?"
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "«speaking» fits well in a sentence about was/were, numbers, time."
       },
       {
-        "word": "number",
-        "trans": "число",
-        "example": "It's quarter to five."
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "«listening» was new for me this week."
       },
       {
-        "word": "price",
-        "trans": "цена",
-        "example": "The lesson starts at ten."
+        "word": "writing",
+        "trans": "письмо",
+        "example": "We discussed «writing» in class today."
       },
       {
-        "word": "how much",
-        "trans": "сколько стоит",
-        "example": "I was at home yesterday."
+        "word": "reading",
+        "trans": "чтение",
+        "example": "He repeated «reading» three times."
       },
       {
-        "word": "how many",
-        "trans": "сколько (штук)",
-        "example": "It's half past nine."
+        "word": "homework",
+        "trans": "домашка",
+        "example": "My partner corrected my use of «homework»."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "I ___ at home yesterday.",
+        "sentence": "They were ___",
         "options": [
-          "was",
-          "were"
+          "happy",
+          "happys"
         ],
-        "answer": "was"
+        "answer": "happy"
       },
       {
-        "sentence": "They ___ late.",
+        "sentence": "Was she at ___",
         "options": [
-          "was",
-          "were"
+          "school",
+          "schools"
         ],
-        "answer": "were"
+        "answer": "school"
       },
       {
-        "sentence": "___ she happy?",
+        "sentence": "___ quarter to five",
         "options": [
-          "Was",
-          "Were"
+          "It's",
+          "It'"
         ],
-        "answer": "Was"
+        "answer": "It's"
       },
       {
-        "sentence": "It's half ___ three.",
+        "sentence": "The ___ starts at ten",
         "options": [
-          "past",
-          "to"
+          "lesson",
+          "lessons"
         ],
-        "answer": "past"
+        "answer": "lesson"
       }
     ],
     "theoryCheck": [
@@ -5817,12 +5888,12 @@ const CURRICULUM = [
         "answer": "I was tired."
       },
       {
-        "question": "Пример по теме «Was / Were»:",
+        "question": "Какое правило относится к «Time & Numbers»?",
         "options": [
-          "I was at home yesterday.",
-          "I were tired."
+          "What time is it? — It's three o'clock. Half past two. How many (счётные) / How much (несчётные).",
+          "Прошедшее от to be: I/he/she/it was, we/you/they were. Was/Were + подлежащее для вопросов."
         ],
-        "answer": "I was at home yesterday."
+        "answer": "What time is it? — It's three o'clock. Half past two. How many (счётные) / How much (несчётные)."
       },
       {
         "question": "Какая формула относится к «A1 Review»?",
@@ -5836,48 +5907,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I ______ at home yesterday.",
-        "answer": "was",
+        "prompt": "I was at ______",
+        "answer": "home",
         "altAnswers": [
-          "was",
-          "Was"
+          "home",
+          "Home"
         ],
-        "hint": "Подсказка: слово из урока «Was/Were, numbers, time»."
+        "hint": "Подсказка: тема «Was/Were, numbers, time»."
       },
       {
         "id": 2,
-        "prompt": "They ______ late.",
-        "answer": "were",
+        "prompt": "______ past two",
+        "answer": "Half",
         "altAnswers": [
-          "Were",
-          "were"
+          "Half",
+          "half"
         ],
-        "hint": "Подсказка: слово из урока «Was/Were, numbers, time»."
+        "hint": "Подсказка: тема «Was/Were, numbers, time»."
       },
       {
         "id": 3,
-        "prompt": "______ she happy?",
-        "answer": "Was",
+        "prompt": "______ much is it",
+        "answer": "How",
         "altAnswers": [
-          "was",
-          "Was"
+          "How",
+          "how"
         ],
-        "hint": "Подсказка: слово из урока «Was/Were, numbers, time»."
+        "hint": "Подсказка: тема «Was/Were, numbers, time»."
       },
       {
         "id": 4,
-        "prompt": "It's half ______ three.",
-        "answer": "past",
+        "prompt": "______ to five",
+        "answer": "Quarter",
         "altAnswers": [
-          "past",
-          "Past"
+          "Quarter",
+          "quarter"
         ],
-        "hint": "Подсказка: слово из урока «Was/Were, numbers, time»."
+        "hint": "Подсказка: тема «Was/Were, numbers, time»."
       }
     ],
     "theory": {
       "intro": "Итоговый урок A1: was/were, числа, время и повторение ключевых тем.",
-      "reading": "**Повторение A1** — Итоговый урок A1: was/were, числа, время и повторение ключевых тем.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Was / Were\nПрошедшее от to be: I/he/she/it was, we/you/they were. Was/Were + подлежащее для вопросов.\n\n*Пример:* I was at home yesterday.\n\n### Time & Numbers\nWhat time is it? — It's three o'clock. Half past two. How many (счётные) / How much (несчётные).\n\n*Пример:* It's half past nine.\n\n### Формулы\n- `I/he/she/it was / we/you/they were`\n- `What time is it? — It's + time`\n- `How many + plural / How much + uncountable`\n\n### Типичная ошибка\n❌ I were tired.\n✅ I was tired.",
+      "reading": "**Повторение A1** — Итоговый урок A1: was/were, числа, время и повторение ключевых тем.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Was / Were\nПрошедшее от to be: I/he/she/it was, we/you/they were. Was/Were + подлежащее для вопросов.\n\n### Time & Numbers\nWhat time is it? — It's three o'clock. Half past two. How many (счётные) / How much (несчётные).\n\n### Формулы\n- `I/he/she/it was / we/you/they were`\n- `What time is it? — It's + time`\n- `How many + plural / How much + uncountable`\n\n### Типичная ошибка\n❌ I were tired.\n✅ I was tired.",
       "keyPoints": [
         "Was / Were: Прошедшее от to be: I/he/she/it was, we/you/they were. Was/Were + подлежащее для",
         "Time & Numbers: What time is it? — It's three o'clock. Half past two. How many (счётные) / How m",
@@ -5891,19 +5962,19 @@ const CURRICULUM = [
       {
         "question": "What is «was»?",
         "options": [
-          "ровно (время)",
+          "были",
           "сколько стоит",
-          "был(а)",
-          "четверть (часа)"
+          "число",
+          "был(а)"
         ],
         "answer": "был(а)"
       },
       {
         "question": "What is «were»?",
         "options": [
+          "цена",
           "были",
-          "был(а)",
-          "ровно (время)",
+          "число",
           "сколько стоит"
         ],
         "answer": "были"
@@ -5911,30 +5982,30 @@ const CURRICULUM = [
       {
         "question": "What is «yesterday»?",
         "options": [
-          "вчера",
-          "половина (часа)",
           "были",
-          "цена"
+          "вчера",
+          "ровно (время)",
+          "число"
         ],
         "answer": "вчера"
       },
       {
         "question": "What is «o'clock»?",
         "options": [
-          "сколько стоит",
+          "четверть (часа)",
           "вчера",
-          "цена",
-          "ровно (время)"
+          "ровно (время)",
+          "половина (часа)"
         ],
         "answer": "ровно (время)"
       },
       {
         "question": "What is «half past»?",
         "options": [
-          "четверть (часа)",
+          "половина (часа)",
+          "вчера",
           "сколько стоит",
-          "были",
-          "половина (часа)"
+          "цена"
         ],
         "answer": "половина (часа)"
       },
@@ -6135,15 +6206,7 @@ const CURRICULUM = [
         "my/your/his/her + family member",
         "have + number + brothers/sisters"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "My parents live in Moscow.",
-            "Her brother is a teacher."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I have two brother.",
         "right": "I have two brothers."
@@ -6253,7 +6316,10 @@ const CURRICULUM = [
           "father",
           "sister",
           "brother",
-          "son"
+          "son",
+          "daughter",
+          "parents",
+          "husband"
         ],
         "mustIncludeAny": [
           [
@@ -6263,11 +6329,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Her brother works as a teacher."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Family members»."
       },
       {
         "prompt": "Where do the parents live?",
@@ -6277,7 +6342,10 @@ const CURRICULUM = [
           "father",
           "sister",
           "brother",
-          "son"
+          "son",
+          "daughter",
+          "parents",
+          "husband"
         ],
         "mustIncludeAny": [
           [
@@ -6287,11 +6355,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The action happens at home and at school."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Family members»."
       },
       {
         "prompt": "What does her brother do?",
@@ -6301,7 +6368,10 @@ const CURRICULUM = [
           "father",
           "sister",
           "brother",
-          "son"
+          "son",
+          "daughter",
+          "parents",
+          "husband"
         ],
         "mustIncludeAny": [
           [
@@ -6311,11 +6381,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The brother studies at university."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Family members»."
       },
       {
         "prompt": "How do they describe their family?",
@@ -6325,7 +6394,10 @@ const CURRICULUM = [
           "father",
           "sister",
           "brother",
-          "son"
+          "son",
+          "daughter",
+          "parents",
+          "husband"
         ],
         "mustIncludeAny": [
           [
@@ -6335,11 +6407,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage describes a busy morning routine."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Family members»."
       }
     ],
     "speaking": [
@@ -6425,87 +6496,129 @@ const CURRICULUM = [
       {
         "word": "mother",
         "trans": "мать",
-        "example": "My parents live in Moscow."
+        "example": "My partner corrected my use of «mother»."
       },
       {
         "word": "father",
         "trans": "отец",
-        "example": "Her brother is a teacher."
+        "example": "My note says «father» means «отец»."
       },
       {
         "word": "sister",
         "trans": "сестра",
-        "example": "My parents live in Moscow."
+        "example": "In our dialogue, «sister» appeared twice."
       },
       {
         "word": "brother",
         "trans": "брат",
-        "example": "Her brother is a teacher."
+        "example": "I linked «brother» to other words I know."
       },
       {
         "word": "son",
         "trans": "сын",
-        "example": "My parents live in Moscow."
+        "example": "I heard «son» in the listening exercise."
       },
       {
         "word": "daughter",
         "trans": "дочь",
-        "example": "Her brother is a teacher."
+        "example": "I looked up «daughter» in the dictionary."
       },
       {
         "word": "parents",
         "trans": "родители",
-        "example": "My parents live in Moscow."
+        "example": "The example with «parents» was clear."
       },
       {
         "word": "husband",
         "trans": "муж",
-        "example": "Her brother is a teacher."
+        "example": "Can you make a sentence with «husband»?"
       },
       {
         "word": "wife",
         "trans": "жена",
-        "example": "My parents live in Moscow."
+        "example": "«wife» helped me understand family members."
       },
       {
         "word": "family",
         "trans": "семья",
-        "example": "Her brother is a teacher."
+        "example": "I often use «family» when I talk about family members."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "The teacher wrote «practice» on the board."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "Let's practise «review» in a full sentence."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "«sentence» is a key word in this lesson on family members."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "I need to remember «grammar» for homework."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I used «vocabulary» in my written answer."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "She asked me about «speaking» during practice."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "«listening» fits well in a sentence about family members."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "«writing» was new for me this week."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "We discussed «reading» in class today."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "He repeated «homework» three times."
       }
     ],
     "id": 9,
     "grammarCheck": [
       {
-        "sentence": "My ___ is a doctor.",
+        "sentence": "My ___ live in Moscow",
         "options": [
-          "mother",
-          "mothers"
+          "parents",
+          "parent"
         ],
-        "answer": "mother"
+        "answer": "parents"
       },
       {
-        "sentence": "They have two ___.",
+        "sentence": "I have ___ brothers",
         "options": [
-          "children",
-          "childs"
+          "two",
+          "twos"
         ],
-        "answer": "children"
+        "answer": "two"
       },
       {
-        "sentence": "___ parents are retired.",
+        "sentence": "Her ___ is younger",
         "options": [
-          "Her",
-          "She"
+          "sister",
+          "sisters"
         ],
-        "answer": "Her"
-      },
-      {
-        "sentence": "Do you have any ___?",
-        "options": [
-          "sisters",
-          "sister"
-        ],
-        "answer": "sisters"
+        "answer": "sister"
       }
     ],
     "theoryCheck": [
@@ -6518,12 +6631,12 @@ const CURRICULUM = [
         "answer": "I have two brothers."
       },
       {
-        "question": "Пример по теме «Family members»:",
+        "question": "Какое правило относится к «Possessives»?",
         "options": [
-          "My parents live in Moscow.",
-          "I have two brother."
+          "Use my, your, his, her, their before a noun.",
+          "Mother, father, brother, sister, son, daughter, parents."
         ],
-        "answer": "My parents live in Moscow."
+        "answer": "Use my, your, his, her, their before a noun."
       },
       {
         "question": "Какая формула относится к «Family»?",
@@ -6537,48 +6650,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "My ______ is a doctor.",
-        "answer": "mother",
+        "prompt": "We are a ______ family",
+        "answer": "big",
         "altAnswers": [
-          "mother",
-          "Mother"
+          "big",
+          "Big"
         ],
-        "hint": "Подсказка: слово из урока «Family members»."
+        "hint": "Подсказка: тема «Family members»."
       },
       {
         "id": 2,
-        "prompt": "They have two ______ .",
-        "answer": "children",
+        "prompt": "My ______ and I",
+        "answer": "husband",
         "altAnswers": [
-          "Children",
-          "children"
+          "Husband",
+          "husband"
         ],
-        "hint": "Подсказка: слово из урока «Family members»."
+        "hint": "Подсказка: тема «Family members»."
       },
       {
         "id": 3,
-        "prompt": "______ parents are retired.",
-        "answer": "Her",
+        "prompt": "His ______ works abroad",
+        "answer": "wife",
         "altAnswers": [
-          "her",
-          "Her"
+          "Wife",
+          "wife"
         ],
-        "hint": "Подсказка: слово из урока «Family members»."
-      },
-      {
-        "id": 4,
-        "prompt": "Do you have any ______ ?",
-        "answer": "sisters",
-        "altAnswers": [
-          "sisters",
-          "Sisters"
-        ],
-        "hint": "Подсказка: слово из урока «Family members»."
+        "hint": "Подсказка: тема «Family members»."
       }
     ],
     "theory": {
       "intro": "Talk about your family: parents, siblings, and possessive adjectives.",
-      "reading": "**Семья** — Talk about your family: parents, siblings, and possessive adjectives.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Family members\nMother, father, brother, sister, son, daughter, parents.\n\n*Пример:* My parents live in Moscow.\n\n### Possessives\nUse my, your, his, her, their before a noun.\n\n*Пример:* Her brother is a teacher.\n\n### Формулы\n- `my/your/his/her + family member`\n- `have + number + brothers/sisters`\n\n### Типичная ошибка\n❌ I have two brother.\n✅ I have two brothers.",
+      "reading": "**Семья** — Talk about your family: parents, siblings, and possessive adjectives.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Family members\nMother, father, brother, sister, son, daughter, parents.\n\n### Possessives\nUse my, your, his, her, their before a noun.\n\n### Формулы\n- `my/your/his/her + family member`\n- `have + number + brothers/sisters`\n\n### Типичная ошибка\n❌ I have two brother.\n✅ I have two brothers.",
       "keyPoints": [
         "Family members: Mother, father, brother, sister, son, daughter, parents.",
         "Possessives: Use my, your, his, her, their before a noun.",
@@ -6592,30 +6695,30 @@ const CURRICULUM = [
       {
         "question": "What is «mother»?",
         "options": [
-          "дочь",
-          "родители",
           "мать",
-          "отец"
+          "родители",
+          "муж",
+          "сын"
         ],
         "answer": "мать"
       },
       {
         "question": "What is «father»?",
         "options": [
-          "сын",
-          "дочь",
+          "жена",
           "отец",
-          "жена"
+          "сестра",
+          "семья"
         ],
         "answer": "отец"
       },
       {
         "question": "What is «sister»?",
         "options": [
-          "сын",
           "сестра",
           "жена",
-          "мать"
+          "родители",
+          "брат"
         ],
         "answer": "сестра"
       },
@@ -6623,19 +6726,19 @@ const CURRICULUM = [
         "question": "What is «brother»?",
         "options": [
           "брат",
-          "жена",
-          "семья",
-          "родители"
+          "отец",
+          "мать",
+          "семья"
         ],
         "answer": "брат"
       },
       {
         "question": "What is «son»?",
         "options": [
+          "муж",
           "родители",
-          "сын",
-          "брат",
-          "отец"
+          "семья",
+          "сын"
         ],
         "answer": "сын"
       },
@@ -6846,15 +6949,7 @@ const CURRICULUM = [
         "I'd like + noun",
         "Can I have + noun?"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "I usually have eggs and toast for breakfast.",
-            "Can I have a coffee, please?"
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I want a waters.",
         "right": "I want some water."
@@ -6954,7 +7049,10 @@ const CURRICULUM = [
           "lunch",
           "dinner",
           "water",
-          "coffee"
+          "coffee",
+          "tea",
+          "bread",
+          "chicken"
         ],
         "mustIncludeAny": [
           [
@@ -6964,11 +7062,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They describe their daily routine clearly."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Food and drinks»."
       },
       {
         "prompt": "What do they eat for breakfast?",
@@ -6978,7 +7075,10 @@ const CURRICULUM = [
           "lunch",
           "dinner",
           "water",
-          "coffee"
+          "coffee",
+          "tea",
+          "bread",
+          "chicken"
         ],
         "mustIncludeAny": [
           [
@@ -6988,11 +7088,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The brother studies at university."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Food and drinks»."
       },
       {
         "prompt": "Do they prefer tea or coffee?",
@@ -7002,7 +7101,10 @@ const CURRICULUM = [
           "lunch",
           "dinner",
           "water",
-          "coffee"
+          "coffee",
+          "tea",
+          "bread",
+          "chicken"
         ],
         "mustIncludeAny": [
           [
@@ -7012,11 +7114,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss food and drinks in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Food and drinks»."
       },
       {
         "prompt": "Is anyone hungry in the scene?",
@@ -7026,7 +7127,10 @@ const CURRICULUM = [
           "lunch",
           "dinner",
           "water",
-          "coffee"
+          "coffee",
+          "tea",
+          "bread",
+          "chicken"
         ],
         "mustIncludeAny": [
           [
@@ -7036,11 +7140,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about water."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Food and drinks»."
       },
       {
         "prompt": "What polite phrase do they use?",
@@ -7143,87 +7246,137 @@ const CURRICULUM = [
       {
         "word": "breakfast",
         "trans": "завтрак",
-        "example": "I usually have eggs and toast for breakfast."
+        "example": "He repeated «breakfast» three times."
       },
       {
         "word": "lunch",
         "trans": "обед",
-        "example": "Can I have a coffee, please?"
+        "example": "My partner corrected my use of «lunch»."
       },
       {
         "word": "dinner",
         "trans": "ужин",
-        "example": "I usually have eggs and toast for breakfast."
+        "example": "My note says «dinner» means «ужин»."
       },
       {
         "word": "water",
         "trans": "вода",
-        "example": "Can I have a coffee, please?"
+        "example": "I want some water."
       },
       {
         "word": "coffee",
         "trans": "кофе",
-        "example": "I usually have eggs and toast for breakfast."
+        "example": "I linked «coffee» to other words I know."
       },
       {
         "word": "tea",
         "trans": "чай",
-        "example": "Can I have a coffee, please?"
+        "example": "I heard «tea» in the listening exercise."
       },
       {
         "word": "bread",
         "trans": "хлеб",
-        "example": "I usually have eggs and toast for breakfast."
+        "example": "I looked up «bread» in the dictionary."
       },
       {
         "word": "chicken",
         "trans": "курица",
-        "example": "Can I have a coffee, please?"
+        "example": "The example with «chicken» was clear."
       },
       {
         "word": "salad",
         "trans": "салат",
-        "example": "I usually have eggs and toast for breakfast."
+        "example": "Can you make a sentence with «salad»?"
       },
       {
         "word": "hungry",
         "trans": "голодный",
-        "example": "Can I have a coffee, please?"
+        "example": "«hungry» helped me understand food and drinks."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "I often use «practice» when I talk about food and drinks."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "The teacher wrote «review» on the board."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "Let's practise «sentence» in a full sentence."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "«grammar» is a key word in this lesson on food and drinks."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I need to remember «vocabulary» for homework."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I used «speaking» in my written answer."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "She asked me about «listening» during practice."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "«writing» fits well in a sentence about food and drinks."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "«reading» was new for me this week."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "We discussed «homework» in class today."
       }
     ],
     "id": 10,
     "grammarCheck": [
       {
-        "sentence": "I'd like a ___, please.",
+        "sentence": "___ I have a coffee, please",
         "options": [
-          "coffee",
-          "coffees"
+          "Can",
+          "Cans"
         ],
-        "answer": "coffee"
+        "answer": "Can"
       },
       {
-        "sentence": "She ___ lunch at one.",
+        "sentence": "___ hungry",
         "options": [
-          "has",
-          "have"
+          "I'm",
+          "I'ms"
         ],
-        "answer": "has"
+        "answer": "I'm"
       },
       {
-        "sentence": "Are you ___?",
+        "sentence": "___ like the chicken salad",
         "options": [
-          "hungry",
-          "hungrily"
+          "I'd",
+          "I'ds"
         ],
-        "answer": "hungry"
+        "answer": "I'd"
       },
       {
-        "sentence": "We need some ___.",
+        "sentence": "A ___ for two, please",
         "options": [
-          "bread",
-          "breads"
+          "table",
+          "tables"
         ],
-        "answer": "bread"
+        "answer": "table"
       }
     ],
     "theoryCheck": [
@@ -7236,12 +7389,12 @@ const CURRICULUM = [
         "answer": "I want some water."
       },
       {
-        "question": "Пример по теме «Meals»:",
+        "question": "Какое правило относится к «Ordering»?",
         "options": [
-          "I usually have eggs and toast for breakfast.",
-          "I want a waters."
+          "I'd like… / Can I have…? / A table for two, please.",
+          "Have breakfast/lunch/dinner. For breakfast I usually have…"
         ],
-        "answer": "I usually have eggs and toast for breakfast."
+        "answer": "I'd like… / Can I have…? / A table for two, please."
       },
       {
         "question": "Какая формула относится к «Food & drinks»?",
@@ -7255,48 +7408,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I'd like a ______ , please.",
-        "answer": "coffee",
+        "prompt": "The ______ please",
+        "answer": "bill",
         "altAnswers": [
-          "coffee",
-          "Coffee"
+          "bill",
+          "Bill"
         ],
-        "hint": "Подсказка: слово из урока «Food and drinks»."
+        "hint": "Подсказка: тема «Food and drinks»."
       },
       {
         "id": 2,
-        "prompt": "She ______ lunch at one.",
-        "answer": "has",
+        "prompt": "______ do you have for breakfast",
+        "answer": "What",
         "altAnswers": [
-          "has",
-          "Has"
+          "what",
+          "What"
         ],
-        "hint": "Подсказка: слово из урока «Food and drinks»."
+        "hint": "Подсказка: тема «Food and drinks»."
       },
       {
         "id": 3,
-        "prompt": "Are you ______ ?",
-        "answer": "hungry",
+        "prompt": "I ______ some water",
+        "answer": "want",
         "altAnswers": [
-          "Hungry",
-          "hungry"
+          "Want",
+          "want"
         ],
-        "hint": "Подсказка: слово из урока «Food and drinks»."
-      },
-      {
-        "id": 4,
-        "prompt": "We need some ______ .",
-        "answer": "bread",
-        "altAnswers": [
-          "Bread",
-          "bread"
-        ],
-        "hint": "Подсказка: слово из урока «Food and drinks»."
+        "hint": "Подсказка: тема «Food and drinks»."
       }
     ],
     "theory": {
       "intro": "Order food, talk about meals, and use countable food words naturally.",
-      "reading": "**Еда и напитки** — Order food, talk about meals, and use countable food words naturally.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Meals\nHave breakfast/lunch/dinner. For breakfast I usually have…\n\n*Пример:* I usually have eggs and toast for breakfast.\n\n### Ordering\nI'd like… / Can I have…? / A table for two, please.\n\n*Пример:* Can I have a coffee, please?\n\n### Формулы\n- `have + food for breakfast/lunch`\n- `I'd like + noun`\n- `Can I have + noun?`\n\n### Типичная ошибка\n❌ I want a waters.\n✅ I want some water.",
+      "reading": "**Еда и напитки** — Order food, talk about meals, and use countable food words naturally.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Meals\nHave breakfast/lunch/dinner. For breakfast I usually have…\n\n### Ordering\nI'd like… / Can I have…? / A table for two, please.\n\n### Формулы\n- `have + food for breakfast/lunch`\n- `I'd like + noun`\n- `Can I have + noun?`\n\n### Типичная ошибка\n❌ I want a waters.\n✅ I want some water.",
       "keyPoints": [
         "Meals: Have breakfast/lunch/dinner. For breakfast I usually have…",
         "Ordering: I'd like… / Can I have…? / A table for two, please.",
@@ -7310,30 +7453,30 @@ const CURRICULUM = [
       {
         "question": "What is «breakfast»?",
         "options": [
-          "чай",
           "вода",
           "обед",
-          "завтрак"
+          "завтрак",
+          "голодный"
         ],
         "answer": "завтрак"
       },
       {
         "question": "What is «lunch»?",
         "options": [
-          "вода",
-          "голодный",
           "обед",
-          "чай"
+          "кофе",
+          "голодный",
+          "вода"
         ],
         "answer": "обед"
       },
       {
         "question": "What is «dinner»?",
         "options": [
-          "курица",
-          "ужин",
           "обед",
-          "вода"
+          "чай",
+          "ужин",
+          "хлеб"
         ],
         "answer": "ужин"
       },
@@ -7341,19 +7484,19 @@ const CURRICULUM = [
         "question": "What is «water»?",
         "options": [
           "завтрак",
+          "курица",
           "вода",
-          "салат",
-          "ужин"
+          "салат"
         ],
         "answer": "вода"
       },
       {
         "question": "What is «coffee»?",
         "options": [
-          "салат",
+          "ужин",
+          "курица",
           "кофе",
-          "чай",
-          "хлеб"
+          "вода"
         ],
         "answer": "кофе"
       },
@@ -7557,15 +7700,7 @@ const CURRICULUM = [
         "I am wearing + clothes",
         "She wears + clothes"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "Her dress is red.",
-            "I wear jeans to work."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I am wear a hat.",
         "right": "I am wearing a hat."
@@ -7665,7 +7800,10 @@ const CURRICULUM = [
           "blue",
           "black",
           "white",
-          "shirt"
+          "shirt",
+          "dress",
+          "jeans",
+          "jacket"
         ],
         "mustIncludeAny": [
           [
@@ -7675,11 +7813,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about white."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Colours and clothes»."
       },
       {
         "prompt": "What is she wearing in the scene?",
@@ -7689,7 +7826,10 @@ const CURRICULUM = [
           "blue",
           "black",
           "white",
-          "shirt"
+          "shirt",
+          "dress",
+          "jeans",
+          "jacket"
         ],
         "mustIncludeAny": [
           [
@@ -7699,11 +7839,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss colours and clothes in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Colours and clothes»."
       },
       {
         "prompt": "Does he prefer casual clothes?",
@@ -7713,7 +7852,10 @@ const CURRICULUM = [
           "blue",
           "black",
           "white",
-          "shirt"
+          "shirt",
+          "dress",
+          "jeans",
+          "jacket"
         ],
         "mustIncludeAny": [
           [
@@ -7723,11 +7865,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss colours and clothes in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Colours and clothes»."
       },
       {
         "prompt": "What clothes are mentioned?",
@@ -7737,7 +7878,10 @@ const CURRICULUM = [
           "blue",
           "black",
           "white",
-          "shirt"
+          "shirt",
+          "dress",
+          "jeans",
+          "jacket"
         ],
         "mustIncludeAny": [
           [
@@ -7747,11 +7891,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from colours and clothes."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Colours and clothes»."
       },
       {
         "prompt": "Are the shoes new or old?",
@@ -7761,7 +7904,10 @@ const CURRICULUM = [
           "blue",
           "black",
           "white",
-          "shirt"
+          "shirt",
+          "dress",
+          "jeans",
+          "jacket"
         ],
         "mustIncludeAny": [
           [
@@ -7771,11 +7917,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from colours and clothes."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Colours and clothes»."
       }
     ],
     "speaking": [
@@ -7857,87 +8002,129 @@ const CURRICULUM = [
       {
         "word": "red",
         "trans": "красный",
-        "example": "Her dress is red."
+        "example": "We discussed «red» in class today."
       },
       {
         "word": "blue",
         "trans": "синий",
-        "example": "I wear jeans to work."
+        "example": "He repeated «blue» three times."
       },
       {
         "word": "black",
         "trans": "чёрный",
-        "example": "Her dress is red."
+        "example": "My partner corrected my use of «black»."
       },
       {
         "word": "white",
         "trans": "белый",
-        "example": "I wear jeans to work."
+        "example": "My note says «white» means «белый»."
       },
       {
         "word": "shirt",
         "trans": "рубашка",
-        "example": "Her dress is red."
+        "example": "In our dialogue, «shirt» appeared twice."
       },
       {
         "word": "dress",
         "trans": "платье",
-        "example": "I wear jeans to work."
+        "example": "I linked «dress» to other words I know."
       },
       {
         "word": "jeans",
         "trans": "джинсы",
-        "example": "Her dress is red."
+        "example": "I heard «jeans» in the listening exercise."
       },
       {
         "word": "jacket",
         "trans": "куртка",
-        "example": "I wear jeans to work."
+        "example": "I looked up «jacket» in the dictionary."
       },
       {
         "word": "shoes",
         "trans": "обувь",
-        "example": "Her dress is red."
+        "example": "The example with «shoes» was clear."
       },
       {
         "word": "wear",
         "trans": "носить (одежду)",
-        "example": "I wear jeans to work."
+        "example": "Can you make a sentence with «wear»?"
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» helped me understand colours and clothes."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "I often use «review» when I talk about colours and clothes."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "The teacher wrote «sentence» on the board."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "Let's practise «grammar» in a full sentence."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "«vocabulary» is a key word in this lesson on colours and clothes."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I need to remember «speaking» for homework."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I used «listening» in my written answer."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "She asked me about «writing» during practice."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "«reading» fits well in a sentence about colours and clothes."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "«homework» was new for me this week."
       }
     ],
     "id": 11,
     "grammarCheck": [
       {
-        "sentence": "She is ___ a blue dress.",
+        "sentence": "___ wearing a black jacket",
         "options": [
-          "wearing",
-          "wear"
+          "I'm",
+          "I'ms"
         ],
-        "answer": "wearing"
+        "answer": "I'm"
       },
       {
-        "sentence": "My shoes are ___.",
+        "sentence": "She wears jeans ___ day",
         "options": [
-          "black",
-          "blacks"
+          "every",
+          "everys"
         ],
-        "answer": "black"
+        "answer": "every"
       },
       {
-        "sentence": "What ___ is your bag?",
+        "sentence": "___ shoes are too big",
         "options": [
-          "colour",
-          "colours"
+          "These",
+          "Theses"
         ],
-        "answer": "colour"
-      },
-      {
-        "sentence": "He ___ a white shirt.",
-        "options": [
-          "wears",
-          "wear"
-        ],
-        "answer": "wears"
+        "answer": "These"
       }
     ],
     "theoryCheck": [
@@ -7950,12 +8137,12 @@ const CURRICULUM = [
         "answer": "I am wearing a hat."
       },
       {
-        "question": "Пример по теме «Colours»:",
+        "question": "Какое правило относится к «Clothes»?",
         "options": [
-          "Her dress is red.",
-          "I am wear a hat."
+          "Wear + clothes. She is wearing a black jacket.",
+          "What colour is…? It is + colour. My bag is blue."
         ],
-        "answer": "Her dress is red."
+        "answer": "Wear + clothes. She is wearing a black jacket."
       },
       {
         "question": "Какая формула относится к «Colours & clothes»?",
@@ -7969,48 +8156,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "She is ______ a blue dress.",
-        "answer": "wearing",
+        "prompt": "I ______ a new shirt",
+        "answer": "need",
         "altAnswers": [
-          "Wearing",
-          "wearing"
+          "need",
+          "Need"
         ],
-        "hint": "Подсказка: слово из урока «Colours and clothes»."
+        "hint": "Подсказка: тема «Colours and clothes»."
       },
       {
         "id": 2,
-        "prompt": "My shoes are ______ .",
-        "answer": "black",
+        "prompt": "______ jeans are new",
+        "answer": "These",
         "altAnswers": [
-          "black",
-          "Black"
+          "these",
+          "These"
         ],
-        "hint": "Подсказка: слово из урока «Colours and clothes»."
+        "hint": "Подсказка: тема «Colours and clothes»."
       },
       {
         "id": 3,
-        "prompt": "What ______ is your bag?",
-        "answer": "colour",
+        "prompt": "I am wearing a ______",
+        "answer": "hat",
         "altAnswers": [
-          "colour",
-          "Colour"
+          "hat",
+          "Hat"
         ],
-        "hint": "Подсказка: слово из урока «Colours and clothes»."
-      },
-      {
-        "id": 4,
-        "prompt": "He ______ a white shirt.",
-        "answer": "wears",
-        "altAnswers": [
-          "Wears",
-          "wears"
-        ],
-        "hint": "Подсказка: слово из урока «Colours and clothes»."
+        "hint": "Подсказка: тема «Colours and clothes»."
       }
     ],
     "theory": {
       "intro": "Describe what people wear using colours and common clothing words.",
-      "reading": "**Цвета и одежда** — Describe what people wear using colours and common clothing words.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Colours\nWhat colour is…? It is + colour. My bag is blue.\n\n*Пример:* Her dress is red.\n\n### Clothes\nWear + clothes. She is wearing a black jacket.\n\n*Пример:* I wear jeans to work.\n\n### Формулы\n- `What colour is + noun?`\n- `I am wearing + clothes`\n- `She wears + clothes`\n\n### Типичная ошибка\n❌ I am wear a hat.\n✅ I am wearing a hat.",
+      "reading": "**Цвета и одежда** — Describe what people wear using colours and common clothing words.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Colours\nWhat colour is…? It is + colour. My bag is blue.\n\n### Clothes\nWear + clothes. She is wearing a black jacket.\n\n### Формулы\n- `What colour is + noun?`\n- `I am wearing + clothes`\n- `She wears + clothes`\n\n### Типичная ошибка\n❌ I am wear a hat.\n✅ I am wearing a hat.",
       "keyPoints": [
         "Colours: What colour is…? It is + colour. My bag is blue.",
         "Clothes: Wear + clothes. She is wearing a black jacket.",
@@ -8024,8 +8201,8 @@ const CURRICULUM = [
       {
         "question": "What is «red»?",
         "options": [
+          "носить (одежду)",
           "синий",
-          "чёрный",
           "красный",
           "платье"
         ],
@@ -8034,10 +8211,10 @@ const CURRICULUM = [
       {
         "question": "What is «blue»?",
         "options": [
-          "куртка",
-          "джинсы",
-          "носить (одежду)",
-          "синий"
+          "чёрный",
+          "обувь",
+          "синий",
+          "куртка"
         ],
         "answer": "синий"
       },
@@ -8046,28 +8223,28 @@ const CURRICULUM = [
         "options": [
           "рубашка",
           "белый",
-          "синий",
-          "чёрный"
+          "чёрный",
+          "джинсы"
         ],
         "answer": "чёрный"
       },
       {
         "question": "What is «white»?",
         "options": [
-          "обувь",
           "рубашка",
           "белый",
-          "красный"
+          "обувь",
+          "синий"
         ],
         "answer": "белый"
       },
       {
         "question": "What is «shirt»?",
         "options": [
-          "красный",
+          "куртка",
           "рубашка",
-          "джинсы",
-          "белый"
+          "белый",
+          "носить (одежду)"
         ],
         "answer": "рубашка"
       },
@@ -8267,15 +8444,7 @@ const CURRICULUM = [
         "It's + weather adjective",
         "In + season + it is…"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "It's rainy today.",
-            "In winter it often snows here."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "It is sun today.",
         "right": "It is sunny today."
@@ -8375,7 +8544,10 @@ const CURRICULUM = [
           "rainy",
           "cold",
           "hot",
-          "windy"
+          "windy",
+          "snow",
+          "spring",
+          "summer"
         ],
         "mustIncludeAny": [
           [
@@ -8385,11 +8557,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They talk about rain and cold wind."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Weather and seasons»."
       },
       {
         "prompt": "Which season is it?",
@@ -8399,7 +8570,10 @@ const CURRICULUM = [
           "rainy",
           "cold",
           "hot",
-          "windy"
+          "windy",
+          "snow",
+          "spring",
+          "summer"
         ],
         "mustIncludeAny": [
           [
@@ -8409,11 +8583,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss weather and seasons in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Weather and seasons»."
       },
       {
         "prompt": "Is it hot or cold?",
@@ -8423,7 +8596,10 @@ const CURRICULUM = [
           "rainy",
           "cold",
           "hot",
-          "windy"
+          "windy",
+          "snow",
+          "spring",
+          "summer"
         ],
         "mustIncludeAny": [
           [
@@ -8433,11 +8609,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on weather and seasons."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Weather and seasons»."
       },
       {
         "prompt": "Does it rain or snow?",
@@ -8447,7 +8622,10 @@ const CURRICULUM = [
           "rainy",
           "cold",
           "hot",
-          "windy"
+          "windy",
+          "snow",
+          "spring",
+          "summer"
         ],
         "mustIncludeAny": [
           [
@@ -8457,11 +8635,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They talk about rain and cold wind."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Weather and seasons»."
       },
       {
         "prompt": "What season does the speaker prefer?",
@@ -8471,7 +8648,10 @@ const CURRICULUM = [
           "rainy",
           "cold",
           "hot",
-          "windy"
+          "windy",
+          "snow",
+          "spring",
+          "summer"
         ],
         "mustIncludeAny": [
           [
@@ -8481,11 +8661,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on weather and seasons."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Weather and seasons»."
       }
     ],
     "speaking": [
@@ -8571,87 +8750,137 @@ const CURRICULUM = [
       {
         "word": "sunny",
         "trans": "солнечно",
-        "example": "It's rainy today."
+        "example": "It is sunny today."
       },
       {
         "word": "rainy",
         "trans": "дождливо",
-        "example": "In winter it often snows here."
+        "example": "We discussed «rainy» in class today."
       },
       {
         "word": "cold",
         "trans": "холодно",
-        "example": "It's rainy today."
+        "example": "He repeated «cold» three times."
       },
       {
         "word": "hot",
         "trans": "жарко",
-        "example": "In winter it often snows here."
+        "example": "My partner corrected my use of «hot»."
       },
       {
         "word": "windy",
         "trans": "ветрено",
-        "example": "It's rainy today."
+        "example": "My note says «windy» means «ветрено»."
       },
       {
         "word": "snow",
         "trans": "снег",
-        "example": "In winter it often snows here."
+        "example": "In our dialogue, «snow» appeared twice."
       },
       {
         "word": "spring",
         "trans": "весна",
-        "example": "It's rainy today."
+        "example": "I linked «spring» to other words I know."
       },
       {
         "word": "summer",
         "trans": "лето",
-        "example": "In winter it often snows here."
+        "example": "I heard «summer» in the listening exercise."
       },
       {
         "word": "autumn",
         "trans": "осень",
-        "example": "It's rainy today."
+        "example": "I looked up «autumn» in the dictionary."
       },
       {
         "word": "winter",
         "trans": "зима",
-        "example": "In winter it often snows here."
+        "example": "The example with «winter» was clear."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "Can you make a sentence with «practice»?"
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» helped me understand weather and seasons."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I often use «sentence» when I talk about weather and seasons."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "The teacher wrote «grammar» on the board."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "Let's practise «vocabulary» in a full sentence."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "«speaking» is a key word in this lesson on weather and seasons."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I need to remember «listening» for homework."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I used «writing» in my written answer."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "She asked me about «reading» during practice."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "«homework» fits well in a sentence about weather and seasons."
       }
     ],
     "id": 12,
     "grammarCheck": [
       {
-        "sentence": "It's ___ today.",
+        "sentence": "___ sunny today",
         "options": [
-          "windy",
-          "wind"
+          "It's",
+          "It'"
         ],
-        "answer": "windy"
+        "answer": "It's"
       },
       {
-        "sentence": "In summer it is usually ___.",
+        "sentence": "___ raining",
         "options": [
-          "hot",
-          "hotly"
+          "It's",
+          "It'"
         ],
-        "answer": "hot"
+        "answer": "It's"
       },
       {
-        "sentence": "It often ___ in winter.",
+        "sentence": "In ___ it is cold",
         "options": [
-          "snows",
-          "snow"
+          "winter",
+          "winters"
         ],
-        "answer": "snows"
+        "answer": "winter"
       },
       {
-        "sentence": "___ the weather like?",
+        "sentence": "___ season do you prefer",
         "options": [
-          "What's",
-          "How's"
+          "Which",
+          "Whichs"
         ],
-        "answer": "What's"
+        "answer": "Which"
       }
     ],
     "theoryCheck": [
@@ -8664,12 +8893,12 @@ const CURRICULUM = [
         "answer": "It is sunny today."
       },
       {
-        "question": "Пример по теме «Today's weather»:",
+        "question": "Какое правило относится к «Seasons»?",
         "options": [
-          "It's rainy today.",
-          "It is sun today."
+          "In summer it is hot. In winter it is cold.",
+          "What's the weather like? It's sunny/rainy/cold."
         ],
-        "answer": "It's rainy today."
+        "answer": "In summer it is hot. In winter it is cold."
       },
       {
         "question": "Какая формула относится к «Weather»?",
@@ -8683,48 +8912,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "It's ______ today.",
-        "answer": "windy",
+        "prompt": "It ______ snows here",
+        "answer": "often",
         "altAnswers": [
-          "Windy",
-          "windy"
+          "Often",
+          "often"
         ],
-        "hint": "Подсказка: слово из урока «Weather and seasons»."
+        "hint": "Подсказка: тема «Weather and seasons»."
       },
       {
         "id": 2,
-        "prompt": "In summer it is usually ______ .",
-        "answer": "hot",
+        "prompt": "I ______ autumn because the leaves are beautiful",
+        "answer": "love",
         "altAnswers": [
-          "Hot",
-          "hot"
+          "Love",
+          "love"
         ],
-        "hint": "Подсказка: слово из урока «Weather and seasons»."
+        "hint": "Подсказка: тема «Weather and seasons»."
       },
       {
         "id": 3,
-        "prompt": "It often ______ in winter.",
-        "answer": "snows",
+        "prompt": "It is ______ today",
+        "answer": "sunny",
         "altAnswers": [
-          "snows",
-          "Snows"
+          "sunny",
+          "Sunny"
         ],
-        "hint": "Подсказка: слово из урока «Weather and seasons»."
-      },
-      {
-        "id": 4,
-        "prompt": "______ the weather like?",
-        "answer": "What's",
-        "altAnswers": [
-          "what's",
-          "What's"
-        ],
-        "hint": "Подсказка: слово из урока «Weather and seasons»."
+        "hint": "Подсказка: тема «Weather and seasons»."
       }
     ],
     "theory": {
       "intro": "Talk about the weather today and typical seasons in your country.",
-      "reading": "**Погода** — Talk about the weather today and typical seasons in your country.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Today's weather\nWhat's the weather like? It's sunny/rainy/cold.\n\n*Пример:* It's rainy today.\n\n### Seasons\nIn summer it is hot. In winter it is cold.\n\n*Пример:* In winter it often snows here.\n\n### Формулы\n- `It's + weather adjective`\n- `In + season + it is…`\n\n### Типичная ошибка\n❌ It is sun today.\n✅ It is sunny today.",
+      "reading": "**Погода** — Talk about the weather today and typical seasons in your country.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Today's weather\nWhat's the weather like? It's sunny/rainy/cold.\n\n### Seasons\nIn summer it is hot. In winter it is cold.\n\n### Формулы\n- `It's + weather adjective`\n- `In + season + it is…`\n\n### Типичная ошибка\n❌ It is sun today.\n✅ It is sunny today.",
       "keyPoints": [
         "Today's weather: What's the weather like? It's sunny/rainy/cold.",
         "Seasons: In summer it is hot. In winter it is cold.",
@@ -8739,18 +8958,18 @@ const CURRICULUM = [
         "question": "What is «sunny»?",
         "options": [
           "холодно",
+          "снег",
           "солнечно",
-          "осень",
-          "ветрено"
+          "жарко"
         ],
         "answer": "солнечно"
       },
       {
         "question": "What is «rainy»?",
         "options": [
+          "осень",
           "лето",
-          "жарко",
-          "ветрено",
+          "зима",
           "дождливо"
         ],
         "answer": "дождливо"
@@ -8758,20 +8977,20 @@ const CURRICULUM = [
       {
         "question": "What is «cold»?",
         "options": [
+          "дождливо",
           "холодно",
-          "жарко",
-          "лето",
-          "зима"
+          "весна",
+          "ветрено"
         ],
         "answer": "холодно"
       },
       {
         "question": "What is «hot»?",
         "options": [
-          "холодно",
           "жарко",
-          "солнечно",
-          "ветрено"
+          "лето",
+          "ветрено",
+          "весна"
         ],
         "answer": "жарко"
       },
@@ -8780,8 +8999,8 @@ const CURRICULUM = [
         "options": [
           "холодно",
           "ветрено",
-          "осень",
-          "весна"
+          "дождливо",
+          "жарко"
         ],
         "answer": "ветрено"
       },
@@ -8987,15 +9206,7 @@ const CURRICULUM = [
         "It costs + price",
         "pay by card / in cash"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "How much is this shirt?",
-            "I'll pay by card, please."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "How much cost this?",
         "right": "How much does this cost?"
@@ -9105,7 +9316,10 @@ const CURRICULUM = [
           "cheap",
           "expensive",
           "cash",
-          "card"
+          "card",
+          "receipt",
+          "discount",
+          "size"
         ],
         "mustIncludeAny": [
           [
@@ -9115,11 +9329,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss shopping in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Shopping»."
       },
       {
         "prompt": "Is the product cheap or expensive?",
@@ -9129,7 +9342,10 @@ const CURRICULUM = [
           "cheap",
           "expensive",
           "cash",
-          "card"
+          "card",
+          "receipt",
+          "discount",
+          "size"
         ],
         "mustIncludeAny": [
           [
@@ -9139,11 +9355,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss shopping in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Shopping»."
       },
       {
         "prompt": "What size do they ask for?",
@@ -9153,7 +9368,10 @@ const CURRICULUM = [
           "cheap",
           "expensive",
           "cash",
-          "card"
+          "card",
+          "receipt",
+          "discount",
+          "size"
         ],
         "mustIncludeAny": [
           [
@@ -9163,11 +9381,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about cash."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Shopping»."
       },
       {
         "prompt": "Do they get a receipt?",
@@ -9177,7 +9394,10 @@ const CURRICULUM = [
           "cheap",
           "expensive",
           "cash",
-          "card"
+          "card",
+          "receipt",
+          "discount",
+          "size"
         ],
         "mustIncludeAny": [
           [
@@ -9187,11 +9407,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about cash."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Shopping»."
       }
     ],
     "speaking": [
@@ -9277,87 +9496,137 @@ const CURRICULUM = [
       {
         "word": "price",
         "trans": "цена",
-        "example": "How much is this shirt?"
+        "example": "«price» fits well in a sentence about shopping."
       },
       {
         "word": "cheap",
         "trans": "дешёвый",
-        "example": "I'll pay by card, please."
+        "example": "«cheap» was new for me this week."
       },
       {
         "word": "expensive",
         "trans": "дорогой",
-        "example": "How much is this shirt?"
+        "example": "We discussed «expensive» in class today."
       },
       {
         "word": "cash",
         "trans": "наличные",
-        "example": "I'll pay by card, please."
+        "example": "He repeated «cash» three times."
       },
       {
         "word": "card",
         "trans": "карта",
-        "example": "How much is this shirt?"
+        "example": "My partner corrected my use of «card»."
       },
       {
         "word": "receipt",
         "trans": "чек",
-        "example": "I'll pay by card, please."
+        "example": "My note says «receipt» means «чек»."
       },
       {
         "word": "discount",
         "trans": "скидка",
-        "example": "How much is this shirt?"
+        "example": "In our dialogue, «discount» appeared twice."
       },
       {
         "word": "size",
         "trans": "размер",
-        "example": "I'll pay by card, please."
+        "example": "I linked «size» to other words I know."
       },
       {
         "word": "try on",
         "trans": "примерять",
-        "example": "How much is this shirt?"
+        "example": "I heard «try on» in the listening exercise."
       },
       {
         "word": "change",
         "trans": "сдача",
-        "example": "I'll pay by card, please."
+        "example": "I looked up «change» in the dictionary."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "The example with «practice» was clear."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "Can you make a sentence with «review»?"
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "«sentence» helped me understand shopping."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "I often use «grammar» when I talk about shopping."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "The teacher wrote «vocabulary» on the board."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "Let's practise «speaking» in a full sentence."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "«listening» is a key word in this lesson on shopping."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I need to remember «writing» for homework."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I used «reading» in my written answer."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "She asked me about «homework» during practice."
       }
     ],
     "id": 13,
     "grammarCheck": [
       {
-        "sentence": "How much ___ this jacket?",
+        "sentence": "___ much is this",
         "options": [
-          "is",
-          "are"
+          "How",
+          "Hows"
         ],
-        "answer": "is"
+        "answer": "How"
       },
       {
-        "sentence": "It ___ twenty pounds.",
+        "sentence": "___ pay by card",
         "options": [
-          "costs",
-          "cost"
+          "I'll",
+          "I'lls"
         ],
-        "answer": "costs"
+        "answer": "I'll"
       },
       {
-        "sentence": "Can I ___ by card?",
+        "sentence": "Do you ___ cash",
         "options": [
-          "pay",
-          "pays"
+          "take",
+          "takes"
         ],
-        "answer": "pay"
+        "answer": "take"
       },
       {
-        "sentence": "This is too ___.",
+        "sentence": "___ I try it on",
         "options": [
-          "expensive",
-          "expensively"
+          "Can",
+          "Cans"
         ],
-        "answer": "expensive"
+        "answer": "Can"
       }
     ],
     "theoryCheck": [
@@ -9370,12 +9639,12 @@ const CURRICULUM = [
         "answer": "How much does this cost?"
       },
       {
-        "question": "Пример по теме «Prices»:",
+        "question": "Какое правило относится к «Paying»?",
         "options": [
-          "How much is this shirt?",
-          "How much cost this?"
+          "Pay by card / in cash. Can I pay by card?",
+          "How much is it? It costs ten pounds. That's expensive."
         ],
-        "answer": "How much is this shirt?"
+        "answer": "Pay by card / in cash. Can I pay by card?"
       },
       {
         "question": "Какая формула относится к «Shopping»?",
@@ -9389,48 +9658,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "How much ______ this jacket?",
-        "answer": "is",
+        "prompt": "______ too expensive",
+        "answer": "That's",
         "altAnswers": [
-          "Is",
-          "is"
+          "that's",
+          "That's"
         ],
-        "hint": "Подсказка: слово из урока «Shopping»."
+        "hint": "Подсказка: тема «Shopping»."
       },
       {
         "id": 2,
-        "prompt": "It ______ twenty pounds.",
-        "answer": "costs",
+        "prompt": "Do you have a ______",
+        "answer": "receipt",
         "altAnswers": [
-          "costs",
-          "Costs"
+          "Receipt",
+          "receipt"
         ],
-        "hint": "Подсказка: слово из урока «Shopping»."
+        "hint": "Подсказка: тема «Shopping»."
       },
       {
         "id": 3,
-        "prompt": "Can I ______ by card?",
-        "answer": "pay",
+        "prompt": "______ much does this cost",
+        "answer": "How",
         "altAnswers": [
-          "Pay",
-          "pay"
+          "How",
+          "how"
         ],
-        "hint": "Подсказка: слово из урока «Shopping»."
-      },
-      {
-        "id": 4,
-        "prompt": "This is too ______ .",
-        "answer": "expensive",
-        "altAnswers": [
-          "Expensive",
-          "expensive"
-        ],
-        "hint": "Подсказка: слово из урока «Shopping»."
+        "hint": "Подсказка: тема «Shopping»."
       }
     ],
     "theory": {
       "intro": "Ask about prices and pay in shops using natural phrases.",
-      "reading": "**Покупки** — Ask about prices and pay in shops using natural phrases.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Prices\nHow much is it? It costs ten pounds. That's expensive.\n\n*Пример:* How much is this shirt?\n\n### Paying\nPay by card / in cash. Can I pay by card?\n\n*Пример:* I'll pay by card, please.\n\n### Формулы\n- `How much is + noun?`\n- `It costs + price`\n- `pay by card / in cash`\n\n### Типичная ошибка\n❌ How much cost this?\n✅ How much does this cost?",
+      "reading": "**Покупки** — Ask about prices and pay in shops using natural phrases.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Prices\nHow much is it? It costs ten pounds. That's expensive.\n\n### Paying\nPay by card / in cash. Can I pay by card?\n\n### Формулы\n- `How much is + noun?`\n- `It costs + price`\n- `pay by card / in cash`\n\n### Типичная ошибка\n❌ How much cost this?\n✅ How much does this cost?",
       "keyPoints": [
         "Prices: How much is it? It costs ten pounds. That's expensive.",
         "Paying: Pay by card / in cash. Can I pay by card?",
@@ -9444,10 +9703,10 @@ const CURRICULUM = [
       {
         "question": "What is «price»?",
         "options": [
-          "примерять",
-          "сдача",
+          "скидка",
           "цена",
-          "карта"
+          "сдача",
+          "наличные"
         ],
         "answer": "цена"
       },
@@ -9455,39 +9714,39 @@ const CURRICULUM = [
         "question": "What is «cheap»?",
         "options": [
           "дешёвый",
-          "чек",
           "дорогой",
-          "размер"
+          "размер",
+          "чек"
         ],
         "answer": "дешёвый"
       },
       {
         "question": "What is «expensive»?",
         "options": [
-          "примерять",
-          "дорогой",
+          "карта",
           "чек",
-          "цена"
+          "наличные",
+          "дорогой"
         ],
         "answer": "дорогой"
       },
       {
         "question": "What is «cash»?",
         "options": [
+          "наличные",
+          "примерять",
           "дешёвый",
-          "скидка",
-          "цена",
-          "наличные"
+          "скидка"
         ],
         "answer": "наличные"
       },
       {
         "question": "What is «card»?",
         "options": [
-          "дорогой",
-          "карта",
+          "наличные",
           "цена",
-          "чек"
+          "карта",
+          "сдача"
         ],
         "answer": "карта"
       },
@@ -9693,15 +9952,7 @@ const CURRICULUM = [
         "Turn left/right",
         "next to / opposite / near"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "Where is the nearest bank?",
-            "Turn right at the corner."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "Turn to left.",
         "right": "Turn left."
@@ -9801,7 +10052,10 @@ const CURRICULUM = [
           "right",
           "straight",
           "near",
-          "next to"
+          "next to",
+          "opposite",
+          "corner",
+          "map"
         ],
         "mustIncludeAny": [
           [
@@ -9811,11 +10065,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The action happens at home and at school."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Directions»."
       },
       {
         "prompt": "Do they turn left or right?",
@@ -9825,7 +10078,10 @@ const CURRICULUM = [
           "right",
           "straight",
           "near",
-          "next to"
+          "next to",
+          "opposite",
+          "corner",
+          "map"
         ],
         "mustIncludeAny": [
           [
@@ -9835,11 +10091,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about near."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Directions»."
       },
       {
         "prompt": "What landmark is mentioned?",
@@ -9849,7 +10104,10 @@ const CURRICULUM = [
           "right",
           "straight",
           "near",
-          "next to"
+          "next to",
+          "opposite",
+          "corner",
+          "map"
         ],
         "mustIncludeAny": [
           [
@@ -9859,11 +10117,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss directions in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Directions»."
       },
       {
         "prompt": "Is the place near or far?",
@@ -9873,7 +10130,10 @@ const CURRICULUM = [
           "right",
           "straight",
           "near",
-          "next to"
+          "next to",
+          "opposite",
+          "corner",
+          "map"
         ],
         "mustIncludeAny": [
           [
@@ -9883,11 +10143,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about near."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Directions»."
       },
       {
         "prompt": "What preposition of place is used?",
@@ -9897,7 +10156,10 @@ const CURRICULUM = [
           "right",
           "straight",
           "near",
-          "next to"
+          "next to",
+          "opposite",
+          "corner",
+          "map"
         ],
         "mustIncludeAny": [
           [
@@ -9907,11 +10169,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from directions."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Directions»."
       }
     ],
     "speaking": [
@@ -10001,87 +10262,137 @@ const CURRICULUM = [
       {
         "word": "left",
         "trans": "налево",
-        "example": "Where is the nearest bank?"
+        "example": "Turn left."
       },
       {
         "word": "right",
         "trans": "направо",
-        "example": "Turn right at the corner."
+        "example": "«right» fits well in a sentence about directions."
       },
       {
         "word": "straight",
         "trans": "прямо",
-        "example": "Where is the nearest bank?"
+        "example": "«straight» was new for me this week."
       },
       {
         "word": "near",
         "trans": "рядом",
-        "example": "Turn right at the corner."
+        "example": "We discussed «near» in class today."
       },
       {
         "word": "next to",
         "trans": "рядом с",
-        "example": "Where is the nearest bank?"
+        "example": "He repeated «next to» three times."
       },
       {
         "word": "opposite",
         "trans": "напротив",
-        "example": "Turn right at the corner."
+        "example": "My partner corrected my use of «opposite»."
       },
       {
         "word": "corner",
         "trans": "угол",
-        "example": "Where is the nearest bank?"
+        "example": "My note says «corner» means «угол»."
       },
       {
         "word": "map",
         "trans": "карта",
-        "example": "Turn right at the corner."
+        "example": "In our dialogue, «map» appeared twice."
       },
       {
         "word": "turn",
         "trans": "поворачивать",
-        "example": "Where is the nearest bank?"
+        "example": "I linked «turn» to other words I know."
       },
       {
         "word": "block",
         "trans": "квартал",
-        "example": "Turn right at the corner."
+        "example": "I heard «block» in the listening exercise."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "I looked up «practice» in the dictionary."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "The example with «review» was clear."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "Can you make a sentence with «sentence»?"
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "«grammar» helped me understand directions."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I often use «vocabulary» when I talk about directions."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "The teacher wrote «speaking» on the board."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "Let's practise «listening» in a full sentence."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "«writing» is a key word in this lesson on directions."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I need to remember «reading» for homework."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I used «homework» in my written answer."
       }
     ],
     "id": 14,
     "grammarCheck": [
       {
-        "sentence": "Turn ___ at the traffic lights.",
+        "sentence": "___ left at the corner",
         "options": [
-          "left",
-          "the left"
+          "Turn",
+          "Turns"
         ],
-        "answer": "left"
+        "answer": "Turn"
       },
       {
-        "sentence": "The café is ___ the bank.",
+        "sentence": "Go straight ___",
         "options": [
-          "next to",
-          "next"
+          "ahead",
+          "aheads"
         ],
-        "answer": "next to"
+        "answer": "ahead"
       },
       {
-        "sentence": "Go ___ for two blocks.",
+        "sentence": "___ opposite the park",
         "options": [
-          "straight",
-          "straightly"
+          "It's",
+          "It'"
         ],
-        "answer": "straight"
+        "answer": "It's"
       },
       {
-        "sentence": "Is there a shop ___ here?",
+        "sentence": "___ is the nearest station",
         "options": [
-          "near",
-          "nearly"
+          "Where",
+          "Wheres"
         ],
-        "answer": "near"
+        "answer": "Where"
       }
     ],
     "theoryCheck": [
@@ -10094,12 +10405,12 @@ const CURRICULUM = [
         "answer": "Turn left."
       },
       {
-        "question": "Пример по теме «Asking»:",
+        "question": "Какое правило относится к «Giving directions»?",
         "options": [
-          "Where is the nearest bank?",
-          "Turn to left."
+          "Go straight, turn left, it's next to the park.",
+          "Where is…? How do I get to…? Is there a… near here?"
         ],
-        "answer": "Where is the nearest bank?"
+        "answer": "Go straight, turn left, it's next to the park."
       },
       {
         "question": "Какая формула относится к «Directions»?",
@@ -10113,48 +10424,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "Turn ______ at the traffic lights.",
-        "answer": "left",
+        "prompt": "Is ______ a pharmacy near here",
+        "answer": "there",
         "altAnswers": [
-          "left",
-          "Left"
+          "there",
+          "There"
         ],
-        "hint": "Подсказка: слово из урока «Directions»."
+        "hint": "Подсказка: тема «Directions»."
       },
       {
         "id": 2,
-        "prompt": "The café is ______ the bank.",
-        "answer": "next to",
+        "prompt": "______ do I get to the station",
+        "answer": "How",
         "altAnswers": [
-          "Next to",
-          "next to"
+          "How",
+          "how"
         ],
-        "hint": "Подсказка: слово из урока «Directions»."
+        "hint": "Подсказка: тема «Directions»."
       },
       {
         "id": 3,
-        "prompt": "Go ______ for two blocks.",
-        "answer": "straight",
+        "prompt": "______ left",
+        "answer": "Turn",
         "altAnswers": [
-          "straight",
-          "Straight"
+          "Turn",
+          "turn"
         ],
-        "hint": "Подсказка: слово из урока «Directions»."
-      },
-      {
-        "id": 4,
-        "prompt": "Is there a shop ______ here?",
-        "answer": "near",
-        "altAnswers": [
-          "near",
-          "Near"
-        ],
-        "hint": "Подсказка: слово из урока «Directions»."
+        "hint": "Подсказка: тема «Directions»."
       }
     ],
     "theory": {
       "intro": "Ask for and give directions using prepositions of place.",
-      "reading": "**Направления** — Ask for and give directions using prepositions of place.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Asking\nWhere is…? How do I get to…? Is there a… near here?\n\n*Пример:* Where is the nearest bank?\n\n### Giving directions\nGo straight, turn left, it's next to the park.\n\n*Пример:* Turn right at the corner.\n\n### Формулы\n- `Where is + place?`\n- `Turn left/right`\n- `next to / opposite / near`\n\n### Типичная ошибка\n❌ Turn to left.\n✅ Turn left.",
+      "reading": "**Направления** — Ask for and give directions using prepositions of place.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Asking\nWhere is…? How do I get to…? Is there a… near here?\n\n### Giving directions\nGo straight, turn left, it's next to the park.\n\n### Формулы\n- `Where is + place?`\n- `Turn left/right`\n- `next to / opposite / near`\n\n### Типичная ошибка\n❌ Turn to left.\n✅ Turn left.",
       "keyPoints": [
         "Asking: Where is…? How do I get to…? Is there a… near here?",
         "Giving directions: Go straight, turn left, it's next to the park.",
@@ -10168,9 +10469,9 @@ const CURRICULUM = [
       {
         "question": "What is «left»?",
         "options": [
-          "поворачивать",
+          "рядом с",
+          "карта",
           "налево",
-          "направо",
           "напротив"
         ],
         "answer": "налево"
@@ -10178,40 +10479,40 @@ const CURRICULUM = [
       {
         "question": "What is «right»?",
         "options": [
-          "рядом",
-          "квартал",
           "направо",
-          "карта"
+          "рядом",
+          "напротив",
+          "рядом с"
         ],
         "answer": "направо"
       },
       {
         "question": "What is «straight»?",
         "options": [
+          "рядом с",
+          "налево",
           "прямо",
-          "квартал",
-          "рядом",
-          "налево"
+          "поворачивать"
         ],
         "answer": "прямо"
       },
       {
         "question": "What is «near»?",
         "options": [
+          "рядом с",
           "рядом",
-          "направо",
           "поворачивать",
-          "налево"
+          "угол"
         ],
         "answer": "рядом"
       },
       {
         "question": "What is «next to»?",
         "options": [
-          "налево",
           "рядом с",
-          "поворачивать",
-          "направо"
+          "прямо",
+          "рядом",
+          "поворачивать"
         ],
         "answer": "рядом с"
       },
@@ -10411,15 +10712,7 @@ const CURRICULUM = [
         "I enjoy + V-ing",
         "How often do you + V?"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "In my free time I play guitar.",
-            "I go swimming twice a week."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I enjoy read books.",
         "right": "I enjoy reading books."
@@ -10519,7 +10812,10 @@ const CURRICULUM = [
           "music",
           "sport",
           "read",
-          "draw"
+          "draw",
+          "cook",
+          "travel",
+          "free time"
         ],
         "mustIncludeAny": [
           [
@@ -10529,11 +10825,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss hobbies and free time in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Hobbies and free time»."
       },
       {
         "prompt": "How often do they play sports?",
@@ -10543,7 +10838,10 @@ const CURRICULUM = [
           "music",
           "sport",
           "read",
-          "draw"
+          "draw",
+          "cook",
+          "travel",
+          "free time"
         ],
         "mustIncludeAny": [
           [
@@ -10553,11 +10851,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss hobbies and free time in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Hobbies and free time»."
       },
       {
         "prompt": "Do they enjoy reading?",
@@ -10567,7 +10864,10 @@ const CURRICULUM = [
           "music",
           "sport",
           "read",
-          "draw"
+          "draw",
+          "cook",
+          "travel",
+          "free time"
         ],
         "mustIncludeAny": [
           [
@@ -10577,11 +10877,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about read."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Hobbies and free time»."
       },
       {
         "prompt": "What do they do to relax?",
@@ -10591,7 +10890,10 @@ const CURRICULUM = [
           "music",
           "sport",
           "read",
-          "draw"
+          "draw",
+          "cook",
+          "travel",
+          "free time"
         ],
         "mustIncludeAny": [
           [
@@ -10601,11 +10903,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "She helps her family after school."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Hobbies and free time»."
       },
       {
         "prompt": "What music do they like?",
@@ -10615,7 +10916,10 @@ const CURRICULUM = [
           "music",
           "sport",
           "read",
-          "draw"
+          "draw",
+          "cook",
+          "travel",
+          "free time"
         ],
         "mustIncludeAny": [
           [
@@ -10625,11 +10929,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to music and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Hobbies and free time»."
       }
     ],
     "speaking": [
@@ -10715,87 +11018,137 @@ const CURRICULUM = [
       {
         "word": "hobby",
         "trans": "хобби",
-        "example": "In my free time I play guitar."
+        "example": "I used «hobby» in my written answer."
       },
       {
         "word": "music",
         "trans": "музыка",
-        "example": "I go swimming twice a week."
+        "example": "She asked me about «music» during practice."
       },
       {
         "word": "sport",
         "trans": "спорт",
-        "example": "In my free time I play guitar."
+        "example": "«sport» fits well in a sentence about hobbies and free time."
       },
       {
         "word": "read",
         "trans": "читать",
-        "example": "I go swimming twice a week."
+        "example": "«read» was new for me this week."
       },
       {
         "word": "draw",
         "trans": "рисовать",
-        "example": "In my free time I play guitar."
+        "example": "We discussed «draw» in class today."
       },
       {
         "word": "cook",
         "trans": "готовить",
-        "example": "I go swimming twice a week."
+        "example": "He repeated «cook» three times."
       },
       {
         "word": "travel",
         "trans": "путешествовать",
-        "example": "In my free time I play guitar."
+        "example": "My partner corrected my use of «travel»."
       },
       {
         "word": "free time",
         "trans": "свободное время",
-        "example": "I go swimming twice a week."
+        "example": "My note says «free time» means «свободное время»."
       },
       {
         "word": "enjoy",
         "trans": "наслаждаться",
-        "example": "In my free time I play guitar."
+        "example": "I enjoy reading books."
       },
       {
         "word": "relax",
         "trans": "отдыхать",
-        "example": "I go swimming twice a week."
+        "example": "I linked «relax» to other words I know."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "I heard «practice» in the listening exercise."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "I looked up «review» in the dictionary."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "The example with «sentence» was clear."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "Can you make a sentence with «grammar»?"
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "«vocabulary» helped me understand hobbies and free time."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I often use «speaking» when I talk about hobbies and free time."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "The teacher wrote «listening» on the board."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "Let's practise «writing» in a full sentence."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "«reading» is a key word in this lesson on hobbies and free time."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I need to remember «homework» for homework."
       }
     ],
     "id": 15,
     "grammarCheck": [
       {
-        "sentence": "I enjoy ___ to music.",
+        "sentence": "In my free ___ I read",
         "options": [
-          "listening",
-          "listen"
+          "time",
+          "times"
         ],
-        "answer": "listening"
+        "answer": "time"
       },
       {
-        "sentence": "She plays tennis ___ a week.",
+        "sentence": "I ___ playing football",
         "options": [
-          "twice",
-          "two"
+          "enjoy",
+          "enjoys"
         ],
-        "answer": "twice"
+        "answer": "enjoy"
       },
       {
-        "sentence": "What do you do in your ___ time?",
+        "sentence": "___ often do you cook",
         "options": [
-          "free",
-          "freely"
+          "How",
+          "Hows"
         ],
-        "answer": "free"
+        "answer": "How"
       },
       {
-        "sentence": "He likes ___ books.",
+        "sentence": "I ___ at home",
         "options": [
-          "reading",
-          "read"
+          "relax",
+          "relaxs"
         ],
-        "answer": "reading"
+        "answer": "relax"
       }
     ],
     "theoryCheck": [
@@ -10808,12 +11161,12 @@ const CURRICULUM = [
         "answer": "I enjoy reading books."
       },
       {
-        "question": "Пример по теме «Free time»:",
+        "question": "Какое правило относится к «Frequency»?",
         "options": [
-          "In my free time I play guitar.",
-          "I enjoy read books."
+          "How often do you…? Once a week / twice a month.",
+          "In my free time I… / I enjoy + -ing"
         ],
-        "answer": "In my free time I play guitar."
+        "answer": "How often do you…? Once a week / twice a month."
       },
       {
         "question": "Какая формула относится к «Hobbies»?",
@@ -10827,48 +11180,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I enjoy ______ to music.",
-        "answer": "listening",
+        "prompt": "She ______ drawing",
+        "answer": "loves",
         "altAnswers": [
-          "listening",
-          "Listening"
+          "Loves",
+          "loves"
         ],
-        "hint": "Подсказка: слово из урока «Hobbies and free time»."
+        "hint": "Подсказка: тема «Hobbies and free time»."
       },
       {
         "id": 2,
-        "prompt": "She plays tennis ______ a week.",
-        "answer": "twice",
+        "prompt": "They ______ travel on weekends",
+        "answer": "often",
         "altAnswers": [
-          "twice",
-          "Twice"
+          "Often",
+          "often"
         ],
-        "hint": "Подсказка: слово из урока «Hobbies and free time»."
+        "hint": "Подсказка: тема «Hobbies and free time»."
       },
       {
         "id": 3,
-        "prompt": "What do you do in your ______ time?",
-        "answer": "free",
+        "prompt": "I ______ reading books",
+        "answer": "enjoy",
         "altAnswers": [
-          "free",
-          "Free"
+          "Enjoy",
+          "enjoy"
         ],
-        "hint": "Подсказка: слово из урока «Hobbies and free time»."
-      },
-      {
-        "id": 4,
-        "prompt": "He likes ______ books.",
-        "answer": "reading",
-        "altAnswers": [
-          "Reading",
-          "reading"
-        ],
-        "hint": "Подсказка: слово из урока «Hobbies and free time»."
+        "hint": "Подсказка: тема «Hobbies and free time»."
       }
     ],
     "theory": {
       "intro": "Talk about what you enjoy doing in your free time.",
-      "reading": "**Хобби** — Talk about what you enjoy doing in your free time.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Free time\nIn my free time I… / I enjoy + -ing\n\n*Пример:* In my free time I play guitar.\n\n### Frequency\nHow often do you…? Once a week / twice a month.\n\n*Пример:* I go swimming twice a week.\n\n### Формулы\n- `In my free time I + V`\n- `I enjoy + V-ing`\n- `How often do you + V?`\n\n### Типичная ошибка\n❌ I enjoy read books.\n✅ I enjoy reading books.",
+      "reading": "**Хобби** — Talk about what you enjoy doing in your free time.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### Free time\nIn my free time I… / I enjoy + -ing\n\n### Frequency\nHow often do you…? Once a week / twice a month.\n\n### Формулы\n- `In my free time I + V`\n- `I enjoy + V-ing`\n- `How often do you + V?`\n\n### Типичная ошибка\n❌ I enjoy read books.\n✅ I enjoy reading books.",
       "keyPoints": [
         "Free time: In my free time I… / I enjoy + -ing",
         "Frequency: How often do you…? Once a week / twice a month.",
@@ -10882,39 +11225,39 @@ const CURRICULUM = [
       {
         "question": "What is «hobby»?",
         "options": [
-          "музыка",
-          "свободное время",
-          "наслаждаться",
-          "хобби"
+          "хобби",
+          "спорт",
+          "готовить",
+          "читать"
         ],
         "answer": "хобби"
       },
       {
         "question": "What is «music»?",
         "options": [
-          "отдыхать",
-          "читать",
+          "наслаждаться",
           "музыка",
-          "рисовать"
+          "спорт",
+          "читать"
         ],
         "answer": "музыка"
       },
       {
         "question": "What is «sport»?",
         "options": [
-          "наслаждаться",
-          "отдыхать",
-          "рисовать",
-          "спорт"
+          "путешествовать",
+          "читать",
+          "спорт",
+          "готовить"
         ],
         "answer": "спорт"
       },
       {
         "question": "What is «read»?",
         "options": [
-          "читать",
+          "готовить",
           "отдыхать",
-          "наслаждаться",
+          "читать",
           "рисовать"
         ],
         "answer": "читать"
@@ -10922,10 +11265,10 @@ const CURRICULUM = [
       {
         "question": "What is «draw»?",
         "options": [
-          "свободное время",
+          "читать",
           "рисовать",
-          "спорт",
-          "читать"
+          "отдыхать",
+          "готовить"
         ],
         "answer": "рисовать"
       },
@@ -11135,15 +11478,7 @@ const CURRICULUM = [
         "I have a + illness",
         "My + body part + hurts"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "I don't feel well today.",
-            "You should rest and drink water."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I have headache.",
         "right": "I have a headache."
@@ -11243,7 +11578,10 @@ const CURRICULUM = [
           "fever",
           "cough",
           "ill",
-          "tired"
+          "tired",
+          "doctor",
+          "medicine",
+          "hurt"
         ],
         "mustIncludeAny": [
           [
@@ -11253,11 +11591,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "She seems relieved after the conversation."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Health and the doctor»."
       },
       {
         "prompt": "What symptoms do they mention?",
@@ -11267,7 +11604,10 @@ const CURRICULUM = [
           "fever",
           "cough",
           "ill",
-          "tired"
+          "tired",
+          "doctor",
+          "medicine",
+          "hurt"
         ],
         "mustIncludeAny": [
           [
@@ -11277,11 +11617,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from health and the doctor."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Health and the doctor»."
       },
       {
         "prompt": "What does the doctor recommend?",
@@ -11291,7 +11630,10 @@ const CURRICULUM = [
           "fever",
           "cough",
           "ill",
-          "tired"
+          "tired",
+          "doctor",
+          "medicine",
+          "hurt"
         ],
         "mustIncludeAny": [
           [
@@ -11301,11 +11643,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The brother studies at university."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Health and the doctor»."
       },
       {
         "prompt": "Do they need medicine?",
@@ -11315,7 +11656,10 @@ const CURRICULUM = [
           "fever",
           "cough",
           "ill",
-          "tired"
+          "tired",
+          "doctor",
+          "medicine",
+          "hurt"
         ],
         "mustIncludeAny": [
           [
@@ -11325,11 +11669,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to fever and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Health and the doctor»."
       },
       {
         "prompt": "When do they feel better?",
@@ -11339,7 +11682,10 @@ const CURRICULUM = [
           "fever",
           "cough",
           "ill",
-          "tired"
+          "tired",
+          "doctor",
+          "medicine",
+          "hurt"
         ],
         "mustIncludeAny": [
           [
@@ -11349,11 +11695,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Everyone looks worried in that scene."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Health and the doctor»."
       }
     ],
     "speaking": [
@@ -11439,87 +11784,121 @@ const CURRICULUM = [
       {
         "word": "headache",
         "trans": "головная боль",
-        "example": "I don't feel well today."
+        "example": "I need to remember «headache» for homework."
       },
       {
         "word": "fever",
         "trans": "температура",
-        "example": "You should rest and drink water."
+        "example": "I used «fever» in my written answer."
       },
       {
         "word": "cough",
         "trans": "кашель",
-        "example": "I don't feel well today."
+        "example": "She asked me about «cough» during practice."
       },
       {
         "word": "ill",
         "trans": "больной",
-        "example": "You should rest and drink water."
+        "example": "«ill» fits well in a sentence about health and the doctor."
       },
       {
         "word": "tired",
         "trans": "уставший",
-        "example": "I don't feel well today."
+        "example": "«tired» was new for me this week."
       },
       {
         "word": "doctor",
         "trans": "врач",
-        "example": "You should rest and drink water."
+        "example": "We discussed «doctor» in class today."
       },
       {
         "word": "medicine",
         "trans": "лекарство",
-        "example": "I don't feel well today."
+        "example": "He repeated «medicine» three times."
       },
       {
         "word": "hurt",
         "trans": "болеть",
-        "example": "You should rest and drink water."
+        "example": "My partner corrected my use of «hurt»."
       },
       {
         "word": "better",
         "trans": "лучше",
-        "example": "I don't feel well today."
+        "example": "My note says «better» means «лучше»."
       },
       {
         "word": "appointment",
         "trans": "приём у врача",
-        "example": "You should rest and drink water."
+        "example": "In our dialogue, «appointment» appeared twice."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "I linked «practice» to other words I know."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "I heard «review» in the listening exercise."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I looked up «sentence» in the dictionary."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "The example with «grammar» was clear."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "Can you make a sentence with «vocabulary»?"
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "«speaking» helped me understand health and the doctor."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I often use «listening» when I talk about health and the doctor."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "The teacher wrote «writing» on the board."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "Let's practise «reading» in a full sentence."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "«homework» is a key word in this lesson on health and the doctor."
       }
     ],
     "id": 16,
     "grammarCheck": [
       {
-        "sentence": "I have a ___.",
+        "sentence": "I ___ feel well",
         "options": [
-          "headache",
-          "headaches"
+          "don't",
+          "don'ts"
         ],
-        "answer": "headache"
+        "answer": "don't"
       },
       {
-        "sentence": "She doesn't feel ___.",
+        "sentence": "My ___ hurts",
         "options": [
-          "well",
-          "goodly"
+          "leg",
+          "legs"
         ],
-        "answer": "well"
-      },
-      {
-        "sentence": "My throat ___.",
-        "options": [
-          "hurts",
-          "hurt"
-        ],
-        "answer": "hurts"
-      },
-      {
-        "sentence": "He needs to see a ___.",
-        "options": [
-          "doctor",
-          "doctors"
-        ],
-        "answer": "doctor"
+        "answer": "leg"
       }
     ],
     "theoryCheck": [
@@ -11532,12 +11911,12 @@ const CURRICULUM = [
         "answer": "I have a headache."
       },
       {
-        "question": "Пример по теме «How you feel»:",
+        "question": "Какое правило относится к «At the doctor»?",
         "options": [
-          "I don't feel well today.",
-          "I have headache."
+          "Make an appointment. Take medicine. Get better.",
+          "I don't feel well. I have a headache. My leg hurts."
         ],
-        "answer": "I don't feel well today."
+        "answer": "Make an appointment. Take medicine. Get better."
       },
       {
         "question": "Какая формула относится к «Health»?",
@@ -11551,48 +11930,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I have a ______ .",
-        "answer": "headache",
+        "prompt": "I ______ to see a doctor",
+        "answer": "need",
         "altAnswers": [
-          "headache",
-          "Headache"
+          "need",
+          "Need"
         ],
-        "hint": "Подсказка: слово из урока «Health and the doctor»."
+        "hint": "Подсказка: тема «Health and the doctor»."
       },
       {
         "id": 2,
-        "prompt": "She doesn't feel ______ .",
-        "answer": "well",
+        "prompt": "I ______ you feel better",
+        "answer": "hope",
         "altAnswers": [
-          "Well",
-          "well"
+          "hope",
+          "Hope"
         ],
-        "hint": "Подсказка: слово из урока «Health and the doctor»."
+        "hint": "Подсказка: тема «Health and the doctor»."
       },
       {
         "id": 3,
-        "prompt": "My throat ______ .",
-        "answer": "hurts",
+        "prompt": "______ this medicine twice a day",
+        "answer": "Take",
         "altAnswers": [
-          "Hurts",
-          "hurts"
+          "take",
+          "Take"
         ],
-        "hint": "Подсказка: слово из урока «Health and the doctor»."
-      },
-      {
-        "id": 4,
-        "prompt": "He needs to see a ______ .",
-        "answer": "doctor",
-        "altAnswers": [
-          "Doctor",
-          "doctor"
-        ],
-        "hint": "Подсказка: слово из урока «Health and the doctor»."
+        "hint": "Подсказка: тема «Health and the doctor»."
       }
     ],
     "theory": {
       "intro": "Describe how you feel and talk about common health problems.",
-      "reading": "**Здоровье** — Describe how you feel and talk about common health problems.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### How you feel\nI don't feel well. I have a headache. My leg hurts.\n\n*Пример:* I don't feel well today.\n\n### At the doctor\nMake an appointment. Take medicine. Get better.\n\n*Пример:* You should rest and drink water.\n\n### Формулы\n- `I don't feel well`\n- `I have a + illness`\n- `My + body part + hurts`\n\n### Типичная ошибка\n❌ I have headache.\n✅ I have a headache.",
+      "reading": "**Здоровье** — Describe how you feel and talk about common health problems.\n\nМетодика Oxford/Cambridge Starter: сначала смысл и фразы, потом форма. Повторяйте вслух каждый пример.\n\nCEFR A1 — базовое общение: знакомство, повседневные темы, простые вопросы и ответы.\n\n### How you feel\nI don't feel well. I have a headache. My leg hurts.\n\n### At the doctor\nMake an appointment. Take medicine. Get better.\n\n### Формулы\n- `I don't feel well`\n- `I have a + illness`\n- `My + body part + hurts`\n\n### Типичная ошибка\n❌ I have headache.\n✅ I have a headache.",
       "keyPoints": [
         "How you feel: I don't feel well. I have a headache. My leg hurts.",
         "At the doctor: Make an appointment. Take medicine. Get better.",
@@ -11606,30 +11975,30 @@ const CURRICULUM = [
       {
         "question": "What is «headache»?",
         "options": [
-          "уставший",
+          "приём у врача",
+          "головная боль",
           "врач",
-          "больной",
-          "головная боль"
+          "кашель"
         ],
         "answer": "головная боль"
       },
       {
         "question": "What is «fever»?",
         "options": [
-          "кашель",
-          "приём у врача",
-          "уставший",
-          "температура"
+          "болеть",
+          "лекарство",
+          "температура",
+          "больной"
         ],
         "answer": "температура"
       },
       {
         "question": "What is «cough»?",
         "options": [
-          "болеть",
+          "кашель",
+          "лекарство",
           "головная боль",
-          "уставший",
-          "кашель"
+          "болеть"
         ],
         "answer": "кашель"
       },
@@ -11637,19 +12006,19 @@ const CURRICULUM = [
         "question": "What is «ill»?",
         "options": [
           "лучше",
-          "лекарство",
-          "больной",
-          "головная боль"
+          "температура",
+          "уставший",
+          "больной"
         ],
         "answer": "больной"
       },
       {
         "question": "What is «tired»?",
         "options": [
-          "кашель",
-          "больной",
           "уставший",
-          "болеть"
+          "болеть",
+          "врач",
+          "лучше"
         ],
         "answer": "уставший"
       },
@@ -12069,7 +12438,10 @@ const CURRICULUM = [
           "usually",
           "currently",
           "habit",
-          "schedule"
+          "schedule",
+          "daily",
+          "moment",
+          "often"
         ],
         "mustIncludeAny": [
           [
@@ -12079,11 +12451,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "He works with routine every day."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Рутина и действие сейчас»."
       },
       {
         "prompt": "What is happening in the scene right now?",
@@ -12093,7 +12464,10 @@ const CURRICULUM = [
           "usually",
           "currently",
           "habit",
-          "schedule"
+          "schedule",
+          "daily",
+          "moment",
+          "often"
         ],
         "mustIncludeAny": [
           [
@@ -12103,11 +12477,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The character spends too much time online."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Рутина и действие сейчас»."
       },
       {
         "prompt": "How often does the family travel?",
@@ -12117,7 +12490,10 @@ const CURRICULUM = [
           "usually",
           "currently",
           "habit",
-          "schedule"
+          "schedule",
+          "daily",
+          "moment",
+          "often"
         ],
         "mustIncludeAny": [
           [
@@ -12127,11 +12503,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The trip includes a visit to the museum."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Рутина и действие сейчас»."
       },
       {
         "prompt": "What are they watching at the moment?",
@@ -12141,7 +12516,10 @@ const CURRICULUM = [
           "usually",
           "currently",
           "habit",
-          "schedule"
+          "schedule",
+          "daily",
+          "moment",
+          "often"
         ],
         "mustIncludeAny": [
           [
@@ -12151,11 +12529,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about habit."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Рутина и действие сейчас»."
       },
       {
         "prompt": "Does he always arrive on time?",
@@ -12165,7 +12542,10 @@ const CURRICULUM = [
           "usually",
           "currently",
           "habit",
-          "schedule"
+          "schedule",
+          "daily",
+          "moment",
+          "often"
         ],
         "mustIncludeAny": [
           [
@@ -12175,11 +12555,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about habit."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Рутина и действие сейчас»."
       }
     ],
     "speaking": [
@@ -12259,36 +12638,36 @@ const CURRICULUM = [
     ],
     "grammarCheck": [
       {
-        "sentence": "I ___ English every day.",
+        "sentence": "I ___ books every evening",
         "options": [
-          "study",
-          "am studying"
+          "read",
+          "reads"
         ],
-        "answer": "study"
+        "answer": "read"
       },
       {
-        "sentence": "She ___ TV at the moment.",
+        "sentence": "He ___ tennis on weekends",
         "options": [
-          "watches",
-          "is watching"
+          "plays",
+          "play"
         ],
-        "answer": "is watching"
+        "answer": "plays"
       },
       {
-        "sentence": "We usually ___ dinner at seven.",
+        "sentence": "I am ___ a book now",
         "options": [
-          "have",
-          "are having"
+          "reading",
+          "readings"
         ],
-        "answer": "have"
+        "answer": "reading"
       },
       {
-        "sentence": "They ___ football right now.",
+        "sentence": "He is ___ tennis at the moment",
         "options": [
-          "play",
-          "are playing"
+          "playing",
+          "playings"
         ],
-        "answer": "are playing"
+        "answer": "playing"
       }
     ],
     "theoryCheck": [
@@ -12301,12 +12680,12 @@ const CURRICULUM = [
         "answer": "I go to work every day."
       },
       {
-        "question": "Пример по теме «Present Simple»:",
+        "question": "Какое правило относится к «Present Continuous»?",
         "options": [
-          "She works from home on Fridays.",
-          "I am go to work every day."
+          "Используем для действий, происходящих сейчас или временных ситуаций. Маркеры: now, at the moment, ri",
+          "Используем для привычек, фактов и регулярных действий. Маркеры: every day, usually, often, always."
         ],
-        "answer": "She works from home on Fridays."
+        "answer": "Используем для действий, происходящих сейчас или временных ситуаций. Маркеры: now, at the moment, ri"
       },
       {
         "question": "Какая формула относится к «Present Simple & Present Continuous»?",
@@ -12320,48 +12699,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I ______ English every day.",
-        "answer": "study",
+        "prompt": "I ______ walk to work",
+        "answer": "usually",
         "altAnswers": [
-          "study",
-          "Study"
+          "usually",
+          "Usually"
         ],
-        "hint": "Подсказка: слово из урока «Рутина и действие сейчас»."
+        "hint": "Подсказка: тема «Рутина и действие сейчас»."
       },
       {
         "id": 2,
-        "prompt": "She ______ TV at the moment.",
-        "answer": "is watching",
+        "prompt": "She is ______ now",
+        "answer": "reading",
         "altAnswers": [
-          "is watching",
-          "Is watching"
+          "Reading",
+          "reading"
         ],
-        "hint": "Подсказка: слово из урока «Рутина и действие сейчас»."
+        "hint": "Подсказка: тема «Рутина и действие сейчас»."
       },
       {
         "id": 3,
-        "prompt": "We usually ______ dinner at seven.",
-        "answer": "have",
+        "prompt": "Do you ______ travel",
+        "answer": "often",
         "altAnswers": [
-          "Have",
-          "have"
+          "Often",
+          "often"
         ],
-        "hint": "Подсказка: слово из урока «Рутина и действие сейчас»."
+        "hint": "Подсказка: тема «Рутина и действие сейчас»."
       },
       {
         "id": 4,
-        "prompt": "They ______ football right now.",
-        "answer": "are playing",
+        "prompt": "We are ______ today",
+        "answer": "working",
         "altAnswers": [
-          "are playing",
-          "Are playing"
+          "Working",
+          "working"
         ],
-        "hint": "Подсказка: слово из урока «Рутина и действие сейчас»."
+        "hint": "Подсказка: тема «Рутина и действие сейчас»."
       }
     ],
     "theory": {
       "intro": "Учимся различать постоянные действия и то, что происходит в данный момент. Это база для ежедневного общения на английском.",
-      "reading": "**Настоящее простое и длительное время** — Учимся различать постоянные действия и то, что происходит в данный момент. Это база для ежедневного общения на английском.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Present Simple\nИспользуем для привычек, фактов и регулярных действий. Маркеры: every day, usually, often, always.\n\n*Пример:* She works from home on Fridays.\n\n### Present Continuous\nИспользуем для действий, происходящих сейчас или временных ситуаций. Маркеры: now, at the moment, right now.\n\n*Пример:* They are watching a documentary at the moment.\n\n### Формулы\n- `Present Simple: I/you/we/they + V1; he/she/it + V1+s`\n- `Present Continuous: am/is/are + V-ing`\n\n### Типичная ошибка\n❌ I am go to work every day.\n✅ I go to work every day.",
+      "reading": "**Настоящее простое и длительное время** — Учимся различать постоянные действия и то, что происходит в данный момент. Это база для ежедневного общения на английском.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Present Simple\nИспользуем для привычек, фактов и регулярных действий. Маркеры: every day, usually, often, always.\n\n### Present Continuous\nИспользуем для действий, происходящих сейчас или временных ситуаций. Маркеры: now, at the moment, right now.\n\n### Формулы\n- `Present Simple: I/you/we/they + V1; he/she/it + V1+s`\n- `Present Continuous: am/is/are + V-ing`\n\n### Типичная ошибка\n❌ I am go to work every day.\n✅ I go to work every day.",
       "keyPoints": [
         "Present Simple: Используем для привычек, фактов и регулярных действий. Маркеры: every day, usual",
         "Present Continuous: Используем для действий, происходящих сейчас или временных ситуаций. Маркеры: no",
@@ -12375,9 +12754,9 @@ const CURRICULUM = [
       {
         "question": "What is «routine»?",
         "options": [
+          "момент",
           "обычно",
-          "в настоящее время",
-          "часто",
+          "всегда",
           "распорядок дня"
         ],
         "answer": "распорядок дня"
@@ -12385,9 +12764,9 @@ const CURRICULUM = [
       {
         "question": "What is «usually»?",
         "options": [
+          "часто",
+          "всегда",
           "момент",
-          "распорядок дня",
-          "расписание",
           "обычно"
         ],
         "answer": "обычно"
@@ -12395,10 +12774,10 @@ const CURRICULUM = [
       {
         "question": "What is «currently»?",
         "options": [
-          "ежедневный",
           "обычно",
-          "всегда",
-          "в настоящее время"
+          "в настоящее время",
+          "момент",
+          "привычка"
         ],
         "answer": "в настоящее время"
       },
@@ -12406,19 +12785,19 @@ const CURRICULUM = [
         "question": "What is «habit»?",
         "options": [
           "привычка",
-          "распорядок дня",
+          "обычно",
           "ежедневный",
-          "часто"
+          "всегда"
         ],
         "answer": "привычка"
       },
       {
         "question": "What is «schedule»?",
         "options": [
-          "привычка",
           "расписание",
-          "всегда",
-          "обычно"
+          "ежедневный",
+          "часто",
+          "в настоящее время"
         ],
         "answer": "расписание"
       },
@@ -12834,7 +13213,10 @@ const CURRICULUM = [
           "ago",
           "while",
           "suddenly",
-          "finished"
+          "finished",
+          "happened",
+          "arrived",
+          "started"
         ],
         "mustIncludeAny": [
           [
@@ -12844,11 +13226,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "He learns an important lesson about family."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Прошлые события и фон»."
       },
       {
         "prompt": "What was she doing when the event happened?",
@@ -12858,7 +13239,10 @@ const CURRICULUM = [
           "ago",
           "while",
           "suddenly",
-          "finished"
+          "finished",
+          "happened",
+          "arrived",
+          "started"
         ],
         "mustIncludeAny": [
           [
@@ -12868,11 +13252,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Social media affects how friends communicate."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Прошлые события и фон»."
       },
       {
         "prompt": "Where did they travel two years ago?",
@@ -12882,7 +13265,10 @@ const CURRICULUM = [
           "ago",
           "while",
           "suddenly",
-          "finished"
+          "finished",
+          "happened",
+          "arrived",
+          "started"
         ],
         "mustIncludeAny": [
           [
@@ -12892,11 +13278,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Most events occur in an English-speaking country."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Прошлые события и фон»."
       },
       {
         "prompt": "Was he working when you arrived?",
@@ -12926,7 +13311,10 @@ const CURRICULUM = [
           "ago",
           "while",
           "suddenly",
-          "finished"
+          "finished",
+          "happened",
+          "arrived",
+          "started"
         ],
         "mustIncludeAny": [
           [
@@ -12936,11 +13324,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They discuss useful apps for learning English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Прошлые события и фон»."
       }
     ],
     "speaking": [
@@ -13020,36 +13407,36 @@ const CURRICULUM = [
     ],
     "grammarCheck": [
       {
-        "sentence": "She ___ a letter when I called.",
+        "sentence": "They ___ to London in 2019",
         "options": [
-          "wrote",
-          "was writing"
+          "moved",
+          "moveds"
         ],
-        "answer": "was writing"
+        "answer": "moved"
       },
       {
-        "sentence": "We ___ to Paris last summer.",
+        "sentence": "He ___ finish the project",
         "options": [
-          "travelled",
-          "were travelling"
+          "didn't",
+          "didn'ts"
         ],
-        "answer": "travelled"
+        "answer": "didn't"
       },
       {
-        "sentence": "They ___ TV at eight o'clock yesterday.",
+        "sentence": "It was ___ all morning",
         "options": [
-          "watched",
-          "were watching"
+          "raining",
+          "rainings"
         ],
-        "answer": "were watching"
+        "answer": "raining"
       },
       {
-        "sentence": "He ___ his keys this morning.",
+        "sentence": "We were ___ when he arrived",
         "options": [
-          "lost",
-          "was losing"
+          "talking",
+          "talkings"
         ],
-        "answer": "lost"
+        "answer": "talking"
       }
     ],
     "theoryCheck": [
@@ -13062,12 +13449,12 @@ const CURRICULUM = [
         "answer": "I went to school yesterday."
       },
       {
-        "question": "Пример по теме «Past Simple»:",
+        "question": "Какое правило относится к «Past Continuous»?",
         "options": [
-          "I visited my grandparents last month.",
-          "I was go to school yesterday."
+          "Длительное действие в процессе в прошлом или фон для другого события. Маркеры: while, when, at that ",
+          "Завершённое действие в прошлом с известным временем. Маркеры: yesterday, last week, ago, in 2020."
         ],
-        "answer": "I visited my grandparents last month."
+        "answer": "Длительное действие в процессе в прошлом или фон для другого события. Маркеры: while, when, at that "
       },
       {
         "question": "Какая формула относится к «Past Simple & Past Continuous»?",
@@ -13081,48 +13468,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "She ______ a letter when I called.",
-        "answer": "was writing",
+        "prompt": "I ______ London last year",
+        "answer": "visited",
         "altAnswers": [
-          "was writing",
-          "Was writing"
+          "Visited",
+          "visited"
         ],
-        "hint": "Подсказка: слово из урока «Прошлые события и фон»."
+        "hint": "Подсказка: тема «Прошлые события и фон»."
       },
       {
         "id": 2,
-        "prompt": "We ______ to Paris last summer.",
-        "answer": "travelled",
+        "prompt": "She was ______ a book",
+        "answer": "reading",
         "altAnswers": [
-          "travelled",
-          "Travelled"
+          "Reading",
+          "reading"
         ],
-        "hint": "Подсказка: слово из урока «Прошлые события и фон»."
+        "hint": "Подсказка: тема «Прошлые события и фон»."
       },
       {
         "id": 3,
-        "prompt": "They ______ TV at eight o'clock yesterday.",
-        "answer": "were watching",
+        "prompt": "______ happened yesterday",
+        "answer": "What",
         "altAnswers": [
-          "Were watching",
-          "were watching"
+          "what",
+          "What"
         ],
-        "hint": "Подсказка: слово из урока «Прошлые события и фон»."
+        "hint": "Подсказка: тема «Прошлые события и фон»."
       },
       {
         "id": 4,
-        "prompt": "He ______ his keys this morning.",
-        "answer": "lost",
+        "prompt": "They were ______ outside",
+        "answer": "waiting",
         "altAnswers": [
-          "lost",
-          "Lost"
+          "Waiting",
+          "waiting"
         ],
-        "hint": "Подсказка: слово из урока «Прошлые события и фон»."
+        "hint": "Подсказка: тема «Прошлые события и фон»."
       }
     ],
     "theory": {
       "intro": "Разбираем, как рассказывать о завершённых действиях в прошлом и описывать фон, на котором они происходили.",
-      "reading": "**Прошедшее простое и длительное время** — Разбираем, как рассказывать о завершённых действиях в прошлом и описывать фон, на котором они происходили.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Past Simple\nЗавершённое действие в прошлом с известным временем. Маркеры: yesterday, last week, ago, in 2020.\n\n*Пример:* I visited my grandparents last month.\n\n### Past Continuous\nДлительное действие в процессе в прошлом или фон для другого события. Маркеры: while, when, at that moment.\n\n*Пример:* She was cooking when the phone rang.\n\n### Формулы\n- `Past Simple: V2 (regular: V+ed; irregular: 2nd form)`\n- `Past Continuous: was/were + V-ing`\n\n### Типичная ошибка\n❌ I was go to school yesterday.\n✅ I went to school yesterday.",
+      "reading": "**Прошедшее простое и длительное время** — Разбираем, как рассказывать о завершённых действиях в прошлом и описывать фон, на котором они происходили.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Past Simple\nЗавершённое действие в прошлом с известным временем. Маркеры: yesterday, last week, ago, in 2020.\n\n### Past Continuous\nДлительное действие в процессе в прошлом или фон для другого события. Маркеры: while, when, at that moment.\n\n### Формулы\n- `Past Simple: V2 (regular: V+ed; irregular: 2nd form)`\n- `Past Continuous: was/were + V-ing`\n\n### Типичная ошибка\n❌ I was go to school yesterday.\n✅ I went to school yesterday.",
       "keyPoints": [
         "Past Simple: Завершённое действие в прошлом с известным временем. Маркеры: yesterday, last we",
         "Past Continuous: Длительное действие в процессе в прошлом или фон для другого события. Маркеры: w",
@@ -13137,29 +13524,29 @@ const CURRICULUM = [
         "question": "What is «yesterday»?",
         "options": [
           "фон, задний план",
-          "прервал(а)",
-          "внезапно",
-          "вчера"
+          "вчера",
+          "в то время как",
+          "прервал(а)"
         ],
         "answer": "вчера"
       },
       {
         "question": "What is «ago»?",
         "options": [
+          "прибыл(а)",
           "назад",
-          "произошло",
-          "начал(а)",
-          "вчера"
+          "вчера",
+          "внезапно"
         ],
         "answer": "назад"
       },
       {
         "question": "What is «while»?",
         "options": [
+          "фон, задний план",
+          "в то время как",
           "внезапно",
-          "назад",
-          "прервал(а)",
-          "в то время как"
+          "начал(а)"
         ],
         "answer": "в то время как"
       },
@@ -13167,19 +13554,19 @@ const CURRICULUM = [
         "question": "What is «suddenly»?",
         "options": [
           "закончил(а)",
-          "в то время как",
-          "вчера",
-          "внезапно"
+          "прервал(а)",
+          "внезапно",
+          "фон, задний план"
         ],
         "answer": "внезапно"
       },
       {
         "question": "What is «finished»?",
         "options": [
+          "начал(а)",
           "фон, задний план",
-          "в то время как",
-          "закончил(а)",
-          "прибыл(а)"
+          "внезапно",
+          "закончил(а)"
         ],
         "answer": "закончил(а)"
       },
@@ -13593,7 +13980,10 @@ const CURRICULUM = [
           "never",
           "already",
           "yet",
-          "just"
+          "just",
+          "recently",
+          "experience",
+          "since"
         ],
         "mustIncludeAny": [
           [
@@ -13603,11 +13993,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "He learns an important lesson about family."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Опыт и результат»."
       },
       {
         "prompt": "Where does the story take place?",
@@ -13617,7 +14006,10 @@ const CURRICULUM = [
           "never",
           "already",
           "yet",
-          "just"
+          "just",
+          "recently",
+          "experience",
+          "since"
         ],
         "mustIncludeAny": [
           [
@@ -13627,11 +14019,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene is set in London."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Опыт и результат»."
       },
       {
         "prompt": "What problem does the character face?",
@@ -13641,7 +14032,10 @@ const CURRICULUM = [
           "never",
           "already",
           "yet",
-          "just"
+          "just",
+          "recently",
+          "experience",
+          "since"
         ],
         "mustIncludeAny": [
           [
@@ -13651,11 +14045,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about yet."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Опыт и результат»."
       },
       {
         "prompt": "How does the chapter end?",
@@ -13665,7 +14058,10 @@ const CURRICULUM = [
           "never",
           "already",
           "yet",
-          "just"
+          "just",
+          "recently",
+          "experience",
+          "since"
         ],
         "mustIncludeAny": [
           [
@@ -13675,11 +14071,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to never and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Опыт и результат»."
       },
       {
         "prompt": "What did the author describe in detail?",
@@ -13689,7 +14084,10 @@ const CURRICULUM = [
           "never",
           "already",
           "yet",
-          "just"
+          "just",
+          "recently",
+          "experience",
+          "since"
         ],
         "mustIncludeAny": [
           [
@@ -13699,11 +14097,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The main character faces a difficult choice."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Опыт и результат»."
       }
     ],
     "speaking": [
@@ -13783,36 +14180,36 @@ const CURRICULUM = [
     ],
     "grammarCheck": [
       {
-        "sentence": "She ___ already eaten lunch.",
+        "sentence": "Have you ___ tried sushi",
         "options": [
-          "has",
-          "have"
+          "ever",
+          "evers"
         ],
-        "answer": "has"
+        "answer": "ever"
       },
       {
-        "sentence": "___ you ever been to Japan?",
+        "sentence": "I have ___ seen the ocean",
         "options": [
-          "Have",
-          "Did"
+          "never",
+          "nevers"
         ],
-        "answer": "Have"
+        "answer": "never"
       },
       {
-        "sentence": "I ___ my keys. I can't find them.",
+        "sentence": "We have ___ each other for ten years",
         "options": [
-          "have lost",
-          "lost"
+          "known",
+          "knowns"
         ],
-        "answer": "have lost"
+        "answer": "known"
       },
       {
-        "sentence": "We ___ here for three years.",
+        "sentence": "He has ___ here since March",
         "options": [
-          "have lived",
-          "lived"
+          "worked",
+          "workeds"
         ],
-        "answer": "have lived"
+        "answer": "worked"
       }
     ],
     "theoryCheck": [
@@ -13825,12 +14222,12 @@ const CURRICULUM = [
         "answer": "I saw him yesterday."
       },
       {
-        "question": "Пример по теме «Опыт и результат»:",
+        "question": "Какое правило относится к «For / Since»?",
         "options": [
-          "I have finished my homework.",
-          "I have seen him yesterday."
+          "For + период времени; since + точка начала. Показывает, как долго действие длится до настоящего.",
+          "Используем, когда важен сам факт или результат, а не точное время. Маркеры: ever, never, already, ye"
         ],
-        "answer": "I have finished my homework."
+        "answer": "For + период времени; since + точка начала. Показывает, как долго действие длится до настоящего."
       },
       {
         "question": "Какая формула относится к «Present Perfect»?",
@@ -13844,48 +14241,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "She ______ already eaten lunch.",
-        "answer": "has",
+        "prompt": "I have ______ my work",
+        "answer": "finished",
         "altAnswers": [
-          "has",
-          "Has"
+          "Finished",
+          "finished"
         ],
-        "hint": "Подсказка: слово из урока «Опыт и результат»."
+        "hint": "Подсказка: тема «Опыт и результат»."
       },
       {
         "id": 2,
-        "prompt": "______ you ever been to Japan?",
-        "answer": "Have",
+        "prompt": "Have you ______ been there",
+        "answer": "ever",
         "altAnswers": [
-          "Have",
-          "have"
+          "Ever",
+          "ever"
         ],
-        "hint": "Подсказка: слово из урока «Опыт и результат»."
+        "hint": "Подсказка: тема «Опыт и результат»."
       },
       {
         "id": 3,
-        "prompt": "I ______ my keys. I can't find them.",
-        "answer": "have lost",
+        "prompt": "She has ______ arrived",
+        "answer": "just",
         "altAnswers": [
-          "Have lost",
-          "have lost"
+          "Just",
+          "just"
         ],
-        "hint": "Подсказка: слово из урока «Опыт и результат»."
+        "hint": "Подсказка: тема «Опыт и результат»."
       },
       {
         "id": 4,
-        "prompt": "We ______ here for three years.",
-        "answer": "have lived",
+        "prompt": "I ______ seen him yet",
+        "answer": "haven't",
         "altAnswers": [
-          "Have lived",
-          "have lived"
+          "Haven't",
+          "haven't"
         ],
-        "hint": "Подсказка: слово из урока «Опыт и результат»."
+        "hint": "Подсказка: тема «Опыт и результат»."
       }
     ],
     "theory": {
       "intro": "Present Perfect связывает прошлое с настоящим: опыт, недавние события и результат, важный сейчас.",
-      "reading": "**Настоящее совершённое время** — Present Perfect связывает прошлое с настоящим: опыт, недавние события и результат, важный сейчас.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Опыт и результат\nИспользуем, когда важен сам факт или результат, а не точное время. Маркеры: ever, never, already, yet, just.\n\n*Пример:* I have finished my homework.\n\n### For / Since\nFor + период времени; since + точка начала. Показывает, как долго действие длится до настоящего.\n\n*Пример:* She has lived here since 2020.\n\n### Формулы\n- `Affirmative: have/has + V3 (past participle)`\n- `Question/Negative: Have/Has + subject + V3 / haven't/hasn't + V3`\n\n### Типичная ошибка\n❌ I have seen him yesterday.\n✅ I saw him yesterday.",
+      "reading": "**Настоящее совершённое время** — Present Perfect связывает прошлое с настоящим: опыт, недавние события и результат, важный сейчас.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Опыт и результат\nИспользуем, когда важен сам факт или результат, а не точное время. Маркеры: ever, never, already, yet, just.\n\n### For / Since\nFor + период времени; since + точка начала. Показывает, как долго действие длится до настоящего.\n\n### Формулы\n- `Affirmative: have/has + V3 (past participle)`\n- `Question/Negative: Have/Has + subject + V3 / haven't/hasn't + V3`\n\n### Типичная ошибка\n❌ I have seen him yesterday.\n✅ I saw him yesterday.",
       "keyPoints": [
         "Опыт и результат: Используем, когда важен сам факт или результат, а не точное время. Маркеры: ever",
         "For / Since: For + период времени; since + точка начала. Показывает, как долго действие длитс",
@@ -13900,8 +14297,8 @@ const CURRICULUM = [
         "question": "What is «ever»?",
         "options": [
           "когда-либо",
-          "результат",
-          "только что",
+          "недавно",
+          "опыт",
           "в течение"
         ],
         "answer": "когда-либо"
@@ -13909,9 +14306,9 @@ const CURRICULUM = [
       {
         "question": "What is «never»?",
         "options": [
-          "когда-либо",
-          "ещё (не)",
+          "в течение",
           "никогда",
+          "недавно",
           "опыт"
         ],
         "answer": "никогда"
@@ -13919,29 +14316,29 @@ const CURRICULUM = [
       {
         "question": "What is «already»?",
         "options": [
-          "опыт",
-          "когда-либо",
           "с (какого-то момента)",
-          "уже"
+          "опыт",
+          "уже",
+          "результат"
         ],
         "answer": "уже"
       },
       {
         "question": "What is «yet»?",
         "options": [
-          "с (какого-то момента)",
-          "уже",
+          "опыт",
+          "только что",
           "ещё (не)",
-          "никогда"
+          "когда-либо"
         ],
         "answer": "ещё (не)"
       },
       {
         "question": "What is «just»?",
         "options": [
-          "ещё (не)",
+          "когда-либо",
           "уже",
-          "недавно",
+          "результат",
           "только что"
         ],
         "answer": "только что"
@@ -14353,7 +14750,10 @@ const CURRICULUM = [
           "this week",
           "specific",
           "unfinished",
-          "connection"
+          "connection",
+          "time marker",
+          "recent",
+          "definite"
         ],
         "mustIncludeAny": [
           [
@@ -14363,11 +14763,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about unfinished."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Когда какое время»."
       },
       {
         "prompt": "Has the detective found any clues yet?",
@@ -14377,7 +14776,10 @@ const CURRICULUM = [
           "this week",
           "specific",
           "unfinished",
-          "connection"
+          "connection",
+          "time marker",
+          "recent",
+          "definite"
         ],
         "mustIncludeAny": [
           [
@@ -14387,11 +14789,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to this week and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Когда какое время»."
       },
       {
         "prompt": "What happened last chapter?",
@@ -14401,7 +14802,10 @@ const CURRICULUM = [
           "this week",
           "specific",
           "unfinished",
-          "connection"
+          "connection",
+          "time marker",
+          "recent",
+          "definite"
         ],
         "mustIncludeAny": [
           [
@@ -14411,11 +14815,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The event changes how the characters feel."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Когда какое время»."
       },
       {
         "prompt": "Have the characters ever met before?",
@@ -14425,7 +14828,10 @@ const CURRICULUM = [
           "this week",
           "specific",
           "unfinished",
-          "connection"
+          "connection",
+          "time marker",
+          "recent",
+          "definite"
         ],
         "mustIncludeAny": [
           [
@@ -14435,11 +14841,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about unfinished."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Когда какое время»."
       },
       {
         "prompt": "Did she leave yesterday or today?",
@@ -14449,7 +14854,10 @@ const CURRICULUM = [
           "this week",
           "specific",
           "unfinished",
-          "connection"
+          "connection",
+          "time marker",
+          "recent",
+          "definite"
         ],
         "mustIncludeAny": [
           [
@@ -14459,11 +14867,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from когда какое время."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Когда какое время»."
       }
     ],
     "speaking": [
@@ -14547,36 +14954,36 @@ const CURRICULUM = [
     ],
     "grammarCheck": [
       {
-        "sentence": "I ___ him yesterday.",
+        "sentence": "She ___ an hour ago",
         "options": [
-          "saw",
-          "have seen"
+          "left",
+          "lefts"
         ],
-        "answer": "saw"
+        "answer": "left"
       },
       {
-        "sentence": "She ___ three countries this year.",
+        "sentence": "Did you ___ the match last night",
         "options": [
-          "visited",
-          "has visited"
+          "watch",
+          "watchs"
         ],
-        "answer": "has visited"
+        "answer": "watch"
       },
       {
-        "sentence": "___ you ___ the news last night?",
+        "sentence": "She has ___ left",
         "options": [
-          "Did / watch",
-          "Have / watched"
+          "already",
+          "alreadys"
         ],
-        "answer": "Did / watch"
+        "answer": "already"
       },
       {
-        "sentence": "We ___ each other since school.",
+        "sentence": "Have you ___ the new series yet",
         "options": [
-          "have known",
-          "knew"
+          "watched",
+          "watcheds"
         ],
-        "answer": "have known"
+        "answer": "watched"
       }
     ],
     "theoryCheck": [
@@ -14589,12 +14996,12 @@ const CURRICULUM = [
         "answer": "I visited Paris in 2019."
       },
       {
-        "question": "Пример по теме «Past Simple»:",
+        "question": "Какое правило относится к «Present Perfect»?",
         "options": [
-          "I met her in 2022.",
-          "I have visited Paris in 2019."
+          "Без точного времени или связь с настоящим. Маркеры: ever, never, already, yet, this week, so far.",
+          "Конкретное время в прошлом, которое уже закончилось. Маркеры: yesterday, last year, in 2019, ago."
         ],
-        "answer": "I met her in 2022."
+        "answer": "Без точного времени или связь с настоящим. Маркеры: ever, never, already, yet, this week, so far."
       },
       {
         "question": "Какая формула относится к «Present Perfect vs Past Simple»?",
@@ -14608,48 +15015,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I ______ him yesterday.",
-        "answer": "saw",
+        "prompt": "I have ______ him recently",
+        "answer": "seen",
         "altAnswers": [
-          "saw",
-          "Saw"
+          "Seen",
+          "seen"
         ],
-        "hint": "Подсказка: слово из урока «Когда какое время»."
+        "hint": "Подсказка: тема «Когда какое время»."
       },
       {
         "id": 2,
-        "prompt": "She ______ three countries this year.",
-        "answer": "has visited",
+        "prompt": "Did you go ______ week",
+        "answer": "last",
         "altAnswers": [
-          "has visited",
-          "Has visited"
+          "last",
+          "Last"
         ],
-        "hint": "Подсказка: слово из урока «Когда какое время»."
+        "hint": "Подсказка: тема «Когда какое время»."
       },
       {
         "id": 3,
-        "prompt": "______ you",
-        "answer": "Did / watch",
+        "prompt": "Have you ______ there before",
+        "answer": "been",
         "altAnswers": [
-          "did / watch",
-          "Did / watch"
+          "been",
+          "Been"
         ],
-        "hint": "Подсказка: слово из урока «Когда какое время»."
+        "hint": "Подсказка: тема «Когда какое время»."
       },
       {
         "id": 4,
-        "prompt": "We ______ each other since school.",
-        "answer": "have known",
+        "prompt": "He ______ his phone two days ago",
+        "answer": "lost",
         "altAnswers": [
-          "have known",
-          "Have known"
+          "lost",
+          "Lost"
         ],
-        "hint": "Подсказка: слово из урока «Когда какое время»."
+        "hint": "Подсказка: тема «Когда какое время»."
       }
     ],
     "theory": {
       "intro": "Учимся выбирать правильное время: Past Simple для конкретного прошлого, Present Perfect для связи с настоящим.",
-      "reading": "**Present Perfect и Past Simple** — Учимся выбирать правильное время: Past Simple для конкретного прошлого, Present Perfect для связи с настоящим.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Past Simple\nКонкретное время в прошлом, которое уже закончилось. Маркеры: yesterday, last year, in 2019, ago.\n\n*Пример:* I met her in 2022.\n\n### Present Perfect\nБез точного времени или связь с настоящим. Маркеры: ever, never, already, yet, this week, so far.\n\n*Пример:* I have met many interesting people.\n\n### Формулы\n- `Past Simple: V2 + time marker (yesterday, last week)`\n- `Present Perfect: have/has + V3 (no specific past time)`\n\n### Типичная ошибка\n❌ I have visited Paris in 2019.\n✅ I visited Paris in 2019.",
+      "reading": "**Present Perfect и Past Simple** — Учимся выбирать правильное время: Past Simple для конкретного прошлого, Present Perfect для связи с настоящим.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Past Simple\nКонкретное время в прошлом, которое уже закончилось. Маркеры: yesterday, last year, in 2019, ago.\n\n### Present Perfect\nБез точного времени или связь с настоящим. Маркеры: ever, never, already, yet, this week, so far.\n\n### Формулы\n- `Past Simple: V2 + time marker (yesterday, last week)`\n- `Present Perfect: have/has + V3 (no specific past time)`\n\n### Типичная ошибка\n❌ I have visited Paris in 2019.\n✅ I visited Paris in 2019.",
       "keyPoints": [
         "Past Simple: Конкретное время в прошлом, которое уже закончилось. Маркеры: yesterday, last ye",
         "Present Perfect: Без точного времени или связь с настоящим. Маркеры: ever, never, already, yet, t",
@@ -14663,9 +15070,9 @@ const CURRICULUM = [
       {
         "question": "What is «last»?",
         "options": [
-          "контекст",
+          "незавершённый",
           "конкретный",
-          "маркер времени",
+          "на этой неделе",
           "прошлый"
         ],
         "answer": "прошлый"
@@ -14673,40 +15080,40 @@ const CURRICULUM = [
       {
         "question": "What is «this week»?",
         "options": [
-          "незавершённый",
-          "на этой неделе",
           "контекст",
-          "определённый"
+          "на этой неделе",
+          "прошлый",
+          "незавершённый"
         ],
         "answer": "на этой неделе"
       },
       {
         "question": "What is «specific»?",
         "options": [
-          "контекст",
-          "маркер времени",
-          "конкретный",
-          "неопределённый"
+          "на этой неделе",
+          "недавний",
+          "определённый",
+          "конкретный"
         ],
         "answer": "конкретный"
       },
       {
         "question": "What is «unfinished»?",
         "options": [
-          "незавершённый",
-          "маркер времени",
           "контекст",
-          "определённый"
+          "незавершённый",
+          "недавний",
+          "неопределённый"
         ],
         "answer": "незавершённый"
       },
       {
         "question": "What is «connection»?",
         "options": [
-          "определённый",
           "связь",
-          "конкретный",
-          "незавершённый"
+          "контекст",
+          "на этой неделе",
+          "неопределённый"
         ],
         "answer": "связь"
       },
@@ -15134,7 +15541,10 @@ const CURRICULUM = [
           "prediction",
           "intention",
           "appointment",
-          "spontaneous"
+          "spontaneous",
+          "schedule",
+          "probably",
+          "definitely"
         ],
         "mustIncludeAny": [
           [
@@ -15144,11 +15554,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "I think the problem will be solved soon."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Will, going to, Present Continuous»."
       },
       {
         "prompt": "What clues suggest the ending?",
@@ -15158,7 +15567,10 @@ const CURRICULUM = [
           "prediction",
           "intention",
           "appointment",
-          "spontaneous"
+          "spontaneous",
+          "schedule",
+          "probably",
+          "definitely"
         ],
         "mustIncludeAny": [
           [
@@ -15168,11 +15580,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "She will likely call her friend tomorrow."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Will, going to, Present Continuous»."
       },
       {
         "prompt": "What might happen next in the plot?",
@@ -15182,7 +15593,10 @@ const CURRICULUM = [
           "prediction",
           "intention",
           "appointment",
-          "spontaneous"
+          "spontaneous",
+          "schedule",
+          "probably",
+          "definitely"
         ],
         "mustIncludeAny": [
           [
@@ -15192,11 +15606,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "She will likely call her friend tomorrow."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Will, going to, Present Continuous»."
       },
       {
         "prompt": "Who is most likely to succeed?",
@@ -15206,7 +15619,10 @@ const CURRICULUM = [
           "prediction",
           "intention",
           "appointment",
-          "spontaneous"
+          "spontaneous",
+          "schedule",
+          "probably",
+          "definitely"
         ],
         "mustIncludeAny": [
           [
@@ -15216,11 +15632,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The narrator introduces his parents first."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Will, going to, Present Continuous»."
       },
       {
         "prompt": "What surprised the audience in the scene?",
@@ -15230,7 +15645,10 @@ const CURRICULUM = [
           "prediction",
           "intention",
           "appointment",
-          "spontaneous"
+          "spontaneous",
+          "schedule",
+          "probably",
+          "definitely"
         ],
         "mustIncludeAny": [
           [
@@ -15240,11 +15658,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from will, going to, present continuous."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Will, going to, Present Continuous»."
       }
     ],
     "speaking": [
@@ -15332,36 +15749,36 @@ const CURRICULUM = [
     ],
     "grammarCheck": [
       {
-        "sentence": "Look at those clouds! It ___ rain.",
+        "sentence": "___ worry, I'll help you",
         "options": [
-          "will",
-          "is going to"
+          "Don't",
+          "Don'ts"
         ],
-        "answer": "is going to"
+        "answer": "Don't"
       },
       {
-        "sentence": "I ___ you with your project.",
+        "sentence": "___ will change many jobs",
         "options": [
-          "will help",
-          "am helping"
+          "Robots",
+          "Robot"
         ],
-        "answer": "will help"
+        "answer": "Robots"
       },
       {
-        "sentence": "We ___ dinner with friends on Saturday.",
+        "sentence": "___ going to move next year",
         "options": [
-          "will have",
-          "are having"
+          "We're",
+          "We'res"
         ],
-        "answer": "are having"
+        "answer": "We're"
       },
       {
-        "sentence": "She ___ a doctor when she grows up.",
+        "sentence": "She is ___ to Rome on Friday",
         "options": [
-          "will be",
-          "is being"
+          "flying",
+          "flyings"
         ],
-        "answer": "will be"
+        "answer": "flying"
       }
     ],
     "theoryCheck": [
@@ -15374,12 +15791,12 @@ const CURRICULUM = [
         "answer": "I am meeting him tomorrow."
       },
       {
-        "question": "Пример по теме «Will»:",
+        "question": "Какое правило относится к «Going to / Present Continuous»?",
         "options": [
-          "I think it will rain tomorrow.",
-          "I will meeting him tomorrow."
+          "Going to — планы и намерения; Present Continuous — договорённости с конкретным временем.",
+          "Спонтанные решения, предсказания, обещания. Маркеры: I think, probably, maybe."
         ],
-        "answer": "I think it will rain tomorrow."
+        "answer": "Going to — планы и намерения; Present Continuous — договорённости с конкретным временем."
       },
       {
         "question": "Какая формула относится к «Future: will / going to / Present Continuous»?",
@@ -15393,48 +15810,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "Look at those clouds! It ______ rain.",
-        "answer": "is going to",
+        "prompt": "I ______ help you",
+        "answer": "will",
         "altAnswers": [
-          "Is going to",
-          "is going to"
+          "will",
+          "Will"
         ],
-        "hint": "Подсказка: слово из урока «Will, going to, Present Continuous»."
+        "hint": "Подсказка: тема «Will, going to, Present Continuous»."
       },
       {
         "id": 2,
-        "prompt": "I ______ you with your project.",
-        "answer": "will help",
+        "prompt": "______ going to rain",
+        "answer": "It's",
         "altAnswers": [
-          "will help",
-          "Will help"
+          "it's",
+          "It's"
         ],
-        "hint": "Подсказка: слово из урока «Will, going to, Present Continuous»."
+        "hint": "Подсказка: тема «Will, going to, Present Continuous»."
       },
       {
         "id": 3,
-        "prompt": "We ______ dinner with friends on Saturday.",
-        "answer": "are having",
+        "prompt": "______ meeting her at six",
+        "answer": "I'm",
         "altAnswers": [
-          "Are having",
-          "are having"
+          "I'm",
+          "i'm"
         ],
-        "hint": "Подсказка: слово из урока «Will, going to, Present Continuous»."
+        "hint": "Подсказка: тема «Will, going to, Present Continuous»."
       },
       {
         "id": 4,
-        "prompt": "She ______ a doctor when she grows up.",
-        "answer": "will be",
+        "prompt": "I ______ it will work",
+        "answer": "think",
         "altAnswers": [
-          "Will be",
-          "will be"
+          "think",
+          "Think"
         ],
-        "hint": "Подсказка: слово из урока «Will, going to, Present Continuous»."
+        "hint": "Подсказка: тема «Will, going to, Present Continuous»."
       }
     ],
     "theory": {
       "intro": "Три способа говорить о будущем: спонтанные решения, планы и договорённости на ближайшее время.",
-      "reading": "**Формы будущего времени** — Три способа говорить о будущем: спонтанные решения, планы и договорённости на ближайшее время.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Will\nСпонтанные решения, предсказания, обещания. Маркеры: I think, probably, maybe.\n\n*Пример:* I think it will rain tomorrow.\n\n### Going to / Present Continuous\nGoing to — планы и намерения; Present Continuous — договорённости с конкретным временем.\n\n*Пример:* I'm going to learn Spanish. / I'm meeting Anna at six.\n\n### Формулы\n- `Will: will + V1 (won't + V1)`\n- `Going to: am/is/are + going to + V1`\n- `Future arrangement: am/is/are + V-ing + time`\n\n### Типичная ошибка\n❌ I will meeting him tomorrow.\n✅ I am meeting him tomorrow.",
+      "reading": "**Формы будущего времени** — Три способа говорить о будущем: спонтанные решения, планы и договорённости на ближайшее время.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Will\nСпонтанные решения, предсказания, обещания. Маркеры: I think, probably, maybe.\n\n### Going to / Present Continuous\nGoing to — планы и намерения; Present Continuous — договорённости с конкретным временем.\n\n### Формулы\n- `Will: will + V1 (won't + V1)`\n- `Going to: am/is/are + going to + V1`\n- `Future arrangement: am/is/are + V-ing + time`\n\n### Типичная ошибка\n❌ I will meeting him tomorrow.\n✅ I am meeting him tomorrow.",
       "keyPoints": [
         "Will: Спонтанные решения, предсказания, обещания. Маркеры: I think, probably, maybe.",
         "Going to / Present Continuous: Going to — планы и намерения; Present Continuous — договорённости с конкретным в",
@@ -15448,39 +15865,39 @@ const CURRICULUM = [
       {
         "question": "What is «plan»?",
         "options": [
-          "план",
-          "договорённость",
           "встреча, назначение",
-          "определённо"
+          "договорённость",
+          "расписание",
+          "план"
         ],
         "answer": "план"
       },
       {
         "question": "What is «prediction»?",
         "options": [
-          "договорённость",
+          "намерение",
           "расписание",
-          "вероятно",
-          "предсказание"
+          "предсказание",
+          "план"
         ],
         "answer": "предсказание"
       },
       {
         "question": "What is «intention»?",
         "options": [
-          "план",
-          "предсказание",
           "намерение",
-          "определённо"
+          "вероятно",
+          "встреча, назначение",
+          "прогноз"
         ],
         "answer": "намерение"
       },
       {
         "question": "What is «appointment»?",
         "options": [
-          "договорённость",
           "предсказание",
-          "прогноз",
+          "спонтанный",
+          "вероятно",
           "встреча, назначение"
         ],
         "answer": "встреча, назначение"
@@ -15489,7 +15906,7 @@ const CURRICULUM = [
         "question": "What is «spontaneous»?",
         "options": [
           "встреча, назначение",
-          "предсказание",
+          "вероятно",
           "определённо",
           "спонтанный"
         ],
@@ -15812,7 +16229,10 @@ const CURRICULUM = [
           "smaller",
           "better",
           "worse",
-          "the best"
+          "the best",
+          "than",
+          "as...as",
+          "cheap"
         ],
         "mustIncludeAny": [
           [
@@ -15822,11 +16242,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss bigger, the best in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «bigger, the best»."
       },
       {
         "prompt": "Who is the most important character?",
@@ -15836,7 +16255,10 @@ const CURRICULUM = [
           "smaller",
           "better",
           "worse",
-          "the best"
+          "the best",
+          "than",
+          "as...as",
+          "cheap"
         ],
         "mustIncludeAny": [
           [
@@ -15846,11 +16268,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The woman in the scene is the mother."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «bigger, the best»."
       },
       {
         "prompt": "Is it as good as the first version?",
@@ -15860,7 +16281,10 @@ const CURRICULUM = [
           "smaller",
           "better",
           "worse",
-          "the best"
+          "the best",
+          "than",
+          "as...as",
+          "cheap"
         ],
         "mustIncludeAny": [
           [
@@ -15870,11 +16294,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to smaller and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «bigger, the best»."
       },
       {
         "prompt": "What is cheaper?",
@@ -15884,7 +16307,10 @@ const CURRICULUM = [
           "smaller",
           "better",
           "worse",
-          "the best"
+          "the best",
+          "than",
+          "as...as",
+          "cheap"
         ],
         "mustIncludeAny": [
           [
@@ -15894,11 +16320,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from bigger, the best."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «bigger, the best»."
       },
       {
         "prompt": "What is the tallest/highest?",
@@ -15908,7 +16333,10 @@ const CURRICULUM = [
           "smaller",
           "better",
           "worse",
-          "the best"
+          "the best",
+          "than",
+          "as...as",
+          "cheap"
         ],
         "mustIncludeAny": [
           [
@@ -15918,11 +16346,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to smaller and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «bigger, the best»."
       }
     ],
     "speaking": [
@@ -16008,22 +16435,22 @@ const CURRICULUM = [
       {
         "word": "bigger",
         "trans": "больше",
-        "example": "This phone is cheaper than mine."
+        "example": "Can you make a sentence with «bigger»?"
       },
       {
         "word": "smaller",
         "trans": "меньше",
-        "example": "She is the most talented student."
+        "example": "«smaller» helped me understand bigger, the best."
       },
       {
         "word": "better",
         "trans": "лучше",
-        "example": "He is taller than me."
+        "example": "I often use «better» when I talk about bigger, the best."
       },
       {
         "word": "worse",
         "trans": "хуже",
-        "example": "It's as good as the original."
+        "example": "The teacher wrote «worse» on the board."
       },
       {
         "word": "the best",
@@ -16033,111 +16460,111 @@ const CURRICULUM = [
       {
         "word": "than",
         "trans": "чем",
-        "example": "It's the most popular song."
+        "example": "He is taller than me."
       },
       {
         "word": "as...as",
         "trans": "такой же как",
-        "example": "This phone is cheaper than mine."
+        "example": "I need to remember «as...as» for homework."
       },
       {
         "word": "cheap",
         "trans": "дешёвый",
-        "example": "She is the most talented student."
+        "example": "I used «cheap» in my written answer."
       },
       {
         "word": "expensive",
         "trans": "дорогой",
-        "example": "He is taller than me."
+        "example": "She asked me about «expensive» during practice."
       },
       {
         "word": "interesting",
         "trans": "интересный",
-        "example": "It's as good as the original."
+        "example": "«interesting» fits well in a sentence about bigger, the best."
       },
       {
-        "word": "bigger",
-        "trans": "больше",
-        "example": "This is the best film I've seen."
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» was new for me this week."
       },
       {
-        "word": "smaller",
-        "trans": "меньше",
-        "example": "It's the most popular song."
+        "word": "review",
+        "trans": "повторение",
+        "example": "We discussed «review» in class today."
       },
       {
-        "word": "better",
-        "trans": "лучше",
-        "example": "This phone is cheaper than mine."
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "He repeated «sentence» three times."
       },
       {
-        "word": "worse",
-        "trans": "хуже",
-        "example": "She is the most talented student."
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "My partner corrected my use of «grammar»."
       },
       {
-        "word": "the best",
-        "trans": "лучший",
-        "example": "He is taller than me."
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "My note says «vocabulary» means «лексика»."
       },
       {
-        "word": "than",
-        "trans": "чем",
-        "example": "It's as good as the original."
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "In our dialogue, «speaking» appeared twice."
       },
       {
-        "word": "as...as",
-        "trans": "такой же как",
-        "example": "This is the best film I've seen."
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I linked «listening» to other words I know."
       },
       {
-        "word": "cheap",
-        "trans": "дешёвый",
-        "example": "It's the most popular song."
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I heard «writing» in the listening exercise."
       },
       {
-        "word": "expensive",
-        "trans": "дорогой",
-        "example": "This phone is cheaper than mine."
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I looked up «reading» in the dictionary."
       },
       {
-        "word": "interesting",
-        "trans": "интересный",
-        "example": "She is the most talented student."
+        "word": "homework",
+        "trans": "домашка",
+        "example": "The example with «homework» was clear."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "This car is ___ than that one.",
+        "sentence": "He is ___ than me",
         "options": [
-          "faster",
-          "more fast"
+          "taller",
+          "tallers"
         ],
-        "answer": "faster"
+        "answer": "taller"
       },
       {
-        "sentence": "She is the ___ student in the class.",
+        "sentence": "___ as good as the original",
         "options": [
-          "best",
-          "better"
+          "It's",
+          "It'"
         ],
-        "answer": "best"
+        "answer": "It's"
       },
       {
-        "sentence": "It's ___ expensive than I thought.",
+        "sentence": "___ is the best film I've seen",
         "options": [
-          "more",
-          "most"
+          "This",
+          "Thi"
         ],
-        "answer": "more"
+        "answer": "This"
       },
       {
-        "sentence": "He is as tall ___ his brother.",
+        "sentence": "___ the most popular song",
         "options": [
-          "as",
-          "than"
+          "It's",
+          "It'"
         ],
-        "answer": "as"
+        "answer": "It's"
       }
     ],
     "theoryCheck": [
@@ -16150,12 +16577,12 @@ const CURRICULUM = [
         "answer": "He is taller than me."
       },
       {
-        "question": "Пример по теме «Comparative»:",
+        "question": "Какое правило относится к «Superlative»?",
         "options": [
-          "This phone is cheaper than mine.",
-          "He is more tall than me."
+          "The + -est (the biggest) или the most + adj. As...as — такой же.",
+          "Короткие: +er (big→bigger) или more + прилагательное (more interesting). Than — чем."
         ],
-        "answer": "This phone is cheaper than mine."
+        "answer": "The + -est (the biggest) или the most + adj. As...as — такой же."
       },
       {
         "question": "Какая формула относится к «Comparatives & Superlatives»?",
@@ -16169,48 +16596,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "This car is ______ than that one.",
-        "answer": "faster",
+        "prompt": "______ than mine",
+        "answer": "bigger",
         "altAnswers": [
-          "faster",
-          "Faster"
+          "bigger",
+          "Bigger"
         ],
-        "hint": "Подсказка: слово из урока «bigger, the best»."
+        "hint": "Подсказка: тема «bigger, the best»."
       },
       {
         "id": 2,
-        "prompt": "She is the ______ student in the class.",
-        "answer": "best",
+        "prompt": "more ______",
+        "answer": "interesting",
         "altAnswers": [
-          "best",
-          "Best"
+          "interesting",
+          "Interesting"
         ],
-        "hint": "Подсказка: слово из урока «bigger, the best»."
+        "hint": "Подсказка: тема «bigger, the best»."
       },
       {
         "id": 3,
-        "prompt": "It's ______ expensive than I thought.",
-        "answer": "more",
+        "prompt": "as ______ as",
+        "answer": "good",
         "altAnswers": [
-          "more",
-          "More"
+          "Good",
+          "good"
         ],
-        "hint": "Подсказка: слово из урока «bigger, the best»."
+        "hint": "Подсказка: тема «bigger, the best»."
       },
       {
         "id": 4,
-        "prompt": "He is as tall ______ his brother.",
-        "answer": "as",
+        "prompt": "the ______ popular",
+        "answer": "most",
         "altAnswers": [
-          "as",
-          "As"
+          "most",
+          "Most"
         ],
-        "hint": "Подсказка: слово из урока «bigger, the best»."
+        "hint": "Подсказка: тема «bigger, the best»."
       }
     ],
     "theory": {
       "intro": "Сравниваем людей, предметы и явления: -er/-est и more/most.",
-      "reading": "**Сравнительная и превосходная степень** — Сравниваем людей, предметы и явления: -er/-est и more/most.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Comparative\nКороткие: +er (big→bigger) или more + прилагательное (more interesting). Than — чем.\n\n*Пример:* This phone is cheaper than mine.\n\n### Superlative\nThe + -est (the biggest) или the most + adj. As...as — такой же.\n\n*Пример:* She is the most talented student.\n\n### Формулы\n- `short adj: -er + than / the -est`\n- `long adj: more + adj + than / the most + adj`\n\n### Типичная ошибка\n❌ He is more tall than me.\n✅ He is taller than me.",
+      "reading": "**Сравнительная и превосходная степень** — Сравниваем людей, предметы и явления: -er/-est и more/most.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Comparative\nКороткие: +er (big→bigger) или more + прилагательное (more interesting). Than — чем.\n\n### Superlative\nThe + -est (the biggest) или the most + adj. As...as — такой же.\n\n### Формулы\n- `short adj: -er + than / the -est`\n- `long adj: more + adj + than / the most + adj`\n\n### Типичная ошибка\n❌ He is more tall than me.\n✅ He is taller than me.",
       "keyPoints": [
         "Comparative: Короткие: +er (big→bigger) или more + прилагательное (more interesting). Than — ",
         "Superlative: The + -est (the biggest) или the most + adj. As...as — такой же.",
@@ -16224,29 +16651,29 @@ const CURRICULUM = [
       {
         "question": "What is «bigger»?",
         "options": [
-          "лучший",
           "больше",
+          "хуже",
           "интересный",
-          "такой же как"
+          "дорогой"
         ],
         "answer": "больше"
       },
       {
         "question": "What is «smaller»?",
         "options": [
-          "лучший",
-          "дорогой",
           "меньше",
-          "такой же как"
+          "лучше",
+          "лучший",
+          "чем"
         ],
         "answer": "меньше"
       },
       {
         "question": "What is «better»?",
         "options": [
-          "чем",
+          "больше",
+          "дорогой",
           "лучше",
-          "интересный",
           "хуже"
         ],
         "answer": "лучше"
@@ -16254,20 +16681,20 @@ const CURRICULUM = [
       {
         "question": "What is «worse»?",
         "options": [
-          "дешёвый",
-          "чем",
-          "меньше",
-          "хуже"
+          "интересный",
+          "такой же как",
+          "хуже",
+          "чем"
         ],
         "answer": "хуже"
       },
       {
         "question": "What is «the best»?",
         "options": [
-          "дорогой",
+          "больше",
+          "лучше",
           "хуже",
-          "лучший",
-          "такой же как"
+          "лучший"
         ],
         "answer": "лучший"
       },
@@ -16596,7 +17023,10 @@ const CURRICULUM = [
           "many",
           "some",
           "any",
-          "a lot of"
+          "a lot of",
+          "few",
+          "little",
+          "water"
         ],
         "mustIncludeAny": [
           [
@@ -16606,11 +17036,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on some, any, much, many."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «some, any, much, many»."
       },
       {
         "prompt": "Is some or any used correctly?",
@@ -16620,7 +17049,10 @@ const CURRICULUM = [
           "many",
           "some",
           "any",
-          "a lot of"
+          "a lot of",
+          "few",
+          "little",
+          "water"
         ],
         "mustIncludeAny": [
           [
@@ -16630,11 +17062,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from some, any, much, many."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «some, any, much, many»."
       },
       {
         "prompt": "What uncountable nouns appear?",
@@ -16644,7 +17075,10 @@ const CURRICULUM = [
           "many",
           "some",
           "any",
-          "a lot of"
+          "a lot of",
+          "few",
+          "little",
+          "water"
         ],
         "mustIncludeAny": [
           [
@@ -16654,11 +17088,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The character spends too much time online."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «some, any, much, many»."
       },
       {
         "prompt": "What do they need to buy?",
@@ -16668,7 +17101,10 @@ const CURRICULUM = [
           "many",
           "some",
           "any",
-          "a lot of"
+          "a lot of",
+          "few",
+          "little",
+          "water"
         ],
         "mustIncludeAny": [
           [
@@ -16678,11 +17114,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They describe their daily routine clearly."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «some, any, much, many»."
       }
     ],
     "speaking": [
@@ -16772,136 +17207,136 @@ const CURRICULUM = [
       {
         "word": "much",
         "trans": "много (неисч.)",
-        "example": "How many apples? How much sugar?"
+        "example": "I don't have much money."
       },
       {
         "word": "many",
         "trans": "много (исч.)",
-        "example": "There isn't any bread. Do you have any questions?"
+        "example": "There are many people here."
       },
       {
         "word": "some",
         "trans": "немного, несколько",
-        "example": "I don't have much money."
+        "example": "Would you like some tea?"
       },
       {
         "word": "any",
         "trans": "любой, некоторый",
-        "example": "There are many people here."
+        "example": "I don't need any help."
       },
       {
         "word": "a lot of",
         "trans": "много",
-        "example": "Would you like some tea?"
+        "example": "The teacher wrote «a lot of» on the board."
       },
       {
         "word": "few",
         "trans": "мало (исч.)",
-        "example": "I don't need any help."
+        "example": "Let's practise «few» in a full sentence."
       },
       {
         "word": "little",
         "trans": "мало (неисч.)",
-        "example": "How many apples? How much sugar?"
+        "example": "«little» is a key word in this lesson on some, any, much, many."
       },
       {
         "word": "water",
         "trans": "вода",
-        "example": "There isn't any bread. Do you have any questions?"
+        "example": "I need to remember «water» for homework."
       },
       {
         "word": "money",
         "trans": "деньги",
-        "example": "I don't have much money."
+        "example": "How much money do you have?"
       },
       {
         "word": "advice",
         "trans": "совет",
-        "example": "There are many people here."
+        "example": "She asked me about «advice» during practice."
       },
       {
-        "word": "much",
-        "trans": "много (неисч.)",
-        "example": "Would you like some tea?"
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» fits well in a sentence about some, any, much, many."
       },
       {
-        "word": "many",
-        "trans": "много (исч.)",
-        "example": "I don't need any help."
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» was new for me this week."
       },
       {
-        "word": "some",
-        "trans": "немного, несколько",
-        "example": "How many apples? How much sugar?"
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "We discussed «sentence» in class today."
       },
       {
-        "word": "any",
-        "trans": "любой, некоторый",
-        "example": "There isn't any bread. Do you have any questions?"
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "He repeated «grammar» three times."
       },
       {
-        "word": "a lot of",
-        "trans": "много",
-        "example": "I don't have much money."
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "My partner corrected my use of «vocabulary»."
       },
       {
-        "word": "few",
-        "trans": "мало (исч.)",
-        "example": "There are many people here."
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "My note says «speaking» means «говорение»."
       },
       {
-        "word": "little",
-        "trans": "мало (неисч.)",
-        "example": "Would you like some tea?"
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "In our dialogue, «listening» appeared twice."
       },
       {
-        "word": "water",
-        "trans": "вода",
-        "example": "I don't need any help."
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I linked «writing» to other words I know."
       },
       {
-        "word": "money",
-        "trans": "деньги",
-        "example": "How many apples? How much sugar?"
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I heard «reading» in the listening exercise."
       },
       {
-        "word": "advice",
-        "trans": "совет",
-        "example": "There isn't any bread. Do you have any questions?"
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I looked up «homework» in the dictionary."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "How ___ students are there?",
+        "sentence": "I ___ have much money",
         "options": [
-          "many",
-          "much"
+          "don't",
+          "don'ts"
         ],
-        "answer": "many"
+        "answer": "don't"
       },
       {
-        "sentence": "I don't have ___ time.",
+        "sentence": "___ are many people here",
         "options": [
-          "much",
-          "many"
+          "There",
+          "Theres"
         ],
-        "answer": "much"
+        "answer": "There"
       },
       {
-        "sentence": "There isn't ___ milk.",
+        "sentence": "___ you like some tea",
         "options": [
-          "some",
-          "any"
+          "Would",
+          "Woulds"
         ],
-        "answer": "any"
+        "answer": "Would"
       },
       {
-        "sentence": "Would you like ___ coffee?",
+        "sentence": "I ___ need any help",
         "options": [
-          "some",
-          "any"
+          "don't",
+          "don'ts"
         ],
-        "answer": "some"
+        "answer": "don't"
       }
     ],
     "theoryCheck": [
@@ -16914,12 +17349,12 @@ const CURRICULUM = [
         "answer": "How much money do you have?"
       },
       {
-        "question": "Пример по теме «Much / Many»:",
+        "question": "Какое правило относится к «Some / Any»?",
         "options": [
-          "How many apples? How much sugar?",
-          "How many money do you have?"
+          "Some — утверждение. Any — вопросы и отрицание.",
+          "Many + исчисляемые (many books). Much + неисчисляемые (much time). A lot of — универсально."
         ],
-        "answer": "How many apples? How much sugar?"
+        "answer": "Some — утверждение. Any — вопросы и отрицание."
       },
       {
         "question": "Какая формула относится к «Countable vs Uncountable»?",
@@ -16933,48 +17368,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "How ______ students are there?",
-        "answer": "many",
+        "prompt": "______ much money",
+        "answer": "How",
         "altAnswers": [
-          "Many",
-          "many"
+          "How",
+          "how"
         ],
-        "hint": "Подсказка: слово из урока «some, any, much, many»."
+        "hint": "Подсказка: тема «some, any, much, many»."
       },
       {
         "id": 2,
-        "prompt": "I don't have ______ time.",
-        "answer": "much",
+        "prompt": "How many ______",
+        "answer": "people",
         "altAnswers": [
-          "Much",
-          "much"
+          "People",
+          "people"
         ],
-        "hint": "Подсказка: слово из урока «some, any, much, many»."
+        "hint": "Подсказка: тема «some, any, much, many»."
       },
       {
         "id": 3,
-        "prompt": "There isn't ______ milk.",
-        "answer": "any",
+        "prompt": "a ______ of water",
+        "answer": "lot",
         "altAnswers": [
-          "Any",
-          "any"
+          "lot",
+          "Lot"
         ],
-        "hint": "Подсказка: слово из урока «some, any, much, many»."
+        "hint": "Подсказка: тема «some, any, much, many»."
       },
       {
         "id": 4,
-        "prompt": "Would you like ______ coffee?",
-        "answer": "some",
+        "prompt": "any ______",
+        "answer": "questions",
         "altAnswers": [
-          "Some",
-          "some"
+          "Questions",
+          "questions"
         ],
-        "hint": "Подсказка: слово из урока «some, any, much, many»."
+        "hint": "Подсказка: тема «some, any, much, many»."
       }
     ],
     "theory": {
       "intro": "Различаем исчисляемые и неисчисляемые существительные, some/any, much/many.",
-      "reading": "**Исчисляемые и неисчисляемые** — Различаем исчисляемые и неисчисляемые существительные, some/any, much/many.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Much / Many\nMany + исчисляемые (many books). Much + неисчисляемые (much time). A lot of — универсально.\n\n*Пример:* How many apples? How much sugar?\n\n### Some / Any\nSome — утверждение. Any — вопросы и отрицание.\n\n*Пример:* There isn't any bread. Do you have any questions?\n\n### Формулы\n- `many + countable plural`\n- `much + uncountable`\n- `some (+) / any (?/-)`\n\n### Типичная ошибка\n❌ How many money do you have?\n✅ How much money do you have?",
+      "reading": "**Исчисляемые и неисчисляемые** — Различаем исчисляемые и неисчисляемые существительные, some/any, much/many.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Much / Many\nMany + исчисляемые (many books). Much + неисчисляемые (much time). A lot of — универсально.\n\n### Some / Any\nSome — утверждение. Any — вопросы и отрицание.\n\n### Формулы\n- `many + countable plural`\n- `much + uncountable`\n- `some (+) / any (?/-)`\n\n### Типичная ошибка\n❌ How many money do you have?\n✅ How much money do you have?",
       "keyPoints": [
         "Much / Many: Many + исчисляемые (many books). Much + неисчисляемые (much time). A lot of — ун",
         "Some / Any: Some — утверждение. Any — вопросы и отрицание.",
@@ -16988,10 +17423,10 @@ const CURRICULUM = [
       {
         "question": "What is «much»?",
         "options": [
-          "мало (неисч.)",
+          "много (исч.)",
+          "немного, несколько",
           "много (неисч.)",
-          "мало (исч.)",
-          "немного, несколько"
+          "много"
         ],
         "answer": "много (неисч.)"
       },
@@ -16999,18 +17434,18 @@ const CURRICULUM = [
         "question": "What is «many»?",
         "options": [
           "совет",
-          "деньги",
-          "много (исч.)",
-          "любой, некоторый"
+          "вода",
+          "любой, некоторый",
+          "много (исч.)"
         ],
         "answer": "много (исч.)"
       },
       {
         "question": "What is «some»?",
         "options": [
-          "совет",
-          "вода",
           "немного, несколько",
+          "мало (неисч.)",
+          "много (исч.)",
           "много (неисч.)"
         ],
         "answer": "немного, несколько"
@@ -17018,20 +17453,20 @@ const CURRICULUM = [
       {
         "question": "What is «any»?",
         "options": [
-          "много",
-          "мало (неисч.)",
-          "много (исч.)",
-          "любой, некоторый"
+          "деньги",
+          "немного, несколько",
+          "любой, некоторый",
+          "много"
         ],
         "answer": "любой, некоторый"
       },
       {
         "question": "What is «a lot of»?",
         "options": [
-          "немного, несколько",
-          "мало (неисч.)",
           "много",
-          "совет"
+          "вода",
+          "мало (неисч.)",
+          "немного, несколько"
         ],
         "answer": "много"
       },
@@ -17350,7 +17785,10 @@ const CURRICULUM = [
           "in",
           "on",
           "morning",
-          "night"
+          "night",
+          "weekend",
+          "monday",
+          "january"
         ],
         "mustIncludeAny": [
           [
@@ -17360,11 +17798,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Social media affects how friends communicate."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «at / in / on»."
       },
       {
         "prompt": "What preposition is used?",
@@ -17374,7 +17811,10 @@ const CURRICULUM = [
           "in",
           "on",
           "morning",
-          "night"
+          "night",
+          "weekend",
+          "monday",
+          "january"
         ],
         "mustIncludeAny": [
           [
@@ -17384,11 +17824,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to in and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «at / in / on»."
       },
       {
         "prompt": "What day/month is mentioned?",
@@ -17398,7 +17837,10 @@ const CURRICULUM = [
           "in",
           "on",
           "morning",
-          "night"
+          "night",
+          "weekend",
+          "monday",
+          "january"
         ],
         "mustIncludeAny": [
           [
@@ -17408,11 +17850,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from at / in / on."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «at / in / on»."
       },
       {
         "prompt": "At what time?",
@@ -17422,7 +17863,10 @@ const CURRICULUM = [
           "in",
           "on",
           "morning",
-          "night"
+          "night",
+          "weekend",
+          "monday",
+          "january"
         ],
         "mustIncludeAny": [
           [
@@ -17432,11 +17876,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about morning."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «at / in / on»."
       },
       {
         "prompt": "Is at/in/on correct?",
@@ -17446,7 +17889,10 @@ const CURRICULUM = [
           "in",
           "on",
           "morning",
-          "night"
+          "night",
+          "weekend",
+          "monday",
+          "january"
         ],
         "mustIncludeAny": [
           [
@@ -17456,11 +17902,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to in and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «at / in / on»."
       }
     ],
     "speaking": [
@@ -17546,136 +17991,136 @@ const CURRICULUM = [
       {
         "word": "at",
         "trans": "в (время)",
-        "example": "The meeting is on Friday at 3 pm."
+        "example": "at 8 o'clock"
       },
       {
         "word": "in",
         "trans": "в (месяц/год)",
-        "example": "I study in the evening."
+        "example": "in winter"
       },
       {
         "word": "on",
         "trans": "в (день)",
-        "example": "at 8 o'clock"
+        "example": "on Christmas Day"
       },
       {
         "word": "morning",
         "trans": "утро",
-        "example": "at the moment"
+        "example": "«morning» helped me understand at / in / on."
       },
       {
         "word": "night",
         "trans": "ночь",
-        "example": "in winter"
+        "example": "I often use «night» when I talk about at / in / on."
       },
       {
         "word": "weekend",
         "trans": "выходные",
-        "example": "on Christmas Day"
+        "example": "The teacher wrote «weekend» on the board."
       },
       {
         "word": "Monday",
         "trans": "понедельник",
-        "example": "The meeting is on Friday at 3 pm."
+        "example": "I work on Monday."
       },
       {
         "word": "January",
         "trans": "январь",
-        "example": "I study in the evening."
+        "example": "«January» is a key word in this lesson on at / in / on."
       },
       {
         "word": "birthday",
         "trans": "день рождения",
-        "example": "at 8 o'clock"
+        "example": "I need to remember «birthday» for homework."
       },
       {
         "word": "holiday",
         "trans": "праздник",
-        "example": "at the moment"
+        "example": "I used «holiday» in my written answer."
       },
       {
-        "word": "at",
-        "trans": "в (время)",
-        "example": "in winter"
+        "word": "practice",
+        "trans": "практика",
+        "example": "She asked me about «practice» during practice."
       },
       {
-        "word": "in",
-        "trans": "в (месяц/год)",
-        "example": "on Christmas Day"
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» fits well in a sentence about at / in / on."
       },
       {
-        "word": "on",
-        "trans": "в (день)",
-        "example": "The meeting is on Friday at 3 pm."
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "«sentence» was new for me this week."
       },
       {
-        "word": "morning",
-        "trans": "утро",
-        "example": "I study in the evening."
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "We discussed «grammar» in class today."
       },
       {
-        "word": "night",
-        "trans": "ночь",
-        "example": "at 8 o'clock"
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "He repeated «vocabulary» three times."
       },
       {
-        "word": "weekend",
-        "trans": "выходные",
-        "example": "at the moment"
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "My partner corrected my use of «speaking»."
       },
       {
-        "word": "Monday",
-        "trans": "понедельник",
-        "example": "in winter"
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "My note says «listening» means «аудирование»."
       },
       {
-        "word": "January",
-        "trans": "январь",
-        "example": "on Christmas Day"
+        "word": "writing",
+        "trans": "письмо",
+        "example": "In our dialogue, «writing» appeared twice."
       },
       {
-        "word": "birthday",
-        "trans": "день рождения",
-        "example": "The meeting is on Friday at 3 pm."
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I linked «reading» to other words I know."
       },
       {
-        "word": "holiday",
-        "trans": "праздник",
-        "example": "I study in the evening."
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I heard «homework» in the listening exercise."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "The class starts ___ nine.",
+        "sentence": "at 8 ___",
         "options": [
-          "at",
-          "on"
+          "o'clock",
+          "o'clocks"
         ],
-        "answer": "at"
+        "answer": "o'clock"
       },
       {
-        "sentence": "She was born ___ 1995.",
+        "sentence": "at the ___",
         "options": [
-          "in",
-          "on"
+          "moment",
+          "moments"
         ],
-        "answer": "in"
+        "answer": "moment"
       },
       {
-        "sentence": "We meet ___ Friday.",
+        "sentence": "in ___",
         "options": [
-          "on",
-          "in"
+          "winter",
+          "winters"
         ],
-        "answer": "on"
+        "answer": "winter"
       },
       {
-        "sentence": "I read books ___ the evening.",
+        "sentence": "on ___ Day",
         "options": [
-          "in",
-          "at"
+          "Christmas",
+          "Christma"
         ],
-        "answer": "in"
+        "answer": "Christmas"
       }
     ],
     "theoryCheck": [
@@ -17688,12 +18133,12 @@ const CURRICULUM = [
         "answer": "I work on Monday."
       },
       {
-        "question": "Пример по теме «At / In / On»:",
+        "question": "Какое правило относится к «Другие»?",
         "options": [
-          "The meeting is on Friday at 3 pm.",
-          "I work in Monday."
+          "At the weekend (BrE) / on the weekend (AmE). In the morning. At night.",
+          "At — время: at 7, at night, at noon. In — месяцы, годы, части дня: in May, in 2020. On — дни: on Mon"
         ],
-        "answer": "The meeting is on Friday at 3 pm."
+        "answer": "At the weekend (BrE) / on the weekend (AmE). In the morning. At night."
       },
       {
         "question": "Какая формула относится к «Prepositions of Time»?",
@@ -17707,48 +18152,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "The class starts ______ nine.",
-        "answer": "at",
+        "prompt": "at ______ o'clock",
+        "answer": "nine",
         "altAnswers": [
-          "At",
-          "at"
+          "Nine",
+          "nine"
         ],
-        "hint": "Подсказка: слово из урока «at / in / on»."
+        "hint": "Подсказка: тема «at / in / on»."
       },
       {
         "id": 2,
-        "prompt": "She was born ______ 1995.",
-        "answer": "in",
+        "prompt": "on ______",
+        "answer": "Monday",
         "altAnswers": [
-          "In",
-          "in"
+          "monday",
+          "Monday"
         ],
-        "hint": "Подсказка: слово из урока «at / in / on»."
+        "hint": "Подсказка: тема «at / in / on»."
       },
       {
         "id": 3,
-        "prompt": "We meet ______ Friday.",
-        "answer": "on",
+        "prompt": "in ______",
+        "answer": "January",
         "altAnswers": [
-          "on",
-          "On"
+          "January",
+          "january"
         ],
-        "hint": "Подсказка: слово из урока «at / in / on»."
+        "hint": "Подсказка: тема «at / in / on»."
       },
       {
         "id": 4,
-        "prompt": "I read books ______ the evening.",
-        "answer": "in",
+        "prompt": "at the ______",
+        "answer": "weekend",
         "altAnswers": [
-          "In",
-          "in"
+          "Weekend",
+          "weekend"
         ],
-        "hint": "Подсказка: слово из урока «at / in / on»."
+        "hint": "Подсказка: тема «at / in / on»."
       }
     ],
     "theory": {
       "intro": "Предлоги at, in, on для времени и дат.",
-      "reading": "**Предлоги времени** — Предлоги at, in, on для времени и дат.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### At / In / On\nAt — время: at 7, at night, at noon. In — месяцы, годы, части дня: in May, in 2020. On — дни: on Monday, on my birthday.\n\n*Пример:* The meeting is on Friday at 3 pm.\n\n### Другие\nAt the weekend (BrE) / on the weekend (AmE). In the morning. At night.\n\n*Пример:* I study in the evening.\n\n### Формулы\n- `at + time / at night`\n- `in + month/year/season`\n- `on + day/date`\n\n### Типичная ошибка\n❌ I work in Monday.\n✅ I work on Monday.",
+      "reading": "**Предлоги времени** — Предлоги at, in, on для времени и дат.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### At / In / On\nAt — время: at 7, at night, at noon. In — месяцы, годы, части дня: in May, in 2020. On — дни: on Monday, on my birthday.\n\n### Другие\nAt the weekend (BrE) / on the weekend (AmE). In the morning. At night.\n\n### Формулы\n- `at + time / at night`\n- `in + month/year/season`\n- `on + day/date`\n\n### Типичная ошибка\n❌ I work in Monday.\n✅ I work on Monday.",
       "keyPoints": [
         "At / In / On: At — время: at 7, at night, at noon. In — месяцы, годы, части дня: in May, in 20",
         "Другие: At the weekend (BrE) / on the weekend (AmE). In the morning. At night.",
@@ -17762,39 +18207,39 @@ const CURRICULUM = [
       {
         "question": "What is «at»?",
         "options": [
-          "утро",
-          "выходные",
-          "в (время)",
-          "понедельник"
+          "в (день)",
+          "ночь",
+          "день рождения",
+          "в (время)"
         ],
         "answer": "в (время)"
       },
       {
         "question": "What is «in»?",
         "options": [
-          "в (время)",
+          "утро",
           "в (месяц/год)",
           "январь",
-          "в (день)"
+          "выходные"
         ],
         "answer": "в (месяц/год)"
       },
       {
         "question": "What is «on»?",
         "options": [
-          "праздник",
           "в (день)",
-          "утро",
-          "в (время)"
+          "понедельник",
+          "в (месяц/год)",
+          "день рождения"
         ],
         "answer": "в (день)"
       },
       {
         "question": "What is «morning»?",
         "options": [
-          "январь",
-          "понедельник",
           "выходные",
+          "в (день)",
+          "праздник",
           "утро"
         ],
         "answer": "утро"
@@ -17802,10 +18247,10 @@ const CURRICULUM = [
       {
         "question": "What is «night»?",
         "options": [
-          "утро",
-          "в (время)",
+          "в (месяц/год)",
+          "январь",
           "ночь",
-          "праздник"
+          "выходные"
         ],
         "answer": "ночь"
       },
@@ -18007,15 +18452,7 @@ const CURRICULUM = [
         "is/are + V3",
         "is/are + V3 + by + agent"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "English is spoken here.",
-            "This phone is made in China."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "English is speak here.",
         "right": "English is spoken here."
@@ -18115,7 +18552,10 @@ const CURRICULUM = [
           "made",
           "spoken",
           "built",
-          "written"
+          "written",
+          "used",
+          "grown",
+          "sold"
         ],
         "mustIncludeAny": [
           [
@@ -18125,11 +18565,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from passive voice (present)."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive voice (present)»."
       },
       {
         "prompt": "Where is the product made?",
@@ -18139,7 +18578,10 @@ const CURRICULUM = [
           "made",
           "spoken",
           "built",
-          "written"
+          "written",
+          "used",
+          "grown",
+          "sold"
         ],
         "mustIncludeAny": [
           [
@@ -18149,11 +18591,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Most events occur in an English-speaking country."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive voice (present)»."
       },
       {
         "prompt": "Is the shop opened or closed?",
@@ -18163,7 +18604,10 @@ const CURRICULUM = [
           "made",
           "spoken",
           "built",
-          "written"
+          "written",
+          "used",
+          "grown",
+          "sold"
         ],
         "mustIncludeAny": [
           [
@@ -18173,11 +18617,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on passive voice (present)."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive voice (present)»."
       },
       {
         "prompt": "Who is the book written by?",
@@ -18187,7 +18630,10 @@ const CURRICULUM = [
           "made",
           "spoken",
           "built",
-          "written"
+          "written",
+          "used",
+          "grown",
+          "sold"
         ],
         "mustIncludeAny": [
           [
@@ -18197,11 +18643,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The oldest child is sixteen years old."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive voice (present)»."
       },
       {
         "prompt": "What is grown in the region?",
@@ -18211,7 +18656,10 @@ const CURRICULUM = [
           "made",
           "spoken",
           "built",
-          "written"
+          "written",
+          "used",
+          "grown",
+          "sold"
         ],
         "mustIncludeAny": [
           [
@@ -18221,11 +18669,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from passive voice (present)."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive voice (present)»."
       }
     ],
     "speaking": [
@@ -18311,87 +18758,121 @@ const CURRICULUM = [
       {
         "word": "passive",
         "trans": "пассивный залог",
-        "example": "English is spoken here."
+        "example": "I heard «passive» in the listening exercise."
       },
       {
         "word": "made",
         "trans": "сделанный",
-        "example": "This phone is made in China."
+        "example": "I looked up «made» in the dictionary."
       },
       {
         "word": "spoken",
         "trans": "говоримый",
-        "example": "English is spoken here."
+        "example": "The example with «spoken» was clear."
       },
       {
         "word": "built",
         "trans": "построенный",
-        "example": "This phone is made in China."
+        "example": "Can you make a sentence with «built»?"
       },
       {
         "word": "written",
         "trans": "написанный",
-        "example": "English is spoken here."
+        "example": "«written» helped me understand passive voice (present)."
       },
       {
         "word": "used",
         "trans": "используемый",
-        "example": "This phone is made in China."
+        "example": "I often use «used» when I talk about passive voice (present)."
       },
       {
         "word": "grown",
         "trans": "выращиваемый",
-        "example": "English is spoken here."
+        "example": "The teacher wrote «grown» on the board."
       },
       {
         "word": "sold",
         "trans": "продаваемый",
-        "example": "This phone is made in China."
+        "example": "Let's practise «sold» in a full sentence."
       },
       {
         "word": "opened",
         "trans": "открытый",
-        "example": "English is spoken here."
+        "example": "«opened» is a key word in this lesson on passive voice (present)."
       },
       {
         "word": "called",
         "trans": "называемый",
-        "example": "This phone is made in China."
+        "example": "I need to remember «called» for homework."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "I used «practice» in my written answer."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "She asked me about «review» during practice."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "«sentence» fits well in a sentence about passive voice (present)."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "«grammar» was new for me this week."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "We discussed «vocabulary» in class today."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "He repeated «speaking» three times."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "My partner corrected my use of «listening»."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "My note says «writing» means «письмо»."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "In our dialogue, «reading» appeared twice."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I linked «homework» to other words I know."
       }
     ],
     "id": 25,
     "grammarCheck": [
       {
-        "sentence": "English ___ here.",
+        "sentence": "___ phone is made in China",
         "options": [
-          "is spoken",
-          "is spoke"
+          "This",
+          "Thi"
         ],
-        "answer": "is spoken"
+        "answer": "This"
       },
       {
-        "sentence": "These cars ___ in Germany.",
+        "sentence": "___ is it produced",
         "options": [
-          "are made",
-          "are make"
+          "Where",
+          "Wheres"
         ],
-        "answer": "are made"
-      },
-      {
-        "sentence": "The shop ___ at nine.",
-        "options": [
-          "is opened",
-          "opens"
-        ],
-        "answer": "is opened"
-      },
-      {
-        "sentence": "Rice ___ in Asia.",
-        "options": [
-          "is grown",
-          "is grow"
-        ],
-        "answer": "is grown"
+        "answer": "Where"
       }
     ],
     "theoryCheck": [
@@ -18404,12 +18885,12 @@ const CURRICULUM = [
         "answer": "English is spoken here."
       },
       {
-        "question": "Пример по теме «Form»:",
+        "question": "Какое правило относится к «By-agent»?",
         "options": [
-          "English is spoken here.",
-          "English is speak here."
+          "Add by + person when the agent matters.",
+          "am/is/are + past participle (V3). The focus is on the action or object."
         ],
-        "answer": "English is spoken here."
+        "answer": "Add by + person when the agent matters."
       },
       {
         "question": "Какая формула относится к «Passive Voice (present)»?",
@@ -18423,48 +18904,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "English ______ here.",
-        "answer": "is spoken",
+        "prompt": "It is ______ every day",
+        "answer": "used",
         "altAnswers": [
-          "is spoken",
-          "Is spoken"
+          "Used",
+          "used"
         ],
-        "hint": "Подсказка: слово из урока «Passive voice (present)»."
+        "hint": "Подсказка: тема «Passive voice (present)»."
       },
       {
         "id": 2,
-        "prompt": "These cars ______ in Germany.",
-        "answer": "are made",
+        "prompt": "The ______ is locked",
+        "answer": "door",
         "altAnswers": [
-          "are made",
-          "Are made"
+          "Door",
+          "door"
         ],
-        "hint": "Подсказка: слово из урока «Passive voice (present)»."
+        "hint": "Подсказка: тема «Passive voice (present)»."
       },
       {
         "id": 3,
-        "prompt": "The shop ______ at nine.",
-        "answer": "is opened",
+        "prompt": "The ______ was written by her",
+        "answer": "book",
         "altAnswers": [
-          "Is opened",
-          "is opened"
+          "book",
+          "Book"
         ],
-        "hint": "Подсказка: слово из урока «Passive voice (present)»."
-      },
-      {
-        "id": 4,
-        "prompt": "Rice ______ in Asia.",
-        "answer": "is grown",
-        "altAnswers": [
-          "Is grown",
-          "is grown"
-        ],
-        "hint": "Подсказка: слово из урока «Passive voice (present)»."
+        "hint": "Подсказка: тема «Passive voice (present)»."
       }
     ],
     "theory": {
       "intro": "Describe processes and products with is/are + past participle.",
-      "reading": "**Пассивный залог (введение)** — Describe processes and products with is/are + past participle.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Form\nam/is/are + past participle (V3). The focus is on the action or object.\n\n*Пример:* English is spoken here.\n\n### By-agent\nAdd by + person when the agent matters.\n\n*Пример:* This phone is made in China.\n\n### Формулы\n- `is/are + V3`\n- `is/are + V3 + by + agent`\n\n### Типичная ошибка\n❌ English is speak here.\n✅ English is spoken here.",
+      "reading": "**Пассивный залог (введение)** — Describe processes and products with is/are + past participle.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Form\nam/is/are + past participle (V3). The focus is on the action or object.\n\n### By-agent\nAdd by + person when the agent matters.\n\n### Формулы\n- `is/are + V3`\n- `is/are + V3 + by + agent`\n\n### Типичная ошибка\n❌ English is speak here.\n✅ English is spoken here.",
       "keyPoints": [
         "Form: am/is/are + past participle (V3). The focus is on the action or object.",
         "By-agent: Add by + person when the agent matters.",
@@ -18478,50 +18949,50 @@ const CURRICULUM = [
       {
         "question": "What is «passive»?",
         "options": [
-          "написанный",
-          "говоримый",
-          "используемый",
-          "пассивный залог"
+          "продаваемый",
+          "пассивный залог",
+          "открытый",
+          "построенный"
         ],
         "answer": "пассивный залог"
       },
       {
         "question": "What is «made»?",
         "options": [
-          "используемый",
-          "говоримый",
-          "открытый",
-          "сделанный"
+          "продаваемый",
+          "сделанный",
+          "написанный",
+          "используемый"
         ],
         "answer": "сделанный"
       },
       {
         "question": "What is «spoken»?",
         "options": [
-          "сделанный",
+          "используемый",
           "говоримый",
-          "написанный",
-          "продаваемый"
+          "продаваемый",
+          "написанный"
         ],
         "answer": "говоримый"
       },
       {
         "question": "What is «built»?",
         "options": [
-          "продаваемый",
+          "называемый",
+          "говоримый",
           "построенный",
-          "используемый",
-          "говоримый"
+          "пассивный залог"
         ],
         "answer": "построенный"
       },
       {
         "question": "What is «written»?",
         "options": [
-          "построенный",
-          "выращиваемый",
-          "называемый",
-          "написанный"
+          "пассивный залог",
+          "говоримый",
+          "написанный",
+          "используемый"
         ],
         "answer": "написанный"
       },
@@ -18732,15 +19203,7 @@ const CURRICULUM = [
         "enjoy/finish/avoid + V-ing",
         "want/need/decide + to + V1"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "I enjoy swimming.",
-            "She wants to learn Spanish."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I enjoy to read.",
         "right": "I enjoy reading."
@@ -18840,7 +19303,10 @@ const CURRICULUM = [
           "want",
           "need",
           "decide",
-          "plan"
+          "plan",
+          "avoid",
+          "finish",
+          "hope"
         ],
         "mustIncludeAny": [
           [
@@ -18850,11 +19316,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "She helps her family after school."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Gerunds and infinitives»."
       },
       {
         "prompt": "What does he want to do?",
@@ -18864,7 +19329,10 @@ const CURRICULUM = [
           "want",
           "need",
           "decide",
-          "plan"
+          "plan",
+          "avoid",
+          "finish",
+          "hope"
         ],
         "mustIncludeAny": [
           [
@@ -18874,11 +19342,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "She helps her family after school."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Gerunds and infinitives»."
       },
       {
         "prompt": "Did they finish doing something?",
@@ -18888,7 +19355,10 @@ const CURRICULUM = [
           "want",
           "need",
           "decide",
-          "plan"
+          "plan",
+          "avoid",
+          "finish",
+          "hope"
         ],
         "mustIncludeAny": [
           [
@@ -18898,11 +19368,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to want and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Gerunds and infinitives»."
       },
       {
         "prompt": "What did they decide to do?",
@@ -18912,7 +19381,10 @@ const CURRICULUM = [
           "want",
           "need",
           "decide",
-          "plan"
+          "plan",
+          "avoid",
+          "finish",
+          "hope"
         ],
         "mustIncludeAny": [
           [
@@ -18922,11 +19394,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "She discovers something unexpected in the story."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Gerunds and infinitives»."
       },
       {
         "prompt": "What do they avoid doing?",
@@ -18936,7 +19407,10 @@ const CURRICULUM = [
           "want",
           "need",
           "decide",
-          "plan"
+          "plan",
+          "avoid",
+          "finish",
+          "hope"
         ],
         "mustIncludeAny": [
           [
@@ -18946,11 +19420,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The parents talk about their jobs."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Gerunds and infinitives»."
       }
     ],
     "speaking": [
@@ -19032,87 +19505,129 @@ const CURRICULUM = [
       {
         "word": "enjoy",
         "trans": "наслаждаться",
-        "example": "I enjoy swimming."
+        "example": "I linked «enjoy» to other words I know."
       },
       {
         "word": "want",
         "trans": "хотеть",
-        "example": "She wants to learn Spanish."
+        "example": "I heard «want» in the listening exercise."
       },
       {
         "word": "need",
         "trans": "нуждаться",
-        "example": "I enjoy swimming."
+        "example": "I looked up «need» in the dictionary."
       },
       {
         "word": "decide",
         "trans": "решать",
-        "example": "She wants to learn Spanish."
+        "example": "The example with «decide» was clear."
       },
       {
         "word": "plan",
         "trans": "планировать",
-        "example": "I enjoy swimming."
+        "example": "Can you make a sentence with «plan»?"
       },
       {
         "word": "avoid",
         "trans": "избегать",
-        "example": "She wants to learn Spanish."
+        "example": "«avoid» helped me understand gerunds and infinitives."
       },
       {
         "word": "finish",
         "trans": "заканчивать",
-        "example": "I enjoy swimming."
+        "example": "I often use «finish» when I talk about gerunds and infinitives."
       },
       {
         "word": "hope",
         "trans": "надеяться",
-        "example": "She wants to learn Spanish."
+        "example": "The teacher wrote «hope» on the board."
       },
       {
         "word": "learn",
         "trans": "учиться",
-        "example": "I enjoy swimming."
+        "example": "Let's practise «learn» in a full sentence."
       },
       {
         "word": "promise",
         "trans": "обещать",
-        "example": "She wants to learn Spanish."
+        "example": "«promise» is a key word in this lesson on gerunds and infinitives."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "I need to remember «practice» for homework."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "I used «review» in my written answer."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "She asked me about «sentence» during practice."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "«grammar» fits well in a sentence about gerunds and infinitives."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "«vocabulary» was new for me this week."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "We discussed «speaking» in class today."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "He repeated «listening» three times."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "My partner corrected my use of «writing»."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "My note says «reading» means «чтение»."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "In our dialogue, «homework» appeared twice."
       }
     ],
     "id": 26,
     "grammarCheck": [
       {
-        "sentence": "I enjoy ___ movies.",
+        "sentence": "I ___ reading",
         "options": [
-          "watching",
-          "to watch"
+          "enjoy",
+          "enjoys"
         ],
-        "answer": "watching"
+        "answer": "enjoy"
       },
       {
-        "sentence": "He wants ___ abroad.",
+        "sentence": "I ___ to travel",
         "options": [
-          "to study",
-          "studying"
+          "want",
+          "wants"
         ],
-        "answer": "to study"
+        "answer": "want"
       },
       {
-        "sentence": "She finished ___ her homework.",
+        "sentence": "She ___ to stay",
         "options": [
-          "doing",
-          "to do"
+          "decided",
+          "decideds"
         ],
-        "answer": "doing"
-      },
-      {
-        "sentence": "We decided ___ early.",
-        "options": [
-          "to leave",
-          "leaving"
-        ],
-        "answer": "to leave"
+        "answer": "decided"
       }
     ],
     "theoryCheck": [
@@ -19125,12 +19640,12 @@ const CURRICULUM = [
         "answer": "I enjoy reading."
       },
       {
-        "question": "Пример по теме «Gerund (-ing)»:",
+        "question": "Какое правило относится к «Infinitive (to)»?",
         "options": [
-          "I enjoy swimming.",
-          "I enjoy to read."
+          "After want, need, decide, plan, hope: want to travel.",
+          "After enjoy, finish, avoid, mind: enjoy reading."
         ],
-        "answer": "I enjoy swimming."
+        "answer": "After want, need, decide, plan, hope: want to travel."
       },
       {
         "question": "Какая формула относится к «Gerunds & infinitives»?",
@@ -19144,48 +19659,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I enjoy ______ movies.",
-        "answer": "watching",
+        "prompt": "He ______ cooking",
+        "answer": "finished",
         "altAnswers": [
-          "watching",
-          "Watching"
+          "Finished",
+          "finished"
         ],
-        "hint": "Подсказка: слово из урока «Gerunds and infinitives»."
+        "hint": "Подсказка: тема «Gerunds and infinitives»."
       },
       {
         "id": 2,
-        "prompt": "He wants ______ abroad.",
-        "answer": "to study",
+        "prompt": "We ______ to hurry",
+        "answer": "need",
         "altAnswers": [
-          "to study",
-          "To study"
+          "need",
+          "Need"
         ],
-        "hint": "Подсказка: слово из урока «Gerunds and infinitives»."
+        "hint": "Подсказка: тема «Gerunds and infinitives»."
       },
       {
         "id": 3,
-        "prompt": "She finished ______ her homework.",
-        "answer": "doing",
+        "prompt": "They ______ eating fast food",
+        "answer": "avoid",
         "altAnswers": [
-          "Doing",
-          "doing"
+          "avoid",
+          "Avoid"
         ],
-        "hint": "Подсказка: слово из урока «Gerunds and infinitives»."
-      },
-      {
-        "id": 4,
-        "prompt": "We decided ______ early.",
-        "answer": "to leave",
-        "altAnswers": [
-          "to leave",
-          "To leave"
-        ],
-        "hint": "Подсказка: слово из урока «Gerunds and infinitives»."
+        "hint": "Подсказка: тема «Gerunds and infinitives»."
       }
     ],
     "theory": {
       "intro": "Choose enjoy + -ing vs want to + verb naturally.",
-      "reading": "**Герундий и инфинитив** — Choose enjoy + -ing vs want to + verb naturally.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Gerund (-ing)\nAfter enjoy, finish, avoid, mind: enjoy reading.\n\n*Пример:* I enjoy swimming.\n\n### Infinitive (to)\nAfter want, need, decide, plan, hope: want to travel.\n\n*Пример:* She wants to learn Spanish.\n\n### Формулы\n- `enjoy/finish/avoid + V-ing`\n- `want/need/decide + to + V1`\n\n### Типичная ошибка\n❌ I enjoy to read.\n✅ I enjoy reading.",
+      "reading": "**Герундий и инфинитив** — Choose enjoy + -ing vs want to + verb naturally.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Gerund (-ing)\nAfter enjoy, finish, avoid, mind: enjoy reading.\n\n### Infinitive (to)\nAfter want, need, decide, plan, hope: want to travel.\n\n### Формулы\n- `enjoy/finish/avoid + V-ing`\n- `want/need/decide + to + V1`\n\n### Типичная ошибка\n❌ I enjoy to read.\n✅ I enjoy reading.",
       "keyPoints": [
         "Gerund (-ing): After enjoy, finish, avoid, mind: enjoy reading.",
         "Infinitive (to): After want, need, decide, plan, hope: want to travel.",
@@ -19199,40 +19704,40 @@ const CURRICULUM = [
       {
         "question": "What is «enjoy»?",
         "options": [
-          "наслаждаться",
           "заканчивать",
           "планировать",
-          "надеяться"
+          "наслаждаться",
+          "избегать"
         ],
         "answer": "наслаждаться"
       },
       {
         "question": "What is «want»?",
         "options": [
-          "заканчивать",
-          "нуждаться",
-          "избегать",
-          "хотеть"
+          "надеяться",
+          "хотеть",
+          "обещать",
+          "наслаждаться"
         ],
         "answer": "хотеть"
       },
       {
         "question": "What is «need»?",
         "options": [
+          "надеяться",
+          "решать",
           "нуждаться",
-          "планировать",
-          "наслаждаться",
-          "надеяться"
+          "заканчивать"
         ],
         "answer": "нуждаться"
       },
       {
         "question": "What is «decide»?",
         "options": [
-          "наслаждаться",
-          "обещать",
-          "надеяться",
-          "решать"
+          "избегать",
+          "решать",
+          "заканчивать",
+          "надеяться"
         ],
         "answer": "решать"
       },
@@ -19240,9 +19745,9 @@ const CURRICULUM = [
         "question": "What is «plan»?",
         "options": [
           "нуждаться",
-          "решать",
           "учиться",
-          "планировать"
+          "планировать",
+          "обещать"
         ],
         "answer": "планировать"
       },
@@ -19440,15 +19945,7 @@ const CURRICULUM = [
         "positive clause, negative tag?",
         "negative clause, positive tag?"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "You're tired, aren't you?",
-            "It's cold, isn't it? — Yes, it is."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "You are tired, aren't you?",
         "right": "You're tired, aren't you?"
@@ -19548,7 +20045,10 @@ const CURRICULUM = [
           "positive",
           "negative",
           "agree",
-          "confirm"
+          "confirm",
+          "right",
+          "sure",
+          "exactly"
         ],
         "mustIncludeAny": [
           [
@@ -19558,11 +20058,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about agree."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Question tags»."
       },
       {
         "prompt": "Do they agree or disagree?",
@@ -19572,7 +20071,10 @@ const CURRICULUM = [
           "positive",
           "negative",
           "agree",
-          "confirm"
+          "confirm",
+          "right",
+          "sure",
+          "exactly"
         ],
         "mustIncludeAny": [
           [
@@ -19582,11 +20084,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from question tags."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Question tags»."
       },
       {
         "prompt": "Is the tag positive or negative?",
@@ -19596,7 +20097,10 @@ const CURRICULUM = [
           "positive",
           "negative",
           "agree",
-          "confirm"
+          "confirm",
+          "right",
+          "sure",
+          "exactly"
         ],
         "mustIncludeAny": [
           [
@@ -19606,11 +20110,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on question tags."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Question tags»."
       },
       {
         "prompt": "What auxiliary is in the tag?",
@@ -19620,7 +20123,10 @@ const CURRICULUM = [
           "positive",
           "negative",
           "agree",
-          "confirm"
+          "confirm",
+          "right",
+          "sure",
+          "exactly"
         ],
         "mustIncludeAny": [
           [
@@ -19630,11 +20136,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss question tags in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Question tags»."
       },
       {
         "prompt": "How does the listener reply?",
@@ -19644,7 +20149,10 @@ const CURRICULUM = [
           "positive",
           "negative",
           "agree",
-          "confirm"
+          "confirm",
+          "right",
+          "sure",
+          "exactly"
         ],
         "mustIncludeAny": [
           [
@@ -19654,11 +20162,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to positive and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Question tags»."
       }
     ],
     "speaking": [
@@ -19744,87 +20251,137 @@ const CURRICULUM = [
       {
         "word": "tag",
         "trans": "разделительный вопрос",
-        "example": "You're tired, aren't you?"
+        "example": "In our dialogue, «tag» appeared twice."
       },
       {
         "word": "positive",
         "trans": "положительный",
-        "example": "It's cold, isn't it? — Yes, it is."
+        "example": "I linked «positive» to other words I know."
       },
       {
         "word": "negative",
         "trans": "отрицательный",
-        "example": "You're tired, aren't you?"
+        "example": "I heard «negative» in the listening exercise."
       },
       {
         "word": "agree",
         "trans": "соглашаться",
-        "example": "It's cold, isn't it? — Yes, it is."
+        "example": "I looked up «agree» in the dictionary."
       },
       {
         "word": "confirm",
         "trans": "подтверждать",
-        "example": "You're tired, aren't you?"
+        "example": "The example with «confirm» was clear."
       },
       {
         "word": "right",
         "trans": "верно",
-        "example": "It's cold, isn't it? — Yes, it is."
+        "example": "Can you make a sentence with «right»?"
       },
       {
         "word": "sure",
         "trans": "уверенный",
-        "example": "You're tired, aren't you?"
+        "example": "«sure» helped me understand question tags."
       },
       {
         "word": "exactly",
         "trans": "именно",
-        "example": "It's cold, isn't it? — Yes, it is."
+        "example": "I often use «exactly» when I talk about question tags."
       },
       {
         "word": "actually",
         "trans": "на самом деле",
-        "example": "You're tired, aren't you?"
+        "example": "The teacher wrote «actually» on the board."
       },
       {
         "word": "reply",
         "trans": "отвечать",
-        "example": "It's cold, isn't it? — Yes, it is."
+        "example": "Let's practise «reply» in a full sentence."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» is a key word in this lesson on question tags."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "I need to remember «review» for homework."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I used «sentence» in my written answer."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "She asked me about «grammar» during practice."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "«vocabulary» fits well in a sentence about question tags."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "«speaking» was new for me this week."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "We discussed «listening» in class today."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "He repeated «writing» three times."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "My partner corrected my use of «reading»."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "My note says «homework» means «домашка»."
       }
     ],
     "id": 27,
     "grammarCheck": [
       {
-        "sentence": "She is nice, ___ she?",
+        "sentence": "___ nice, isn't it",
         "options": [
-          "isn't",
-          "doesn't"
+          "It's",
+          "It'"
         ],
-        "answer": "isn't"
+        "answer": "It's"
       },
       {
-        "sentence": "They live here, ___ they?",
+        "sentence": "___ coming, aren't you",
         "options": [
-          "don't",
-          "aren't"
+          "You're",
+          "You'res"
         ],
-        "answer": "don't"
+        "answer": "You're"
       },
       {
-        "sentence": "He can't swim, ___ he?",
+        "sentence": "She ___ know, does she",
+        "options": [
+          "doesn't",
+          "doesn'ts"
+        ],
+        "answer": "doesn't"
+      },
+      {
+        "sentence": "We ___ help, can't we",
         "options": [
           "can",
-          "can he"
+          "cans"
         ],
-        "answer": "can he"
-      },
-      {
-        "sentence": "It was fun, ___ it?",
-        "options": [
-          "wasn't",
-          "didn't"
-        ],
-        "answer": "wasn't"
+        "answer": "can"
       }
     ],
     "theoryCheck": [
@@ -19837,12 +20394,12 @@ const CURRICULUM = [
         "answer": "You're tired, aren't you?"
       },
       {
-        "question": "Пример по теме «Rules»:",
+        "question": "Какое правило относится к «Answers»?",
         "options": [
-          "You're tired, aren't you?",
-          "You are tired, aren't you?"
+          "Yes = you agree. No = you disagree.",
+          "Positive statement → negative tag. Negative statement → positive tag. Use the same auxiliary."
         ],
-        "answer": "You're tired, aren't you?"
+        "answer": "Yes = you agree. No = you disagree."
       },
       {
         "question": "Какая формула относится к «Question tags»?",
@@ -19856,49 +20413,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "She is nice, ______ she?",
-        "answer": "isn't",
+        "prompt": "______ was great, wasn't it",
+        "answer": "That",
         "altAnswers": [
-          "isn't",
-          "Isn't"
+          "that",
+          "That"
         ],
-        "hint": "Подсказка: слово из урока «Question tags»."
+        "hint": "Подсказка: тема «Question tags»."
       },
       {
         "id": 2,
-        "prompt": "They live here, ______ they?",
-        "answer": "don't",
+        "prompt": "You ______ finished, have you you",
+        "answer": "haven't",
         "altAnswers": [
-          "don't",
-          "Don't",
-          "do not"
+          "Haven't",
+          "haven't"
         ],
-        "hint": "Подсказка: слово из урока «Question tags»."
+        "hint": "Подсказка: тема «Question tags»."
       },
       {
         "id": 3,
-        "prompt": "He can't swim, ______ he?",
-        "answer": "can he",
+        "prompt": "______ tired, aren't you",
+        "answer": "You're",
         "altAnswers": [
-          "Can he",
-          "can he"
+          "you're",
+          "You're"
         ],
-        "hint": "Подсказка: слово из урока «Question tags»."
-      },
-      {
-        "id": 4,
-        "prompt": "It was fun, ______ it?",
-        "answer": "wasn't",
-        "altAnswers": [
-          "wasn't",
-          "Wasn't"
-        ],
-        "hint": "Подсказка: слово из урока «Question tags»."
+        "hint": "Подсказка: тема «Question tags»."
       }
     ],
     "theory": {
       "intro": "Confirm information with natural question tags: isn't it?, don't you?",
-      "reading": "**Разделительные вопросы** — Confirm information with natural question tags: isn't it?, don't you?\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Rules\nPositive statement → negative tag. Negative statement → positive tag. Use the same auxiliary.\n\n*Пример:* You're tired, aren't you?\n\n### Answers\nYes = you agree. No = you disagree.\n\n*Пример:* It's cold, isn't it? — Yes, it is.\n\n### Формулы\n- `positive clause, negative tag?`\n- `negative clause, positive tag?`\n\n### Типичная ошибка\n❌ You are tired, aren't you?\n✅ You're tired, aren't you?",
+      "reading": "**Разделительные вопросы** — Confirm information with natural question tags: isn't it?, don't you?\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Rules\nPositive statement → negative tag. Negative statement → positive tag. Use the same auxiliary.\n\n### Answers\nYes = you agree. No = you disagree.\n\n### Формулы\n- `positive clause, negative tag?`\n- `negative clause, positive tag?`\n\n### Типичная ошибка\n❌ You are tired, aren't you?\n✅ You're tired, aren't you?",
       "keyPoints": [
         "Rules: Positive statement → negative tag. Negative statement → positive tag. Use the sa",
         "Answers: Yes = you agree. No = you disagree.",
@@ -19912,20 +20458,20 @@ const CURRICULUM = [
       {
         "question": "What is «tag»?",
         "options": [
+          "отрицательный",
+          "разделительный вопрос",
           "верно",
-          "соглашаться",
-          "именно",
-          "разделительный вопрос"
+          "подтверждать"
         ],
         "answer": "разделительный вопрос"
       },
       {
         "question": "What is «positive»?",
         "options": [
+          "разделительный вопрос",
+          "именно",
           "отвечать",
-          "отрицательный",
-          "положительный",
-          "соглашаться"
+          "положительный"
         ],
         "answer": "положительный"
       },
@@ -19933,29 +20479,29 @@ const CURRICULUM = [
         "question": "What is «negative»?",
         "options": [
           "верно",
-          "соглашаться",
           "отрицательный",
-          "разделительный вопрос"
+          "именно",
+          "уверенный"
         ],
         "answer": "отрицательный"
       },
       {
         "question": "What is «agree»?",
         "options": [
+          "именно",
+          "уверенный",
           "на самом деле",
-          "отрицательный",
-          "соглашаться",
-          "отвечать"
+          "соглашаться"
         ],
         "answer": "соглашаться"
       },
       {
         "question": "What is «confirm»?",
         "options": [
-          "уверенный",
+          "разделительный вопрос",
           "подтверждать",
-          "положительный",
-          "именно"
+          "уверенный",
+          "положительный"
         ],
         "answer": "подтверждать"
       },
@@ -20153,15 +20699,7 @@ const CURRICULUM = [
         "too + adj (+ to V)",
         "adj + enough / enough + noun"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "It's too cold to swim.",
-            "The room is big enough for us."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "He is enough old.",
         "right": "He is old enough."
@@ -20261,7 +20799,10 @@ const CURRICULUM = [
           "enough",
           "big",
           "small",
-          "fast"
+          "fast",
+          "slow",
+          "old",
+          "young"
         ],
         "mustIncludeAny": [
           [
@@ -20271,11 +20812,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on too and enough."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Too and enough»."
       },
       {
         "prompt": "Do they have enough money?",
@@ -20285,7 +20825,10 @@ const CURRICULUM = [
           "enough",
           "big",
           "small",
-          "fast"
+          "fast",
+          "slow",
+          "old",
+          "young"
         ],
         "mustIncludeAny": [
           [
@@ -20295,11 +20838,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to enough and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Too and enough»."
       },
       {
         "prompt": "Is the room big enough?",
@@ -20309,7 +20851,10 @@ const CURRICULUM = [
           "enough",
           "big",
           "small",
-          "fast"
+          "fast",
+          "slow",
+          "old",
+          "young"
         ],
         "mustIncludeAny": [
           [
@@ -20319,11 +20864,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from too and enough."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Too and enough»."
       },
       {
         "prompt": "What is too expensive?",
@@ -20333,7 +20877,10 @@ const CURRICULUM = [
           "enough",
           "big",
           "small",
-          "fast"
+          "fast",
+          "slow",
+          "old",
+          "young"
         ],
         "mustIncludeAny": [
           [
@@ -20343,11 +20890,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about small."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Too and enough»."
       },
       {
         "prompt": "What is too difficult to do?",
@@ -20357,7 +20903,10 @@ const CURRICULUM = [
           "enough",
           "big",
           "small",
-          "fast"
+          "fast",
+          "slow",
+          "old",
+          "young"
         ],
         "mustIncludeAny": [
           [
@@ -20367,11 +20916,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from too and enough."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Too and enough»."
       }
     ],
     "speaking": [
@@ -20461,87 +21009,137 @@ const CURRICULUM = [
       {
         "word": "too",
         "trans": "слишком",
-        "example": "It's too cold to swim."
+        "example": "My note says «too» means «слишком»."
       },
       {
         "word": "enough",
         "trans": "достаточно",
-        "example": "The room is big enough for us."
+        "example": "He is old enough."
       },
       {
         "word": "big",
         "trans": "большой",
-        "example": "It's too cold to swim."
+        "example": "I linked «big» to other words I know."
       },
       {
         "word": "small",
         "trans": "маленький",
-        "example": "The room is big enough for us."
+        "example": "I heard «small» in the listening exercise."
       },
       {
         "word": "fast",
         "trans": "быстрый",
-        "example": "It's too cold to swim."
+        "example": "I looked up «fast» in the dictionary."
       },
       {
         "word": "slow",
         "trans": "медленный",
-        "example": "The room is big enough for us."
+        "example": "The example with «slow» was clear."
       },
       {
         "word": "old",
         "trans": "старый",
-        "example": "It's too cold to swim."
+        "example": "Can you make a sentence with «old»?"
       },
       {
         "word": "young",
         "trans": "молодой",
-        "example": "The room is big enough for us."
+        "example": "«young» helped me understand too and enough."
       },
       {
         "word": "strong",
         "trans": "сильный",
-        "example": "It's too cold to swim."
+        "example": "I often use «strong» when I talk about too and enough."
       },
       {
         "word": "weak",
         "trans": "слабый",
-        "example": "The room is big enough for us."
+        "example": "The teacher wrote «weak» on the board."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "Let's practise «practice» in a full sentence."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» is a key word in this lesson on too and enough."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I need to remember «sentence» for homework."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "I used «grammar» in my written answer."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "She asked me about «vocabulary» during practice."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "«speaking» fits well in a sentence about too and enough."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "«listening» was new for me this week."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "We discussed «writing» in class today."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "He repeated «reading» three times."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "My partner corrected my use of «homework»."
       }
     ],
     "id": 28,
     "grammarCheck": [
       {
-        "sentence": "It's ___ hot to go out.",
+        "sentence": "___ too cold today",
         "options": [
-          "too",
-          "enough"
+          "It's",
+          "It'"
         ],
-        "answer": "too"
+        "answer": "It's"
       },
       {
-        "sentence": "She is old ___ to drive.",
+        "sentence": "___ old enough",
         "options": [
-          "enough",
-          "too"
+          "I'm",
+          "I'ms"
         ],
-        "answer": "enough"
+        "answer": "I'm"
       },
       {
-        "sentence": "We don't have ___ money.",
+        "sentence": "We have enough ___",
         "options": [
-          "enough",
-          "too"
+          "time",
+          "times"
         ],
-        "answer": "enough"
+        "answer": "time"
       },
       {
-        "sentence": "This coffee is ___ strong for me.",
+        "sentence": "___ too late to call",
         "options": [
-          "too",
-          "enough"
+          "It's",
+          "It'"
         ],
-        "answer": "too"
+        "answer": "It's"
       }
     ],
     "theoryCheck": [
@@ -20554,12 +21152,12 @@ const CURRICULUM = [
         "answer": "He is old enough."
       },
       {
-        "question": "Пример по теме «Too»:",
+        "question": "Какое правило относится к «Enough»?",
         "options": [
-          "It's too cold to swim.",
-          "He is enough old."
+          "Adjective + enough / enough + noun.",
+          "Too + adjective (+ to + verb): too expensive to buy."
         ],
-        "answer": "It's too cold to swim."
+        "answer": "Adjective + enough / enough + noun."
       },
       {
         "question": "Какая формула относится к «Too & enough»?",
@@ -20573,48 +21171,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "It's ______ hot to go out.",
-        "answer": "too",
+        "prompt": "Is it ______ enough",
+        "answer": "warm",
         "altAnswers": [
-          "Too",
-          "too"
+          "Warm",
+          "warm"
         ],
-        "hint": "Подсказка: слово из урока «Too and enough»."
+        "hint": "Подсказка: тема «Too and enough»."
       },
       {
         "id": 2,
-        "prompt": "She is old ______ to drive.",
-        "answer": "enough",
+        "prompt": "Is the ______ big enough",
+        "answer": "bag",
         "altAnswers": [
-          "Enough",
-          "enough"
+          "Bag",
+          "bag"
         ],
-        "hint": "Подсказка: слово из урока «Too and enough»."
+        "hint": "Подсказка: тема «Too and enough»."
       },
       {
         "id": 3,
-        "prompt": "We don't have ______ money.",
-        "answer": "enough",
+        "prompt": "He is ______ enough",
+        "answer": "old",
         "altAnswers": [
-          "Enough",
-          "enough"
+          "old",
+          "Old"
         ],
-        "hint": "Подсказка: слово из урока «Too and enough»."
-      },
-      {
-        "id": 4,
-        "prompt": "This coffee is ______ strong for me.",
-        "answer": "too",
-        "altAnswers": [
-          "Too",
-          "too"
-        ],
-        "hint": "Подсказка: слово из урока «Too and enough»."
+        "hint": "Подсказка: тема «Too and enough»."
       }
     ],
     "theory": {
       "intro": "Say when something is excessive or sufficient with too and enough.",
-      "reading": "**Too и enough** — Say when something is excessive or sufficient with too and enough.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Too\nToo + adjective (+ to + verb): too expensive to buy.\n\n*Пример:* It's too cold to swim.\n\n### Enough\nAdjective + enough / enough + noun.\n\n*Пример:* The room is big enough for us.\n\n### Формулы\n- `too + adj (+ to V)`\n- `adj + enough / enough + noun`\n\n### Типичная ошибка\n❌ He is enough old.\n✅ He is old enough.",
+      "reading": "**Too и enough** — Say when something is excessive or sufficient with too and enough.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Too\nToo + adjective (+ to + verb): too expensive to buy.\n\n### Enough\nAdjective + enough / enough + noun.\n\n### Формулы\n- `too + adj (+ to V)`\n- `adj + enough / enough + noun`\n\n### Типичная ошибка\n❌ He is enough old.\n✅ He is old enough.",
       "keyPoints": [
         "Too: Too + adjective (+ to + verb): too expensive to buy.",
         "Enough: Adjective + enough / enough + noun.",
@@ -20628,10 +21216,10 @@ const CURRICULUM = [
       {
         "question": "What is «too»?",
         "options": [
-          "маленький",
-          "медленный",
+          "достаточно",
+          "слабый",
           "слишком",
-          "быстрый"
+          "большой"
         ],
         "answer": "слишком"
       },
@@ -20639,39 +21227,39 @@ const CURRICULUM = [
         "question": "What is «enough»?",
         "options": [
           "слишком",
-          "молодой",
+          "сильный",
           "достаточно",
-          "слабый"
+          "молодой"
         ],
         "answer": "достаточно"
       },
       {
         "question": "What is «big»?",
         "options": [
-          "достаточно",
-          "быстрый",
           "слишком",
-          "большой"
+          "быстрый",
+          "большой",
+          "сильный"
         ],
         "answer": "большой"
       },
       {
         "question": "What is «small»?",
         "options": [
-          "большой",
-          "старый",
           "маленький",
-          "достаточно"
+          "достаточно",
+          "слабый",
+          "медленный"
         ],
         "answer": "маленький"
       },
       {
         "question": "What is «fast»?",
         "options": [
-          "большой",
-          "медленный",
-          "молодой",
-          "быстрый"
+          "слишком",
+          "быстрый",
+          "сильный",
+          "слабый"
         ],
         "answer": "быстрый"
       },
@@ -20869,15 +21457,7 @@ const CURRICULUM = [
         "If + present, will + V1",
         "Unless + present = if not"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "If it rains, I will stay home.",
-            "If she studies, she will pass."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "If it will rain, I stay home.",
         "right": "If it rains, I will stay home."
@@ -20977,7 +21557,10 @@ const CURRICULUM = [
           "will",
           "unless",
           "probably",
-          "possible"
+          "possible",
+          "happen",
+          "miss",
+          "arrive"
         ],
         "mustIncludeAny": [
           [
@@ -20987,11 +21570,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "It is sunny and warm in the scene."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «First conditional»."
       },
       {
         "prompt": "Is the result likely?",
@@ -21001,7 +21583,10 @@ const CURRICULUM = [
           "will",
           "unless",
           "probably",
-          "possible"
+          "possible",
+          "happen",
+          "miss",
+          "arrive"
         ],
         "mustIncludeAny": [
           [
@@ -21011,11 +21596,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from first conditional."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «First conditional»."
       },
       {
         "prompt": "What happens if they miss the bus?",
@@ -21025,7 +21609,10 @@ const CURRICULUM = [
           "will",
           "unless",
           "probably",
-          "possible"
+          "possible",
+          "happen",
+          "miss",
+          "arrive"
         ],
         "mustIncludeAny": [
           [
@@ -21035,11 +21622,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "He learns an important lesson about family."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «First conditional»."
       },
       {
         "prompt": "Does if-clause use present or will?",
@@ -21049,7 +21635,10 @@ const CURRICULUM = [
           "will",
           "unless",
           "probably",
-          "possible"
+          "possible",
+          "happen",
+          "miss",
+          "arrive"
         ],
         "mustIncludeAny": [
           [
@@ -21059,11 +21648,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on first conditional."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «First conditional»."
       },
       {
         "prompt": "What will she do if she passes?",
@@ -21073,7 +21661,10 @@ const CURRICULUM = [
           "will",
           "unless",
           "probably",
-          "possible"
+          "possible",
+          "happen",
+          "miss",
+          "arrive"
         ],
         "mustIncludeAny": [
           [
@@ -21083,11 +21674,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on first conditional."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «First conditional»."
       }
     ],
     "speaking": [
@@ -21169,87 +21759,137 @@ const CURRICULUM = [
       {
         "word": "if",
         "trans": "если",
-        "example": "If it rains, I will stay home."
+        "example": "My partner corrected my use of «if»."
       },
       {
         "word": "will",
         "trans": "буду (future)",
-        "example": "If she studies, she will pass."
+        "example": "My note says «will» means «буду (future)»."
       },
       {
         "word": "unless",
         "trans": "если не",
-        "example": "If it rains, I will stay home."
+        "example": "In our dialogue, «unless» appeared twice."
       },
       {
         "word": "probably",
         "trans": "вероятно",
-        "example": "If she studies, she will pass."
+        "example": "I linked «probably» to other words I know."
       },
       {
         "word": "possible",
         "trans": "возможный",
-        "example": "If it rains, I will stay home."
+        "example": "I heard «possible» in the listening exercise."
       },
       {
         "word": "happen",
         "trans": "происходить",
-        "example": "If she studies, she will pass."
+        "example": "I looked up «happen» in the dictionary."
       },
       {
         "word": "miss",
         "trans": "опоздать, пропустить",
-        "example": "If it rains, I will stay home."
+        "example": "The example with «miss» was clear."
       },
       {
         "word": "arrive",
         "trans": "прибывать",
-        "example": "If she studies, she will pass."
+        "example": "Can you make a sentence with «arrive»?"
       },
       {
         "word": "fail",
         "trans": "провалить",
-        "example": "If it rains, I will stay home."
+        "example": "«fail» helped me understand first conditional."
       },
       {
         "word": "succeed",
         "trans": "преуспеть",
-        "example": "If she studies, she will pass."
+        "example": "I often use «succeed» when I talk about first conditional."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "The teacher wrote «practice» on the board."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "Let's practise «review» in a full sentence."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "«sentence» is a key word in this lesson on first conditional."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "I need to remember «grammar» for homework."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I used «vocabulary» in my written answer."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "She asked me about «speaking» during practice."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "«listening» fits well in a sentence about first conditional."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "«writing» was new for me this week."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "We discussed «reading» in class today."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "He repeated «homework» three times."
       }
     ],
     "id": 29,
     "grammarCheck": [
       {
-        "sentence": "If it ___, we will cancel.",
+        "sentence": "If it rains, ___ stay home",
         "options": [
-          "rains",
-          "will rain"
+          "I'll",
+          "I'lls"
         ],
-        "answer": "rains"
+        "answer": "I'll"
       },
       {
-        "sentence": "She ___ help you if you ask.",
+        "sentence": "If you ___ help, call me",
         "options": [
-          "will",
-          "would"
+          "need",
+          "needs"
         ],
-        "answer": "will"
+        "answer": "need"
       },
       {
-        "sentence": "If they ___, tell me.",
+        "sentence": "___ pass if she studies",
         "options": [
-          "arrive",
-          "will arrive"
+          "She'll",
+          "She'lls"
         ],
-        "answer": "arrive"
+        "answer": "She'll"
       },
       {
-        "sentence": "I will be late if I ___ the bus.",
+        "sentence": "___ will you do if it snows",
         "options": [
-          "miss",
-          "will miss"
+          "What",
+          "Whats"
         ],
-        "answer": "miss"
+        "answer": "What"
       }
     ],
     "theoryCheck": [
@@ -21262,12 +21902,12 @@ const CURRICULUM = [
         "answer": "If it rains, I will stay home."
       },
       {
-        "question": "Пример по теме «Structure»:",
+        "question": "Какое правило относится к «Variations»?",
         "options": [
-          "If it rains, I will stay home.",
-          "If it will rain, I stay home."
+          "Will can go first: I'll call you if I'm late.",
+          "If + present simple, will + verb. Real and likely future."
         ],
-        "answer": "If it rains, I will stay home."
+        "answer": "Will can go first: I'll call you if I'm late."
       },
       {
         "question": "Какая формула относится к «First conditional»?",
@@ -21281,48 +21921,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "If it ______ , we will cancel.",
-        "answer": "rains",
+        "prompt": "______ you hurry, we'll be late",
+        "answer": "Unless",
         "altAnswers": [
-          "rains",
-          "Rains"
+          "unless",
+          "Unless"
         ],
-        "hint": "Подсказка: слово из урока «First conditional»."
+        "hint": "Подсказка: тема «First conditional»."
       },
       {
         "id": 2,
-        "prompt": "She ______ help you if you ask.",
-        "answer": "will",
+        "prompt": "If he ______ he will pass",
+        "answer": "studies",
         "altAnswers": [
-          "Will",
-          "will"
+          "Studies",
+          "studies"
         ],
-        "hint": "Подсказка: слово из урока «First conditional»."
+        "hint": "Подсказка: тема «First conditional»."
       },
       {
         "id": 3,
-        "prompt": "If they ______ , tell me.",
-        "answer": "arrive",
+        "prompt": "If it rains, I will ______ home",
+        "answer": "stay",
         "altAnswers": [
-          "arrive",
-          "Arrive"
+          "Stay",
+          "stay"
         ],
-        "hint": "Подсказка: слово из урока «First conditional»."
-      },
-      {
-        "id": 4,
-        "prompt": "I will be late if I ______ the bus.",
-        "answer": "miss",
-        "altAnswers": [
-          "miss",
-          "Miss"
-        ],
-        "hint": "Подсказка: слово из урока «First conditional»."
+        "hint": "Подсказка: тема «First conditional»."
       }
     ],
     "theory": {
       "intro": "Talk about real future possibilities with If + present, will.",
-      "reading": "**First conditional** — Talk about real future possibilities with If + present, will.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Structure\nIf + present simple, will + verb. Real and likely future.\n\n*Пример:* If it rains, I will stay home.\n\n### Variations\nWill can go first: I'll call you if I'm late.\n\n*Пример:* If she studies, she will pass.\n\n### Формулы\n- `If + present, will + V1`\n- `Unless + present = if not`\n\n### Типичная ошибка\n❌ If it will rain, I stay home.\n✅ If it rains, I will stay home.",
+      "reading": "**First conditional** — Talk about real future possibilities with If + present, will.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Structure\nIf + present simple, will + verb. Real and likely future.\n\n### Variations\nWill can go first: I'll call you if I'm late.\n\n### Формулы\n- `If + present, will + V1`\n- `Unless + present = if not`\n\n### Типичная ошибка\n❌ If it will rain, I stay home.\n✅ If it rains, I will stay home.",
       "keyPoints": [
         "Structure: If + present simple, will + verb. Real and likely future.",
         "Variations: Will can go first: I'll call you if I'm late.",
@@ -21336,50 +21966,50 @@ const CURRICULUM = [
       {
         "question": "What is «if»?",
         "options": [
+          "провалить",
           "если не",
-          "преуспеть",
-          "если",
-          "провалить"
+          "происходить",
+          "если"
         ],
         "answer": "если"
       },
       {
         "question": "What is «will»?",
         "options": [
-          "опоздать, пропустить",
           "буду (future)",
-          "возможный",
-          "провалить"
+          "происходить",
+          "преуспеть",
+          "если"
         ],
         "answer": "буду (future)"
       },
       {
         "question": "What is «unless»?",
         "options": [
-          "прибывать",
-          "преуспеть",
+          "вероятно",
           "если не",
-          "происходить"
+          "преуспеть",
+          "опоздать, пропустить"
         ],
         "answer": "если не"
       },
       {
         "question": "What is «probably»?",
         "options": [
-          "преуспеть",
-          "происходить",
+          "опоздать, пропустить",
           "вероятно",
-          "опоздать, пропустить"
+          "если",
+          "прибывать"
         ],
         "answer": "вероятно"
       },
       {
         "question": "What is «possible»?",
         "options": [
-          "если не",
           "возможный",
-          "преуспеть",
-          "опоздать, пропустить"
+          "вероятно",
+          "если",
+          "прибывать"
         ],
         "answer": "возможный"
       },
@@ -21572,15 +22202,7 @@ const CURRICULUM = [
         "used to + V1 (past habit)",
         "didn't use to + V1"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "I used to play football every day.",
-            "I didn't use to like coffee."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I use to live here.",
         "right": "I used to live here."
@@ -21680,7 +22302,10 @@ const CURRICULUM = [
           "childhood",
           "habit",
           "past",
-          "now"
+          "now",
+          "change",
+          "remember",
+          "forget"
         ],
         "mustIncludeAny": [
           [
@@ -21690,11 +22315,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The main character faces a difficult choice."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Used to»."
       },
       {
         "prompt": "Where did they use to live?",
@@ -21704,7 +22328,10 @@ const CURRICULUM = [
           "childhood",
           "habit",
           "past",
-          "now"
+          "now",
+          "change",
+          "remember",
+          "forget"
         ],
         "mustIncludeAny": [
           [
@@ -21714,11 +22341,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The action happens at home and at school."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Used to»."
       },
       {
         "prompt": "What didn't they use to like?",
@@ -21728,7 +22354,10 @@ const CURRICULUM = [
           "childhood",
           "habit",
           "past",
-          "now"
+          "now",
+          "change",
+          "remember",
+          "forget"
         ],
         "mustIncludeAny": [
           [
@@ -21738,11 +22367,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "He learns an important lesson about family."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Used to»."
       },
       {
         "prompt": "Do they still do it now?",
@@ -21752,7 +22380,10 @@ const CURRICULUM = [
           "childhood",
           "habit",
           "past",
-          "now"
+          "now",
+          "change",
+          "remember",
+          "forget"
         ],
         "mustIncludeAny": [
           [
@@ -21762,11 +22393,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to childhood and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Used to»."
       },
       {
         "prompt": "What changed?",
@@ -21776,7 +22406,10 @@ const CURRICULUM = [
           "childhood",
           "habit",
           "past",
-          "now"
+          "now",
+          "change",
+          "remember",
+          "forget"
         ],
         "mustIncludeAny": [
           [
@@ -21786,11 +22419,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about past."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Used to»."
       }
     ],
     "speaking": [
@@ -21880,87 +22512,129 @@ const CURRICULUM = [
       {
         "word": "used to",
         "trans": "раньше (привычка)",
-        "example": "I used to play football every day."
+        "example": "He repeated «used to» three times."
       },
       {
         "word": "childhood",
         "trans": "детство",
-        "example": "I didn't use to like coffee."
+        "example": "My partner corrected my use of «childhood»."
       },
       {
         "word": "habit",
         "trans": "привычка",
-        "example": "I used to play football every day."
+        "example": "My note says «habit» means «привычка»."
       },
       {
         "word": "past",
         "trans": "прошлое",
-        "example": "I didn't use to like coffee."
+        "example": "In our dialogue, «past» appeared twice."
       },
       {
         "word": "now",
         "trans": "сейчас",
-        "example": "I used to play football every day."
+        "example": "I linked «now» to other words I know."
       },
       {
         "word": "change",
         "trans": "изменение",
-        "example": "I didn't use to like coffee."
+        "example": "I heard «change» in the listening exercise."
       },
       {
         "word": "remember",
         "trans": "помнить",
-        "example": "I used to play football every day."
+        "example": "I looked up «remember» in the dictionary."
       },
       {
         "word": "forget",
         "trans": "забывать",
-        "example": "I didn't use to like coffee."
+        "example": "The example with «forget» was clear."
       },
       {
         "word": "move",
         "trans": "переезжать",
-        "example": "I used to play football every day."
+        "example": "Can you make a sentence with «move»?"
       },
       {
         "word": "grow up",
         "trans": "вырастать",
-        "example": "I didn't use to like coffee."
+        "example": "«grow up» helped me understand used to."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "I often use «practice» when I talk about used to."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "The teacher wrote «review» on the board."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "Let's practise «sentence» in a full sentence."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "«grammar» is a key word in this lesson on used to."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I need to remember «vocabulary» for homework."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I used «speaking» in my written answer."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "She asked me about «listening» during practice."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "«writing» fits well in a sentence about used to."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "«reading» was new for me this week."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "We discussed «homework» in class today."
       }
     ],
     "id": 30,
     "grammarCheck": [
       {
-        "sentence": "I ___ to live in the country.",
+        "sentence": "I used to ___ here",
         "options": [
-          "used",
-          "use"
+          "live",
+          "lives"
         ],
-        "answer": "used"
+        "answer": "live"
       },
       {
-        "sentence": "She didn't ___ to eat fish.",
+        "sentence": "Did you use to ___ piano",
         "options": [
-          "use",
-          "used"
+          "play",
+          "plays"
         ],
-        "answer": "use"
+        "answer": "play"
       },
       {
-        "sentence": "___ you use to have long hair?",
+        "sentence": "I ___ use to like it",
         "options": [
-          "Did",
-          "Do"
+          "didn't",
+          "didn'ts"
         ],
-        "answer": "Did"
-      },
-      {
-        "sentence": "We ___ to walk to school.",
-        "options": [
-          "used",
-          "use"
-        ],
-        "answer": "used"
+        "answer": "didn't"
       }
     ],
     "theoryCheck": [
@@ -21973,12 +22647,12 @@ const CURRICULUM = [
         "answer": "I used to live here."
       },
       {
-        "question": "Пример по теме «Past habits»:",
+        "question": "Какое правило относится к «Negative & questions»?",
         "options": [
-          "I used to play football every day.",
-          "I use to live here."
+          "Didn't use to / Did you use to…?",
+          "Used to + verb for repeated past actions, not now."
         ],
-        "answer": "I used to play football every day."
+        "answer": "Didn't use to / Did you use to…?"
       },
       {
         "question": "Какая формула относится к «Used to»?",
@@ -21992,48 +22666,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I ______ to live in the country.",
-        "answer": "used",
+        "prompt": "She used to have ______ hair",
+        "answer": "long",
         "altAnswers": [
-          "used",
-          "Used"
+          "Long",
+          "long"
         ],
-        "hint": "Подсказка: слово из урока «Used to»."
+        "hint": "Подсказка: тема «Used to»."
       },
       {
         "id": 2,
-        "prompt": "She didn't ______ to eat fish.",
-        "answer": "use",
+        "prompt": "We used to be ______",
+        "answer": "neighbours",
         "altAnswers": [
-          "Use",
-          "use"
+          "Neighbours",
+          "neighbours"
         ],
-        "hint": "Подсказка: слово из урока «Used to»."
+        "hint": "Подсказка: тема «Used to»."
       },
       {
         "id": 3,
-        "prompt": "______ you use to have long hair?",
-        "answer": "Did",
+        "prompt": "He used to be ______",
+        "answer": "shy",
         "altAnswers": [
-          "Did",
-          "did"
+          "shy",
+          "Shy"
         ],
-        "hint": "Подсказка: слово из урока «Used to»."
-      },
-      {
-        "id": 4,
-        "prompt": "We ______ to walk to school.",
-        "answer": "used",
-        "altAnswers": [
-          "used",
-          "Used"
-        ],
-        "hint": "Подсказка: слово из урока «Used to»."
+        "hint": "Подсказка: тема «Used to»."
       }
     ],
     "theory": {
       "intro": "Talk about past habits and states that are no longer true.",
-      "reading": "**Used to** — Talk about past habits and states that are no longer true.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Past habits\nUsed to + verb for repeated past actions, not now.\n\n*Пример:* I used to play football every day.\n\n### Negative & questions\nDidn't use to / Did you use to…?\n\n*Пример:* I didn't use to like coffee.\n\n### Формулы\n- `used to + V1 (past habit)`\n- `didn't use to + V1`\n\n### Типичная ошибка\n❌ I use to live here.\n✅ I used to live here.",
+      "reading": "**Used to** — Talk about past habits and states that are no longer true.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Past habits\nUsed to + verb for repeated past actions, not now.\n\n### Negative & questions\nDidn't use to / Did you use to…?\n\n### Формулы\n- `used to + V1 (past habit)`\n- `didn't use to + V1`\n\n### Типичная ошибка\n❌ I use to live here.\n✅ I used to live here.",
       "keyPoints": [
         "Past habits: Used to + verb for repeated past actions, not now.",
         "Negative & questions: Didn't use to / Did you use to…?",
@@ -22047,50 +22711,50 @@ const CURRICULUM = [
       {
         "question": "What is «used to»?",
         "options": [
-          "детство",
+          "сейчас",
+          "помнить",
           "раньше (привычка)",
-          "прошлое",
-          "изменение"
+          "детство"
         ],
         "answer": "раньше (привычка)"
       },
       {
         "question": "What is «childhood»?",
         "options": [
-          "переезжать",
-          "сейчас",
           "детство",
-          "привычка"
+          "раньше (привычка)",
+          "привычка",
+          "сейчас"
         ],
         "answer": "детство"
       },
       {
         "question": "What is «habit»?",
         "options": [
-          "вырастать",
-          "раньше (привычка)",
-          "помнить",
-          "привычка"
+          "изменение",
+          "детство",
+          "привычка",
+          "сейчас"
         ],
         "answer": "привычка"
       },
       {
         "question": "What is «past»?",
         "options": [
-          "забывать",
           "вырастать",
           "прошлое",
-          "переезжать"
+          "переезжать",
+          "сейчас"
         ],
         "answer": "прошлое"
       },
       {
         "question": "What is «now»?",
         "options": [
+          "переезжать",
           "сейчас",
           "прошлое",
-          "изменение",
-          "забывать"
+          "детство"
         ],
         "answer": "сейчас"
       },
@@ -22288,15 +22952,7 @@ const CURRICULUM = [
         "subject + verb + reflexive",
         "by + reflexive = alone"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "He hurt himself playing football.",
-            "I made this cake myself."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "She looked at her in the mirror.",
         "right": "She looked at herself in the mirror."
@@ -22396,7 +23052,10 @@ const CURRICULUM = [
           "yourself",
           "himself",
           "herself",
-          "itself"
+          "itself",
+          "ourselves",
+          "themselves",
+          "alone"
         ],
         "mustIncludeAny": [
           [
@@ -22406,11 +23065,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The main character is a young student."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Reflexive pronouns»."
       },
       {
         "prompt": "Do they live by themselves?",
@@ -22420,7 +23078,10 @@ const CURRICULUM = [
           "yourself",
           "himself",
           "herself",
-          "itself"
+          "itself",
+          "ourselves",
+          "themselves",
+          "alone"
         ],
         "mustIncludeAny": [
           [
@@ -22430,11 +23091,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to yourself and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Reflexive pronouns»."
       },
       {
         "prompt": "What did she teach herself?",
@@ -22444,7 +23104,10 @@ const CURRICULUM = [
           "yourself",
           "himself",
           "herself",
-          "itself"
+          "itself",
+          "ourselves",
+          "themselves",
+          "alone"
         ],
         "mustIncludeAny": [
           [
@@ -22454,11 +23117,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "He learns an important lesson about family."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Reflexive pronouns»."
       },
       {
         "prompt": "Do they help each other?",
@@ -22468,7 +23130,10 @@ const CURRICULUM = [
           "yourself",
           "himself",
           "herself",
-          "itself"
+          "itself",
+          "ourselves",
+          "themselves",
+          "alone"
         ],
         "mustIncludeAny": [
           [
@@ -22478,11 +23143,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss reflexive pronouns in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Reflexive pronouns»."
       },
       {
         "prompt": "Is myself used correctly?",
@@ -22492,7 +23156,10 @@ const CURRICULUM = [
           "yourself",
           "himself",
           "herself",
-          "itself"
+          "itself",
+          "ourselves",
+          "themselves",
+          "alone"
         ],
         "mustIncludeAny": [
           [
@@ -22502,11 +23169,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to yourself and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Reflexive pronouns»."
       }
     ],
     "speaking": [
@@ -22592,87 +23258,129 @@ const CURRICULUM = [
       {
         "word": "myself",
         "trans": "сам(а)",
-        "example": "He hurt himself playing football."
+        "example": "We discussed «myself» in class today."
       },
       {
         "word": "yourself",
         "trans": "сам(и)",
-        "example": "I made this cake myself."
+        "example": "He repeated «yourself» three times."
       },
       {
         "word": "himself",
         "trans": "сам",
-        "example": "He hurt himself playing football."
+        "example": "My partner corrected my use of «himself»."
       },
       {
         "word": "herself",
         "trans": "сама",
-        "example": "I made this cake myself."
+        "example": "She looked at herself in the mirror."
       },
       {
         "word": "itself",
         "trans": "само",
-        "example": "He hurt himself playing football."
+        "example": "In our dialogue, «itself» appeared twice."
       },
       {
         "word": "ourselves",
         "trans": "сами",
-        "example": "I made this cake myself."
+        "example": "I linked «ourselves» to other words I know."
       },
       {
         "word": "themselves",
         "trans": "сами",
-        "example": "He hurt himself playing football."
+        "example": "I heard «themselves» in the listening exercise."
       },
       {
         "word": "alone",
         "trans": "один",
-        "example": "I made this cake myself."
+        "example": "I looked up «alone» in the dictionary."
       },
       {
         "word": "by yourself",
         "trans": "самостоятельно",
-        "example": "He hurt himself playing football."
+        "example": "The example with «by yourself» was clear."
       },
       {
         "word": "each other",
         "trans": "друг друга",
-        "example": "I made this cake myself."
+        "example": "Can you make a sentence with «each other»?"
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» helped me understand reflexive pronouns."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "I often use «review» when I talk about reflexive pronouns."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "The teacher wrote «sentence» on the board."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "Let's practise «grammar» in a full sentence."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "«vocabulary» is a key word in this lesson on reflexive pronouns."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I need to remember «speaking» for homework."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I used «listening» in my written answer."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "She asked me about «writing» during practice."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "«reading» fits well in a sentence about reflexive pronouns."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "«homework» was new for me this week."
       }
     ],
     "id": 31,
     "grammarCheck": [
       {
-        "sentence": "I cut ___ cooking.",
+        "sentence": "I ___ myself",
         "options": [
-          "myself",
-          "me"
+          "hurt",
+          "hurts"
         ],
-        "answer": "myself"
+        "answer": "hurt"
       },
       {
-        "sentence": "They enjoyed ___ at the party.",
+        "sentence": "I ___ by myself",
         "options": [
-          "themselves",
-          "them"
+          "live",
+          "lives"
         ],
-        "answer": "themselves"
+        "answer": "live"
       },
       {
-        "sentence": "She lives by ___.",
+        "sentence": "___ yourself",
         "options": [
-          "herself",
-          "her"
+          "Enjoy",
+          "Enjoys"
         ],
-        "answer": "herself"
-      },
-      {
-        "sentence": "We should be proud of ___.",
-        "options": [
-          "ourselves",
-          "us"
-        ],
-        "answer": "ourselves"
+        "answer": "Enjoy"
       }
     ],
     "theoryCheck": [
@@ -22685,12 +23393,12 @@ const CURRICULUM = [
         "answer": "She looked at herself in the mirror."
       },
       {
-        "question": "Пример по теме «Reflexive»:",
+        "question": "Какое правило относится к «By myself»?",
         "options": [
-          "He hurt himself playing football.",
-          "She looked at her in the mirror."
+          "Alone / without help: I live by myself.",
+          "Subject = object: I cut myself. She taught herself."
         ],
-        "answer": "He hurt himself playing football."
+        "answer": "Alone / without help: I live by myself."
       },
       {
         "question": "Какая формула относится к «Reflexive pronouns»?",
@@ -22704,48 +23412,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I cut ______ cooking.",
-        "answer": "myself",
+        "prompt": "They ______ each other",
+        "answer": "help",
         "altAnswers": [
-          "Myself",
-          "myself"
+          "Help",
+          "help"
         ],
-        "hint": "Подсказка: слово из урока «Reflexive pronouns»."
+        "hint": "Подсказка: тема «Reflexive pronouns»."
       },
       {
         "id": 2,
-        "prompt": "They enjoyed ______ at the party.",
-        "answer": "themselves",
+        "prompt": "Did you ______ yourself",
+        "answer": "hurt",
         "altAnswers": [
-          "themselves",
-          "Themselves"
+          "Hurt",
+          "hurt"
         ],
-        "hint": "Подсказка: слово из урока «Reflexive pronouns»."
+        "hint": "Подсказка: тема «Reflexive pronouns»."
       },
       {
         "id": 3,
-        "prompt": "She lives by ______ .",
-        "answer": "herself",
+        "prompt": "She ______ at herself in the mirror",
+        "answer": "looked",
         "altAnswers": [
-          "Herself",
-          "herself"
+          "looked",
+          "Looked"
         ],
-        "hint": "Подсказка: слово из урока «Reflexive pronouns»."
-      },
-      {
-        "id": 4,
-        "prompt": "We should be proud of ______ .",
-        "answer": "ourselves",
-        "altAnswers": [
-          "Ourselves",
-          "ourselves"
-        ],
-        "hint": "Подсказка: слово из урока «Reflexive pronouns»."
+        "hint": "Подсказка: тема «Reflexive pronouns»."
       }
     ],
     "theory": {
       "intro": "Use myself, yourself, himself when subject and object are the same.",
-      "reading": "**Возвратные местоимения** — Use myself, yourself, himself when subject and object are the same.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Reflexive\nSubject = object: I cut myself. She taught herself.\n\n*Пример:* He hurt himself playing football.\n\n### By myself\nAlone / without help: I live by myself.\n\n*Пример:* I made this cake myself.\n\n### Формулы\n- `subject + verb + reflexive`\n- `by + reflexive = alone`\n\n### Типичная ошибка\n❌ She looked at her in the mirror.\n✅ She looked at herself in the mirror.",
+      "reading": "**Возвратные местоимения** — Use myself, yourself, himself when subject and object are the same.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Reflexive\nSubject = object: I cut myself. She taught herself.\n\n### By myself\nAlone / without help: I live by myself.\n\n### Формулы\n- `subject + verb + reflexive`\n- `by + reflexive = alone`\n\n### Типичная ошибка\n❌ She looked at her in the mirror.\n✅ She looked at herself in the mirror.",
       "keyPoints": [
         "Reflexive: Subject = object: I cut myself. She taught herself.",
         "By myself: Alone / without help: I live by myself.",
@@ -22759,10 +23457,10 @@ const CURRICULUM = [
       {
         "question": "What is «myself»?",
         "options": [
-          "один",
           "друг друга",
-          "сам(а)",
-          "сам"
+          "один",
+          "сам(и)",
+          "сам(а)"
         ],
         "answer": "сам(а)"
       },
@@ -22770,37 +23468,38 @@ const CURRICULUM = [
         "question": "What is «yourself»?",
         "options": [
           "сам(и)",
-          "один",
-          "сами"
+          "сами",
+          "самостоятельно",
+          "сам"
         ],
         "answer": "сам(и)"
       },
       {
         "question": "What is «himself»?",
         "options": [
+          "сами",
           "сама",
-          "сам",
-          "сам(и)",
-          "один"
+          "сам(а)",
+          "сам"
         ],
         "answer": "сам"
       },
       {
         "question": "What is «herself»?",
         "options": [
-          "один",
+          "сам",
           "друг друга",
           "сама",
-          "само"
+          "сами"
         ],
         "answer": "сама"
       },
       {
         "question": "What is «itself»?",
         "options": [
-          "сами",
-          "сам(и)",
-          "само"
+          "сам(а)",
+          "само",
+          "сами"
         ],
         "answer": "само"
       },
@@ -23006,15 +23705,7 @@ const CURRICULUM = [
         "I have a reservation for…",
         "Could I have + service?"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "I have a reservation for two nights.",
-            "Could I have a wake-up call at seven?"
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I have reservation.",
         "right": "I have a reservation."
@@ -23114,7 +23805,10 @@ const CURRICULUM = [
           "booking",
           "check in",
           "check out",
-          "room"
+          "room",
+          "reception",
+          "luggage",
+          "passport"
         ],
         "mustIncludeAny": [
           [
@@ -23124,11 +23818,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about check out."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Travel and hotels»."
       },
       {
         "prompt": "What time is check-in?",
@@ -23138,7 +23831,10 @@ const CURRICULUM = [
           "booking",
           "check in",
           "check out",
-          "room"
+          "room",
+          "reception",
+          "luggage",
+          "passport"
         ],
         "mustIncludeAny": [
           [
@@ -23148,11 +23844,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about check out."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Travel and hotels»."
       },
       {
         "prompt": "What service do they request?",
@@ -23162,7 +23857,10 @@ const CURRICULUM = [
           "booking",
           "check in",
           "check out",
-          "room"
+          "room",
+          "reception",
+          "luggage",
+          "passport"
         ],
         "mustIncludeAny": [
           [
@@ -23172,11 +23870,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from travel and hotels."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Travel and hotels»."
       },
       {
         "prompt": "Where is the reception?",
@@ -23186,7 +23883,10 @@ const CURRICULUM = [
           "booking",
           "check in",
           "check out",
-          "room"
+          "room",
+          "reception",
+          "luggage",
+          "passport"
         ],
         "mustIncludeAny": [
           [
@@ -23196,11 +23896,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They live in the city centre."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Travel and hotels»."
       },
       {
         "prompt": "What room type do they book?",
@@ -23210,7 +23909,10 @@ const CURRICULUM = [
           "booking",
           "check in",
           "check out",
-          "room"
+          "room",
+          "reception",
+          "luggage",
+          "passport"
         ],
         "mustIncludeAny": [
           [
@@ -23220,11 +23922,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss travel and hotels in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Travel and hotels»."
       }
     ],
     "speaking": [
@@ -23310,87 +24011,121 @@ const CURRICULUM = [
       {
         "word": "reservation",
         "trans": "бронирование",
-        "example": "I have a reservation for two nights."
+        "example": "«reservation» was new for me this week."
       },
       {
         "word": "booking",
         "trans": "бронь",
-        "example": "Could I have a wake-up call at seven?"
+        "example": "We discussed «booking» in class today."
       },
       {
         "word": "check in",
         "trans": "регистрироваться",
-        "example": "I have a reservation for two nights."
+        "example": "He repeated «check in» three times."
       },
       {
         "word": "check out",
         "trans": "выезжать",
-        "example": "Could I have a wake-up call at seven?"
+        "example": "My partner corrected my use of «check out»."
       },
       {
         "word": "room",
         "trans": "номер",
-        "example": "I have a reservation for two nights."
+        "example": "My note says «room» means «номер»."
       },
       {
         "word": "reception",
         "trans": "ресепшен",
-        "example": "Could I have a wake-up call at seven?"
+        "example": "In our dialogue, «reception» appeared twice."
       },
       {
         "word": "luggage",
         "trans": "багаж",
-        "example": "I have a reservation for two nights."
+        "example": "I linked «luggage» to other words I know."
       },
       {
         "word": "passport",
         "trans": "паспорт",
-        "example": "Could I have a wake-up call at seven?"
+        "example": "I heard «passport» in the listening exercise."
       },
       {
         "word": "flight",
         "trans": "рейс",
-        "example": "I have a reservation for two nights."
+        "example": "I looked up «flight» in the dictionary."
       },
       {
         "word": "single",
         "trans": "одноместный",
-        "example": "Could I have a wake-up call at seven?"
+        "example": "The example with «single» was clear."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "Can you make a sentence with «practice»?"
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» helped me understand travel and hotels."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I often use «sentence» when I talk about travel and hotels."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "The teacher wrote «grammar» on the board."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "Let's practise «vocabulary» in a full sentence."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "«speaking» is a key word in this lesson on travel and hotels."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I need to remember «listening» for homework."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I used «writing» in my written answer."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "She asked me about «reading» during practice."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "«homework» fits well in a sentence about travel and hotels."
       }
     ],
     "id": 32,
     "grammarCheck": [
       {
-        "sentence": "I have a ___ for two nights.",
+        "sentence": "___ like to check in",
         "options": [
-          "reservation",
-          "reserve"
+          "I'd",
+          "I'ds"
         ],
-        "answer": "reservation"
+        "answer": "I'd"
       },
       {
-        "sentence": "We need to ___ in at three.",
+        "sentence": "___ I have a wake-up call",
         "options": [
-          "check",
-          "checking"
+          "Could",
+          "Coulds"
         ],
-        "answer": "check"
-      },
-      {
-        "sentence": "Could I have a ___ call at seven?",
-        "options": [
-          "wake-up",
-          "waking"
-        ],
-        "answer": "wake-up"
-      },
-      {
-        "sentence": "My ___ is at gate twelve.",
-        "options": [
-          "flight",
-          "fly"
-        ],
-        "answer": "flight"
+        "answer": "Could"
       }
     ],
     "theoryCheck": [
@@ -23403,12 +24138,12 @@ const CURRICULUM = [
         "answer": "I have a reservation."
       },
       {
-        "question": "Пример по теме «Booking»:",
+        "question": "Какое правило относится к «At the hotel»?",
         "options": [
-          "I have a reservation for two nights.",
-          "I have reservation."
+          "Check in/out. Could I have…? Wake-up call.",
+          "I'd like to book a room. I have a reservation."
         ],
-        "answer": "I have a reservation for two nights."
+        "answer": "Check in/out. Could I have…? Wake-up call."
       },
       {
         "question": "Какая формула относится к «Travel & hotels»?",
@@ -23422,48 +24157,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I have a ______ for two nights.",
-        "answer": "reservation",
+        "prompt": "______ time is checkout",
+        "answer": "What",
         "altAnswers": [
-          "reservation",
-          "Reservation"
+          "what",
+          "What"
         ],
-        "hint": "Подсказка: слово из урока «Travel and hotels»."
+        "hint": "Подсказка: тема «Travel and hotels»."
       },
       {
         "id": 2,
-        "prompt": "We need to ______ in at three.",
-        "answer": "check",
+        "prompt": "______ is the reception",
+        "answer": "Where",
         "altAnswers": [
-          "Check",
-          "check"
+          "Where",
+          "where"
         ],
-        "hint": "Подсказка: слово из урока «Travel and hotels»."
+        "hint": "Подсказка: тема «Travel and hotels»."
       },
       {
         "id": 3,
-        "prompt": "Could I have a ______ call at seven?",
-        "answer": "wake-up",
+        "prompt": "A ______ room, please",
+        "answer": "double",
         "altAnswers": [
-          "wake-up",
-          "Wake-up"
+          "Double",
+          "double"
         ],
-        "hint": "Подсказка: слово из урока «Travel and hotels»."
-      },
-      {
-        "id": 4,
-        "prompt": "My ______ is at gate twelve.",
-        "answer": "flight",
-        "altAnswers": [
-          "flight",
-          "Flight"
-        ],
-        "hint": "Подсказка: слово из урока «Travel and hotels»."
+        "hint": "Подсказка: тема «Travel and hotels»."
       }
     ],
     "theory": {
       "intro": "Book rooms, ask for services, and handle travel situations.",
-      "reading": "**Путешествия и отели** — Book rooms, ask for services, and handle travel situations.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Booking\nI'd like to book a room. I have a reservation.\n\n*Пример:* I have a reservation for two nights.\n\n### At the hotel\nCheck in/out. Could I have…? Wake-up call.\n\n*Пример:* Could I have a wake-up call at seven?\n\n### Формулы\n- `I'd like to book…`\n- `I have a reservation for…`\n- `Could I have + service?`\n\n### Типичная ошибка\n❌ I have reservation.\n✅ I have a reservation.",
+      "reading": "**Путешествия и отели** — Book rooms, ask for services, and handle travel situations.\n\nПодход communicative approach (Harmer): связывайте грамматику с реальной ситуацией, не зубрите правила отдельно.\n\nCEFR A2 — уверенное общение в быту: прошлое и будущее, сравнения, путешествия.\n\n### Booking\nI'd like to book a room. I have a reservation.\n\n### At the hotel\nCheck in/out. Could I have…? Wake-up call.\n\n### Формулы\n- `I'd like to book…`\n- `I have a reservation for…`\n- `Could I have + service?`\n\n### Типичная ошибка\n❌ I have reservation.\n✅ I have a reservation.",
       "keyPoints": [
         "Booking: I'd like to book a room. I have a reservation.",
         "At the hotel: Check in/out. Could I have…? Wake-up call.",
@@ -23477,20 +24202,20 @@ const CURRICULUM = [
       {
         "question": "What is «reservation»?",
         "options": [
-          "паспорт",
-          "выезжать",
+          "регистрироваться",
+          "бронь",
           "бронирование",
-          "ресепшен"
+          "номер"
         ],
         "answer": "бронирование"
       },
       {
         "question": "What is «booking»?",
         "options": [
-          "номер",
-          "паспорт",
-          "регистрироваться",
-          "бронь"
+          "ресепшен",
+          "бронирование",
+          "бронь",
+          "паспорт"
         ],
         "answer": "бронь"
       },
@@ -23507,19 +24232,19 @@ const CURRICULUM = [
       {
         "question": "What is «check out»?",
         "options": [
-          "одноместный",
-          "паспорт",
+          "номер",
           "выезжать",
-          "багаж"
+          "багаж",
+          "паспорт"
         ],
         "answer": "выезжать"
       },
       {
         "question": "What is «room»?",
         "options": [
-          "бронь",
+          "багаж",
           "бронирование",
-          "рейс",
+          "выезжать",
           "номер"
         ],
         "answer": "номер"
@@ -23941,7 +24666,10 @@ const CURRICULUM = [
           "permission",
           "obligation",
           "allowed",
-          "required"
+          "required",
+          "forbidden",
+          "necessary",
+          "rule"
         ],
         "mustIncludeAny": [
           [
@@ -23951,11 +24679,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to permission and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Can, could, may, must, have to»."
       },
       {
         "prompt": "What can the main character do that others can't?",
@@ -23985,7 +24712,10 @@ const CURRICULUM = [
           "permission",
           "obligation",
           "allowed",
-          "required"
+          "required",
+          "forbidden",
+          "necessary",
+          "rule"
         ],
         "mustIncludeAny": [
           [
@@ -23995,11 +24725,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss can, could, may, must, have to in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Can, could, may, must, have to»."
       },
       {
         "prompt": "What did he have to do as a child?",
@@ -24009,7 +24738,10 @@ const CURRICULUM = [
           "permission",
           "obligation",
           "allowed",
-          "required"
+          "required",
+          "forbidden",
+          "necessary",
+          "rule"
         ],
         "mustIncludeAny": [
           [
@@ -24019,11 +24751,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The main character faces a difficult choice."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Can, could, may, must, have to»."
       },
       {
         "prompt": "What are you not allowed to do there?",
@@ -24033,7 +24764,10 @@ const CURRICULUM = [
           "permission",
           "obligation",
           "allowed",
-          "required"
+          "required",
+          "forbidden",
+          "necessary",
+          "rule"
         ],
         "mustIncludeAny": [
           [
@@ -24043,11 +24777,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from can, could, may, must, have to."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Can, could, may, must, have to»."
       }
     ],
     "speaking": [
@@ -24131,36 +24864,36 @@ const CURRICULUM = [
     ],
     "grammarCheck": [
       {
-        "sentence": "You ___ park here. It's forbidden.",
+        "sentence": "I can ___ but I can't dive",
         "options": [
-          "mustn't",
-          "don't have to"
+          "swim",
+          "swims"
         ],
-        "answer": "mustn't"
+        "answer": "swim"
       },
       {
-        "sentence": "___ you help me with this box?",
+        "sentence": "He could ___ when he was four",
         "options": [
-          "Can",
-          "Must"
+          "read",
+          "reads"
         ],
-        "answer": "Can"
+        "answer": "read"
       },
       {
-        "sentence": "When I was young, I ___ climb trees easily.",
+        "sentence": "You ___ have to come if you're busy",
         "options": [
-          "could",
-          "can"
+          "don't",
+          "don'ts"
         ],
-        "answer": "could"
+        "answer": "don't"
       },
       {
-        "sentence": "Employees ___ wear ID badges at all times.",
+        "sentence": "You mustn't ___ here",
         "options": [
-          "have to",
-          "may"
+          "smoke",
+          "smokes"
         ],
-        "answer": "have to"
+        "answer": "smoke"
       }
     ],
     "theoryCheck": [
@@ -24173,12 +24906,12 @@ const CURRICULUM = [
         "answer": "She must study harder."
       },
       {
-        "question": "Пример по теме «Ability & Permission»:",
+        "question": "Какое правило относится к «Obligation»?",
         "options": [
-          "She can speak three languages. / May I open the window?",
-          "She musts study harder."
+          "Must — сильная обязанность или личное мнение. Have to — внешнее правило. Mustn't — запрет.",
+          "Can/could — способность (could — прошлое). May/can — разрешение (may — формальнее)."
         ],
-        "answer": "She can speak three languages. / May I open the window?"
+        "answer": "Must — сильная обязанность или личное мнение. Have to — внешнее правило. Mustn't — запрет."
       },
       {
         "question": "Какая формула относится к «Modals: can, could, may, must, have to»?",
@@ -24192,48 +24925,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "You ______ park here. It's forbidden.",
-        "answer": "mustn't",
+        "prompt": "Can you ______ me",
+        "answer": "help",
         "altAnswers": [
-          "Mustn't",
-          "mustn't"
+          "Help",
+          "help"
         ],
-        "hint": "Подсказка: слово из урока «Can, could, may, must, have to»."
+        "hint": "Подсказка: тема «Can, could, may, must, have to»."
       },
       {
         "id": 2,
-        "prompt": "______ you help me with this box?",
-        "answer": "Can",
+        "prompt": "You ______ be tired",
+        "answer": "must",
         "altAnswers": [
-          "can",
-          "Can"
+          "Must",
+          "must"
         ],
-        "hint": "Подсказка: слово из урока «Can, could, may, must, have to»."
+        "hint": "Подсказка: тема «Can, could, may, must, have to»."
       },
       {
         "id": 3,
-        "prompt": "When I was young, I ______ climb trees easily.",
-        "answer": "could",
+        "prompt": "I have to ______ now",
+        "answer": "leave",
         "altAnswers": [
-          "Could",
-          "could"
+          "leave",
+          "Leave"
         ],
-        "hint": "Подсказка: слово из урока «Can, could, may, must, have to»."
+        "hint": "Подсказка: тема «Can, could, may, must, have to»."
       },
       {
         "id": 4,
-        "prompt": "Employees ______ wear ID badges at all times.",
-        "answer": "have to",
+        "prompt": "______ I sit here",
+        "answer": "May",
         "altAnswers": [
-          "have to",
-          "Have to"
+          "May",
+          "may"
         ],
-        "hint": "Подсказка: слово из урока «Can, could, may, must, have to»."
+        "hint": "Подсказка: тема «Can, could, may, must, have to»."
       }
     ],
     "theory": {
       "intro": "Модальные глаголы выражают способность, разрешение и обязанность без изменения формы по лицам.",
-      "reading": "**Модальные глаголы: способность, разрешение, обязанность** — Модальные глаголы выражают способность, разрешение и обязанность без изменения формы по лицам.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Ability & Permission\nCan/could — способность (could — прошлое). May/can — разрешение (may — формальнее).\n\n*Пример:* She can speak three languages. / May I open the window?\n\n### Obligation\nMust — сильная обязанность или личное мнение. Have to — внешнее правило. Mustn't — запрет.\n\n*Пример:* You must wear a seatbelt. / Students have to submit essays.\n\n### Формулы\n- `Ability: can/could + V1`\n- `Permission: Can/May I + V1?`\n- `Obligation: must/have to + V1; Prohibition: mustn't + V1`\n\n### Типичная ошибка\n❌ She musts study harder.\n✅ She must study harder.",
+      "reading": "**Модальные глаголы: способность, разрешение, обязанность** — Модальные глаголы выражают способность, разрешение и обязанность без изменения формы по лицам.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Ability & Permission\nCan/could — способность (could — прошлое). May/can — разрешение (may — формальнее).\n\n### Obligation\nMust — сильная обязанность или личное мнение. Have to — внешнее правило. Mustn't — запрет.\n\n### Формулы\n- `Ability: can/could + V1`\n- `Permission: Can/May I + V1?`\n- `Obligation: must/have to + V1; Prohibition: mustn't + V1`\n\n### Типичная ошибка\n❌ She musts study harder.\n✅ She must study harder.",
       "keyPoints": [
         "Ability & Permission: Can/could — способность (could — прошлое). May/can — разрешение (may — формальне",
         "Obligation: Must — сильная обязанность или личное мнение. Have to — внешнее правило. Mustn't",
@@ -24248,29 +24981,29 @@ const CURRICULUM = [
         "question": "What is «ability»?",
         "options": [
           "способность",
-          "необходимо",
-          "обязанность",
-          "способный"
+          "правило",
+          "разрешено",
+          "обязанность"
         ],
         "answer": "способность"
       },
       {
         "question": "What is «permission»?",
         "options": [
-          "разрешено",
-          "разрешение",
-          "правило",
-          "требуется"
+          "необходимо",
+          "обязанность",
+          "способность",
+          "разрешение"
         ],
         "answer": "разрешение"
       },
       {
         "question": "What is «obligation»?",
         "options": [
-          "необходимо",
-          "требуется",
+          "разрешено",
+          "обязанность",
           "разрешение",
-          "обязанность"
+          "долг"
         ],
         "answer": "обязанность"
       },
@@ -24278,8 +25011,8 @@ const CURRICULUM = [
         "question": "What is «allowed»?",
         "options": [
           "разрешено",
-          "долг",
-          "разрешение",
+          "способность",
+          "запрещено",
           "правило"
         ],
         "answer": "разрешено"
@@ -24289,8 +25022,8 @@ const CURRICULUM = [
         "options": [
           "требуется",
           "способность",
-          "способный",
-          "необходимо"
+          "долг",
+          "запрещено"
         ],
         "answer": "требуется"
       },
@@ -24702,7 +25435,10 @@ const CURRICULUM = [
           "deduction",
           "criticism",
           "probably",
-          "perhaps"
+          "perhaps",
+          "regret",
+          "logical",
+          "recommend"
         ],
         "mustIncludeAny": [
           [
@@ -24712,11 +25448,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "She advises him to drink more water."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Should, ought to, must, might, could»."
       },
       {
         "prompt": "Where might he be now?",
@@ -24726,7 +25461,10 @@ const CURRICULUM = [
           "deduction",
           "criticism",
           "probably",
-          "perhaps"
+          "perhaps",
+          "regret",
+          "logical",
+          "recommend"
         ],
         "mustIncludeAny": [
           [
@@ -24736,11 +25474,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The action happens at home and at school."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Should, ought to, must, might, could»."
       },
       {
         "prompt": "What advice would you give the protagonist?",
@@ -24750,7 +25487,10 @@ const CURRICULUM = [
           "deduction",
           "criticism",
           "probably",
-          "perhaps"
+          "perhaps",
+          "regret",
+          "logical",
+          "recommend"
         ],
         "mustIncludeAny": [
           [
@@ -24760,11 +25500,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The doctor says he should rest more."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Should, ought to, must, might, could»."
       },
       {
         "prompt": "What must have happened before this scene?",
@@ -24774,7 +25513,10 @@ const CURRICULUM = [
           "deduction",
           "criticism",
           "probably",
-          "perhaps"
+          "perhaps",
+          "regret",
+          "logical",
+          "recommend"
         ],
         "mustIncludeAny": [
           [
@@ -24784,11 +25526,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "People use smartphones for work and study."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Should, ought to, must, might, could»."
       },
       {
         "prompt": "What ought people to do in this situation?",
@@ -24798,7 +25539,10 @@ const CURRICULUM = [
           "deduction",
           "criticism",
           "probably",
-          "perhaps"
+          "perhaps",
+          "regret",
+          "logical",
+          "recommend"
         ],
         "mustIncludeAny": [
           [
@@ -24808,11 +25552,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on should, ought to, must, might, could."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Should, ought to, must, might, could»."
       }
     ],
     "speaking": [
@@ -24900,36 +25643,36 @@ const CURRICULUM = [
     ],
     "grammarCheck": [
       {
-        "sentence": "You look pale. You ___ go home.",
+        "sentence": "She might be ___ in traffic",
         "options": [
-          "should",
-          "must be"
+          "stuck",
+          "stucks"
         ],
-        "answer": "should"
+        "answer": "stuck"
       },
       {
-        "sentence": "The lights are on. She ___ be at home.",
+        "sentence": "They ___ be serious",
         "options": [
-          "must",
-          "should"
+          "can't",
+          "can'ts"
         ],
-        "answer": "must"
+        "answer": "can't"
       },
       {
-        "sentence": "It's late. He ___ still be at the office.",
+        "sentence": "I ___ have eaten so much",
         "options": [
-          "might",
-          "should have"
+          "shouldn't",
+          "shouldn'ts"
         ],
-        "answer": "might"
+        "answer": "shouldn't"
       },
       {
-        "sentence": "I ___ have studied harder for the exam.",
+        "sentence": "He ought to have ___",
         "options": [
-          "should",
-          "must"
+          "apologized",
+          "apologizeds"
         ],
-        "answer": "should"
+        "answer": "apologized"
       }
     ],
     "theoryCheck": [
@@ -24942,12 +25685,12 @@ const CURRICULUM = [
         "answer": "He must be tired."
       },
       {
-        "question": "Пример по теме «Advice»:",
+        "question": "Какое правило относится к «Deduction & Past criticism»?",
         "options": [
-          "You should get more sleep. / You ought to see a doctor.",
-          "He must to be tired."
+          "Must — уверенный вывод (must be). Might/could — возможность. Should have + V3 — критика прошлого.",
+          "Should/ought to — совет. Shouldn't — отрицательный совет. Ought to = should (чуть формальнее)."
         ],
-        "answer": "You should get more sleep. / You ought to see a doctor."
+        "answer": "Must — уверенный вывод (must be). Might/could — возможность. Should have + V3 — критика прошлого."
       },
       {
         "question": "Какая формула относится к «Modals: should, ought to, must, might, could»?",
@@ -24961,48 +25704,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "You look pale. You ______ go home.",
-        "answer": "should",
+        "prompt": "You should ______ more",
+        "answer": "rest",
         "altAnswers": [
-          "should",
-          "Should"
+          "rest",
+          "Rest"
         ],
-        "hint": "Подсказка: слово из урока «Should, ought to, must, might, could»."
+        "hint": "Подсказка: тема «Should, ought to, must, might, could»."
       },
       {
         "id": 2,
-        "prompt": "The lights are on. She ______ be at home.",
-        "answer": "must",
+        "prompt": "He must be ______",
+        "answer": "joking",
         "altAnswers": [
-          "must",
-          "Must"
+          "Joking",
+          "joking"
         ],
-        "hint": "Подсказка: слово из урока «Should, ought to, must, might, could»."
+        "hint": "Подсказка: тема «Should, ought to, must, might, could»."
       },
       {
         "id": 3,
-        "prompt": "It's late. He ______ still be at the office.",
-        "answer": "might",
+        "prompt": "She might ______ the answer",
+        "answer": "know",
         "altAnswers": [
-          "might",
-          "Might"
+          "know",
+          "Know"
         ],
-        "hint": "Подсказка: слово из урока «Should, ought to, must, might, could»."
+        "hint": "Подсказка: тема «Should, ought to, must, might, could»."
       },
       {
         "id": 4,
-        "prompt": "I ______ have studied harder for the exam.",
-        "answer": "should",
+        "prompt": "You should have ______",
+        "answer": "called",
         "altAnswers": [
-          "should",
-          "Should"
+          "Called",
+          "called"
         ],
-        "hint": "Подсказка: слово из урока «Should, ought to, must, might, could»."
+        "hint": "Подсказка: тема «Should, ought to, must, might, could»."
       }
     ],
     "theory": {
       "intro": "Модальные глаголы для советов, логических предположений о настоящем и мягкой критики прошлых действий.",
-      "reading": "**Модальные глаголы: совет, предположение, критика** — Модальные глаголы для советов, логических предположений о настоящем и мягкой критики прошлых действий.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Advice\nShould/ought to — совет. Shouldn't — отрицательный совет. Ought to = should (чуть формальнее).\n\n*Пример:* You should get more sleep. / You ought to see a doctor.\n\n### Deduction & Past criticism\nMust — уверенный вывод (must be). Might/could — возможность. Should have + V3 — критика прошлого.\n\n*Пример:* He must be at home. / You should have told me earlier.\n\n### Формулы\n- `Advice: should/ought to + V1`\n- `Deduction: must/might/could + V1`\n- `Past criticism: should have + V3`\n\n### Типичная ошибка\n❌ He must to be tired.\n✅ He must be tired.",
+      "reading": "**Модальные глаголы: совет, предположение, критика** — Модальные глаголы для советов, логических предположений о настоящем и мягкой критики прошлых действий.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Advice\nShould/ought to — совет. Shouldn't — отрицательный совет. Ought to = should (чуть формальнее).\n\n### Deduction & Past criticism\nMust — уверенный вывод (must be). Might/could — возможность. Should have + V3 — критика прошлого.\n\n### Формулы\n- `Advice: should/ought to + V1`\n- `Deduction: must/might/could + V1`\n- `Past criticism: should have + V3`\n\n### Типичная ошибка\n❌ He must to be tired.\n✅ He must be tired.",
       "keyPoints": [
         "Advice: Should/ought to — совет. Shouldn't — отрицательный совет. Ought to = should (чут",
         "Deduction & Past criticism: Must — уверенный вывод (must be). Might/could — возможность. Should have + V3 — ",
@@ -25016,39 +25759,39 @@ const CURRICULUM = [
       {
         "question": "What is «advice»?",
         "options": [
-          "вероятно",
-          "логический вывод",
-          "сожаление",
-          "совет"
+          "критика",
+          "рекомендовать",
+          "совет",
+          "логичный"
         ],
         "answer": "совет"
       },
       {
         "question": "What is «deduction»?",
         "options": [
-          "совет",
-          "логический вывод",
           "возможно",
-          "возможность"
+          "логический вывод",
+          "уверенный",
+          "логичный"
         ],
         "answer": "логический вывод"
       },
       {
         "question": "What is «criticism»?",
         "options": [
+          "рекомендовать",
           "критика",
-          "сожаление",
-          "вероятно",
-          "возможно"
+          "возможность",
+          "сожаление"
         ],
         "answer": "критика"
       },
       {
         "question": "What is «probably»?",
         "options": [
-          "возможно",
-          "логичный",
-          "совет",
+          "сожаление",
+          "возможность",
+          "критика",
           "вероятно"
         ],
         "answer": "вероятно"
@@ -25056,10 +25799,10 @@ const CURRICULUM = [
       {
         "question": "What is «perhaps»?",
         "options": [
-          "логический вывод",
           "возможно",
+          "возможность",
           "рекомендовать",
-          "совет"
+          "сожаление"
         ],
         "answer": "возможно"
       },
@@ -25486,7 +26229,10 @@ const CURRICULUM = [
           "hypothetical",
           "unlikely",
           "consequence",
-          "unless"
+          "unless",
+          "provided",
+          "imagine",
+          "scenario"
         ],
         "mustIncludeAny": [
           [
@@ -25496,11 +26242,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Technology helps them stay in touch abroad."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Реальные и нереальные условия»."
       },
       {
         "prompt": "What would you do in his situation?",
@@ -25510,7 +26255,10 @@ const CURRICULUM = [
           "hypothetical",
           "unlikely",
           "consequence",
-          "unless"
+          "unless",
+          "provided",
+          "imagine",
+          "scenario"
         ],
         "mustIncludeAny": [
           [
@@ -25520,11 +26268,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about consequence."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Реальные и нереальные условия»."
       },
       {
         "prompt": "Is the situation realistic or hypothetical?",
@@ -25534,7 +26281,10 @@ const CURRICULUM = [
           "hypothetical",
           "unlikely",
           "consequence",
-          "unless"
+          "unless",
+          "provided",
+          "imagine",
+          "scenario"
         ],
         "mustIncludeAny": [
           [
@@ -25544,11 +26294,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about consequence."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Реальные и нереальные условия»."
       },
       {
         "prompt": "What would change if the story had a different ending?",
@@ -25558,7 +26307,10 @@ const CURRICULUM = [
           "hypothetical",
           "unlikely",
           "consequence",
-          "unless"
+          "unless",
+          "provided",
+          "imagine",
+          "scenario"
         ],
         "mustIncludeAny": [
           [
@@ -25568,11 +26320,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They might travel abroad in the next chapter."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Реальные и нереальные условия»."
       },
       {
         "prompt": "What conditions must be met for success?",
@@ -25582,7 +26333,10 @@ const CURRICULUM = [
           "hypothetical",
           "unlikely",
           "consequence",
-          "unless"
+          "unless",
+          "provided",
+          "imagine",
+          "scenario"
         ],
         "mustIncludeAny": [
           [
@@ -25592,11 +26346,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss реальные и нереальные условия in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Реальные и нереальные условия»."
       }
     ],
     "speaking": [
@@ -25680,36 +26433,36 @@ const CURRICULUM = [
     ],
     "grammarCheck": [
       {
-        "sentence": "If it ___ tomorrow, we will cancel the picnic.",
+        "sentence": "If you ___ hard, you will pass",
         "options": [
-          "rains",
-          "will rain"
+          "study",
+          "studys"
         ],
-        "answer": "rains"
+        "answer": "study"
       },
       {
-        "sentence": "If I ___ a million pounds, I would buy a house.",
+        "sentence": "She ___ come unless you invite her",
         "options": [
-          "won",
-          "win"
+          "won't",
+          "won'ts"
         ],
-        "answer": "won"
+        "answer": "won't"
       },
       {
-        "sentence": "She ___ angry if you are late.",
+        "sentence": "If I were ___ I would travel the world",
         "options": [
-          "will be",
-          "would be"
+          "rich",
+          "richs"
         ],
-        "answer": "will be"
+        "answer": "rich"
       },
       {
-        "sentence": "If I ___ you, I would accept the offer.",
+        "sentence": "___ would you do if you lost your phone",
         "options": [
-          "were",
-          "am"
+          "What",
+          "Whats"
         ],
-        "answer": "were"
+        "answer": "What"
       }
     ],
     "theoryCheck": [
@@ -25722,12 +26475,12 @@ const CURRICULUM = [
         "answer": "If I see him, I will tell him."
       },
       {
-        "question": "Пример по теме «First Conditional»:",
+        "question": "Какое правило относится к «Second Conditional»?",
         "options": [
-          "If it rains, I will stay at home.",
-          "If I will see him, I will tell him."
+          "Нереальное или маловероятное условие в настоящем/будущем. If + Past Simple, would + V1.",
+          "Реальное или вероятное условие в будущем. If + Present Simple, will + V1."
         ],
-        "answer": "If it rains, I will stay at home."
+        "answer": "Нереальное или маловероятное условие в настоящем/будущем. If + Past Simple, would + V1."
       },
       {
         "question": "Какая формула относится к «First & Second Conditional»?",
@@ -25741,48 +26494,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "If it ______ tomorrow, we will cancel the picnic.",
-        "answer": "rains",
+        "prompt": "If it rains, ______ stay home",
+        "answer": "I'll",
         "altAnswers": [
-          "rains",
-          "Rains"
+          "i'll",
+          "I'll"
         ],
-        "hint": "Подсказка: слово из урока «Реальные и нереальные условия»."
+        "hint": "Подсказка: тема «Реальные и нереальные условия»."
       },
       {
         "id": 2,
-        "prompt": "If I ______ a million pounds, I would buy a house.",
-        "answer": "won",
+        "prompt": "______ would you do",
+        "answer": "What",
         "altAnswers": [
-          "Won",
-          "won"
+          "what",
+          "What"
         ],
-        "hint": "Подсказка: слово из урока «Реальные и нереальные условия»."
+        "hint": "Подсказка: тема «Реальные и нереальные условия»."
       },
       {
         "id": 3,
-        "prompt": "She ______ angry if you are late.",
-        "answer": "will be",
+        "prompt": "______ you hurry",
+        "answer": "Unless",
         "altAnswers": [
-          "Will be",
-          "will be"
+          "unless",
+          "Unless"
         ],
-        "hint": "Подсказка: слово из урока «Реальные и нереальные условия»."
+        "hint": "Подсказка: тема «Реальные и нереальные условия»."
       },
       {
         "id": 4,
-        "prompt": "If I ______ you, I would accept the offer.",
-        "answer": "were",
+        "prompt": "I ______ travel more",
+        "answer": "would",
         "altAnswers": [
-          "Were",
-          "were"
+          "Would",
+          "would"
         ],
-        "hint": "Подсказка: слово из урока «Реальные и нереальные условия»."
+        "hint": "Подсказка: тема «Реальные и нереальные условия»."
       }
     ],
     "theory": {
       "intro": "First Conditional — реальные условия в будущем. Second Conditional — гипотетические, маловероятные ситуации.",
-      "reading": "**Условные предложения 1 и 2 типа** — First Conditional — реальные условия в будущем. Second Conditional — гипотетические, маловероятные ситуации.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### First Conditional\nРеальное или вероятное условие в будущем. If + Present Simple, will + V1.\n\n*Пример:* If it rains, I will stay at home.\n\n### Second Conditional\nНереальное или маловероятное условие в настоящем/будущем. If + Past Simple, would + V1.\n\n*Пример:* If I had more time, I would learn Japanese.\n\n### Формулы\n- `First: If + Present Simple, will + V1`\n- `Second: If + Past Simple, would + V1`\n- `Unless = if not`\n\n### Типичная ошибка\n❌ If I will see him, I will tell him.\n✅ If I see him, I will tell him.",
+      "reading": "**Условные предложения 1 и 2 типа** — First Conditional — реальные условия в будущем. Second Conditional — гипотетические, маловероятные ситуации.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### First Conditional\nРеальное или вероятное условие в будущем. If + Present Simple, will + V1.\n\n### Second Conditional\nНереальное или маловероятное условие в настоящем/будущем. If + Past Simple, would + V1.\n\n### Формулы\n- `First: If + Present Simple, will + V1`\n- `Second: If + Past Simple, would + V1`\n- `Unless = if not`\n\n### Типичная ошибка\n❌ If I will see him, I will tell him.\n✅ If I see him, I will tell him.",
       "keyPoints": [
         "First Conditional: Реальное или вероятное условие в будущем. If + Present Simple, will + V1.",
         "Second Conditional: Нереальное или маловероятное условие в настоящем/будущем. If + Past Simple, woul",
@@ -25796,29 +26549,29 @@ const CURRICULUM = [
       {
         "question": "What is «condition»?",
         "options": [
-          "при условии что",
           "условие",
-          "гипотетический",
-          "если не"
+          "сценарий",
+          "если не",
+          "гипотетический"
         ],
         "answer": "условие"
       },
       {
         "question": "What is «hypothetical»?",
         "options": [
-          "мечта",
           "гипотетический",
-          "если не",
-          "представь"
+          "сценарий",
+          "реалистичный",
+          "если не"
         ],
         "answer": "гипотетический"
       },
       {
         "question": "What is «unlikely»?",
         "options": [
-          "если не",
+          "сценарий",
           "маловероятный",
-          "представь",
+          "условие",
           "следствие"
         ],
         "answer": "маловероятный"
@@ -25826,20 +26579,20 @@ const CURRICULUM = [
       {
         "question": "What is «consequence»?",
         "options": [
-          "представь",
           "сценарий",
-          "маловероятный",
-          "следствие"
+          "при условии что",
+          "следствие",
+          "гипотетический"
         ],
         "answer": "следствие"
       },
       {
         "question": "What is «unless»?",
         "options": [
-          "при условии что",
-          "реалистичный",
           "если не",
-          "условие"
+          "при условии что",
+          "следствие",
+          "маловероятный"
         ],
         "answer": "если не"
       },
@@ -26260,7 +27013,10 @@ const CURRICULUM = [
           "past event",
           "alternative",
           "consequence",
-          "hypothesis"
+          "hypothesis",
+          "unreal",
+          "wish",
+          "outcome"
         ],
         "mustIncludeAny": [
           [
@@ -26270,11 +27026,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Technology helps them stay in touch abroad."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Прошлое и сожаление»."
       },
       {
         "prompt": "How would the protagonist's life be different now?",
@@ -26284,7 +27039,10 @@ const CURRICULUM = [
           "past event",
           "alternative",
           "consequence",
-          "hypothesis"
+          "hypothesis",
+          "unreal",
+          "wish",
+          "outcome"
         ],
         "mustIncludeAny": [
           [
@@ -26294,11 +27052,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to past event and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Прошлое и сожаление»."
       },
       {
         "prompt": "What does the character regret?",
@@ -26308,7 +27065,10 @@ const CURRICULUM = [
           "past event",
           "alternative",
           "consequence",
-          "hypothesis"
+          "hypothesis",
+          "unreal",
+          "wish",
+          "outcome"
         ],
         "mustIncludeAny": [
           [
@@ -26318,11 +27078,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They describe their daily routine clearly."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Прошлое и сожаление»."
       },
       {
         "prompt": "What mixed conditional fits this situation?",
@@ -26332,7 +27091,10 @@ const CURRICULUM = [
           "past event",
           "alternative",
           "consequence",
-          "hypothesis"
+          "hypothesis",
+          "unreal",
+          "wish",
+          "outcome"
         ],
         "mustIncludeAny": [
           [
@@ -26342,11 +27104,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to past event and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Прошлое и сожаление»."
       },
       {
         "prompt": "What past event caused the present problem?",
@@ -26356,7 +27117,10 @@ const CURRICULUM = [
           "past event",
           "alternative",
           "consequence",
-          "hypothesis"
+          "hypothesis",
+          "unreal",
+          "wish",
+          "outcome"
         ],
         "mustIncludeAny": [
           [
@@ -26366,11 +27130,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to past event and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Прошлое и сожаление»."
       }
     ],
     "speaking": [
@@ -26454,36 +27217,36 @@ const CURRICULUM = [
     ],
     "grammarCheck": [
       {
-        "sentence": "If she ___ earlier, she would have caught the train.",
+        "sentence": "If she ___ missed the train, she would have arrived on time",
         "options": [
-          "had left",
-          "left"
+          "hadn't",
+          "hadn'ts"
         ],
-        "answer": "had left"
+        "answer": "hadn't"
       },
       {
-        "sentence": "I would have helped if you ___ me.",
+        "sentence": "We ___ have got lost if we had had a map",
         "options": [
-          "had asked",
-          "asked"
+          "wouldn't",
+          "wouldn'ts"
         ],
-        "answer": "had asked"
+        "answer": "wouldn't"
       },
       {
-        "sentence": "If I had studied medicine, I ___ a doctor now.",
+        "sentence": "If I were ___ at maths, I would have become an engineer",
         "options": [
-          "would be",
-          "would have been"
+          "better",
+          "betters"
         ],
-        "answer": "would be"
+        "answer": "better"
       },
       {
-        "sentence": "We ___ lost if we had had GPS.",
+        "sentence": "If he had ___ money, he wouldn't be in debt now",
         "options": [
-          "wouldn't have got",
-          "wouldn't get"
+          "saved",
+          "saveds"
         ],
-        "answer": "wouldn't have got"
+        "answer": "saved"
       }
     ],
     "theoryCheck": [
@@ -26496,12 +27259,12 @@ const CURRICULUM = [
         "answer": "If I had known, I would have come."
       },
       {
-        "question": "Пример по теме «Third Conditional»:",
+        "question": "Какое правило относится к «Mixed Conditionals»?",
         "options": [
-          "If I had studied harder, I would have passed the exam.",
-          "If I would have known, I would have come."
+          "Смешение: прошлое условие → настоящий результат, или настоящее условие → прошлый результат.",
+          "Нереальное условие в прошлом. If + Past Perfect, would have + V3. Выражает сожаление."
         ],
-        "answer": "If I had studied harder, I would have passed the exam."
+        "answer": "Смешение: прошлое условие → настоящий результат, или настоящее условие → прошлый результат."
       },
       {
         "question": "Какая формула относится к «Third & Mixed Conditionals»?",
@@ -26515,48 +27278,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "If she ______ earlier, she would have caught the train.",
-        "answer": "had left",
+        "prompt": "If I had ______",
+        "answer": "known",
         "altAnswers": [
-          "had left",
-          "Had left"
+          "Known",
+          "known"
         ],
-        "hint": "Подсказка: слово из урока «Прошлое и сожаление»."
+        "hint": "Подсказка: тема «Прошлое и сожаление»."
       },
       {
         "id": 2,
-        "prompt": "I would have helped if you ______ me.",
-        "answer": "had asked",
+        "prompt": "I ______ have helped",
+        "answer": "would",
         "altAnswers": [
-          "Had asked",
-          "had asked"
+          "Would",
+          "would"
         ],
-        "hint": "Подсказка: слово из урока «Прошлое и сожаление»."
+        "hint": "Подсказка: тема «Прошлое и сожаление»."
       },
       {
         "id": 3,
-        "prompt": "If I had studied medicine, I ______ a doctor now.",
-        "answer": "would be",
+        "prompt": "She would have ______",
+        "answer": "passed",
         "altAnswers": [
-          "would be",
-          "Would be"
+          "Passed",
+          "passed"
         ],
-        "hint": "Подсказка: слово из урока «Прошлое и сожаление»."
+        "hint": "Подсказка: тема «Прошлое и сожаление»."
       },
       {
         "id": 4,
-        "prompt": "We ______ lost if we had had GPS.",
-        "answer": "wouldn't have got",
+        "prompt": "If I were ______ now",
+        "answer": "richer",
         "altAnswers": [
-          "Wouldn't have got",
-          "wouldn't have got"
+          "richer",
+          "Richer"
         ],
-        "hint": "Подсказка: слово из урока «Прошлое и сожаление»."
+        "hint": "Подсказка: тема «Прошлое и сожаление»."
       }
     ],
     "theory": {
       "intro": "Third Conditional — нереальное прошлое. Mixed Conditionals — смешение времен для сложных гипотез.",
-      "reading": "**Условные предложения 3 типа и смешанные** — Third Conditional — нереальное прошлое. Mixed Conditionals — смешение времен для сложных гипотез.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Third Conditional\nНереальное условие в прошлом. If + Past Perfect, would have + V3. Выражает сожаление.\n\n*Пример:* If I had studied harder, I would have passed the exam.\n\n### Mixed Conditionals\nСмешение: прошлое условие → настоящий результат, или настоящее условие → прошлый результат.\n\n*Пример:* If I had taken that job, I would be living abroad now.\n\n### Формулы\n- `Third: If + had + V3, would have + V3`\n- `Mixed: If + Past Perfect, would + V1 (now)`\n\n### Типичная ошибка\n❌ If I would have known, I would have come.\n✅ If I had known, I would have come.",
+      "reading": "**Условные предложения 3 типа и смешанные** — Third Conditional — нереальное прошлое. Mixed Conditionals — смешение времен для сложных гипотез.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Third Conditional\nНереальное условие в прошлом. If + Past Perfect, would have + V3. Выражает сожаление.\n\n### Mixed Conditionals\nСмешение: прошлое условие → настоящий результат, или настоящее условие → прошлый результат.\n\n### Формулы\n- `Third: If + had + V3, would have + V3`\n- `Mixed: If + Past Perfect, would + V1 (now)`\n\n### Типичная ошибка\n❌ If I would have known, I would have come.\n✅ If I had known, I would have come.",
       "keyPoints": [
         "Third Conditional: Нереальное условие в прошлом. If + Past Perfect, would have + V3. Выражает сожал",
         "Mixed Conditionals: Смешение: прошлое условие → настоящий результат, или настоящее условие → прошлый",
@@ -26570,50 +27333,50 @@ const CURRICULUM = [
       {
         "question": "What is «regret»?",
         "options": [
-          "последствие",
           "гипотеза",
-          "желание",
-          "сожаление"
+          "последствие",
+          "сожаление",
+          "размышлять"
         ],
         "answer": "сожаление"
       },
       {
         "question": "What is «past event»?",
         "options": [
-          "гипотеза",
-          "размышлять",
           "прошлое событие",
-          "нереальный"
+          "желание",
+          "сожаление",
+          "последствие"
         ],
         "answer": "прошлое событие"
       },
       {
         "question": "What is «alternative»?",
         "options": [
-          "сожаление",
-          "размышлять",
+          "нереальный",
+          "последствие",
           "альтернатива",
-          "гипотеза"
+          "сожаление"
         ],
         "answer": "альтернатива"
       },
       {
         "question": "What is «consequence»?",
         "options": [
-          "желание",
-          "последствие",
           "размышлять",
-          "нереальный"
+          "альтернатива",
+          "последствие",
+          "прошлое событие"
         ],
         "answer": "последствие"
       },
       {
         "question": "What is «hypothesis»?",
         "options": [
-          "гипотеза",
-          "нереальный",
+          "сожаление",
+          "альтернатива",
           "исход",
-          "обстоятельство"
+          "гипотеза"
         ],
         "answer": "гипотеза"
       },
@@ -27037,7 +27800,10 @@ const CURRICULUM = [
           "agent",
           "object",
           "focus",
-          "manufacture"
+          "manufacture",
+          "discover",
+          "publish",
+          "construct"
         ],
         "mustIncludeAny": [
           [
@@ -27047,11 +27813,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Her brother works as a teacher."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive in different tenses»."
       },
       {
         "prompt": "When was the building constructed?",
@@ -27061,7 +27826,10 @@ const CURRICULUM = [
           "agent",
           "object",
           "focus",
-          "manufacture"
+          "manufacture",
+          "discover",
+          "publish",
+          "construct"
         ],
         "mustIncludeAny": [
           [
@@ -27071,11 +27839,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on passive in different tenses."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive in different tenses»."
       },
       {
         "prompt": "What is produced in this region?",
@@ -27085,7 +27852,10 @@ const CURRICULUM = [
           "agent",
           "object",
           "focus",
-          "manufacture"
+          "manufacture",
+          "discover",
+          "publish",
+          "construct"
         ],
         "mustIncludeAny": [
           [
@@ -27095,11 +27865,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on passive in different tenses."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive in different tenses»."
       },
       {
         "prompt": "Has the problem been solved yet?",
@@ -27109,7 +27878,10 @@ const CURRICULUM = [
           "agent",
           "object",
           "focus",
-          "manufacture"
+          "manufacture",
+          "discover",
+          "publish",
+          "construct"
         ],
         "mustIncludeAny": [
           [
@@ -27119,11 +27891,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on passive in different tenses."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive in different tenses»."
       },
       {
         "prompt": "What will be discussed at the meeting?",
@@ -27133,7 +27904,10 @@ const CURRICULUM = [
           "agent",
           "object",
           "focus",
-          "manufacture"
+          "manufacture",
+          "discover",
+          "publish",
+          "construct"
         ],
         "mustIncludeAny": [
           [
@@ -27143,11 +27917,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from passive in different tenses."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive in different tenses»."
       }
     ],
     "speaking": [
@@ -27231,36 +28004,36 @@ const CURRICULUM = [
     ],
     "grammarCheck": [
       {
-        "sentence": "English ___ all over the world.",
+        "sentence": "The ___ was broken last night",
         "options": [
-          "is spoken",
-          "speaks"
+          "window",
+          "windows"
         ],
-        "answer": "is spoken"
+        "answer": "window"
       },
       {
-        "sentence": "The bridge ___ last year.",
+        "sentence": "The ___ was directed by Spielberg",
         "options": [
-          "was built",
-          "built"
+          "film",
+          "films"
         ],
-        "answer": "was built"
+        "answer": "film"
       },
       {
-        "sentence": "The report ___ yet.",
+        "sentence": "The ___ was made by my grandmother",
         "options": [
-          "hasn't been finished",
-          "hasn't finished"
+          "cake",
+          "cakes"
         ],
-        "answer": "hasn't been finished"
+        "answer": "cake"
       },
       {
-        "sentence": "The room ___ right now.",
+        "sentence": "It was ___ in 1990",
         "options": [
-          "is being cleaned",
-          "is cleaning"
+          "built",
+          "builts"
         ],
-        "answer": "is being cleaned"
+        "answer": "built"
       }
     ],
     "theoryCheck": [
@@ -27273,12 +28046,12 @@ const CURRICULUM = [
         "answer": "The house was built in 1990."
       },
       {
-        "question": "Пример по теме «Structure»:",
+        "question": "Какое правило относится к «Tenses in Passive»?",
         "options": [
-          "The book was written by Tolkien.",
-          "The house was build in 1990."
+          "Passive возможен во всех основных временах: is made, was built, has been done, will be sent.",
+          "Be + V3. Исполнитель указывается через by, если важен. Фокус на действии, а не на том, кто его совер"
         ],
-        "answer": "The book was written by Tolkien."
+        "answer": "Passive возможен во всех основных временах: is made, was built, has been done, will be sent."
       },
       {
         "question": "Какая формула относится к «Passive Voice»?",
@@ -27292,48 +28065,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "English ______ all over the world.",
-        "answer": "is spoken",
+        "prompt": "______ is spoken here",
+        "answer": "English",
         "altAnswers": [
-          "is spoken",
-          "Is spoken"
+          "English",
+          "english"
         ],
-        "hint": "Подсказка: слово из урока «Passive in different tenses»."
+        "hint": "Подсказка: тема «Passive in different tenses»."
       },
       {
         "id": 2,
-        "prompt": "The bridge ______ last year.",
-        "answer": "was built",
+        "prompt": "Has it ______ done",
+        "answer": "been",
         "altAnswers": [
-          "Was built",
-          "was built"
+          "been",
+          "Been"
         ],
-        "hint": "Подсказка: слово из урока «Passive in different tenses»."
+        "hint": "Подсказка: тема «Passive in different tenses»."
       },
       {
         "id": 3,
-        "prompt": "The report ______ yet.",
-        "answer": "hasn't been finished",
+        "prompt": "The ______ was sent",
+        "answer": "letter",
         "altAnswers": [
-          "hasn't been finished",
-          "Hasn't been finished"
+          "letter",
+          "Letter"
         ],
-        "hint": "Подсказка: слово из урока «Passive in different tenses»."
+        "hint": "Подсказка: тема «Passive in different tenses»."
       },
       {
         "id": 4,
-        "prompt": "The room ______ right now.",
-        "answer": "is being cleaned",
+        "prompt": "It is ______ repaired",
+        "answer": "being",
         "altAnswers": [
-          "Is being cleaned",
-          "is being cleaned"
+          "Being",
+          "being"
         ],
-        "hint": "Подсказка: слово из урока «Passive in different tenses»."
+        "hint": "Подсказка: тема «Passive in different tenses»."
       }
     ],
     "theory": {
       "intro": "Passive Voice смещает фокус с исполнителя на действие или объект. Нужен для формального и академического стиля.",
-      "reading": "**Страдательный залог** — Passive Voice смещает фокус с исполнителя на действие или объект. Нужен для формального и академического стиля.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Structure\nBe + V3. Исполнитель указывается через by, если важен. Фокус на действии, а не на том, кто его совершил.\n\n*Пример:* The book was written by Tolkien.\n\n### Tenses in Passive\nPassive возможен во всех основных временах: is made, was built, has been done, will be sent.\n\n*Пример:* The letter has been sent. / The bridge is being repaired.\n\n### Формулы\n- `Present Simple Passive: am/is/are + V3`\n- `Past Simple Passive: was/were + V3`\n- `Present Perfect Passive: have/has been + V3`\n\n### Типичная ошибка\n❌ The house was build in 1990.\n✅ The house was built in 1990.",
+      "reading": "**Страдательный залог** — Passive Voice смещает фокус с исполнителя на действие или объект. Нужен для формального и академического стиля.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Structure\nBe + V3. Исполнитель указывается через by, если важен. Фокус на действии, а не на том, кто его совершил.\n\n### Tenses in Passive\nPassive возможен во всех основных временах: is made, was built, has been done, will be sent.\n\n### Формулы\n- `Present Simple Passive: am/is/are + V3`\n- `Past Simple Passive: was/were + V3`\n- `Present Perfect Passive: have/has been + V3`\n\n### Типичная ошибка\n❌ The house was build in 1990.\n✅ The house was built in 1990.",
       "keyPoints": [
         "Structure: Be + V3. Исполнитель указывается через by, если важен. Фокус на действии, а не н",
         "Tenses in Passive: Passive возможен во всех основных временах: is made, was built, has been done, w",
@@ -27347,50 +28120,50 @@ const CURRICULUM = [
       {
         "question": "What is «passive»?",
         "options": [
-          "формальный",
           "страдательный залог",
-          "открывать",
-          "кем/чем (агент)"
+          "формальный",
+          "производить",
+          "публиковать"
         ],
         "answer": "страдательный залог"
       },
       {
         "question": "What is «agent»?",
         "options": [
-          "строить",
-          "производить",
-          "формальный",
-          "исполнитель действия"
+          "страдательный залог",
+          "исполнитель действия",
+          "фокус, акцент",
+          "производить"
         ],
         "answer": "исполнитель действия"
       },
       {
         "question": "What is «object»?",
         "options": [
-          "исполнитель действия",
-          "объект",
-          "открывать",
-          "производить"
+          "строить",
+          "фокус, акцент",
+          "производить",
+          "объект"
         ],
         "answer": "объект"
       },
       {
         "question": "What is «focus»?",
         "options": [
+          "производить",
           "открывать",
           "фокус, акцент",
-          "страдательный залог",
-          "формальный"
+          "исполнитель действия"
         ],
         "answer": "фокус, акцент"
       },
       {
         "question": "What is «manufacture»?",
         "options": [
-          "публиковать",
-          "фокус, акцент",
           "производить",
-          "формальный"
+          "открывать",
+          "строить",
+          "фокус, акцент"
         ],
         "answer": "производить"
       },
@@ -27704,7 +28477,10 @@ const CURRICULUM = [
           "told",
           "asked",
           "explained",
-          "claimed"
+          "claimed",
+          "admitted",
+          "refused",
+          "promised"
         ],
         "mustIncludeAny": [
           [
@@ -27714,11 +28490,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "She discovers something unexpected in the story."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «He said that...»."
       },
       {
         "prompt": "What did she ask?",
@@ -27728,7 +28503,10 @@ const CURRICULUM = [
           "told",
           "asked",
           "explained",
-          "claimed"
+          "claimed",
+          "admitted",
+          "refused",
+          "promised"
         ],
         "mustIncludeAny": [
           [
@@ -27738,11 +28516,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The event changes how the characters feel."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «He said that...»."
       },
       {
         "prompt": "Did they tell or say?",
@@ -27752,7 +28529,10 @@ const CURRICULUM = [
           "told",
           "asked",
           "explained",
-          "claimed"
+          "claimed",
+          "admitted",
+          "refused",
+          "promised"
         ],
         "mustIncludeAny": [
           [
@@ -27762,11 +28542,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to told and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «He said that...»."
       },
       {
         "prompt": "What tense shift appears?",
@@ -27776,7 +28555,10 @@ const CURRICULUM = [
           "told",
           "asked",
           "explained",
-          "claimed"
+          "claimed",
+          "admitted",
+          "refused",
+          "promised"
         ],
         "mustIncludeAny": [
           [
@@ -27786,11 +28568,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "People use smartphones for work and study."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «He said that...»."
       },
       {
         "prompt": "What did he promise?",
@@ -27800,7 +28581,10 @@ const CURRICULUM = [
           "told",
           "asked",
           "explained",
-          "claimed"
+          "claimed",
+          "admitted",
+          "refused",
+          "promised"
         ],
         "mustIncludeAny": [
           [
@@ -27810,11 +28594,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "She discovers something unexpected in the story."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «He said that...»."
       }
     ],
     "speaking": [
@@ -27904,86 +28687,136 @@ const CURRICULUM = [
       {
         "word": "said",
         "trans": "сказал",
-        "example": "He said (that) he was tired."
+        "example": "'I love it' → He said he loved it."
       },
       {
         "word": "told",
         "trans": "сказал (кому-то)",
-        "example": "She asked if I was ready."
+        "example": "He told me that he was busy."
       },
       {
         "word": "asked",
         "trans": "спросил",
-        "example": "'I love it' → He said he loved it."
+        "example": "'Are you OK?' → He asked if I was OK."
       },
       {
         "word": "explained",
         "trans": "объяснил",
-        "example": "'I will come' → She said she would come."
+        "example": "I used «explained» in my written answer."
       },
       {
         "word": "claimed",
         "trans": "утверждал",
-        "example": "'Are you OK?' → He asked if I was OK."
+        "example": "She asked me about «claimed» during practice."
       },
       {
         "word": "admitted",
         "trans": "признал",
-        "example": "He said (that) he was tired."
+        "example": "«admitted» fits well in a sentence about he said that...."
       },
       {
         "word": "refused",
         "trans": "отказался",
-        "example": "She asked if I was ready."
+        "example": "«refused» was new for me this week."
       },
       {
         "word": "promised",
         "trans": "пообещал",
-        "example": "'I love it' → He said he loved it."
+        "example": "We discussed «promised» in class today."
       },
       {
         "word": "warned",
         "trans": "предупредил",
-        "example": "'I will come' → She said she would come."
+        "example": "He repeated «warned» three times."
       },
       {
         "word": "suggested",
         "trans": "предложил",
-        "example": "'Are you OK?' → He asked if I was OK."
+        "example": "My partner corrected my use of «suggested»."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "My note says «practice» means «практика»."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "In our dialogue, «review» appeared twice."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I linked «sentence» to other words I know."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "I heard «grammar» in the listening exercise."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I looked up «vocabulary» in the dictionary."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "The example with «speaking» was clear."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "Can you make a sentence with «listening»?"
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "«writing» helped me understand he said that...."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I often use «reading» when I talk about he said that...."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "The teacher wrote «homework» on the board."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "She said she ___ tired.",
+        "sentence": "'I ___ it' → He said he loved it",
         "options": [
-          "was",
-          "is"
+          "love",
+          "loves"
         ],
-        "answer": "was"
+        "answer": "love"
       },
       {
-        "sentence": "He told me ___ wait.",
+        "sentence": "'I ___ come' → She said she would come",
         "options": [
-          "to",
-          "for"
+          "will",
+          "wills"
         ],
-        "answer": "to"
+        "answer": "will"
       },
       {
-        "sentence": "They asked if we ___ coming.",
+        "sentence": "___ you OK' → He asked if I was OK",
         "options": [
-          "were",
-          "are"
+          "'Are",
+          "'Ares"
         ],
-        "answer": "were"
+        "answer": "'Are"
       },
       {
-        "sentence": "She said she ___ help.",
+        "sentence": "He ___ he was busy",
         "options": [
-          "would",
-          "will"
+          "said",
+          "saids"
         ],
-        "answer": "would"
+        "answer": "said"
       }
     ],
     "theoryCheck": [
@@ -27996,12 +28829,12 @@ const CURRICULUM = [
         "answer": "He told me that he was busy."
       },
       {
-        "question": "Пример по теме «Утверждения»:",
+        "question": "Какое правило относится к «Вопросы и приказы»?",
         "options": [
-          "He said (that) he was tired.",
-          "He said me that he was busy."
+          "Ask + if/whether или wh-word. Tell/ask + to + V: She told me to wait.",
+          "Say/tell + (that) + сдвиг назад: Present→Past, Past→Past Perfect, will→would."
         ],
-        "answer": "He said (that) he was tired."
+        "answer": "Ask + if/whether или wh-word. Tell/ask + to + V: She told me to wait."
       },
       {
         "question": "Какая формула относится к «Reported Speech»?",
@@ -28015,48 +28848,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "She said she ______ tired.",
-        "answer": "was",
+        "prompt": "She ______ me to wait",
+        "answer": "told",
         "altAnswers": [
-          "was",
-          "Was"
+          "told",
+          "Told"
         ],
-        "hint": "Подсказка: слово из урока «He said that...»."
+        "hint": "Подсказка: тема «He said that...»."
       },
       {
         "id": 2,
-        "prompt": "He told me ______ wait.",
-        "answer": "to",
+        "prompt": "They ______ if I knew",
+        "answer": "asked",
         "altAnswers": [
-          "To",
-          "to"
+          "Asked",
+          "asked"
         ],
-        "hint": "Подсказка: слово из урока «He said that...»."
+        "hint": "Подсказка: тема «He said that...»."
       },
       {
         "id": 3,
-        "prompt": "They asked if we ______ coming.",
-        "answer": "were",
+        "prompt": "He ______ that it was true",
+        "answer": "explained",
         "altAnswers": [
-          "Were",
-          "were"
+          "explained",
+          "Explained"
         ],
-        "hint": "Подсказка: слово из урока «He said that...»."
+        "hint": "Подсказка: тема «He said that...»."
       },
       {
         "id": 4,
-        "prompt": "She said she ______ help.",
-        "answer": "would",
+        "prompt": "She ______ she would come",
+        "answer": "promised",
         "altAnswers": [
-          "Would",
-          "would"
+          "Promised",
+          "promised"
         ],
-        "hint": "Подсказка: слово из урока «He said that...»."
+        "hint": "Подсказка: тема «He said that...»."
       }
     ],
     "theory": {
       "intro": "Передаём чужие слова: сдвиг времён и изменение местоимений.",
-      "reading": "**Косвенная речь** — Передаём чужие слова: сдвиг времён и изменение местоимений.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Утверждения\nSay/tell + (that) + сдвиг назад: Present→Past, Past→Past Perfect, will→would.\n\n*Пример:* He said (that) he was tired.\n\n### Вопросы и приказы\nAsk + if/whether или wh-word. Tell/ask + to + V: She told me to wait.\n\n*Пример:* She asked if I was ready.\n\n### Формулы\n- `said (that) + past tense`\n- `told + person + (that)`\n- `asked + if/wh-word + past`\n\n### Типичная ошибка\n❌ He said me that he was busy.\n✅ He told me that he was busy.",
+      "reading": "**Косвенная речь** — Передаём чужие слова: сдвиг времён и изменение местоимений.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Утверждения\nSay/tell + (that) + сдвиг назад: Present→Past, Past→Past Perfect, will→would.\n\n### Вопросы и приказы\nAsk + if/whether или wh-word. Tell/ask + to + V: She told me to wait.\n\n### Формулы\n- `said (that) + past tense`\n- `told + person + (that)`\n- `asked + if/wh-word + past`\n\n### Типичная ошибка\n❌ He said me that he was busy.\n✅ He told me that he was busy.",
       "keyPoints": [
         "Утверждения: Say/tell + (that) + сдвиг назад: Present→Past, Past→Past Perfect, will→would.",
         "Вопросы и приказы: Ask + if/whether или wh-word. Tell/ask + to + V: She told me to wait.",
@@ -28070,50 +28903,50 @@ const CURRICULUM = [
       {
         "question": "What is «said»?",
         "options": [
-          "отказался",
-          "утверждал",
-          "спросил",
-          "сказал"
+          "предложил",
+          "сказал",
+          "пообещал",
+          "отказался"
         ],
         "answer": "сказал"
       },
       {
         "question": "What is «told»?",
         "options": [
-          "спросил",
-          "объяснил",
+          "сказал (кому-то)",
           "признал",
-          "сказал (кому-то)"
+          "спросил",
+          "предложил"
         ],
         "answer": "сказал (кому-то)"
       },
       {
         "question": "What is «asked»?",
         "options": [
-          "спросил",
           "сказал",
-          "отказался",
-          "предупредил"
+          "спросил",
+          "сказал (кому-то)",
+          "объяснил"
         ],
         "answer": "спросил"
       },
       {
         "question": "What is «explained»?",
         "options": [
+          "отказался",
           "утверждал",
-          "сказал",
-          "сказал (кому-то)",
-          "объяснил"
+          "объяснил",
+          "сказал (кому-то)"
         ],
         "answer": "объяснил"
       },
       {
         "question": "What is «claimed»?",
         "options": [
-          "предложил",
-          "сказал (кому-то)",
+          "пообещал",
           "утверждал",
-          "признал"
+          "спросил",
+          "сказал"
         ],
         "answer": "утверждал"
       },
@@ -28433,7 +29266,10 @@ const CURRICULUM = [
           "which",
           "that",
           "where",
-          "whose"
+          "whose",
+          "defining",
+          "non-defining",
+          "clause"
         ],
         "mustIncludeAny": [
           [
@@ -28443,11 +29279,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Her brother works as a teacher."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «who, which, that, where»."
       },
       {
         "prompt": "Is the clause defining or non-defining?",
@@ -28457,7 +29292,10 @@ const CURRICULUM = [
           "which",
           "that",
           "where",
-          "whose"
+          "whose",
+          "defining",
+          "non-defining",
+          "clause"
         ],
         "mustIncludeAny": [
           [
@@ -28467,11 +29305,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to which and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «who, which, that, where»."
       },
       {
         "prompt": "Where is the place described?",
@@ -28481,7 +29318,10 @@ const CURRICULUM = [
           "which",
           "that",
           "where",
-          "whose"
+          "whose",
+          "defining",
+          "non-defining",
+          "clause"
         ],
         "mustIncludeAny": [
           [
@@ -28491,11 +29331,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Most events occur in an English-speaking country."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «who, which, that, where»."
       },
       {
         "prompt": "Whose possession is mentioned?",
@@ -28505,7 +29344,10 @@ const CURRICULUM = [
           "which",
           "that",
           "where",
-          "whose"
+          "whose",
+          "defining",
+          "non-defining",
+          "clause"
         ],
         "mustIncludeAny": [
           [
@@ -28515,11 +29357,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The oldest child is sixteen years old."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «who, which, that, where»."
       },
       {
         "prompt": "Can that be omitted?",
@@ -28529,7 +29370,10 @@ const CURRICULUM = [
           "which",
           "that",
           "where",
-          "whose"
+          "whose",
+          "defining",
+          "non-defining",
+          "clause"
         ],
         "mustIncludeAny": [
           [
@@ -28539,11 +29383,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about where."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «who, which, that, where»."
       }
     ],
     "speaking": [
@@ -28633,12 +29476,12 @@ const CURRICULUM = [
       {
         "word": "who",
         "trans": "который (люди)",
-        "example": "The woman who lives next door is a doctor."
+        "example": "People who exercise live longer."
       },
       {
         "word": "which",
         "trans": "который (вещи)",
-        "example": "London, where I was born, is beautiful."
+        "example": "Let's practise «which» in a full sentence."
       },
       {
         "word": "that",
@@ -28648,71 +29491,121 @@ const CURRICULUM = [
       {
         "word": "where",
         "trans": "где",
-        "example": "People who exercise live longer."
+        "example": "I need to remember «where» for homework."
       },
       {
         "word": "whose",
         "trans": "чей",
-        "example": "My brother, who is a lawyer, lives abroad."
+        "example": "I used «whose» in my written answer."
       },
       {
         "word": "defining",
         "trans": "определяющий",
-        "example": "The woman who lives next door is a doctor."
+        "example": "She asked me about «defining» during practice."
       },
       {
         "word": "non-defining",
         "trans": "неопределяющий",
-        "example": "London, where I was born, is beautiful."
+        "example": "«non-defining» fits well in a sentence about who, which, that, where."
       },
       {
         "word": "clause",
         "trans": "придаточное",
-        "example": "The film that we saw was great."
+        "example": "«clause» was new for me this week."
       },
       {
         "word": "omit",
         "trans": "опускать",
-        "example": "People who exercise live longer."
+        "example": "We discussed «omit» in class today."
       },
       {
         "word": "relative",
         "trans": "относительный",
-        "example": "My brother, who is a lawyer, lives abroad."
+        "example": "He repeated «relative» three times."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "My partner corrected my use of «practice»."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "My note says «review» means «повторение»."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "In our dialogue, «sentence» appeared twice."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "I linked «grammar» to other words I know."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I heard «vocabulary» in the listening exercise."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I looked up «speaking» in the dictionary."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "The example with «listening» was clear."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "Can you make a sentence with «writing»?"
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "«reading» helped me understand who, which, that, where."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I often use «homework» when I talk about who, which, that, where."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "The man ___ called is my uncle.",
+        "sentence": "The ___ that we saw was great",
         "options": [
-          "who",
-          "which"
+          "film",
+          "films"
         ],
-        "answer": "who"
+        "answer": "film"
       },
       {
-        "sentence": "The book ___ I read was great.",
+        "sentence": "___ who exercise live longer",
         "options": [
-          "which",
-          "who"
+          "People",
+          "Peoples"
         ],
-        "answer": "which"
+        "answer": "People"
       },
       {
-        "sentence": "This is the town ___ I grew up.",
+        "sentence": "My ___ who is a lawyer, lives abroad",
         "options": [
-          "where",
-          "which"
+          "brother",
+          "brothers"
         ],
-        "answer": "where"
+        "answer": "brother"
       },
       {
-        "sentence": "The woman ___ car was stolen called the police.",
+        "sentence": "The ___ who called",
         "options": [
-          "whose",
-          "who's"
+          "man",
+          "mans"
         ],
-        "answer": "whose"
+        "answer": "man"
       }
     ],
     "theoryCheck": [
@@ -28725,12 +29618,12 @@ const CURRICULUM = [
         "answer": "The man who called is my uncle."
       },
       {
-        "question": "Пример по теме «Who / Which / That»:",
+        "question": "Какое правило относится к «Where / Whose»?",
         "options": [
-          "The woman who lives next door is a doctor.",
-          "The man which called is my uncle."
+          "Where — для мест. Whose — чей. Non-defining: запятые, нельзя that, нельзя опускать.",
+          "Who — для людей. Which — для вещей. That — для обоих. Можно опустить that в объектной позиции."
         ],
-        "answer": "The woman who lives next door is a doctor."
+        "answer": "Where — для мест. Whose — чей. Non-defining: запятые, нельзя that, нельзя опускать."
       },
       {
         "question": "Какая формула относится к «Relative Clauses»?",
@@ -28744,48 +29637,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "The man ______ called is my uncle.",
-        "answer": "who",
+        "prompt": "The ______ which I read",
+        "answer": "book",
         "altAnswers": [
-          "who",
-          "Who"
+          "book",
+          "Book"
         ],
-        "hint": "Подсказка: слово из урока «who, which, that, where»."
+        "hint": "Подсказка: тема «who, which, that, where»."
       },
       {
         "id": 2,
-        "prompt": "The book ______ I read was great.",
-        "answer": "which",
+        "prompt": "the ______ where I grew up",
+        "answer": "town",
         "altAnswers": [
-          "Which",
-          "which"
+          "Town",
+          "town"
         ],
-        "hint": "Подсказка: слово из урока «who, which, that, where»."
+        "hint": "Подсказка: тема «who, which, that, where»."
       },
       {
         "id": 3,
-        "prompt": "This is the town ______ I grew up.",
-        "answer": "where",
+        "prompt": "whose ______",
+        "answer": "car",
         "altAnswers": [
-          "where",
-          "Where"
+          "car",
+          "Car"
         ],
-        "hint": "Подсказка: слово из урока «who, which, that, where»."
+        "hint": "Подсказка: тема «who, which, that, where»."
       },
       {
         "id": 4,
-        "prompt": "The woman ______ car was stolen called the police.",
-        "answer": "whose",
+        "prompt": "My ______ who lives in Paris",
+        "answer": "sister",
         "altAnswers": [
-          "Whose",
-          "whose"
+          "sister",
+          "Sister"
         ],
-        "hint": "Подсказка: слово из урока «who, which, that, where»."
+        "hint": "Подсказка: тема «who, which, that, where»."
       }
     ],
     "theory": {
       "intro": "Описываем людей и предметы с помощью who, which, that, where.",
-      "reading": "**Относительные придаточные** — Описываем людей и предметы с помощью who, which, that, where.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Who / Which / That\nWho — для людей. Which — для вещей. That — для обоих. Можно опустить that в объектной позиции.\n\n*Пример:* The woman who lives next door is a doctor.\n\n### Where / Whose\nWhere — для мест. Whose — чей. Non-defining: запятые, нельзя that, нельзя опускать.\n\n*Пример:* London, where I was born, is beautiful.\n\n### Формулы\n- `person + who/that + clause`\n- `thing + which/that + clause`\n- `place + where + clause`\n\n### Типичная ошибка\n❌ The man which called is my uncle.\n✅ The man who called is my uncle.",
+      "reading": "**Относительные придаточные** — Описываем людей и предметы с помощью who, which, that, where.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Who / Which / That\nWho — для людей. Which — для вещей. That — для обоих. Можно опустить that в объектной позиции.\n\n### Where / Whose\nWhere — для мест. Whose — чей. Non-defining: запятые, нельзя that, нельзя опускать.\n\n### Формулы\n- `person + who/that + clause`\n- `thing + which/that + clause`\n- `place + where + clause`\n\n### Типичная ошибка\n❌ The man which called is my uncle.\n✅ The man who called is my uncle.",
       "keyPoints": [
         "Who / Which / That: Who — для людей. Which — для вещей. That — для обоих. Можно опустить that в объе",
         "Where / Whose: Where — для мест. Whose — чей. Non-defining: запятые, нельзя that, нельзя опуска",
@@ -28799,47 +29692,47 @@ const CURRICULUM = [
       {
         "question": "What is «who»?",
         "options": [
+          "относительный",
           "который (люди)",
-          "определяющий",
-          "где",
-          "относительный"
+          "опускать",
+          "придаточное"
         ],
         "answer": "который (люди)"
       },
       {
         "question": "What is «which»?",
         "options": [
-          "где",
-          "который (универс.)",
-          "который (люди)",
-          "который (вещи)"
+          "опускать",
+          "относительный",
+          "который (вещи)",
+          "неопределяющий"
         ],
         "answer": "который (вещи)"
       },
       {
         "question": "What is «that»?",
         "options": [
-          "неопределяющий",
-          "опускать",
-          "который (вещи)",
-          "который (универс.)"
+          "где",
+          "который (универс.)",
+          "который (люди)",
+          "опускать"
         ],
         "answer": "который (универс.)"
       },
       {
         "question": "What is «where»?",
         "options": [
-          "определяющий",
-          "опускать",
+          "неопределяющий",
           "где",
-          "относительный"
+          "опускать",
+          "который (вещи)"
         ],
         "answer": "где"
       },
       {
         "question": "What is «whose»?",
         "options": [
-          "относительный",
+          "который (люди)",
           "который (вещи)",
           "придаточное",
           "чей"
@@ -29165,7 +30058,10 @@ const CURRICULUM = [
           "look for",
           "turn on",
           "turn off",
-          "give up"
+          "give up",
+          "find out",
+          "pick up",
+          "put on"
         ],
         "mustIncludeAny": [
           [
@@ -29175,11 +30071,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about turn off."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «get up, look for, turn on»."
       },
       {
         "prompt": "Is it separable?",
@@ -29189,7 +30084,10 @@ const CURRICULUM = [
           "look for",
           "turn on",
           "turn off",
-          "give up"
+          "give up",
+          "find out",
+          "pick up",
+          "put on"
         ],
         "mustIncludeAny": [
           [
@@ -29199,11 +30097,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about turn off."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «get up, look for, turn on»."
       },
       {
         "prompt": "What does it mean in context?",
@@ -29213,7 +30110,10 @@ const CURRICULUM = [
           "look for",
           "turn on",
           "turn off",
-          "give up"
+          "give up",
+          "find out",
+          "pick up",
+          "put on"
         ],
         "mustIncludeAny": [
           [
@@ -29223,11 +30123,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They describe their daily routine clearly."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «get up, look for, turn on»."
       },
       {
         "prompt": "Can you replace with a synonym?",
@@ -29237,7 +30136,10 @@ const CURRICULUM = [
           "look for",
           "turn on",
           "turn off",
-          "give up"
+          "give up",
+          "find out",
+          "pick up",
+          "put on"
         ],
         "mustIncludeAny": [
           [
@@ -29247,11 +30149,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on get up, look for, turn on."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «get up, look for, turn on»."
       },
       {
         "prompt": "Which particle changes the meaning?",
@@ -29261,7 +30162,10 @@ const CURRICULUM = [
           "look for",
           "turn on",
           "turn off",
-          "give up"
+          "give up",
+          "find out",
+          "pick up",
+          "put on"
         ],
         "mustIncludeAny": [
           [
@@ -29271,11 +30175,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss get up, look for, turn on in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «get up, look for, turn on»."
       }
     ],
     "speaking": [
@@ -29362,72 +30265,22 @@ const CURRICULUM = [
       {
         "word": "get up",
         "trans": "вставать",
-        "example": "I need to find out the truth."
+        "example": "I often use «get up» when I talk about get up, look for, turn on."
       },
       {
         "word": "look for",
         "trans": "искать",
-        "example": "She picked up the phone."
+        "example": "The teacher wrote «look for» on the board."
       },
       {
         "word": "turn on",
         "trans": "включать",
-        "example": "Don't give up!"
+        "example": "Let's practise «turn on» in a full sentence."
       },
       {
         "word": "turn off",
         "trans": "выключать",
-        "example": "He woke up late."
-      },
-      {
-        "word": "give up",
-        "trans": "сдаваться",
-        "example": "Turn it off."
-      },
-      {
-        "word": "find out",
-        "trans": "выяснять",
-        "example": "Put your coat on."
-      },
-      {
-        "word": "pick up",
-        "trans": "подбирать, забирать",
-        "example": "I need to find out the truth."
-      },
-      {
-        "word": "put on",
-        "trans": "надевать",
-        "example": "She picked up the phone."
-      },
-      {
-        "word": "take off",
-        "trans": "снимать",
-        "example": "Don't give up!"
-      },
-      {
-        "word": "wake up",
-        "trans": "просыпаться",
-        "example": "He woke up late."
-      },
-      {
-        "word": "get up",
-        "trans": "вставать",
-        "example": "Turn it off."
-      },
-      {
-        "word": "look for",
-        "trans": "искать",
-        "example": "Put your coat on."
-      },
-      {
-        "word": "turn on",
-        "trans": "включать",
-        "example": "I need to find out the truth."
-      },
-      {
-        "word": "turn off",
-        "trans": "выключать",
-        "example": "She picked up the phone."
+        "example": "«turn off» is a key word in this lesson on get up, look for, turn on."
       },
       {
         "word": "give up",
@@ -29437,61 +30290,111 @@ const CURRICULUM = [
       {
         "word": "find out",
         "trans": "выяснять",
-        "example": "He woke up late."
+        "example": "I used «find out» in my written answer."
       },
       {
         "word": "pick up",
         "trans": "подбирать, забирать",
-        "example": "Turn it off."
+        "example": "She asked me about «pick up» during practice."
       },
       {
         "word": "put on",
         "trans": "надевать",
-        "example": "Put your coat on."
+        "example": "«put on» fits well in a sentence about get up, look for, turn on."
       },
       {
         "word": "take off",
         "trans": "снимать",
-        "example": "I need to find out the truth."
+        "example": "«take off» was new for me this week."
       },
       {
         "word": "wake up",
         "trans": "просыпаться",
-        "example": "She picked up the phone."
+        "example": "We discussed «wake up» in class today."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "He repeated «practice» three times."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "My partner corrected my use of «review»."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "My note says «sentence» means «предложение»."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "In our dialogue, «grammar» appeared twice."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I linked «vocabulary» to other words I know."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I heard «speaking» in the listening exercise."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I looked up «listening» in the dictionary."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "The example with «writing» was clear."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "Can you make a sentence with «reading»?"
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "«homework» helped me understand get up, look for, turn on."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "I ___ at seven every day.",
+        "sentence": "___ give up",
         "options": [
-          "get up",
-          "get on"
+          "Don't",
+          "Don'ts"
         ],
-        "answer": "get up"
+        "answer": "Don't"
       },
       {
-        "sentence": "She is ___ her glasses.",
+        "sentence": "He ___ up late",
         "options": [
-          "looking for",
-          "looking at"
+          "woke",
+          "wokes"
         ],
-        "answer": "looking for"
+        "answer": "woke"
       },
       {
-        "sentence": "Please ___ the TV ___.",
+        "sentence": "___ it off",
         "options": [
-          "turn / off",
-          "turn / out"
+          "Turn",
+          "Turns"
         ],
-        "answer": "turn / off"
+        "answer": "Turn"
       },
       {
-        "sentence": "Don't ___ !",
+        "sentence": "___ your coat on",
         "options": [
-          "give up",
-          "give in"
+          "Put",
+          "Puts"
         ],
-        "answer": "give up"
+        "answer": "Put"
       }
     ],
     "theoryCheck": [
@@ -29504,12 +30407,12 @@ const CURRICULUM = [
         "answer": "I looked for my keys."
       },
       {
-        "question": "Пример по теме «Структура»:",
+        "question": "Какое правило относится к «Отделяемые»?",
         "options": [
-          "I need to find out the truth.",
-          "I looked my keys for."
+          "С местоимением частица отделяется: turn it on. Без: turn on the light.",
+          "Глагол + частица (up, off, on). Значение часто отличается от основного глагол."
         ],
-        "answer": "I need to find out the truth."
+        "answer": "С местоимением частица отделяется: turn it on. Без: turn on the light."
       },
       {
         "question": "Какая формула относится к «Phrasal Verbs»?",
@@ -29523,48 +30426,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I ______ at seven every day.",
-        "answer": "get up",
+        "prompt": "______ up",
+        "answer": "get",
         "altAnswers": [
-          "get up",
-          "Get up"
+          "Get",
+          "get"
         ],
-        "hint": "Подсказка: слово из урока «get up, look for, turn on»."
+        "hint": "Подсказка: тема «get up, look for, turn on»."
       },
       {
         "id": 2,
-        "prompt": "She is ______ her glasses.",
-        "answer": "looking for",
+        "prompt": "______ for",
+        "answer": "look",
         "altAnswers": [
-          "Looking for",
-          "looking for"
+          "Look",
+          "look"
         ],
-        "hint": "Подсказка: слово из урока «get up, look for, turn on»."
+        "hint": "Подсказка: тема «get up, look for, turn on»."
       },
       {
         "id": 3,
-        "prompt": "Please ______ the TV",
-        "answer": "turn / off",
+        "prompt": "______ it on",
+        "answer": "turn",
         "altAnswers": [
-          "Turn / off",
-          "turn / off"
+          "Turn",
+          "turn"
         ],
-        "hint": "Подсказка: слово из урока «get up, look for, turn on»."
+        "hint": "Подсказка: тема «get up, look for, turn on»."
       },
       {
         "id": 4,
-        "prompt": "Don't ______ !",
-        "answer": "give up",
+        "prompt": "______ up",
+        "answer": "give",
         "altAnswers": [
-          "give up",
-          "Give up"
+          "give",
+          "Give"
         ],
-        "hint": "Подсказка: слово из урока «get up, look for, turn on»."
+        "hint": "Подсказка: тема «get up, look for, turn on»."
       }
     ],
     "theory": {
       "intro": "Самые частые фразовые глаголы: отделяемые и неотделяемые.",
-      "reading": "**Фразовые глаголы 1** — Самые частые фразовые глаголы: отделяемые и неотделяемые.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Структура\nГлагол + частица (up, off, on). Значение часто отличается от основного глагол.\n\n*Пример:* I need to find out the truth.\n\n### Отделяемые\nС местоимением частица отделяется: turn it on. Без: turn on the light.\n\n*Пример:* She picked up the phone.\n\n### Формулы\n- `verb + particle = new meaning`\n- `separable: turn the light on / turn on the light`\n\n### Типичная ошибка\n❌ I looked my keys for.\n✅ I looked for my keys.",
+      "reading": "**Фразовые глаголы 1** — Самые частые фразовые глаголы: отделяемые и неотделяемые.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Структура\nГлагол + частица (up, off, on). Значение часто отличается от основного глагол.\n\n### Отделяемые\nС местоимением частица отделяется: turn it on. Без: turn on the light.\n\n### Формулы\n- `verb + particle = new meaning`\n- `separable: turn the light on / turn on the light`\n\n### Типичная ошибка\n❌ I looked my keys for.\n✅ I looked for my keys.",
       "keyPoints": [
         "Структура: Глагол + частица (up, off, on). Значение часто отличается от основного глагол.",
         "Отделяемые: С местоимением частица отделяется: turn it on. Без: turn on the light.",
@@ -29579,49 +30482,49 @@ const CURRICULUM = [
         "question": "What is «get up»?",
         "options": [
           "вставать",
+          "включать",
           "сдаваться",
-          "искать",
-          "выключать"
+          "надевать"
         ],
         "answer": "вставать"
       },
       {
         "question": "What is «look for»?",
         "options": [
-          "просыпаться",
-          "снимать",
           "искать",
-          "выяснять"
+          "подбирать, забирать",
+          "надевать",
+          "вставать"
         ],
         "answer": "искать"
       },
       {
         "question": "What is «turn on»?",
         "options": [
-          "включать",
-          "просыпаться",
-          "искать",
-          "сдаваться"
+          "вставать",
+          "надевать",
+          "выяснять",
+          "включать"
         ],
         "answer": "включать"
       },
       {
         "question": "What is «turn off»?",
         "options": [
-          "выключать",
           "надевать",
-          "выяснять",
-          "снимать"
+          "выключать",
+          "сдаваться",
+          "искать"
         ],
         "answer": "выключать"
       },
       {
         "question": "What is «give up»?",
         "options": [
+          "искать",
           "сдаваться",
-          "выяснять",
-          "снимать",
-          "просыпаться"
+          "выключать",
+          "снимать"
         ],
         "answer": "сдаваться"
       },
@@ -29829,15 +30732,7 @@ const CURRICULUM = [
         "If + past, would + V1",
         "If I were + noun, I would…"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "If I had more time, I would travel more.",
-            "If I were you, I would accept the offer."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "If I will have money, I would buy a car.",
         "right": "If I had money, I would buy a car."
@@ -29937,7 +30832,10 @@ const CURRICULUM = [
           "could",
           "unlikely",
           "imagine",
-          "lottery"
+          "lottery",
+          "abroad",
+          "change",
+          "afford"
         ],
         "mustIncludeAny": [
           [
@@ -29947,11 +30845,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to could and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Second conditional»."
       },
       {
         "prompt": "Is the situation real or imaginary?",
@@ -29961,7 +30858,10 @@ const CURRICULUM = [
           "could",
           "unlikely",
           "imagine",
-          "lottery"
+          "lottery",
+          "abroad",
+          "change",
+          "afford"
         ],
         "mustIncludeAny": [
           [
@@ -29971,11 +30871,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss second conditional in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Second conditional»."
       },
       {
         "prompt": "What would you change if you could?",
@@ -29985,7 +30884,10 @@ const CURRICULUM = [
           "could",
           "unlikely",
           "imagine",
-          "lottery"
+          "lottery",
+          "abroad",
+          "change",
+          "afford"
         ],
         "mustIncludeAny": [
           [
@@ -29995,11 +30897,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about imagine."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Second conditional»."
       },
       {
         "prompt": "Does the if-clause use past tense?",
@@ -30009,7 +30910,10 @@ const CURRICULUM = [
           "could",
           "unlikely",
           "imagine",
-          "lottery"
+          "lottery",
+          "abroad",
+          "change",
+          "afford"
         ],
         "mustIncludeAny": [
           [
@@ -30019,11 +30923,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss second conditional in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Second conditional»."
       },
       {
         "prompt": "What would happen if they won?",
@@ -30033,7 +30936,10 @@ const CURRICULUM = [
           "could",
           "unlikely",
           "imagine",
-          "lottery"
+          "lottery",
+          "abroad",
+          "change",
+          "afford"
         ],
         "mustIncludeAny": [
           [
@@ -30043,11 +30949,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "People use smartphones for work and study."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Second conditional»."
       }
     ],
     "speaking": [
@@ -30137,87 +31042,137 @@ const CURRICULUM = [
       {
         "word": "would",
         "trans": "бы (условное)",
-        "example": "If I had more time, I would travel more."
+        "example": "If I had money, I would buy a car."
       },
       {
         "word": "could",
         "trans": "мог бы",
-        "example": "If I were you, I would accept the offer."
+        "example": "I often use «could» when I talk about second conditional."
       },
       {
         "word": "unlikely",
         "trans": "маловероятный",
-        "example": "If I had more time, I would travel more."
+        "example": "The teacher wrote «unlikely» on the board."
       },
       {
         "word": "imagine",
         "trans": "представлять",
-        "example": "If I were you, I would accept the offer."
+        "example": "Let's practise «imagine» in a full sentence."
       },
       {
         "word": "lottery",
         "trans": "лотерея",
-        "example": "If I had more time, I would travel more."
+        "example": "«lottery» is a key word in this lesson on second conditional."
       },
       {
         "word": "abroad",
         "trans": "за границей",
-        "example": "If I were you, I would accept the offer."
+        "example": "I need to remember «abroad» for homework."
       },
       {
         "word": "change",
         "trans": "менять",
-        "example": "If I had more time, I would travel more."
+        "example": "I used «change» in my written answer."
       },
       {
         "word": "afford",
         "trans": "позволять себе",
-        "example": "If I were you, I would accept the offer."
+        "example": "She asked me about «afford» during practice."
       },
       {
         "word": "dream",
         "trans": "мечта",
-        "example": "If I had more time, I would travel more."
+        "example": "«dream» fits well in a sentence about second conditional."
       },
       {
         "word": "hypothetical",
         "trans": "гипотетический",
-        "example": "If I were you, I would accept the offer."
+        "example": "«hypothetical» was new for me this week."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "We discussed «practice» in class today."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "He repeated «review» three times."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "My partner corrected my use of «sentence»."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "My note says «grammar» means «грамматика»."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "In our dialogue, «vocabulary» appeared twice."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I linked «speaking» to other words I know."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I heard «listening» in the listening exercise."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I looked up «writing» in the dictionary."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "The example with «reading» was clear."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "Can you make a sentence with «homework»?"
       }
     ],
     "id": 41,
     "grammarCheck": [
       {
-        "sentence": "If I ___ rich, I would travel.",
+        "sentence": "If I were you, ___ wait",
         "options": [
-          "were",
-          "was"
+          "I'd",
+          "I'ds"
         ],
-        "answer": "were"
+        "answer": "I'd"
       },
       {
-        "sentence": "She would move if she ___ a job abroad.",
+        "sentence": "___ would you do",
         "options": [
-          "found",
-          "finds"
+          "What",
+          "Whats"
         ],
-        "answer": "found"
+        "answer": "What"
       },
       {
-        "sentence": "What would you do if you ___ the lottery?",
+        "sentence": "If I had ___ I'd come",
         "options": [
-          "won",
-          "win"
+          "time",
+          "times"
         ],
-        "answer": "won"
+        "answer": "time"
       },
       {
-        "sentence": "If they ___ harder, they would pass.",
+        "sentence": "She ___ live abroad",
         "options": [
-          "studied",
-          "study"
+          "would",
+          "woulds"
         ],
-        "answer": "studied"
+        "answer": "would"
       }
     ],
     "theoryCheck": [
@@ -30230,12 +31185,12 @@ const CURRICULUM = [
         "answer": "If I had money, I would buy a car."
       },
       {
-        "question": "Пример по теме «Structure»:",
+        "question": "Какое правило относится к «Were for all persons»?",
         "options": [
-          "If I had more time, I would travel more.",
-          "If I will have money, I would buy a car."
+          "If I were you… (formal/subjunctive). If she were rich…",
+          "If + past simple, would + verb. Unreal present/future."
         ],
-        "answer": "If I had more time, I would travel more."
+        "answer": "If I were you… (formal/subjunctive). If she were rich…"
       },
       {
         "question": "Какая формула относится к «Second conditional»?",
@@ -30249,48 +31204,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "If I ______ rich, I would travel.",
-        "answer": "were",
+        "prompt": "If they ______ they would help",
+        "answer": "knew",
         "altAnswers": [
-          "Were",
-          "were"
+          "knew",
+          "Knew"
         ],
-        "hint": "Подсказка: слово из урока «Second conditional»."
+        "hint": "Подсказка: тема «Second conditional»."
       },
       {
         "id": 2,
-        "prompt": "She would move if she ______ a job abroad.",
-        "answer": "found",
+        "prompt": "I ______ help if I could",
+        "answer": "would",
         "altAnswers": [
-          "found",
-          "Found"
+          "Would",
+          "would"
         ],
-        "hint": "Подсказка: слово из урока «Second conditional»."
+        "hint": "Подсказка: тема «Second conditional»."
       },
       {
         "id": 3,
-        "prompt": "What would you do if you ______ the lottery?",
-        "answer": "won",
+        "prompt": "If I had ______ I would buy a car",
+        "answer": "money",
         "altAnswers": [
-          "Won",
-          "won"
+          "Money",
+          "money"
         ],
-        "hint": "Подсказка: слово из урока «Second conditional»."
-      },
-      {
-        "id": 4,
-        "prompt": "If they ______ harder, they would pass.",
-        "answer": "studied",
-        "altAnswers": [
-          "studied",
-          "Studied"
-        ],
-        "hint": "Подсказка: слово из урока «Second conditional»."
+        "hint": "Подсказка: тема «Second conditional»."
       }
     ],
     "theory": {
       "intro": "Talk about unreal or unlikely present/future situations with If I were…, I would…",
-      "reading": "**Second conditional** — Talk about unreal or unlikely present/future situations with If I were…, I would…\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Structure\nIf + past simple, would + verb. Unreal present/future.\n\n*Пример:* If I had more time, I would travel more.\n\n### Were for all persons\nIf I were you… (formal/subjunctive). If she were rich…\n\n*Пример:* If I were you, I would accept the offer.\n\n### Формулы\n- `If + past, would + V1`\n- `If I were + noun, I would…`\n\n### Типичная ошибка\n❌ If I will have money, I would buy a car.\n✅ If I had money, I would buy a car.",
+      "reading": "**Second conditional** — Talk about unreal or unlikely present/future situations with If I were…, I would…\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Structure\nIf + past simple, would + verb. Unreal present/future.\n\n### Were for all persons\nIf I were you… (formal/subjunctive). If she were rich…\n\n### Формулы\n- `If + past, would + V1`\n- `If I were + noun, I would…`\n\n### Типичная ошибка\n❌ If I will have money, I would buy a car.\n✅ If I had money, I would buy a car.",
       "keyPoints": [
         "Structure: If + past simple, would + verb. Unreal present/future.",
         "Were for all persons: If I were you… (formal/subjunctive). If she were rich…",
@@ -30304,10 +31249,10 @@ const CURRICULUM = [
       {
         "question": "What is «would»?",
         "options": [
-          "бы (условное)",
-          "мечта",
-          "гипотетический",
-          "позволять себе"
+          "мог бы",
+          "лотерея",
+          "представлять",
+          "бы (условное)"
         ],
         "answer": "бы (условное)"
       },
@@ -30316,38 +31261,38 @@ const CURRICULUM = [
         "options": [
           "мог бы",
           "бы (условное)",
-          "за границей",
-          "гипотетический"
+          "гипотетический",
+          "мечта"
         ],
         "answer": "мог бы"
       },
       {
         "question": "What is «unlikely»?",
         "options": [
-          "менять",
-          "бы (условное)",
+          "гипотетический",
           "маловероятный",
-          "лотерея"
+          "мог бы",
+          "бы (условное)"
         ],
         "answer": "маловероятный"
       },
       {
         "question": "What is «imagine»?",
         "options": [
-          "менять",
-          "лотерея",
+          "позволять себе",
           "представлять",
-          "мог бы"
+          "лотерея",
+          "мечта"
         ],
         "answer": "представлять"
       },
       {
         "question": "What is «lottery»?",
         "options": [
-          "мечта",
-          "позволять себе",
           "менять",
-          "лотерея"
+          "мечта",
+          "лотерея",
+          "мог бы"
         ],
         "answer": "лотерея"
       },
@@ -30555,15 +31500,7 @@ const CURRICULUM = [
         "If + had + V3, would have + V3",
         "wouldn't have + V3 if + had + V3"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "If I had known, I would have helped.",
-            "If she had left earlier, she wouldn't have missed the train."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "If I knew, I would have called.",
         "right": "If I had known, I would have called."
@@ -30663,7 +31600,10 @@ const CURRICULUM = [
           "otherwise",
           "missed",
           "opportunity",
-          "luckily"
+          "luckily",
+          "unfortunately",
+          "outcome",
+          "avoid"
         ],
         "mustIncludeAny": [
           [
@@ -30673,11 +31613,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about opportunity."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Third conditional»."
       },
       {
         "prompt": "What regret is expressed?",
@@ -30687,7 +31626,10 @@ const CURRICULUM = [
           "otherwise",
           "missed",
           "opportunity",
-          "luckily"
+          "luckily",
+          "unfortunately",
+          "outcome",
+          "avoid"
         ],
         "mustIncludeAny": [
           [
@@ -30697,11 +31639,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on third conditional."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Third conditional»."
       },
       {
         "prompt": "Did the past event really happen?",
@@ -30711,7 +31652,10 @@ const CURRICULUM = [
           "otherwise",
           "missed",
           "opportunity",
-          "luckily"
+          "luckily",
+          "unfortunately",
+          "outcome",
+          "avoid"
         ],
         "mustIncludeAny": [
           [
@@ -30721,11 +31665,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The character spends too much time online."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Third conditional»."
       },
       {
         "prompt": "What wouldn't have happened?",
@@ -30735,7 +31678,10 @@ const CURRICULUM = [
           "otherwise",
           "missed",
           "opportunity",
-          "luckily"
+          "luckily",
+          "unfortunately",
+          "outcome",
+          "avoid"
         ],
         "mustIncludeAny": [
           [
@@ -30745,11 +31691,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "People use smartphones for work and study."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Third conditional»."
       },
       {
         "prompt": "Does if-clause use had + V3?",
@@ -30759,7 +31704,10 @@ const CURRICULUM = [
           "otherwise",
           "missed",
           "opportunity",
-          "luckily"
+          "luckily",
+          "unfortunately",
+          "outcome",
+          "avoid"
         ],
         "mustIncludeAny": [
           [
@@ -30769,11 +31717,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to otherwise and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Third conditional»."
       }
     ],
     "speaking": [
@@ -30863,87 +31810,137 @@ const CURRICULUM = [
       {
         "word": "regret",
         "trans": "сожаление",
-        "example": "If I had known, I would have helped."
+        "example": "Can you make a sentence with «regret»?"
       },
       {
         "word": "otherwise",
         "trans": "иначе",
-        "example": "If she had left earlier, she wouldn't have missed the train."
+        "example": "«otherwise» helped me understand third conditional."
       },
       {
         "word": "missed",
         "trans": "пропущенный",
-        "example": "If I had known, I would have helped."
+        "example": "I often use «missed» when I talk about third conditional."
       },
       {
         "word": "opportunity",
         "trans": "возможность",
-        "example": "If she had left earlier, she wouldn't have missed the train."
+        "example": "The teacher wrote «opportunity» on the board."
       },
       {
         "word": "luckily",
         "trans": "к счастью",
-        "example": "If I had known, I would have helped."
+        "example": "Let's practise «luckily» in a full sentence."
       },
       {
         "word": "unfortunately",
         "trans": "к сожалению",
-        "example": "If she had left earlier, she wouldn't have missed the train."
+        "example": "«unfortunately» is a key word in this lesson on third conditional."
       },
       {
         "word": "outcome",
         "trans": "результат",
-        "example": "If I had known, I would have helped."
+        "example": "I need to remember «outcome» for homework."
       },
       {
         "word": "avoid",
         "trans": "избежать",
-        "example": "If she had left earlier, she wouldn't have missed the train."
+        "example": "I used «avoid» in my written answer."
       },
       {
         "word": "realise",
         "trans": "понять",
-        "example": "If I had known, I would have helped."
+        "example": "She asked me about «realise» during practice."
       },
       {
         "word": "differently",
         "trans": "по-другому",
-        "example": "If she had left earlier, she wouldn't have missed the train."
+        "example": "«differently» fits well in a sentence about third conditional."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» was new for me this week."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "We discussed «review» in class today."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "He repeated «sentence» three times."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "My partner corrected my use of «grammar»."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "My note says «vocabulary» means «лексика»."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "In our dialogue, «speaking» appeared twice."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I linked «listening» to other words I know."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I heard «writing» in the listening exercise."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I looked up «reading» in the dictionary."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "The example with «homework» was clear."
       }
     ],
     "id": 42,
     "grammarCheck": [
       {
-        "sentence": "If I ___ earlier, I wouldn't have been late.",
+        "sentence": "If I had ___ I would have come",
         "options": [
-          "had left",
-          "left"
+          "known",
+          "knowns"
         ],
-        "answer": "had left"
+        "answer": "known"
       },
       {
-        "sentence": "She would have passed if she ___.",
+        "sentence": "She ___ have helped",
         "options": [
-          "had studied",
-          "studied"
+          "would",
+          "woulds"
         ],
-        "answer": "had studied"
+        "answer": "would"
       },
       {
-        "sentence": "If they had called, we ___ helped.",
+        "sentence": "If we had ___ earlier…",
         "options": [
-          "would have",
-          "would"
+          "left",
+          "lefts"
         ],
-        "answer": "would have"
+        "answer": "left"
       },
       {
-        "sentence": "What would you have done if you ___?",
+        "sentence": "I ___ have said that",
         "options": [
-          "had known",
-          "knew"
+          "wouldn't",
+          "wouldn'ts"
         ],
-        "answer": "had known"
+        "answer": "wouldn't"
       }
     ],
     "theoryCheck": [
@@ -30956,12 +31953,12 @@ const CURRICULUM = [
         "answer": "If I had known, I would have called."
       },
       {
-        "question": "Пример по теме «Structure»:",
+        "question": "Какое правило относится к «Regrets»?",
         "options": [
-          "If I had known, I would have helped.",
-          "If I knew, I would have called."
+          "I wish I had… expresses the same regret.",
+          "If + past perfect, would have + V3. Imaginary past."
         ],
-        "answer": "If I had known, I would have helped."
+        "answer": "I wish I had… expresses the same regret."
       },
       {
         "question": "Какая формула относится к «Third conditional»?",
@@ -30975,48 +31972,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "If I ______ earlier, I wouldn't have been late.",
-        "answer": "had left",
+        "prompt": "______ would you have done",
+        "answer": "What",
         "altAnswers": [
-          "had left",
-          "Had left"
+          "what",
+          "What"
         ],
-        "hint": "Подсказка: слово из урока «Third conditional»."
+        "hint": "Подсказка: тема «Third conditional»."
       },
       {
         "id": 2,
-        "prompt": "She would have passed if she ______ .",
-        "answer": "had studied",
+        "prompt": "He ______ have fallen if he had been careful",
+        "answer": "wouldn't",
         "altAnswers": [
-          "Had studied",
-          "had studied"
+          "wouldn't",
+          "Wouldn't"
         ],
-        "hint": "Подсказка: слово из урока «Third conditional»."
+        "hint": "Подсказка: тема «Third conditional»."
       },
       {
         "id": 3,
-        "prompt": "If they had called, we ______ helped.",
-        "answer": "would have",
+        "prompt": "If I had ______ I would have called",
+        "answer": "known",
         "altAnswers": [
-          "Would have",
-          "would have"
+          "Known",
+          "known"
         ],
-        "hint": "Подсказка: слово из урока «Third conditional»."
-      },
-      {
-        "id": 4,
-        "prompt": "What would you have done if you ______ ?",
-        "answer": "had known",
-        "altAnswers": [
-          "Had known",
-          "had known"
-        ],
-        "hint": "Подсказка: слово из урока «Third conditional»."
+        "hint": "Подсказка: тема «Third conditional»."
       }
     ],
     "theory": {
       "intro": "Talk about imaginary past outcomes with If I had known…, I would have…",
-      "reading": "**Third conditional** — Talk about imaginary past outcomes with If I had known…, I would have…\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Structure\nIf + past perfect, would have + V3. Imaginary past.\n\n*Пример:* If I had known, I would have helped.\n\n### Regrets\nI wish I had… expresses the same regret.\n\n*Пример:* If she had left earlier, she wouldn't have missed the train.\n\n### Формулы\n- `If + had + V3, would have + V3`\n- `wouldn't have + V3 if + had + V3`\n\n### Типичная ошибка\n❌ If I knew, I would have called.\n✅ If I had known, I would have called.",
+      "reading": "**Third conditional** — Talk about imaginary past outcomes with If I had known…, I would have…\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Structure\nIf + past perfect, would have + V3. Imaginary past.\n\n### Regrets\nI wish I had… expresses the same regret.\n\n### Формулы\n- `If + had + V3, would have + V3`\n- `wouldn't have + V3 if + had + V3`\n\n### Типичная ошибка\n❌ If I knew, I would have called.\n✅ If I had known, I would have called.",
       "keyPoints": [
         "Structure: If + past perfect, would have + V3. Imaginary past.",
         "Regrets: I wish I had… expresses the same regret.",
@@ -31030,29 +32017,29 @@ const CURRICULUM = [
       {
         "question": "What is «regret»?",
         "options": [
-          "по-другому",
+          "к сожалению",
           "результат",
           "сожаление",
-          "иначе"
+          "по-другому"
         ],
         "answer": "сожаление"
       },
       {
         "question": "What is «otherwise»?",
         "options": [
-          "пропущенный",
-          "результат",
+          "возможность",
           "иначе",
-          "по-другому"
+          "по-другому",
+          "к счастью"
         ],
         "answer": "иначе"
       },
       {
         "question": "What is «missed»?",
         "options": [
-          "по-другому",
+          "возможность",
           "пропущенный",
-          "сожаление",
+          "по-другому",
           "понять"
         ],
         "answer": "пропущенный"
@@ -31060,10 +32047,10 @@ const CURRICULUM = [
       {
         "question": "What is «opportunity»?",
         "options": [
-          "понять",
-          "сожаление",
-          "возможность",
-          "результат"
+          "пропущенный",
+          "иначе",
+          "избежать",
+          "возможность"
         ],
         "answer": "возможность"
       },
@@ -31071,9 +32058,9 @@ const CURRICULUM = [
         "question": "What is «luckily»?",
         "options": [
           "результат",
-          "к сожалению",
           "к счастью",
-          "сожаление"
+          "по-другому",
+          "иначе"
         ],
         "answer": "к счастью"
       },
@@ -31290,15 +32277,7 @@ const CURRICULUM = [
         "I wish + past (present unreal)",
         "I wish + past perfect (past regret)"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "I wish I spoke English better.",
-            "I wish I had taken that job."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I wish I can fly.",
         "right": "I wish I could fly."
@@ -31398,7 +32377,10 @@ const CURRICULUM = [
           "if only",
           "regret",
           "present",
-          "past"
+          "past",
+          "change",
+          "sooner",
+          "luck"
         ],
         "mustIncludeAny": [
           [
@@ -31408,11 +32390,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They describe their daily routine clearly."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Wish and if only»."
       },
       {
         "prompt": "Is it about present or past?",
@@ -31422,7 +32403,10 @@ const CURRICULUM = [
           "if only",
           "regret",
           "present",
-          "past"
+          "past",
+          "change",
+          "sooner",
+          "luck"
         ],
         "mustIncludeAny": [
           [
@@ -31432,11 +32416,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss wish and if only in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Wish and if only»."
       },
       {
         "prompt": "What do they regret?",
@@ -31446,7 +32429,10 @@ const CURRICULUM = [
           "if only",
           "regret",
           "present",
-          "past"
+          "past",
+          "change",
+          "sooner",
+          "luck"
         ],
         "mustIncludeAny": [
           [
@@ -31456,11 +32442,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The brother studies at university."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Wish and if only»."
       },
       {
         "prompt": "What would they change if only…?",
@@ -31470,7 +32455,10 @@ const CURRICULUM = [
           "if only",
           "regret",
           "present",
-          "past"
+          "past",
+          "change",
+          "sooner",
+          "luck"
         ],
         "mustIncludeAny": [
           [
@@ -31480,11 +32468,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss wish and if only in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Wish and if only»."
       },
       {
         "prompt": "Does wish use past tense?",
@@ -31494,7 +32481,10 @@ const CURRICULUM = [
           "if only",
           "regret",
           "present",
-          "past"
+          "past",
+          "change",
+          "sooner",
+          "luck"
         ],
         "mustIncludeAny": [
           [
@@ -31504,11 +32494,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to if only and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Wish and if only»."
       }
     ],
     "speaking": [
@@ -31598,87 +32587,129 @@ const CURRICULUM = [
       {
         "word": "wish",
         "trans": "желать",
-        "example": "I wish I spoke English better."
+        "example": "I wish I could fly."
       },
       {
         "word": "if only",
         "trans": "если бы только",
-        "example": "I wish I had taken that job."
+        "example": "Can you make a sentence with «if only»?"
       },
       {
         "word": "regret",
         "trans": "сожалеть",
-        "example": "I wish I spoke English better."
+        "example": "«regret» helped me understand wish and if only."
       },
       {
         "word": "present",
         "trans": "настоящее",
-        "example": "I wish I had taken that job."
+        "example": "I often use «present» when I talk about wish and if only."
       },
       {
         "word": "past",
         "trans": "прошлое",
-        "example": "I wish I spoke English better."
+        "example": "The teacher wrote «past» on the board."
       },
       {
         "word": "change",
         "trans": "изменить",
-        "example": "I wish I had taken that job."
+        "example": "Let's practise «change» in a full sentence."
       },
       {
         "word": "sooner",
         "trans": "раньше",
-        "example": "I wish I spoke English better."
+        "example": "«sooner» is a key word in this lesson on wish and if only."
       },
       {
         "word": "luck",
         "trans": "удача",
-        "example": "I wish I had taken that job."
+        "example": "I need to remember «luck» for homework."
       },
       {
         "word": "complain",
         "trans": "жаловаться",
-        "example": "I wish I spoke English better."
+        "example": "I used «complain» in my written answer."
       },
       {
         "word": "reality",
         "trans": "реальность",
-        "example": "I wish I had taken that job."
+        "example": "She asked me about «reality» during practice."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» fits well in a sentence about wish and if only."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» was new for me this week."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "We discussed «sentence» in class today."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "He repeated «grammar» three times."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "My partner corrected my use of «vocabulary»."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "My note says «speaking» means «говорение»."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "In our dialogue, «listening» appeared twice."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I linked «writing» to other words I know."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I heard «reading» in the listening exercise."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I looked up «homework» in the dictionary."
       }
     ],
     "id": 43,
     "grammarCheck": [
       {
-        "sentence": "I wish I ___ more time.",
+        "sentence": "If ___ I had known",
         "options": [
-          "had",
-          "have"
+          "only",
+          "onlys"
         ],
-        "answer": "had"
+        "answer": "only"
       },
       {
-        "sentence": "She wishes she ___ harder.",
+        "sentence": "I ___ I could help",
         "options": [
-          "had studied",
-          "studied"
+          "wish",
+          "wishs"
         ],
-        "answer": "had studied"
+        "answer": "wish"
       },
       {
-        "sentence": "If only it ___ stop raining!",
+        "sentence": "She ___ she lived abroad",
         "options": [
-          "would",
-          "will"
+          "wishes",
+          "wishe"
         ],
-        "answer": "would"
-      },
-      {
-        "sentence": "I wish I ___ to Paris.",
-        "options": [
-          "could go",
-          "can go"
-        ],
-        "answer": "could go"
+        "answer": "wishes"
       }
     ],
     "theoryCheck": [
@@ -31691,12 +32722,12 @@ const CURRICULUM = [
         "answer": "I wish I could fly."
       },
       {
-        "question": "Пример по теме «Present wish»:",
+        "question": "Какое правило относится к «Past regret»?",
         "options": [
-          "I wish I spoke English better.",
-          "I wish I can fly."
+          "I wish + past perfect. If only I had studied harder!",
+          "I wish + past simple (unreal present). I wish I had more time."
         ],
-        "answer": "I wish I spoke English better."
+        "answer": "I wish + past perfect. If only I had studied harder!"
       },
       {
         "question": "Какая формула относится к «Wish & if only»?",
@@ -31710,48 +32741,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I wish I ______ more time.",
-        "answer": "had",
+        "prompt": "I ______ it would stop",
+        "answer": "wish",
         "altAnswers": [
-          "Had",
-          "had"
+          "wish",
+          "Wish"
         ],
-        "hint": "Подсказка: слово из урока «Wish and if only»."
+        "hint": "Подсказка: тема «Wish and if only»."
       },
       {
         "id": 2,
-        "prompt": "She wishes she ______ harder.",
-        "answer": "had studied",
+        "prompt": "He ______ he hadn't made that mistake",
+        "answer": "wishes",
         "altAnswers": [
-          "Had studied",
-          "had studied"
+          "Wishes",
+          "wishes"
         ],
-        "hint": "Подсказка: слово из урока «Wish and if only»."
+        "hint": "Подсказка: тема «Wish and if only»."
       },
       {
         "id": 3,
-        "prompt": "If only it ______ stop raining!",
-        "answer": "would",
+        "prompt": "I wish I ______ fly",
+        "answer": "could",
         "altAnswers": [
-          "Would",
-          "would"
+          "Could",
+          "could"
         ],
-        "hint": "Подсказка: слово из урока «Wish and if only»."
-      },
-      {
-        "id": 4,
-        "prompt": "I wish I ______ to Paris.",
-        "answer": "could go",
-        "altAnswers": [
-          "could go",
-          "Could go"
-        ],
-        "hint": "Подсказка: слово из урока «Wish and if only»."
+        "hint": "Подсказка: тема «Wish and if only»."
       }
     ],
     "theory": {
       "intro": "Express wishes about present and regrets about the past.",
-      "reading": "**Wish и if only** — Express wishes about present and regrets about the past.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Present wish\nI wish + past simple (unreal present). I wish I had more time.\n\n*Пример:* I wish I spoke English better.\n\n### Past regret\nI wish + past perfect. If only I had studied harder!\n\n*Пример:* I wish I had taken that job.\n\n### Формулы\n- `I wish + past (present unreal)`\n- `I wish + past perfect (past regret)`\n\n### Типичная ошибка\n❌ I wish I can fly.\n✅ I wish I could fly.",
+      "reading": "**Wish и if only** — Express wishes about present and regrets about the past.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Present wish\nI wish + past simple (unreal present). I wish I had more time.\n\n### Past regret\nI wish + past perfect. If only I had studied harder!\n\n### Формулы\n- `I wish + past (present unreal)`\n- `I wish + past perfect (past regret)`\n\n### Типичная ошибка\n❌ I wish I can fly.\n✅ I wish I could fly.",
       "keyPoints": [
         "Present wish: I wish + past simple (unreal present). I wish I had more time.",
         "Past regret: I wish + past perfect. If only I had studied harder!",
@@ -31765,50 +32786,50 @@ const CURRICULUM = [
       {
         "question": "What is «wish»?",
         "options": [
+          "реальность",
+          "раньше",
           "желать",
-          "сожалеть",
-          "изменить",
-          "прошлое"
+          "если бы только"
         ],
         "answer": "желать"
       },
       {
         "question": "What is «if only»?",
         "options": [
-          "изменить",
+          "удача",
           "если бы только",
-          "прошлое",
-          "сожалеть"
+          "реальность",
+          "раньше"
         ],
         "answer": "если бы только"
       },
       {
         "question": "What is «regret»?",
         "options": [
-          "удача",
-          "жаловаться",
+          "желать",
           "сожалеть",
-          "настоящее"
+          "жаловаться",
+          "реальность"
         ],
         "answer": "сожалеть"
       },
       {
         "question": "What is «present»?",
         "options": [
-          "если бы только",
-          "реальность",
           "настоящее",
-          "желать"
+          "желать",
+          "изменить",
+          "реальность"
         ],
         "answer": "настоящее"
       },
       {
         "question": "What is «past»?",
         "options": [
-          "раньше",
-          "если бы только",
+          "изменить",
           "прошлое",
-          "настоящее"
+          "удача",
+          "желать"
         ],
         "answer": "прошлое"
       },
@@ -32004,15 +33025,7 @@ const CURRICULUM = [
         "have/get + object + V3",
         "have someone do something (active causative)"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "I had my hair cut yesterday.",
-            "I need to get my phone fixed."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I cut my hair yesterday at the salon.",
         "right": "I had my hair cut yesterday."
@@ -32112,7 +33125,10 @@ const CURRICULUM = [
           "get done",
           "repair",
           "service",
-          "haircut"
+          "haircut",
+          "clean",
+          "paint",
+          "deliver"
         ],
         "mustIncludeAny": [
           [
@@ -32122,11 +33138,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on causative have/get."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Causative have/get»."
       },
       {
         "prompt": "Who did the work for them?",
@@ -32156,7 +33171,10 @@ const CURRICULUM = [
           "get done",
           "repair",
           "service",
-          "haircut"
+          "haircut",
+          "clean",
+          "paint",
+          "deliver"
         ],
         "mustIncludeAny": [
           [
@@ -32166,11 +33184,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on causative have/get."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Causative have/get»."
       },
       {
         "prompt": "Where do they have their hair cut?",
@@ -32180,7 +33197,10 @@ const CURRICULUM = [
           "get done",
           "repair",
           "service",
-          "haircut"
+          "haircut",
+          "clean",
+          "paint",
+          "deliver"
         ],
         "mustIncludeAny": [
           [
@@ -32190,11 +33210,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They live in the city centre."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Causative have/get»."
       },
       {
         "prompt": "Have or get — which is used?",
@@ -32204,7 +33223,10 @@ const CURRICULUM = [
           "get done",
           "repair",
           "service",
-          "haircut"
+          "haircut",
+          "clean",
+          "paint",
+          "deliver"
         ],
         "mustIncludeAny": [
           [
@@ -32214,11 +33236,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from causative have/get."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Causative have/get»."
       }
     ],
     "speaking": [
@@ -32308,87 +33329,137 @@ const CURRICULUM = [
       {
         "word": "have done",
         "trans": "сделать (через кого-то)",
-        "example": "I had my hair cut yesterday."
+        "example": "I looked up «have done» in the dictionary."
       },
       {
         "word": "get done",
         "trans": "сделать (разг.)",
-        "example": "I need to get my phone fixed."
+        "example": "The example with «get done» was clear."
       },
       {
         "word": "repair",
         "trans": "ремонтировать",
-        "example": "I had my hair cut yesterday."
+        "example": "Can you make a sentence with «repair»?"
       },
       {
         "word": "service",
         "trans": "услуга",
-        "example": "I need to get my phone fixed."
+        "example": "«service» helped me understand causative have/get."
       },
       {
         "word": "haircut",
         "trans": "стрижка",
-        "example": "I had my hair cut yesterday."
+        "example": "I often use «haircut» when I talk about causative have/get."
       },
       {
         "word": "clean",
         "trans": "чистить",
-        "example": "I need to get my phone fixed."
+        "example": "The teacher wrote «clean» on the board."
       },
       {
         "word": "paint",
         "trans": "красить",
-        "example": "I had my hair cut yesterday."
+        "example": "Let's practise «paint» in a full sentence."
       },
       {
         "word": "deliver",
         "trans": "доставлять",
-        "example": "I need to get my phone fixed."
+        "example": "«deliver» is a key word in this lesson on causative have/get."
       },
       {
         "word": "install",
         "trans": "устанавливать",
-        "example": "I had my hair cut yesterday."
+        "example": "I need to remember «install» for homework."
       },
       {
         "word": "fix",
         "trans": "чинить",
-        "example": "I need to get my phone fixed."
+        "example": "I used «fix» in my written answer."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "She asked me about «practice» during practice."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» fits well in a sentence about causative have/get."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "«sentence» was new for me this week."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "We discussed «grammar» in class today."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "He repeated «vocabulary» three times."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "My partner corrected my use of «speaking»."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "My note says «listening» means «аудирование»."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "In our dialogue, «writing» appeared twice."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I linked «reading» to other words I know."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I heard «homework» in the listening exercise."
       }
     ],
     "id": 44,
     "grammarCheck": [
       {
-        "sentence": "I need to ___ my car repaired.",
+        "sentence": "I had my ___ cut",
         "options": [
-          "have",
-          "having"
+          "hair",
+          "hairs"
         ],
-        "answer": "have"
+        "answer": "hair"
       },
       {
-        "sentence": "She got her house ___.",
+        "sentence": "I ___ to get it fixed",
         "options": [
-          "painted",
-          "paint"
+          "need",
+          "needs"
         ],
-        "answer": "painted"
+        "answer": "need"
       },
       {
-        "sentence": "Where do you ___ your hair cut?",
+        "sentence": "She had her ___ painted",
         "options": [
-          "have",
-          "has"
+          "house",
+          "houses"
         ],
-        "answer": "have"
+        "answer": "house"
       },
       {
-        "sentence": "We had the windows ___.",
+        "sentence": "___ do you have it done",
         "options": [
-          "cleaned",
-          "clean"
+          "Where",
+          "Wheres"
         ],
-        "answer": "cleaned"
+        "answer": "Where"
       }
     ],
     "theoryCheck": [
@@ -32401,12 +33472,12 @@ const CURRICULUM = [
         "answer": "I had my hair cut yesterday."
       },
       {
-        "question": "Пример по теме «Have something done»:",
+        "question": "Какое правило относится к «Get something done»?",
         "options": [
-          "I had my hair cut yesterday.",
-          "I cut my hair yesterday at the salon."
+          "Get + object + past participle — more informal.",
+          "Have + object + past participle. Someone does it for you."
         ],
-        "answer": "I had my hair cut yesterday."
+        "answer": "Get + object + past participle — more informal."
       },
       {
         "question": "Какая формула относится к «Causative»?",
@@ -32420,48 +33491,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I need to ______ my car repaired.",
-        "answer": "have",
+        "prompt": "______ having the car serviced",
+        "answer": "We're",
         "altAnswers": [
-          "Have",
-          "have"
+          "We're",
+          "we're"
         ],
-        "hint": "Подсказка: слово из урока «Causative have/get»."
+        "hint": "Подсказка: тема «Causative have/get»."
       },
       {
         "id": 2,
-        "prompt": "She got her house ______ .",
-        "answer": "painted",
+        "prompt": "He is ______ his suit delivered",
+        "answer": "having",
         "altAnswers": [
-          "Painted",
-          "painted"
+          "having",
+          "Having"
         ],
-        "hint": "Подсказка: слово из урока «Causative have/get»."
+        "hint": "Подсказка: тема «Causative have/get»."
       },
       {
         "id": 3,
-        "prompt": "Where do you ______ your hair cut?",
-        "answer": "have",
+        "prompt": "I had my ______ cut yesterday",
+        "answer": "hair",
         "altAnswers": [
-          "Have",
-          "have"
+          "hair",
+          "Hair"
         ],
-        "hint": "Подсказка: слово из урока «Causative have/get»."
-      },
-      {
-        "id": 4,
-        "prompt": "We had the windows ______ .",
-        "answer": "cleaned",
-        "altAnswers": [
-          "Cleaned",
-          "cleaned"
-        ],
-        "hint": "Подсказка: слово из урока «Causative have/get»."
+        "hint": "Подсказка: тема «Causative have/get»."
       }
     ],
     "theory": {
       "intro": "Say someone else does a service for you with have/get something done.",
-      "reading": "**Causative** — Say someone else does a service for you with have/get something done.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Have something done\nHave + object + past participle. Someone does it for you.\n\n*Пример:* I had my hair cut yesterday.\n\n### Get something done\nGet + object + past participle — more informal.\n\n*Пример:* I need to get my phone fixed.\n\n### Формулы\n- `have/get + object + V3`\n- `have someone do something (active causative)`\n\n### Типичная ошибка\n❌ I cut my hair yesterday at the salon.\n✅ I had my hair cut yesterday.",
+      "reading": "**Causative** — Say someone else does a service for you with have/get something done.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Have something done\nHave + object + past participle. Someone does it for you.\n\n### Get something done\nGet + object + past participle — more informal.\n\n### Формулы\n- `have/get + object + V3`\n- `have someone do something (active causative)`\n\n### Типичная ошибка\n❌ I cut my hair yesterday at the salon.\n✅ I had my hair cut yesterday.",
       "keyPoints": [
         "Have something done: Have + object + past participle. Someone does it for you.",
         "Get something done: Get + object + past participle — more informal.",
@@ -32475,30 +33536,30 @@ const CURRICULUM = [
       {
         "question": "What is «have done»?",
         "options": [
-          "доставлять",
-          "красить",
-          "стрижка",
-          "сделать (через кого-то)"
+          "услуга",
+          "сделать (через кого-то)",
+          "сделать (разг.)",
+          "доставлять"
         ],
         "answer": "сделать (через кого-то)"
       },
       {
         "question": "What is «get done»?",
         "options": [
-          "чинить",
+          "красить",
+          "доставлять",
           "сделать (разг.)",
-          "услуга",
-          "сделать (через кого-то)"
+          "стрижка"
         ],
         "answer": "сделать (разг.)"
       },
       {
         "question": "What is «repair»?",
         "options": [
-          "сделать (через кого-то)",
-          "чистить",
           "устанавливать",
-          "ремонтировать"
+          "чинить",
+          "ремонтировать",
+          "сделать (разг.)"
         ],
         "answer": "ремонтировать"
       },
@@ -32506,8 +33567,8 @@ const CURRICULUM = [
         "question": "What is «service»?",
         "options": [
           "услуга",
-          "сделать (через кого-то)",
-          "ремонтировать",
+          "устанавливать",
+          "доставлять",
           "сделать (разг.)"
         ],
         "answer": "услуга"
@@ -32515,10 +33576,10 @@ const CURRICULUM = [
       {
         "question": "What is «haircut»?",
         "options": [
-          "сделать (разг.)",
           "сделать (через кого-то)",
-          "красить",
-          "стрижка"
+          "стрижка",
+          "чинить",
+          "чистить"
         ],
         "answer": "стрижка"
       },
@@ -32711,15 +33772,7 @@ const CURRICULUM = [
         "tense of be + V3",
         "has/have been + V3 (perfect passive)"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "The road is being repaired.",
-            "The decision was announced by the CEO."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "The letter has sent.",
         "right": "The letter has been sent."
@@ -32819,7 +33872,10 @@ const CURRICULUM = [
           "been",
           "published",
           "announced",
-          "completed"
+          "completed",
+          "discussed",
+          "issued",
+          "cancelled"
         ],
         "mustIncludeAny": [
           [
@@ -32829,11 +33885,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on passive across tenses."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive across tenses»."
       },
       {
         "prompt": "What was announced?",
@@ -32843,7 +33898,10 @@ const CURRICULUM = [
           "been",
           "published",
           "announced",
-          "completed"
+          "completed",
+          "discussed",
+          "issued",
+          "cancelled"
         ],
         "mustIncludeAny": [
           [
@@ -32853,11 +33911,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to been and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive across tenses»."
       },
       {
         "prompt": "Has it been completed?",
@@ -32867,7 +33924,10 @@ const CURRICULUM = [
           "been",
           "published",
           "announced",
-          "completed"
+          "completed",
+          "discussed",
+          "issued",
+          "cancelled"
         ],
         "mustIncludeAny": [
           [
@@ -32877,11 +33937,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss passive across tenses in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive across tenses»."
       },
       {
         "prompt": "What will be published?",
@@ -32891,7 +33950,10 @@ const CURRICULUM = [
           "been",
           "published",
           "announced",
-          "completed"
+          "completed",
+          "discussed",
+          "issued",
+          "cancelled"
         ],
         "mustIncludeAny": [
           [
@@ -32901,11 +33963,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about announced."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive across tenses»."
       },
       {
         "prompt": "Who was it done by?",
@@ -32915,7 +33976,10 @@ const CURRICULUM = [
           "been",
           "published",
           "announced",
-          "completed"
+          "completed",
+          "discussed",
+          "issued",
+          "cancelled"
         ],
         "mustIncludeAny": [
           [
@@ -32925,11 +33989,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The main character is a young student."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Passive across tenses»."
       }
     ],
     "speaking": [
@@ -33019,87 +34082,137 @@ const CURRICULUM = [
       {
         "word": "being",
         "trans": "being (процесс)",
-        "example": "The road is being repaired."
+        "example": "I heard «being» in the listening exercise."
       },
       {
         "word": "been",
         "trans": "been (завершённость)",
-        "example": "The decision was announced by the CEO."
+        "example": "The letter has been sent."
       },
       {
         "word": "published",
         "trans": "опубликованный",
-        "example": "The road is being repaired."
+        "example": "The example with «published» was clear."
       },
       {
         "word": "announced",
         "trans": "объявленный",
-        "example": "The decision was announced by the CEO."
+        "example": "Can you make a sentence with «announced»?"
       },
       {
         "word": "completed",
         "trans": "завершённый",
-        "example": "The road is being repaired."
+        "example": "«completed» helped me understand passive across tenses."
       },
       {
         "word": "discussed",
         "trans": "обсуждаемый",
-        "example": "The decision was announced by the CEO."
+        "example": "I often use «discussed» when I talk about passive across tenses."
       },
       {
         "word": "issued",
         "trans": "выпущенный",
-        "example": "The road is being repaired."
+        "example": "The teacher wrote «issued» on the board."
       },
       {
         "word": "cancelled",
         "trans": "отменённый",
-        "example": "The decision was announced by the CEO."
+        "example": "Let's practise «cancelled» in a full sentence."
       },
       {
         "word": "delayed",
         "trans": "задержанный",
-        "example": "The road is being repaired."
+        "example": "«delayed» is a key word in this lesson on passive across tenses."
       },
       {
         "word": "approved",
         "trans": "одобренный",
-        "example": "The decision was announced by the CEO."
+        "example": "I need to remember «approved» for homework."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "I used «practice» in my written answer."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "She asked me about «review» during practice."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "«sentence» fits well in a sentence about passive across tenses."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "«grammar» was new for me this week."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "We discussed «vocabulary» in class today."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "He repeated «speaking» three times."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "My partner corrected my use of «listening»."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "My note says «writing» means «письмо»."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "In our dialogue, «reading» appeared twice."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I linked «homework» to other words I know."
       }
     ],
     "id": 45,
     "grammarCheck": [
       {
-        "sentence": "The bridge ___ repaired now.",
+        "sentence": "It is ___ built",
         "options": [
-          "is being",
-          "is been"
+          "being",
+          "beings"
         ],
-        "answer": "is being"
+        "answer": "being"
       },
       {
-        "sentence": "The results ___ announced yesterday.",
+        "sentence": "It has ___ sent",
         "options": [
-          "were",
-          "was"
+          "been",
+          "beens"
         ],
-        "answer": "were"
+        "answer": "been"
       },
       {
-        "sentence": "Has the email ___ yet?",
+        "sentence": "It was ___ yesterday",
         "options": [
-          "been sent",
-          "sent"
+          "announced",
+          "announceds"
         ],
-        "answer": "been sent"
+        "answer": "announced"
       },
       {
-        "sentence": "The book will ___ next month.",
+        "sentence": "It ___ be completed soon",
         "options": [
-          "be published",
-          "publish"
+          "will",
+          "wills"
         ],
-        "answer": "be published"
+        "answer": "will"
       }
     ],
     "theoryCheck": [
@@ -33112,12 +34225,12 @@ const CURRICULUM = [
         "answer": "The letter has been sent."
       },
       {
-        "question": "Пример по теме «Tense forms»:",
+        "question": "Какое правило относится к «By-agent»?",
         "options": [
-          "The road is being repaired.",
-          "The letter has sent."
+          "Optional by-phrase when agent matters.",
+          "is done / was done / has been done / will be done / is being done"
         ],
-        "answer": "The road is being repaired."
+        "answer": "Optional by-phrase when agent matters."
       },
       {
         "question": "Какая формула относится к «Passive (all tenses)»?",
@@ -33131,48 +34244,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "The bridge ______ repaired now.",
-        "answer": "is being",
+        "prompt": "The ______ was cancelled",
+        "answer": "meeting",
         "altAnswers": [
-          "is being",
-          "Is being"
+          "meeting",
+          "Meeting"
         ],
-        "hint": "Подсказка: слово из урока «Passive across tenses»."
+        "hint": "Подсказка: тема «Passive across tenses»."
       },
       {
         "id": 2,
-        "prompt": "The results ______ announced yesterday.",
-        "answer": "were",
+        "prompt": "______ is spoken all over the world",
+        "answer": "English",
         "altAnswers": [
-          "Were",
-          "were"
+          "English",
+          "english"
         ],
-        "hint": "Подсказка: слово из урока «Passive across tenses»."
+        "hint": "Подсказка: тема «Passive across tenses»."
       },
       {
         "id": 3,
-        "prompt": "Has the email ______ yet?",
-        "answer": "been sent",
+        "prompt": "The ______ has been sent",
+        "answer": "letter",
         "altAnswers": [
-          "Been sent",
-          "been sent"
+          "letter",
+          "Letter"
         ],
-        "hint": "Подсказка: слово из урока «Passive across tenses»."
-      },
-      {
-        "id": 4,
-        "prompt": "The book will ______ next month.",
-        "answer": "be published",
-        "altAnswers": [
-          "Be published",
-          "be published"
-        ],
-        "hint": "Подсказка: слово из урока «Passive across tenses»."
+        "hint": "Подсказка: тема «Passive across tenses»."
       }
     ],
     "theory": {
       "intro": "Use passive voice in different tenses naturally.",
-      "reading": "**Пассив (все времена)** — Use passive voice in different tenses naturally.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Tense forms\nis done / was done / has been done / will be done / is being done\n\n*Пример:* The road is being repaired.\n\n### By-agent\nOptional by-phrase when agent matters.\n\n*Пример:* The decision was announced by the CEO.\n\n### Формулы\n- `tense of be + V3`\n- `has/have been + V3 (perfect passive)`\n\n### Типичная ошибка\n❌ The letter has sent.\n✅ The letter has been sent.",
+      "reading": "**Пассив (все времена)** — Use passive voice in different tenses naturally.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Tense forms\nis done / was done / has been done / will be done / is being done\n\n### By-agent\nOptional by-phrase when agent matters.\n\n### Формулы\n- `tense of be + V3`\n- `has/have been + V3 (perfect passive)`\n\n### Типичная ошибка\n❌ The letter has sent.\n✅ The letter has been sent.",
       "keyPoints": [
         "Tense forms: is done / was done / has been done / will be done / is being done",
         "By-agent: Optional by-phrase when agent matters.",
@@ -33186,10 +34289,10 @@ const CURRICULUM = [
       {
         "question": "What is «being»?",
         "options": [
-          "выпущенный",
           "been (завершённость)",
-          "завершённый",
-          "being (процесс)"
+          "being (процесс)",
+          "обсуждаемый",
+          "выпущенный"
         ],
         "answer": "being (процесс)"
       },
@@ -33197,39 +34300,39 @@ const CURRICULUM = [
         "question": "What is «been»?",
         "options": [
           "been (завершённость)",
-          "отменённый",
-          "выпущенный",
-          "being (процесс)"
+          "опубликованный",
+          "завершённый",
+          "одобренный"
         ],
         "answer": "been (завершённость)"
       },
       {
         "question": "What is «published»?",
         "options": [
-          "отменённый",
+          "опубликованный",
           "завершённый",
-          "одобренный",
-          "опубликованный"
+          "being (процесс)",
+          "been (завершённость)"
         ],
         "answer": "опубликованный"
       },
       {
         "question": "What is «announced»?",
         "options": [
-          "объявленный",
-          "опубликованный",
           "одобренный",
-          "обсуждаемый"
+          "завершённый",
+          "отменённый",
+          "объявленный"
         ],
         "answer": "объявленный"
       },
       {
         "question": "What is «completed»?",
         "options": [
-          "выпущенный",
-          "отменённый",
+          "завершённый",
           "одобренный",
-          "завершённый"
+          "being (процесс)",
+          "опубликованный"
         ],
         "answer": "завершённый"
       },
@@ -33423,15 +34526,7 @@ const CURRICULUM = [
         "Past continuous — background",
         "Past perfect — earlier past"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "I arrived at the station and realised I had forgotten my ticket.",
-            "She had already left when I called."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "When I arrived, she already left.",
         "right": "When I arrived, she had already left."
@@ -33531,7 +34626,10 @@ const CURRICULUM = [
           "flashback",
           "background",
           "sequence",
-          "suddenly"
+          "suddenly",
+          "meanwhile",
+          "earlier",
+          "already"
         ],
         "mustIncludeAny": [
           [
@@ -33541,11 +34639,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "He learns an important lesson about family."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Narrative tenses»."
       },
       {
         "prompt": "What had already happened?",
@@ -33555,7 +34652,10 @@ const CURRICULUM = [
           "flashback",
           "background",
           "sequence",
-          "suddenly"
+          "suddenly",
+          "meanwhile",
+          "earlier",
+          "already"
         ],
         "mustIncludeAny": [
           [
@@ -33565,11 +34665,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The character spends too much time online."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Narrative tenses»."
       },
       {
         "prompt": "What was happening in the background?",
@@ -33579,7 +34678,10 @@ const CURRICULUM = [
           "flashback",
           "background",
           "sequence",
-          "suddenly"
+          "suddenly",
+          "meanwhile",
+          "earlier",
+          "already"
         ],
         "mustIncludeAny": [
           [
@@ -33589,11 +34691,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Social media affects how friends communicate."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Narrative tenses»."
       },
       {
         "prompt": "When did the main event occur?",
@@ -33603,7 +34704,10 @@ const CURRICULUM = [
           "flashback",
           "background",
           "sequence",
-          "suddenly"
+          "suddenly",
+          "meanwhile",
+          "earlier",
+          "already"
         ],
         "mustIncludeAny": [
           [
@@ -33613,11 +34717,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on narrative tenses."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Narrative tenses»."
       },
       {
         "prompt": "What happened afterwards?",
@@ -33627,7 +34730,10 @@ const CURRICULUM = [
           "flashback",
           "background",
           "sequence",
-          "suddenly"
+          "suddenly",
+          "meanwhile",
+          "earlier",
+          "already"
         ],
         "mustIncludeAny": [
           [
@@ -33637,11 +34743,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They solve the problem together at the end."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Narrative tenses»."
       }
     ],
     "speaking": [
@@ -33727,87 +34832,137 @@ const CURRICULUM = [
       {
         "word": "narrative",
         "trans": "повествование",
-        "example": "I arrived at the station and realised I had forgotten my ticket."
+        "example": "I linked «narrative» to other words I know."
       },
       {
         "word": "flashback",
         "trans": "флешбэк",
-        "example": "She had already left when I called."
+        "example": "I heard «flashback» in the listening exercise."
       },
       {
         "word": "background",
         "trans": "фон",
-        "example": "I arrived at the station and realised I had forgotten my ticket."
+        "example": "I looked up «background» in the dictionary."
       },
       {
         "word": "sequence",
         "trans": "последовательность",
-        "example": "She had already left when I called."
+        "example": "The example with «sequence» was clear."
       },
       {
         "word": "suddenly",
         "trans": "внезапно",
-        "example": "I arrived at the station and realised I had forgotten my ticket."
+        "example": "Can you make a sentence with «suddenly»?"
       },
       {
         "word": "meanwhile",
         "trans": "тем временем",
-        "example": "She had already left when I called."
+        "example": "«meanwhile» helped me understand narrative tenses."
       },
       {
         "word": "earlier",
         "trans": "раньше",
-        "example": "I arrived at the station and realised I had forgotten my ticket."
+        "example": "I often use «earlier» when I talk about narrative tenses."
       },
       {
         "word": "already",
         "trans": "уже",
-        "example": "She had already left when I called."
+        "example": "When I arrived, she had already left."
       },
       {
         "word": "by then",
         "trans": "к тому времени",
-        "example": "I arrived at the station and realised I had forgotten my ticket."
+        "example": "Let's practise «by then» in a full sentence."
       },
       {
         "word": "afterwards",
         "trans": "после",
-        "example": "She had already left when I called."
+        "example": "«afterwards» is a key word in this lesson on narrative tenses."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "I need to remember «practice» for homework."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "I used «review» in my written answer."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "She asked me about «sentence» during practice."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "«grammar» fits well in a sentence about narrative tenses."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "«vocabulary» was new for me this week."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "We discussed «speaking» in class today."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "He repeated «listening» three times."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "My partner corrected my use of «writing»."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "My note says «reading» means «чтение»."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "In our dialogue, «homework» appeared twice."
       }
     ],
     "id": 46,
     "grammarCheck": [
       {
-        "sentence": "I ___ TV when he called.",
+        "sentence": "I had ___ eaten",
         "options": [
-          "was watching",
-          "watched"
+          "already",
+          "alreadys"
         ],
-        "answer": "was watching"
+        "answer": "already"
       },
       {
-        "sentence": "She ___ before we arrived.",
+        "sentence": "I was ___ outside",
         "options": [
-          "had left",
-          "left"
+          "waiting",
+          "waitings"
         ],
-        "answer": "had left"
+        "answer": "waiting"
       },
       {
-        "sentence": "They ___ the news and went home.",
+        "sentence": "___ the phone rang",
         "options": [
-          "heard",
-          "were hearing"
+          "Suddenly",
+          "Suddenlys"
         ],
-        "answer": "heard"
+        "answer": "Suddenly"
       },
       {
-        "sentence": "By then, I ___ my keys.",
+        "sentence": "By ___ he had left",
         "options": [
-          "had lost",
-          "lost"
+          "then",
+          "thens"
         ],
-        "answer": "had lost"
+        "answer": "then"
       }
     ],
     "theoryCheck": [
@@ -33820,12 +34975,12 @@ const CURRICULUM = [
         "answer": "When I arrived, she had already left."
       },
       {
-        "question": "Пример по теме «Past simple»:",
+        "question": "Какое правило относится к «Past perfect»?",
         "options": [
-          "I arrived at the station and realised I had forgotten my ticket.",
-          "When I arrived, she already left."
+          "Earlier background before another past action.",
+          "Main events in order."
         ],
-        "answer": "I arrived at the station and realised I had forgotten my ticket."
+        "answer": "Earlier background before another past action."
       },
       {
         "question": "Какая формула относится к «Narrative tenses»?",
@@ -33839,48 +34994,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I ______ TV when he called.",
-        "answer": "was watching",
+        "prompt": "______ it was raining",
+        "answer": "Meanwhile",
         "altAnswers": [
-          "was watching",
-          "Was watching"
+          "Meanwhile",
+          "meanwhile"
         ],
-        "hint": "Подсказка: слово из урока «Narrative tenses»."
+        "hint": "Подсказка: тема «Narrative tenses»."
       },
       {
         "id": 2,
-        "prompt": "She ______ before we arrived.",
-        "answer": "had left",
+        "prompt": "______ were you doing at eight",
+        "answer": "What",
         "altAnswers": [
-          "had left",
-          "Had left"
+          "what",
+          "What"
         ],
-        "hint": "Подсказка: слово из урока «Narrative tenses»."
+        "hint": "Подсказка: тема «Narrative tenses»."
       },
       {
         "id": 3,
-        "prompt": "They ______ the news and went home.",
-        "answer": "heard",
+        "prompt": "______ I arrived, she had already left",
+        "answer": "When",
         "altAnswers": [
-          "heard",
-          "Heard"
+          "When",
+          "when"
         ],
-        "hint": "Подсказка: слово из урока «Narrative tenses»."
-      },
-      {
-        "id": 4,
-        "prompt": "By then, I ______ my keys.",
-        "answer": "had lost",
-        "altAnswers": [
-          "Had lost",
-          "had lost"
-        ],
-        "hint": "Подсказка: слово из урока «Narrative tenses»."
+        "hint": "Подсказка: тема «Narrative tenses»."
       }
     ],
     "theory": {
       "intro": "Tell stories mixing past simple, past continuous, and past perfect.",
-      "reading": "**Narrative tenses** — Tell stories mixing past simple, past continuous, and past perfect.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Past simple\nMain events in order.\n\n*Пример:* I arrived at the station and realised I had forgotten my ticket.\n\n### Past perfect\nEarlier background before another past action.\n\n*Пример:* She had already left when I called.\n\n### Формулы\n- `Past simple — main events`\n- `Past continuous — background`\n- `Past perfect — earlier past`\n\n### Типичная ошибка\n❌ When I arrived, she already left.\n✅ When I arrived, she had already left.",
+      "reading": "**Narrative tenses** — Tell stories mixing past simple, past continuous, and past perfect.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Past simple\nMain events in order.\n\n### Past perfect\nEarlier background before another past action.\n\n### Формулы\n- `Past simple — main events`\n- `Past continuous — background`\n- `Past perfect — earlier past`\n\n### Типичная ошибка\n❌ When I arrived, she already left.\n✅ When I arrived, she had already left.",
       "keyPoints": [
         "Past simple: Main events in order.",
         "Past perfect: Earlier background before another past action.",
@@ -33894,40 +35039,40 @@ const CURRICULUM = [
       {
         "question": "What is «narrative»?",
         "options": [
-          "последовательность",
+          "уже",
+          "тем временем",
           "повествование",
-          "флешбэк",
-          "раньше"
+          "флешбэк"
         ],
         "answer": "повествование"
       },
       {
         "question": "What is «flashback»?",
         "options": [
-          "к тому времени",
-          "раньше",
+          "после",
           "флешбэк",
-          "внезапно"
+          "фон",
+          "повествование"
         ],
         "answer": "флешбэк"
       },
       {
         "question": "What is «background»?",
         "options": [
-          "внезапно",
-          "уже",
-          "флешбэк",
-          "фон"
+          "раньше",
+          "фон",
+          "повествование",
+          "флешбэк"
         ],
         "answer": "фон"
       },
       {
         "question": "What is «sequence»?",
         "options": [
-          "последовательность",
-          "фон",
+          "флешбэк",
           "после",
-          "раньше"
+          "внезапно",
+          "последовательность"
         ],
         "answer": "последовательность"
       },
@@ -33935,8 +35080,8 @@ const CURRICULUM = [
         "question": "What is «suddenly»?",
         "options": [
           "последовательность",
-          "к тому времени",
           "после",
+          "фон",
           "внезапно"
         ],
         "answer": "внезапно"
@@ -34136,15 +35281,7 @@ const CURRICULUM = [
         "should/ought to + V1",
         "had better (+ not) + V1"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "You should drink more water.",
-            "You'd better not be late."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "You should to go home.",
         "right": "You should go home."
@@ -34244,7 +35381,10 @@ const CURRICULUM = [
           "ought to",
           "had better",
           "advice",
-          "recommend"
+          "recommend",
+          "suggest",
+          "healthy",
+          "avoid"
         ],
         "mustIncludeAny": [
           [
@@ -34254,11 +35394,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "His friend recommends joining a sports club."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Giving advice»."
       },
       {
         "prompt": "What ought they to avoid?",
@@ -34268,7 +35407,10 @@ const CURRICULUM = [
           "ought to",
           "had better",
           "advice",
-          "recommend"
+          "recommend",
+          "suggest",
+          "healthy",
+          "avoid"
         ],
         "mustIncludeAny": [
           [
@@ -34278,11 +35420,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from giving advice."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Giving advice»."
       },
       {
         "prompt": "Is had better a warning?",
@@ -34292,7 +35433,10 @@ const CURRICULUM = [
           "ought to",
           "had better",
           "advice",
-          "recommend"
+          "recommend",
+          "suggest",
+          "healthy",
+          "avoid"
         ],
         "mustIncludeAny": [
           [
@@ -34302,11 +35446,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on giving advice."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Giving advice»."
       },
       {
         "prompt": "What does the doctor recommend?",
@@ -34316,7 +35459,10 @@ const CURRICULUM = [
           "ought to",
           "had better",
           "advice",
-          "recommend"
+          "recommend",
+          "suggest",
+          "healthy",
+          "avoid"
         ],
         "mustIncludeAny": [
           [
@@ -34326,11 +35472,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The brother studies at university."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Giving advice»."
       },
       {
         "prompt": "What suggestion is made?",
@@ -34340,7 +35485,10 @@ const CURRICULUM = [
           "ought to",
           "had better",
           "advice",
-          "recommend"
+          "recommend",
+          "suggest",
+          "healthy",
+          "avoid"
         ],
         "mustIncludeAny": [
           [
@@ -34350,11 +35498,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to ought to and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Giving advice»."
       }
     ],
     "speaking": [
@@ -34444,87 +35591,137 @@ const CURRICULUM = [
       {
         "word": "should",
         "trans": "следует",
-        "example": "You should drink more water."
+        "example": "You should go home."
       },
       {
         "word": "ought to",
         "trans": "следовало бы",
-        "example": "You'd better not be late."
+        "example": "I linked «ought to» to other words I know."
       },
       {
         "word": "had better",
         "trans": "лучше бы",
-        "example": "You should drink more water."
+        "example": "I heard «had better» in the listening exercise."
       },
       {
         "word": "advice",
         "trans": "совет",
-        "example": "You'd better not be late."
+        "example": "I looked up «advice» in the dictionary."
       },
       {
         "word": "recommend",
         "trans": "рекомендовать",
-        "example": "You should drink more water."
+        "example": "The example with «recommend» was clear."
       },
       {
         "word": "suggest",
         "trans": "предлагать",
-        "example": "You'd better not be late."
+        "example": "Can you make a sentence with «suggest»?"
       },
       {
         "word": "healthy",
         "trans": "здоровый",
-        "example": "You should drink more water."
+        "example": "«healthy» helped me understand giving advice."
       },
       {
         "word": "avoid",
         "trans": "избегать",
-        "example": "You'd better not be late."
+        "example": "I often use «avoid» when I talk about giving advice."
       },
       {
         "word": "warning",
         "trans": "предупреждение",
-        "example": "You should drink more water."
+        "example": "The teacher wrote «warning» on the board."
       },
       {
         "word": "responsible",
         "trans": "ответственный",
-        "example": "You'd better not be late."
+        "example": "Let's practise «responsible» in a full sentence."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» is a key word in this lesson on giving advice."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "I need to remember «review» for homework."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I used «sentence» in my written answer."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "She asked me about «grammar» during practice."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "«vocabulary» fits well in a sentence about giving advice."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "«speaking» was new for me this week."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "We discussed «listening» in class today."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "He repeated «writing» three times."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "My partner corrected my use of «reading»."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "My note says «homework» means «домашка»."
       }
     ],
     "id": 47,
     "grammarCheck": [
       {
-        "sentence": "You ___ see a doctor.",
+        "sentence": "You should ___",
         "options": [
-          "should",
-          "should to"
+          "rest",
+          "rests"
         ],
-        "answer": "should"
+        "answer": "rest"
       },
       {
-        "sentence": "She ought ___ more sleep.",
+        "sentence": "You ___ to try it",
         "options": [
-          "to get",
-          "get"
+          "ought",
+          "oughts"
         ],
-        "answer": "to get"
+        "answer": "ought"
       },
       {
-        "sentence": "We'd better ___ now.",
+        "sentence": "___ better hurry",
         "options": [
-          "leave",
-          "to leave"
+          "You'd",
+          "You'ds"
         ],
-        "answer": "leave"
+        "answer": "You'd"
       },
       {
-        "sentence": "You shouldn't ___ so much sugar.",
+        "sentence": "I ___ taking a break",
         "options": [
-          "eat",
-          "eating"
+          "suggest",
+          "suggests"
         ],
-        "answer": "eat"
+        "answer": "suggest"
       }
     ],
     "theoryCheck": [
@@ -34537,12 +35734,12 @@ const CURRICULUM = [
         "answer": "You should go home."
       },
       {
-        "question": "Пример по теме «Should / ought to»:",
+        "question": "Какое правило относится к «Had better»?",
         "options": [
-          "You should drink more water.",
-          "You should to go home."
+          "Strong advice or warning: You'd better hurry!",
+          "General advice: You should rest. You ought to see a doctor."
         ],
-        "answer": "You should drink more water."
+        "answer": "Strong advice or warning: You'd better hurry!"
       },
       {
         "question": "Какая формула относится к «Giving advice»?",
@@ -34556,48 +35753,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "You ______ see a doctor.",
-        "answer": "should",
+        "prompt": "You ______ worry",
+        "answer": "shouldn't",
         "altAnswers": [
-          "should",
-          "Should"
+          "Shouldn't",
+          "shouldn't"
         ],
-        "hint": "Подсказка: слово из урока «Giving advice»."
+        "hint": "Подсказка: тема «Giving advice»."
       },
       {
         "id": 2,
-        "prompt": "She ought ______ more sleep.",
-        "answer": "to get",
+        "prompt": "He had ______ be careful",
+        "answer": "better",
         "altAnswers": [
-          "To get",
-          "to get"
+          "better",
+          "Better"
         ],
-        "hint": "Подсказка: слово из урока «Giving advice»."
+        "hint": "Подсказка: тема «Giving advice»."
       },
       {
         "id": 3,
-        "prompt": "We'd better ______ now.",
-        "answer": "leave",
+        "prompt": "You should go ______",
+        "answer": "home",
         "altAnswers": [
-          "Leave",
-          "leave"
+          "home",
+          "Home"
         ],
-        "hint": "Подсказка: слово из урока «Giving advice»."
-      },
-      {
-        "id": 4,
-        "prompt": "You shouldn't ______ so much sugar.",
-        "answer": "eat",
-        "altAnswers": [
-          "eat",
-          "Eat"
-        ],
-        "hint": "Подсказка: слово из урока «Giving advice»."
+        "hint": "Подсказка: тема «Giving advice»."
       }
     ],
     "theory": {
       "intro": "Give recommendations with should, ought to, and had better.",
-      "reading": "**Советы (should/ought)** — Give recommendations with should, ought to, and had better.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Should / ought to\nGeneral advice: You should rest. You ought to see a doctor.\n\n*Пример:* You should drink more water.\n\n### Had better\nStrong advice or warning: You'd better hurry!\n\n*Пример:* You'd better not be late.\n\n### Формулы\n- `should/ought to + V1`\n- `had better (+ not) + V1`\n\n### Типичная ошибка\n❌ You should to go home.\n✅ You should go home.",
+      "reading": "**Советы (should/ought)** — Give recommendations with should, ought to, and had better.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Should / ought to\nGeneral advice: You should rest. You ought to see a doctor.\n\n### Had better\nStrong advice or warning: You'd better hurry!\n\n### Формулы\n- `should/ought to + V1`\n- `had better (+ not) + V1`\n\n### Типичная ошибка\n❌ You should to go home.\n✅ You should go home.",
       "keyPoints": [
         "Should / ought to: General advice: You should rest. You ought to see a doctor.",
         "Had better: Strong advice or warning: You'd better hurry!",
@@ -34611,19 +35798,19 @@ const CURRICULUM = [
       {
         "question": "What is «should»?",
         "options": [
-          "рекомендовать",
-          "предлагать",
           "следует",
-          "здоровый"
+          "предупреждение",
+          "следовало бы",
+          "ответственный"
         ],
         "answer": "следует"
       },
       {
         "question": "What is «ought to»?",
         "options": [
-          "следует",
+          "избегать",
           "следовало бы",
-          "лучше бы",
+          "следует",
           "предлагать"
         ],
         "answer": "следовало бы"
@@ -34632,29 +35819,29 @@ const CURRICULUM = [
         "question": "What is «had better»?",
         "options": [
           "лучше бы",
-          "избегать",
-          "следует",
-          "здоровый"
+          "ответственный",
+          "следовало бы",
+          "рекомендовать"
         ],
         "answer": "лучше бы"
       },
       {
         "question": "What is «advice»?",
         "options": [
-          "предлагать",
+          "предупреждение",
           "совет",
-          "следует",
-          "ответственный"
+          "предлагать",
+          "следует"
         ],
         "answer": "совет"
       },
       {
         "question": "What is «recommend»?",
         "options": [
+          "ответственный",
           "избегать",
-          "предупреждение",
           "рекомендовать",
-          "предлагать"
+          "совет"
         ],
         "answer": "рекомендовать"
       },
@@ -34857,15 +36044,7 @@ const CURRICULUM = [
         "Technology has changed + noun",
         "spend time on + app/site"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "I check my emails on my phone every morning.",
-            "Streaming has replaced DVDs for many people."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I am use my laptop every day.",
         "right": "I use my laptop every day."
@@ -34965,7 +36144,10 @@ const CURRICULUM = [
           "app",
           "online",
           "password",
-          "update"
+          "update",
+          "download",
+          "stream",
+          "privacy"
         ],
         "mustIncludeAny": [
           [
@@ -34975,11 +36157,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from technology and digital life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Technology and digital life»."
       },
       {
         "prompt": "How much time do they spend online?",
@@ -34999,7 +36180,10 @@ const CURRICULUM = [
           "app",
           "online",
           "password",
-          "update"
+          "update",
+          "download",
+          "stream",
+          "privacy"
         ],
         "mustIncludeAny": [
           [
@@ -35009,11 +36193,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Social media affects how friends communicate."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Technology and digital life»."
       },
       {
         "prompt": "How has technology changed something?",
@@ -35023,7 +36206,10 @@ const CURRICULUM = [
           "app",
           "online",
           "password",
-          "update"
+          "update",
+          "download",
+          "stream",
+          "privacy"
         ],
         "mustIncludeAny": [
           [
@@ -35033,11 +36219,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The character spends too much time online."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Technology and digital life»."
       },
       {
         "prompt": "What problem do they mention?",
@@ -35047,7 +36232,10 @@ const CURRICULUM = [
           "app",
           "online",
           "password",
-          "update"
+          "update",
+          "download",
+          "stream",
+          "privacy"
         ],
         "mustIncludeAny": [
           [
@@ -35057,11 +36245,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from technology and digital life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Technology and digital life»."
       }
     ],
     "speaking": [
@@ -35141,93 +36328,170 @@ const CURRICULUM = [
           "I check my emails on my phone every morning."
         ],
         "hintWrong": "Развёрнутый ответ по заданию на английском."
+      },
+      {
+        "task": "B1 checkpoint: 3-минутный монолог — мнение, опыт (Present Perfect), план (going to/will), один условный.",
+        "minWords": 8,
+        "useSpeech": true,
+        "topicKeywords": [
+          "device",
+          "app",
+          "online",
+          "password",
+          "update",
+          "download",
+          "stream",
+          "privacy"
+        ],
+        "mustIncludeAny": [
+          [
+            "device",
+            "app",
+            "online",
+            "password"
+          ]
+        ],
+        "acceptableAnswers": [
+          "I check my emails on my phone every morning."
+        ],
+        "hintWrong": "Развёрнутый ответ по заданию на английском."
       }
     ],
     "flashcards": [
       {
         "word": "device",
         "trans": "устройство",
-        "example": "I check my emails on my phone every morning."
+        "example": "My note says «device» means «устройство»."
       },
       {
         "word": "app",
         "trans": "приложение",
-        "example": "Streaming has replaced DVDs for many people."
+        "example": "In our dialogue, «app» appeared twice."
       },
       {
         "word": "online",
         "trans": "онлайн",
-        "example": "I check my emails on my phone every morning."
+        "example": "I linked «online» to other words I know."
       },
       {
         "word": "password",
         "trans": "пароль",
-        "example": "Streaming has replaced DVDs for many people."
+        "example": "I heard «password» in the listening exercise."
       },
       {
         "word": "update",
         "trans": "обновление",
-        "example": "I check my emails on my phone every morning."
+        "example": "I looked up «update» in the dictionary."
       },
       {
         "word": "download",
         "trans": "скачивать",
-        "example": "Streaming has replaced DVDs for many people."
+        "example": "The example with «download» was clear."
       },
       {
         "word": "stream",
         "trans": "стримить",
-        "example": "I check my emails on my phone every morning."
+        "example": "Can you make a sentence with «stream»?"
       },
       {
         "word": "privacy",
         "trans": "конфиденциальность",
-        "example": "Streaming has replaced DVDs for many people."
+        "example": "«privacy» helped me understand technology and digital life."
       },
       {
         "word": "battery",
         "trans": "батарея",
-        "example": "I check my emails on my phone every morning."
+        "example": "I often use «battery» when I talk about technology and digital life."
       },
       {
         "word": "notification",
         "trans": "уведомление",
-        "example": "Streaming has replaced DVDs for many people."
+        "example": "The teacher wrote «notification» on the board."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "Let's practise «practice» in a full sentence."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» is a key word in this lesson on technology and digital life."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I need to remember «sentence» for homework."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "I used «grammar» in my written answer."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "She asked me about «vocabulary» during practice."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "«speaking» fits well in a sentence about technology and digital life."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "«listening» was new for me this week."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "We discussed «writing» in class today."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "He repeated «reading» three times."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "My partner corrected my use of «homework»."
       }
     ],
     "id": 48,
     "grammarCheck": [
       {
-        "sentence": "I ___ my phone too much.",
+        "sentence": "I ___ to charge my phone",
         "options": [
-          "use",
-          "am use"
+          "need",
+          "needs"
         ],
-        "answer": "use"
+        "answer": "need"
       },
       {
-        "sentence": "Have you ___ the latest update?",
+        "sentence": "I ___ too much time online",
         "options": [
-          "downloaded",
-          "download"
+          "spend",
+          "spends"
         ],
-        "answer": "downloaded"
+        "answer": "spend"
       },
       {
-        "sentence": "She spends hours ___ videos.",
+        "sentence": "Have you ___ the app",
         "options": [
-          "watching",
-          "to watch"
+          "updated",
+          "updateds"
         ],
-        "answer": "watching"
+        "answer": "updated"
       },
       {
-        "sentence": "Technology has ___ our lives.",
+        "sentence": "My ___ is low",
         "options": [
-          "changed",
-          "change"
+          "battery",
+          "batterys"
         ],
-        "answer": "changed"
+        "answer": "battery"
       }
     ],
     "theoryCheck": [
@@ -35240,12 +36504,12 @@ const CURRICULUM = [
         "answer": "I use my laptop every day."
       },
       {
-        "question": "Пример по теме «Daily tech»:",
+        "question": "Какое правило относится к «Changes»?",
         "options": [
-          "I check my emails on my phone every morning.",
-          "I am use my laptop every day."
+          "Present perfect for changes: Technology has changed how we work.",
+          "I use my phone to… / I spend time on social media."
         ],
-        "answer": "I check my emails on my phone every morning."
+        "answer": "Present perfect for changes: Technology has changed how we work."
       },
       {
         "question": "Какая формула относится к «Technology»?",
@@ -35259,48 +36523,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I ______ my phone too much.",
-        "answer": "use",
+        "prompt": "______ has changed everything",
+        "answer": "Technology",
         "altAnswers": [
-          "Use",
-          "use"
+          "technology",
+          "Technology"
         ],
-        "hint": "Подсказка: слово из урока «Technology and digital life»."
+        "hint": "Подсказка: тема «Technology and digital life»."
       },
       {
         "id": 2,
-        "prompt": "Have you ______ the latest update?",
-        "answer": "downloaded",
+        "prompt": "______ forget your password",
+        "answer": "Don't",
         "altAnswers": [
-          "Downloaded",
-          "downloaded"
+          "don't",
+          "Don't"
         ],
-        "hint": "Подсказка: слово из урока «Technology and digital life»."
+        "hint": "Подсказка: тема «Technology and digital life»."
       },
       {
         "id": 3,
-        "prompt": "She spends hours ______ videos.",
-        "answer": "watching",
+        "prompt": "I use my ______ every day",
+        "answer": "laptop",
         "altAnswers": [
-          "watching",
-          "Watching"
+          "laptop",
+          "Laptop"
         ],
-        "hint": "Подсказка: слово из урока «Technology and digital life»."
-      },
-      {
-        "id": 4,
-        "prompt": "Technology has ______ our lives.",
-        "answer": "changed",
-        "altAnswers": [
-          "Changed",
-          "changed"
-        ],
-        "hint": "Подсказка: слово из урока «Technology and digital life»."
+        "hint": "Подсказка: тема «Technology and digital life»."
       }
     ],
     "theory": {
       "intro": "Discuss apps, devices, and online habits in natural English.",
-      "reading": "**Технологии** — Discuss apps, devices, and online habits in natural English.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Daily tech\nI use my phone to… / I spend time on social media.\n\n*Пример:* I check my emails on my phone every morning.\n\n### Changes\nPresent perfect for changes: Technology has changed how we work.\n\n*Пример:* Streaming has replaced DVDs for many people.\n\n### Формулы\n- `I use + device to + V`\n- `Technology has changed + noun`\n- `spend time on + app/site`\n\n### Типичная ошибка\n❌ I am use my laptop every day.\n✅ I use my laptop every day.",
+      "reading": "**Технологии** — Discuss apps, devices, and online habits in natural English.\n\nПринцип noticing (Batstone): сравнивайте похожие конструкции и объясняйте выбор формы контекстом.\n\nCEFR B1 — независимое использование языка: мнения, условия, косвенная речь, phrasal verbs.\n\n### Daily tech\nI use my phone to… / I spend time on social media.\n\n### Changes\nPresent perfect for changes: Technology has changed how we work.\n\n### Формулы\n- `I use + device to + V`\n- `Technology has changed + noun`\n- `spend time on + app/site`\n\n### Типичная ошибка\n❌ I am use my laptop every day.\n✅ I use my laptop every day.",
       "keyPoints": [
         "Daily tech: I use my phone to… / I spend time on social media.",
         "Changes: Present perfect for changes: Technology has changed how we work.",
@@ -35314,50 +36568,50 @@ const CURRICULUM = [
       {
         "question": "What is «device»?",
         "options": [
-          "устройство",
-          "пароль",
           "обновление",
-          "скачивать"
+          "батарея",
+          "устройство",
+          "приложение"
         ],
         "answer": "устройство"
       },
       {
         "question": "What is «app»?",
         "options": [
-          "стримить",
-          "обновление",
+          "онлайн",
+          "приложение",
           "батарея",
-          "приложение"
+          "устройство"
         ],
         "answer": "приложение"
       },
       {
         "question": "What is «online»?",
         "options": [
-          "пароль",
           "скачивать",
-          "устройство",
-          "онлайн"
+          "конфиденциальность",
+          "онлайн",
+          "уведомление"
         ],
         "answer": "онлайн"
       },
       {
         "question": "What is «password»?",
         "options": [
-          "скачивать",
-          "конфиденциальность",
-          "батарея",
-          "пароль"
+          "уведомление",
+          "пароль",
+          "устройство",
+          "батарея"
         ],
         "answer": "пароль"
       },
       {
         "question": "What is «update»?",
         "options": [
-          "уведомление",
           "обновление",
-          "пароль",
-          "батарея"
+          "приложение",
+          "батарея",
+          "пароль"
         ],
         "answer": "обновление"
       },
@@ -35672,7 +36926,10 @@ const CURRICULUM = [
           "suffix",
           "un-",
           "-tion",
-          "-ful"
+          "-ful",
+          "-less",
+          "-ment",
+          "-able"
         ],
         "mustIncludeAny": [
           [
@@ -35682,11 +36939,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about -tion."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Prefixes & suffixes»."
       },
       {
         "prompt": "What prefix changes the meaning?",
@@ -35696,7 +36952,10 @@ const CURRICULUM = [
           "suffix",
           "un-",
           "-tion",
-          "-ful"
+          "-ful",
+          "-less",
+          "-ment",
+          "-able"
         ],
         "mustIncludeAny": [
           [
@@ -35706,11 +36965,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on prefixes & suffixes."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Prefixes & suffixes»."
       },
       {
         "prompt": "What part of speech is needed?",
@@ -35720,7 +36978,10 @@ const CURRICULUM = [
           "suffix",
           "un-",
           "-tion",
-          "-ful"
+          "-ful",
+          "-less",
+          "-ment",
+          "-able"
         ],
         "mustIncludeAny": [
           [
@@ -35730,11 +36991,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from prefixes & suffixes."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Prefixes & suffixes»."
       },
       {
         "prompt": "Find 3 formed words in the text.",
@@ -35744,7 +37004,10 @@ const CURRICULUM = [
           "suffix",
           "un-",
           "-tion",
-          "-ful"
+          "-ful",
+          "-less",
+          "-ment",
+          "-able"
         ],
         "mustIncludeAny": [
           [
@@ -35754,11 +37017,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from prefixes & suffixes."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Prefixes & suffixes»."
       },
       {
         "prompt": "What is the base word?",
@@ -35768,7 +37030,10 @@ const CURRICULUM = [
           "suffix",
           "un-",
           "-tion",
-          "-ful"
+          "-ful",
+          "-less",
+          "-ment",
+          "-able"
         ],
         "mustIncludeAny": [
           [
@@ -35778,11 +37043,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss prefixes & suffixes in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Prefixes & suffixes»."
       }
     ],
     "speaking": [
@@ -35868,136 +37132,136 @@ const CURRICULUM = [
       {
         "word": "prefix",
         "trans": "приставка",
-        "example": "Her happiness is important."
+        "example": "My partner corrected my use of «prefix»."
       },
       {
         "word": "suffix",
         "trans": "суффикс",
-        "example": "It was an unforgettable experience."
+        "example": "My note says «suffix» means «суффикс»."
       },
       {
         "word": "un-",
         "trans": "не- (отрицание)",
-        "example": "achieve → achievement"
+        "example": "In our dialogue, «un-» appeared twice."
       },
       {
         "word": "-tion",
         "trans": "суффикс существительного",
-        "example": "responsible → responsibility"
+        "example": "I linked «-tion» to other words I know."
       },
       {
         "word": "-ful",
         "trans": "полный",
-        "example": "un + predictable = unpredictable"
+        "example": "I heard «-ful» in the listening exercise."
       },
       {
         "word": "-less",
         "trans": "без",
-        "example": "re + consider = reconsider"
+        "example": "I looked up «-less» in the dictionary."
       },
       {
         "word": "-ment",
         "trans": "суффикс существительного",
-        "example": "Her happiness is important."
+        "example": "The example with «-ment» was clear."
       },
       {
         "word": "-able",
         "trans": "-имый",
-        "example": "It was an unforgettable experience."
+        "example": "Can you make a sentence with «-able»?"
       },
       {
         "word": "over-",
         "trans": "пере-, сверх-",
-        "example": "achieve → achievement"
+        "example": "«over-» helped me understand prefixes & suffixes."
       },
       {
         "word": "re-",
         "trans": "повторно",
-        "example": "responsible → responsibility"
+        "example": "I often use «re-» when I talk about prefixes & suffixes."
       },
       {
-        "word": "prefix",
-        "trans": "приставка",
-        "example": "un + predictable = unpredictable"
+        "word": "practice",
+        "trans": "практика",
+        "example": "The teacher wrote «practice» on the board."
       },
       {
-        "word": "suffix",
-        "trans": "суффикс",
-        "example": "re + consider = reconsider"
+        "word": "review",
+        "trans": "повторение",
+        "example": "Let's practise «review» in a full sentence."
       },
       {
-        "word": "un-",
-        "trans": "не- (отрицание)",
-        "example": "Her happiness is important."
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "«sentence» is a key word in this lesson on prefixes & suffixes."
       },
       {
-        "word": "-tion",
-        "trans": "суффикс существительного",
-        "example": "It was an unforgettable experience."
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "I need to remember «grammar» for homework."
       },
       {
-        "word": "-ful",
-        "trans": "полный",
-        "example": "achieve → achievement"
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I used «vocabulary» in my written answer."
       },
       {
-        "word": "-less",
-        "trans": "без",
-        "example": "responsible → responsibility"
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "She asked me about «speaking» during practice."
       },
       {
-        "word": "-ment",
-        "trans": "суффикс существительного",
-        "example": "un + predictable = unpredictable"
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "«listening» fits well in a sentence about prefixes & suffixes."
       },
       {
-        "word": "-able",
-        "trans": "-имый",
-        "example": "re + consider = reconsider"
+        "word": "writing",
+        "trans": "письмо",
+        "example": "«writing» was new for me this week."
       },
       {
-        "word": "over-",
-        "trans": "пере-, сверх-",
-        "example": "Her happiness is important."
+        "word": "reading",
+        "trans": "чтение",
+        "example": "We discussed «reading» in class today."
       },
       {
-        "word": "re-",
-        "trans": "повторно",
-        "example": "It was an unforgettable experience."
+        "word": "homework",
+        "trans": "домашка",
+        "example": "He repeated «homework» three times."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "We need to make a ___. (decide)",
+        "sentence": "___ → achievement",
         "options": [
-          "decision",
-          "decisionment"
+          "achieve",
+          "achieves"
         ],
-        "answer": "decision"
+        "answer": "achieve"
       },
       {
-        "sentence": "The film was ___. (forget)",
+        "sentence": "___ → responsibility",
         "options": [
-          "unforgettable",
-          "unforgetable"
+          "responsible",
+          "responsibles"
         ],
-        "answer": "unforgettable"
+        "answer": "responsible"
       },
       {
-        "sentence": "She is very ___. (create)",
+        "sentence": "un + ___ = unpredictable",
         "options": [
-          "creative",
-          "creatful"
+          "predictable",
+          "predictables"
         ],
-        "answer": "creative"
+        "answer": "predictable"
       },
       {
-        "sentence": "There was a ___ in plans. (change)",
+        "sentence": "re + ___ = reconsider",
         "options": [
-          "change",
-          "changement"
+          "consider",
+          "considers"
         ],
-        "answer": "change"
+        "answer": "consider"
       }
     ],
     "theoryCheck": [
@@ -36010,12 +37274,12 @@ const CURRICULUM = [
         "answer": "She has a lot of happiness."
       },
       {
-        "question": "Пример по теме «Суффиксы»:",
+        "question": "Какое правило относится к «Префиксы»?",
         "options": [
-          "Her happiness is important.",
-          "She has a lot of happy."
+          "Un-: unhappy. Re-: rewrite. Over-: overcook. Dis-: disagree. Mis-: misunderstand.",
+          "-tion/-sion: decide→decision. -ment: develop→development. -ful/-less: care→careful/careless. -able: "
         ],
-        "answer": "Her happiness is important."
+        "answer": "Un-: unhappy. Re-: rewrite. Over-: overcook. Dis-: disagree. Mis-: misunderstand."
       },
       {
         "question": "Какая формула относится к «Word Formation»?",
@@ -36029,48 +37293,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "We need to make a ______ . (decide)",
-        "answer": "decision",
+        "prompt": "______",
+        "answer": "responsibility",
         "altAnswers": [
-          "Decision",
-          "decision"
+          "responsibility",
+          "Responsibility"
         ],
-        "hint": "Подсказка: слово из урока «Prefixes & suffixes»."
+        "hint": "Подсказка: тема «Prefixes & suffixes»."
       },
       {
         "id": 2,
-        "prompt": "The film was ______ . (forget)",
-        "answer": "unforgettable",
+        "prompt": "______",
+        "answer": "development",
         "altAnswers": [
-          "Unforgettable",
-          "unforgettable"
+          "development",
+          "Development"
         ],
-        "hint": "Подсказка: слово из урока «Prefixes & suffixes»."
+        "hint": "Подсказка: тема «Prefixes & suffixes»."
       },
       {
         "id": 3,
-        "prompt": "She is very ______ . (create)",
-        "answer": "creative",
+        "prompt": "______",
+        "answer": "unpredictable",
         "altAnswers": [
-          "creative",
-          "Creative"
+          "Unpredictable",
+          "unpredictable"
         ],
-        "hint": "Подсказка: слово из урока «Prefixes & suffixes»."
+        "hint": "Подсказка: тема «Prefixes & suffixes»."
       },
       {
         "id": 4,
-        "prompt": "There was a ______ in plans. (change)",
-        "answer": "change",
+        "prompt": "______",
+        "answer": "achievement",
         "altAnswers": [
-          "Change",
-          "change"
+          "Achievement",
+          "achievement"
         ],
-        "hint": "Подсказка: слово из урока «Prefixes & suffixes»."
+        "hint": "Подсказка: тема «Prefixes & suffixes»."
       }
     ],
     "theory": {
       "intro": "Префиксы и суффиксы для расширения словарного запаса и экзамена B2.",
-      "reading": "**Словообразование** — Префиксы и суффиксы для расширения словарного запаса и экзамена B2.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Суффиксы\n-tion/-sion: decide→decision. -ment: develop→development. -ful/-less: care→careful/careless. -able: comfort→comfortable.\n\n*Пример:* Her happiness is important.\n\n### Префиксы\nUn-: unhappy. Re-: rewrite. Over-: overcook. Dis-: disagree. Mis-: misunderstand.\n\n*Пример:* It was an unforgettable experience.\n\n### Формулы\n- `verb + -tion/-ment = noun`\n- `noun/adj + -ful/-less = adjective`\n- `prefix + base word = new word`\n\n### Типичная ошибка\n❌ She has a lot of happy.\n✅ She has a lot of happiness.",
+      "reading": "**Словообразование** — Префиксы и суффиксы для расширения словарного запаса и экзамена B2.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Суффиксы\n-tion/-sion: decide→decision. -ment: develop→development. -ful/-less: care→careful/careless. -able: comfort→comfortable.\n\n### Префиксы\nUn-: unhappy. Re-: rewrite. Over-: overcook. Dis-: disagree. Mis-: misunderstand.\n\n### Формулы\n- `verb + -tion/-ment = noun`\n- `noun/adj + -ful/-less = adjective`\n- `prefix + base word = new word`\n\n### Типичная ошибка\n❌ She has a lot of happy.\n✅ She has a lot of happiness.",
       "keyPoints": [
         "Суффиксы: -tion/-sion: decide→decision. -ment: develop→development. -ful/-less: care→caref",
         "Префиксы: Un-: unhappy. Re-: rewrite. Over-: overcook. Dis-: disagree. Mis-: misunderstand",
@@ -36084,20 +37348,20 @@ const CURRICULUM = [
       {
         "question": "What is «prefix»?",
         "options": [
-          "не- (отрицание)",
-          "приставка",
           "без",
-          "суффикс существительного"
+          "приставка",
+          "суффикс существительного",
+          "повторно"
         ],
         "answer": "приставка"
       },
       {
         "question": "What is «suffix»?",
         "options": [
+          "пере-, сверх-",
+          "повторно",
           "суффикс",
-          "суффикс существительного",
-          "без",
-          "пере-, сверх-"
+          "без"
         ],
         "answer": "суффикс"
       },
@@ -36105,29 +37369,29 @@ const CURRICULUM = [
         "question": "What is «un-»?",
         "options": [
           "без",
-          "суффикс существительного",
           "не- (отрицание)",
-          "приставка"
+          "суффикс существительного",
+          "полный"
         ],
         "answer": "не- (отрицание)"
       },
       {
         "question": "What is «-tion»?",
         "options": [
-          "суффикс существительного",
+          "приставка",
           "без",
-          "повторно",
-          "пере-, сверх-"
+          "суффикс существительного",
+          "не- (отрицание)"
         ],
         "answer": "суффикс существительного"
       },
       {
         "question": "What is «-ful»?",
         "options": [
-          "не- (отрицание)",
-          "суффикс существительного",
-          "-имый",
-          "полный"
+          "без",
+          "пере-, сверх-",
+          "полный",
+          "повторно"
         ],
         "answer": "полный"
       },
@@ -36450,7 +37714,10 @@ const CURRICULUM = [
           "idiom",
           "make a decision",
           "heavy rain",
-          "break the ice"
+          "break the ice",
+          "under the weather",
+          "piece of cake",
+          "achieve a goal"
         ],
         "mustIncludeAny": [
           [
@@ -36460,11 +37727,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from make a decision, heavy rain."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «make a decision, heavy rain»."
       },
       {
         "prompt": "What does the idiom mean literally vs figuratively?",
@@ -36474,7 +37740,10 @@ const CURRICULUM = [
           "idiom",
           "make a decision",
           "heavy rain",
-          "break the ice"
+          "break the ice",
+          "under the weather",
+          "piece of cake",
+          "achieve a goal"
         ],
         "mustIncludeAny": [
           [
@@ -36484,11 +37753,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The brother studies at university."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «make a decision, heavy rain»."
       },
       {
         "prompt": "Make or do?",
@@ -36498,7 +37766,10 @@ const CURRICULUM = [
           "idiom",
           "make a decision",
           "heavy rain",
-          "break the ice"
+          "break the ice",
+          "under the weather",
+          "piece of cake",
+          "achieve a goal"
         ],
         "mustIncludeAny": [
           [
@@ -36508,11 +37779,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss make a decision, heavy rain in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «make a decision, heavy rain»."
       },
       {
         "prompt": "Find an idiom in the text.",
@@ -36522,7 +37792,10 @@ const CURRICULUM = [
           "idiom",
           "make a decision",
           "heavy rain",
-          "break the ice"
+          "break the ice",
+          "under the weather",
+          "piece of cake",
+          "achieve a goal"
         ],
         "mustIncludeAny": [
           [
@@ -36532,11 +37805,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss make a decision, heavy rain in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «make a decision, heavy rain»."
       },
       {
         "prompt": "What natural pair of words appears?",
@@ -36546,7 +37818,10 @@ const CURRICULUM = [
           "idiom",
           "make a decision",
           "heavy rain",
-          "break the ice"
+          "break the ice",
+          "under the weather",
+          "piece of cake",
+          "achieve a goal"
         ],
         "mustIncludeAny": [
           [
@@ -36556,11 +37831,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Social media affects how friends communicate."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «make a decision, heavy rain»."
       }
     ],
     "speaking": [
@@ -36650,136 +37924,136 @@ const CURRICULUM = [
       {
         "word": "collocation",
         "trans": "коллокация",
-        "example": "She made an important decision."
+        "example": "He repeated «collocation» three times."
       },
       {
         "word": "idiom",
         "trans": "идиома",
-        "example": "The exam was a piece of cake."
+        "example": "My partner corrected my use of «idiom»."
       },
       {
         "word": "make a decision",
         "trans": "принять решение",
-        "example": "reach an agreement"
+        "example": "My note says «make a decision» means «принять решение»."
       },
       {
         "word": "heavy rain",
         "trans": "сильный дождь",
-        "example": "take a risk"
+        "example": "In our dialogue, «heavy rain» appeared twice."
       },
       {
         "word": "break the ice",
         "trans": "растопить лёд",
-        "example": "It's raining cats and dogs."
+        "example": "I linked «break the ice» to other words I know."
       },
       {
         "word": "under the weather",
         "trans": "нездоровиться",
-        "example": "He hit the nail on the head."
+        "example": "I heard «under the weather» in the listening exercise."
       },
       {
         "word": "piece of cake",
         "trans": "проще простого",
-        "example": "She made an important decision."
+        "example": "I looked up «piece of cake» in the dictionary."
       },
       {
         "word": "achieve a goal",
         "trans": "достичь цели",
-        "example": "The exam was a piece of cake."
+        "example": "The example with «achieve a goal» was clear."
       },
       {
         "word": "raise awareness",
         "trans": "повысить осведомлённость",
-        "example": "reach an agreement"
+        "example": "Can you make a sentence with «raise awareness»?"
       },
       {
         "word": "commit a crime",
         "trans": "совершить преступление",
-        "example": "take a risk"
+        "example": "«commit a crime» helped me understand make a decision, heavy rain."
       },
       {
-        "word": "collocation",
-        "trans": "коллокация",
-        "example": "It's raining cats and dogs."
+        "word": "practice",
+        "trans": "практика",
+        "example": "I often use «practice» when I talk about make a decision, heavy rain."
       },
       {
-        "word": "idiom",
-        "trans": "идиома",
-        "example": "He hit the nail on the head."
+        "word": "review",
+        "trans": "повторение",
+        "example": "The teacher wrote «review» on the board."
       },
       {
-        "word": "make a decision",
-        "trans": "принять решение",
-        "example": "She made an important decision."
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "Let's practise «sentence» in a full sentence."
       },
       {
-        "word": "heavy rain",
-        "trans": "сильный дождь",
-        "example": "The exam was a piece of cake."
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "«grammar» is a key word in this lesson on make a decision, heavy rain."
       },
       {
-        "word": "break the ice",
-        "trans": "растопить лёд",
-        "example": "reach an agreement"
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I need to remember «vocabulary» for homework."
       },
       {
-        "word": "under the weather",
-        "trans": "нездоровиться",
-        "example": "take a risk"
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I used «speaking» in my written answer."
       },
       {
-        "word": "piece of cake",
-        "trans": "проще простого",
-        "example": "It's raining cats and dogs."
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "She asked me about «listening» during practice."
       },
       {
-        "word": "achieve a goal",
-        "trans": "достичь цели",
-        "example": "He hit the nail on the head."
+        "word": "writing",
+        "trans": "письмо",
+        "example": "«writing» fits well in a sentence about make a decision, heavy rain."
       },
       {
-        "word": "raise awareness",
-        "trans": "повысить осведомлённость",
-        "example": "She made an important decision."
+        "word": "reading",
+        "trans": "чтение",
+        "example": "«reading» was new for me this week."
       },
       {
-        "word": "commit a crime",
-        "trans": "совершить преступление",
-        "example": "The exam was a piece of cake."
+        "word": "homework",
+        "trans": "домашка",
+        "example": "We discussed «homework» in class today."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "She ___ a decision yesterday.",
+        "sentence": "___ an agreement",
         "options": [
-          "made",
-          "did"
+          "reach",
+          "reachs"
         ],
-        "answer": "made"
+        "answer": "reach"
       },
       {
-        "sentence": "There was ___ rain last night.",
+        "sentence": "___ a risk",
         "options": [
-          "heavy",
-          "strong"
+          "take",
+          "takes"
         ],
-        "answer": "heavy"
+        "answer": "take"
       },
       {
-        "sentence": "The test was a piece of ___.",
+        "sentence": "___ raining cats and dogs",
         "options": [
-          "cake",
-          "pie"
+          "It's",
+          "It'"
         ],
-        "answer": "cake"
+        "answer": "It's"
       },
       {
-        "sentence": "He feels under the ___.",
+        "sentence": "He ___ the nail on the head",
         "options": [
-          "weather",
-          "rain"
+          "hit",
+          "hits"
         ],
-        "answer": "weather"
+        "answer": "hit"
       }
     ],
     "theoryCheck": [
@@ -36792,12 +38066,12 @@ const CURRICULUM = [
         "answer": "I made a mistake."
       },
       {
-        "question": "Пример по теме «Коллокации»:",
+        "question": "Какое правило относится к «Идиомы»?",
         "options": [
-          "She made an important decision.",
-          "I did a mistake."
+          "Переносное значение: break the ice, under the weather, once in a blue moon.",
+          "Некоторые слова идут только вместе: make a mistake (не do), heavy rain (не strong rain), highly reco"
         ],
-        "answer": "She made an important decision."
+        "answer": "Переносное значение: break the ice, under the weather, once in a blue moon."
       },
       {
         "question": "Какая формула относится к «Collocations & Idioms»?",
@@ -36811,48 +38085,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "She ______ a decision yesterday.",
-        "answer": "made",
+        "prompt": "______ a decision",
+        "answer": "make",
         "altAnswers": [
-          "made",
-          "Made"
+          "make",
+          "Make"
         ],
-        "hint": "Подсказка: слово из урока «make a decision, heavy rain»."
+        "hint": "Подсказка: тема «make a decision, heavy rain»."
       },
       {
         "id": 2,
-        "prompt": "There was ______ rain last night.",
-        "answer": "heavy",
+        "prompt": "heavy ______",
+        "answer": "rain",
         "altAnswers": [
-          "heavy",
-          "Heavy"
+          "rain",
+          "Rain"
         ],
-        "hint": "Подсказка: слово из урока «make a decision, heavy rain»."
+        "hint": "Подсказка: тема «make a decision, heavy rain»."
       },
       {
         "id": 3,
-        "prompt": "The test was a piece of ______ .",
-        "answer": "cake",
+        "prompt": "______ the ice",
+        "answer": "break",
         "altAnswers": [
-          "Cake",
-          "cake"
+          "break",
+          "Break"
         ],
-        "hint": "Подсказка: слово из урока «make a decision, heavy rain»."
+        "hint": "Подсказка: тема «make a decision, heavy rain»."
       },
       {
         "id": 4,
-        "prompt": "He feels under the ______ .",
-        "answer": "weather",
+        "prompt": "______ the weather",
+        "answer": "under",
         "altAnswers": [
-          "Weather",
-          "weather"
+          "under",
+          "Under"
         ],
-        "hint": "Подсказка: слово из урока «make a decision, heavy rain»."
+        "hint": "Подсказка: тема «make a decision, heavy rain»."
       }
     ],
     "theory": {
       "intro": "Устойчивые сочетания слов и идиомы уровня B2.",
-      "reading": "**Коллокации и идиомы** — Устойчивые сочетания слов и идиомы уровня B2.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Коллокации\nНекоторые слова идут только вместе: make a mistake (не do), heavy rain (не strong rain), highly recommend.\n\n*Пример:* She made an important decision.\n\n### Идиомы\nПереносное значение: break the ice, under the weather, once in a blue moon.\n\n*Пример:* The exam was a piece of cake.\n\n### Формулы\n- `make + decision/mistake/effort`\n- `heavy + rain/traffic`\n- `idiom = figurative meaning`\n\n### Типичная ошибка\n❌ I did a mistake.\n✅ I made a mistake.",
+      "reading": "**Коллокации и идиомы** — Устойчивые сочетания слов и идиомы уровня B2.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Коллокации\nНекоторые слова идут только вместе: make a mistake (не do), heavy rain (не strong rain), highly recommend.\n\n### Идиомы\nПереносное значение: break the ice, under the weather, once in a blue moon.\n\n### Формулы\n- `make + decision/mistake/effort`\n- `heavy + rain/traffic`\n- `idiom = figurative meaning`\n\n### Типичная ошибка\n❌ I did a mistake.\n✅ I made a mistake.",
       "keyPoints": [
         "Коллокации: Некоторые слова идут только вместе: make a mistake (не do), heavy rain (не stron",
         "Идиомы: Переносное значение: break the ice, under the weather, once in a blue moon.",
@@ -36866,50 +38140,50 @@ const CURRICULUM = [
       {
         "question": "What is «collocation»?",
         "options": [
-          "совершить преступление",
-          "достичь цели",
-          "идиома",
-          "коллокация"
+          "проще простого",
+          "растопить лёд",
+          "коллокация",
+          "принять решение"
         ],
         "answer": "коллокация"
       },
       {
         "question": "What is «idiom»?",
         "options": [
-          "растопить лёд",
+          "принять решение",
+          "сильный дождь",
           "идиома",
-          "повысить осведомлённость",
-          "проще простого"
+          "повысить осведомлённость"
         ],
         "answer": "идиома"
       },
       {
         "question": "What is «make a decision»?",
         "options": [
-          "достичь цели",
-          "коллокация",
+          "нездоровиться",
           "принять решение",
-          "нездоровиться"
+          "идиома",
+          "коллокация"
         ],
         "answer": "принять решение"
       },
       {
         "question": "What is «heavy rain»?",
         "options": [
-          "принять решение",
+          "растопить лёд",
+          "повысить осведомлённость",
           "сильный дождь",
-          "нездоровиться",
-          "совершить преступление"
+          "идиома"
         ],
         "answer": "сильный дождь"
       },
       {
         "question": "What is «break the ice»?",
         "options": [
-          "растопить лёд",
-          "проще простого",
-          "достичь цели",
-          "повысить осведомлённость"
+          "идиома",
+          "совершить преступление",
+          "повысить осведомлённость",
+          "растопить лёд"
         ],
         "answer": "растопить лёд"
       },
@@ -37218,7 +38492,10 @@ const CURRICULUM = [
           "informal",
           "register",
           "request",
-          "apologize"
+          "apologize",
+          "complaint",
+          "dear",
+          "yours sincerely"
         ],
         "mustIncludeAny": [
           [
@@ -37228,11 +38505,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss request, apology, complaint in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Request, apology, complaint»."
       },
       {
         "prompt": "What formal phrase is used?",
@@ -37242,7 +38518,10 @@ const CURRICULUM = [
           "informal",
           "register",
           "request",
-          "apologize"
+          "apologize",
+          "complaint",
+          "dear",
+          "yours sincerely"
         ],
         "mustIncludeAny": [
           [
@@ -37252,11 +38531,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from request, apology, complaint."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Request, apology, complaint»."
       },
       {
         "prompt": "How is the letter opened and closed?",
@@ -37266,7 +38544,10 @@ const CURRICULUM = [
           "informal",
           "register",
           "request",
-          "apologize"
+          "apologize",
+          "complaint",
+          "dear",
+          "yours sincerely"
         ],
         "mustIncludeAny": [
           [
@@ -37276,11 +38557,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from request, apology, complaint."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Request, apology, complaint»."
       },
       {
         "prompt": "What would the informal version be?",
@@ -37290,7 +38570,10 @@ const CURRICULUM = [
           "informal",
           "register",
           "request",
-          "apologize"
+          "apologize",
+          "complaint",
+          "dear",
+          "yours sincerely"
         ],
         "mustIncludeAny": [
           [
@@ -37300,11 +38583,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from request, apology, complaint."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Request, apology, complaint»."
       },
       {
         "prompt": "Is the complaint polite?",
@@ -37411,136 +38693,136 @@ const CURRICULUM = [
       {
         "word": "formal",
         "trans": "формальный",
-        "example": "I am writing to inquire about the position."
+        "example": "We discussed «formal» in class today."
       },
       {
         "word": "informal",
         "trans": "неформальный",
-        "example": "Hey! Can you send me the file?"
+        "example": "He repeated «informal» three times."
       },
       {
         "word": "register",
         "trans": "регистр, стиль",
-        "example": "I would be grateful if you could..."
+        "example": "My partner corrected my use of «register»."
       },
       {
         "word": "request",
         "trans": "просьба",
-        "example": "Please accept my apologies."
+        "example": "My note says «request» means «просьба»."
       },
       {
         "word": "apologize",
         "trans": "извиняться",
-        "example": "Sorry about that!"
+        "example": "In our dialogue, «apologize» appeared twice."
       },
       {
         "word": "complaint",
         "trans": "жалоба",
-        "example": "Could you gimme a hand?"
+        "example": "I linked «complaint» to other words I know."
       },
       {
         "word": "dear",
         "trans": "уважаемый (в письме)",
-        "example": "I am writing to inquire about the position."
+        "example": "Dear Sir, I would like to apply for the position."
       },
       {
         "word": "yours sincerely",
         "trans": "с уважением",
-        "example": "Hey! Can you send me the file?"
+        "example": "I looked up «yours sincerely» in the dictionary."
       },
       {
         "word": "I would appreciate",
         "trans": "я был бы признателен",
-        "example": "I would be grateful if you could..."
+        "example": "The example with «I would appreciate» was clear."
       },
       {
         "word": "inform",
         "trans": "информировать",
-        "example": "Please accept my apologies."
+        "example": "Can you make a sentence with «inform»?"
       },
       {
-        "word": "formal",
-        "trans": "формальный",
-        "example": "Sorry about that!"
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» helped me understand request, apology, complaint."
       },
       {
-        "word": "informal",
-        "trans": "неформальный",
-        "example": "Could you gimme a hand?"
+        "word": "review",
+        "trans": "повторение",
+        "example": "I often use «review» when I talk about request, apology, complaint."
       },
       {
-        "word": "register",
-        "trans": "регистр, стиль",
-        "example": "I am writing to inquire about the position."
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "The teacher wrote «sentence» on the board."
       },
       {
-        "word": "request",
-        "trans": "просьба",
-        "example": "Hey! Can you send me the file?"
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "Let's practise «grammar» in a full sentence."
       },
       {
-        "word": "apologize",
-        "trans": "извиняться",
-        "example": "I would be grateful if you could..."
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "«vocabulary» is a key word in this lesson on request, apology, complaint."
       },
       {
-        "word": "complaint",
-        "trans": "жалоба",
-        "example": "Please accept my apologies."
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I need to remember «speaking» for homework."
       },
       {
-        "word": "dear",
-        "trans": "уважаемый (в письме)",
-        "example": "Sorry about that!"
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I used «listening» in my written answer."
       },
       {
-        "word": "yours sincerely",
-        "trans": "с уважением",
-        "example": "Could you gimme a hand?"
+        "word": "writing",
+        "trans": "письмо",
+        "example": "She asked me about «writing» during practice."
       },
       {
-        "word": "I would appreciate",
-        "trans": "я был бы признателен",
-        "example": "I am writing to inquire about the position."
+        "word": "reading",
+        "trans": "чтение",
+        "example": "«reading» fits well in a sentence about request, apology, complaint."
       },
       {
-        "word": "inform",
-        "trans": "информировать",
-        "example": "Hey! Can you send me the file?"
+        "word": "homework",
+        "trans": "домашка",
+        "example": "«homework» was new for me this week."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "___ writing to complain about the service. (formal)",
+        "sentence": "I ___ be grateful if you could",
         "options": [
-          "I am",
-          "I'm"
+          "would",
+          "woulds"
         ],
-        "answer": "I am"
+        "answer": "would"
       },
       {
-        "sentence": "___ you send me the report? (informal)",
+        "sentence": "___ accept my apologies",
         "options": [
-          "Can",
-          "May"
+          "Please",
+          "Pleases"
         ],
-        "answer": "Can"
+        "answer": "Please"
       },
       {
-        "sentence": "I would ___ if you could reply.",
+        "sentence": "___ about that",
         "options": [
-          "appreciate",
-          "appreciate it"
+          "Sorry",
+          "Sorrys"
         ],
-        "answer": "appreciate"
+        "answer": "Sorry"
       },
       {
-        "sentence": "___ Sir/Madam, (formal start)",
+        "sentence": "___ you gimme a hand",
         "options": [
-          "Dear",
-          "Hey"
+          "Could",
+          "Coulds"
         ],
-        "answer": "Dear"
+        "answer": "Could"
       }
     ],
     "theoryCheck": [
@@ -37553,12 +38835,12 @@ const CURRICULUM = [
         "answer": "Dear Sir, I would like to apply for the position."
       },
       {
-        "question": "Пример по теме «Формальный»:",
+        "question": "Какое правило относится к «Неформальный»?",
         "options": [
-          "I am writing to inquire about the position.",
-          "Dear Sir, I want the job."
+          "I want to, Can you, Thanks, Cheers, Hi/Hey, contractions.",
+          "I would like to, I am writing to, I would appreciate if, Please find attached, Yours sincerely."
         ],
-        "answer": "I am writing to inquire about the position."
+        "answer": "I want to, Can you, Thanks, Cheers, Hi/Hey, contractions."
       },
       {
         "question": "Какая формула относится к «Formal vs Informal»?",
@@ -37572,48 +38854,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "______ writing to complain about the service. (formal)",
-        "answer": "I am",
+        "prompt": "I am ______ to inform you",
+        "answer": "writing",
         "altAnswers": [
-          "I am",
-          "i am"
+          "writing",
+          "Writing"
         ],
-        "hint": "Подсказка: слово из урока «Request, apology, complaint»."
+        "hint": "Подсказка: тема «Request, apology, complaint»."
       },
       {
         "id": 2,
-        "prompt": "______ you send me the report? (informal)",
-        "answer": "Can",
+        "prompt": "I ______ appreciate it",
+        "answer": "would",
         "altAnswers": [
-          "can",
-          "Can"
+          "Would",
+          "would"
         ],
-        "hint": "Подсказка: слово из урока «Request, apology, complaint»."
+        "hint": "Подсказка: тема «Request, apology, complaint»."
       },
       {
         "id": 3,
-        "prompt": "I would ______ if you could reply.",
-        "answer": "appreciate",
+        "prompt": "______ find attached",
+        "answer": "Please",
         "altAnswers": [
-          "appreciate",
-          "Appreciate"
+          "Please",
+          "please"
         ],
-        "hint": "Подсказка: слово из урока «Request, apology, complaint»."
+        "hint": "Подсказка: тема «Request, apology, complaint»."
       },
       {
         "id": 4,
-        "prompt": "______ Sir/Madam, (formal start)",
-        "answer": "Dear",
+        "prompt": "______ you please",
+        "answer": "Could",
         "altAnswers": [
-          "Dear",
-          "dear"
+          "Could",
+          "could"
         ],
-        "hint": "Подсказка: слово из урока «Request, apology, complaint»."
+        "hint": "Подсказка: тема «Request, apology, complaint»."
       }
     ],
     "theory": {
       "intro": "Различаем формальный и неформальный регистр в письме и речи.",
-      "reading": "**Формальный и неформальный стиль** — Различаем формальный и неформальный регистр в письме и речи.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Формальный\nI would like to, I am writing to, I would appreciate if, Please find attached, Yours sincerely.\n\n*Пример:* I am writing to inquire about the position.\n\n### Неформальный\nI want to, Can you, Thanks, Cheers, Hi/Hey, contractions.\n\n*Пример:* Hey! Can you send me the file?\n\n### Формулы\n- `Formal: I would like / I am writing to / Could you please`\n- `Informal: I want / Can you / Thanks`\n\n### Типичная ошибка\n❌ Dear Sir, I want the job.\n✅ Dear Sir, I would like to apply for the position.",
+      "reading": "**Формальный и неформальный стиль** — Различаем формальный и неформальный регистр в письме и речи.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Формальный\nI would like to, I am writing to, I would appreciate if, Please find attached, Yours sincerely.\n\n### Неформальный\nI want to, Can you, Thanks, Cheers, Hi/Hey, contractions.\n\n### Формулы\n- `Formal: I would like / I am writing to / Could you please`\n- `Informal: I want / Can you / Thanks`\n\n### Типичная ошибка\n❌ Dear Sir, I want the job.\n✅ Dear Sir, I would like to apply for the position.",
       "keyPoints": [
         "Формальный: I would like to, I am writing to, I would appreciate if, Please find attached, Y",
         "Неформальный: I want to, Can you, Thanks, Cheers, Hi/Hey, contractions.",
@@ -37627,7 +38909,7 @@ const CURRICULUM = [
       {
         "question": "What is «formal»?",
         "options": [
-          "просьба",
+          "уважаемый (в письме)",
           "извиняться",
           "информировать",
           "формальный"
@@ -37637,40 +38919,40 @@ const CURRICULUM = [
       {
         "question": "What is «informal»?",
         "options": [
-          "информировать",
           "неформальный",
-          "формальный",
-          "регистр, стиль"
+          "извиняться",
+          "информировать",
+          "просьба"
         ],
         "answer": "неформальный"
       },
       {
         "question": "What is «register»?",
         "options": [
-          "просьба",
-          "жалоба",
+          "уважаемый (в письме)",
           "регистр, стиль",
-          "формальный"
+          "я был бы признателен",
+          "просьба"
         ],
         "answer": "регистр, стиль"
       },
       {
         "question": "What is «request»?",
         "options": [
-          "уважаемый (в письме)",
-          "неформальный",
           "просьба",
-          "с уважением"
+          "уважаемый (в письме)",
+          "жалоба",
+          "извиняться"
         ],
         "answer": "просьба"
       },
       {
         "question": "What is «apologize»?",
         "options": [
-          "просьба",
-          "формальный",
-          "регистр, стиль",
-          "извиняться"
+          "неформальный",
+          "извиняться",
+          "уважаемый (в письме)",
+          "информировать"
         ],
         "answer": "извиняться"
       },
@@ -37980,7 +39262,10 @@ const CURRICULUM = [
           "moreover",
           "although",
           "therefore",
-          "furthermore"
+          "furthermore",
+          "nevertheless",
+          "whereas",
+          "in addition"
         ],
         "mustIncludeAny": [
           [
@@ -37990,11 +39275,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss however, moreover, although in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «However, moreover, although»."
       },
       {
         "prompt": "What adds information?",
@@ -38004,7 +39288,10 @@ const CURRICULUM = [
           "moreover",
           "although",
           "therefore",
-          "furthermore"
+          "furthermore",
+          "nevertheless",
+          "whereas",
+          "in addition"
         ],
         "mustIncludeAny": [
           [
@@ -38014,11 +39301,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss however, moreover, although in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «However, moreover, although»."
       },
       {
         "prompt": "How does the essay conclude?",
@@ -38028,7 +39314,10 @@ const CURRICULUM = [
           "moreover",
           "although",
           "therefore",
-          "furthermore"
+          "furthermore",
+          "nevertheless",
+          "whereas",
+          "in addition"
         ],
         "mustIncludeAny": [
           [
@@ -38038,11 +39327,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "She recommends planning the essay introduction first."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «However, moreover, although»."
       },
       {
         "prompt": "Find although/however in the text.",
@@ -38052,7 +39340,10 @@ const CURRICULUM = [
           "moreover",
           "although",
           "therefore",
-          "furthermore"
+          "furthermore",
+          "nevertheless",
+          "whereas",
+          "in addition"
         ],
         "mustIncludeAny": [
           [
@@ -38062,11 +39353,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to moreover and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «However, moreover, although»."
       },
       {
         "prompt": "Is the argument logical?",
@@ -38076,7 +39366,10 @@ const CURRICULUM = [
           "moreover",
           "although",
           "therefore",
-          "furthermore"
+          "furthermore",
+          "nevertheless",
+          "whereas",
+          "in addition"
         ],
         "mustIncludeAny": [
           [
@@ -38086,11 +39379,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on however, moreover, although."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «However, moreover, although»."
       }
     ],
     "speaking": [
@@ -38176,77 +39468,27 @@ const CURRICULUM = [
       {
         "word": "however",
         "trans": "однако",
-        "example": "Although it was raining, we went out."
+        "example": "«however» was new for me this week."
       },
       {
         "word": "moreover",
         "trans": "более того",
-        "example": "The plan is risky. However, it could succeed."
+        "example": "Moreover, the cost is low."
       },
       {
         "word": "although",
         "trans": "хотя",
-        "example": "Whereas city life is busy, rural life is calm."
+        "example": "Although it was late, we stayed."
       },
       {
         "word": "therefore",
         "trans": "поэтому",
-        "example": "Nevertheless, we continued."
+        "example": "Therefore, I disagree."
       },
       {
         "word": "furthermore",
         "trans": "кроме того",
-        "example": "Moreover, the cost is low."
-      },
-      {
-        "word": "nevertheless",
-        "trans": "тем не менее",
-        "example": "Therefore, I disagree."
-      },
-      {
-        "word": "whereas",
-        "trans": "тогда как",
-        "example": "Although it was raining, we went out."
-      },
-      {
-        "word": "in addition",
-        "trans": "в дополнение",
-        "example": "The plan is risky. However, it could succeed."
-      },
-      {
-        "word": "on the other hand",
-        "trans": "с другой стороны",
-        "example": "Whereas city life is busy, rural life is calm."
-      },
-      {
-        "word": "conclusion",
-        "trans": "заключение",
-        "example": "Nevertheless, we continued."
-      },
-      {
-        "word": "however",
-        "trans": "однако",
-        "example": "Moreover, the cost is low."
-      },
-      {
-        "word": "moreover",
-        "trans": "более того",
-        "example": "Therefore, I disagree."
-      },
-      {
-        "word": "although",
-        "trans": "хотя",
-        "example": "Although it was raining, we went out."
-      },
-      {
-        "word": "therefore",
-        "trans": "поэтому",
-        "example": "The plan is risky. However, it could succeed."
-      },
-      {
-        "word": "furthermore",
-        "trans": "кроме того",
-        "example": "Whereas city life is busy, rural life is calm."
+        "example": "My note says «furthermore» means «кроме того»."
       },
       {
         "word": "nevertheless",
@@ -38256,56 +39498,106 @@ const CURRICULUM = [
       {
         "word": "whereas",
         "trans": "тогда как",
-        "example": "Moreover, the cost is low."
+        "example": "Whereas city life is busy, rural life is calm."
       },
       {
         "word": "in addition",
         "trans": "в дополнение",
-        "example": "Therefore, I disagree."
+        "example": "I heard «in addition» in the listening exercise."
       },
       {
         "word": "on the other hand",
         "trans": "с другой стороны",
-        "example": "Although it was raining, we went out."
+        "example": "I looked up «on the other hand» in the dictionary."
       },
       {
         "word": "conclusion",
         "trans": "заключение",
-        "example": "The plan is risky. However, it could succeed."
+        "example": "The example with «conclusion» was clear."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "Can you make a sentence with «practice»?"
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» helped me understand however, moreover, although."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I often use «sentence» when I talk about however, moreover, although."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "The teacher wrote «grammar» on the board."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "Let's practise «vocabulary» in a full sentence."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "«speaking» is a key word in this lesson on however, moreover, although."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I need to remember «listening» for homework."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I used «writing» in my written answer."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "She asked me about «reading» during practice."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "«homework» fits well in a sentence about however, moreover, although."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "___, the weather was bad, we enjoyed the trip.",
+        "sentence": "Whereas ___ life is busy, rural life is calm",
         "options": [
-          "Although",
-          "However"
+          "city",
+          "citys"
         ],
-        "answer": "Although"
+        "answer": "city"
       },
       {
-        "sentence": "The price is high. ___, the quality is excellent.",
+        "sentence": "___ we continued",
         "options": [
-          "However",
-          "Moreover"
+          "Nevertheless",
+          "Nevertheles"
         ],
-        "answer": "However"
+        "answer": "Nevertheless"
       },
       {
-        "sentence": "___, we need to consider the budget.",
+        "sentence": "___ the cost is low",
         "options": [
-          "Furthermore",
-          "Whereas"
+          "Moreover",
+          "Moreovers"
         ],
-        "answer": "Furthermore"
+        "answer": "Moreover"
       },
       {
-        "sentence": "He loves sport, ___ she prefers art.",
+        "sentence": "___ I disagree",
         "options": [
-          "whereas",
-          "therefore"
+          "Therefore",
+          "Therefores"
         ],
-        "answer": "whereas"
+        "answer": "Therefore"
       }
     ],
     "theoryCheck": [
@@ -38318,12 +39610,12 @@ const CURRICULUM = [
         "answer": "Although it was late, we stayed."
       },
       {
-        "question": "Пример по теме «Контраст»:",
+        "question": "Какое правило относится к «Добавление и вывод»?",
         "options": [
-          "Although it was raining, we went out.",
-          "Although it was late, but we stayed."
+          "Moreover, furthermore, in addition — добавление. Therefore, as a result, in conclusion — вывод.",
+          "However, although, whereas, on the other hand, nevertheless — показывают противопоставление."
         ],
-        "answer": "Although it was raining, we went out."
+        "answer": "Moreover, furthermore, in addition — добавление. Therefore, as a result, in conclusion — вывод."
       },
       {
         "question": "Какая формула относится к «Linking Words»?",
@@ -38337,48 +39629,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "______ , the weather was bad, we enjoyed the trip.",
-        "answer": "Although",
+        "prompt": "However, it is ______",
+        "answer": "true",
         "altAnswers": [
-          "Although",
-          "although"
+          "True",
+          "true"
         ],
-        "hint": "Подсказка: слово из урока «However, moreover, although»."
+        "hint": "Подсказка: тема «However, moreover, although»."
       },
       {
         "id": 2,
-        "prompt": "The price is high. ______ , the quality is excellent.",
-        "answer": "However",
+        "prompt": "Although it was ______",
+        "answer": "late",
         "altAnswers": [
-          "however",
-          "However"
+          "late",
+          "Late"
         ],
-        "hint": "Подсказка: слово из урока «However, moreover, although»."
+        "hint": "Подсказка: тема «However, moreover, although»."
       },
       {
         "id": 3,
-        "prompt": "______ , we need to consider the budget.",
-        "answer": "Furthermore",
+        "prompt": "On the ______ hand",
+        "answer": "other",
         "altAnswers": [
-          "furthermore",
-          "Furthermore"
+          "other",
+          "Other"
         ],
-        "hint": "Подсказка: слово из урока «However, moreover, although»."
+        "hint": "Подсказка: тема «However, moreover, although»."
       },
       {
         "id": 4,
-        "prompt": "He loves sport, ______ she prefers art.",
-        "answer": "whereas",
+        "prompt": "In ______",
+        "answer": "conclusion",
         "altAnswers": [
-          "whereas",
-          "Whereas"
+          "Conclusion",
+          "conclusion"
         ],
-        "hint": "Подсказка: слово из урока «However, moreover, although»."
+        "hint": "Подсказка: тема «However, moreover, although»."
       }
     ],
     "theory": {
       "intro": "Связующие слова для связной письменной речи и эссе B2.",
-      "reading": "**Связующие слова и эссе** — Связующие слова для связной письменной речи и эссе B2.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Контраст\nHowever, although, whereas, on the other hand, nevertheless — показывают противопоставление.\n\n*Пример:* Although it was raining, we went out.\n\n### Добавление и вывод\nMoreover, furthermore, in addition — добавление. Therefore, as a result, in conclusion — вывод.\n\n*Пример:* The plan is risky. However, it could succeed.\n\n### Формулы\n- `Although + clause, main clause`\n- `Main clause. However, ...`\n- `In conclusion, + summary`\n\n### Типичная ошибка\n❌ Although it was late, but we stayed.\n✅ Although it was late, we stayed.",
+      "reading": "**Связующие слова и эссе** — Связующие слова для связной письменной речи и эссе B2.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Контраст\nHowever, although, whereas, on the other hand, nevertheless — показывают противопоставление.\n\n### Добавление и вывод\nMoreover, furthermore, in addition — добавление. Therefore, as a result, in conclusion — вывод.\n\n### Формулы\n- `Although + clause, main clause`\n- `Main clause. However, ...`\n- `In conclusion, + summary`\n\n### Типичная ошибка\n❌ Although it was late, but we stayed.\n✅ Although it was late, we stayed.",
       "keyPoints": [
         "Контраст: However, although, whereas, on the other hand, nevertheless — показывают противо",
         "Добавление и вывод: Moreover, furthermore, in addition — добавление. Therefore, as a result, in conc",
@@ -38392,10 +39684,10 @@ const CURRICULUM = [
       {
         "question": "What is «however»?",
         "options": [
-          "тем не менее",
-          "с другой стороны",
           "однако",
-          "более того"
+          "заключение",
+          "в дополнение",
+          "кроме того"
         ],
         "answer": "однако"
       },
@@ -38403,39 +39695,39 @@ const CURRICULUM = [
         "question": "What is «moreover»?",
         "options": [
           "однако",
-          "хотя",
-          "кроме того",
-          "более того"
+          "поэтому",
+          "более того",
+          "кроме того"
         ],
         "answer": "более того"
       },
       {
         "question": "What is «although»?",
         "options": [
-          "заключение",
-          "кроме того",
+          "в дополнение",
           "тогда как",
-          "хотя"
+          "хотя",
+          "тем не менее"
         ],
         "answer": "хотя"
       },
       {
         "question": "What is «therefore»?",
         "options": [
-          "хотя",
           "поэтому",
-          "тем не менее",
-          "в дополнение"
+          "тогда как",
+          "однако",
+          "с другой стороны"
         ],
         "answer": "поэтому"
       },
       {
         "question": "What is «furthermore»?",
         "options": [
-          "более того",
-          "заключение",
-          "в дополнение",
-          "кроме того"
+          "кроме того",
+          "с другой стороны",
+          "поэтому",
+          "более того"
         ],
         "answer": "кроме того"
       },
@@ -38750,7 +40042,10 @@ const CURRICULUM = [
           "agree",
           "disagree",
           "argue",
-          "point of view"
+          "point of view",
+          "i believe",
+          "in my view",
+          "to some extent"
         ],
         "mustIncludeAny": [
           [
@@ -38760,11 +40055,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss i believe, in my view in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «I believe, in my view»."
       },
       {
         "prompt": "Does the speaker agree or disagree?",
@@ -38774,7 +40068,10 @@ const CURRICULUM = [
           "agree",
           "disagree",
           "argue",
-          "point of view"
+          "point of view",
+          "i believe",
+          "in my view",
+          "to some extent"
         ],
         "mustIncludeAny": [
           [
@@ -38784,11 +40081,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss i believe, in my view in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «I believe, in my view»."
       },
       {
         "prompt": "What arguments are given?",
@@ -38798,7 +40094,10 @@ const CURRICULUM = [
           "agree",
           "disagree",
           "argue",
-          "point of view"
+          "point of view",
+          "i believe",
+          "in my view",
+          "to some extent"
         ],
         "mustIncludeAny": [
           [
@@ -38808,11 +40107,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss i believe, in my view in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «I believe, in my view»."
       },
       {
         "prompt": "Is the topic controversial?",
@@ -38822,7 +40120,10 @@ const CURRICULUM = [
           "agree",
           "disagree",
           "argue",
-          "point of view"
+          "point of view",
+          "i believe",
+          "in my view",
+          "to some extent"
         ],
         "mustIncludeAny": [
           [
@@ -38832,11 +40133,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss i believe, in my view in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «I believe, in my view»."
       },
       {
         "prompt": "How do they disagree politely?",
@@ -38943,136 +40243,136 @@ const CURRICULUM = [
       {
         "word": "opinion",
         "trans": "мнение",
-        "example": "In my view, technology has improved our lives."
+        "example": "In my opinion, it is harmful."
       },
       {
         "word": "agree",
         "trans": "соглашаться",
-        "example": "I see your point, but I think we need more data."
+        "example": "I understand, but I don't fully agree."
       },
       {
         "word": "disagree",
         "trans": "не соглашаться",
-        "example": "I firmly believe that education matters."
+        "example": "We discussed «disagree» in class today."
       },
       {
         "word": "argue",
         "trans": "аргументировать",
-        "example": "It seems to me that the policy is unfair."
+        "example": "He repeated «argue» three times."
       },
       {
         "word": "point of view",
         "trans": "точка зрения",
-        "example": "I understand, but I don't fully agree."
+        "example": "My partner corrected my use of «point of view»."
       },
       {
         "word": "I believe",
         "trans": "я считаю",
-        "example": "That's debatable."
+        "example": "My note says «I believe» means «я считаю»."
       },
       {
         "word": "in my view",
         "trans": "по моему мнению",
-        "example": "In my view, technology has improved our lives."
+        "example": "In our dialogue, «in my view» appeared twice."
       },
       {
         "word": "to some extent",
         "trans": "в некоторой степени",
-        "example": "I see your point, but I think we need more data."
+        "example": "I linked «to some extent» to other words I know."
       },
       {
         "word": "convincing",
         "trans": "убедительный",
-        "example": "I firmly believe that education matters."
+        "example": "I heard «convincing» in the listening exercise."
       },
       {
         "word": "controversial",
         "trans": "спорный",
-        "example": "It seems to me that the policy is unfair."
+        "example": "I looked up «controversial» in the dictionary."
       },
       {
-        "word": "opinion",
-        "trans": "мнение",
-        "example": "I understand, but I don't fully agree."
+        "word": "practice",
+        "trans": "практика",
+        "example": "The example with «practice» was clear."
       },
       {
-        "word": "agree",
-        "trans": "соглашаться",
-        "example": "That's debatable."
+        "word": "review",
+        "trans": "повторение",
+        "example": "Can you make a sentence with «review»?"
       },
       {
-        "word": "disagree",
-        "trans": "не соглашаться",
-        "example": "In my view, technology has improved our lives."
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "«sentence» helped me understand i believe, in my view."
       },
       {
-        "word": "argue",
-        "trans": "аргументировать",
-        "example": "I see your point, but I think we need more data."
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "I often use «grammar» when I talk about i believe, in my view."
       },
       {
-        "word": "point of view",
-        "trans": "точка зрения",
-        "example": "I firmly believe that education matters."
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "The teacher wrote «vocabulary» on the board."
       },
       {
-        "word": "I believe",
-        "trans": "я считаю",
-        "example": "It seems to me that the policy is unfair."
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "Let's practise «speaking» in a full sentence."
       },
       {
-        "word": "in my view",
-        "trans": "по моему мнению",
-        "example": "I understand, but I don't fully agree."
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "«listening» is a key word in this lesson on i believe, in my view."
       },
       {
-        "word": "to some extent",
-        "trans": "в некоторой степени",
-        "example": "That's debatable."
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I need to remember «writing» for homework."
       },
       {
-        "word": "convincing",
-        "trans": "убедительный",
-        "example": "In my view, technology has improved our lives."
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I used «reading» in my written answer."
       },
       {
-        "word": "controversial",
-        "trans": "спорный",
-        "example": "I see your point, but I think we need more data."
+        "word": "homework",
+        "trans": "домашка",
+        "example": "She asked me about «homework» during practice."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "___ my view, we should invest more.",
+        "sentence": "I ___ believe that education matters",
         "options": [
-          "In",
-          "On"
+          "firmly",
+          "firmlys"
         ],
-        "answer": "In"
+        "answer": "firmly"
       },
       {
-        "sentence": "I ___ with your argument.",
+        "sentence": "It seems to me ___ the policy is unfair",
         "options": [
-          "agree",
-          "agree to"
+          "that",
+          "thats"
         ],
-        "answer": "agree"
+        "answer": "that"
       },
       {
-        "sentence": "I see your point, ___ I disagree.",
+        "sentence": "I ___ but I don't fully agree",
         "options": [
-          "but",
-          "and"
+          "understand",
+          "understands"
         ],
-        "answer": "but"
+        "answer": "understand"
       },
       {
-        "sentence": "It ___ to me that he is right.",
+        "sentence": "___ debatable",
         "options": [
-          "seems",
-          "looks"
+          "That's",
+          "That'"
         ],
-        "answer": "seems"
+        "answer": "That's"
       }
     ],
     "theoryCheck": [
@@ -39085,12 +40385,12 @@ const CURRICULUM = [
         "answer": "In my opinion, it is harmful."
       },
       {
-        "question": "Пример по теме «Выражение мнения»:",
+        "question": "Какое правило относится к «Согласие и несогласие»?",
         "options": [
-          "In my view, technology has improved our lives.",
-          "In my opinion I think it is bad."
+          "I agree/disagree, I see your point, but..., That's a valid point, however...",
+          "I believe, In my opinion/view, It seems to me that, I would argue that, From my perspective."
         ],
-        "answer": "In my view, technology has improved our lives."
+        "answer": "I agree/disagree, I see your point, but..., That's a valid point, however..."
       },
       {
         "question": "Какая формула относится к «Expressing Opinions»?",
@@ -39104,48 +40404,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "______ my view, we should invest more.",
-        "answer": "In",
+        "prompt": "In my ______",
+        "answer": "opinion",
         "altAnswers": [
-          "In",
-          "in"
+          "Opinion",
+          "opinion"
         ],
-        "hint": "Подсказка: слово из урока «I believe, in my view»."
+        "hint": "Подсказка: тема «I believe, in my view»."
       },
       {
         "id": 2,
-        "prompt": "I ______ with your argument.",
-        "answer": "agree",
+        "prompt": "I ______ your point",
+        "answer": "see",
         "altAnswers": [
-          "Agree",
-          "agree"
+          "See",
+          "see"
         ],
-        "hint": "Подсказка: слово из урока «I believe, in my view»."
+        "hint": "Подсказка: тема «I believe, in my view»."
       },
       {
         "id": 3,
-        "prompt": "I see your point, ______ I disagree.",
-        "answer": "but",
+        "prompt": "I ______ believe",
+        "answer": "firmly",
         "altAnswers": [
-          "but",
-          "But"
+          "Firmly",
+          "firmly"
         ],
-        "hint": "Подсказка: слово из урока «I believe, in my view»."
+        "hint": "Подсказка: тема «I believe, in my view»."
       },
       {
         "id": 4,
-        "prompt": "It ______ to me that he is right.",
-        "answer": "seems",
+        "prompt": "to ______ extent",
+        "answer": "some",
         "altAnswers": [
-          "Seems",
-          "seems"
+          "some",
+          "Some"
         ],
-        "hint": "Подсказка: слово из урока «I believe, in my view»."
+        "hint": "Подсказка: тема «I believe, in my view»."
       }
     ],
     "theory": {
       "intro": "Выражаем и аргументируем мнение на уровне B2.",
-      "reading": "**Обсуждения и мнения** — Выражаем и аргументируем мнение на уровне B2.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Выражение мнения\nI believe, In my opinion/view, It seems to me that, I would argue that, From my perspective.\n\n*Пример:* In my view, technology has improved our lives.\n\n### Согласие и несогласие\nI agree/disagree, I see your point, but..., That's a valid point, however...\n\n*Пример:* I see your point, but I think we need more data.\n\n### Формулы\n- `In my opinion, + clause`\n- `I agree/disagree because...`\n- `I see your point, but...`\n\n### Типичная ошибка\n❌ In my opinion I think it is bad.\n✅ In my opinion, it is harmful.",
+      "reading": "**Обсуждения и мнения** — Выражаем и аргументируем мнение на уровне B2.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Выражение мнения\nI believe, In my opinion/view, It seems to me that, I would argue that, From my perspective.\n\n### Согласие и несогласие\nI agree/disagree, I see your point, but..., That's a valid point, however...\n\n### Формулы\n- `In my opinion, + clause`\n- `I agree/disagree because...`\n- `I see your point, but...`\n\n### Типичная ошибка\n❌ In my opinion I think it is bad.\n✅ In my opinion, it is harmful.",
       "keyPoints": [
         "Выражение мнения: I believe, In my opinion/view, It seems to me that, I would argue that, From my ",
         "Согласие и несогласие: I agree/disagree, I see your point, but..., That's a valid point, however...",
@@ -39159,39 +40459,39 @@ const CURRICULUM = [
       {
         "question": "What is «opinion»?",
         "options": [
+          "мнение",
           "в некоторой степени",
-          "по моему мнению",
           "не соглашаться",
-          "мнение"
+          "точка зрения"
         ],
         "answer": "мнение"
       },
       {
         "question": "What is «agree»?",
         "options": [
-          "соглашаться",
-          "по моему мнению",
+          "я считаю",
           "аргументировать",
-          "я считаю"
+          "соглашаться",
+          "мнение"
         ],
         "answer": "соглашаться"
       },
       {
         "question": "What is «disagree»?",
         "options": [
+          "я считаю",
           "не соглашаться",
-          "в некоторой степени",
-          "спорный",
-          "убедительный"
+          "мнение",
+          "по моему мнению"
         ],
         "answer": "не соглашаться"
       },
       {
         "question": "What is «argue»?",
         "options": [
+          "убедительный",
           "мнение",
-          "в некоторой степени",
-          "я считаю",
+          "по моему мнению",
           "аргументировать"
         ],
         "answer": "аргументировать"
@@ -39199,10 +40499,10 @@ const CURRICULUM = [
       {
         "question": "What is «point of view»?",
         "options": [
-          "я считаю",
+          "спорный",
           "точка зрения",
           "аргументировать",
-          "соглашаться"
+          "по моему мнению"
         ],
         "answer": "точка зрения"
       },
@@ -39523,7 +40823,10 @@ const CURRICULUM = [
           "emphasis",
           "not only",
           "never",
-          "rarely"
+          "rarely",
+          "seldom",
+          "hardly",
+          "no sooner"
         ],
         "mustIncludeAny": [
           [
@@ -39533,11 +40836,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The character spends too much time online."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Not only..., Never have I...»."
       },
       {
         "prompt": "What is emphasised in the cleft sentence?",
@@ -39547,7 +40849,10 @@ const CURRICULUM = [
           "emphasis",
           "not only",
           "never",
-          "rarely"
+          "rarely",
+          "seldom",
+          "hardly",
+          "no sooner"
         ],
         "mustIncludeAny": [
           [
@@ -39557,11 +40862,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from not only..., never have i...."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Not only..., Never have I...»."
       },
       {
         "prompt": "What negative adverb triggers inversion?",
@@ -39571,7 +40875,10 @@ const CURRICULUM = [
           "emphasis",
           "not only",
           "never",
-          "rarely"
+          "rarely",
+          "seldom",
+          "hardly",
+          "no sooner"
         ],
         "mustIncludeAny": [
           [
@@ -39581,11 +40888,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from not only..., never have i...."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Not only..., Never have I...»."
       },
       {
         "prompt": "Not only...but also?",
@@ -39595,7 +40901,10 @@ const CURRICULUM = [
           "emphasis",
           "not only",
           "never",
-          "rarely"
+          "rarely",
+          "seldom",
+          "hardly",
+          "no sooner"
         ],
         "mustIncludeAny": [
           [
@@ -39605,11 +40914,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss not only..., never have i... in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Not only..., Never have I...»."
       },
       {
         "prompt": "What is the formal effect?",
@@ -39619,7 +40927,10 @@ const CURRICULUM = [
           "emphasis",
           "not only",
           "never",
-          "rarely"
+          "rarely",
+          "seldom",
+          "hardly",
+          "no sooner"
         ],
         "mustIncludeAny": [
           [
@@ -39629,11 +40940,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to emphasis and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Not only..., Never have I...»."
       }
     ],
     "speaking": [
@@ -39715,72 +41025,22 @@ const CURRICULUM = [
       {
         "word": "inversion",
         "trans": "инверсия",
-        "example": "Never have I been so impressed."
+        "example": "She asked me about «inversion» during practice."
       },
       {
         "word": "emphasis",
         "trans": "эмфаза",
-        "example": "It was John who called yesterday."
+        "example": "«emphasis» fits well in a sentence about not only..., never have i...."
       },
       {
         "word": "not only",
         "trans": "не только",
-        "example": "Rarely do we see such talent."
+        "example": "Not only did she pass, but she got top marks."
       },
       {
         "word": "never",
         "trans": "никогда",
-        "example": "Not only did she pass, but she got top marks."
-      },
-      {
-        "word": "rarely",
-        "trans": "редко",
-        "example": "What I love is the atmosphere."
-      },
-      {
-        "word": "seldom",
-        "trans": "изредка",
-        "example": "It is the price that worries me."
-      },
-      {
-        "word": "hardly",
-        "trans": "едва",
-        "example": "Never have I been so impressed."
-      },
-      {
-        "word": "no sooner",
-        "trans": "как только",
-        "example": "It was John who called yesterday."
-      },
-      {
-        "word": "cleft sentence",
-        "trans": "расщеплённое предложение",
-        "example": "Rarely do we see such talent."
-      },
-      {
-        "word": "what-clause",
-        "trans": "what-конструкция",
-        "example": "Not only did she pass, but she got top marks."
-      },
-      {
-        "word": "inversion",
-        "trans": "инверсия",
-        "example": "What I love is the atmosphere."
-      },
-      {
-        "word": "emphasis",
-        "trans": "эмфаза",
-        "example": "It is the price that worries me."
-      },
-      {
-        "word": "not only",
-        "trans": "не только",
-        "example": "Never have I been so impressed."
-      },
-      {
-        "word": "never",
-        "trans": "никогда",
-        "example": "It was John who called yesterday."
+        "example": "Never have I seen this."
       },
       {
         "word": "rarely",
@@ -39790,61 +41050,111 @@ const CURRICULUM = [
       {
         "word": "seldom",
         "trans": "изредка",
-        "example": "Not only did she pass, but she got top marks."
+        "example": "My partner corrected my use of «seldom»."
       },
       {
         "word": "hardly",
         "trans": "едва",
-        "example": "What I love is the atmosphere."
+        "example": "My note says «hardly» means «едва»."
       },
       {
         "word": "no sooner",
         "trans": "как только",
-        "example": "It is the price that worries me."
+        "example": "In our dialogue, «no sooner» appeared twice."
       },
       {
         "word": "cleft sentence",
         "trans": "расщеплённое предложение",
-        "example": "Never have I been so impressed."
+        "example": "I linked «cleft sentence» to other words I know."
       },
       {
         "word": "what-clause",
         "trans": "what-конструкция",
-        "example": "It was John who called yesterday."
+        "example": "I heard «what-clause» in the listening exercise."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "I looked up «practice» in the dictionary."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "The example with «review» was clear."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "Can you make a sentence with «sentence»?"
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "«grammar» helped me understand not only..., never have i...."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I often use «vocabulary» when I talk about not only..., never have i...."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "The teacher wrote «speaking» on the board."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "Let's practise «listening» in a full sentence."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "«writing» is a key word in this lesson on not only..., never have i...."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I need to remember «reading» for homework."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I used «homework» in my written answer."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "Never ___ I seen such beauty.",
+        "sentence": "___ do we see such talent",
         "options": [
-          "have",
-          "has"
+          "Rarely",
+          "Rarelys"
         ],
-        "answer": "have"
+        "answer": "Rarely"
       },
       {
-        "sentence": "Not only did he arrive late, ___ he forgot the documents.",
+        "sentence": "Not ___ did she pass, but she got top marks",
         "options": [
-          "but",
-          "and"
+          "only",
+          "onlys"
         ],
-        "answer": "but"
+        "answer": "only"
       },
       {
-        "sentence": "Rarely ___ she complain.",
+        "sentence": "What I ___ is the atmosphere",
         "options": [
-          "does",
-          "do"
+          "love",
+          "loves"
         ],
-        "answer": "does"
+        "answer": "love"
       },
       {
-        "sentence": "It was Maria ___ solved the problem.",
+        "sentence": "It is the ___ that worries me",
         "options": [
-          "who",
-          "which"
+          "price",
+          "prices"
         ],
-        "answer": "who"
+        "answer": "price"
       }
     ],
     "theoryCheck": [
@@ -39857,12 +41167,12 @@ const CURRICULUM = [
         "answer": "Never have I seen this."
       },
       {
-        "question": "Пример по теме «Negative inversion»:",
+        "question": "Какое правило относится к «Cleft sentences»?",
         "options": [
-          "Never have I been so impressed.",
-          "Never I have seen this."
+          "It is/was...that/who для эмфазы. What I need is...",
+          "Never/Rarely/Seldom/Hardly + auxiliary + subject. Not only...but also."
         ],
-        "answer": "Never have I been so impressed."
+        "answer": "It is/was...that/who для эмфазы. What I need is..."
       },
       {
         "question": "Какая формула относится к «Inversion & Emphasis»?",
@@ -39876,48 +41186,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "Never ______ I seen such beauty.",
-        "answer": "have",
+        "prompt": "______ have I seen",
+        "answer": "Never",
         "altAnswers": [
-          "Have",
-          "have"
+          "Never",
+          "never"
         ],
-        "hint": "Подсказка: слово из урока «Not only..., Never have I...»."
+        "hint": "Подсказка: тема «Not only..., Never have I...»."
       },
       {
         "id": 2,
-        "prompt": "Not only did he arrive late, ______ he forgot the documents.",
-        "answer": "but",
+        "prompt": "Not ______ but also",
+        "answer": "only",
         "altAnswers": [
-          "but",
-          "But"
+          "only",
+          "Only"
         ],
-        "hint": "Подсказка: слово из урока «Not only..., Never have I...»."
+        "hint": "Подсказка: тема «Not only..., Never have I...»."
       },
       {
         "id": 3,
-        "prompt": "Rarely ______ she complain.",
-        "answer": "does",
+        "prompt": "______ do we",
+        "answer": "Rarely",
         "altAnswers": [
-          "Does",
-          "does"
+          "Rarely",
+          "rarely"
         ],
-        "hint": "Подсказка: слово из урока «Not only..., Never have I...»."
+        "hint": "Подсказка: тема «Not only..., Never have I...»."
       },
       {
         "id": 4,
-        "prompt": "It was Maria ______ solved the problem.",
-        "answer": "who",
+        "prompt": "It was ______ who",
+        "answer": "John",
         "altAnswers": [
-          "who",
-          "Who"
+          "john",
+          "John"
         ],
-        "hint": "Подсказка: слово из урока «Not only..., Never have I...»."
+        "hint": "Подсказка: тема «Not only..., Never have I...»."
       }
     ],
     "theory": {
       "intro": "Инверсия для эмфазы и формального стиля B2.",
-      "reading": "**Инверсия и эмфаза** — Инверсия для эмфазы и формального стиля B2.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Negative inversion\nNever/Rarely/Seldom/Hardly + auxiliary + subject. Not only...but also.\n\n*Пример:* Never have I been so impressed.\n\n### Cleft sentences\nIt is/was...that/who для эмфазы. What I need is...\n\n*Пример:* It was John who called yesterday.\n\n### Формулы\n- `Never/Rarely + have/had + subject + V3`\n- `It is/was + focus + that/who`\n\n### Типичная ошибка\n❌ Never I have seen this.\n✅ Never have I seen this.",
+      "reading": "**Инверсия и эмфаза** — Инверсия для эмфазы и формального стиля B2.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Negative inversion\nNever/Rarely/Seldom/Hardly + auxiliary + subject. Not only...but also.\n\n### Cleft sentences\nIt is/was...that/who для эмфазы. What I need is...\n\n### Формулы\n- `Never/Rarely + have/had + subject + V3`\n- `It is/was + focus + that/who`\n\n### Типичная ошибка\n❌ Never I have seen this.\n✅ Never have I seen this.",
       "keyPoints": [
         "Negative inversion: Never/Rarely/Seldom/Hardly + auxiliary + subject. Not only...but also.",
         "Cleft sentences: It is/was...that/who для эмфазы. What I need is...",
@@ -39931,20 +41241,20 @@ const CURRICULUM = [
       {
         "question": "What is «inversion»?",
         "options": [
+          "как только",
           "инверсия",
-          "эмфаза",
-          "what-конструкция",
-          "не только"
+          "изредка",
+          "эмфаза"
         ],
         "answer": "инверсия"
       },
       {
         "question": "What is «emphasis»?",
         "options": [
+          "едва",
+          "никогда",
           "расщеплённое предложение",
-          "изредка",
-          "эмфаза",
-          "никогда"
+          "эмфаза"
         ],
         "answer": "эмфаза"
       },
@@ -39952,18 +41262,18 @@ const CURRICULUM = [
         "question": "What is «not only»?",
         "options": [
           "не только",
-          "эмфаза",
-          "никогда",
-          "инверсия"
+          "инверсия",
+          "едва",
+          "как только"
         ],
         "answer": "не только"
       },
       {
         "question": "What is «never»?",
         "options": [
-          "редко",
+          "изредка",
           "не только",
-          "как только",
+          "what-конструкция",
           "никогда"
         ],
         "answer": "никогда"
@@ -39971,10 +41281,10 @@ const CURRICULUM = [
       {
         "question": "What is «rarely»?",
         "options": [
-          "расщеплённое предложение",
           "редко",
-          "никогда",
-          "едва"
+          "what-конструкция",
+          "инверсия",
+          "как только"
         ],
         "answer": "редко"
       },
@@ -40288,7 +41598,10 @@ const CURRICULUM = [
           "strategy",
           "skim",
           "scan",
-          "keyword"
+          "keyword",
+          "task",
+          "review",
+          "assessment"
         ],
         "mustIncludeAny": [
           [
@@ -40298,11 +41611,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The tip is to check grammar in the last five minutes."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Reading, listening, review»."
       },
       {
         "prompt": "What is skim vs scan?",
@@ -40332,7 +41644,10 @@ const CURRICULUM = [
           "strategy",
           "skim",
           "scan",
-          "keyword"
+          "keyword",
+          "task",
+          "review",
+          "assessment"
         ],
         "mustIncludeAny": [
           [
@@ -40342,11 +41657,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They review time management for the exam."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Reading, listening, review»."
       },
       {
         "prompt": "Which grammar topic is reviewed?",
@@ -40356,7 +41670,10 @@ const CURRICULUM = [
           "strategy",
           "skim",
           "scan",
-          "keyword"
+          "keyword",
+          "task",
+          "review",
+          "assessment"
         ],
         "mustIncludeAny": [
           [
@@ -40366,11 +41683,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from reading, listening, review."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Reading, listening, review»."
       },
       {
         "prompt": "What time-management tip is given?",
@@ -40380,7 +41696,10 @@ const CURRICULUM = [
           "strategy",
           "skim",
           "scan",
-          "keyword"
+          "keyword",
+          "task",
+          "review",
+          "assessment"
         ],
         "mustIncludeAny": [
           [
@@ -40390,11 +41709,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss reading, listening, review in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Reading, listening, review»."
       }
     ],
     "speaking": [
@@ -40484,86 +41802,128 @@ const CURRICULUM = [
       {
         "word": "exam",
         "trans": "экзамен",
-        "example": "Skim the title and first paragraph first."
+        "example": "I used «exam» in my written answer."
       },
       {
         "word": "strategy",
         "trans": "стратегия",
-        "example": "Review one topic per day before the exam."
+        "example": "She asked me about «strategy» during practice."
       },
       {
         "word": "skim",
         "trans": "бегло просматривать",
-        "example": "Underline keywords in questions."
+        "example": "I skim first, then scan for answers."
       },
       {
         "word": "scan",
         "trans": "искать информацию",
-        "example": "Check word limit in writing."
+        "example": "«scan» was new for me this week."
       },
       {
         "word": "keyword",
         "trans": "ключевое слово",
-        "example": "Conditionals ✓ Passive ✓ Linking words ✓"
+        "example": "We discussed «keyword» in class today."
       },
       {
         "word": "task",
         "trans": "задание",
-        "example": "Skim the title and first paragraph first."
+        "example": "He repeated «task» three times."
       },
       {
         "word": "review",
         "trans": "повторение",
-        "example": "Review one topic per day before the exam."
+        "example": "My partner corrected my use of «review»."
       },
       {
         "word": "assessment",
         "trans": "оценка",
-        "example": "Underline keywords in questions."
+        "example": "My note says «assessment» means «оценка»."
       },
       {
         "word": "certificate",
         "trans": "сертификат",
-        "example": "Check word limit in writing."
+        "example": "In our dialogue, «certificate» appeared twice."
       },
       {
         "word": "proficiency",
         "trans": "владение языком",
-        "example": "Conditionals ✓ Passive ✓ Linking words ✓"
+        "example": "I linked «proficiency» to other words I know."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "I heard «practice» in the listening exercise."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "I looked up «review» in the dictionary."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "The example with «sentence» was clear."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "Can you make a sentence with «grammar»?"
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "«vocabulary» helped me understand reading, listening, review."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I often use «speaking» when I talk about reading, listening, review."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "The teacher wrote «listening» on the board."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "Check word limit in writing."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "«reading» is a key word in this lesson on reading, listening, review."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I need to remember «homework» for homework."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "To find a date quickly, you ___.",
+        "sentence": "___ keywords in questions",
         "options": [
-          "scan",
-          "skim"
+          "Underline",
+          "Underlines"
         ],
-        "answer": "scan"
+        "answer": "Underline"
       },
       {
-        "sentence": "For the main idea, you ___.",
+        "sentence": "___ word limit in writing",
         "options": [
-          "skim",
-          "scan"
+          "Check",
+          "Checks"
         ],
-        "answer": "skim"
+        "answer": "Check"
       },
       {
-        "sentence": "B2 level is ___ C1.",
+        "sentence": "___ ✓ Passive ✓ Linking words ✓",
         "options": [
-          "below",
-          "above"
+          "Conditionals",
+          "Conditional"
         ],
-        "answer": "below"
-      },
-      {
-        "sentence": "In an essay, start with ___.",
-        "options": [
-          "an introduction",
-          "a conclusion"
-        ],
-        "answer": "an introduction"
+        "answer": "Conditionals"
       }
     ],
     "theoryCheck": [
@@ -40576,12 +41936,12 @@ const CURRICULUM = [
         "answer": "I skim first, then scan for answers."
       },
       {
-        "question": "Пример по теме «Экзаменационные навыки»:",
+        "question": "Какое правило относится к «Повторение грамматики»?",
         "options": [
-          "Skim the title and first paragraph first.",
-          "I read every word slowly in the exam."
+          "B2: все времена, conditionals, passive, reported speech, modals, relative clauses, word formation, l",
+          "Reading: skim для общей идеи, scan для деталей. Listening: читай вопросы заранее. Writing: план из 4"
         ],
-        "answer": "Skim the title and first paragraph first."
+        "answer": "B2: все времена, conditionals, passive, reported speech, modals, relative clauses, word formation, l"
       },
       {
         "question": "Какая формула относится к «B2 Review»?",
@@ -40595,48 +41955,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "To find a date quickly, you ______ .",
-        "answer": "scan",
+        "prompt": "B2 ______",
+        "answer": "proficiency",
         "altAnswers": [
-          "scan",
-          "Scan"
+          "Proficiency",
+          "proficiency"
         ],
-        "hint": "Подсказка: слово из урока «Reading, listening, review»."
+        "hint": "Подсказка: тема «Reading, listening, review»."
       },
       {
         "id": 2,
-        "prompt": "For the main idea, you ______ .",
-        "answer": "skim",
+        "prompt": "______ task",
+        "answer": "assessment",
         "altAnswers": [
-          "skim",
-          "Skim"
+          "Assessment",
+          "assessment"
         ],
-        "hint": "Подсказка: слово из урока «Reading, listening, review»."
+        "hint": "Подсказка: тема «Reading, listening, review»."
       },
       {
         "id": 3,
-        "prompt": "B2 level is ______ C1.",
-        "answer": "below",
+        "prompt": "in ______",
+        "answer": "conclusion",
         "altAnswers": [
-          "below",
-          "Below"
+          "Conclusion",
+          "conclusion"
         ],
-        "hint": "Подсказка: слово из урока «Reading, listening, review»."
+        "hint": "Подсказка: тема «Reading, listening, review»."
       },
       {
         "id": 4,
-        "prompt": "In an essay, start with ______ .",
-        "answer": "an introduction",
+        "prompt": "______ word",
+        "answer": "key",
         "altAnswers": [
-          "an introduction",
-          "An introduction"
+          "key",
+          "Key"
         ],
-        "hint": "Подсказка: слово из урока «Reading, listening, review»."
+        "hint": "Подсказка: тема «Reading, listening, review»."
       }
     ],
     "theory": {
       "intro": "Стратегии экзамена B2: чтение, аудирование, повторение всех тем курса.",
-      "reading": "**Экзамен B2 и итоговое повторение** — Стратегии экзамена B2: чтение, аудирование, повторение всех тем курса.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Экзаменационные навыки\nReading: skim для общей идеи, scan для деталей. Listening: читай вопросы заранее. Writing: план из 4 абзацев.\n\n*Пример:* Skim the title and first paragraph first.\n\n### Повторение грамматики\nB2: все времена, conditionals, passive, reported speech, modals, relative clauses, word formation, linking words.\n\n*Пример:* Review one topic per day before the exam.\n\n### Формулы\n- `Skim → general idea / Scan → specific info`\n- `Essay: intro + 2 body paragraphs + conclusion`\n\n### Типичная ошибка\n❌ I read every word slowly in the exam.\n✅ I skim first, then scan for answers.",
+      "reading": "**Экзамен B2 и итоговое повторение** — Стратегии экзамена B2: чтение, аудирование, повторение всех тем курса.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Экзаменационные навыки\nReading: skim для общей идеи, scan для деталей. Listening: читай вопросы заранее. Writing: план из 4 абзацев.\n\n### Повторение грамматики\nB2: все времена, conditionals, passive, reported speech, modals, relative clauses, word formation, linking words.\n\n### Формулы\n- `Skim → general idea / Scan → specific info`\n- `Essay: intro + 2 body paragraphs + conclusion`\n\n### Типичная ошибка\n❌ I read every word slowly in the exam.\n✅ I skim first, then scan for answers.",
       "keyPoints": [
         "Экзаменационные навыки: Reading: skim для общей идеи, scan для деталей. Listening: читай вопросы заранее",
         "Повторение грамматики: B2: все времена, conditionals, passive, reported speech, modals, relative clause",
@@ -40650,50 +42010,50 @@ const CURRICULUM = [
       {
         "question": "What is «exam»?",
         "options": [
-          "сертификат",
-          "оценка",
+          "повторение",
           "экзамен",
-          "повторение"
+          "стратегия",
+          "сертификат"
         ],
         "answer": "экзамен"
       },
       {
         "question": "What is «strategy»?",
         "options": [
+          "ключевое слово",
+          "экзамен",
           "стратегия",
-          "владение языком",
-          "задание",
-          "повторение"
+          "задание"
         ],
         "answer": "стратегия"
       },
       {
         "question": "What is «skim»?",
         "options": [
-          "искать информацию",
+          "задание",
           "бегло просматривать",
-          "владение языком",
-          "сертификат"
+          "стратегия",
+          "экзамен"
         ],
         "answer": "бегло просматривать"
       },
       {
         "question": "What is «scan»?",
         "options": [
-          "бегло просматривать",
-          "оценка",
+          "стратегия",
           "владение языком",
-          "искать информацию"
+          "искать информацию",
+          "бегло просматривать"
         ],
         "answer": "искать информацию"
       },
       {
         "question": "What is «keyword»?",
         "options": [
-          "сертификат",
           "ключевое слово",
-          "экзамен",
-          "повторение"
+          "оценка",
+          "сертификат",
+          "владение языком"
         ],
         "answer": "ключевое слово"
       },
@@ -41011,7 +42371,10 @@ const CURRICULUM = [
           "bring up",
           "run out",
           "set up",
-          "come across"
+          "come across",
+          "deal with",
+          "point out",
+          "work out"
         ],
         "mustIncludeAny": [
           [
@@ -41021,11 +42384,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss carry out, bring up, run out in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «carry out, bring up, run out»."
       },
       {
         "prompt": "What does run out of mean?",
@@ -41035,7 +42397,10 @@ const CURRICULUM = [
           "bring up",
           "run out",
           "set up",
-          "come across"
+          "come across",
+          "deal with",
+          "point out",
+          "work out"
         ],
         "mustIncludeAny": [
           [
@@ -41045,11 +42410,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They describe their daily routine clearly."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «carry out, bring up, run out»."
       },
       {
         "prompt": "Find carry out in the text.",
@@ -41059,7 +42423,10 @@ const CURRICULUM = [
           "bring up",
           "run out",
           "set up",
-          "come across"
+          "come across",
+          "deal with",
+          "point out",
+          "work out"
         ],
         "mustIncludeAny": [
           [
@@ -41069,11 +42436,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to bring up and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «carry out, bring up, run out»."
       },
       {
         "prompt": "Turn out — what happened?",
@@ -41083,7 +42449,10 @@ const CURRICULUM = [
           "bring up",
           "run out",
           "set up",
-          "come across"
+          "come across",
+          "deal with",
+          "point out",
+          "work out"
         ],
         "mustIncludeAny": [
           [
@@ -41093,11 +42462,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The main character faces a difficult choice."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «carry out, bring up, run out»."
       },
       {
         "prompt": "Deal with — how do they handle it?",
@@ -41107,7 +42475,10 @@ const CURRICULUM = [
           "bring up",
           "run out",
           "set up",
-          "come across"
+          "come across",
+          "deal with",
+          "point out",
+          "work out"
         ],
         "mustIncludeAny": [
           [
@@ -41117,11 +42488,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss carry out, bring up, run out in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «carry out, bring up, run out»."
       }
     ],
     "speaking": [
@@ -41207,17 +42577,17 @@ const CURRICULUM = [
       {
         "word": "carry out",
         "trans": "проводить, выполнять",
-        "example": "Scientists carried out a series of experiments."
+        "example": "I need to remember «carry out» for homework."
       },
       {
         "word": "bring up",
         "trans": "воспитывать, поднимать тему",
-        "example": "We ran out of milk this morning."
+        "example": "I used «bring up» in my written answer."
       },
       {
         "word": "run out",
         "trans": "заканчиваться",
-        "example": "The report points out several flaws."
+        "example": "She asked me about «run out» during practice."
       },
       {
         "word": "set up",
@@ -41227,116 +42597,116 @@ const CURRICULUM = [
       {
         "word": "come across",
         "trans": "наткнуться, встретить",
-        "example": "It turned out fine."
+        "example": "«come across» was new for me this week."
       },
       {
         "word": "deal with",
         "trans": "иметь дело с",
-        "example": "I came across an old friend."
+        "example": "We discussed «deal with» in class today."
       },
       {
         "word": "point out",
         "trans": "указывать",
-        "example": "Scientists carried out a series of experiments."
+        "example": "He repeated «point out» three times."
       },
       {
         "word": "work out",
         "trans": "выяснить, проработать",
-        "example": "We ran out of milk this morning."
+        "example": "My partner corrected my use of «work out»."
       },
       {
         "word": "turn out",
         "trans": "оказаться",
-        "example": "The report points out several flaws."
+        "example": "My note says «turn out» means «оказаться»."
       },
       {
         "word": "break down",
         "trans": "ломаться, разбирать",
-        "example": "They set up a new department."
+        "example": "In our dialogue, «break down» appeared twice."
       },
       {
-        "word": "carry out",
-        "trans": "проводить, выполнять",
-        "example": "It turned out fine."
+        "word": "practice",
+        "trans": "практика",
+        "example": "I linked «practice» to other words I know."
       },
       {
-        "word": "bring up",
-        "trans": "воспитывать, поднимать тему",
-        "example": "I came across an old friend."
+        "word": "review",
+        "trans": "повторение",
+        "example": "I heard «review» in the listening exercise."
       },
       {
-        "word": "run out",
-        "trans": "заканчиваться",
-        "example": "Scientists carried out a series of experiments."
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I looked up «sentence» in the dictionary."
       },
       {
-        "word": "set up",
-        "trans": "организовать",
-        "example": "We ran out of milk this morning."
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "The example with «grammar» was clear."
       },
       {
-        "word": "come across",
-        "trans": "наткнуться, встретить",
-        "example": "The report points out several flaws."
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "Can you make a sentence with «vocabulary»?"
       },
       {
-        "word": "deal with",
-        "trans": "иметь дело с",
-        "example": "They set up a new department."
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "«speaking» helped me understand carry out, bring up, run out."
       },
       {
-        "word": "point out",
-        "trans": "указывать",
-        "example": "It turned out fine."
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I often use «listening» when I talk about carry out, bring up, run out."
       },
       {
-        "word": "work out",
-        "trans": "выяснить, проработать",
-        "example": "I came across an old friend."
+        "word": "writing",
+        "trans": "письмо",
+        "example": "The teacher wrote «writing» on the board."
       },
       {
-        "word": "turn out",
-        "trans": "оказаться",
-        "example": "Scientists carried out a series of experiments."
+        "word": "reading",
+        "trans": "чтение",
+        "example": "Let's practise «reading» in a full sentence."
       },
       {
-        "word": "break down",
-        "trans": "ломаться, разбирать",
-        "example": "We ran out of milk this morning."
+        "word": "homework",
+        "trans": "домашка",
+        "example": "«homework» is a key word in this lesson on carry out, bring up, run out."
       }
     ],
     "grammarCheck": [
       {
-        "sentence": "Researchers ___ a study last year.",
+        "sentence": "The ___ points out several flaws",
         "options": [
-          "carried out",
-          "carried on"
+          "report",
+          "reports"
         ],
-        "answer": "carried out"
+        "answer": "report"
       },
       {
-        "sentence": "We have ___ of coffee.",
+        "sentence": "They ___ up a new department",
         "options": [
-          "run out",
-          "run off"
+          "set",
+          "sets"
         ],
-        "answer": "run out"
+        "answer": "set"
       },
       {
-        "sentence": "She was ___ in London.",
+        "sentence": "It ___ out fine",
         "options": [
-          "brought up",
-          "brought in"
+          "turned",
+          "turneds"
         ],
-        "answer": "brought up"
+        "answer": "turned"
       },
       {
-        "sentence": "It ___ to be more difficult than expected.",
+        "sentence": "I ___ across an old friend",
         "options": [
-          "turned out",
-          "turned up"
+          "came",
+          "cames"
         ],
-        "answer": "turned out"
+        "answer": "came"
       }
     ],
     "theoryCheck": [
@@ -41349,12 +42719,12 @@ const CURRICULUM = [
         "answer": "We ran out of time."
       },
       {
-        "question": "Пример по теме «Академические и деловые»:",
+        "question": "Какое правило относится к «Разговорные и переносные»?",
         "options": [
-          "Scientists carried out a series of experiments.",
-          "We ran out from time."
+          "Run out of time/money. Come across as friendly. Turn out to be true. Break down in tears.",
+          "Carry out research/an experiment. Set up a meeting. Deal with a problem. Point out an error."
         ],
-        "answer": "Scientists carried out a series of experiments."
+        "answer": "Run out of time/money. Come across as friendly. Turn out to be true. Break down in tears."
       },
       {
         "question": "Какая формула относится к «Advanced Phrasal Verbs»?",
@@ -41368,48 +42738,48 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "Researchers ______ a study last year.",
-        "answer": "carried out",
+        "prompt": "______ out research",
+        "answer": "carry",
         "altAnswers": [
-          "carried out",
-          "Carried out"
+          "Carry",
+          "carry"
         ],
-        "hint": "Подсказка: слово из урока «carry out, bring up, run out»."
+        "hint": "Подсказка: тема «carry out, bring up, run out»."
       },
       {
         "id": 2,
-        "prompt": "We have ______ of coffee.",
-        "answer": "run out",
+        "prompt": "______ out of time",
+        "answer": "run",
         "altAnswers": [
-          "Run out",
-          "run out"
+          "run",
+          "Run"
         ],
-        "hint": "Подсказка: слово из урока «carry out, bring up, run out»."
+        "hint": "Подсказка: тема «carry out, bring up, run out»."
       },
       {
         "id": 3,
-        "prompt": "She was ______ in London.",
-        "answer": "brought up",
+        "prompt": "______ up a topic",
+        "answer": "bring",
         "altAnswers": [
-          "brought up",
-          "Brought up"
+          "Bring",
+          "bring"
         ],
-        "hint": "Подсказка: слово из урока «carry out, bring up, run out»."
+        "hint": "Подсказка: тема «carry out, bring up, run out»."
       },
       {
         "id": 4,
-        "prompt": "It ______ to be more difficult than expected.",
-        "answer": "turned out",
+        "prompt": "______ out well",
+        "answer": "turn",
         "altAnswers": [
-          "turned out",
-          "Turned out"
+          "Turn",
+          "turn"
         ],
-        "hint": "Подсказка: слово из урока «carry out, bring up, run out»."
+        "hint": "Подсказка: тема «carry out, bring up, run out»."
       }
     ],
     "theory": {
       "intro": "Продвинутые фразовые глаголы уровня B2 для академического и делового английского.",
-      "reading": "**Фразовые глаголы 2** — Продвинутые фразовые глаголы уровня B2 для академического и делового английского.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Академические и деловые\nCarry out research/an experiment. Set up a meeting. Deal with a problem. Point out an error.\n\n*Пример:* Scientists carried out a series of experiments.\n\n### Разговорные и переносные\nRun out of time/money. Come across as friendly. Turn out to be true. Break down in tears.\n\n*Пример:* We ran out of milk this morning.\n\n### Формулы\n- `carry out + task/research`\n- `run out of + noun`\n- `turn out + to be / that`\n\n### Типичная ошибка\n❌ We ran out from time.\n✅ We ran out of time.",
+      "reading": "**Фразовые глаголы 2** — Продвинутые фразовые глаголы уровня B2 для академического и делового английского.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Академические и деловые\nCarry out research/an experiment. Set up a meeting. Deal with a problem. Point out an error.\n\n### Разговорные и переносные\nRun out of time/money. Come across as friendly. Turn out to be true. Break down in tears.\n\n### Формулы\n- `carry out + task/research`\n- `run out of + noun`\n- `turn out + to be / that`\n\n### Типичная ошибка\n❌ We ran out from time.\n✅ We ran out of time.",
       "keyPoints": [
         "Академические и деловые: Carry out research/an experiment. Set up a meeting. Deal with a problem. Point o",
         "Разговорные и переносные: Run out of time/money. Come across as friendly. Turn out to be true. Break down ",
@@ -41423,20 +42793,20 @@ const CURRICULUM = [
       {
         "question": "What is «carry out»?",
         "options": [
-          "наткнуться, встретить",
           "выяснить, проработать",
+          "ломаться, разбирать",
           "проводить, выполнять",
-          "воспитывать, поднимать тему"
+          "наткнуться, встретить"
         ],
         "answer": "проводить, выполнять"
       },
       {
         "question": "What is «bring up»?",
         "options": [
-          "иметь дело с",
+          "заканчиваться",
+          "проводить, выполнять",
           "воспитывать, поднимать тему",
-          "организовать",
-          "оказаться"
+          "иметь дело с"
         ],
         "answer": "воспитывать, поднимать тему"
       },
@@ -41444,29 +42814,29 @@ const CURRICULUM = [
         "question": "What is «run out»?",
         "options": [
           "заканчиваться",
-          "иметь дело с",
-          "проводить, выполнять",
-          "ломаться, разбирать"
+          "оказаться",
+          "ломаться, разбирать",
+          "организовать"
         ],
         "answer": "заканчиваться"
       },
       {
         "question": "What is «set up»?",
         "options": [
-          "выяснить, проработать",
-          "иметь дело с",
-          "оказаться",
-          "организовать"
+          "организовать",
+          "проводить, выполнять",
+          "наткнуться, встретить",
+          "оказаться"
         ],
         "answer": "организовать"
       },
       {
         "question": "What is «come across»?",
         "options": [
+          "организовать",
+          "выяснить, проработать",
           "заканчиваться",
-          "указывать",
-          "наткнуться, встретить",
-          "ломаться, разбирать"
+          "наткнуться, встретить"
         ],
         "answer": "наткнуться, встретить"
       },
@@ -41669,15 +43039,7 @@ const CURRICULUM = [
         "If + had + V3, would + V1 (now)",
         "If + past, would have + V3"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "If I had taken that job, I would be living in Berlin now.",
-            "If I were more careful, I wouldn't have lost the keys."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "If I studied harder, I would be passed.",
         "right": "If I had studied harder, I would have passed."
@@ -41777,7 +43139,10 @@ const CURRICULUM = [
           "consequence",
           "regret",
           "present result",
-          "past cause"
+          "past cause",
+          "hypothetical",
+          "otherwise",
+          "now"
         ],
         "mustIncludeAny": [
           [
@@ -41787,11 +43152,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from mixed conditionals."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Mixed conditionals»."
       },
       {
         "prompt": "What past outcome comes from a present trait?",
@@ -41801,7 +43165,10 @@ const CURRICULUM = [
           "consequence",
           "regret",
           "present result",
-          "past cause"
+          "past cause",
+          "hypothetical",
+          "otherwise",
+          "now"
         ],
         "mustIncludeAny": [
           [
@@ -41811,11 +43178,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about present result."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Mixed conditionals»."
       },
       {
         "prompt": "Is the situation real?",
@@ -41825,7 +43191,10 @@ const CURRICULUM = [
           "consequence",
           "regret",
           "present result",
-          "past cause"
+          "past cause",
+          "hypothetical",
+          "otherwise",
+          "now"
         ],
         "mustIncludeAny": [
           [
@@ -41835,11 +43204,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss mixed conditionals in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Mixed conditionals»."
       },
       {
         "prompt": "Which time does each clause refer to?",
@@ -41849,7 +43217,10 @@ const CURRICULUM = [
           "consequence",
           "regret",
           "present result",
-          "past cause"
+          "past cause",
+          "hypothetical",
+          "otherwise",
+          "now"
         ],
         "mustIncludeAny": [
           [
@@ -41859,11 +43230,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to consequence and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Mixed conditionals»."
       },
       {
         "prompt": "What would be different now?",
@@ -41873,7 +43243,10 @@ const CURRICULUM = [
           "consequence",
           "regret",
           "present result",
-          "past cause"
+          "past cause",
+          "hypothetical",
+          "otherwise",
+          "now"
         ],
         "mustIncludeAny": [
           [
@@ -41883,11 +43256,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on mixed conditionals."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Mixed conditionals»."
       }
     ],
     "speaking": [
@@ -41977,87 +43349,137 @@ const CURRICULUM = [
       {
         "word": "mixed",
         "trans": "смешанный",
-        "example": "If I had taken that job, I would be living in Berlin now."
+        "example": "«mixed» is a key word in this lesson on mixed conditionals."
       },
       {
         "word": "consequence",
         "trans": "следствие",
-        "example": "If I were more careful, I wouldn't have lost the keys."
+        "example": "I need to remember «consequence» for homework."
       },
       {
         "word": "regret",
         "trans": "сожаление",
-        "example": "If I had taken that job, I would be living in Berlin now."
+        "example": "I used «regret» in my written answer."
       },
       {
         "word": "present result",
         "trans": "результат в настоящем",
-        "example": "If I were more careful, I wouldn't have lost the keys."
+        "example": "She asked me about «present result» during practice."
       },
       {
         "word": "past cause",
         "trans": "причина в прошлом",
-        "example": "If I had taken that job, I would be living in Berlin now."
+        "example": "«past cause» fits well in a sentence about mixed conditionals."
       },
       {
         "word": "hypothetical",
         "trans": "гипотетический",
-        "example": "If I were more careful, I wouldn't have lost the keys."
+        "example": "«hypothetical» was new for me this week."
       },
       {
         "word": "otherwise",
         "trans": "иначе",
-        "example": "If I had taken that job, I would be living in Berlin now."
+        "example": "We discussed «otherwise» in class today."
       },
       {
         "word": "now",
         "trans": "сейчас",
-        "example": "If I were more careful, I wouldn't have lost the keys."
+        "example": "He repeated «now» three times."
       },
       {
         "word": "then",
         "trans": "тогда",
-        "example": "If I had taken that job, I would be living in Berlin now."
+        "example": "My partner corrected my use of «then»."
       },
       {
         "word": "outcome",
         "trans": "исход",
-        "example": "If I were more careful, I wouldn't have lost the keys."
+        "example": "My note says «outcome» means «исход»."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "In our dialogue, «practice» appeared twice."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "I linked «review» to other words I know."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I heard «sentence» in the listening exercise."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "I looked up «grammar» in the dictionary."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "The example with «vocabulary» was clear."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "Can you make a sentence with «speaking»?"
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "«listening» helped me understand mixed conditionals."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I often use «writing» when I talk about mixed conditionals."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "The teacher wrote «reading» on the board."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "Let's practise «homework» in a full sentence."
       }
     ],
     "id": 57,
     "grammarCheck": [
       {
-        "sentence": "If she had left earlier, she ___ be here now.",
+        "sentence": "If I had ___ I would be happier now",
         "options": [
-          "would",
-          "will"
+          "known",
+          "knowns"
         ],
-        "answer": "would"
+        "answer": "known"
       },
       {
-        "sentence": "If I were taller, I ___ have joined the team.",
+        "sentence": "If I were you, I would have ___",
         "options": [
-          "would",
-          "would have"
+          "accepted",
+          "accepteds"
         ],
-        "answer": "would have"
+        "answer": "accepted"
       },
       {
-        "sentence": "If they had invested, they ___ rich now.",
+        "sentence": "If she had ___ she would live abroad",
         "options": [
-          "would be",
-          "will be"
+          "moved",
+          "moveds"
         ],
-        "answer": "would be"
+        "answer": "moved"
       },
       {
-        "sentence": "If he knew the truth, he ___ differently.",
+        "sentence": "___ would you do now if…",
         "options": [
-          "would have acted",
-          "would act"
+          "What",
+          "Whats"
         ],
-        "answer": "would have acted"
+        "answer": "What"
       }
     ],
     "theoryCheck": [
@@ -42070,12 +43492,12 @@ const CURRICULUM = [
         "answer": "If I had studied harder, I would have passed."
       },
       {
-        "question": "Пример по теме «Past → present»:",
+        "question": "Какое правило относится к «Present → past»?",
         "options": [
-          "If I had taken that job, I would be living in Berlin now.",
-          "If I studied harder, I would be passed."
+          "If + past simple, would have + V3.",
+          "If + past perfect, would + verb (now)."
         ],
-        "answer": "If I had taken that job, I would be living in Berlin now."
+        "answer": "If + past simple, would have + V3."
       },
       {
         "question": "Какая формула относится к «Mixed conditionals»?",
@@ -42089,48 +43511,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "If she had left earlier, she ______ be here now.",
-        "answer": "would",
+        "prompt": "I ______ have failed if I were more disciplined",
+        "answer": "wouldn't",
         "altAnswers": [
-          "Would",
-          "would"
+          "wouldn't",
+          "Wouldn't"
         ],
-        "hint": "Подсказка: слово из урока «Mixed conditionals»."
+        "hint": "Подсказка: тема «Mixed conditionals»."
       },
       {
         "id": 2,
-        "prompt": "If I were taller, I ______ have joined the team.",
-        "answer": "would have",
+        "prompt": "If I had ______ money, I could buy a flat now",
+        "answer": "saved",
         "altAnswers": [
-          "Would have",
-          "would have"
+          "Saved",
+          "saved"
         ],
-        "hint": "Подсказка: слово из урока «Mixed conditionals»."
+        "hint": "Подсказка: тема «Mixed conditionals»."
       },
       {
         "id": 3,
-        "prompt": "If they had invested, they ______ rich now.",
-        "answer": "would be",
+        "prompt": "If I had ______ harder, I would have passed",
+        "answer": "studied",
         "altAnswers": [
-          "would be",
-          "Would be"
+          "Studied",
+          "studied"
         ],
-        "hint": "Подсказка: слово из урока «Mixed conditionals»."
-      },
-      {
-        "id": 4,
-        "prompt": "If he knew the truth, he ______ differently.",
-        "answer": "would have acted",
-        "altAnswers": [
-          "Would have acted",
-          "would have acted"
-        ],
-        "hint": "Подсказка: слово из урока «Mixed conditionals»."
+        "hint": "Подсказка: тема «Mixed conditionals»."
       }
     ],
     "theory": {
       "intro": "Connect past conditions with present results, and vice versa.",
-      "reading": "**Mixed conditionals** — Connect past conditions with present results, and vice versa.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Past → present\nIf + past perfect, would + verb (now).\n\n*Пример:* If I had taken that job, I would be living in Berlin now.\n\n### Present → past\nIf + past simple, would have + V3.\n\n*Пример:* If I were more careful, I wouldn't have lost the keys.\n\n### Формулы\n- `If + had + V3, would + V1 (now)`\n- `If + past, would have + V3`\n\n### Типичная ошибка\n❌ If I studied harder, I would be passed.\n✅ If I had studied harder, I would have passed.",
+      "reading": "**Mixed conditionals** — Connect past conditions with present results, and vice versa.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Past → present\nIf + past perfect, would + verb (now).\n\n### Present → past\nIf + past simple, would have + V3.\n\n### Формулы\n- `If + had + V3, would + V1 (now)`\n- `If + past, would have + V3`\n\n### Типичная ошибка\n❌ If I studied harder, I would be passed.\n✅ If I had studied harder, I would have passed.",
       "keyPoints": [
         "Past → present: If + past perfect, would + verb (now).",
         "Present → past: If + past simple, would have + V3.",
@@ -42144,50 +43556,50 @@ const CURRICULUM = [
       {
         "question": "What is «mixed»?",
         "options": [
-          "гипотетический",
+          "исход",
           "смешанный",
-          "сожаление",
-          "тогда"
+          "результат в настоящем",
+          "сейчас"
         ],
         "answer": "смешанный"
       },
       {
         "question": "What is «consequence»?",
         "options": [
-          "следствие",
+          "причина в прошлом",
+          "тогда",
           "гипотетический",
-          "иначе",
-          "результат в настоящем"
+          "следствие"
         ],
         "answer": "следствие"
       },
       {
         "question": "What is «regret»?",
         "options": [
-          "сожаление",
-          "смешанный",
-          "тогда",
-          "причина в прошлом"
+          "гипотетический",
+          "иначе",
+          "сейчас",
+          "сожаление"
         ],
         "answer": "сожаление"
       },
       {
         "question": "What is «present result»?",
         "options": [
-          "результат в настоящем",
           "причина в прошлом",
-          "тогда",
-          "исход"
+          "результат в настоящем",
+          "сожаление",
+          "следствие"
         ],
         "answer": "результат в настоящем"
       },
       {
         "question": "What is «past cause»?",
         "options": [
+          "следствие",
           "причина в прошлом",
-          "результат в настоящем",
-          "тогда",
-          "следствие"
+          "исход",
+          "результат в настоящем"
         ],
         "answer": "причина в прошлом"
       },
@@ -42380,15 +43792,7 @@ const CURRICULUM = [
         "that + base verb (subjunctive)",
         "It is + adjective + that + base verb"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "I suggest that he be present.",
-            "It is vital that every student submit the form."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I suggest that he is on time.",
         "right": "I suggest that he be on time."
@@ -42488,7 +43892,10 @@ const CURRICULUM = [
           "essential",
           "recommend",
           "insist",
-          "propose"
+          "propose",
+          "formal",
+          "mandatory",
+          "attend"
         ],
         "mustIncludeAny": [
           [
@@ -42498,11 +43905,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about insist."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Subjunctive and formal English»."
       },
       {
         "prompt": "Is the tone formal or informal?",
@@ -42512,7 +43918,10 @@ const CURRICULUM = [
           "essential",
           "recommend",
           "insist",
-          "propose"
+          "propose",
+          "formal",
+          "mandatory",
+          "attend"
         ],
         "mustIncludeAny": [
           [
@@ -42522,11 +43931,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss subjunctive and formal english in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Subjunctive and formal English»."
       },
       {
         "prompt": "What does insist that… mean?",
@@ -42536,7 +43944,10 @@ const CURRICULUM = [
           "essential",
           "recommend",
           "insist",
-          "propose"
+          "propose",
+          "formal",
+          "mandatory",
+          "attend"
         ],
         "mustIncludeAny": [
           [
@@ -42546,11 +43957,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They describe their daily routine clearly."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Subjunctive and formal English»."
       },
       {
         "prompt": "Find a fixed formal phrase.",
@@ -42560,7 +43970,10 @@ const CURRICULUM = [
           "essential",
           "recommend",
           "insist",
-          "propose"
+          "propose",
+          "formal",
+          "mandatory",
+          "attend"
         ],
         "mustIncludeAny": [
           [
@@ -42570,11 +43983,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about insist."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Subjunctive and formal English»."
       },
       {
         "prompt": "How is the recommendation phrased?",
@@ -42584,7 +43996,10 @@ const CURRICULUM = [
           "essential",
           "recommend",
           "insist",
-          "propose"
+          "propose",
+          "formal",
+          "mandatory",
+          "attend"
         ],
         "mustIncludeAny": [
           [
@@ -42594,11 +44009,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on subjunctive and formal english."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Subjunctive and formal English»."
       }
     ],
     "speaking": [
@@ -42684,87 +44098,137 @@ const CURRICULUM = [
       {
         "word": "subjunctive",
         "trans": "сослагательное наклонение",
-        "example": "I suggest that he be present."
+        "example": "Let's practise «subjunctive» in a full sentence."
       },
       {
         "word": "essential",
         "trans": "необходимый",
-        "example": "It is vital that every student submit the form."
+        "example": "«essential» is a key word in this lesson on subjunctive and formal english."
       },
       {
         "word": "recommend",
         "trans": "рекомендовать",
-        "example": "I suggest that he be present."
+        "example": "I need to remember «recommend» for homework."
       },
       {
         "word": "insist",
         "trans": "настаивать",
-        "example": "It is vital that every student submit the form."
+        "example": "I used «insist» in my written answer."
       },
       {
         "word": "propose",
         "trans": "предлагать",
-        "example": "I suggest that he be present."
+        "example": "She asked me about «propose» during practice."
       },
       {
         "word": "formal",
         "trans": "формальный",
-        "example": "It is vital that every student submit the form."
+        "example": "«formal» fits well in a sentence about subjunctive and formal english."
       },
       {
         "word": "mandatory",
         "trans": "обязательный",
-        "example": "I suggest that he be present."
+        "example": "«mandatory» was new for me this week."
       },
       {
         "word": "attend",
         "trans": "присутствовать",
-        "example": "It is vital that every student submit the form."
+        "example": "We discussed «attend» in class today."
       },
       {
         "word": "present",
         "trans": "представлять",
-        "example": "I suggest that he be present."
+        "example": "He repeated «present» three times."
       },
       {
         "word": "hereby",
         "trans": "настоящим",
-        "example": "It is vital that every student submit the form."
+        "example": "My partner corrected my use of «hereby»."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "My note says «practice» means «практика»."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "In our dialogue, «review» appeared twice."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "I linked «sentence» to other words I know."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "I heard «grammar» in the listening exercise."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I looked up «vocabulary» in the dictionary."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "The example with «speaking» was clear."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "Can you make a sentence with «listening»?"
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "«writing» helped me understand subjunctive and formal english."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I often use «reading» when I talk about subjunctive and formal english."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "The teacher wrote «homework» on the board."
       }
     ],
     "id": 58,
     "grammarCheck": [
       {
-        "sentence": "I recommend that she ___ early.",
+        "sentence": "I ___ that he be present",
         "options": [
-          "arrive",
-          "arrives"
+          "suggest",
+          "suggests"
         ],
-        "answer": "arrive"
+        "answer": "suggest"
       },
       {
-        "sentence": "It is essential that he ___ informed.",
+        "sentence": "It is ___ that she attend",
         "options": [
-          "be",
-          "is"
+          "vital",
+          "vitals"
         ],
-        "answer": "be"
+        "answer": "vital"
       },
       {
-        "sentence": "They insisted that we ___ on time.",
+        "sentence": "We ___ that they comply",
         "options": [
-          "be",
-          "are"
+          "insist",
+          "insists"
         ],
-        "answer": "be"
+        "answer": "insist"
       },
       {
-        "sentence": "It is important that she ___ the rules.",
+        "sentence": "Be ___ as it may",
         "options": [
-          "follow",
-          "follows"
+          "that",
+          "thats"
         ],
-        "answer": "follow"
+        "answer": "that"
       }
     ],
     "theoryCheck": [
@@ -42777,12 +44241,12 @@ const CURRICULUM = [
         "answer": "I suggest that he be on time."
       },
       {
-        "question": "Пример по теме «Mandative subjunctive»:",
+        "question": "Какое правило относится к «Fixed formal phrases»?",
         "options": [
-          "I suggest that he be present.",
-          "I suggest that he is on time."
+          "God save the Queen. Be that as it may.",
+          "suggest/recommend/insist + that + base verb (no -s)."
         ],
-        "answer": "I suggest that he be present."
+        "answer": "God save the Queen. Be that as it may."
       },
       {
         "question": "Какая формула относится к «Subjunctive & formal»?",
@@ -42796,48 +44260,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "I recommend that she ______ early.",
-        "answer": "arrive",
+        "prompt": "I ______ confirm receipt",
+        "answer": "hereby",
         "altAnswers": [
-          "arrive",
-          "Arrive"
+          "Hereby",
+          "hereby"
         ],
-        "hint": "Подсказка: слово из урока «Subjunctive and formal English»."
+        "hint": "Подсказка: тема «Subjunctive and formal English»."
       },
       {
         "id": 2,
-        "prompt": "It is essential that he ______ informed.",
-        "answer": "be",
+        "prompt": "I ______ that the matter be discussed",
+        "answer": "propose",
         "altAnswers": [
-          "Be",
-          "be"
+          "propose",
+          "Propose"
         ],
-        "hint": "Подсказка: слово из урока «Subjunctive and formal English»."
+        "hint": "Подсказка: тема «Subjunctive and formal English»."
       },
       {
         "id": 3,
-        "prompt": "They insisted that we ______ on time.",
-        "answer": "be",
+        "prompt": "I ______ that he be on time",
+        "answer": "suggest",
         "altAnswers": [
-          "Be",
-          "be"
+          "suggest",
+          "Suggest"
         ],
-        "hint": "Подсказка: слово из урока «Subjunctive and formal English»."
-      },
-      {
-        "id": 4,
-        "prompt": "It is important that she ______ the rules.",
-        "answer": "follow",
-        "altAnswers": [
-          "follow",
-          "Follow"
-        ],
-        "hint": "Подсказка: слово из урока «Subjunctive and formal English»."
+        "hint": "Подсказка: тема «Subjunctive and formal English»."
       }
     ],
     "theory": {
       "intro": "Use formal structures in requests, recommendations, and fixed phrases.",
-      "reading": "**Subjunctive** — Use formal structures in requests, recommendations, and fixed phrases.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Mandative subjunctive\nsuggest/recommend/insist + that + base verb (no -s).\n\n*Пример:* I suggest that he be present.\n\n### Fixed formal phrases\nGod save the Queen. Be that as it may.\n\n*Пример:* It is vital that every student submit the form.\n\n### Формулы\n- `that + base verb (subjunctive)`\n- `It is + adjective + that + base verb`\n\n### Типичная ошибка\n❌ I suggest that he is on time.\n✅ I suggest that he be on time.",
+      "reading": "**Subjunctive** — Use formal structures in requests, recommendations, and fixed phrases.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Mandative subjunctive\nsuggest/recommend/insist + that + base verb (no -s).\n\n### Fixed formal phrases\nGod save the Queen. Be that as it may.\n\n### Формулы\n- `that + base verb (subjunctive)`\n- `It is + adjective + that + base verb`\n\n### Типичная ошибка\n❌ I suggest that he is on time.\n✅ I suggest that he be on time.",
       "keyPoints": [
         "Mandative subjunctive: suggest/recommend/insist + that + base verb (no -s).",
         "Fixed formal phrases: God save the Queen. Be that as it may.",
@@ -42851,40 +44305,40 @@ const CURRICULUM = [
       {
         "question": "What is «subjunctive»?",
         "options": [
+          "необходимый",
           "сослагательное наклонение",
-          "формальный",
-          "настоящим",
-          "необходимый"
+          "присутствовать",
+          "рекомендовать"
         ],
         "answer": "сослагательное наклонение"
       },
       {
         "question": "What is «essential»?",
         "options": [
-          "представлять",
-          "формальный",
+          "настаивать",
+          "сослагательное наклонение",
           "необходимый",
-          "сослагательное наклонение"
+          "предлагать"
         ],
         "answer": "необходимый"
       },
       {
         "question": "What is «recommend»?",
         "options": [
+          "необходимый",
+          "настаивать",
           "рекомендовать",
-          "предлагать",
-          "сослагательное наклонение",
-          "присутствовать"
+          "формальный"
         ],
         "answer": "рекомендовать"
       },
       {
         "question": "What is «insist»?",
         "options": [
-          "сослагательное наклонение",
-          "рекомендовать",
+          "представлять",
           "настаивать",
-          "присутствовать"
+          "присутствовать",
+          "формальный"
         ],
         "answer": "настаивать"
       },
@@ -42892,9 +44346,9 @@ const CURRICULUM = [
         "question": "What is «propose»?",
         "options": [
           "предлагать",
-          "настоящим",
           "необходимый",
-          "сослагательное наклонение"
+          "сослагательное наклонение",
+          "присутствовать"
         ],
         "answer": "предлагать"
       },
@@ -43088,15 +44542,7 @@ const CURRICULUM = [
         "The evidence suggests…",
         "However, / Nevertheless,"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "The author claims that… However, the evidence is limited.",
-            "While the article raises valid points, it overlooks key data."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "The author is wrong and stupid.",
         "right": "The author's argument is unconvincing because…"
@@ -43196,7 +44642,10 @@ const CURRICULUM = [
           "evaluate",
           "argument",
           "evidence",
-          "claim"
+          "claim",
+          "counterargument",
+          "bias",
+          "assumption"
         ],
         "mustIncludeAny": [
           [
@@ -43206,11 +44655,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "She helps her family after school."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Critical writing»."
       },
       {
         "prompt": "Is the evidence strong or weak?",
@@ -43220,7 +44668,10 @@ const CURRICULUM = [
           "evaluate",
           "argument",
           "evidence",
-          "claim"
+          "claim",
+          "counterargument",
+          "bias",
+          "assumption"
         ],
         "mustIncludeAny": [
           [
@@ -43230,11 +44681,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about evidence."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Critical writing»."
       },
       {
         "prompt": "What counterargument appears?",
@@ -43244,7 +44694,10 @@ const CURRICULUM = [
           "evaluate",
           "argument",
           "evidence",
-          "claim"
+          "claim",
+          "counterargument",
+          "bias",
+          "assumption"
         ],
         "mustIncludeAny": [
           [
@@ -43254,11 +44707,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Technology helps them stay in touch abroad."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Critical writing»."
       },
       {
         "prompt": "How does the reviewer evaluate the text?",
@@ -43268,7 +44720,10 @@ const CURRICULUM = [
           "evaluate",
           "argument",
           "evidence",
-          "claim"
+          "claim",
+          "counterargument",
+          "bias",
+          "assumption"
         ],
         "mustIncludeAny": [
           [
@@ -43278,11 +44733,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about evidence."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Critical writing»."
       },
       {
         "prompt": "What is the final conclusion?",
@@ -43292,7 +44746,10 @@ const CURRICULUM = [
           "evaluate",
           "argument",
           "evidence",
-          "claim"
+          "claim",
+          "counterargument",
+          "bias",
+          "assumption"
         ],
         "mustIncludeAny": [
           [
@@ -43302,11 +44759,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on critical writing."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Critical writing»."
       }
     ],
     "speaking": [
@@ -43396,87 +44852,129 @@ const CURRICULUM = [
       {
         "word": "analyse",
         "trans": "анализировать",
-        "example": "The author claims that… However, the evidence is limited."
+        "example": "The teacher wrote «analyse» on the board."
       },
       {
         "word": "evaluate",
         "trans": "оценивать",
-        "example": "While the article raises valid points, it overlooks key data."
+        "example": "Let's practise «evaluate» in a full sentence."
       },
       {
         "word": "argument",
         "trans": "аргумент",
-        "example": "The author claims that… However, the evidence is limited."
+        "example": "The author's argument is unconvincing because…"
       },
       {
         "word": "evidence",
         "trans": "доказательство",
-        "example": "While the article raises valid points, it overlooks key data."
+        "example": "I need to remember «evidence» for homework."
       },
       {
         "word": "claim",
         "trans": "утверждение",
-        "example": "The author claims that… However, the evidence is limited."
+        "example": "I used «claim» in my written answer."
       },
       {
         "word": "counterargument",
         "trans": "контраргумент",
-        "example": "While the article raises valid points, it overlooks key data."
+        "example": "She asked me about «counterargument» during practice."
       },
       {
         "word": "bias",
         "trans": "предвзятость",
-        "example": "The author claims that… However, the evidence is limited."
+        "example": "«bias» fits well in a sentence about critical writing."
       },
       {
         "word": "assumption",
         "trans": "допущение",
-        "example": "While the article raises valid points, it overlooks key data."
+        "example": "«assumption» was new for me this week."
       },
       {
         "word": "conclude",
         "trans": "заключать",
-        "example": "The author claims that… However, the evidence is limited."
+        "example": "We discussed «conclude» in class today."
       },
       {
         "word": "criticise",
         "trans": "критиковать",
-        "example": "While the article raises valid points, it overlooks key data."
+        "example": "He repeated «criticise» three times."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "My partner corrected my use of «practice»."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "My note says «review» means «повторение»."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "In our dialogue, «sentence» appeared twice."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "I linked «grammar» to other words I know."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I heard «vocabulary» in the listening exercise."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I looked up «speaking» in the dictionary."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "The example with «listening» was clear."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "Can you make a sentence with «writing»?"
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "«reading» helped me understand critical writing."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I often use «homework» when I talk about critical writing."
       }
     ],
     "id": 59,
     "grammarCheck": [
       {
-        "sentence": "The author ___ that technology improves learning.",
+        "sentence": "The ___ argues that…",
         "options": [
-          "claims",
-          "claim"
+          "author",
+          "authors"
         ],
-        "answer": "claims"
+        "answer": "author"
       },
       {
-        "sentence": "The evidence is ___.",
+        "sentence": "___ it is worth reading",
         "options": [
-          "limited",
-          "limit"
+          "Nevertheless",
+          "Nevertheles"
         ],
-        "answer": "limited"
+        "answer": "Nevertheless"
       },
       {
-        "sentence": "___, the conclusion is too general.",
+        "sentence": "___ raises important questions",
         "options": [
-          "However",
-          "Although"
+          "This",
+          "Thi"
         ],
-        "answer": "However"
-      },
-      {
-        "sentence": "She ___ the main assumptions.",
-        "options": [
-          "questions",
-          "question"
-        ],
-        "answer": "questions"
+        "answer": "This"
       }
     ],
     "theoryCheck": [
@@ -43489,12 +44987,12 @@ const CURRICULUM = [
         "answer": "The author's argument is unconvincing because…"
       },
       {
-        "question": "Пример по теме «Structure»:",
+        "question": "Какое правило относится к «Evaluation language»?",
         "options": [
-          "The author claims that… However, the evidence is limited.",
-          "The author is wrong and stupid."
+          "The argument is convincing / weak / one-sided.",
+          "Introduce the text → summarise → evaluate → conclude."
         ],
-        "answer": "The author claims that… However, the evidence is limited."
+        "answer": "The argument is convincing / weak / one-sided."
       },
       {
         "question": "Какая формула относится к «Critical writing»?",
@@ -43508,48 +45006,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "The author ______ that technology improves learning.",
-        "answer": "claims",
+        "prompt": "On ______ the review is fair",
+        "answer": "balance",
         "altAnswers": [
-          "Claims",
-          "claims"
+          "Balance",
+          "balance"
         ],
-        "hint": "Подсказка: слово из урока «Critical writing»."
+        "hint": "Подсказка: тема «Critical writing»."
       },
       {
         "id": 2,
-        "prompt": "The evidence is ______ .",
-        "answer": "limited",
+        "prompt": "In ______ the text is thought-provoking",
+        "answer": "conclusion",
         "altAnswers": [
-          "Limited",
-          "limited"
+          "Conclusion",
+          "conclusion"
         ],
-        "hint": "Подсказка: слово из урока «Critical writing»."
+        "hint": "Подсказка: тема «Critical writing»."
       },
       {
         "id": 3,
-        "prompt": "______ , the conclusion is too general.",
-        "answer": "However",
+        "prompt": "The ______ argument is unconvincing because…",
+        "answer": "author's",
         "altAnswers": [
-          "however",
-          "However"
+          "Author's",
+          "author's"
         ],
-        "hint": "Подсказка: слово из урока «Critical writing»."
-      },
-      {
-        "id": 4,
-        "prompt": "She ______ the main assumptions.",
-        "answer": "questions",
-        "altAnswers": [
-          "questions",
-          "Questions"
-        ],
-        "hint": "Подсказка: слово из урока «Critical writing»."
+        "hint": "Подсказка: тема «Critical writing»."
       }
     ],
     "theory": {
       "intro": "Analyse texts and express evaluation in academic style.",
-      "reading": "**Critical writing** — Analyse texts and express evaluation in academic style.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Structure\nIntroduce the text → summarise → evaluate → conclude.\n\n*Пример:* The author claims that… However, the evidence is limited.\n\n### Evaluation language\nThe argument is convincing / weak / one-sided.\n\n*Пример:* While the article raises valid points, it overlooks key data.\n\n### Формулы\n- `The author claims/argues that…`\n- `The evidence suggests…`\n- `However, / Nevertheless,`\n\n### Типичная ошибка\n❌ The author is wrong and stupid.\n✅ The author's argument is unconvincing because…",
+      "reading": "**Critical writing** — Analyse texts and express evaluation in academic style.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Structure\nIntroduce the text → summarise → evaluate → conclude.\n\n### Evaluation language\nThe argument is convincing / weak / one-sided.\n\n### Формулы\n- `The author claims/argues that…`\n- `The evidence suggests…`\n- `However, / Nevertheless,`\n\n### Типичная ошибка\n❌ The author is wrong and stupid.\n✅ The author's argument is unconvincing because…",
       "keyPoints": [
         "Structure: Introduce the text → summarise → evaluate → conclude.",
         "Evaluation language: The argument is convincing / weak / one-sided.",
@@ -43563,50 +45051,50 @@ const CURRICULUM = [
       {
         "question": "What is «analyse»?",
         "options": [
-          "аргумент",
-          "допущение",
-          "доказательство",
-          "анализировать"
+          "заключать",
+          "анализировать",
+          "оценивать",
+          "предвзятость"
         ],
         "answer": "анализировать"
       },
       {
         "question": "What is «evaluate»?",
         "options": [
+          "анализировать",
           "предвзятость",
-          "оценивать",
-          "контраргумент",
-          "анализировать"
+          "критиковать",
+          "оценивать"
         ],
         "answer": "оценивать"
       },
       {
         "question": "What is «argument»?",
         "options": [
-          "аргумент",
           "доказательство",
-          "допущение",
-          "утверждение"
+          "оценивать",
+          "аргумент",
+          "допущение"
         ],
         "answer": "аргумент"
       },
       {
         "question": "What is «evidence»?",
         "options": [
+          "доказательство",
+          "анализировать",
           "допущение",
-          "предвзятость",
-          "оценивать",
-          "доказательство"
+          "контраргумент"
         ],
         "answer": "доказательство"
       },
       {
         "question": "What is «claim»?",
         "options": [
-          "критиковать",
+          "оценивать",
+          "допущение",
           "утверждение",
-          "контраргумент",
-          "заключать"
+          "анализировать"
         ],
         "answer": "утверждение"
       },
@@ -43804,15 +45292,7 @@ const CURRICULUM = [
         "must/might/could + have + V3",
         "should/shouldn't have + V3"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "She must have left already.",
-            "You should have told me earlier."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "She must left already.",
         "right": "She must have left already."
@@ -43912,7 +45392,10 @@ const CURRICULUM = [
           "must have",
           "could have",
           "should have",
-          "needn't have"
+          "needn't have",
+          "deduction",
+          "probability",
+          "criticism"
         ],
         "mustIncludeAny": [
           [
@@ -43922,11 +45405,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on nuanced modals."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Nuanced modals»."
       },
       {
         "prompt": "Is must have or might have used?",
@@ -43936,7 +45418,10 @@ const CURRICULUM = [
           "must have",
           "could have",
           "should have",
-          "needn't have"
+          "needn't have",
+          "deduction",
+          "probability",
+          "criticism"
         ],
         "mustIncludeAny": [
           [
@@ -43946,11 +45431,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The character will probably apologise next."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Nuanced modals»."
       },
       {
         "prompt": "What criticism is expressed?",
@@ -43960,7 +45444,10 @@ const CURRICULUM = [
           "must have",
           "could have",
           "should have",
-          "needn't have"
+          "needn't have",
+          "deduction",
+          "probability",
+          "criticism"
         ],
         "mustIncludeAny": [
           [
@@ -43970,11 +45457,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss nuanced modals in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Nuanced modals»."
       },
       {
         "prompt": "Was the action necessary?",
@@ -43984,7 +45470,10 @@ const CURRICULUM = [
           "must have",
           "could have",
           "should have",
-          "needn't have"
+          "needn't have",
+          "deduction",
+          "probability",
+          "criticism"
         ],
         "mustIncludeAny": [
           [
@@ -43994,11 +45483,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on nuanced modals."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Nuanced modals»."
       },
       {
         "prompt": "What could have happened instead?",
@@ -44008,7 +45496,10 @@ const CURRICULUM = [
           "must have",
           "could have",
           "should have",
-          "needn't have"
+          "needn't have",
+          "deduction",
+          "probability",
+          "criticism"
         ],
         "mustIncludeAny": [
           [
@@ -44018,11 +45509,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "People use smartphones for work and study."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Nuanced modals»."
       }
     ],
     "speaking": [
@@ -44108,87 +45598,137 @@ const CURRICULUM = [
       {
         "word": "might have",
         "trans": "возможно (прошлое)",
-        "example": "She must have left already."
+        "example": "I often use «might have» when I talk about nuanced modals."
       },
       {
         "word": "must have",
         "trans": "должно быть (вывод)",
-        "example": "You should have told me earlier."
+        "example": "The teacher wrote «must have» on the board."
       },
       {
         "word": "could have",
         "trans": "мог бы (прошлое)",
-        "example": "She must have left already."
+        "example": "Let's practise «could have» in a full sentence."
       },
       {
         "word": "should have",
         "trans": "следовало бы",
-        "example": "You should have told me earlier."
+        "example": "«should have» is a key word in this lesson on nuanced modals."
       },
       {
         "word": "needn't have",
         "trans": "необязательно было",
-        "example": "She must have left already."
+        "example": "I need to remember «needn't have» for homework."
       },
       {
         "word": "deduction",
         "trans": "вывод",
-        "example": "You should have told me earlier."
+        "example": "I used «deduction» in my written answer."
       },
       {
         "word": "probability",
         "trans": "вероятность",
-        "example": "She must have left already."
+        "example": "She asked me about «probability» during practice."
       },
       {
         "word": "criticism",
         "trans": "критика",
-        "example": "You should have told me earlier."
+        "example": "«criticism» fits well in a sentence about nuanced modals."
       },
       {
         "word": "speculate",
         "trans": "предполагать",
-        "example": "She must have left already."
+        "example": "«speculate» was new for me this week."
       },
       {
         "word": "certainty",
         "trans": "уверенность",
-        "example": "You should have told me earlier."
+        "example": "We discussed «certainty» in class today."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "He repeated «practice» three times."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "My partner corrected my use of «review»."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "My note says «sentence» means «предложение»."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "In our dialogue, «grammar» appeared twice."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "I linked «vocabulary» to other words I know."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I heard «speaking» in the listening exercise."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I looked up «listening» in the dictionary."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "The example with «writing» was clear."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "Can you make a sentence with «reading»?"
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "«homework» helped me understand nuanced modals."
       }
     ],
     "id": 60,
     "grammarCheck": [
       {
-        "sentence": "She ___ have forgotten. (I'm almost sure)",
+        "sentence": "She must have ___",
         "options": [
-          "must",
-          "might"
+          "forgotten",
+          "forgottens"
         ],
-        "answer": "must"
+        "answer": "forgotten"
       },
       {
-        "sentence": "He ___ have missed the train. (possible)",
+        "sentence": "It ___ have been a mistake",
         "options": [
-          "could",
-          "must"
+          "might",
+          "mights"
         ],
-        "answer": "could"
+        "answer": "might"
       },
       {
-        "sentence": "You ___ have called me!",
+        "sentence": "You should have ___ me",
         "options": [
-          "should",
-          "should to"
+          "told",
+          "tolds"
         ],
-        "answer": "should"
+        "answer": "told"
       },
       {
-        "sentence": "We ___ have bought so much food. (unnecessary)",
+        "sentence": "We needn't have ___",
         "options": [
-          "needn't",
-          "mustn't"
+          "worried",
+          "worrieds"
         ],
-        "answer": "needn't"
+        "answer": "worried"
       }
     ],
     "theoryCheck": [
@@ -44201,12 +45741,12 @@ const CURRICULUM = [
         "answer": "She must have left already."
       },
       {
-        "question": "Пример по теме «Past deduction»:",
+        "question": "Какое правило относится к «Past criticism»?",
         "options": [
-          "She must have left already.",
-          "She must left already."
+          "should have + V3. needn't have + V3 (unnecessary action).",
+          "must have + V3 (near certainty). might/could have + V3 (possibility)."
         ],
-        "answer": "She must have left already."
+        "answer": "should have + V3. needn't have + V3 (unnecessary action)."
       },
       {
         "question": "Какая формула относится к «Nuanced modals»?",
@@ -44220,48 +45760,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "She ______ have forgotten. (I'm almost sure)",
-        "answer": "must",
+        "prompt": "They could have ______ a taxi",
+        "answer": "taken",
         "altAnswers": [
-          "must",
-          "Must"
+          "Taken",
+          "taken"
         ],
-        "hint": "Подсказка: слово из урока «Nuanced modals»."
+        "hint": "Подсказка: тема «Nuanced modals»."
       },
       {
         "id": 2,
-        "prompt": "He ______ have missed the train. (possible)",
-        "answer": "could",
+        "prompt": "They should have ______ by now",
+        "answer": "arrived",
         "altAnswers": [
-          "Could",
-          "could"
+          "Arrived",
+          "arrived"
         ],
-        "hint": "Подсказка: слово из урока «Nuanced modals»."
+        "hint": "Подсказка: тема «Nuanced modals»."
       },
       {
         "id": 3,
-        "prompt": "You ______ have called me!",
-        "answer": "should",
+        "prompt": "She must have ______ already",
+        "answer": "left",
         "altAnswers": [
-          "should",
-          "Should"
+          "Left",
+          "left"
         ],
-        "hint": "Подсказка: слово из урока «Nuanced modals»."
-      },
-      {
-        "id": 4,
-        "prompt": "We ______ have bought so much food. (unnecessary)",
-        "answer": "needn't",
-        "altAnswers": [
-          "Needn't",
-          "needn't"
-        ],
-        "hint": "Подсказка: слово из урока «Nuanced modals»."
+        "hint": "Подсказка: тема «Nuanced modals»."
       }
     ],
     "theory": {
       "intro": "Express probability and criticism with advanced modal verbs.",
-      "reading": "**Modals (deduction)** — Express probability and criticism with advanced modal verbs.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Past deduction\nmust have + V3 (near certainty). might/could have + V3 (possibility).\n\n*Пример:* She must have left already.\n\n### Past criticism\nshould have + V3. needn't have + V3 (unnecessary action).\n\n*Пример:* You should have told me earlier.\n\n### Формулы\n- `must/might/could + have + V3`\n- `should/shouldn't have + V3`\n\n### Типичная ошибка\n❌ She must left already.\n✅ She must have left already.",
+      "reading": "**Modals (deduction)** — Express probability and criticism with advanced modal verbs.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Past deduction\nmust have + V3 (near certainty). might/could have + V3 (possibility).\n\n### Past criticism\nshould have + V3. needn't have + V3 (unnecessary action).\n\n### Формулы\n- `must/might/could + have + V3`\n- `should/shouldn't have + V3`\n\n### Типичная ошибка\n❌ She must left already.\n✅ She must have left already.",
       "keyPoints": [
         "Past deduction: must have + V3 (near certainty). might/could have + V3 (possibility).",
         "Past criticism: should have + V3. needn't have + V3 (unnecessary action).",
@@ -44275,20 +45805,20 @@ const CURRICULUM = [
       {
         "question": "What is «might have»?",
         "options": [
-          "вероятность",
-          "необязательно было",
-          "возможно (прошлое)",
-          "критика"
+          "предполагать",
+          "мог бы (прошлое)",
+          "критика",
+          "возможно (прошлое)"
         ],
         "answer": "возможно (прошлое)"
       },
       {
         "question": "What is «must have»?",
         "options": [
-          "необязательно было",
           "уверенность",
           "должно быть (вывод)",
-          "возможно (прошлое)"
+          "предполагать",
+          "критика"
         ],
         "answer": "должно быть (вывод)"
       },
@@ -44296,9 +45826,9 @@ const CURRICULUM = [
         "question": "What is «could have»?",
         "options": [
           "возможно (прошлое)",
-          "необязательно было",
-          "вероятность",
-          "мог бы (прошлое)"
+          "вывод",
+          "мог бы (прошлое)",
+          "вероятность"
         ],
         "answer": "мог бы (прошлое)"
       },
@@ -44306,19 +45836,19 @@ const CURRICULUM = [
         "question": "What is «should have»?",
         "options": [
           "следовало бы",
-          "критика",
-          "необязательно было",
-          "предполагать"
+          "предполагать",
+          "мог бы (прошлое)",
+          "уверенность"
         ],
         "answer": "следовало бы"
       },
       {
         "question": "What is «needn't have»?",
         "options": [
+          "предполагать",
+          "вывод",
           "мог бы (прошлое)",
-          "возможно (прошлое)",
-          "необязательно было",
-          "следовало бы"
+          "необязательно было"
         ],
         "answer": "необязательно было"
       },
@@ -44516,15 +46046,7 @@ const CURRICULUM = [
         "Headline: noun phrases, present tense",
         "According to + source + clause"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "Markets fall as inflation rises.",
-            "According to officials, the plan will be announced today."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "According the report, it is true.",
         "right": "According to the report, it is true."
@@ -44624,7 +46146,10 @@ const CURRICULUM = [
           "report",
           "source",
           "alleged",
-          "according to"
+          "according to",
+          "breaking",
+          "coverage",
+          "quote"
         ],
         "mustIncludeAny": [
           [
@@ -44634,11 +46159,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The brother studies at university."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Media English»."
       },
       {
         "prompt": "Who is the source?",
@@ -44648,7 +46172,10 @@ const CURRICULUM = [
           "report",
           "source",
           "alleged",
-          "according to"
+          "according to",
+          "breaking",
+          "coverage",
+          "quote"
         ],
         "mustIncludeAny": [
           [
@@ -44658,11 +46185,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The narrator introduces his parents first."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Media English»."
       },
       {
         "prompt": "What does alleged mean here?",
@@ -44672,7 +46198,10 @@ const CURRICULUM = [
           "report",
           "source",
           "alleged",
-          "according to"
+          "according to",
+          "breaking",
+          "coverage",
+          "quote"
         ],
         "mustIncludeAny": [
           [
@@ -44682,11 +46211,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "He works with headline every day."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Media English»."
       },
       {
         "prompt": "Is it breaking news?",
@@ -44696,7 +46224,10 @@ const CURRICULUM = [
           "report",
           "source",
           "alleged",
-          "according to"
+          "according to",
+          "breaking",
+          "coverage",
+          "quote"
         ],
         "mustIncludeAny": [
           [
@@ -44706,11 +46237,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on media english."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Media English»."
       },
       {
         "prompt": "How is information attributed?",
@@ -44720,7 +46250,10 @@ const CURRICULUM = [
           "report",
           "source",
           "alleged",
-          "according to"
+          "according to",
+          "breaking",
+          "coverage",
+          "quote"
         ],
         "mustIncludeAny": [
           [
@@ -44730,11 +46263,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on media english."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Media English»."
       }
     ],
     "speaking": [
@@ -44820,87 +46352,137 @@ const CURRICULUM = [
       {
         "word": "headline",
         "trans": "заголовок",
-        "example": "Markets fall as inflation rises."
+        "example": "«headline» helped me understand media english."
       },
       {
         "word": "report",
         "trans": "репортаж",
-        "example": "According to officials, the plan will be announced today."
+        "example": "According to the report, it is true."
       },
       {
         "word": "source",
         "trans": "источник",
-        "example": "Markets fall as inflation rises."
+        "example": "The teacher wrote «source» on the board."
       },
       {
         "word": "alleged",
         "trans": "предполагаемый",
-        "example": "According to officials, the plan will be announced today."
+        "example": "Let's practise «alleged» in a full sentence."
       },
       {
         "word": "according to",
         "trans": "согласно",
-        "example": "Markets fall as inflation rises."
+        "example": "«according to» is a key word in this lesson on media english."
       },
       {
         "word": "breaking",
         "trans": "срочный",
-        "example": "According to officials, the plan will be announced today."
+        "example": "I need to remember «breaking» for homework."
       },
       {
         "word": "coverage",
         "trans": "освещение",
-        "example": "Markets fall as inflation rises."
+        "example": "I used «coverage» in my written answer."
       },
       {
         "word": "quote",
         "trans": "цитата",
-        "example": "According to officials, the plan will be announced today."
+        "example": "She asked me about «quote» during practice."
       },
       {
         "word": "broadcast",
         "trans": "трансляция",
-        "example": "Markets fall as inflation rises."
+        "example": "«broadcast» fits well in a sentence about media english."
       },
       {
         "word": "witness",
         "trans": "свидетель",
-        "example": "According to officials, the plan will be announced today."
+        "example": "«witness» was new for me this week."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "We discussed «practice» in class today."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "He repeated «review» three times."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "My partner corrected my use of «sentence»."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "My note says «grammar» means «грамматика»."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "In our dialogue, «vocabulary» appeared twice."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "I linked «speaking» to other words I know."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I heard «listening» in the listening exercise."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I looked up «writing» in the dictionary."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "The example with «reading» was clear."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "Can you make a sentence with «homework»?"
       }
     ],
     "id": 61,
     "grammarCheck": [
       {
-        "sentence": "Markets ___ after the announcement. (headline style)",
+        "sentence": "___ fall on inflation fears",
         "options": [
-          "fall",
-          "fell"
+          "Markets",
+          "Market"
         ],
-        "answer": "fall"
+        "answer": "Markets"
       },
       {
-        "sentence": "___ to police, two people were injured.",
+        "sentence": "___ to officials…",
         "options": [
           "According",
-          "According to"
+          "Accordings"
         ],
-        "answer": "According to"
+        "answer": "According"
       },
       {
-        "sentence": "The ___ suspect was arrested.",
+        "sentence": "The alleged ___",
         "options": [
-          "alleged",
-          "allegedly"
+          "attack",
+          "attacks"
         ],
-        "answer": "alleged"
+        "answer": "attack"
       },
       {
-        "sentence": "Sources ___ the deal is close.",
+        "sentence": "___ news",
         "options": [
-          "say",
-          "says"
+          "Breaking",
+          "Breakings"
         ],
-        "answer": "say"
+        "answer": "Breaking"
       }
     ],
     "theoryCheck": [
@@ -44913,12 +46495,12 @@ const CURRICULUM = [
         "answer": "According to the report, it is true."
       },
       {
-        "question": "Пример по теме «Headlines»:",
+        "question": "Какое правило относится к «Attribution»?",
         "options": [
-          "Markets fall as inflation rises.",
-          "According the report, it is true."
+          "According to… / Sources say… / Alleged + noun.",
+          "Omitted articles, present simple for past: PM visits Paris."
         ],
-        "answer": "Markets fall as inflation rises."
+        "answer": "According to… / Sources say… / Alleged + noun."
       },
       {
         "question": "Какая формула относится к «Media English»?",
@@ -44932,48 +46514,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "Markets ______ after the announcement. (headline style)",
-        "answer": "fall",
+        "prompt": "______ say that…",
+        "answer": "Sources",
         "altAnswers": [
-          "Fall",
-          "fall"
+          "sources",
+          "Sources"
         ],
-        "hint": "Подсказка: слово из урока «Media English»."
+        "hint": "Подсказка: тема «Media English»."
       },
       {
         "id": 2,
-        "prompt": "______ to police, two people were injured.",
-        "answer": "According to",
+        "prompt": "______ news : summit begins",
+        "answer": "Breaking",
         "altAnswers": [
-          "according to",
-          "According to"
+          "breaking",
+          "Breaking"
         ],
-        "hint": "Подсказка: слово из урока «Media English»."
+        "hint": "Подсказка: тема «Media English»."
       },
       {
         "id": 3,
-        "prompt": "The ______ suspect was arrested.",
-        "answer": "alleged",
+        "prompt": "______ to the report, it is true",
+        "answer": "According",
         "altAnswers": [
-          "alleged",
-          "Alleged"
+          "according",
+          "According"
         ],
-        "hint": "Подсказка: слово из урока «Media English»."
-      },
-      {
-        "id": 4,
-        "prompt": "Sources ______ the deal is close.",
-        "answer": "say",
-        "altAnswers": [
-          "say",
-          "Say"
-        ],
-        "hint": "Подсказка: слово из урока «Media English»."
+        "hint": "Подсказка: тема «Media English»."
       }
     ],
     "theory": {
       "intro": "Understand news headlines, reports, and broadcast language.",
-      "reading": "**Media English** — Understand news headlines, reports, and broadcast language.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Headlines\nOmitted articles, present simple for past: PM visits Paris.\n\n*Пример:* Markets fall as inflation rises.\n\n### Attribution\nAccording to… / Sources say… / Alleged + noun.\n\n*Пример:* According to officials, the plan will be announced today.\n\n### Формулы\n- `Headline: noun phrases, present tense`\n- `According to + source + clause`\n\n### Типичная ошибка\n❌ According the report, it is true.\n✅ According to the report, it is true.",
+      "reading": "**Media English** — Understand news headlines, reports, and broadcast language.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Headlines\nOmitted articles, present simple for past: PM visits Paris.\n\n### Attribution\nAccording to… / Sources say… / Alleged + noun.\n\n### Формулы\n- `Headline: noun phrases, present tense`\n- `According to + source + clause`\n\n### Типичная ошибка\n❌ According the report, it is true.\n✅ According to the report, it is true.",
       "keyPoints": [
         "Headlines: Omitted articles, present simple for past: PM visits Paris.",
         "Attribution: According to… / Sources say… / Alleged + noun.",
@@ -44987,30 +46559,30 @@ const CURRICULUM = [
       {
         "question": "What is «headline»?",
         "options": [
-          "цитата",
+          "предполагаемый",
+          "срочный",
           "заголовок",
-          "освещение",
-          "трансляция"
+          "цитата"
         ],
         "answer": "заголовок"
       },
       {
         "question": "What is «report»?",
         "options": [
-          "цитата",
+          "трансляция",
           "репортаж",
-          "срочный",
-          "свидетель"
+          "согласно",
+          "срочный"
         ],
         "answer": "репортаж"
       },
       {
         "question": "What is «source»?",
         "options": [
+          "освещение",
+          "предполагаемый",
           "источник",
-          "заголовок",
-          "репортаж",
-          "предполагаемый"
+          "репортаж"
         ],
         "answer": "источник"
       },
@@ -45018,7 +46590,7 @@ const CURRICULUM = [
         "question": "What is «alleged»?",
         "options": [
           "источник",
-          "цитата",
+          "трансляция",
           "предполагаемый",
           "свидетель"
         ],
@@ -45027,9 +46599,9 @@ const CURRICULUM = [
       {
         "question": "What is «according to»?",
         "options": [
-          "цитата",
+          "репортаж",
           "согласно",
-          "предполагаемый",
+          "трансляция",
           "источник"
         ],
         "answer": "согласно"
@@ -45224,15 +46796,7 @@ const CURRICULUM = [
         "Would you consider + noun/-ing?",
         "Let's finalize the terms."
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "We'd like to propose a partnership.",
-            "Could you lower the price by ten percent?"
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "Give me a better price now.",
         "right": "Would you consider a lower price?"
@@ -45332,7 +46896,10 @@ const CURRICULUM = [
           "counter-offer",
           "terms",
           "deadline",
-          "compromise"
+          "compromise",
+          "deal",
+          "proposal",
+          "accept"
         ],
         "mustIncludeAny": [
           [
@@ -45342,11 +46909,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to counter-offer and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Negotiation English»."
       },
       {
         "prompt": "What counter-offer is made?",
@@ -45356,7 +46922,10 @@ const CURRICULUM = [
           "counter-offer",
           "terms",
           "deadline",
-          "compromise"
+          "compromise",
+          "deal",
+          "proposal",
+          "accept"
         ],
         "mustIncludeAny": [
           [
@@ -45366,11 +46935,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The material focuses on negotiation english."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Negotiation English»."
       },
       {
         "prompt": "Do they reach a compromise?",
@@ -45380,7 +46948,10 @@ const CURRICULUM = [
           "counter-offer",
           "terms",
           "deadline",
-          "compromise"
+          "compromise",
+          "deal",
+          "proposal",
+          "accept"
         ],
         "mustIncludeAny": [
           [
@@ -45390,11 +46961,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss negotiation english in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Negotiation English»."
       },
       {
         "prompt": "What terms are discussed?",
@@ -45404,7 +46974,10 @@ const CURRICULUM = [
           "counter-offer",
           "terms",
           "deadline",
-          "compromise"
+          "compromise",
+          "deal",
+          "proposal",
+          "accept"
         ],
         "mustIncludeAny": [
           [
@@ -45414,11 +46987,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from negotiation english."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Negotiation English»."
       },
       {
         "prompt": "How do they close the deal?",
@@ -45428,7 +47000,10 @@ const CURRICULUM = [
           "counter-offer",
           "terms",
           "deadline",
-          "compromise"
+          "compromise",
+          "deal",
+          "proposal",
+          "accept"
         ],
         "mustIncludeAny": [
           [
@@ -45438,11 +47013,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to counter-offer and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Negotiation English»."
       }
     ],
     "speaking": [
@@ -45528,87 +47102,121 @@ const CURRICULUM = [
       {
         "word": "offer",
         "trans": "предложение",
-        "example": "We'd like to propose a partnership."
+        "example": "Can you make a sentence with «offer»?"
       },
       {
         "word": "counter-offer",
         "trans": "встречное предложение",
-        "example": "Could you lower the price by ten percent?"
+        "example": "«counter-offer» helped me understand negotiation english."
       },
       {
         "word": "terms",
         "trans": "условия",
-        "example": "We'd like to propose a partnership."
+        "example": "I often use «terms» when I talk about negotiation english."
       },
       {
         "word": "deadline",
         "trans": "срок",
-        "example": "Could you lower the price by ten percent?"
+        "example": "The teacher wrote «deadline» on the board."
       },
       {
         "word": "compromise",
         "trans": "компромисс",
-        "example": "We'd like to propose a partnership."
+        "example": "Let's practise «compromise» in a full sentence."
       },
       {
         "word": "deal",
         "trans": "сделка",
-        "example": "Could you lower the price by ten percent?"
+        "example": "«deal» is a key word in this lesson on negotiation english."
       },
       {
         "word": "proposal",
         "trans": "предложение",
-        "example": "We'd like to propose a partnership."
+        "example": "I need to remember «proposal» for homework."
       },
       {
         "word": "accept",
         "trans": "принимать",
-        "example": "Could you lower the price by ten percent?"
+        "example": "I used «accept» in my written answer."
       },
       {
         "word": "reject",
         "trans": "отклонять",
-        "example": "We'd like to propose a partnership."
+        "example": "She asked me about «reject» during practice."
       },
       {
         "word": "finalize",
         "trans": "завершать",
-        "example": "Could you lower the price by ten percent?"
+        "example": "«finalize» fits well in a sentence about negotiation english."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» was new for me this week."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "We discussed «review» in class today."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "He repeated «sentence» three times."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "My partner corrected my use of «grammar»."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "My note says «vocabulary» means «лексика»."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "In our dialogue, «speaking» appeared twice."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "I linked «listening» to other words I know."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I heard «writing» in the listening exercise."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I looked up «reading» in the dictionary."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "The example with «homework» was clear."
       }
     ],
     "id": 62,
     "grammarCheck": [
       {
-        "sentence": "We'd like to ___ a deal.",
+        "sentence": "___ like to propose a deal",
         "options": [
-          "finalize",
-          "final"
+          "We'd",
+          "We'ds"
         ],
-        "answer": "finalize"
+        "answer": "We'd"
       },
       {
-        "sentence": "___ you consider a discount?",
+        "sentence": "We ___ accept those terms",
         "options": [
-          "Would",
-          "Do"
+          "can",
+          "cans"
         ],
-        "answer": "Would"
-      },
-      {
-        "sentence": "Our ___ offer is €10,000.",
-        "options": [
-          "initial",
-          "initiate"
-        ],
-        "answer": "initial"
-      },
-      {
-        "sentence": "Let's meet ___.",
-        "options": [
-          "halfway",
-          "half"
-        ],
-        "answer": "halfway"
+        "answer": "can"
       }
     ],
     "theoryCheck": [
@@ -45621,12 +47229,12 @@ const CURRICULUM = [
         "answer": "Would you consider a lower price?"
       },
       {
-        "question": "Пример по теме «Opening & proposing»:",
+        "question": "Какое правило относится к «Counter-offers»?",
         "options": [
-          "We'd like to propose a partnership.",
-          "Give me a better price now."
+          "Would you consider…? / We could meet you halfway.",
+          "We'd like to propose… / Our initial offer is…"
         ],
-        "answer": "We'd like to propose a partnership."
+        "answer": "Would you consider…? / We could meet you halfway."
       },
       {
         "question": "Какая формула относится к «Negotiation»?",
@@ -45640,48 +47248,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "We'd like to ______ a deal.",
-        "answer": "finalize",
+        "prompt": "______ we finalize today",
+        "answer": "Can",
         "altAnswers": [
-          "Finalize",
-          "finalize"
+          "Can",
+          "can"
         ],
-        "hint": "Подсказка: слово из урока «Negotiation English»."
+        "hint": "Подсказка: тема «Negotiation English»."
       },
       {
         "id": 2,
-        "prompt": "______ you consider a discount?",
-        "answer": "Would",
+        "prompt": "We ______ accept those terms",
+        "answer": "can't",
         "altAnswers": [
-          "Would",
-          "would"
+          "Can't",
+          "can't"
         ],
-        "hint": "Подсказка: слово из урока «Negotiation English»."
+        "hint": "Подсказка: тема «Negotiation English»."
       },
       {
         "id": 3,
-        "prompt": "Our ______ offer is €10,000.",
-        "answer": "initial",
+        "prompt": "Would you ______ a lower price",
+        "answer": "consider",
         "altAnswers": [
-          "Initial",
-          "initial"
+          "consider",
+          "Consider"
         ],
-        "hint": "Подсказка: слово из урока «Negotiation English»."
-      },
-      {
-        "id": 4,
-        "prompt": "Let's meet ______ .",
-        "answer": "halfway",
-        "altAnswers": [
-          "halfway",
-          "Halfway"
-        ],
-        "hint": "Подсказка: слово из урока «Negotiation English»."
+        "hint": "Подсказка: тема «Negotiation English»."
       }
     ],
     "theory": {
       "intro": "Make proposals, counter-offers, and close deals professionally.",
-      "reading": "**Переговоры** — Make proposals, counter-offers, and close deals professionally.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Opening & proposing\nWe'd like to propose… / Our initial offer is…\n\n*Пример:* We'd like to propose a partnership.\n\n### Counter-offers\nWould you consider…? / We could meet you halfway.\n\n*Пример:* Could you lower the price by ten percent?\n\n### Формулы\n- `We'd like to propose…`\n- `Would you consider + noun/-ing?`\n- `Let's finalize the terms.`\n\n### Типичная ошибка\n❌ Give me a better price now.\n✅ Would you consider a lower price?",
+      "reading": "**Переговоры** — Make proposals, counter-offers, and close deals professionally.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Opening & proposing\nWe'd like to propose… / Our initial offer is…\n\n### Counter-offers\nWould you consider…? / We could meet you halfway.\n\n### Формулы\n- `We'd like to propose…`\n- `Would you consider + noun/-ing?`\n- `Let's finalize the terms.`\n\n### Типичная ошибка\n❌ Give me a better price now.\n✅ Would you consider a lower price?",
       "keyPoints": [
         "Opening & proposing: We'd like to propose… / Our initial offer is…",
         "Counter-offers: Would you consider…? / We could meet you halfway.",
@@ -45695,48 +47293,49 @@ const CURRICULUM = [
       {
         "question": "What is «offer»?",
         "options": [
-          "срок",
+          "завершать",
           "предложение",
-          "встречное предложение",
-          "отклонять"
+          "отклонять",
+          "сделка"
         ],
         "answer": "предложение"
       },
       {
         "question": "What is «counter-offer»?",
         "options": [
-          "завершать",
+          "предложение",
           "отклонять",
-          "условия",
-          "встречное предложение"
+          "встречное предложение",
+          "условия"
         ],
         "answer": "встречное предложение"
       },
       {
         "question": "What is «terms»?",
         "options": [
+          "принимать",
+          "срок",
           "условия",
-          "предложение",
-          "завершать",
-          "встречное предложение"
+          "отклонять"
         ],
         "answer": "условия"
       },
       {
         "question": "What is «deadline»?",
         "options": [
-          "срок",
-          "компромисс",
-          "предложение"
+          "отклонять",
+          "принимать",
+          "предложение",
+          "срок"
         ],
         "answer": "срок"
       },
       {
         "question": "What is «compromise»?",
         "options": [
-          "условия",
+          "встречное предложение",
+          "срок",
           "компромисс",
-          "предложение",
           "отклонять"
         ],
         "answer": "компромисс"
@@ -45931,15 +47530,7 @@ const CURRICULUM = [
         "Moving on to…",
         "To sum up… / In conclusion…"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "Today I'll talk about three main points.",
-            "Let's move on to the next slide."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I talk about three point today.",
         "right": "Today I'll talk about three points."
@@ -46039,7 +47630,10 @@ const CURRICULUM = [
           "outline",
           "slide",
           "audience",
-          "handout"
+          "handout",
+          "q&a",
+          "summarise",
+          "engage"
         ],
         "mustIncludeAny": [
           [
@@ -46049,11 +47643,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "Characters discuss presentations in simple English."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Presentations»."
       },
       {
         "prompt": "What signposting phrases are used?",
@@ -46063,7 +47656,10 @@ const CURRICULUM = [
           "outline",
           "slide",
           "audience",
-          "handout"
+          "handout",
+          "q&a",
+          "summarise",
+          "engage"
         ],
         "mustIncludeAny": [
           [
@@ -46073,11 +47669,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The scene relates to outline and daily life."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Presentations»."
       },
       {
         "prompt": "How many main points are covered?",
@@ -46097,7 +47692,10 @@ const CURRICULUM = [
           "outline",
           "slide",
           "audience",
-          "handout"
+          "handout",
+          "q&a",
+          "summarise",
+          "engage"
         ],
         "mustIncludeAny": [
           [
@@ -46107,11 +47705,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The passage uses vocabulary about audience."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Presentations»."
       },
       {
         "prompt": "How is Q&A handled?",
@@ -46121,7 +47718,10 @@ const CURRICULUM = [
           "outline",
           "slide",
           "audience",
-          "handout"
+          "handout",
+          "q&a",
+          "summarise",
+          "engage"
         ],
         "mustIncludeAny": [
           [
@@ -46131,11 +47731,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from presentations."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «Presentations»."
       }
     ],
     "speaking": [
@@ -46225,87 +47824,129 @@ const CURRICULUM = [
       {
         "word": "introduce",
         "trans": "представлять",
-        "example": "Today I'll talk about three main points."
+        "example": "The example with «introduce» was clear."
       },
       {
         "word": "outline",
         "trans": "план",
-        "example": "Let's move on to the next slide."
+        "example": "Can you make a sentence with «outline»?"
       },
       {
         "word": "slide",
         "trans": "слайд",
-        "example": "Today I'll talk about three main points."
+        "example": "«slide» helped me understand presentations."
       },
       {
         "word": "audience",
         "trans": "аудитория",
-        "example": "Let's move on to the next slide."
+        "example": "I often use «audience» when I talk about presentations."
       },
       {
         "word": "handout",
         "trans": "раздаточный материал",
-        "example": "Today I'll talk about three main points."
+        "example": "The teacher wrote «handout» on the board."
       },
       {
         "word": "Q&A",
         "trans": "вопросы и ответы",
-        "example": "Let's move on to the next slide."
+        "example": "Let's practise «Q&A» in a full sentence."
       },
       {
         "word": "summarise",
         "trans": "подводить итог",
-        "example": "Today I'll talk about three main points."
+        "example": "«summarise» is a key word in this lesson on presentations."
       },
       {
         "word": "engage",
         "trans": "вовлекать",
-        "example": "Let's move on to the next slide."
+        "example": "I need to remember «engage» for homework."
       },
       {
         "word": "clarify",
         "trans": "уточнять",
-        "example": "Today I'll talk about three main points."
+        "example": "I used «clarify» in my written answer."
       },
       {
         "word": "feedback",
         "trans": "обратная связь",
-        "example": "Let's move on to the next slide."
+        "example": "She asked me about «feedback» during practice."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "«practice» fits well in a sentence about presentations."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» was new for me this week."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "We discussed «sentence» in class today."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "He repeated «grammar» three times."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "My partner corrected my use of «vocabulary»."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "My note says «speaking» means «говорение»."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "In our dialogue, «listening» appeared twice."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "I linked «writing» to other words I know."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I heard «reading» in the listening exercise."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I looked up «homework» in the dictionary."
       }
     ],
     "id": 63,
     "grammarCheck": [
       {
-        "sentence": "Today I'll ___ three topics.",
+        "sentence": "___ morning, everyone",
         "options": [
-          "cover",
-          "covering"
+          "Good",
+          "Goods"
         ],
-        "answer": "cover"
+        "answer": "Good"
       },
       {
-        "sentence": "Let's move ___ to the next point.",
+        "sentence": "___ I'll cover three points",
         "options": [
-          "on",
-          "in"
+          "Today",
+          "Todays"
         ],
-        "answer": "on"
+        "answer": "Today"
       },
       {
-        "sentence": "To ___ up, the data shows growth.",
+        "sentence": "___ on to the next slide",
         "options": [
-          "sum",
-          "summarise"
+          "Moving",
+          "Movings"
         ],
-        "answer": "sum"
-      },
-      {
-        "sentence": "Are there any ___?",
-        "options": [
-          "questions",
-          "question"
-        ],
-        "answer": "questions"
+        "answer": "Moving"
       }
     ],
     "theoryCheck": [
@@ -46318,12 +47959,12 @@ const CURRICULUM = [
         "answer": "Today I'll talk about three points."
       },
       {
-        "question": "Пример по теме «Structure»:",
+        "question": "Какое правило относится к «Signposting»?",
         "options": [
-          "Today I'll talk about three main points.",
-          "I talk about three point today."
+          "Moving on to… / Let me clarify… / To sum up…",
+          "Good morning → outline → sections → summary → Q&A."
         ],
-        "answer": "Today I'll talk about three main points."
+        "answer": "Moving on to… / Let me clarify… / To sum up…"
       },
       {
         "question": "Какая формула относится к «Presentations»?",
@@ -46337,48 +47978,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "Today I'll ______ three topics.",
-        "answer": "cover",
+        "prompt": "______ you for your attention",
+        "answer": "Thank",
         "altAnswers": [
-          "cover",
-          "Cover"
+          "Thank",
+          "thank"
         ],
-        "hint": "Подсказка: слово из урока «Presentations»."
+        "hint": "Подсказка: тема «Presentations»."
       },
       {
         "id": 2,
-        "prompt": "Let's move ______ to the next point.",
-        "answer": "on",
+        "prompt": "______ me clarify that",
+        "answer": "Let",
         "altAnswers": [
-          "on",
-          "On"
+          "let",
+          "Let"
         ],
-        "hint": "Подсказка: слово из урока «Presentations»."
+        "hint": "Подсказка: тема «Presentations»."
       },
       {
         "id": 3,
-        "prompt": "To ______ up, the data shows growth.",
-        "answer": "sum",
+        "prompt": "______ I'll talk about three points",
+        "answer": "Today",
         "altAnswers": [
-          "sum",
-          "Sum"
+          "today",
+          "Today"
         ],
-        "hint": "Подсказка: слово из урока «Presentations»."
-      },
-      {
-        "id": 4,
-        "prompt": "Are there any ______ ?",
-        "answer": "questions",
-        "altAnswers": [
-          "questions",
-          "Questions"
-        ],
-        "hint": "Подсказка: слово из урока «Presentations»."
+        "hint": "Подсказка: тема «Presentations»."
       }
     ],
     "theory": {
       "intro": "Structure and deliver clear presentations in English.",
-      "reading": "**Презентации** — Structure and deliver clear presentations in English.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Structure\nGood morning → outline → sections → summary → Q&A.\n\n*Пример:* Today I'll talk about three main points.\n\n### Signposting\nMoving on to… / Let me clarify… / To sum up…\n\n*Пример:* Let's move on to the next slide.\n\n### Формулы\n- `Today I'll talk about…`\n- `Moving on to…`\n- `To sum up… / In conclusion…`\n\n### Типичная ошибка\n❌ I talk about three point today.\n✅ Today I'll talk about three points.",
+      "reading": "**Презентации** — Structure and deliver clear presentations in English.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Structure\nGood morning → outline → sections → summary → Q&A.\n\n### Signposting\nMoving on to… / Let me clarify… / To sum up…\n\n### Формулы\n- `Today I'll talk about…`\n- `Moving on to…`\n- `To sum up… / In conclusion…`\n\n### Типичная ошибка\n❌ I talk about three point today.\n✅ Today I'll talk about three points.",
       "keyPoints": [
         "Structure: Good morning → outline → sections → summary → Q&A.",
         "Signposting: Moving on to… / Let me clarify… / To sum up…",
@@ -46392,19 +48023,19 @@ const CURRICULUM = [
       {
         "question": "What is «introduce»?",
         "options": [
-          "представлять",
+          "аудитория",
+          "вовлекать",
           "подводить итог",
-          "уточнять",
-          "вовлекать"
+          "представлять"
         ],
         "answer": "представлять"
       },
       {
         "question": "What is «outline»?",
         "options": [
-          "уточнять",
-          "подводить итог",
-          "обратная связь",
+          "аудитория",
+          "слайд",
+          "вовлекать",
           "план"
         ],
         "answer": "план"
@@ -46412,30 +48043,30 @@ const CURRICULUM = [
       {
         "question": "What is «slide»?",
         "options": [
-          "обратная связь",
+          "план",
           "раздаточный материал",
-          "слайд",
-          "вовлекать"
+          "уточнять",
+          "слайд"
         ],
         "answer": "слайд"
       },
       {
         "question": "What is «audience»?",
         "options": [
-          "вовлекать",
-          "план",
-          "подводить итог",
-          "аудитория"
+          "представлять",
+          "вопросы и ответы",
+          "аудитория",
+          "раздаточный материал"
         ],
         "answer": "аудитория"
       },
       {
         "question": "What is «handout»?",
         "options": [
-          "представлять",
           "раздаточный материал",
-          "вовлекать",
-          "вопросы и ответы"
+          "уточнять",
+          "подводить итог",
+          "представлять"
         ],
         "answer": "раздаточный материал"
       },
@@ -46634,15 +48265,7 @@ const CURRICULUM = [
         "Skim → main idea / Scan → details",
         "Essay: introduction + body + conclusion"
       ],
-      "extraExamples": [
-        {
-          "label": "Examples",
-          "items": [
-            "Skim the title and first paragraph first.",
-            "Review one grammar topic per study session."
-          ]
-        }
-      ],
+      "extraExamples": null,
       "mistake": {
         "wrong": "I read every word slowly in the exam.",
         "right": "I skim first, then scan for answers."
@@ -46742,7 +48365,10 @@ const CURRICULUM = [
           "strategy",
           "skim",
           "scan",
-          "assessment"
+          "assessment",
+          "proficiency",
+          "certificate",
+          "checklist"
         ],
         "mustIncludeAny": [
           [
@@ -46752,11 +48378,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They review time management for the exam."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «B2 mastery review»."
       },
       {
         "prompt": "What is skim vs scan?",
@@ -46786,7 +48411,10 @@ const CURRICULUM = [
           "strategy",
           "skim",
           "scan",
-          "assessment"
+          "assessment",
+          "proficiency",
+          "certificate",
+          "checklist"
         ],
         "mustIncludeAny": [
           [
@@ -46796,11 +48424,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The speaker explains skim vs scan for reading."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «B2 mastery review»."
       },
       {
         "prompt": "What grammar needs review?",
@@ -46810,7 +48437,10 @@ const CURRICULUM = [
           "strategy",
           "skim",
           "scan",
-          "assessment"
+          "assessment",
+          "proficiency",
+          "certificate",
+          "checklist"
         ],
         "mustIncludeAny": [
           [
@@ -46820,11 +48450,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "The listening clip explains ideas from b2 mastery review."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «B2 mastery review»."
       },
       {
         "prompt": "What time strategy is recommended?",
@@ -46834,7 +48463,10 @@ const CURRICULUM = [
           "strategy",
           "skim",
           "scan",
-          "assessment"
+          "assessment",
+          "proficiency",
+          "certificate",
+          "checklist"
         ],
         "mustIncludeAny": [
           [
@@ -46844,11 +48476,10 @@ const CURRICULUM = [
           ]
         ],
         "acceptableAnswers": [
-          "They talk about the topic in the material.",
-          "The scene shows the main idea of the lesson."
+          "They review time management for the exam."
         ],
-        "hintWrong": "Ответ по материалу урока на английском.",
-        "explain": "Опиши, что видел/слышал в материале."
+        "hintWrong": "Короткий ответ по материалу на английском — своими словами.",
+        "explain": "Опиши, что видел/слышал по теме «B2 mastery review»."
       }
     ],
     "speaking": [
@@ -46938,87 +48569,137 @@ const CURRICULUM = [
       {
         "word": "review",
         "trans": "повторение",
-        "example": "Skim the title and first paragraph first."
+        "example": "I looked up «review» in the dictionary."
       },
       {
         "word": "strategy",
         "trans": "стратегия",
-        "example": "Review one grammar topic per study session."
+        "example": "The example with «strategy» was clear."
       },
       {
         "word": "skim",
         "trans": "бегло просматривать",
-        "example": "Skim the title and first paragraph first."
+        "example": "I skim first, then scan for answers."
       },
       {
         "word": "scan",
         "trans": "искать информацию",
-        "example": "Review one grammar topic per study session."
+        "example": "«scan» helped me understand b2 mastery review."
       },
       {
         "word": "assessment",
         "trans": "оценка",
-        "example": "Skim the title and first paragraph first."
+        "example": "I often use «assessment» when I talk about b2 mastery review."
       },
       {
         "word": "proficiency",
         "trans": "владение",
-        "example": "Review one grammar topic per study session."
+        "example": "The teacher wrote «proficiency» on the board."
       },
       {
         "word": "certificate",
         "trans": "сертификат",
-        "example": "Skim the title and first paragraph first."
+        "example": "Let's practise «certificate» in a full sentence."
       },
       {
         "word": "checklist",
         "trans": "чеклист",
-        "example": "Review one grammar topic per study session."
+        "example": "«checklist» is a key word in this lesson on b2 mastery review."
       },
       {
         "word": "timing",
         "trans": "тайминг",
-        "example": "Skim the title and first paragraph first."
+        "example": "I need to remember «timing» for homework."
       },
       {
         "word": "accuracy",
         "trans": "точность",
-        "example": "Review one grammar topic per study session."
+        "example": "I used «accuracy» in my written answer."
+      },
+      {
+        "word": "practice",
+        "trans": "практика",
+        "example": "She asked me about «practice» during practice."
+      },
+      {
+        "word": "review",
+        "trans": "повторение",
+        "example": "«review» fits well in a sentence about b2 mastery review."
+      },
+      {
+        "word": "sentence",
+        "trans": "предложение",
+        "example": "«sentence» was new for me this week."
+      },
+      {
+        "word": "grammar",
+        "trans": "грамматика",
+        "example": "We discussed «grammar» in class today."
+      },
+      {
+        "word": "vocabulary",
+        "trans": "лексика",
+        "example": "He repeated «vocabulary» three times."
+      },
+      {
+        "word": "speaking",
+        "trans": "говорение",
+        "example": "My partner corrected my use of «speaking»."
+      },
+      {
+        "word": "listening",
+        "trans": "аудирование",
+        "example": "My note says «listening» means «аудирование»."
+      },
+      {
+        "word": "writing",
+        "trans": "письмо",
+        "example": "In our dialogue, «writing» appeared twice."
+      },
+      {
+        "word": "reading",
+        "trans": "чтение",
+        "example": "I linked «reading» to other words I know."
+      },
+      {
+        "word": "homework",
+        "trans": "домашка",
+        "example": "I heard «homework» in the listening exercise."
       }
     ],
     "id": 64,
     "grammarCheck": [
       {
-        "sentence": "To find a date quickly, you ___.",
+        "sentence": "Skim the ___ first",
         "options": [
-          "scan",
-          "skim"
+          "text",
+          "texts"
         ],
-        "answer": "scan"
+        "answer": "text"
       },
       {
-        "sentence": "For the main idea, you ___.",
+        "sentence": "Scan for ___",
         "options": [
-          "skim",
-          "scan"
+          "keywords",
+          "keyword"
         ],
-        "answer": "skim"
+        "answer": "keywords"
       },
       {
-        "sentence": "B2 is ___ C1 on the CEFR scale.",
+        "sentence": "___ your time",
         "options": [
-          "below",
-          "above"
+          "Manage",
+          "Manages"
         ],
-        "answer": "below"
+        "answer": "Manage"
       },
       {
-        "sentence": "Start your essay with an ___.",
+        "sentence": "___ the word limit",
         "options": [
-          "introduction",
-          "conclusion"
+          "Check",
+          "Checks"
         ],
-        "answer": "introduction"
+        "answer": "Check"
       }
     ],
     "theoryCheck": [
@@ -47031,12 +48712,12 @@ const CURRICULUM = [
         "answer": "I skim first, then scan for answers."
       },
       {
-        "question": "Пример по теме «Exam skills»:",
+        "question": "Какое правило относится к «Grammar review»?",
         "options": [
-          "Skim the title and first paragraph first.",
-          "I read every word slowly in the exam."
+          "Conditionals, passive, modals, reported speech, linking words.",
+          "Skim for gist, scan for details. Manage time per task."
         ],
-        "answer": "Skim the title and first paragraph first."
+        "answer": "Conditionals, passive, modals, reported speech, linking words."
       },
       {
         "question": "Какая формула относится к «B2 mastery»?",
@@ -47050,48 +48731,38 @@ const CURRICULUM = [
     "contextDrill": [
       {
         "id": 1,
-        "prompt": "To find a date quickly, you ______ .",
-        "answer": "scan",
+        "prompt": "______ preparing for FCE",
+        "answer": "I'm",
         "altAnswers": [
-          "scan",
-          "Scan"
+          "I'm",
+          "i'm"
         ],
-        "hint": "Подсказка: слово из урока «B2 mastery review»."
+        "hint": "Подсказка: тема «B2 mastery review»."
       },
       {
         "id": 2,
-        "prompt": "For the main idea, you ______ .",
-        "answer": "skim",
+        "prompt": "______ formation is tested in B2 exams",
+        "answer": "Word",
         "altAnswers": [
-          "skim",
-          "Skim"
+          "word",
+          "Word"
         ],
-        "hint": "Подсказка: слово из урока «B2 mastery review»."
+        "hint": "Подсказка: тема «B2 mastery review»."
       },
       {
         "id": 3,
-        "prompt": "B2 is ______ C1 on the CEFR scale.",
-        "answer": "below",
+        "prompt": "I skim ______ then scan for answers",
+        "answer": "first",
         "altAnswers": [
-          "below",
-          "Below"
+          "First",
+          "first"
         ],
-        "hint": "Подсказка: слово из урока «B2 mastery review»."
-      },
-      {
-        "id": 4,
-        "prompt": "Start your essay with an ______ .",
-        "answer": "introduction",
-        "altAnswers": [
-          "introduction",
-          "Introduction"
-        ],
-        "hint": "Подсказка: слово из урока «B2 mastery review»."
+        "hint": "Подсказка: тема «B2 mastery review»."
       }
     ],
     "theory": {
       "intro": "Consolidate B2 skills and exam strategies across the course.",
-      "reading": "**Итог B2** — Consolidate B2 skills and exam strategies across the course.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Exam skills\nSkim for gist, scan for details. Manage time per task.\n\n*Пример:* Skim the title and first paragraph first.\n\n### Grammar review\nConditionals, passive, modals, reported speech, linking words.\n\n*Пример:* Review one grammar topic per study session.\n\n### Формулы\n- `Skim → main idea / Scan → details`\n- `Essay: introduction + body + conclusion`\n\n### Типичная ошибка\n❌ I read every word slowly in the exam.\n✅ I skim first, then scan for answers.",
+      "reading": "**Итог B2** — Consolidate B2 skills and exam strategies across the course.\n\nAcademic English (Swales): учите не только правило, но и регистр — где фраза уместен в речи и письме.\n\nCEFR B2 — свободное общение: эссе, дискуссии, формальный регистр, сложная грамматика.\n\n### Exam skills\nSkim for gist, scan for details. Manage time per task.\n\n### Grammar review\nConditionals, passive, modals, reported speech, linking words.\n\n### Формулы\n- `Skim → main idea / Scan → details`\n- `Essay: introduction + body + conclusion`\n\n### Типичная ошибка\n❌ I read every word slowly in the exam.\n✅ I skim first, then scan for answers.",
       "keyPoints": [
         "Exam skills: Skim for gist, scan for details. Manage time per task.",
         "Grammar review: Conditionals, passive, modals, reported speech, linking words.",
@@ -47105,50 +48776,50 @@ const CURRICULUM = [
       {
         "question": "What is «review»?",
         "options": [
-          "повторение",
+          "стратегия",
           "владение",
-          "точность",
-          "оценка"
+          "бегло просматривать",
+          "повторение"
         ],
         "answer": "повторение"
       },
       {
         "question": "What is «strategy»?",
         "options": [
-          "владение",
-          "тайминг",
-          "повторение",
-          "стратегия"
+          "стратегия",
+          "бегло просматривать",
+          "искать информацию",
+          "повторение"
         ],
         "answer": "стратегия"
       },
       {
         "question": "What is «skim»?",
         "options": [
-          "чеклист",
-          "точность",
-          "искать информацию",
-          "бегло просматривать"
+          "повторение",
+          "сертификат",
+          "бегло просматривать",
+          "точность"
         ],
         "answer": "бегло просматривать"
       },
       {
         "question": "What is «scan»?",
         "options": [
+          "владение",
+          "повторение",
           "стратегия",
-          "точность",
-          "искать информацию",
-          "владение"
+          "искать информацию"
         ],
         "answer": "искать информацию"
       },
       {
         "question": "What is «assessment»?",
         "options": [
+          "искать информацию",
+          "повторение",
           "владение",
-          "сертификат",
-          "оценка",
-          "бегло просматривать"
+          "оценка"
         ],
         "answer": "оценка"
       },

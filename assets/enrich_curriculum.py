@@ -14,6 +14,7 @@ from answer_validator import (
     build_theory_check,
     build_warmup_spec,
 )
+from content_utils import allocate_practice_sources, build_grammar_check
 
 CUR_PATH = os.path.join(DIR, "curriculum.js")
 
@@ -40,6 +41,7 @@ COURSE_META = {
     "homeworkHours": 149,
     "weeksAt5h": 38,
     "cefrNote": "По CEFR (Cambridge/Oxford) путь A1→B2 — примерно 500–600 академических часов в вузе; интенсивный курс с самостоятельной работой — 150–200 ч.",
+    "b1Milestone": "Модули 33–48: при прохождении с домашкой — уровень B1 (Cambridge Preliminary B1 / Oxford B1). Ключевые темы: модали, 1–3 условные, пассив, косвенная речь, relative clauses, phrasal verbs, narrative tenses.",
     "levels": {
         "A1": {"modules": 16, "hours": 48, "cefr": "90–100 ч в академической программе"},
         "A2": {"modules": 16, "hours": 48, "cefr": "+90–100 ч"},
@@ -79,7 +81,7 @@ def build_theory(lesson):
         CEFR.get(lesson["level"], ""),
     ]
     for b in blocks:
-        reading_parts.append(f"\n### {b['title']}\n{b['desc']}\n\n*Пример:* {b['example']}")
+        reading_parts.append(f"\n### {b['title']}\n{b['desc']}")
     if formulas:
         reading_parts.append("\n### Формулы\n" + "\n".join(f"- `{f}`" for f in formulas))
     mistake = g.get("mistake")
@@ -224,9 +226,11 @@ def enrich_lesson(lesson):
     for p in lesson.get("pronunciation", []):
         p.setdefault("expected", p.get("phrase", ""))
 
-    lesson["grammarCheck"] = lesson.get("quiz", [])[:4]
+    practice_sources = allocate_practice_sources(lesson)
+    split = min(4, max(1, len(practice_sources) - 3))
+    lesson["grammarCheck"] = build_grammar_check(lesson, practice_sources[:split])
     lesson["theoryCheck"] = build_theory_check(lesson)
-    lesson["contextDrill"] = build_context_drill(lesson)
+    lesson["contextDrill"] = build_context_drill(lesson, practice_sources[split:])
     lesson["theory"] = build_theory(lesson)
     lesson["vocabQuiz"] = build_vocab_quiz(lesson.get("vocab", []))
     lesson["homework"] = build_homework(lesson)

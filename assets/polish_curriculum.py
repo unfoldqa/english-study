@@ -2,12 +2,14 @@
 """Polish curriculum: fix filler modules, core issues, flashcards; strip enrich; re-enrich."""
 import json
 import os
+import re
 import subprocess
 import sys
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, DIR)
 
+from content_utils import build_flashcards as build_vocab_flashcards
 from filler_lessons import FILLER, FILLER_IDS
 
 CUR_PATH = os.path.join(DIR, "curriculum.js")
@@ -153,31 +155,7 @@ def strip_enriched(lesson):
 
 
 def build_flashcards(lesson):
-    vocab = lesson.get("vocab", [])
-    examples = []
-    g = lesson.get("grammar", {})
-    for block in g.get("blocks", []):
-        examples.append(block.get("example", ""))
-    for group in g.get("extraExamples", []):
-        examples.extend(group.get("items", []))
-    examples = [e for e in examples if e]
-
-    cards = []
-    for i, v in enumerate(vocab[:10]):
-        en = v["en"] if isinstance(v, dict) else v
-        ru = v["ru"] if isinstance(v, dict) else ""
-        ex = examples[i % len(examples)] if examples else f"This is an example with «{en}»."
-        cards.append({"word": en, "trans": ru, "example": ex})
-
-    while len(cards) < 20 and vocab:
-        v = vocab[len(cards) % len(vocab)]
-        en, ru = v["en"], v["ru"]
-        ex = examples[len(cards) % len(examples)] if examples else f"Another example: {en}."
-        if not any(c["word"] == en and c["example"] == ex for c in cards):
-            cards.append({"word": en, "trans": ru, "example": ex})
-        else:
-            break
-    return cards[:20]
+    return build_vocab_flashcards(lesson)
 
 
 def fix_vocab(lesson):
@@ -241,12 +219,56 @@ def polish_lesson(lesson):
     lesson = apply_core_patches(lesson)
     if lesson["id"] in FILLER_IDS:
         lesson = apply_filler(lesson)
-    elif not lesson.get("flashcards") or any(
-        c.get("example") in ("Practice makes progress.",) or "I use '" in c.get("example", "")
-        for c in lesson.get("flashcards", [])
-    ):
+    elif lesson["id"] not in list(range(17, 22)) + list(range(33, 38)):
         lesson["flashcards"] = build_flashcards(lesson)
     return lesson
+
+
+def count_duplicates(lesson):
+    """Count unintended duplicate sentences within a module."""
+    from collections import defaultdict
+
+    def extract(lesson):
+        items = []
+        g = lesson.get("grammar", {})
+        for b in g.get("blocks", []):
+            items.append(("grammar", b.get("example", "")))
+        for group in g.get("extraExamples", []) or []:
+            for s in group.get("items", []):
+                items.append(("grammar_extra", s))
+        for q in lesson.get("quiz", []):
+            items.append(("quiz", q.get("sentence", "").replace("___", q.get("answer", ""))))
+        for c in lesson.get("flashcards", []):
+            items.append(("flashcards", c.get("example", "")))
+        theory = lesson.get("theory", {})
+        if theory.get("reading"):
+            items.append(("theory", theory["reading"]))
+        for cc in lesson.get("cultureCheck", []):
+            for a in cc.get("acceptableAnswers", []):
+                items.append(("cultureCheck", a))
+        for tc in lesson.get("theoryCheck", []):
+            for o in tc.get("options", []):
+                items.append(("theoryCheck", o))
+        for d in lesson.get("contextDrill", []):
+            items.append(("contextDrill", d.get("prompt", "").replace("______", d.get("answer", ""))))
+        return [(src, s) for src, s in items if s and len(s) > 12]
+
+    by_text = defaultdict(list)
+    for src, text in extract(lesson):
+        key = re.sub(r"\s+", " ", text.lower().strip())
+        by_text[key].append(src)
+
+    bad = 0
+    generic = 0
+    for key, sources in by_text.items():
+        if len(sources) > 1:
+            unique_src = set(sources)
+            if unique_src == {"grammarCheck", "quiz"}:
+                continue
+            bad += len(sources) - 1
+        if "they talk about the topic" in key or "the scene shows the main idea" in key:
+            generic += 1
+    return bad, generic
 
 
 def main():
@@ -278,10 +300,18 @@ def main():
         1 for l in out for w in l.get("warmup", [])
         if isinstance(w, dict) and any("\u0400" <= c <= "\u04FF" for c in w.get("prompt", ""))
     )
+    dup_total = 0
+    generic_total = 0
+    for l in out:
+        d, g = count_duplicates(l)
+        dup_total += d
+        generic_total += g
     print(f"Polished {len(out)} modules")
     print(f"  Placeholder IPA left: {bad_ipa}")
     print(f"  Wrong generic mistakes: {bad_mistake}")
     print(f"  Cyrillic in warmup prompts: {cyrillic_prompts}")
+    print(f"  Unintended duplicate sentences: {dup_total}")
+    print(f"  Generic culture answers left: {generic_total}")
     w9 = out[8]["warmup"][0]
     print(f"  L9 warmup sample answer: {w9.get('acceptableAnswers', ['?'])[0]}")
 
