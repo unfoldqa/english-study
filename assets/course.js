@@ -1,5 +1,6 @@
 /* English Course A1→B2 — lesson logic with full block validation */
 
+const BUILD_VERSION = '3';
 const STORAGE_PREFIX = 'english-course-';
 
 /* ── Storage ── */
@@ -805,11 +806,18 @@ function renderIndex() {
   const sub = document.getElementById('courseSubtitle');
   if (sub) sub.textContent = `A1 → B2 · ${total} уроков`;
   const foot = document.getElementById('footerSubtitle');
-  if (foot) foot.textContent = `English Course A1 → B2 · ${total} уроков`;
+  if (foot) foot.textContent = `English Course A1 → B2 · ${total} уроков · v${BUILD_VERSION}`;
 
   const levels = ['A1', 'A2', 'B1', 'B2'];
   const container = document.getElementById('courseLevels');
   if (!container) return;
+
+  const loading = document.getElementById('courseLoading');
+  if (typeof CURRICULUM === 'undefined' || !CURRICULUM.length) {
+    if (loading) loading.textContent = 'Ошибка загрузки курса. Обновите страницу (Ctrl+Shift+R).';
+    return;
+  }
+  if (loading) loading.remove();
 
   const perLevel = total / 4;
   document.getElementById('levelHint').textContent =
